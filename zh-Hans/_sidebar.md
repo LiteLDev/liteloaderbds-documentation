@@ -4,7 +4,7 @@
 
 - [❓ 常见问题](/FAQ.md)
 
-- 🎯 LLSE插件开发
+- 🎯 LLSE 脚本插件开发
     - [⛳ 新手入门（必读）](LLSEPluginDevelopment/README.md)
     - [📋 多种开发语言支持](LLSEPluginDevelopment/LanguageSupport.md)
     - [💼 通用脚本接口 - 常用](LLSEPluginDevelopment/ScriptAPI/ScriptHelp.md)
@@ -69,7 +69,7 @@
         - [🎚️ 函数类型NativeFunction](LLSEPluginDevelopment/NativeAPI/NativeFunction.md)
         - [🛠️ 补丁工具NativePatch](LLSEPluginDevelopment/NativeAPI/NativePatch.md)
 
-- 🪁 基于.NET的LL插件开发
+- 🪁 LL .NET插件开发
     - [⛳ 新手入门（必读）](/DotNETPluginDevelopment/README.md)
 
     - [✨ 环境部署](/DotNETPluginDevelopment/Deploy.md)
@@ -97,7 +97,7 @@
         - [LLNET.Schedule]
         - [MC]
 
-- [⛳ 基于C++的LL插件开发](https://cpp.docs.litebds.com/zh-Hans)
+- [**⛳ LL C++插件开发**](https://cpp.docs.litebds.com/zh-Hans)
 
 - 🎬 维护与支持
     - [⛳ 欢迎！](/Maintenance/README.md)

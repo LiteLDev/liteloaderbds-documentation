@@ -4,7 +4,7 @@
 
 - [❓ Frequently Asked Questions ](/FAQ.md)
 
-- 🎯 LLSE Plugin Development
+- 🎯 LLSE Script Plugin Development
     - [⛳ For Beginners (Must Read)](/LLSEPluginDevelopment/)
     - [📋 Multi Development Language Support](/LLSEPluginDevelopment/LanguageSupport.md)
     - [💼 Generic Script Interface (Commonly Used)](/LLSEPluginDevelopment/ScriptAPI/ScriptHelp.md)
@@ -63,7 +63,7 @@
         - [📡 System Calls](/LLSEPluginDevelopment/SystemAPI/SystemCall.md)
         - [📜 Get System Information](/LLSEPluginDevelopment/SystemAPI/SystemInfo.md)
 
-- [⛳ LL Plugin Development with C++](https://cpp.docs.litebds.com/en)
+- [**⛳ LL C++ Plugin Development**](https://cpp.docs.litebds.com/en)
 
 - 🎬 Maintenance
     - [⛳ Welcome! ](/Maintenance/README.md)
