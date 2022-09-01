@@ -4,29 +4,11 @@
 
 <body>
     <script>
-        let is_assigned = false;
-
-        switch (navigator.language) {
-            case 'en':
-
-                break;
-
-            case '':
-                location.assign('./en');
-                break;
-
-            default:
-                break;
-        }
-
         if (navigator.language.substring(0, 2) == 'en') {
             location.assign('./en');
         } else if (navigator.language.substring(0, 2) == 'zh') {
             location.assign('./zh-Hans');
-        }
-
-        // Default language
-        if (!is_assigned) {
+        } else {
             location.assign('./en');
         }
     </script>
