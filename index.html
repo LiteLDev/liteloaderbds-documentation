@@ -5,15 +5,24 @@
 <body>
     <script>
         let is_assigned = false;
-        
-        for (const langcode of navigator.languages) {
-            if (langcode.substring(0, 2) == 'en') {
+
+        switch (navigator.language) {
+            case 'en':
+
+                break;
+
+            case '':
                 location.assign('./en');
-                is_assigned = true;
-            } else if (langcode.substring(0, 2) == 'zh') {
-                location.assign('./zh-Hans');
-                is_assigned = true;
-            }
+                break;
+
+            default:
+                break;
+        }
+
+        if (navigator.language.substring(0, 2) == 'en') {
+            location.assign('./en');
+        } else if (navigator.language.substring(0, 2) == 'zh') {
+            location.assign('./zh-Hans');
         }
 
         // Default language
