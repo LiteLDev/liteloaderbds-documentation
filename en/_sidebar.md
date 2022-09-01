@@ -63,6 +63,8 @@
         - [📡 System Calls](/LLSEPluginDevelopment/SystemAPI/SystemCall.md)
         - [📜 Get System Information](/LLSEPluginDevelopment/SystemAPI/SystemInfo.md)
 
+- [⛳ LL Plugin Development with C++](https://cpp.docs.litebds.com/en)
+
 - 🎬 Maintenance
     - [⛳ Welcome! ](/Maintenance/README.md)
     - [👓 Architecture](/Maintenance/Analysis.md)
