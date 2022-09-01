@@ -42,7 +42,7 @@
 ## 🪁 .NET 插件 - 开发指南 与 API文档
 使用 `C# `, `Visual Basic.NET`, `F#` 等 .NET语言开发 LL 插件，编写简单，类库丰富
 
-👉[点击此处](/DotNetPluginDevelopment)👈 查看 .NET插件开发文档 
+👉[点击此处](/DotNetPluginDevelopment/)👈 查看 .NET插件开发文档 
 <br>
 
 ## 🎬 参与 LiteLoaderBDS 项目开发
