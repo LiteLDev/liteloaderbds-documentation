@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="icon" href="../assets/Logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/docsify/lib/themes/vue.css" class="theme-css">
+    <link rel="stylesheet" href="https://unpkg.com/docsify-sidebar-collapse/dist/sidebar.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism.min.css" />
+    <style>
+        #dark-mode-btn {
+            background: transparent;
+            border: 2px solid #201d1d;
+            border-radius: 6px;
+            border: none;
+            text-align: center;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #dark-mode-btn {
+            border: 2px solid #18191a;
+        }
+
+        #dark-mode-btn:hover {
+            background-color: #54585a;
+            color: white;
+        }
+    </style>
+
+    <title>LiteLoaderBDS Documentation</title>
+</head>
+
+<body>
+    <div id="app">Loading...</div>
+
+    <script>
+        window.$docsify = {
+            repo: 'LiteLDev/LiteLoaderBDS',
+            loadNavbar: true,
+            loadSidebar: true,
+            subMaxLevel: 2,
+            auto2top: true,
+            coverpage: true,
+            name: 'LiteLoaderBDS Documentation',
+            noCompileLinks: ['../en', '../zh-Hans', '../assets/.*'],
+            onlyCover: true,
+
+            search: {
+                namespace: 'en'
+            },
+            pagination: {
+                crossChapter: true,
+                crossChapterText: true,
+            },
+            'flexible-alerts': {
+                style: 'flat'
+            },
+            plugins: [
+                // dark mode
+                function (hook) {
+                    hook.doneEach(function () {
+                        window.updateCustomCSS();
+                    });
+                }
+            ]
+        }
+    </script>
+
+    <script src="https://unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="https://unpkg.com/docsify/lib/plugins/search.min.js"></script>
+    <script src="https://unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+    <script src="https://unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="https://unpkg.com/docsify-edit-on-github"></script>
+    <script src="https://unpkg.com/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <script src="https://unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="https://unpkg.com/docsify-progress"></script>
+    <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+    <script src="https://unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+    <script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
+    <script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    
+    <!-- custom dark mode --->
+    <script defer>
+        function updateCustomCSS() {
+            let darkModeBtn = document.querySelector("#dark-mode-btn");
+            let tableBars = document.querySelectorAll('.markdown-section tr:nth-child(2n)');
+
+            // set darkModeBtn color
+            if (darkModeBtn !== null) {
+                darkModeBtn.style.backgroundColor = window.isDocsifyDarkMode ? "#3f3f3f" : "white";
+            }
+
+            // fix table bar color
+            if (tableBars !== null) {
+                for (var i = 0; i < tableBars.length; ++i)
+                    tableBars[i].style.backgroundColor = window.isDocsifyDarkMode ? "#363636" : "#f8f8f8";
+            }
+        }
+        window.updateCustomCSS = updateCustomCSS;
+
+        function changeDarkMode() {
+            let themeCss = document.querySelector(".theme-css");
+
+            if (themeCss !== null) {
+                if (!window.isDocsifyDarkMode) {
+                    window.isDocsifyDarkMode = true;
+                    themeCss.setAttribute("href", "https://unpkg.com/docsify/lib/themes/dark.css");
+                    updateCustomCSS()
+                }
+                else {
+                    window.isDocsifyDarkMode = false;
+                    themeCss.setAttribute("href", "https://unpkg.com/docsify/lib/themes/vue.css");
+                    updateCustomCSS()
+                }
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
