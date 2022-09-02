@@ -30,7 +30,7 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要移除的玩家名称。
 
 <br>
@@ -56,9 +56,9 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要移除的玩家名称
-  - `xuid` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要移除的玩家xuid
 
 <br>

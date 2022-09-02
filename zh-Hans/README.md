@@ -1,9 +1,9 @@
-# LiteLoader BDS - LL帮助中心 
+# LiteLoaderBDS文档
 
-[![status](https://img.shields.io/github/workflow/status/LiteLDev/LiteLoader/Build%20LiteLoader?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/actions)
+[![Build](https://img.shields.io/github/workflow/status/LiteLDev/LiteLoader/Build%20LiteLoader?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/actions)
 [
 ![Latest Tag](https://img.shields.io/github/v/tag/LiteLDev/LiteLoader?label=LATEST%20TAG&style=for-the-badge)
-![GitHub Releases (by Asset)](https://img.shields.io/github/downloads/LiteLDev/LiteLoader/latest/total?style=for-the-badge)
+![Downloads@Latest](https://img.shields.io/github/downloads/LiteLDev/LiteLoader/latest/total?style=for-the-badge)
 ](https://github.com/LiteLDev/LiteLoader/releases/latest)
 
 ## 🎨 项目简介
@@ -42,7 +42,7 @@
 ## 🪁 .NET 插件 - 开发指南 与 API文档
 使用 `C# `, `Visual Basic.NET`, `F#` 等 .NET语言开发 LL 插件，编写简单，类库丰富
 
-👉[点击此处](/DotNetPluginDevelopment/)👈 查看 .NET插件开发文档 
+👉[点击此处](/DotNETPluginDevelopment/)👈 查看 .NET插件开发文档 
 <br>
 
 ## 🎬 参与 LiteLoaderBDS 项目开发

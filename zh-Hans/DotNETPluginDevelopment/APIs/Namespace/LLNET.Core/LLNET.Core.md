@@ -26,7 +26,7 @@
 ## 结构
 |||
 |-|-|
-|[Pair\<Tkey,TValue\>](Struct/Pair/Pair.md)|[System.Collections.Generic.KeyValuePair\<Tkey,TValue\>](https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.keyvaluepair?view=net-6.0)的替代品。|
+|[Pair\<Tkey,TValue\>](Struct/Pair/Pair.md)|[System.Collections.Generic.KeyValuePair\<Tkey,TValue\>](https://docs.microsoft.com/zh-cn/DotNET/api/system.collections.generic.keyvaluepair?view=net-6.0)的替代品。|
 |[SecondaryRankPtr](Struct/SecondaryRankPtr/SecondaryRankPtr.md)|用于表示二级指针的结构。|
 
 <br>

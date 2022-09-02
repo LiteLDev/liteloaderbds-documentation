@@ -7,4 +7,4 @@
 [GitHub](https://github.com/LiteLDev/LiteLoaderBDS)
 [主页](https://www.litebds.com)
 [社区](https://forum.litebds.com/)
-[文档](README.md)
+[文档](/README.md)

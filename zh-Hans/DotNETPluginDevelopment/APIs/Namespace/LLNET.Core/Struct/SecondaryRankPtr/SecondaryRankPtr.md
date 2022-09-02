@@ -20,7 +20,7 @@ public value class SecondaryRankPtr
 <br>
 
 
-继承 [Object](https://docs.microsoft.com/zh-cn/dotnet/api/system.object?view=net-6.0) → [ValueType](https://docs.microsoft.com/zh-cn/dotnet/api/system.valuetype?view=net-6.0) → [SecondaryRankPtr](zh_CN/NET/APIs/Namespace/LLNET.Core/Struct/SecondaryRankPtr/SecondaryRankPtr.md)
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [ValueType](https://docs.microsoft.com/zh-cn/DotNET/api/system.valuetype?view=net-6.0) → [SecondaryRankPtr](zh_CN/NET/APIs/Namespace/LLNET.Core/Struct/SecondaryRankPtr/SecondaryRankPtr.md)
 
 <br>
 
@@ -28,8 +28,8 @@ public value class SecondaryRankPtr
 - 
     |||
     |-|-|
-    |`SecondaryRankPtr(void**)`|用二级 [void](https://docs.microsoft.com/zh-cn/dotnet/api/system.void?view=net-6.0) 指针 初始化 `SecondaryRankPtr` 结构的新实例。|
-    |`SecondaryRankPtr(IntPtr)`|用 [System.IntPtr](https://docs.microsoft.com/zh-cn/dotnet/api/system.intptr?view=net-6.0) 作为二级指针 初始化 `SecondaryRankPtr` 结构的新实例。|
+    |`SecondaryRankPtr(void**)`|用二级 [void](https://docs.microsoft.com/zh-cn/DotNET/api/system.void?view=net-6.0) 指针 初始化 `SecondaryRankPtr` 结构的新实例。|
+    |`SecondaryRankPtr(IntPtr)`|用 [System.IntPtr](https://docs.microsoft.com/zh-cn/DotNET/api/system.intptr?view=net-6.0) 作为二级指针 初始化 `SecondaryRankPtr` 结构的新实例。|
 
 <br>
 

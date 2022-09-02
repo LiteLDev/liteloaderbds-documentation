@@ -31,7 +31,7 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要添加的玩家名称。
 
 <br>
@@ -57,9 +57,9 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要添加的玩家名称
-  - `xuid` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要添加的玩家xuid
 
 <br>
@@ -85,11 +85,11 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家名称
-  - `xuid` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家xuid
-  - `ignore` : [Boolean](https://docs.microsoft.com/zh-cn/dotnet/api/system.boolean?view=net-6.0)  
+  - `ignore` : [Boolean](https://docs.microsoft.com/zh-cn/DotNET/api/system.boolean?view=net-6.0)  
     是否忽略玩家限制
 
 <br>

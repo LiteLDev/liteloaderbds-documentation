@@ -24,4 +24,4 @@ public:
 
 <br>
 
-[String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)
+[String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)

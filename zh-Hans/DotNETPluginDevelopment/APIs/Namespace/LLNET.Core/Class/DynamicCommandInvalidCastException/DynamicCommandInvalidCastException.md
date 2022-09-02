@@ -20,7 +20,7 @@ public ref class DynamicCommandInvalidCastException
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/dotnet/api/system.object?view=net-6.0) → [Exception](https://docs.microsoft.com/zh-cn/dotnet/api/system.exception?view=net-6.0) → [LiteLoaderDotNETException](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/LiteLoaderDotNETException/LiteLoaderDotNETException.md) → 
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Exception](https://docs.microsoft.com/zh-cn/DotNET/api/system.exception?view=net-6.0) → [LiteLoaderDotNETException](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/LiteLoaderDotNETException/LiteLoaderDotNETException.md) → 
 [DynamicCommandInvalidCastException](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/DynamicCommandInvalidCastException/DynamicCommandInvalidCastException.md)
 
 ## 构造函数

@@ -31,13 +31,13 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家名称。
 
 <br>
 
 - 返回
-  - [Boolean](https://docs.microsoft.com/zh-cn/dotnet/api/system.boolean?view=net-6.0)  
+  - [Boolean](https://docs.microsoft.com/zh-cn/DotNET/api/system.boolean?view=net-6.0)  
     如果 `name` 参数所指向的玩家在此白名单中出现，则为，则为 `true`；否则为 `false`。
   
 <br>
@@ -57,15 +57,15 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家名称
-  - `xuid` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家xuid
 
 <br>
 
 - 返回
-  - [Boolean](https://docs.microsoft.com/zh-cn/dotnet/api/system.boolean?view=net-6.0)  
+  - [Boolean](https://docs.microsoft.com/zh-cn/DotNET/api/system.boolean?view=net-6.0)  
     如果 `name` 参数与 `xuid` 参数所指向的玩家在此白名单中出现，则为 `true`；否则为 `false`。
   
 <br>
@@ -85,17 +85,17 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家名称
-  - `xuid` : [String](https://docs.microsoft.com/zh-cn/dotnet/api/system.string?view=net-6.0)  
+  - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家xuid
-  - `index` : [Int32](https://docs.microsoft.com/zh-cn/dotnet/api/system.int32?view=net-6.0)  
+  - `index` : [Int32](https://docs.microsoft.com/zh-cn/DotNET/api/system.int32?view=net-6.0)  
     如果索引存在，则将此值设置为数组索引(?)
 
 <br>
 
 - 返回
-  - [Boolean](https://docs.microsoft.com/zh-cn/dotnet/api/system.boolean?view=net-6.0)  
+  - [Boolean](https://docs.microsoft.com/zh-cn/DotNET/api/system.boolean?view=net-6.0)  
     如果 `name` 参数与 `xuid` 参数所指向的玩家在此白名单中出现，则为 `true`；否则为 `false`。
   
 <br>
