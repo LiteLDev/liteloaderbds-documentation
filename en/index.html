@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/docsify-sidebar-collapse/dist/sidebar.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism.min.css" />
     <style>
-        #dark-mode-btn {
+        .navbar-button {
             background: transparent;
             border: 2px solid #201d1d;
             border-radius: 6px;
@@ -24,11 +24,11 @@
             text-transform: uppercase;
         }
 
-        #dark-mode-btn {
+        .navbar-button {
             border: 2px solid #18191a;
         }
 
-        #dark-mode-btn:hover {
+        .navbar-button:hover {
             background-color: #54585a;
             color: white;
         }
@@ -87,13 +87,7 @@
     <!-- custom dark mode --->
     <script defer>
         function updateCustomCSS() {
-            let darkModeBtn = document.querySelector("#dark-mode-btn");
             let tableBars = document.querySelectorAll('.markdown-section tr:nth-child(2n)');
-
-            // set darkModeBtn color
-            if (darkModeBtn !== null) {
-                darkModeBtn.style.backgroundColor = window.isDocsifyDarkMode ? "#3f3f3f" : "white";
-            }
 
             // fix table bar color
             if (tableBars !== null) {

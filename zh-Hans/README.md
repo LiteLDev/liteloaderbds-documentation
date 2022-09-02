@@ -1,10 +1,8 @@
 # LiteLoaderBDS文档
 
 [![Build](https://img.shields.io/github/workflow/status/LiteLDev/LiteLoader/Build%20LiteLoader?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/actions)
-[
-![Latest Tag](https://img.shields.io/github/v/tag/LiteLDev/LiteLoader?label=LATEST%20TAG&style=for-the-badge)
-![Downloads@Latest](https://img.shields.io/github/downloads/LiteLDev/LiteLoader/latest/total?style=for-the-badge)
-](https://github.com/LiteLDev/LiteLoader/releases/latest)
+[![Latest Tag](https://img.shields.io/github/v/tag/LiteLDev/LiteLoader?label=LATEST%20TAG&style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/releases/latest)
+[![Downloads@Latest](https://img.shields.io/github/downloads/LiteLDev/LiteLoader/latest/total?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/releases/latest)
 
 ## 🎨 项目简介
 `LiteLoaderBDS`是一个基岩版官方服务端`Bedrock Dedicated Server`（以下简称 **BDS**）插件框架，提供强大的跨语言脚本插件支持能力和稳定的开发API支持。
