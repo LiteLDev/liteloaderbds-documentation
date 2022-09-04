@@ -9,30 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/docsify/lib/themes/vue.css" class="theme-css">
     <link rel="stylesheet" href="https://unpkg.com/docsify-sidebar-collapse/dist/sidebar.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism.min.css" />
-    <style>
-        .navbar-button {
-            background: transparent;
-            border: 2px solid #201d1d;
-            border-radius: 6px;
-            border: none;
-            text-align: center;
-            -webkit-transition-duration: 0.4s;
-            /* Safari */
-            transition-duration: 0.4s;
-            cursor: pointer;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .navbar-button {
-            border: 2px solid #18191a;
-        }
-
-        .navbar-button:hover {
-            background-color: #54585a;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/style.css" />
 
     <title>LiteLoaderBDS Documentation</title>
 </head>
@@ -84,41 +61,8 @@
     <script src="https://unpkg.com/docsify-plugin-flexible-alerts/dist/docsify-plugin-flexible-alerts.min.js"></script>
 
     <script src="https://unpkg.com/prismjs/components/prism-lua.min.js"></script>
-    
-    <!-- custom dark mode --->
-    <script defer>
-        function updateCustomCSS() {
-            let tableBars = document.querySelectorAll('.markdown-section tr:nth-child(2n)');
 
-            // fix table bar color
-            if (tableBars !== null) {
-                for (var i = 0; i < tableBars.length; ++i)
-                    tableBars[i].style.backgroundColor = window.isDocsifyDarkMode ? "#363636" : "#f8f8f8";
-            }
-        }
-        window.updateCustomCSS = updateCustomCSS;
-
-        function changeDarkMode() {
-            let themeCss = document.querySelector(".theme-css");
-
-            if (themeCss !== null) {
-                if (!window.isDocsifyDarkMode) {
-                    window.isDocsifyDarkMode = true;
-                    themeCss.setAttribute("href", "https://unpkg.com/docsify/lib/themes/dark.css");
-                    updateCustomCSS()
-                }
-                else {
-                    window.isDocsifyDarkMode = false;
-                    themeCss.setAttribute("href", "https://unpkg.com/docsify/lib/themes/vue.css");
-                    updateCustomCSS()
-                }
-            }
-        }
-    </script>
-
-
-
-
+    <script src="../assets/script.js"> </script>
 </body>
 
 </html>
