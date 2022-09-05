@@ -69,4 +69,5 @@
     - [⛳ Welcome! ](/Maintenance/README.md)
     - [👓 Architecture](/Maintenance/Analysis.md)
     - [🎯 Contribution](/Maintenance/Coding.md)
+    - [🚥 C++ Style Guide](/Maintenance/StyleGuide.md)
     - [💡 Conclusion](/Maintenance/Conclusion.md)
