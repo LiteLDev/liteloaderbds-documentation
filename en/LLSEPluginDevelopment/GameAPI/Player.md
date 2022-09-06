@@ -345,6 +345,18 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 <br>
 
+#### Scale Player
+
+`pl.setScale(scale)`
+
+- Parameters: 
+  - scale : `Integer`  
+    New player size
+- Return value: Whether the player was scaled.
+- Return value type: `Boolean`
+
+<br>
+
 #### Rename Player  
 
 `pl.rename(newname)`

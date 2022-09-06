@@ -416,6 +416,16 @@
     pl:setFire(20,true)
     ```
 
+#### 比例播放器
+
+`pl.setScale(scale)`
+
+- 参数: 
+  - scale : `Integer`  
+    新播放器尺寸
+- 返回值: 播放器是否被缩放。
+- 返回值类型: `Boolean`
+
 #### 重命名玩家  
 
 `pl.rename(newname)`

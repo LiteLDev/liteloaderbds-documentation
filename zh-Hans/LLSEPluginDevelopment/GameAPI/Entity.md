@@ -198,6 +198,18 @@
 
 <br>
 
+#### 缩放实体
+
+`en.setScale(scale)`
+
+- 参数: 
+  - scale : `Integer`  
+    新实体大小
+- 返回值: 实体是否被缩放
+- 返回值类型: `Boolean`
+
+<br>
+
 #### 判断一个实体对象是不是玩家
 
 `en.isPlayer()`
