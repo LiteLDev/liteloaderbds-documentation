@@ -198,15 +198,15 @@
 
 <br>
 
-#### 缩放实体
+#### Scale Entity
 
 `en.setScale(scale)`
 
-- 参数: 
+- Parameters: 
   - scale : `Integer`  
-    新实体大小
-- 返回值: 实体是否被缩放
-- 返回值类型: `Boolean`
+    New entity size
+- Return value: Whether the entity was scaled.
+- Return value type: `Boolean`
 
 <br>
 
