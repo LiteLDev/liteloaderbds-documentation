@@ -8,7 +8,7 @@ If you would like to preview the latest official version, please visit [LiteLoad
 
 If you would like write some pages, please create or modify them in both `/en/` and `/zh-Hans/`.
 
-If you are contributing on the C++-related documentation, please go to [the repository for C++ documentation](https://github.com/LiteLDev/docs-cpp).
+If you are contributing to the C++-related documentation, please go to [the repository for C++ documentation](https://github.com/LiteLDev/docs-cpp).
 
 You should modify the texts in different languages AT THE SAME TIME.
 Please firstly fork this repository and then create a pull request!
