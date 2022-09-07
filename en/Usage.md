@@ -1,103 +1,119 @@
-# Installation and usage
+# Installation and Usage
 
-## 💻 Install
+## 💻 Install LiteLoaderBDS
 
-### For Windows
+### Install on Windows (Recommended)
 
-1. Download the latest <code>LiteLoader-<i>version</i>.zip</code> from [Releases](https://github.com/LiteLDev/LiteLoader/releases) or [Actions](https://github.com/LiteLDev/LiteLoader/actions), 
-2. Unzip everything into the directory of `bedrock_server.exe`. If you are prompted with conflicting files during the decompression process, just select `Overwrite`.
-3. Ensure that the `bedrock_server.pdb` file exists.  
-   Run `LLPeEditor.exe` to generate the BDS with the exported symbols (`bedrock_server_mod.exe`)  
-4. When the console output `Press any key to continue. . . ` , press any key to close the window
-5. Execute `bedrock_server_mod.exe` and enjoy it !
+We recommend installing LiteLoaderBDS on these platforms:
 
-### For Linux
+* Windows 10 21H2 or later
+* Windows 11
+* Windows Server 2019 or later
 
-#### Installation script(Ubuntu)
+Follow these steps to install:
 
-```
-wget https://github.com/LiteLDev/LiteLoaderBDS/raw/beta/Scripts/install.sh
+1. Download and unzip Bedrock Dedicated Server for Minecraft (BDS) supported by the latest version of LiteLoaderBDS from [Minecraft Wiki](https://minecraft.fandom.com/wiki/Bedrock_Dedicated_Server#Download). Visit [our home page](https://www.litebds.com) to see the supported version.
+2. Download the latest version of LiteLoaderBDS from [GitHub releases](https://github.com/LiteLDev/LiteLoader/releases/latest).
+3. Unzip the achieve file you downloaded in step 2, putting all files in the directory of BDS. If conflicts occurs, overwrite the files.
+4. Check if the `bedrock_server.pdb` file exists. If not, download [here](https://github.com/LiteLDev/LiteLoader/releases/latest) and put them in the directory of BDS.
+5. In the directory of BDS, run `LLPeEditor.exe` and wait until the program hints to close it.
+6. In the directory of BDS, run `bedrock_server_mod.exe` to launch the server. Note that you should always run `bedrock_server_mod.exe` to launch ther server. Otherwise, not only features provided by LiteLoaderBDS are unavailable but also some bugs will occur, causing various unexpected crashes.
+
+### Install on Linux Distributions
+
+### Via Scripts (Available on Ubuntu)
+
+In the directory to put the server, run:
+
+```sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/Scripts/install.sh
 chmod +x install.sh
 ./install.sh
 ```
 
-#### Docker
+### Via Docker
 
-Enter the following lines in your terminal: 
-```
+You should have the latest version of Docker installed. Then run:
+
+```sh
 docker pull shrbox/liteloaderbds
-mkdir <install directory>
-docker create --name llbds -v <install directory>:/root/bedrock-server -p 19132:19132/udp -i -t shrbox/liteloaderbds
+docker create --name <container name> -v <installation directory>:/root/bedrock-server -p <port>:19132/udp -it shrbox/liteloaderbds
 ```
-`<install directory>` is directory to store data, for example: `/home/shrbox/bedrock-server`  
-The first boot takes a little while to download the Bedrock Dedicated Server and LiteLoaderBDS  
-Start server: `docker container start llbds -a`  
-Stop server: `docker container stop llbds`  
-Enter console: `docker attach llbdsr`  
-Exit console: Press `Ctrl + P + Q`. If you press `Ctrl + C`, the server process will exit.  
 
-Everything's done! Next, you can install **LiteLoader** plugins!
+You ought to adapt the `<installation directory>` and the `<port>` to your environment.
 
-<br>
+* `<container name>` is the name of the container. You can choose any name you like meeting the requirements of Docker. If you have no idea, how about `llbds`?
+* `<installation directory>` is directory to put the BDS server and the data. It's a good idea to put it in a directory that everyone can read and write.
+* `<port>` is the port that players fill in when connecting to the server.
 
-## 🎯 Find & Install plugins
+It takes more time to start up for the first time downloading BDS and LiteLoaderBDS. Please wait patiently.
 
-### Plugin downloads
+Some common commands are shown below:
 
-`LiteLoader` main plugin distribution channels.
+* Start the server: `docker start <container name>`
+* Stop the server: `docker stop <container name>`
+* Attach to the console: `docker attach <container name>`
+* Detach from the console: Press `Ctrl` + `P` + `Q`. You should not press `Ctrl` + `C` or the server will terminate immediately.
 
-- [Official Forum](https://forum.litebds.com/)
-- [MineBBS](https://www.minebbs.com/resources/?prefix_id=59)
+Now that you have LiteLoaderBDS installed, how about adding some plugins?
 
-### Plugin installation
+## 🎯 Add Some Plugins
 
-1. If you downloaded a zip file, unzip it
-2. Place all the obtained contents directly into the `plugins` directory
-3. Run `bedrock_server_mod.exe` to start the service
+There are two types of plugins: LL plugins and LLSE plugins.
 
-For more **installation and usage guides**,  come to 👉[LiteLoader documentation](https://docs.litebds.com/#/en/Usage/)👈 to view
+LL plugins are compiled native plugins, written in C++, Go, C# or Rust, which have better performance but cannot be loaded, unloaded or reloaded after the server starts.
 
-## 🎨  Install ResourcePacks / Addons
-- Copy `.mcpack`, `.mcaddon` or `.zip` to `plugins/AddonsHelper` and restart server. LL will install it for you when the server launch.
-- You can manage Resource Packs and Addons by using `addons` command
+LLSE plugins are script plugins, written in JavaScript, Python or Lua, which can be flexibly managed and have better security but perform worse.
 
-## 🔌 Plugins hot management
+### Find Your Favorite Plugins
 
-Don't need to close server, you can manage plugins, we provided these console commands:
+You can look for plugins in these websites:
 
-- `ll list`  
-  **List** plugins
-- `ll load ./plugins/xxxx.js`  
-  **Hot load** plugin which locate in target path. The path is relative to the BDS root directory.
-- `ll unload xxxx.lua`  
-  **Hot unload** plugin which called xxxx.lua
-- `ll reload xxxx.dll`  
-  **Reload** plugin which called xxxx.dll
-- `ll reload`  
-  **Reload** all plugins
-- `ll version`  
-  Print version of LiteLoaderBDS
-- `ll upgrade`  
-  Check for updates
+* [LiteLoader Forum](https://forum.litebds.com/)
+* [MineBBS (LL plugins)](https://www.minebbs.net/resources/?prefix_id=59)
+* [MineBBS (LLSE plugins)](https://www.minebbs.net/resources/?prefix_id=67)
 
-#### Hot management common problem
+### Install Plugins
 
-- After a plugin is hot unloaded, the commands registered by this plugin are not removed. When the player uses those commands, it will prompt that the command does not exist
-- If your plugin has exported functions imported by other plugins, when you unload/reload this plugin, the corresponding Import of other plugins will be invalid.  
-- Do not unload or reload plugins when the server has not started, or when there are a lot of players on the server! Otherwise the server may crash
-- After hot reloading/hot reloading a plugin, the `onServerStarted` event registered by the plugin will be called immediately, and the player join event `onPlayerJoin` will be called one by one (because the server has been started at this time)
+1. Unzip if you have got an archieve file.
+2. Check the content of the plugin. The file names of LiteLoaderBDS plugins end with `.dll`, `.js` or `.lua`.
+3. Place the files in the `plugins` directory. Some plugins may be distributed with other files, you should put them in the `plugins` directory at the same time.
 
->[!WARNING]
->
-> Plugin hot management is only used when debugging plugins. Avoid using **in production environments**
+## 🔌 Manage Plugins
 
-## 📡 ScriptEngine real time debug mode
+You can manage the plugins with the commands listed below:
 
-- `jsdebug`  
-  Enter JS real time debug mode
-- `luadebug`  
-  Enter Lua real time debug mode
+* `ll list`: list all plugins
+* `ll load plugins/xxxx.js`: load an LLSE plugin
+* `ll unload plugin/xxxx.js`: unload an LLSE plugin
+* `ll reload plugin/xxxx.js`: reload an LLSE plugin
+* `ll reload`: reload all LLSE plugins
+* `ll version`: print the LiteLoaderBDS version
+* `ll upgrade`: Check for LiteLoaderBDS updates
 
-In real-time debugging mode, the standard input will be executed as scripting language, and the results will be output in real time.  
-If an error occurs, the engine will output an error message and a stack trace.  
-Entering the `jsdebug` or `luadebug` again will exit the real time debugg mode.
+### Notice
+
+* After unloading a plugin, the commands registered by it will NOT be totally removed, which may resulting in hinting the command not existent when players attempts to use the commands.
+* If the plugin unloaded exports interfaces used by other plugins, the other plugins will be unavailable.
+* DO NOT unload or reload plugins when the server has not been started or there are players in the server, or the server will face the risk to crash.
+* On loading a plugin, the `onServerStarted` event and the the `onPlayerJoin` events of all players will be triggered in the plugin.
+
+> [!WARNING]
+> DO NOT load, unload or reload any plugin under production environment.
+
+## 🎨 Manage Addons
+
+Copy the addon whose file name ends with `.mcpack`, `.mcaddon` or `.zip` to `plugins/AddonsHelper/` and restart the server. The addons will then be automatically added to the world.
+
+You can manage them with command `addons` in the console.
+
+## 📡 Debug Plugins
+
+You can type these commands to enter the corresponding debug mode:
+
+* `jsdebug`: JavaScript debug mode
+* `luadebug`: Lua debug mode
+
+In debug mode, all texts you type will be parsed as scripts and be executed in real time, as the console of developer tools of browsers do. If any error occurs, you will see an error report.
+
+You can type `jsdebug` / `luadebug` and enter to exit the debug mode.
