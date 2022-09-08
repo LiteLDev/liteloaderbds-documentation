@@ -14,7 +14,7 @@ With your IDE in hand, and the server installation complete, you are ready to be
 
 Developing a LLSE Plugin begins with creating your plugin's file. This file should be named "LLMyPlugin.js", replacing "MyPlugin" with what you would like to call your plugin. It should be placed in the plugins folder of your server installation. Some IDEs will allow you to create a new file and choose a location, while others will allow you to choose only after hitting "Save As".
 
-The first line you will need in that file is the one below. For information on parameters for this method, and information on the Script Assist API, you can go \[here](LLSEPluginDevelopment/ScriptAPI/ScriptHelp).
+The first line you will need in that file is the one below. For information on parameters for this method, and information on the Script Assist API, you can go [here](https://docs.litebds.com/en/#/LLSEPluginDevelopment/ScriptAPI/ScriptHelp).
 
 `ll.registerPlugin(name, introduction, version, otherInformation)`
 
