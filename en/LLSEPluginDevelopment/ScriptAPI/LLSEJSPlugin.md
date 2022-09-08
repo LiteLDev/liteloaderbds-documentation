@@ -4,13 +4,13 @@
 
 ## Prerequisites
 
-Before developing your first plugin, we will need to set up your developer environment (IDE). The choice of software you use to program is yours, but trusted and reliable software is recommended. [Atom](https://atom.io/) is a very simple program which can be used for this purpose.
+Before developing your first plugin, we will need to set up your developer environment (IDE). The choice of software you use to program is yours, but trusted and reliable software is recommended. [Atom](https://atom.io/) is lightweight editor that works well for this tutorial, otherwise [VSCode](https://code.visualstudio.com/) is also a widely used editor with a lot of powerful features.
 
-You will also need to set up a clean LiteLoaderBDS installation, details on how to install LiteLoaderBDS can be found [here](https://github.com/LiteLDev/LiteLoaderBDS#-install). This server will be used to test your plugin.
+You will also need to set up a clean LiteLoaderBDS installation, details on how to install LiteLoaderBDS can be found [here](https://docs.litebds.com/en/#/Usage). This server will be used to test your plugin.
 
 With your IDE in hand, and the server installation complete, you are ready to begin!
 
-## What do I do now?
+## What Do I Do Now?
 
 Developing a LLSE Plugin begins with creating your plugin's file. This file should be named "LLMyPlugin.js", replacing "MyPlugin" with what you would like to call your plugin. It should be placed in the plugins folder of your server installation. Some IDEs will allow you to create a new file and choose a location, while others will allow you to choose only after hitting "Save As".
 
