@@ -66,6 +66,25 @@ Every item object contains some fixed object properties. For a specific item obj
 | it.id    | Item's in-game ID           | `Integer` |
 | it.count | Item's count   | `Integer` |
 | it.aux   | Item's data value (for example, wool color or wood type) | `Integer` |
+| it.damage   | Item Current Damage | `Integer` |
+| it.attackDamage   | Item Attack Damage | `Integer` |
+| it.maxDamage   | Item Max Damage | `Integer` |
+| it.isArmorItem   | Whether the item is armor item | `Boolean` |
+| it.isBlock   | Whether the item is block | `Boolean` |
+| it.isDamageableItem   | Whether the item has attack damage | `Boolean` |
+| it.isDamaged   | Whether the item is damaged | `Boolean` |
+| it.isEnchanted   | Whether the item is enchanted | `Boolean` |
+| it.isEnchantingBook   | Whether the item is Enchanting Book | `Boolean` |
+| it.isFireResistant   | Whether the item is fire resistant | `Boolean` |
+| it.isFullStack   | Whether the item have full stack | `Boolean` |
+| it.isGlint   | Whether the item is glint | `Boolean` |
+| it.isHorseArmorItem   | Whether the item is armor item for horse | `Boolean` |
+| it.isHorseArmorItem   | Whether the item is liquid clip | `Boolean` |
+| it.isMusicDiscItem   | Whether the item is music disc | `Boolean` |
+| it.isOffhandItem   | Whether the item can be on second hand | `Boolean` |
+| it.isPotionItem   | Whether the item is potion | `Boolean` |
+| it.isStackable   | Whether the item can be stackable | `Boolean` |
+| it.isWearableItem   | Whether the item can wearable | `Boolean` |
 
 These object properties are read-only and cannot be modified.
 
@@ -104,6 +123,18 @@ For example, when there is no item in a grid, the item object you get is empty.
 - Parameters: 
   - item : `Item`  
     The item object to assign.
+- Return value: Whether the assignment is successful.
+- Return value type:  `Boolean`
+
+<br>
+
+#### Damage Item
+
+`it.setDamage(damage)`
+
+- Parameters: 
+  - damage : `Integer`  
+    Damage to highlight.
 - Return value: Whether the assignment is successful.
 - Return value type:  `Boolean`
 
