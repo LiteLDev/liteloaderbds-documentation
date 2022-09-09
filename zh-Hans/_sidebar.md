@@ -7,6 +7,7 @@
 - 🎯 LLSE 脚本插件开发
     - [⛳ 新手入门（必读）](LLSEPluginDevelopment/README.md)
     - [📋 多种开发语言支持](LLSEPluginDevelopment/LanguageSupport.md)
+    - [📜 Using Javascript to Create Your First Plugin](/LLSEPluginDevelopment/LLSEJSPlugin.md)
     - [💼 通用脚本接口 - 常用](LLSEPluginDevelopment/ScriptAPI/ScriptHelp.md)
 
     - 游戏内容接口
