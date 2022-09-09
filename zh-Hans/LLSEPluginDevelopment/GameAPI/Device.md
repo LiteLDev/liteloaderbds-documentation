@@ -27,6 +27,7 @@
 | dv.lastPing      | 玩家的网络延迟时间（ms）     | `Integer` |
 | dv.lastPacketLoss| 玩家的网络丢包率（%）        | `Float`   |
 | dv.os            | 玩家设备的操作系统类型       | `String`  |
+| dv.inputMode     | Player's input mode (0 is controller, 1 is keyboard & mouse, 2 is touch) | `Integer` |
 | dv.serverAddress | 玩家连接的地址              | `String`  |
 | dv.clientId      | 玩家客户端的识别码ID         | `String`  |
 
