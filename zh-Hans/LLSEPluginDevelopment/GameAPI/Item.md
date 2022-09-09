@@ -67,6 +67,25 @@
 | it.id    | 物品的游戏内id           | `Integer` |
 | it.count | 这个物品对象堆叠的个数   | `Integer` |
 | it.aux   | 物品附加值（如羊毛颜色） | `Integer` |
+| it.damage   | Item Current Damage | `Integer` |
+| it.attackDamage   | Item Attack Damage | `Integer` |
+| it.maxDamage   | Item Max Damage | `Integer` |
+| it.isArmorItem   | Whether the item is armor item | `Boolean` |
+| it.isBlock   | Whether the item is block | `Boolean` |
+| it.isDamageableItem   | Whether the item has attack damage | `Boolean` |
+| it.isDamaged   | Whether the item is damaged | `Boolean` |
+| it.isEnchanted   | Whether the item is enchanted | `Boolean` |
+| it.isEnchantingBook   | Whether the item is Enchanting Book | `Boolean` |
+| it.isFireResistant   | Whether the item is fire resistant | `Boolean` |
+| it.isFullStack   | Whether the item have full stack | `Boolean` |
+| it.isGlint   | Whether the item is glint | `Boolean` |
+| it.isHorseArmorItem   | Whether the item is armor item for horse | `Boolean` |
+| it.isHorseArmorItem   | Whether the item is liquid clip | `Boolean` |
+| it.isMusicDiscItem   | Whether the item is music disc | `Boolean` |
+| it.isOffhandItem   | Whether the item can be on second hand | `Boolean` |
+| it.isPotionItem   | Whether the item is potion | `Boolean` |
+| it.isStackable   | Whether the item can be stackable | `Boolean` |
+| it.isWearableItem   | Whether the item can wearable | `Boolean` |
 
 这些对象属性都是只读的，无法被修改
 
@@ -107,6 +126,18 @@
     要赋值的物品对象
 - 返回值：是否赋值成功
 - 返回值类型： `Boolean`
+
+<br>
+
+#### Damage Item
+
+`it.setDamage(damage)`
+
+- Parameters: 
+  - damage : `Integer`  
+    Damage to highlight.
+- Return value: Whether the assignment is successful.
+- Return value type:  `Boolean`
 
 <br>
 
