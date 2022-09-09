@@ -4,10 +4,13 @@
 
 - [❓ Frequently Asked Questions ](/FAQ.md)
 
-- 🎯 LLSE Script Plugin Development
+- [⛳ C++ Plugin Development](https://cpp.docs.litebds.com/en)
+
+- 🎯 Script Plugin Development
     - [⛳ For Beginners (Must Read)](/LLSEPluginDevelopment/)
     - [📋 Multi Development Language Support](/LLSEPluginDevelopment/LanguageSupport.md)
     - [📜 Using Javascript to Create Your First Plugin](/LLSEPluginDevelopment/LLSEJSPlugin.md)
+    
     - [💼 Generic Script Interface (Commonly Used)](/LLSEPluginDevelopment/ScriptAPI/ScriptHelp.md)
 
     - Game Content Interface
@@ -64,11 +67,11 @@
         - [📡 System Calls](/LLSEPluginDevelopment/SystemAPI/SystemCall.md)
         - [📜 Get System Information](/LLSEPluginDevelopment/SystemAPI/SystemInfo.md)
 
-- [**⛳ LL C++ Plugin Development**](https://cpp.docs.litebds.com/en)
-
 - 🎬 Maintenance
     - [⛳ Welcome! ](/Maintenance/README.md)
     - [👓 Architecture](/Maintenance/Analysis.md)
     - [🎯 Contribution](/Maintenance/Coding.md)
     - [🚥 C++ Style Guide](/Maintenance/StyleGuide.md)
     - [💡 Conclusion](/Maintenance/Conclusion.md)
+
+- [💦 Changelog](https://github.com/LiteLDev/LiteLoaderBDS/releases)
