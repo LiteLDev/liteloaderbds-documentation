@@ -27,6 +27,7 @@ Each device information object contains some fixed object properties. for a spec
 | dv.lastPing      | Network latency for players (ms) | `Integer` |
 | dv.lastPacketLoss| Player's network packet loss rate (%) | `Float`   |
 | dv.os            | The OS type of the player's device | `String`  |
+| dv.inputMode     | Player's input mode (0 is controller, 1 is keyboard & mouse, 2 is touch) | `Integer` |
 | dv.serverAddress | The player's connection address | `String`  |
 | dv.clientId      | ID of the player client | `String`  |
 
