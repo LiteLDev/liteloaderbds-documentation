@@ -174,3 +174,14 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](/LL
 
 <br>
 
+#### Set Custom Item Name
+
+`it.setDisplayName(name)`
+
+- Parameters: 
+  - name : `String`  
+    New item name.
+- Return value: Whether setting the name was successful.
+- Return value type:  `Boolean`
+
+<br>
