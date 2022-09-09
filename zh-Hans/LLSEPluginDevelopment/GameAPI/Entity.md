@@ -198,6 +198,18 @@
 
 <br>
 
+#### Scale Entity
+
+`en.setScale(scale)`
+
+- Parameters: 
+  - scale : `Integer`  
+    New entity size
+- Return value: Whether the entity was scaled.
+- Return value type: `Boolean`
+
+<br>
+
 #### 判断一个实体对象是不是玩家
 
 `en.isPlayer()`
