@@ -416,6 +416,16 @@
     pl:setFire(20,true)
     ```
 
+#### Scale Player
+
+`pl.setScale(scale)`
+
+- Parameters: 
+  - scale : `Integer`  
+    New player size
+- Return value: Whether the player was scaled.
+- Return value type: `Boolean`
+
 #### 重命名玩家  
 
 `pl.rename(newname)`

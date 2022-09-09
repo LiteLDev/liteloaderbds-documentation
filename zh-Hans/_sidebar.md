@@ -4,9 +4,13 @@
 
 - [❓ 常见问题](/FAQ.md)
 
-- 🎯 LLSE 脚本插件开发
+- [⛳ C++插件开发](https://cpp.docs.litebds.com/zh-Hans)
+
+- 🎯 脚本插件开发
     - [⛳ 新手入门（必读）](LLSEPluginDevelopment/README.md)
     - [📋 多种开发语言支持](LLSEPluginDevelopment/LanguageSupport.md)
+    - [📜 使用JavaScript创造你的首个插件](/LLSEPluginDevelopment/LLSEJSPlugin.md)
+    
     - [💼 通用脚本接口 - 常用](LLSEPluginDevelopment/ScriptAPI/ScriptHelp.md)
 
     - 游戏内容接口
@@ -97,8 +101,6 @@
         - [LLNET.Schedule]
         - [MC]
 
-- [**⛳ LL C++插件开发**](https://cpp.docs.litebds.com/zh-Hans)
-
 - 🎬 维护与支持
     - [⛳ 欢迎！](/Maintenance/README.md)
     - [🔮 Git使用以及项目Commit规范](/Maintenance/Commit.md)
@@ -107,3 +109,5 @@
     - [💡 放在最后](/Maintenance/Conclusion.md)
     - [👓 项目架构分析（待重写）](/Maintenance/Analysis.md)
     - [🎯 维护项目和贡献代码（待补充）](/Maintenance/Coding.md)
+
+- [💦 更新日志](https://github.com/LiteLDev/LiteLoaderBDS/releases)

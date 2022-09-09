@@ -194,6 +194,18 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 <br>
 
+#### Scale Entity
+
+`en.setScale(scale)`
+
+- Parameters: 
+  - scale : `Integer`  
+    New entity size
+- Return value: Whether the entity was scaled.
+- Return value type: `Boolean`
+
+<br>
+
 #### Determine if an Entity Object Is a Player
 
 `en.isPlayer()`
