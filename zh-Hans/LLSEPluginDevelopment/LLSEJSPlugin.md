@@ -1,60 +1,60 @@
-# LLSE - Using Javascript to Create Your First Plugin
+# 使用JavaScript创造你的首个插件
 
-> This guide serves to demonstrate the very simple and straight forward process to creating your first plugin - as well as some best practices when thinking about what to make and how to do it. Experience using Javascript previously is recommended, but not required. Javascript is a very beginner friendly language, so don't get overwhelmed!
+> 本指南旨在展示创建你的第一个插件的非常简单和直接的过程--以及在考虑做什么和如何做时的一些最佳做法。建议有使用Javascript的经验，但不是必须的。Javascript是一种对初学者非常友好的语言，所以不要被淹没了!
 
-## Prerequisites
+## 先决条件
 
-Before developing your first plugin, we will need to set up your developer environment (IDE). The choice of software you use to program is yours, but trusted and reliable software is recommended. [Atom](https://atom.io/) is lightweight editor that works well for this tutorial, otherwise [VSCode](https://code.visualstudio.com/) is also a widely used editor with a lot of powerful features.
+在开发你的第一个插件之前，我们需要设置你的开发环境（IDE）。你用来编程的软件由你自己选择，但建议使用可信和可靠的软件。[Atom](https://atom.io/)是轻量级的编辑器，在本教程中很好用，否则[VSCode](https://code.visualstudio.com/)也是一个广泛使用的编辑器，具有很多强大的功能。
 
-You will also need to set up a clean LiteLoaderBDS installation, details on how to install LiteLoaderBDS can be found [here](https://docs.litebds.com/en/#/Usage). This server will be used to test your plugin.
+你还需要建立一个干净的LiteLoaderBDS安装，关于如何安装LiteLoaderBDS的细节可以在[这里](https://docs.litebds.com/zh-Hans/#/Usage)找到。这个服务器将被用来测试你的插件。
 
-With your IDE in hand, and the server installation complete, you are ready to begin!
+有了你的IDE，并完成了服务器的安装，你就可以开始了!
 
-## What Do I Do Now?
+## 我现在该做什么？
 
-Developing a LLSE Plugin begins with creating your plugin's file. This file should be named "LLMyPlugin.js", replacing "MyPlugin" with what you would like to call your plugin. It should be placed in the plugins folder of your server installation. Some IDEs will allow you to create a new file and choose a location, while others will allow you to choose only after hitting "Save As".
+开发一个LLSE插件，首先要创建你的插件文件。这个文件应该命名为 "LLMyPlugin.js"，将 "MyPlugin "替换为你想要的插件名称。它应该被放在你的服务器安装的插件文件夹中。有些IDE会允许你创建一个新文件并选择一个位置，而其他IDE则允许你在点击 "另存为 "后才选择。
 
-The first line you will need in that file is the one below. For information on parameters for this method, and information on the Script Assist API, you can go [here](https://docs.litebds.com/en/#/LLSEPluginDevelopment/ScriptAPI/ScriptHelp).
+你在该文件中需要的第一行是下面这行。关于这个方法的参数信息，以及关于Script Assist API的信息，你可以去[这里]（https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/ScriptAPI/ScriptHelp）。
 
-`ll.registerPlugin(name, introduction, version, otherInformation)`
+`ll.registerPlugin(name, introduction, version, otherInformation)`。
 
-This might confuse some developers, as `ll` should be undefined. However, this file is going to be utilized by the LiteLoaderBDS ScriptX Engine. `ll` will be automatically included during the script's runtime. This is the same with any other variables/classes you see referenced without a definition.
+这可能会使一些开发者感到困惑，因为`ll`应该是未定义的。然而，这个文件将被LiteLoaderBDS ScriptX引擎所利用。`ll`将在脚本运行时自动包含。这与你看到的任何其他没有定义的变量/类的引用是一样的。
 
-Now that we have created our .js file, and registered the plugin, all we have to do from here is create an event listener. We do that by utilizing `mc`.
+现在我们已经创建了我们的.js文件，并注册了插件，我们要做的就是创建一个事件监听器。我们通过使用`mc`来实现。
 
 
-```js
+``js
 mc.listen("onJoin", (player) => {
-    log(`${player.name} has joined the server.`);
+    log(`${player.name}已经加入服务器。`)。
 });
 ```
-> Reference: https://docs.litebds.com/en/#/LLSEPluginDevelopment/EventAPI/Listen
+> 参考资料: https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/EventAPI/Listen
 
-In order to test your plugin, simply start the server and the server should be able to identify your plugin and successfully load it. LiteLoaderBDS console will log any logs you create, as well as any errors if your plugin, or the API fails. Iteration while developing is important. Test frequently and each step of the way to ensure that when an issue does pop up, you know exactly what you changed and can come up with a solution to fix it.
+为了测试你的插件，只需启动服务器，服务器应该能够识别你的插件并成功加载它。LiteLoaderBDS控制台将记录您创建的任何日志，以及您的插件或API失败时的任何错误。开发时的迭代很重要。经常测试，每一步都要确保当问题出现时，你清楚地知道你改变了什么，并能想出解决方案来解决它。
 
-You can reference the `mc` class as well as other special classes and constructors. The `mc` class is the bread and butter of your plugin and will allow you to do a lot of cool things. The Game Content interface has all the methods and properties available to you.
-> Reference: https://docs.litebds.com/en/#/LLSEPluginDevelopment/GameAPI/Basic
+你可以引用`mc`类，以及其他特殊的类和构造函数。`mc`类是你的插件的面包和黄油，将允许你做很多很酷的事情。游戏内容接口有所有的方法和属性供你使用。
+>参考：https://docs.litebds.com/en/#/LLSEPluginDevelopment/GameAPI/Basic
 
-For example, we can use the player object and directly act on it to send information/manipulate a Player.
+例如，我们可以使用播放器对象并直接对其采取行动，以发送信息/操纵播放器。
 
-```js
+``js
 mc.listen("onJoin", (player) => {
-    log(`${player.name} has joined the server.`);
+    log(`${player.name}已经加入服务器。`)。
     player.sendToast('Welcome!', 'Thanks for joining the server!');
 });
 ```
 
-We can reference player object properties and use that to execute other actions.
+我们可以引用玩家对象的属性，并使用它来执行其他动作。
 
-```js
+``js
 mc.listen("onJoin", (player) => {
-    log(`${player.name} has joined the server.`);
+    log(`${player.name}已经加入服务器。`)。
     player.sendToast('Welcome!', 'Thanks for joining the server!');
     let loginReward = mc.newItem('minecraft:diamond', 1);
-    mc.spawnItem(loginReward, player.pos);
+    mc.spawnItem(loginReward, player.pos)。
 });
 ```
 
-This brings us to the final considerations. When making plugins, try to think of something simple and self-enclosing. Every developer wants to build a massive plugin with a ton of features, but such projects are prone to abandonment as they never truly get finished. Make a series of small plugins that have specific purpose. Add features to those plugins to enable configuration and customization. Find features or things you wish the game had and use the methods available in LiteLoaderBDS to make them happen. There are truly unlimited possibilities with LiteLoader's API.
+这给我们带来了最后的考虑。在制作插件时，尽量想一些简单的、自我封闭的东西。每个开发者都想建立一个具有大量功能的大型插件，但这样的项目很容易被放弃，因为它们从未真正完成。做一系列有特定目的的小插件。为这些插件添加功能，以实现配置和定制。找到你希望游戏拥有的功能或事物，并使用LiteLoaderBDS中的方法来实现它们。使用LiteLoader的API确实有无限可能。
 
-If you run into any issues while developing, questions, comments or concerns can be answered by joining the [Discord](https://discord.gg/5HU3cJsVZ5) - or by opening an issue on the LiteLoaderBDS Github Repo.
+如果您在开发过程中遇到任何问题，可以通过加入[Discord](https://discord.gg/5HU3cJsVZ5)--或在LiteLoaderBDS Github Repo上开立一个问题，来回答您的问题、意见或担忧。
