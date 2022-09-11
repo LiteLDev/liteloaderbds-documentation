@@ -402,6 +402,16 @@
     pl:hurt(20)
     ```
 
+#### Heal the Player
+
+`pl.heal(health)`
+
+- Parameters: 
+  - int : `Integer`  
+    Number of hearts to heal .
+- Return value: Whether heal was successful.
+- Return value type: `Boolean`
+
 #### 使指定玩家着火
 
 `pl.setFire(time,isEffect)`

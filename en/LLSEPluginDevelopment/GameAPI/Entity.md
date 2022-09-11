@@ -67,6 +67,7 @@ Every entity object contains some fixed object properties. for a specific entity
 | Attributes               | Meaning                                                | Data Type        |
 | ------------------------ | ------------------------------------------------------ | ---------------- |
 | en.name                  | Entity name                                            | `String`         |
+| en.nameTag               | Entity Name Tag                                        | `String`         |
 | en.type                  | Entity type name                                       | `String`         |
 | en.id                    | Entity's in-game ID                                    | `Integer`        |
 | en.pos                   | Entity's coordinates                                   | `FloatPos`       |
@@ -100,6 +101,7 @@ Every entity object contains some fixed object properties. for a specific entity
 | en.isDancing             | Whether the entity is dancing                          | `Boolean`        |
 | en.isSleeping            | Whether the entity is sleeping                         | `Boolean`        |
 | en.isAngry               | Whether the entity is angry                            | `Boolean`        |
+| en.isBaby               | Whether the entity is baby                            | `Boolean`        |
 
 These object properties are read-only and cannot be modified.
 
@@ -182,6 +184,18 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 <br>
 
+#### Heal the Entity
+
+`en.heal(health)`
+
+- Parameters: 
+  - int : `Integer`  
+    Number of hearts to heal.
+- Return value: Whether heal was dealt.
+- Return value type: `Boolean`
+
+<br>
+
 #### Set the Specified Entity on Fire
 
 `en.setOnFire(time)`
@@ -190,6 +204,19 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
   - time : `Integer`  
     Fire time, in seconds.
 - Return value: Whether the fire was set.
+- Return value type:  `Boolean`
+
+<br>
+
+#### Set Entity Nametag
+
+`en.setNameTag(name)`
+`en.setDisplayName(name)`
+
+- Parameters: 
+  - name : `String`  
+    Fire time, in seconds.
+- Return value: Whether the set entity nametag.
 - Return value type:  `Boolean`
 
 <br>

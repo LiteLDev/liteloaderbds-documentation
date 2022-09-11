@@ -68,6 +68,7 @@
 | 属性                     | 含义                   | 类型             |
 | ------------------------ | ---------------------- | ---------------- |
 | en.name                  | 实体名称               | `String`         |
+| en.nameTag               | Entity Name Tag                                        | `String`         |
 | en.type                  | 实体标准类型名         | `String`         |
 | en.id                    | 实体的游戏内id         | `Integer`        |
 | en.pos                   | 实体所在坐标           | `FloatPos`       |
@@ -101,6 +102,8 @@
 | en.isDancing             | 实体是否在跳舞         | `Boolean`        |
 | en.isSleeping            | 实体是否在睡觉         | `Boolean`        |
 | en.isAngry               | 实体是否生气           | `Boolean`        |
+| en.isBaby               | Whether the entity is baby                            | `Boolean`        |
+
 
 这些对象属性都是只读的，无法被修改
 
@@ -185,6 +188,18 @@
 
 <br>
 
+#### Heal the Entity
+
+`en.heal(health)`
+
+- Parameters: 
+  - int : `Integer`  
+    Number of hearts to heal.
+- Return value: Whether heal was dealt.
+- Return value type: `Boolean`
+
+<br>
+
 
 #### 使指定实体着火
 
@@ -195,6 +210,19 @@
     着火时长，单位秒
 - 返回值：是否成功着火
 - 返回值类型：`Boolean`
+
+<br>
+
+#### Set Entity Nametag
+
+`en.setNameTag(name)`
+`en.setDisplayName(name)`
+
+- Parameters: 
+  - name : `String`  
+    Fire time, in seconds.
+- Return value: Whether the set entity nametag.
+- Return value type:  `Boolean`
 
 <br>
 
