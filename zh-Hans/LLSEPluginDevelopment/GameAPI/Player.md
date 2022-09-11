@@ -303,6 +303,16 @@
     pl:talkAs("Hello everyone ~ ")
     ```
 
+#### Get Player Distance To Pos
+
+`pl.distanceToPos(pos)`
+
+- Parameters: 
+  - pos : `IntPos` / `FloatPos`
+    The target position. 
+- Return value: Distance to coordinates (in blocks).
+- Return value type:  `Number`   
+
 #### 以某个玩家身份向某玩家说话
 
 `pl.talkAs(target,text)`

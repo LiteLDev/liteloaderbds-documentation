@@ -210,6 +210,18 @@
 
 <br>
 
+#### Get Entity Distance To Pos
+
+`en.distanceToPos(pos)`
+
+- Parameters: 
+  - pos : `IntPos` / `FloatPos`
+    The target position. 
+- Return value: Distance to coordinates (in blocks).
+- Return value type:  `Number`   
+
+<br>
+
 #### 判断一个实体对象是不是玩家
 
 `en.isPlayer()`
