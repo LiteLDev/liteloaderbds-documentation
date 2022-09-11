@@ -67,25 +67,25 @@
 | it.id    | 物品的游戏内id           | `Integer` |
 | it.count | 这个物品对象堆叠的个数   | `Integer` |
 | it.aux   | 物品附加值（如羊毛颜色） | `Integer` |
-| it.damage   | Item Current Damage | `Integer` |
-| it.attackDamage   | Item Attack Damage | `Integer` |
-| it.maxDamage   | Item Max Damage | `Integer` |
-| it.isArmorItem   | Whether the item is armor item | `Boolean` |
-| it.isBlock   | Whether the item is block | `Boolean` |
-| it.isDamageableItem   | Whether the item has attack damage | `Boolean` |
-| it.isDamaged   | Whether the item is damaged | `Boolean` |
-| it.isEnchanted   | Whether the item is enchanted | `Boolean` |
-| it.isEnchantingBook   | Whether the item is Enchanting Book | `Boolean` |
-| it.isFireResistant   | Whether the item is fire resistant | `Boolean` |
-| it.isFullStack   | Whether the item have full stack | `Boolean` |
-| it.isGlint   | Whether the item is glint | `Boolean` |
-| it.isHorseArmorItem   | Whether the item is armor item for horse | `Boolean` |
-| it.isHorseArmorItem   | Whether the item is liquid clip | `Boolean` |
-| it.isMusicDiscItem   | Whether the item is music disc | `Boolean` |
-| it.isOffhandItem   | Whether the item can be on second hand | `Boolean` |
-| it.isPotionItem   | Whether the item is potion | `Boolean` |
-| it.isStackable   | Whether the item can be stackable | `Boolean` |
-| it.isWearableItem   | Whether the item can wearable | `Boolean` |
+| it.damage   | 物品当前耐久 | `Integer` |
+| it.attackDamage   | 物品攻击伤害 | `Integer` |
+| it.maxDamage   | 物品最大耐久 | `Integer` |
+| it.isArmorItem   | 物品是否为箭 | `Boolean` |
+| it.isBlock   | 物品是否为方块 | `Boolean` |
+| it.isDamageableItem   | 物品是否可被破坏 | `Boolean` |
+| it.isDamaged   | 物品耐久是否被消耗 | `Boolean` |
+| it.isEnchanted   | 物品是否已被附魔 | `Boolean` |
+| it.isEnchantingBook   | 物品是否为附魔书 | `Boolean` |
+| it.isFireResistant   | 物品是否防火 | `Boolean` |
+| it.isFullStack   | 物品是否已堆叠到最大堆叠数 | `Boolean` |
+| it.isGlint   | 物品是否闪烁 | `Boolean` |
+| it.isHorseArmorItem   | 物品是否为马铠 | `Boolean` |
+| it.isLiquidClipItem   | Whether the item is liquid clip | `Boolean` |
+| it.isMusicDiscItem   | 物品是否为唱片 | `Boolean` |
+| it.isOffhandItem   | 物品是否可设置到副手 | `Boolean` |
+| it.isPotionItem   | 物品是否为药水 | `Boolean` |
+| it.isStackable   | 物品是否可堆叠 | `Boolean` |
+| it.isWearableItem   | 物品是否可穿戴 | `Boolean` |
 
 这些对象属性都是只读的，无法被修改
 
@@ -129,15 +129,15 @@
 
 <br>
 
-#### Damage Item
+#### 设置物品耐久度
 
 `it.setDamage(damage)`
 
-- Parameters: 
+- 参数: 
   - damage : `Integer`  
-    Damage to highlight.
-- Return value: Whether the assignment is successful.
-- Return value type:  `Boolean`
+    耐久度
+- 返回值: 是否设置成功
+- 返回值类型:  `Boolean`
 
 <br>
 
@@ -206,14 +206,14 @@
 
 <br>
 
-#### Set Custom Item Name
+#### 设置自定义物品名称
 
 `it.setDisplayName(name)`
 
-- Parameters: 
+- 参数: 
   - name : `String`  
-    New item name.
-- Return value: Whether setting the name was successful.
-- Return value type:  `Boolean`
+    新物品名称
+- 返回值: 设置物品名称是否成功
+- 返回值类型e:  `Boolean`
 
 <br>

@@ -71,7 +71,7 @@ Every item object contains some fixed object properties. For a specific item obj
 | it.maxDamage   | Item Max Damage | `Integer` |
 | it.isArmorItem   | Whether the item is armor item | `Boolean` |
 | it.isBlock   | Whether the item is block | `Boolean` |
-| it.isDamageableItem   | Whether the item has attack damage | `Boolean` |
+| it.isDamageableItem   | Whether the item is damageable | `Boolean` |
 | it.isDamaged   | Whether the item is damaged | `Boolean` |
 | it.isEnchanted   | Whether the item is enchanted | `Boolean` |
 | it.isEnchantingBook   | Whether the item is Enchanting Book | `Boolean` |
@@ -79,7 +79,7 @@ Every item object contains some fixed object properties. For a specific item obj
 | it.isFullStack   | Whether the item have full stack | `Boolean` |
 | it.isGlint   | Whether the item is glint | `Boolean` |
 | it.isHorseArmorItem   | Whether the item is armor item for horse | `Boolean` |
-| it.isHorseArmorItem   | Whether the item is liquid clip | `Boolean` |
+| it.isLiquidClipItem   | Whether the item is liquid clip | `Boolean` |
 | it.isMusicDiscItem   | Whether the item is music disc | `Boolean` |
 | it.isOffhandItem   | Whether the item can be on second hand | `Boolean` |
 | it.isPotionItem   | Whether the item is potion | `Boolean` |
