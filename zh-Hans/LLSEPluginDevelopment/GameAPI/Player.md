@@ -303,15 +303,15 @@
     pl:talkAs("Hello everyone ~ ")
     ```
 
-#### Get Player Distance To Pos
+#### 获取玩家到坐标的距离
 
-`pl.distanceToPos(pos)`
+`en.distanceToPos(pos)`
 
-- Parameters: 
+- 参数: 
   - pos : `IntPos` / `FloatPos`
-    The target position. 
-- Return value: Distance to coordinates (in blocks).
-- Return value type:  `Number`   
+    目标位置
+- 返回值: 到坐标的距离(方块)
+- 返回值类型:  `Number`
 
 #### 以某个玩家身份向某玩家说话
 
@@ -426,15 +426,15 @@
     pl:setFire(20,true)
     ```
 
-#### Scale Player
+#### 缩放玩家
 
-`pl.setScale(scale)`
+`en.setScale(scale)`
 
-- Parameters: 
+- 参数: 
   - scale : `Integer`  
-    New player size
-- Return value: Whether the player was scaled.
-- Return value type: `Boolean`
+    新的玩家体积
+- 返回值: 实体是否成功地被缩放
+- 返回值类型: `Boolean`
 
 #### 重命名玩家  
 

@@ -198,27 +198,27 @@
 
 <br>
 
-#### Scale Entity
+#### 缩放实体
 
 `en.setScale(scale)`
 
-- Parameters: 
+- 参数: 
   - scale : `Integer`  
-    New entity size
-- Return value: Whether the entity was scaled.
-- Return value type: `Boolean`
+    新的实体体积
+- 返回值: 实体是否成功地被缩放
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Get Entity Distance To Pos
+#### 获取实体到坐标的距离
 
 `en.distanceToPos(pos)`
 
-- Parameters: 
+- 参数: 
   - pos : `IntPos` / `FloatPos`
-    The target position. 
-- Return value: Distance to coordinates (in blocks).
-- Return value type:  `Number`   
+    目标位置
+- 返回值: 到坐标的距离(方块)
+- 返回值类型:  `Number`
 
 <br>
 
