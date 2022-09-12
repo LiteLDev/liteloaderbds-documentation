@@ -9,11 +9,11 @@
 <br>
 
 C#
-```cs
+```C#
 public class Button: SimpleFormElement
 ```
 C++
-```cpp
+```C++
 public ref class Button: public SimpleFormElement
 ```
 <br>

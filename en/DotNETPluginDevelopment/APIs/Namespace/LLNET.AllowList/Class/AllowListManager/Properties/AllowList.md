@@ -9,11 +9,11 @@
 <br>
 
 C#
-```cs
+```C#
 public string AllowList { get; set; }
 ```
 C++
-```cpp
+```C++
 public:
     System::String^ AllowList{ System::String^ get(); void set(System::String^ value); }
 ```

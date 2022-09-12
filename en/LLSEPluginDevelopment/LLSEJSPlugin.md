@@ -1,6 +1,6 @@
-# LLSE - Using Javascript to Create Your First Plugin
+# LLSE - Using JavaScript to Create Your First Plugin
 
-> This guide serves to demonstrate the very simple and straight forward process to creating your first plugin - as well as some best practices when thinking about what to make and how to do it. Experience using Javascript previously is recommended, but not required. Javascript is a very beginner friendly language, so don't get overwhelmed!
+> This guide serves to demonstrate the very simple and straight forward process to creating your first plugin - as well as some best practices when thinking about what to make and how to do it. Experience using JavaScript previously is recommended, but not required. JavaScript is a very beginner friendly language, so don't get overwhelmed!
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ This might confuse some developers, as `ll` should be undefined. However, this f
 Now that we have created our .js file, and registered the plugin, all we have to do from here is create an event listener. We do that by utilizing `mc`.
 
 
-```js
+```JavaScript
 mc.listen("onJoin", (player) => {
     log(`${player.name} has joined the server.`);
 });
@@ -37,7 +37,7 @@ You can reference the `mc` class as well as other special classes and constructo
 
 For example, we can use the player object and directly act on it to send information/manipulate a Player.
 
-```js
+```JavaScript
 mc.listen("onJoin", (player) => {
     log(`${player.name} has joined the server.`);
     player.sendToast('Welcome!', 'Thanks for joining the server!');
@@ -46,7 +46,7 @@ mc.listen("onJoin", (player) => {
 
 We can reference player object properties and use that to execute other actions.
 
-```js
+```JavaScript
 mc.listen("onJoin", (player) => {
     log(`${player.name} has joined the server.`);
     player.sendToast('Welcome!', 'Thanks for joining the server!');

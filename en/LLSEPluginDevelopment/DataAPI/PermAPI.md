@@ -277,12 +277,12 @@ The `permissions` property is an array of objects, each object contains the foll
 - Note: The permission extra data will be ignored. It will return `true` if the `enabled` field is true.
 
 - 💡 You can use prototype mechanism of JavaScript or [ScriptX APIs in lua](https://github.com/Tencent/ScriptX/blob/main/docs/en/Lua.md)
-```js
+```JavaScript
 LLSE_Player.prototype.hasPermission = function(permName) {
   return Permission.checkPermission(this.xuid, permName);
 }
 ```
-```lua
+```Lua
 local meta = ScriptX.getInstanceMeta(LLSE_Player);
 function meta.instanceFunction:hasPermission(perm)
   return Permission.checkPermission(self.xuid, perm);
@@ -340,7 +340,7 @@ end
 
 ## Example
 
-```js
+```JavaScript
 LLSE_Player.prototype.hasPermission = function (permName) {
     return Permission.checkPermission(this.xuid, permName);
 }

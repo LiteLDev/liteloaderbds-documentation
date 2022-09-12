@@ -20,7 +20,7 @@
 <br>
 
 C#
-```cs
+```C#
 using System;
 
 namespace PluginMain
@@ -47,7 +47,7 @@ namespace PluginMain
 示例：
 
 C#
-```cs
+```C#
 using System;
 using LLNET.LL;
 
@@ -75,7 +75,7 @@ namespace PluginMain
 <br>
 
 C#
-```cs
+```C#
 using System;
 using LLNET.Core;
 

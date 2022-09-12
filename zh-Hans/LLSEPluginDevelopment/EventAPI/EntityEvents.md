@@ -43,8 +43,8 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 | Projectile | 0x03 | 抛射物攻击 |
 | Suffocation | 0x04 | 窒息（密封空间） |
 | Fall | 0x05 | 掉落 |
-| Fire | 0x06 | 着火 |
-| FireTick | 0x07 | 着火 |
+| Fire | 0x06 | 在火中烧死 |
+| FireTick | 0x07 | 被点燃烧死 |
 | Lava | 0x08 | 熔岩 |
 | Drowning | 0x09 | 溺水 |
 | BlockExplosion | 0x0A | 方块爆炸 |
@@ -58,11 +58,11 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 | Thorns | 0x12 | 荆棘 |
 | FallingBlock | 0x13 | 下落的方块 |
 | Piston | 0x14 | 活塞 |
-| FlyIntoWall | 0x15 | 动态能量（滑翔撞墙） |
+| FlyIntoWall | 0x15 | 动能（滑翔撞墙） |
 | Magma | 0x16 | 岩浆块 |
 | Fireworks | 0x17 | 烟花 |
 | Lightning | 0x18 | 闪电 |
-| Charging | 0x19 | ？？？ |
+| Charging | 0x19 | 充能（？） |
 | Temperature | 0x1A | 温度 （雪人？） |
 | Freezing | 0x1B | 冰冻 |
 | Stalactite | 0x1C | 被钟乳石砸到 |

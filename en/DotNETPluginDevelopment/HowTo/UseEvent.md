@@ -25,7 +25,7 @@
 <br>
 
 C#
-```cs
+```C#
 using System;
 using LLNET.Event;
 
@@ -66,7 +66,7 @@ namespace PluginMain
 <br>
 
 C#
-```cs
+```C#
 using System;
 using LLNET.Event;
 
@@ -116,7 +116,7 @@ namespace PluginMain
 <br>
 
 C#
-```cs
+```C#
 using System;
 using LLNET.Event;
 
@@ -153,7 +153,7 @@ namespace PluginMain
 <br>
 
 C#
-```cs
+```C#
 using System;
 using LLNET.Event;
 
@@ -193,7 +193,7 @@ namespace PluginMain
 >某些事件并不能被拦截，某些事件被拦截后可能有意想不到的效果，具体事件的行为由 BDS 本身决定。
 
 C#
-```cs
+```C#
 using System;
 using LLNET.Event;
 

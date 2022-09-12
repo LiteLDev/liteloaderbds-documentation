@@ -2,7 +2,7 @@
 
 数据库，一般用于插件可持久化地储存某些插件所生成和处理的数据。  
 不同于配置文件，数据库一般没有可读性方面的要求，而对性能和稳定性有相当的考虑。  
-LLSE提供统一数据库接口来完成这个任务。    
+脚本引擎提供统一数据库接口来完成这个任务。    
 具体实现上，引擎提供了两种不同的数据库格式：键 - 值对格式的NoSQL数据库，和表格形式的SQL数据库。你可以按需使用。
 
 ### 📄 目录
@@ -321,7 +321,7 @@ INSERT INTO table VALUES ($X, ?Y, :Z);
 
 ##### 一个样例搞懂几个重载函数
 
-```js
+```JavaScript
 let stmt = session.prepare("INSERT INTO table VALUSE ($a, $b, $c, $d, $e, $f, $g, $h)");
 let values = {
   c: "have you",
@@ -416,7 +416,7 @@ stmt.bind(114514, 7);  // 将会绑定到h
 
 ### 样例
 
-```js
+```JavaScript
 let dat = {};
 let modified = {};
 let session = null;

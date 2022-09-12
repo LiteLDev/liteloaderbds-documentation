@@ -122,7 +122,7 @@ Each player object contains some member functions (member methods) that can be e
 - Return value: Whether the player is an OP.
 - Return value type: `Boolean`  
 
-```Javascript
+```JavaScript
 [JS]
 // For a `Player` object pl
 var open = pl.isOP();
@@ -142,7 +142,7 @@ var open = pl.isOP();
 - Return value: Whether the connection was successfully disconnected.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.kick();
@@ -177,7 +177,7 @@ pl:kick()
 
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.tell("Welcome back ~ ",5);
@@ -209,7 +209,7 @@ pl.tell("Welcome back ~ ",5);
 
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 mc.broadcast("Hello everyone ~ ");
 [Lua]
@@ -231,7 +231,7 @@ mc.broadcast("Hello everyone ~ ");
 - Return value: Whether the message was sent successfully.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 pl.sendToast("Hello","everyone ~");
 [Lua]
@@ -249,7 +249,7 @@ pl.sendToast("Hello","everyone ~");
 - Return value: Whether the execution was successful.
 - Return value type:  `Boolean`   
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 var open = pl.runcmd("tp ~ ~+50 ~");
@@ -306,7 +306,7 @@ var open = pl.runcmd("tp ~ ~+50 ~");
 - Return value: Whether the teleport was successful or not.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl, a coordinate object pos
 pl.teleport(pos);
@@ -321,7 +321,7 @@ pl.teleport(pos);
 - Return value: Whether the execution was successful.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.kill();
@@ -379,7 +379,7 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: WHether the rename was successful.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.rename("newname");
@@ -553,7 +553,7 @@ After modifying the player's items, in order for the client to take effect, it i
 
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.setPermLevel(1);
@@ -572,7 +572,7 @@ pl.setPermLevel(1);
 - Return value: Whether the modification was successful.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.setGameMode(1);
@@ -590,7 +590,7 @@ pl.setGameMode(1);
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.addLevel(6);
@@ -645,7 +645,7 @@ pl.getLevel()
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.resetLevel();
@@ -708,7 +708,7 @@ pl:resetLevel()
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.addExperience(6);
@@ -740,7 +740,7 @@ pl:addExperience(6)
 
 Note that this method ignores the experience value that exceeds the level when calculating.
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.getXpNeededForNextLevel();
@@ -764,7 +764,7 @@ pl.getXpNeededForNextLevel()
 - Return value: Whether the transfer was successful or not.
 - Return value type: `Boolean` 
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.transServer("123.45.67.89",23333);
@@ -779,7 +779,7 @@ pl.transServer("123.45.67.89",23333);
 - Return value: Whether the execution was successful.
 - Return value type: `Boolean` 
 
-```Javascript
+```JavaScript
 //For a `Player` object pl
 [JS]
 pl.crash();
@@ -807,7 +807,7 @@ pl:crash()
 
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.setSidebar("title",{"aaaa":3,"bbb":12,"cc":7});
@@ -822,7 +822,7 @@ pl.setSidebar("title",{"aaaa":3,"bbb":12,"cc":7});
 - Return value: Whether the removal was successful.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.removeSidebar();
@@ -846,7 +846,7 @@ pl.removeSidebar();
 - Return value: Whether the setting was successful or not.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.setBossBar(1145141919,"Hello ~ ",80,0);
@@ -864,7 +864,7 @@ pl.setBossBar(1145141919,"Hello ~ ",80,0);
 - Return value: Whether the removal was successful.
 - Return value type: `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 //For a `Player` object pl
 pl.removeBossBar(1145141919);
@@ -958,7 +958,7 @@ Each item in the list of key-value pairs looks like: `"mayfly": 1` etc.
 - Return value type: `Array<Object,Object,...>`
 
 Each item in the array is a key-value pair list object `Object`, and the Attributes object contains several contents such as `Base` `Current` `DefaultMax` `DefaultMin` `Max` `Min` `Name` by default. Its content looks like:
-```JSON
+```JavaScriptON
 {
     "Base": 0, 
     "Current": 0, 

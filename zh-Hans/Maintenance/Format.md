@@ -36,7 +36,7 @@
 
 &emsp;&emsp;鉴于目前MSVC对 `module` 的支持并不完善，我们使用头文件而非 `module` 。请确保所有头文件的首行是
 
-```cpp
+```C++
 
 pragma once
 
@@ -75,7 +75,7 @@ pragma once
 &emsp;&emsp;将编译器警告视为错误，而不是 `disable` ，除非它由外部库引起。这样有利于寻找代码中的隐含错误。
 &emsp;&emsp;外部库造成的警告应当尽量在 cpp 文件内 disable ，对于头文件的警告，应当在开头将此警告设置为 disable ，末尾此警告设置为 default 。
 
-```cpp
+```C++
 
 // In xxx.h
 pragma once
@@ -100,7 +100,7 @@ pragma warning(default : xxxx)
 
 &emsp;&emsp;任何情况下，请考虑代码的可移植性，对于非必要的偏移，请不要使用。所有使用可能发生变化的偏移的部分都应当写有统一格式的注释：
 
-```cpp
+```C++
 /*_CHANGEABLE_OFFSET_16_BDS_1_19_020_02*/
 dAccess<int, 16>(this);
 ```
@@ -125,7 +125,7 @@ dAccess<int, 16>(this);
 
 ### 使用提前 return/continue 简化代码
 
-```cpp
+```C++
 bool *Player::eat(ItemStack* item) {
     if ((!item->isTerminator()) && item->isFood() && this->isHungry()) {
         ... some long code ....
@@ -137,7 +137,7 @@ bool *Player::eat(ItemStack* item) {
 
 &emsp;&emsp;相较于上述代码，我们更推荐下面的。
 
-```cpp
+```C++
 bool *Player::eat(ItemStack* item) {
 
     if (item->isTerminator() || (!item->isFood()) || (!this->isHungry())) {
@@ -160,7 +160,7 @@ bool *Player::eat(ItemStack* item) {
 
 &emsp;&emsp;使用宏定义或新增函数的方式，将冗长的代码块变成小单元，例如：
 
-```cpp
+```C++
 bool *Player::canEat() {
 
   ... some code ....
@@ -184,7 +184,7 @@ if (FoundFood) {
 
 &emsp;&emsp;相较于上述代码，我们更推荐下面的。
 
-```cpp
+```C++
 
 static bool containsFood(const std::vector<ItemStack*> &List) {
     for (unsigned I = 0, E = List.size(); I != E; ++I){
@@ -221,7 +221,7 @@ if (containsFood(BarList)) {
 
 &emsp;&emsp;在for不能使用基于范围的循环并且需要编写显式的基于迭代器的循环的情况下，请密切注意是否 end() 在每次循环迭代时重新评估。一个常见的错误是以这种风格编写循环：
 
-```cpp
+```C++
 auto blocks = ...
 for (auto I = blocks->begin(); I != blocks->end(); ++I){
     Level::setBlock(getPos(I),blocks[I]);
@@ -231,7 +231,7 @@ for (auto I = blocks->begin(); I != blocks->end(); ++I){
 
 &emsp;&emsp;相较于上述代码，我们更推荐下面的。
 
-```cpp
+```C++
 auto blocks = ...
 for (auto I = blocks->begin(), E = blocks->end(); I != E; ++I){
     Level::setBlock(getPos(I),blocks[I]);
@@ -246,13 +246,13 @@ for (auto I = blocks->begin(), E = blocks->end(); I != E; ++I){
 
 ### 避免使用 std::endl
 
-```cpp
+```C++
 std::cout << std::endl;
 ```
 
 &emsp;&emsp;上述代码等价于以下代码。
 
-```cpp
+```C++
 std::cout << '\n' << std::flush;
 ```
 

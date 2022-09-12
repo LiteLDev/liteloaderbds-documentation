@@ -9,12 +9,12 @@
 <br>
 
 C#
-```cs
+```C#
 public class DynamicCommandInvalidCastException
     :Exception
 ```
 C++
-```cpp
+```C++
 public ref class DynamicCommandInvalidCastException
     :public System::Exception
 ```

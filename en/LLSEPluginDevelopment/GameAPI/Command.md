@@ -12,7 +12,7 @@ The following APIs provide interfaces for registering and listening to custom co
 - Return value: Whether the execution was successful.
 - Return value type:  `Boolean`
 
-```Javascript
+```JavaScript
 [JS]
 mc.runcmd("say Hello!");
 [Lua]
@@ -42,7 +42,7 @@ mc.runcmd("say Hello!")
 >
 > The implementation of runcmdEx is very different from ordinary runcmd. The Enhanced version has a **hidden execution** mechanism, and the execution result will not be output to the console. Therefore, if necessary, you must manually use the log function to output the result.
 
-```Javascript
+```JavaScript
 [JS]
 var result = mc.runcmdEx("say Hello!");
 log(result.output);
@@ -296,7 +296,7 @@ The relationship between command parameter types and data value types is as foll
 
 ### Command Registration Example 
 
-```javascript
+```JavaScript
 [JS]
 mc.listen("onServerStarted", () => {
     let cmd = mc.newCommand("manager", "Command Description", PermType.GameMasters);
@@ -357,7 +357,7 @@ Note: The callback function prototype of the parameter callback: `function(playe
   Arguments following the target command. Divide by spaces to form a string array.  
 If a custom command `land set` is registered, when `/land set abc 2333` is executed, the value of args will be `[ "abc","2333" ]`
 
-```javascript
+```JavaScript
 [JS]
 mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
     pl.tell("Flying enabled.");
@@ -389,7 +389,7 @@ Note: The callback function prototype of the parameter callback: `function(args)
 Arguments following the target command. Divide by spaces to form a string array.
    If a custom command `land set` is registered, when `/land set abc 2333` is executed, the value of args will be `['abc','2333']`
 
-```Javascript
+```JavaScript
 [JS]
 mc.regConsoleCmd("backup","Start the backup",function(args){
     log("ID of this backup is:",args[0]);

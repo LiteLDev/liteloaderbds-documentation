@@ -21,11 +21,11 @@
 <br>
 
 C#
-```cs
+```C#
 public bool Has(string name)
 ```
 C++
-```cpp
+```C++
 public:
     bool Has(System::String^ name)
 ```
@@ -47,11 +47,11 @@ public:
 <br>
 
 C#
-```cs
+```C#
 public bool Has(string name, string xuid)
 ```
 C++
-```cpp
+```C++
 public:
     bool Has(System::String^ name, System::String^ xuid)
 ```
@@ -75,11 +75,11 @@ public:
 <br>
 
 C#
-```cs
+```C#
 public bool Has(string name, string xuid, out int index)
 ```
 C++
-```cpp
+```C++
 public:
     bool Has(System::String^ name, System::String^ xuid, [Out]int% index)
 ```

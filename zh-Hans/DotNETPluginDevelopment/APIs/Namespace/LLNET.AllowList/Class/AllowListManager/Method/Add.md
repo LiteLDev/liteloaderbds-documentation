@@ -21,11 +21,11 @@
 <br>
 
 C#
-```cs
+```C#
 public AllowListManager Add(string name)
 ```
 C++
-```cpp
+```C++
 public:
     AllowListManager^ Add(System::String^ name)
 ```
@@ -47,11 +47,11 @@ public:
 <br>
 
 C#
-```cs
+```C#
 public AllowListManager Add(string name, string xuid)
 ```
 C++
-```cpp
+```C++
 public:
     AllowListManager^ Add(System::String^ name, System::String^ xuid)
 ```
@@ -75,11 +75,11 @@ public:
 <br>
 
 C#
-```cs
+```C#
 public bool Add(string name, string xuid, bool ignore)
 ```
 C++
-```cpp
+```C++
 public:
     bool Add(System::String^ name, System::String^ xuid, bool ignore)
 ```

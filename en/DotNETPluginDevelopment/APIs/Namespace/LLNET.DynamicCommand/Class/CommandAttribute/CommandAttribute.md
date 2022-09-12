@@ -9,13 +9,13 @@
 <br>
 
 C#
-```cs
+```C#
 [AttributeUsage(AttributeTargets.Class)]
 public class CommandAttribute
     :Attribute
 ```
 C++
-```cpp
+```C++
 [AttributeUsage(AttributeTargets::Class)]
 public ref class CommandAttribute
     :public System::Attribute

@@ -9,12 +9,12 @@
 <br>
 
 C#
-```cs
+```C#
 public class HookFailedException
     :LiteLoaderDotNETException
 ```
 C++
-```cpp
+```C++
 public ref class HookFailedException
     :public LiteLoaderDotNETException
 ```

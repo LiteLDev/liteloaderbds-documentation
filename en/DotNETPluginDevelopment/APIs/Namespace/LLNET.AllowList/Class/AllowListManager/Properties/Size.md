@@ -9,11 +9,11 @@
 <br>
 
 C#
-```cs
+```C#
 public ulong Size { get; }
 ```
 C++
-```cpp
+```C++
 public:
     size_t Size{ size_t get(); }
 ```

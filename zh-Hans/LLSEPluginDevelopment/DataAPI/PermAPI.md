@@ -7,7 +7,7 @@
 整个系统可以被分成三部分：`Role`(身份组), `Permission`(`PermInstance`, 权限实例) 和 `PermInfo`(权限信息)。  
 `Role`定义了一组拥有指定权限的玩家，`PermInfo`则储存了所有权限的描述。  
 
-和Discord一样，我们也有默认的`admin`(管理员)和`everyone`(所有人)身份组。    
+和`Discord`一样，我们也有默认的`admin`(管理员)和`everyone`(所有人)身份组。    
 `admin`是一个特殊的身份组，所有的权限都会默认开启。  
 `everyone`也是一个特殊的身份组，所有的玩家都是它的成员。  
 
@@ -36,7 +36,7 @@
 
 <br/>
 
-### Get a role
+### 获取已有身份组
 
 `Permission.getRole(name)`
 
@@ -50,7 +50,7 @@
 
 <br/>
 
-### Get or create a role
+### 创建或获取身份组实例
 
 `Permission.getOrCreateRole(name)`
 
@@ -163,7 +163,7 @@
     权限名称，必须已经注册在`PermInfoList`中(参见 [注册权限](#注册权限))
   - enabled: `Boolean`  
     权限是否开启
-  - extraData: `Object`(optional)  
+  - extraData: `Object`  
     权限的额外数据
 - 抛出:
   - 无效的参数。
@@ -254,7 +254,8 @@
 - 参数:
   - name: `String`  
     权限名称
-- 返回值: `Boolean` 权限是否存在
+- 返回值: `Boolean`
+    权限是否存在
 - 抛出:
   - 无效的参数。
 
@@ -269,7 +270,8 @@
     玩家Xuid
   - permName: `String`  
     权限名称
-- 返回值: `Boolean` 玩家是否有指定权限
+- 返回值: `Boolean`
+    玩家是否有指定权限
 - 抛出:
   - 无效的参数。
   - 找不到玩家。
@@ -277,12 +279,12 @@
 - 注意：权限的额外数据将被忽略，此方法会返回`true`如果`enabled`字段为`true`。
 
 - 💡 您可以用JavaScript的原型机制或者[Lua的ScriptX接口](https://github.com/Tencent/ScriptX/blob/main/docs/zh/Lua.md)
-```js
+```JavaScript
 LLSE_Player.prototype.hasPermission = function(permName) {
   return Permission.checkPermission(this.xuid, permName);
 }
 ```
-```lua
+```Lua
 local meta = ScriptX.getInstanceMeta(LLSE_Player);
 function meta.instanceFunction:hasPermission(perm)
   return Permission.checkPermission(self.xuid, perm);
@@ -315,7 +317,8 @@ end
 - 参数:
   - xuid: `String`  
     玩家Xuid
-- 返回值: `Array<Role>` 此玩家的身份组列表
+- 返回值: `Array<Role>`
+    此玩家的身份组列表
 
 <br/>
 
@@ -326,7 +329,8 @@ end
 - 参数:
   - xuid: `String`  
     玩家Xuid
-- 返回值: `Array<Object>` 此玩家的权限列表
+- 返回值: `Array<Object>`
+    此玩家的权限列表
 
 <br/>
 
@@ -340,7 +344,7 @@ end
 
 ## 例子
 
-```js
+```JavaScript
 LLSE_Player.prototype.hasPermission = function (permName) {
     return Permission.checkPermission(this.xuid, permName);
 }
@@ -358,7 +362,7 @@ try {
     if (role.permissionExists("Global:join")) {
         role.setPermission("Global:join", true);
     }
-    Permission.saveData(); // 在修改完后立刻保存是一个好的习惯
+    Permission.saveData(); // 在修改完后立刻保存是个好习惯
 } catch (e) {
     logger.error("Error: " + e);
 }

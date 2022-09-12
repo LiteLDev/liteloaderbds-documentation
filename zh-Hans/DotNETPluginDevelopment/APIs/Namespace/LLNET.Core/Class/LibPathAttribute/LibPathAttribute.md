@@ -9,13 +9,13 @@
 <br>
 
 C#
-```cs
+```C#
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
 public class LibPathAttribute
     :Attribute
 ```
 C++
-```cpp
+```C++
 [AttributeUsage(AttributeTargets::Assembly, AllowMultiple = true)]
 public ref class LibPathAttribute
     :public System::Attribute
@@ -32,7 +32,7 @@ public ref class LibPathAttribute
 
 
 C#
-```cs
+```C#
 using LLNET.Core;
 
 //示例路径

@@ -9,10 +9,10 @@
 <br>
 
 C#
-```cs
+```C#
 public interface IPugin
 ```
 C++
-```cpp
+```C++
 public interface class IPlugin
 ```

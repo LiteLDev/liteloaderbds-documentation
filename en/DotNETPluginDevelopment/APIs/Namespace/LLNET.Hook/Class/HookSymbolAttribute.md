@@ -9,11 +9,11 @@
 <br>
 
 C#
-```cs
+```C#
 public class HookSymbolAttribute: Attribute
 ```
 C++
-```cpp
+```C++
 public ref class HookSymbolAttribute: public Attribute
 ```
 <br>

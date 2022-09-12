@@ -153,7 +153,7 @@ The following APIs provide more APIs for operating the scoreboard system:
 
 Before using, you must ensure that the corresponding scoring item already exists.
 
-```Javascript
+```JavaScript
 [JS]
 //For a player object pl: 
 log("You have money:",pl.getScore("money"));
@@ -177,7 +177,7 @@ Reduce score: `pl.reduceScore(name,value)`
 
 Before using, you must ensure that the corresponding scoring item already exists.
 
-```Javascript
+```JavaScript
 [JS]
 //For a player object pl: 
 pl.setScore("money",10000);
@@ -199,7 +199,7 @@ pl.reduceScore("money",50);
 
 Before using, you must ensure that the corresponding scoring item already exists.
 
-```Javascript
+```JavaScript
 [JS]
 //For a player object pl: 
 pl.deleteScore("what");

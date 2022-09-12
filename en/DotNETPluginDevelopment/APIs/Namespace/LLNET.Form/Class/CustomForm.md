@@ -9,11 +9,11 @@
 <br>
 
 C#
-```cs
+```C#
 public class CustomForm
 ```
 C++
-```cpp
+```C++
 ref class CustomForm : public ClassTemplate<CustomForm, ::Form::CustomForm>, public FormImpl
 ```
 <br>

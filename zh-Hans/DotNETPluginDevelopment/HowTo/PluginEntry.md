@@ -20,7 +20,7 @@
 <br>
 
 C#
-```cs
+```C#
 using System;
 
 namespace PluginMain
@@ -47,7 +47,7 @@ namespace PluginMain
 示例：
 
 C#
-```cs
+```C#
 using System;
 using LLNET.LL;
 
@@ -75,7 +75,7 @@ namespace PluginMain
 <br>
 
 C#
-```cs
+```C#
 using System;
 using LLNET.Core;
 
@@ -88,7 +88,7 @@ namespace CustomNameSpace;
 public class CustomPlugin: IPluginInitializer
 {
     //提供插件描述
-    public string Introduction => "Example plugin for Liteloader.NET";
+    public string Introduction => "Example plugin for LiteLoader.NET";
 
     //提供插件额外信息
     public Dictionary<string, string> MetaData => new()

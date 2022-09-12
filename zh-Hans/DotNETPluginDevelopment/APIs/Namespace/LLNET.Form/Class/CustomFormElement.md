@@ -9,11 +9,11 @@
 <br>
 
 C#
-```cs
+```C#
 public abstract class CustomFormElement
 ```
 C++
-```cpp
+```C++
 public ref class CustomFormElement abstract
 ```
 <br>

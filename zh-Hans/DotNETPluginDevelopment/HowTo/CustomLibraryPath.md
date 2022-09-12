@@ -11,7 +11,7 @@
 <br>
 
 C#
-```cs
+```C#
 [assembly:CustomLib("plugins/libpath1")]
 [assembly:CustomLib("libpath2")]
 ```

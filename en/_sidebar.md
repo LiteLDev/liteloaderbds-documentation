@@ -9,7 +9,7 @@
 - 🎯 Script Plugin Development
     - [⛳ For Beginners (Must Read)](/LLSEPluginDevelopment/)
     - [📋 Multi Development Language Support](/LLSEPluginDevelopment/LanguageSupport.md)
-    - [📜 Using Javascript to Create Your First Plugin](/LLSEPluginDevelopment/LLSEJSPlugin.md)
+    - [📜 Using JavaScript to Create Your First Plugin](/LLSEPluginDevelopment/LLSEJSPlugin.md)
     
     - [💼 Generic Script Interface (Commonly Used)](/LLSEPluginDevelopment/ScriptAPI/ScriptHelp.md)
 
