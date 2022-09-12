@@ -94,6 +94,7 @@ Each player object contains some fixed object properties. For a particular playe
 | pl.isDancing             | Player is dancing                                            | `Boolean`        |
 | pl.isCreative            | Player is in Creative Mode                                   | `Boolean`        |
 | pl.isFlying              | Player is flying                                             | `Boolean`        |
+| pl.isSleeping            | Player is sleeping                                           | `Boolean`        |
 
 These object properties are read-only and cannot be modified. in:
 
