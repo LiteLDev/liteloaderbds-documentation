@@ -22,8 +22,7 @@
 
 现在我们已经创建了我们的.js文件，并注册了插件，我们要做的就是创建一个事件监听器。我们通过使用`mc`来实现。
 
-
-``js
+```js
 mc.listen("onJoin", (player) => {
     log(`${player.name}已经加入服务器。`)。
 });
@@ -37,7 +36,7 @@ mc.listen("onJoin", (player) => {
 
 例如，我们可以使用播放器对象并直接对其采取行动，以发送信息/操纵播放器。
 
-``js
+```js
 mc.listen("onJoin", (player) => {
     log(`${player.name}已经加入服务器。`)。
     player.sendToast('Welcome!', 'Thanks for joining the server!');
@@ -46,7 +45,7 @@ mc.listen("onJoin", (player) => {
 
 我们可以引用玩家对象的属性，并使用它来执行其他动作。
 
-``js
+```js
 mc.listen("onJoin", (player) => {
     log(`${player.name}已经加入服务器。`)。
     player.sendToast('Welcome!', 'Thanks for joining the server!');
