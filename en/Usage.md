@@ -65,6 +65,9 @@ LL plugins are compiled native plugins, written in C++, Go, C# or Rust, which ha
 
 LLSE plugins are script plugins, written in JavaScript, Python or Lua, which can be flexibly managed and have better security but perform worse.
 
+> [!WARNING]
+> To ensure that most plugins work properly, in `server.properties` , set `online-mode` to `true` and `server-authoritative-movement` to `server-auth` or `server-auth-with- rewind` .
+
 ### Find Your Favorite Plugins
 
 You can look for plugins in these websites:
