@@ -6,7 +6,7 @@
 
 | 属性           | 类型      | 描述                                                       |
 | ------------- | -------- | ---------------------------------------------------------- |
-| `ll.language` | `String` | The language LiteLoaderBDS used.(such as `zh`, `en`, `ru_RU`) |
+| `ll.language` | `String` | LiteLoaderBDS使用的语言。(例如`zh_Hans`、`en`和`ru_RU`) |
 
 ### 获取 LiteLoaderBDS 版本
 
