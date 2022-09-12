@@ -120,3 +120,28 @@ You can type these commands to enter the corresponding debug mode:
 In debug mode, all texts you type will be parsed as scripts and be executed in real time, as the console of developer tools of browsers do. If any error occurs, you will see an error report.
 
 You can type `jsdebug` / `luadebug` and enter to exit the debug mode.
+
+## 🚅 Update LiteLoaderBDS
+
+When a new LiteLoaderBDS or Minecraft Bedrock Edition is released, you need to update to make the server side adapt to the latest client.
+
+> [!WARNING]
+> Please note that some plugins, maps, etc. have additional requirements for the update operation, which may lead to data corruption if you follow the steps below. Please make a backup of your data.
+
+### Update LiteLoaderBDS on Windows
+
+To update, please follow the following steps.
+
+1. Delete all files except `allowlist.json`, `permissions.json`, `server.properties`, `plugins`, and `worlds` from the directory where the server is located.
+2. Extract all the contents of the Bedrock version of the new LiteLoaderBDS (BDS) package for Minecraft, except `allowlist.json`, `permissions.json`, `server.properties`, to the server directory. . This step should not result in an overwrite prompt.
+3. Extract all the contents of the new LiteLoaderBDS package to the server directory and overwrite the old files.
+4. Run `LLPeEditor.exe` and wait for the operation as prompted.
+
+### Update LiteLoaderBDS on Linux Distributions
+
+To update, please follow the steps below.
+
+1. Back up `allowlist.json`, `permissions.json`, `server.properties`, `plugins`, `worlds` in the directory where the server is located.
+2. Delete the server.
+3. Install the new version of LiteLoaderBDS according to the installation guide.
+4. Put the backup files back to the server directory and overwrite the files with the same name.

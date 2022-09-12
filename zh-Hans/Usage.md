@@ -120,3 +120,28 @@ LLSE插件是用JavaScript、Python或Lua编写的脚本插件，可以灵活地
 在调试模式下，你输入的所有文本将被解析为脚本并实时执行，就像浏览器的开发工具的控制台那样。如果发生任何错误，你会看到一个错误报告。
 
 你可以输入`jsdebug`/`luadebug`并回车以退出调试模式。
+
+## 🚅 更新LiteLoaderBDS
+
+当新的LiteLoaderBDS或Minecraft基岩版发布时，你需要更新以使得服务端适配最新的客户端。
+
+> [!WARNING]
+> 请注意，部分插件、地图等对更新操作有额外要求，若按照以下步骤操作，可能导致数据损坏。请做好数据备份工作。
+
+### 更新安装于Windows上的服务端
+
+更新时，请按照以下步骤操作：
+
+1. 将服务端所在目录内，除 `allowlist.json` 、 `permissions.json` 、 `server.properties` 、 `plugins` 、 `worlds` 外所有文件删除。
+2. 将新版LiteLoaderBDS适配的适用于 Minecraft 的 Bedrock 版专属服务端软件（BDS）压缩包中，除 `allowlist.json` 、 `permissions.json` 、 `server.properties` 外所有内容解压到服务端所在目录。此步骤不应出现覆盖提示。
+3. 将新版LiteLoaderBDS压缩包中所有内容解压到服务端所在目录并覆盖旧文件。
+4. 运行 `LLPeEditor.exe` ，按提示等待操作即可。
+
+### 更新安装与Linux发行版上的服务端
+
+更新时，请按照以下步骤操作：
+
+1. 备份服务端所在目录内的 `allowlist.json` 、 `permissions.json` 、 `server.properties` 、 `plugins` 、 `worlds` 。
+2. 删除服务端。
+3. 按照安装指南安装新版LiteLoaderBDS。
+4. 将备份的文件放回到服务端所在目录，并覆盖同名文件。
