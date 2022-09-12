@@ -114,6 +114,11 @@ using PropertiesMap = hash_map<UrlTableProperties *, std::string>;
 enum class UrlTableError { ...
 ```
 
+对于事件（Event），应当加以分类，并遵循如下命名和分类规则：
+
+* 事件的命名应当使用包含主谓的主动的简单句形式；
+* 事件的类型按照事件命名的主语，分类到Block、Entity、Mob、Player、World中，对于无法分类的，统一放到Misc中。
+
 ### 变量名称
 
 变量（包括函数参数）和数据成员的名称都是小写的，单词之间有下划线。类（但不是结构）的数据成员还带有尾部下划线。
