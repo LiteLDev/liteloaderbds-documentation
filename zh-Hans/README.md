@@ -24,21 +24,21 @@
 👉[点击此处](/FAQ.md)👈 查看常见问题与解决方法
 <br>
 
-## ⛳ C++ 插件 - 开发指南 与 API文档
+## ⛳ 原生平台 - 开发指南 与 API文档
 
-使用`C++`、`Go`等编译型语言语言开发LL插件，拥有海量API，自由实现你的任意想法
+使用`C++`、`Go`等编译型语言开发插件，拥有海量API，自由实现你的任意想法
 
 👉[点击此处](https://cpp.docs.litebds.com/zh-Hans/)👈 查看LiteLoaderSDK插件开发文档
 <br>
 
-## 🎯 脚本插件 - 开发指南 与 API文档
-使用`JavaScript`、`Lua`等脚本语言开发LL插件，容易上手，功能强大
+## 🎯 脚本引擎 - 开发指南 与 API文档
+使用`JavaScript`、`Lua`等脚本语言开发插件，容易上手，功能强大
 
 👉[点击此处](/LLSEPluginDevelopment/)👈 查看脚本插件开发文档
 <br>
 
-## 🪁 .NET 插件 - 开发指南 与 API文档
-使用`C#`,`Visual Basic.NET`,`F#`等.NET平台语言开发LL插件，编写简单，类库丰富
+## 🪁 .NET平台 - 开发指南 与 API文档
+使用`C#`,`Visual Basic.NET`,`F#`等.NET平台语言开发插件，编写简单，类库丰富
 
 👉[点击此处](/DotNETPluginDevelopment/)👈 查看 .NET插件开发文档
 <br>
