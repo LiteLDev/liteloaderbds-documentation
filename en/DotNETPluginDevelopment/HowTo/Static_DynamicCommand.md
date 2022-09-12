@@ -33,7 +33,7 @@
 <br>
 
 C#
-```C#
+```csharp
 // command.cs
 
 using System;
@@ -62,7 +62,7 @@ public class ExampleCommand: ICommand
 <br>
 
 C#
-```C#
+```csharp
 // command.cs
 
 using System;
@@ -95,7 +95,7 @@ public class ExampleCommand: ICommand
 <br>
 
 C#
-```C#
+```csharp
 // command.cs
 
 using System;
@@ -130,7 +130,7 @@ public class ExampleCommand: ICommand
 <br>
 
 C#
-```C#
+```csharp
 // command.cs
 
 using System;
@@ -172,7 +172,7 @@ public class ExampleCommand: ICommand
 <br>
 
 C#
-```C#
+```csharp
 // command.cs
 
 using System;
@@ -200,7 +200,7 @@ public class ExampleCommand: ICommand
     }
 }
 ```
-```C#
+```csharp
 // plugin.cs
 
 using LLNET.DynamicCommand;
@@ -239,7 +239,7 @@ namespace PluginMain
 <br>
 
 C#
-```C#
+```csharp
 // command.cs
 
 using System;
@@ -301,7 +301,7 @@ public class ExampleCommand: ICommand
     }
 }
 ```
-```C#
+```csharp
 // plugin.cs
 
 using LLNET.DynamicCommand;
@@ -336,7 +336,7 @@ namespace PluginMain
 <br>
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.DynamicCommand;
 using MC;
@@ -381,7 +381,7 @@ public class KillAllPlayersCommand: Icommand
 <br>
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.DynamicCommand;
 
@@ -426,7 +426,7 @@ public class ExampleCommand: Icommand
 <br>
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.DynamicCommand;
 
@@ -471,7 +471,7 @@ public class ExampleCommand: Icommand, ICommandEvent
 <br>
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.DynamicCommand;
 

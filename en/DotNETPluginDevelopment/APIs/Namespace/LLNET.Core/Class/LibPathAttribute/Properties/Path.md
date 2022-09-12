@@ -9,11 +9,11 @@
 <br>
 
 C#
-```C#
+```csharp
 public string Path { get; set; }
 ```
 C++
-```C++
+```cpp
 public:
     property System::String^ Path;
 ```

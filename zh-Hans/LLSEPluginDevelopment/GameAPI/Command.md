@@ -12,10 +12,12 @@
 - 返回值：是否执行成功
 - 返回值类型： `Boolean`
 
-```clike
 [Js]
+```javascript
 mc.runcmd("say Hello!");
+```
 [Lua]
+```lua
 mc.runcmd("say Hello!")
 ```
 
@@ -44,11 +46,10 @@ mc.runcmd("say Hello!")
 >
 > runcmdEx 与普通 runcmd 实现区别非常大，在于 Ex 版本拥有**隐藏输出**的机制，执行结果不会输出至控制台，因此如果有需要，要手动用 log 函数将结果输出
 
-```clike
 [Js]
+```javascript
 var result = mc.runcmdEx("say Hello!");
 log(result.output);
-[Lua] 
 ```
 
 ## 命令注册 API
@@ -303,8 +304,8 @@ log(result.output);
 
 ### 命令注册样例
 
-```JavaScript
 [Js]
+```javascript
 mc.listen("onServerStarted", () => {
     const cmd = mc.newCommand("manager", "Command Description", PermType.GameMasters);
     cmd.setAlias("mgr");
@@ -364,13 +365,12 @@ mc.listen("onServerStarted", () => {
   目标命令后面的参数。按空格为分界分割，组成字符串数组。  
   如注册了自定义命令 `land set`，当执行 `/land set abc 2333` 时，args的值将为 `[ "abc","2333" ]`
 
-```clike
 [Js]
+```javascript
 mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
     pl.tell("Flying enabled.");
     //......
 });
-
 ```
 
 
@@ -396,13 +396,12 @@ mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
   目标命令后面的参数。按空格为分界分割，组成字符串数组。  
   如注册了自定义命令 `land set`，当执行 `/land set abc 2333` 时，args的值将为 `['abc','2333']`
 
-```clike
 [Js]
+```javascript
 mc.regConsoleCmd("backup","Start the backup",function(args){
     log("ID of this backup is:",args[0]);
     //......
 });
-
 ```
 
 > [!TIP|label:假命令注册相关说明]

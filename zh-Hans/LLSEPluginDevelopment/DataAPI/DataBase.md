@@ -176,7 +176,7 @@ readwrite|以读写模式打开|`SQLite`|`true`/`false`|`true`
  h  |114
 
 则用query方法返回值表示为
-```
+```json
 [
   ["a",  "b"],
   ["ll", 233],
@@ -321,7 +321,7 @@ INSERT INTO table VALUES ($X, ?Y, :Z);
 
 ##### 一个样例搞懂几个重载函数
 
-```JavaScript
+```javascript
 let stmt = session.prepare("INSERT INTO table VALUSE ($a, $b, $c, $d, $e, $f, $g, $h)");
 let values = {
   c: "have you",
@@ -416,7 +416,7 @@ stmt.bind(114514, 7);  // 将会绑定到h
 
 ### 样例
 
-```JavaScript
+```javascript
 let dat = {};
 let modified = {};
 let session = null;

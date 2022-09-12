@@ -9,11 +9,11 @@
 <br>
 
 C#
-```C#
+```csharp
 public interface IPluginInitializer
 ```
 C++
-```C++
+```cpp
 public interface class IPluginInitializer
 ```
 

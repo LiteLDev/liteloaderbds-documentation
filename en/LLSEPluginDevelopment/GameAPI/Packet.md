@@ -123,7 +123,7 @@ Every binary stream object contains some member functions (member methods) that 
 ### Dome Code
 
 Send TextPacket packets to a player
-```JavaScript
+```javascript
 mc.listen("onChat",function(pl,msg){
     const bs = new BinaryStream()
     var text = "LLSE Packet Test"

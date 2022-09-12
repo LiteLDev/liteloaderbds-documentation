@@ -9,13 +9,13 @@
 <br>
 
 C#
-```C#
+```csharp
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
 public class PluginMainAttribute
     :Attribute
 ```
 C++
-```C++
+```cpp
 [AttributeUsage(AttributeTargets::Assembly, AllowMultiple = true)]
 public ref class PluginMainAttribute
     :public System::Attribute

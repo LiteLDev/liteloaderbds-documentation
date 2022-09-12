@@ -9,11 +9,11 @@
 <br>
 
 C#
-```C#
+```csharp
 public class AllowListManager
 ```
 C++
-```C++
+```cpp
 public ref class AllowListManager
 ```
 <br>
@@ -28,7 +28,7 @@ public ref class AllowListManager
 
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.AllowList;
 

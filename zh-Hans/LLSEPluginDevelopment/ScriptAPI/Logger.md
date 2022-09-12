@@ -107,7 +107,7 @@
 例如：你调用`logger.error("Fail to transport the player")`  
 日志输出的结果是 
 
-```
+```log
 [2021-05-21 19:41:03 Error] Fail to transport the player
 ```
 
@@ -132,7 +132,7 @@
 例如：设置自定义标头为`logger.setTitle("LiteLoader")`  
 则在接下来的日志输出将变为形如：  
 
-```
+```log
 20:05:26 ERROR [LiteLoader] Fail to transport the player
 ```
 

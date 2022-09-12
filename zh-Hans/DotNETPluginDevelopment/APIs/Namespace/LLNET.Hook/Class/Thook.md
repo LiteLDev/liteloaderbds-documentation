@@ -9,11 +9,11 @@
 <br>
 
 C#
-```C#
+```csharp
 public abstract class Thook
 ```
 C++
-```C++
+```cpp
 public ref class Thook abstract
 ```
 <br>

@@ -40,7 +40,7 @@ C++文件应该以 `.cpp` 结尾，头文件应该以 `.h` 结尾。在特定点
 
 示例如下：
 
-```C++
+```cpp
 // Classes and structs
 class UrlTable { ...
 class UrlTableTester { ...
@@ -62,7 +62,7 @@ enum class UrlTableError { ...
 
 示例如下：
 
-```C++
+```cpp
 int a_local_variable;
 
 struct ExampleStruct {
@@ -89,7 +89,7 @@ class ExampleClass {
 
 示例如下：
 
-```C++
+```cpp
 AddTableEntry()
 DeleteUrl()
 OpenFileOrDie()
@@ -121,7 +121,7 @@ OpenFileOrDie()
 
 示例如下：
 
-```C++
+```cpp
 #define ROUND(x) ...
 #define PI_ROUNDED 3.0
 ```
@@ -132,7 +132,7 @@ OpenFileOrDie()
 
 示例如下：
 
-```C++
+```cpp
 double fast_pow();
 typedef unsigned int uint;
 class fast_map;
@@ -171,7 +171,7 @@ constexpr long long LONGLONGMAX;
 
 示例如下：
 
-```C++
+```cpp
 /**
  * @file ExampleDirectory/ExampleComponent.h
  *
@@ -197,7 +197,7 @@ constexpr long long LONGLONGMAX;
 
 示例如下：
 
-```C++
+```cpp
 /**
  * \~chinese
  * @brief 这个类做一些工作。
@@ -256,7 +256,7 @@ constexpr long long LONGLONGMAX;
 
 示例如下：
 
-```C++
+```cpp
 /**
  * \~chinese
  * @brief 从 `example_para3` 提取信息。
@@ -308,7 +308,7 @@ int doExampleThing(int example_para1, double example_para2, std::string example_
 
 示例如下：
 
-```C++
+```cpp
 /**
  * Use KMP algorithm.
  * First do something. Then do something.
@@ -334,7 +334,7 @@ int doExampleThing(int example_para1, double example_para2, std::string example_
 
 示例如下：
 
-```C++
+```cpp
 class ExampleClass {
  public:
   /**
@@ -360,7 +360,7 @@ class ExampleClass {
 
 示例如下：
 
-```C++
+```cpp
 // The total number of test cases that we run through in this regression test.
 const int kNumTestCases = 6;
 ```
@@ -385,7 +385,7 @@ const int kNumTestCases = 6;
 
 示例如下：
 
-```C++
+```cpp
 const int product =
     CalculateProduct(values, options, /*completion_callback=*/nullptr)
 ```
@@ -396,7 +396,7 @@ const int product =
 
 比起这个：
 
-```C++
+```cpp
 // Find the element in the vector.  <-- Bad: obvious!
 if (std::find(v.begin(), v.end(), element) != v.end()) {
   Process(element);
@@ -405,7 +405,7 @@ if (std::find(v.begin(), v.end(), element) != v.end()) {
 
 你更应该写这个：
 
-```C++
+```cpp
 // Process "element" unless it was already processed.
 if (std::find(v.begin(), v.end(), element) != v.end()) {
   Process(element);
@@ -426,7 +426,7 @@ if (std::find(v.begin(), v.end(), element) != v.end()) {
 
 TODO应该包括 `@todo`，后面是名字、e-mail地址、Issue ID或者其他具有关于TODO所引用的问题的最佳背景的人或问题的标识。主要目的是为了有一个一致的TODO，可以通过搜索来了解如何根据要求获得更多的细节。TODO并不是一个承诺，即被引用的人将解决这个问题。因此，当你创建一个有名字的TODO时，几乎都是你的名字被给出。
 
-```C++
+```cpp
 /**
  * \~chinese
  * @todo (kl@gmail.com) 需要做一些事情。

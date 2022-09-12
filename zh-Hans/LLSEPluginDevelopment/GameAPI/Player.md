@@ -125,12 +125,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var open = pl.isOP();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     open = pl:isOP()
     ```
@@ -149,12 +149,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.kick();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:kick()
     ```
@@ -186,12 +186,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     //对于一个玩家对象pl
     pl.tell("Welcome back ~ ", 5);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:tell("Welcome back ~ ", 5)
     ```
@@ -221,12 +221,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     mc.broadcast("Hello everyone ~ ");
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     mc.broadcast("Hello everyone ~ ")
     ```
@@ -249,12 +249,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.sendToast("Hello", "everyone ~");
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:sendToast("Hello", "everyone ~")
     ```
@@ -271,12 +271,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.runcmd("tp ~ ~50 ~");
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:runcmd("tp ~ ~50 ~")
     ```
@@ -293,12 +293,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.talkAs("Hello everyone ~ ");
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:talkAs("Hello everyone ~ ")
     ```
@@ -327,12 +327,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.talkAs(anotherpl, "Hello ~ ");
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:talkAs(anotherpl, "Hello everyone ~ ")
     ```
@@ -350,12 +350,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     //对于一个玩家对象pl
     pl.teleport(pos);
     ```
   - Lua
-    ```Lua
+    ```lua
     pl:teleport(pos)
     ```
 
@@ -368,12 +368,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.kill();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:kill()
     ```
@@ -392,12 +392,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.hurt(20);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:hurt(20)
     ```
@@ -416,12 +416,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.setFire(20,true);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:setFire(20,true)
     ```
@@ -448,12 +448,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.rename("Steve");
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:rename("Steve")
     ```
@@ -467,12 +467,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var bl = pl.getBlockStandingOn();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     bl = pl:getBlockStandingOn()
     ```
@@ -489,12 +489,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var dv = pl.getDevice();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     dv = pl:getDevice()
     ```
@@ -510,12 +510,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var it = pl.getHand();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     it = pl:getHand()
     ```
@@ -531,12 +531,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var it = pl.getOffHand();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     it = pl:getOffHand()
     ```
@@ -552,12 +552,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var ct = pl.getInventory();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     ct = pl:getInventory()
     ```
@@ -573,12 +573,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var ct = pl.getArmor();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     ct = pl:getArmor()
     ```
@@ -594,12 +594,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var ct = pl.getEnderChest();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     ct = pl:getEnderChest()
     ```
@@ -613,12 +613,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var pos = pl.getRespawnPosition();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pos = pl:getRespawnPosition()
     ```
@@ -636,11 +636,11 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     mc.setRespawnPosition(pos);
     ```
   - Lua
-    ```Lua
+    ```lua
     mc.setRespawnPosition(pos)
     ```
 
@@ -658,12 +658,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.giveItem(item);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:giveItem(item)
     ```
@@ -683,12 +683,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.clearItem("minecraft:dirt");
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:clearItem("minecraft:dirt")
     ```
@@ -704,12 +704,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.refreshItems();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:refreshItems()
     ```
@@ -723,12 +723,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.refreshChunks();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:refreshChunks()
     ```
@@ -754,12 +754,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.setPermLevel(0);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:setPermLevel(0)
     ```
@@ -779,12 +779,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.setGameMode(0);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:setGameMode(0)
     ```
@@ -801,12 +801,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.addLevel(1);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:addLevel(1)
     ```
@@ -823,12 +823,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.reduceLevel(1);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:reduceLevel(1)
     ```
@@ -842,12 +842,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var lv = pl.getLevel();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     lv = pl:getLevel()
     ```
@@ -864,12 +864,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.setLevel(1);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:setLevel(1)
     ```
@@ -883,12 +883,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.resetLevel();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:resetLevel()
     ```
@@ -902,12 +902,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.getCurrentExperience();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:getCurrentExperience()
     ```
@@ -924,12 +924,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.setCurrentExperience(1);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:setCurrentExperience(1)
     ```
@@ -943,12 +943,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var xp = pl.getTotalExperience();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     xp = pl:getTotalExperience()
     ```
@@ -965,12 +965,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.setTotalExperience(1);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:setTotalExperience(1)
     ```
@@ -987,12 +987,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.addExperience(1);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:addExperience(1)
     ```
@@ -1009,12 +1009,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.reduceExperience(1);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:reduceExperience(1)
     ```
@@ -1030,12 +1030,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     var ndxp = pl.getXpNeededForNextLevel();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     ndxp = pl:getXpNeededForNextLevel()
     ```
@@ -1055,12 +1055,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
       // 对于一个玩家对象pl
       pl.transServer("123.45.67.89", 23333);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:transServer("123.45.67.89", 23333)
     ```
@@ -1074,12 +1074,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.crash();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:crash()
     ```
@@ -1104,7 +1104,7 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.setSidebar("title", {
         aaaa: 3,
@@ -1113,7 +1113,7 @@
     });
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:setSidebar("title", {
         "aaaa" = 3,
@@ -1131,12 +1131,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.removeSidebar();
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:removeSidebar()
     ```
@@ -1159,12 +1159,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.setBossBar(1145141919, "Hello ~ ", 80, 0);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:setBossBar(1145141919, "Hello ~ ", 80, 0)
     ```
@@ -1181,12 +1181,12 @@
 
 - 示例：  
   - JS
-    ```JavaScript
+    ```javascript
     // 对于一个玩家对象pl
     pl.removeBossBar(1145141919);
     ```
   - Lua
-    ```Lua
+    ```lua
     -- 对于一个玩家对象pl
     pl:removeBossBar(1145141919)
     ```
@@ -1279,7 +1279,7 @@
 
 数组中的每一项为一个键 - 值对列表对象`Object`，Attributes对象默认含有`Base` `Current` `DefaultMax` `DefaultMin` `Max` `Min` `Name` 等几种内容 。其内容形如：
 
-```JavaScript
+```javascript
 {
     Base: 0, 
     Current: 0, 
@@ -1557,7 +1557,7 @@
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#navigatetoblock)  
 返回值示例：
-```JavaScript
+```javascript
 {
     isFullPath: false,
     path: [

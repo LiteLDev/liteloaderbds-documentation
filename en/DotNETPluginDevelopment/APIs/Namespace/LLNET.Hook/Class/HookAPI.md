@@ -9,11 +9,11 @@
 <br>
 
 C#
-```C#
+```csharp
 public abstract class HookAPI
 ```
 C++
-```C++
+```cpp
 public ref class HookAPI abstract
 ```
 <br>

@@ -23,8 +23,8 @@
 - 返回值类型：`NbtList`
   - 如果创建失败，将抛出异常
 
-```clike
 [Js]
+```javascript
 var nbt = new NbtCompound({
         "name1": new NbtInt(3),
         "name2": new NbtString("test"),
@@ -34,7 +34,9 @@ var nbt = new NbtCompound({
         ]),
         "name4": new NbtLong(66666)
     });
+```
 [Lua]
+```lua
 local nbt = NbtCompound({
         "name1" = NbtInt(3),
         "name2" = NbtString("test"),

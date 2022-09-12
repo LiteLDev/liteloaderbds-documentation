@@ -13,11 +13,11 @@
 <br>
 
 C#
-```C#
+```csharp
 public void Reload();
 ```
 C++
-```C++
+```cpp
 public:
     void Remoad();
 ```

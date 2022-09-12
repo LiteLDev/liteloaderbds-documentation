@@ -9,11 +9,11 @@
 <br>
 
 C#
-```C#
+```csharp
 public struct SecondaryRankPtr
 ```
 C++
-```C++
+```cpp
 public value class SecondaryRankPtr
 ``` 
 

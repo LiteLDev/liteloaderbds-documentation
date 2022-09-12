@@ -25,7 +25,7 @@
 
 在要放置服务器的目录中，运行：
 
-```sh
+```shell
 wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/Scripts/install.sh
 chmod +x install.sh
 ./install.sh
@@ -35,7 +35,7 @@ chmod +x install.sh
 
 你应该安装了最新版本的Docker。然后运行：
 
-```sh
+```shell
 docker pull shrbox/liteloaderbds
 docker create --name <容器名称> -v <安装目录>:/root/bedrock-server -p <端口>:19132/udp -it shrbox/liteloaderbds
 ```

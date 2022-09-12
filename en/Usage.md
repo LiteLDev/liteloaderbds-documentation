@@ -25,7 +25,7 @@ Follow these steps to install:
 
 In the directory to put the server, run:
 
-```sh
+```shell
 wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/Scripts/install.sh
 chmod +x install.sh
 ./install.sh
@@ -35,7 +35,7 @@ chmod +x install.sh
 
 You should have the latest version of Docker installed. Then run:
 
-```sh
+```shell
 docker pull shrbox/liteloaderbds
 docker create --name <container name> -v <installation directory>:/root/bedrock-server -p <port>:19132/udp -it shrbox/liteloaderbds
 ```

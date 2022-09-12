@@ -9,7 +9,7 @@
 <br>
 
 C++
-```C++
+```cpp
 template<typename NATIVEEVENT>
 public ref class __EventListener
 ```

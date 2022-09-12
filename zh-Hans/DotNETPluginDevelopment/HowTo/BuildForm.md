@@ -33,7 +33,7 @@
 <br>
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.Form;
 
@@ -56,7 +56,7 @@ namespace PluginMain
 >可以使用 `SimpleForm.Append` 方法为表单追加表单，也可直接使用 `SimpleForm.AddButton` 方法添加按钮。
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.Form;
 
@@ -92,7 +92,7 @@ namespace PluginMain
 >简单表单回调原型为 `delegate void SimpleFormCallback(MC.Player,Int32)` 使用与之匹配的函数即可。
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.Form;
 
@@ -137,7 +137,7 @@ namespace PluginMain
 <br>
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.Form;
 
@@ -158,7 +158,7 @@ namespace PluginMain
 ### 为表单添加控件
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.Form;
 
@@ -208,7 +208,7 @@ namespace PluginMain
 <br>
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.Form;
 

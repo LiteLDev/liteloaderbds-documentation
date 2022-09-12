@@ -9,13 +9,13 @@
 <br>
 
 C#
-```C#
+```csharp
 [AttributeUsage(AttributeTargets.Enum)]
 public class CommandEnumAttribute
     :Attribute
 ```
 C++
-```C++
+```cpp
 [AttributeUsage(AttributeTargets::Enum)]
 public ref class CommandEnumAttribute
     :public System::Attribute

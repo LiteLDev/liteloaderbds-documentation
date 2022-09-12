@@ -23,7 +23,7 @@ This might confuse some developers, as `ll` should be undefined. However, this f
 Now that we have created our .js file, and registered the plugin, all we have to do from here is create an event listener. We do that by utilizing `mc`.
 
 
-```JavaScript
+```javascript
 mc.listen("onJoin", (player) => {
     log(`${player.name} has joined the server.`);
 });
@@ -37,7 +37,7 @@ You can reference the `mc` class as well as other special classes and constructo
 
 For example, we can use the player object and directly act on it to send information/manipulate a Player.
 
-```JavaScript
+```javascript
 mc.listen("onJoin", (player) => {
     log(`${player.name} has joined the server.`);
     player.sendToast('Welcome!', 'Thanks for joining the server!');
@@ -46,7 +46,7 @@ mc.listen("onJoin", (player) => {
 
 We can reference player object properties and use that to execute other actions.
 
-```JavaScript
+```javascript
 mc.listen("onJoin", (player) => {
     log(`${player.name} has joined the server.`);
     player.sendToast('Welcome!', 'Thanks for joining the server!');

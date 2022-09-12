@@ -13,7 +13,7 @@
 >通过调用DynamicCommand类的CreateCommand静态方法可以创建新的动态指令实例。
 
 C#
-```C#
+```csharp
 DynamicCommandInstance cmd = DynamicCommand.CreateCommand("testcmd", "dynamic command", CommandPermissionLevel.GameMasters);
 ```
 
@@ -74,7 +74,7 @@ DynamicCommandInstance cmd = DynamicCommand.CreateCommand("testcmd", "dynamic co
 <br>
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.DynamicCommand;
 

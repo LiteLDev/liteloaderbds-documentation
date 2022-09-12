@@ -9,7 +9,7 @@
 <br>
 
 C++
-```C++
+```cpp
 template <typename REFEVENT, typename NATIVEEVENT>
 public ref class EventTemplate
 ```

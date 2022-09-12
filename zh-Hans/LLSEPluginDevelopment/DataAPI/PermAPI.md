@@ -279,12 +279,12 @@
 - 注意：权限的额外数据将被忽略，此方法会返回`true`如果`enabled`字段为`true`。
 
 - 💡 您可以用JavaScript的原型机制或者[Lua的ScriptX接口](https://github.com/Tencent/ScriptX/blob/main/docs/zh/Lua.md)
-```JavaScript
+```javascript
 LLSE_Player.prototype.hasPermission = function(permName) {
   return Permission.checkPermission(this.xuid, permName);
 }
 ```
-```Lua
+```lua
 local meta = ScriptX.getInstanceMeta(LLSE_Player);
 function meta.instanceFunction:hasPermission(perm)
   return Permission.checkPermission(self.xuid, perm);
@@ -344,7 +344,7 @@ end
 
 ## 例子
 
-```JavaScript
+```javascript
 LLSE_Player.prototype.hasPermission = function (permName) {
     return Permission.checkPermission(this.xuid, permName);
 }

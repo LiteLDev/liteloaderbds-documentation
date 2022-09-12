@@ -9,12 +9,12 @@
 <br>
 
 C#
-```C#
+```csharp
 public class MCException
     :LiteLoaderDotNETException
 ```
 C++
-```C++
+```cpp
 public ref class MCException
     :public LiteLoaderDotNETException
 ```

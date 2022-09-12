@@ -9,12 +9,12 @@
 <br>
 
 C#
-```C#
+```csharp
 public class RegisterCommandException
     :LiteLoaderDotNETException
 ```
 C++
-```C++
+```cpp
 public ref class RegisterCommandException
     :public LiteLoaderDotNETException
 ```

@@ -11,7 +11,7 @@
 <br>
 
 C#
-```C#
+```csharp
 [assembly:CustomLib("plugins/libpath1")]
 [assembly:CustomLib("libpath2")]
 ```

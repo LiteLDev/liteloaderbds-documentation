@@ -9,12 +9,12 @@
 <br>
 
 C#
-```C#
+```csharp
 public class LiteLoaderDotNETException
     :Exception
 ```
 C++
-```C++
+```cpp
 public ref class LiteLoaderDotNETException
     :public System::Exception
 ```

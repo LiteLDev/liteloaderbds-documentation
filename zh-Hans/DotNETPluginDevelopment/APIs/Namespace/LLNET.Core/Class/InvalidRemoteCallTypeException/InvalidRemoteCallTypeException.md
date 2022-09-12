@@ -9,12 +9,12 @@
 <br>
 
 C#
-```C#
+```csharp
 public class InvalidRemoteCallTypeException
     :LiteLoaderDotNETException
 ```
 C++
-```C++
+```cpp
 public ref class InvalidRemoteCallTypeException
     :public LiteLoaderDotNETException
 ```

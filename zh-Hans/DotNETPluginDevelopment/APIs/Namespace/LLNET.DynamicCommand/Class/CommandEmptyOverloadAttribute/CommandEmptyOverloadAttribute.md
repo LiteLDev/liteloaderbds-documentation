@@ -9,13 +9,13 @@
 <br>
 
 C#
-```C#
+```csharp
 [AttributeUsage(AttributeTargets.Class)]
 public class CommandEmptyOverloadAttribute
     :Attribute
 ```
 C++
-```C++
+```cpp
 [AttributeUsage(AttributeTargets::Class)]
 public ref class CommandEmptyOverloadAttribute
     :public System::Attribute

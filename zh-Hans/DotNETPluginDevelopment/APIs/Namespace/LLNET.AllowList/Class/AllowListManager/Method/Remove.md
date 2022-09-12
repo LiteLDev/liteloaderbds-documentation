@@ -20,11 +20,11 @@
 <br>
 
 C#
-```C#
+```csharp
 public AllowListManager Remove(string name)
 ```
 C++
-```C++
+```cpp
 public:
     AllowListManager^ Remove(System::String^ name)
 ```
@@ -46,11 +46,11 @@ public:
 <br>
 
 C#
-```C#
+```csharp
 public AllowListManager Remove(string name, string xuid)
 ```
 C++
-```C++
+```cpp
 public:
     AllowListManager^ Remove(System::String^ name, System::String^ xuid)
 ```

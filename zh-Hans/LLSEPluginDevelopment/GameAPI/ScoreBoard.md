@@ -153,12 +153,10 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 
 使用前，必须保证对应的计分项已经存在
 
-```clike
 [Js]
+```javascript
 //对于一个玩家对象pl
 log("You have money:",pl.getScore("money"));
-[Lua]
-
 ```
 
 #### 修改玩家计分项的分数（方便函数）
@@ -178,14 +176,12 @@ log("You have money:",pl.getScore("money"));
 
 使用前，必须保证对应的计分项已经存在
 
-```clike
 [Js]
+```javascript
 //对于一个玩家对象pl
 pl.setScore("money",10000);
 pl.addScore("money",100);
 pl.reduceScore("money",50);
-[Lua]
-
 ```
 
 #### 玩家停止跟踪计分项（方便函数）
@@ -200,12 +196,10 @@ pl.reduceScore("money",50);
 
 使用前，必须保证对应的计分项已经存在
 
-```clike
 [Js]
+```javascript
 //对于一个玩家对象pl
 pl.deleteScore("what");
-[Lua]
-
 ```
 
 #### 移除一个已存在的计分项

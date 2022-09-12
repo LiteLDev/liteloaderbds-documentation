@@ -9,12 +9,12 @@
 <br>
 
 C#
-```C#
+```csharp
 public class RemoteCallExportFunctionException
     :LiteLoaderDotNETException
 ```
 C++
-```C++
+```cpp
 public ref class RemoteCallExportFunctionException
     :public LiteLoaderDotNETException
 ```

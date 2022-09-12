@@ -9,11 +9,11 @@
 <br>
 
 C#
-```C#
+```csharp
 public class SimpleForm
 ```
 C++
-```C++
+```cpp
 ref class SimpleForm : public ClassTemplate<SimpleForm, ::Form::SimpleForm>, public FormImpl
 ```
 <br>

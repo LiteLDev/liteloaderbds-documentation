@@ -9,12 +9,12 @@
 <br>
 
 C#
-```C#
+```csharp
 public class NativePluginException
     :LiteLoaderDotNETException
 ```
 C++
-```C++
+```cpp
 public ref class NativePluginException
     :public LiteLoaderDotNETException
 ```
@@ -31,7 +31,7 @@ public ref class NativePluginException
 
 
 C#
-```C#
+```csharp
 using System;
 using LLNET.LL;
 using LLNET.Core;
