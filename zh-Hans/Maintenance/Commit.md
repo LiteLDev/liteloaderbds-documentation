@@ -131,7 +131,7 @@ git rebase -i HEAD~5 #以当前HEAD往前5个commit，执行交互式rebase
 |-- third_party
     |-- libname
     |   |-- include
-    |   |   |-- lib.h
+    |   |   |-- lib.hpp
     |   |-- src
     |   |   |-- lib.cpp
     |-- header_only_libname

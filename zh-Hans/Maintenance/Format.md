@@ -54,7 +54,7 @@ pragma once
     * 文件中API是Minecraft原生类的拓展成员，或是Minecraft原生类型定义。
 
 文件添加于 `/Utils` 当且仅当满足以下所有条件：
-    * 文件不直接或简介引用 `/MC/` 下任何文件、`/Global.h` 和 `/GlobalServiceAPI.h`；
+    * 文件不直接或简介引用 `/MC/` 下任何文件、`/Global.hpp` 和 `/GlobalServiceAPI.hpp`；
     * 文件可以被迁移到一个与Minecraft完全无关的程序上使用。
 
 文件添加于 `/` 当且仅当满足以下所有条件：
@@ -77,7 +77,7 @@ pragma once
 
 ```cpp
 
-// In xxx.h
+// In xxx.hpp
 pragma once
 
 pragma warning(disable : xxxx)
