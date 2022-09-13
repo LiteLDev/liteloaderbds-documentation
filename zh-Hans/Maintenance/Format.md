@@ -16,7 +16,7 @@
 
 &emsp;&emsp;凡是 C++ 标准库和本项目中引用的其他库已经实现的数据结构，不应重复自定义实现。使用容器的第一步是明确您自己的目的：您想要一个顺序容器，一个类似集合的容器，还是一个类似键值对的容器？选择容器时最重要的是您计划如何访问容器的算法属性。基于此，您应该使用：
 
-- `map/unordered_map` - 如果您需要基于另一个值有效查找一个值，则使用类似 `map` 的容器。类似 `map` 的容器还支持有效的包含查询（键是否在 `map` 中）。类映射容器通常不支持有效的反向映射（值到键）。如果需要，请使用两张 `map` 。例如 `MC/Types.hpp` 内的 `BidirectionalUnorderedMap` 。一些类似 `map` 的容器还支持按排序顺序通过键进行有效迭代。 `map` 通常要慢于 `unordered_map` 。使用 `unordered_map` 时，您需要为键实现 std::hash 的模板特化，或者自定义哈希函数。用 `map` 时，您需要为键实现比较函数。需要注意的是，普通 `map` 的键具有唯一性，如果您需要许多相同的键，请使用类似 `multimap` 的容器。
+- `map/unordered_map` - 如果您需要基于另一个值有效查找一个值，则使用类似 `map` 的容器。类似 `map` 的容器还支持有效的包含查询（键是否在 `map` 中）。类映射容器通常不支持有效的反向映射（值到键）。如果需要，请使用两张 `map` 。例如 `MC/Types.h` 内的 `BidirectionalUnorderedMap` 。一些类似 `map` 的容器还支持按排序顺序通过键进行有效迭代。 `map` 通常要慢于 `unordered_map` 。使用 `unordered_map` 时，您需要为键实现 std::hash 的模板特化，或者自定义哈希函数。用 `map` 时，您需要为键实现比较函数。需要注意的是，普通 `map` 的键具有唯一性，如果您需要许多相同的键，请使用类似 `multimap` 的容器。
 
 - `set/unordered_set` - 如果您需要将一堆东西放入自动消除重复项的容器中，则可以使用类似 `set` 的容器。一些类似 `set` 的容器支持按排序顺序通过元素进行有效迭代。类似 `set` 的容器比顺序容器更昂贵。当然，此结构也有对应的 multi 版本。
 
@@ -54,7 +54,7 @@ pragma once
     * 文件中API是Minecraft原生类的拓展成员，或是Minecraft原生类型定义。
 
 文件添加于 `/Utils` 当且仅当满足以下所有条件：
-    * 文件不直接或简介引用 `/MC/` 下任何文件、`/Global.hpp` 和 `/GlobalServiceAPI.hpp`；
+    * 文件不直接或简介引用 `/MC/` 下任何文件、`/Global.h` 和 `/GlobalServiceAPI.h`；
     * 文件可以被迁移到一个与Minecraft完全无关的程序上使用。
 
 文件添加于 `/` 当且仅当满足以下所有条件：
@@ -77,7 +77,7 @@ pragma once
 
 ```cpp
 
-// In xxx.hpp
+// In xxx.h
 pragma once
 
 pragma warning(disable : xxxx)
