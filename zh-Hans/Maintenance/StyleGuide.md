@@ -151,9 +151,9 @@ class ExampleClass {
 示例如下：
 
 ```cpp
-AddTableEntry()
-DeleteUrl()
-OpenFileOrDie()
+addTableEntry()
+deleteUrl()
+openFileOrDie()
 ```
 
 (同样的命名规则适用于作为API的一部分被暴露出来的类和命名空间范围的常量，这些常量旨在看起来像函数，因为它们是对象而不是函数这一事实是一个不重要的实现细节。)
