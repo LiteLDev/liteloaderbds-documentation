@@ -153,7 +153,7 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 
 使用前，必须保证对应的计分项已经存在
 
-[Js]
+[JavaScript]
 ```javascript
 //对于一个玩家对象pl
 log("You have money:",pl.getScore("money"));
@@ -176,7 +176,7 @@ log("You have money:",pl.getScore("money"));
 
 使用前，必须保证对应的计分项已经存在
 
-[Js]
+[JavaScript]
 ```javascript
 //对于一个玩家对象pl
 pl.setScore("money",10000);
@@ -196,7 +196,7 @@ pl.reduceScore("money",50);
 
 使用前，必须保证对应的计分项已经存在
 
-[Js]
+[JavaScript]
 ```javascript
 //对于一个玩家对象pl
 pl.deleteScore("what");

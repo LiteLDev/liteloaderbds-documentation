@@ -9,7 +9,7 @@ Currently, LLSE supports writing plugins in the following languages：
 
 | Language backend | Remarks                                                      |
 | ---------------- | ------------------------------------------------------------ |
-| `JavaScript`     | Using QuickJs engine, with support for ES Modules            |
+| `JavaScript`     | Using QuickJS engine, with support for ES Modules            |
 | `Lua`            | Using CLua engine                                            |
 | `Node.js`         | Modify Node.js to work with embedding, with support for npm package management |
 | `Python`（WIP）  | Using CPython engine, with support for pip package management |
@@ -20,8 +20,8 @@ Currently, LLSE supports writing plugins in the following languages：
 
 ## JavaScript language support description
 
-- Support for simple JavaScript plugins using the QuickJs engine, a lightweight engine with a low resource footprint
-- The current version of QuickJs supports up to ES2020, and natively supports ES Modules which allows developers to easily manage projects.
+- Support for simple JavaScript plugins using the QuickJS engine, a lightweight engine with a low resource footprint
+- The current version of QuickJS supports up to ES2020, and natively supports ES Modules which allows developers to easily manage projects.
 - Package management is not yet supported. If needed, you can use Node.js for plugin development and use npm for package management
 
 ## Lua language support description

@@ -34,7 +34,7 @@
 
 ### Script获得函数
 
-描述函数类型并得到一个来自脚本的函数，其被包装为可直接在Native代码中调用的函数
+描述函数类型并得到一个来自脚本的函数，其被包装为可直接在本机代码中调用的函数
 
 `static NativeFunction.fromScript(ReturnValue: NativeTypes.Void, Params: [NativeType.Int......], Callback: func(Params...){})`
 

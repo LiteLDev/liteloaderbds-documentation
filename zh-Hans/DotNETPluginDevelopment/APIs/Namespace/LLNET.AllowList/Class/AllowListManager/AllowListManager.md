@@ -73,7 +73,7 @@ namespace PluginMain
     |||
     |-|-|
     |[Size](zh_CN/NET/APIs/Namespace/LLNET.AllowList/Properties/Size.md)|获取 `AllowList` 大小。|
-    |[AllowList](zh_CN/NET/APIs/Namespace/LLNET.AllowList/Properties/AllowList.md)|获取或设置序列化为Json字符串的 `AllowList`。|
+    |[AllowList](zh_CN/NET/APIs/Namespace/LLNET.AllowList/Properties/AllowList.md)|获取或设置序列化为JSON字符串的 `AllowList`。|
 
 <br>
 

@@ -12,7 +12,7 @@ The following APIs provide interfaces for registering and listening to custom co
 - Return value: Whether the execution was successful.
 - Return value type:  `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 mc.runcmd("say Hello!");
 ```
@@ -44,7 +44,7 @@ mc.runcmd("say Hello!")
 >
 > The implementation of runcmdEx is very different from ordinary runcmd. The Enhanced version has a **hidden execution** mechanism, and the execution result will not be output to the console. Therefore, if necessary, you must manually use the log function to output the result.
 
-[Js]
+[JavaScript]
 ```javascript
 var result = mc.runcmdEx("say Hello!");
 log(result.output);

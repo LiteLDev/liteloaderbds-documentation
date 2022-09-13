@@ -4,7 +4,7 @@
 
 <br>
 
-> 获取或设置序列化为Json字符串的 `AllowList`。
+> 获取或设置序列化为JSON字符串的 `AllowList`。
 
 <br>
 

@@ -52,7 +52,7 @@ Every packet object contains some member functions (member methods) that can be 
 
 ### Create a binary stream object
 
-[Js] ```new BinaryStream()```
+[JavaScript] ```new BinaryStream()```
 
 [Lua] ```BinaryStream()```
 

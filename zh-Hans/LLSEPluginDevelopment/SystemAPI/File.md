@@ -65,7 +65,7 @@
 
 ### 创建一个新的文件对象
 
-[Js] `new File(path,mode[,isBinary])`  
+[JavaScript] `new File(path,mode[,isBinary])`  
 [Lua] `File(path,mode[,isBinary])`
 
 - 参数：

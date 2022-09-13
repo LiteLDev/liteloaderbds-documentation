@@ -52,7 +52,7 @@
 
 ### 创建一个二进制流对象
 
-[Js] ```new BinaryStream()```
+[JavaScript] ```new BinaryStream()```
 
 [Lua] ```BinaryStream()```
 

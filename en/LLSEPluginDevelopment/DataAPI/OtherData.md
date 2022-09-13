@@ -2,7 +2,7 @@
 
 Provides some other common data processing interfaces. You can use and expand by yourself.
 
-### Convert Variable to Json String
+### Convert Variable to JSON String
 
 `data.toJson(var[,space])`
 
@@ -21,15 +21,15 @@ Provides some other common data processing interfaces. You can use and expand by
 
 <br>
 
-### Json String Parsed as Variable
+### JSON String Parsed as Variable
 
 `data.parseJson(json)`
 
 - Parameters: 
   - json : `String`  
-    Json string to convert to variable.
+    JSON string to convert to variable.
 - Return value: The converted variable.
-- Return value type: `Any type`, depending on the data type contained in Json.
+- Return value type: `Any type`, depending on the data type contained in JSON.
   - If the return value is `Null`, it means that the conversion failed .
 
 <br>

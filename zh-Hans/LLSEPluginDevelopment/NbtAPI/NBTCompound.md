@@ -13,7 +13,7 @@
 
 #### 创建新的 NBT 标签对象
 
-[Js]  `new NbtCompound([data])`  
+[JavaScript]  `new NbtCompound([data])`  
 [Lua] `NbtCompound([data])`
 
 - 参数：
@@ -23,7 +23,7 @@
 - 返回值类型：`NbtList`
   - 如果创建失败，将抛出异常
 
-[Js]
+[JavaScript]
 ```javascript
 var nbt = new NbtCompound({
         "name1": new NbtInt(3),

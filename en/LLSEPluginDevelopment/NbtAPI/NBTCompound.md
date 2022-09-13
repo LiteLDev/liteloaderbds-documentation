@@ -23,7 +23,7 @@ See [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [NbtComp
 - Return value type: `NbtList`
   - If the creation fails, an exception will be thrown.
 
-[Js]
+[JavaScript]
 ```javascript
 var nbt = new NbtCompound({
         "name1": new NbtInt(3),

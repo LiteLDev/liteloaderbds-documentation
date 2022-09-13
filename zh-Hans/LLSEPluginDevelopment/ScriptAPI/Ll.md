@@ -62,11 +62,11 @@
 
 - 参数：
   - major: `Integer`  
-    检查当前已安装LL的主版本号是否 >= 此值
+    检查当前已安装LiteLoaderBDS的主版本号是否 >= 此值
   - minor: `Integer`（可选参数）  
-    检查当前已安装LL的次版本号是否 >= 此值
+    检查当前已安装LiteLoaderBDS的次版本号是否 >= 此值
   - revision: `Integer`（可选参数）  
-    检查当前已安装LL的修订版本号是否 >= 此值
+    检查当前已安装LiteLoaderBDS的修订版本号是否 >= 此值
 - 返回值：检查结果
 - 返回值类型： `Boolean`
 

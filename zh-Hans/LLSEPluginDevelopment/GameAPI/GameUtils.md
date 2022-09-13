@@ -48,7 +48,7 @@ MC通过 **格式化代码** 符号在游戏内提供颜色文字、样式修改
 
 上述代码使用的方法为连接字符串，类似于：
 
-[Js]
+[JavaScript]
 ```javascript
 mc.broadcast(Format.Red + Format.Bold + "Red & Bold " + Format.DarkGreen + Format.Underline + "DarkGreen & Underline" + Format.Clear + "Clear");
 ```

@@ -69,7 +69,7 @@
 
 ### 创建一个新的WebSocket 客户端对象
 
-[Js] `new WSClient()`  
+[JavaScript] `new WSClient()`  
 [Lua] `WSClient()`
 
 - 返回值：一个新的 websocket 客户端对象
@@ -237,7 +237,7 @@
 
 ### 创建一个新的服务器对象
 
-[Js]  `new HttpServer()`  
+[JavaScript]  `new HttpServer()`  
 [Lua] `HttpServer()`
 
 - 返回值：新的服务器对象

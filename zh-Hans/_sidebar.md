@@ -4,7 +4,7 @@
 
 - [❓ 常见问题](/FAQ.md)
 
-- [⛳ C++插件开发](https://cpp.docs.litebds.com/zh-Hans)
+- [⛳ 原生插件开发](https://cpp.docs.litebds.com/zh-Hans)
 
 - 🎯 脚本插件开发
     - [⛳ 新手入门（必读）](LLSEPluginDevelopment/README.md)
@@ -73,7 +73,7 @@
         - [🎚️ 函数类型NativeFunction](LLSEPluginDevelopment/NativeAPI/NativeFunction.md)
         - [🛠️ 补丁工具NativePatch](LLSEPluginDevelopment/NativeAPI/NativePatch.md)
 
-- 🪁 LL .NET插件开发
+- 🪁 .NET插件开发
     - [⛳ 新手入门（必读）](/DotNETPluginDevelopment/README.md)
 
     - [✨ 环境部署](/DotNETPluginDevelopment/Deploy.md)

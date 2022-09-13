@@ -9,7 +9,7 @@
 
 | 语言后端           | 备注                                             |
 | ------------------ | ---------------------------------------------- |
-| `JavaScript`       | 使用 QuickJs 引擎运行插件，支持 ES Module 机制      |
+| `JavaScript`       | 使用 QuickJS 引擎运行插件，支持 ES Module 机制      |
 | `Lua`              | 使用 CLua 引擎运行插件                            |
 | `Node.js`          | 改造 Node.js 使其适合嵌入工作，支持 npm 包管理       |
 | `Python`（开发中）   | 使用 CPython 引擎运行插件，支持 pip 包管理          |
@@ -20,8 +20,8 @@
 
 ## JavaScript 语言支持说明
 
-- 使用 QuickJs 引擎对简单的 Js 插件提供支持，轻量级引擎资源占用较少
-- QuickJs 当前版本支持到 ES2020 语言特性，同时原生支持 ESModule 模块机制，可以方便开发者进行项目管理
+- 使用 QuickJS 引擎对简单的 JavaScript 插件提供支持，轻量级引擎资源占用较少
+- QuickJS 当前版本支持到 ES2020 语言特性，同时原生支持 ESModule 模块机制，可以方便开发者进行项目管理
 - 暂不支持包管理机制，如果需要请使用 Node.js 进行插件开发，使用 npm 包管理
 
 ## Lua 语言支持说明

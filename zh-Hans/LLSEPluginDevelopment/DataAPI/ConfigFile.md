@@ -30,7 +30,7 @@
 
 #### 创建 / 打开一个 JSON 配置文件
 
-[Js] `new JsonConfigFile(path[,default])`  
+[JavaScript] `new JsonConfigFile(path[,default])`  
 [Lua] `JsonConfigFile(path[,default])`
 
 - 参数：
@@ -121,7 +121,7 @@
 
 #### 创建 / 打开一个 Ini 配置文件
 
-[Js] `new IniConfigFile(path[,default])`  
+[JavaScript] `new IniConfigFile(path[,default])`  
 [Lua] `IniConfigFile(path[,default])`
 
 - 参数：

@@ -12,7 +12,7 @@
 
 ## 🔨 加载器安装 与 使用指南
 
-这里介绍了如何为BDS服务端安装`LiteLoaderBDS`加载器，如何修改配置，以及如何安装LL插件
+这里介绍了如何为BDS服务端安装`LiteLoaderBDS`加载器，如何修改配置，以及如何安装插件
 
 👉[点击此处](/Usage.md)👈 查看`LiteLoaderBDS`安装和使用文档
 <br>

@@ -59,13 +59,13 @@ Now that you have LiteLoaderBDS installed, how about adding some plugins?
 
 ## 🎯 Add Some Plugins
 
-There are 3 types of plugins: LL plugins, LLSE plugins and LL.NET plugins.
+There are 3 types of plugins: Native plugins, Script plugins and .NET plugins.
 
-LL plugins are compiled native plugins, written in C++, Go, C# or Rust, which have better performance but cannot be loaded, unloaded or reloaded after the server starts.
+Native plugins are written in C++, Go or Rust, which have better performance but cannot be loaded, unloaded or reloaded after the server starts.
 
-LLSE plugins are script plugins, written in JavaScript, Python or Lua, which can be flexibly managed and have better security but perform worse.
+Script plugins are written in JavaScript, Python or Lua, which can be flexibly managed and have better security but perform worse.
 
-LL.NET plugins are runs on the .NET developer platform(CLR) and is written in a CLS-compatible language(such as C#, Visual Basic.NET, and F#, etc.).
+.NET plugins are runs on the .NET developer platform(CLR) and is written in a CLS-compatible language(such as C#, Visual Basic.NET, and F#, etc.).
 
 > [!WARNING]
 > To ensure that most plugins work properly, in `server.properties` , set `online-mode` to `true` and `server-authoritative-movement` to `server-auth` or `server-auth-with- rewind` .
@@ -75,8 +75,8 @@ LL.NET plugins are runs on the .NET developer platform(CLR) and is written in a 
 You can look for plugins in these websites:
 
 * [LiteLoader Forum](https://forum.litebds.com/)
-* [MineBBS (LL plugins)](https://www.minebbs.net/resources/?prefix_id=59)
-* [MineBBS (LLSE plugins)](https://www.minebbs.net/resources/?prefix_id=67)
+* [MineBBS (Native plugins)](https://www.minebbs.net/resources/?prefix_id=59)
+* [MineBBS (Script plugins)](https://www.minebbs.net/resources/?prefix_id=67)
 
 ### Install Plugins
 

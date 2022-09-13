@@ -13,7 +13,7 @@
 
 #### 创建新的NBT列表对象
 
-[Js]  `new NbtList([data])`  
+[JavaScript]  `new NbtList([data])`  
 [Lua] `NbtList([data])`
 
 - 参数：

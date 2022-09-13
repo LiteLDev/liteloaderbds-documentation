@@ -27,7 +27,7 @@
 一个LevelDB数据库是由多个文件组成的，所以你需要传入一个文件夹的路径，数据库文件会被储存于这个文件夹当中。  
 如果这个目录已含有一个数据库，将打开它，否则会新建一个。
 
-[Js] `new KVDatabase(dir)`  
+[JavaScript] `new KVDatabase(dir)`  
 [Lua] `KVDatabase(dir)`
 
 - 参数：
@@ -112,7 +112,7 @@
 
 SQL数据库适用于使用SQL语句处理大量的关系型数据。接口底层使用跨数据库操作框架实现，可对接绝大多数市面常用SQL数据库。
 
-注：以下API若未注明均可能会抛出异常，建议使用各语言的异常处理语句嵌套。Js可使用`try ... catch`语句，Lua可使用`pcall`。一般情况下未抛出错误即代表调用成功。
+注：以下API若未注明均可能会抛出异常，建议使用各语言的异常处理语句嵌套。JavaScript可使用`try ... catch`语句，Lua可使用`pcall`。一般情况下未抛出错误即代表调用成功。
 
 > 如果您是JavaScript插件开发者，您还可以尝试使用[Yoyo](https://gitee.com/Y_oyo)封装的LLDB链式操作库(主要面向不了解SQL语法的新手开发者)。详情 [点击这里](https://gitee.com/Y_oyo/yoyo-mcbe-lite-xloader-item/blob/master/sql/yoyoSqlite.js%202.0.0.md)
 
@@ -122,7 +122,7 @@ SQL数据库适用于使用SQL语句处理大量的关系型数据。接口底�
 
 由于需要做到多数据库兼容, 连接数据库需要传入一个包含连接参数的对象或字符串。
 
-[Js] `new DBSession(type, params)`  
+[JavaScript] `new DBSession(type, params)`  
 [Lua] `DBSession(type, params)`
 
 - 参数：
@@ -134,7 +134,7 @@ SQL数据库适用于使用SQL语句处理大量的关系型数据。接口底�
 - 返回值类型：`DBSession`
   - 如果返回值为`Null`，则代表打开失败
 
-[Js] `new DBSession(str)`  
+[JavaScript] `new DBSession(str)`  
 [Lua] `DBSession(str)`
 
 - 参数：

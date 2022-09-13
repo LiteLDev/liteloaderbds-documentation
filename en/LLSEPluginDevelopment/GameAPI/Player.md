@@ -175,7 +175,7 @@ pl:kick()
 
 - Return value type: `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 //For a `Player` object pl
 pl.tell("Welcome back ~ ",5);
@@ -205,7 +205,7 @@ pl.tell("Welcome back ~ ",5);
 
 - Return value type: `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 mc.broadcast("Hello everyone ~ ");
 ```
@@ -225,7 +225,7 @@ mc.broadcast("Hello everyone ~ ");
 - Return value: Whether the message was sent successfully.
 - Return value type: `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 pl.sendToast("Hello","everyone ~");
 ```
@@ -241,7 +241,7 @@ pl.sendToast("Hello","everyone ~");
 - Return value: Whether the execution was successful.
 - Return value type:  `Boolean`   
 
-[Js]
+[JavaScript]
 ```javascript
 //For a `Player` object pl
 var open = pl.runcmd("tp ~ ~+50 ~");
@@ -296,7 +296,7 @@ var open = pl.runcmd("tp ~ ~+50 ~");
 - Return value: Whether the teleport was successful or not.
 - Return value type: `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 //For a `Player` object pl, a coordinate object pos
 pl.teleport(pos);
@@ -309,7 +309,7 @@ pl.teleport(pos);
 - Return value: Whether the execution was successful.
 - Return value type: `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 [JS]
 //For a `Player` object pl
@@ -368,7 +368,7 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: WHether the rename was successful.
 - Return value type: `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 //For a `Player` object pl
 pl.rename("newname");
@@ -540,7 +540,7 @@ After modifying the player's items, in order for the client to take effect, it i
 
 - Return value type: `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 //For a `Player` object pl
 pl.setPermLevel(1);
@@ -557,7 +557,7 @@ pl.setPermLevel(1);
 - Return value: Whether the modification was successful.
 - Return value type: `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 //For a `Player` object pl
 pl.setGameMode(1);
@@ -573,7 +573,7 @@ pl.setGameMode(1);
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-[Js]
+[JavaScript]
 ```javascript
 //For a `Player` object pl
 pl.addLevel(6);
@@ -597,7 +597,7 @@ pl.addLevel(6);
 - Return value: The player's experience level.
 - Return value type: `Integer`
 
-[Js]
+[JavaScript]
 ```javascript
 //For a `Player` object pl
 pl.getLevel();
