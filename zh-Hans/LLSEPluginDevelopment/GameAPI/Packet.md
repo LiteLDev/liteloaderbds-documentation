@@ -123,7 +123,7 @@
 ### 演示代码
 
 向一个玩家发送TextPacket数据包
-```javascript
+```js
 mc.listen("onChat",function(pl,msg){
     const bs = new BinaryStream()
     var text = "LLSE Packet Test"

@@ -9,7 +9,7 @@
 <br>
 
 C#
-```csharp
+```cs
 [AttributeUsage(AttributeTargets.Class)]
 public class CommandAttribute
     :Attribute

@@ -18,7 +18,7 @@
 ### 创建身份组
 
 通过构造函数：  
-[JS]  `new Role(name[,displayName])`  
+[JavaScript]  `new Role(name[,displayName])`  
 [Lua] `Role(name[,displayName])`
 通过静态方法：  
 `Permission.createRole(name[,displayName])`
@@ -279,7 +279,7 @@
 - 注意：权限的额外数据将被忽略，此方法会返回`true`如果`enabled`字段为`true`。
 
 - 💡 您可以用JavaScript的原型机制或者[Lua的ScriptX接口](https://github.com/Tencent/ScriptX/blob/main/docs/zh/Lua.md)
-```javascript
+```js
 LLSE_Player.prototype.hasPermission = function(permName) {
   return Permission.checkPermission(this.xuid, permName);
 }
@@ -344,7 +344,7 @@ end
 
 ## 例子
 
-```javascript
+```js
 LLSE_Player.prototype.hasPermission = function (permName) {
     return Permission.checkPermission(this.xuid, permName);
 }

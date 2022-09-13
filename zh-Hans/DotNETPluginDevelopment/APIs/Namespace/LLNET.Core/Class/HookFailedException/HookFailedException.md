@@ -9,7 +9,7 @@
 <br>
 
 C#
-```csharp
+```cs
 public class HookFailedException
     :LiteLoaderDotNETException
 ```

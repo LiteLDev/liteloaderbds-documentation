@@ -59,7 +59,7 @@ In LLSE, use "WebSocket objects" to manipulate the connection and work of a WebS
 
 ### Create a New WebSocket Client Object 
 
-[JS] `new WSClient()`  
+[JavaScript] `new WSClient()`  
 [Lua] `WSClient()`
 
 - Return value: A new WebSocket client object.

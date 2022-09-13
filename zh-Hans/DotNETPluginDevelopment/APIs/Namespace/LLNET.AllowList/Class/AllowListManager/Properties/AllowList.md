@@ -9,7 +9,7 @@
 <br>
 
 C#
-```csharp
+```cs
 public string AllowList { get; set; }
 ```
 C++

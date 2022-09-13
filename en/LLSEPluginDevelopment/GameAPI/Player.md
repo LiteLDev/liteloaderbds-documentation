@@ -122,8 +122,8 @@ Each player object contains some member functions (member methods) that can be e
 - Return value: Whether the player is an OP.
 - Return value type: `Boolean`  
 
-[JS]
-```javascript
+[JavaScript]
+```js
 // For a `Player` object pl
 var open = pl.isOP();
 ```
@@ -140,8 +140,8 @@ var open = pl.isOP();
 - Return value: Whether the connection was successfully disconnected.
 - Return value type: `Boolean`
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.kick();
 ```
@@ -176,7 +176,7 @@ pl:kick()
 - Return value type: `Boolean`
 
 [JavaScript]
-```javascript
+```js
 //For a `Player` object pl
 pl.tell("Welcome back ~ ",5);
 ```
@@ -206,7 +206,7 @@ pl.tell("Welcome back ~ ",5);
 - Return value type: `Boolean`
 
 [JavaScript]
-```javascript
+```js
 mc.broadcast("Hello everyone ~ ");
 ```
 
@@ -226,7 +226,7 @@ mc.broadcast("Hello everyone ~ ");
 - Return value type: `Boolean`
 
 [JavaScript]
-```javascript
+```js
 pl.sendToast("Hello","everyone ~");
 ```
 
@@ -242,7 +242,7 @@ pl.sendToast("Hello","everyone ~");
 - Return value type:  `Boolean`   
 
 [JavaScript]
-```javascript
+```js
 //For a `Player` object pl
 var open = pl.runcmd("tp ~ ~+50 ~");
 ```
@@ -297,7 +297,7 @@ var open = pl.runcmd("tp ~ ~+50 ~");
 - Return value type: `Boolean`
 
 [JavaScript]
-```javascript
+```js
 //For a `Player` object pl, a coordinate object pos
 pl.teleport(pos);
 ```
@@ -310,8 +310,8 @@ pl.teleport(pos);
 - Return value type: `Boolean`
 
 [JavaScript]
-```javascript
-[JS]
+```js
+[JavaScript]
 //For a `Player` object pl
 pl.kill();
 [Lua]
@@ -369,7 +369,7 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value type: `Boolean`
 
 [JavaScript]
-```javascript
+```js
 //For a `Player` object pl
 pl.rename("newname");
 ```
@@ -541,7 +541,7 @@ After modifying the player's items, in order for the client to take effect, it i
 - Return value type: `Boolean`
 
 [JavaScript]
-```javascript
+```js
 //For a `Player` object pl
 pl.setPermLevel(1);
 ```
@@ -558,7 +558,7 @@ pl.setPermLevel(1);
 - Return value type: `Boolean`
 
 [JavaScript]
-```javascript
+```js
 //For a `Player` object pl
 pl.setGameMode(1);
 ```
@@ -574,7 +574,7 @@ pl.setGameMode(1);
 - Return value type: `Boolean`
 
 [JavaScript]
-```javascript
+```js
 //For a `Player` object pl
 pl.addLevel(6);
 ```
@@ -598,7 +598,7 @@ pl.addLevel(6);
 - Return value type: `Integer`
 
 [JavaScript]
-```javascript
+```js
 //For a `Player` object pl
 pl.getLevel();
 ```
@@ -626,8 +626,8 @@ pl.getLevel()
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.resetLevel();
 ```
@@ -689,8 +689,8 @@ pl:resetLevel()
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.addExperience(6);
 ```
@@ -721,8 +721,8 @@ pl:addExperience(6)
 
 Note that this method ignores the experience value that exceeds the level when calculating.
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.getXpNeededForNextLevel();
 ```
@@ -745,8 +745,8 @@ pl.getXpNeededForNextLevel()
 - Return value: Whether the transfer was successful or not.
 - Return value type: `Boolean` 
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.transServer("123.45.67.89",23333);
 ```
@@ -758,8 +758,8 @@ pl.transServer("123.45.67.89",23333);
 - Return value: Whether the execution was successful.
 - Return value type: `Boolean` 
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.crash();
 ```
@@ -787,8 +787,8 @@ pl:crash()
 
 - Return value type: `Boolean`
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.setSidebar("title",{"aaaa":3,"bbb":12,"cc":7});
 ```
@@ -800,8 +800,8 @@ pl.setSidebar("title",{"aaaa":3,"bbb":12,"cc":7});
 - Return value: Whether the removal was successful.
 - Return value type: `Boolean`
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.removeSidebar();
 ```
@@ -822,8 +822,8 @@ pl.removeSidebar();
 - Return value: Whether the setting was successful or not.
 - Return value type: `Boolean`
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.setBossBar(1145141919,"Hello ~ ",80,0);
 ```
@@ -838,8 +838,8 @@ pl.setBossBar(1145141919,"Hello ~ ",80,0);
 - Return value: Whether the removal was successful.
 - Return value type: `Boolean`
 
-[JS]
-```javascript
+[JavaScript]
+```js
 //For a `Player` object pl
 pl.removeBossBar(1145141919);
 ```

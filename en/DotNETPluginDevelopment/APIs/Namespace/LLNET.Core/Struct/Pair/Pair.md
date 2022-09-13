@@ -9,11 +9,11 @@
 <br>
 
 C#
-```csharp
+```cs
 public struct Pair<TKey,TValue>
 ```
 C++
-```csharp
+```cs
 generic<typename TKey, typename TValue> 
     public value class Pair
 ```

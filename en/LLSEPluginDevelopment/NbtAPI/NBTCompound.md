@@ -13,7 +13,7 @@ See [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [NbtComp
 
 #### Create a New NBT Tag Object
 
-[JS]  `new NbtCompound([data])`  
+[JavaScript]  `new NbtCompound([data])`  
 [Lua] `NbtCompound([data])`
 
 - Parameter: 
@@ -24,7 +24,7 @@ See [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [NbtComp
   - If the creation fails, an exception will be thrown.
 
 [JavaScript]
-```javascript
+```js
 var nbt = new NbtCompound({
         "name1": new NbtInt(3),
         "name2": new NbtString("test"),

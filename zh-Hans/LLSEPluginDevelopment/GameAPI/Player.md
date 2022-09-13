@@ -124,8 +124,8 @@
 - 返回值类型：`Boolean`  
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var open = pl.isOP();
     ```
@@ -148,8 +148,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.kick();
     ```
@@ -185,8 +185,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     //对于一个玩家对象pl
     pl.tell("Welcome back ~ ", 5);
     ```
@@ -220,8 +220,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     mc.broadcast("Hello everyone ~ ");
     ```
@@ -248,8 +248,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.sendToast("Hello", "everyone ~");
     ```
@@ -270,8 +270,8 @@
 - 返回值类型： `Boolean`   
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.runcmd("tp ~ ~50 ~");
     ```
@@ -292,8 +292,8 @@
 - 返回值类型： `Boolean`   
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.talkAs("Hello everyone ~ ");
     ```
@@ -326,8 +326,8 @@
 - 返回值类型： `Boolean`   
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.talkAs(anotherpl, "Hello ~ ");
     ```
@@ -349,8 +349,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     //对于一个玩家对象pl
     pl.teleport(pos);
     ```
@@ -367,8 +367,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.kill();
     ```
@@ -391,8 +391,8 @@
 注意，此处造成的伤害为真实伤害，无法被盔甲等保护装备减免
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.hurt(20);
     ```
@@ -415,8 +415,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.setFire(20,true);
     ```
@@ -447,8 +447,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.rename("Steve");
     ```
@@ -466,8 +466,8 @@
 - 返回值类型：`Block`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var bl = pl.getBlockStandingOn();
     ```
@@ -488,8 +488,8 @@
 关于设备信息对象的其他信息请参考 [设备信息对象 API](LLSEPluginDevelopment/GameAPI/Device.md)
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var dv = pl.getDevice();
     ```
@@ -509,8 +509,8 @@
 此处获取的物品对象为引用。也就是说，修改此处返回的物品对象，或使用其API，就相当于直接操作玩家主手中对应的物品
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var it = pl.getHand();
     ```
@@ -530,8 +530,8 @@
 此处获取的物品对象为引用。也就是说，修改此处返回的物品对象，或使用其API，就相当于直接操作玩家副手中对应的物品
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var it = pl.getOffHand();
     ```
@@ -551,8 +551,8 @@
 关于容器对象的更多使用，请参考 [容器对象 API文档](LLSEPluginDevelopment/GameAPI/Container.md)
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var ct = pl.getInventory();
     ```
@@ -572,8 +572,8 @@
 关于容器对象的更多使用，请参考 [容器对象 API文档](LLSEPluginDevelopment/GameAPI/Container.md)
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var ct = pl.getArmor();
     ```
@@ -593,8 +593,8 @@
 关于容器对象的更多使用，请参考 [容器对象 API文档](LLSEPluginDevelopment/GameAPI/Container.md)
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var ct = pl.getEnderChest();
     ```
@@ -612,8 +612,8 @@
 - 返回值类型：`IntPos`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var pos = pl.getRespawnPosition();
     ```
@@ -635,8 +635,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     mc.setRespawnPosition(pos);
     ```
   - Lua
@@ -657,8 +657,8 @@
 如果玩家物品栏已满，将返回失败
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.giveItem(item);
     ```
@@ -682,8 +682,8 @@
 如果相等，则清除此物品
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.clearItem("minecraft:dirt");
     ```
@@ -703,8 +703,8 @@
 在修改玩家物品之后，为了促使客户端生效，需要刷新玩家所有的物品
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.refreshItems();
     ```
@@ -722,8 +722,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.refreshChunks();
     ```
@@ -753,8 +753,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.setPermLevel(0);
     ```
@@ -778,8 +778,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.setGameMode(0);
     ```
@@ -800,8 +800,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.addLevel(1);
     ```
@@ -822,8 +822,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.reduceLevel(1);
     ```
@@ -841,8 +841,8 @@
 - 返回值类型：`Integer`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var lv = pl.getLevel();
     ```
@@ -863,8 +863,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.setLevel(1);
     ```
@@ -882,8 +882,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.resetLevel();
     ```
@@ -901,8 +901,8 @@
 - 返回值类型：`Integer`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.getCurrentExperience();
     ```
@@ -923,8 +923,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.setCurrentExperience(1);
     ```
@@ -942,8 +942,8 @@
 - 返回值类型：`Integer`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var xp = pl.getTotalExperience();
     ```
@@ -964,8 +964,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.setTotalExperience(1);
     ```
@@ -986,8 +986,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.addExperience(1);
     ```
@@ -1008,8 +1008,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.reduceExperience(1);
     ```
@@ -1029,8 +1029,8 @@
 注意，此方法在计算时会忽略当前经验值
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     var ndxp = pl.getXpNeededForNextLevel();
     ```
@@ -1054,8 +1054,8 @@
 - 返回值类型：`Boolean` 
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
       // 对于一个玩家对象pl
       pl.transServer("123.45.67.89", 23333);
     ```
@@ -1073,8 +1073,8 @@
 - 返回值类型：`Boolean` 
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.crash();
     ```
@@ -1103,8 +1103,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.setSidebar("title", {
         aaaa: 3,
@@ -1130,8 +1130,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.removeSidebar();
     ```
@@ -1158,8 +1158,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.setBossBar(1145141919, "Hello ~ ", 80, 0);
     ```
@@ -1180,8 +1180,8 @@
 - 返回值类型：`Boolean`
 
 - 示例：  
-  - JS
-    ```javascript
+  - JavaScript
+    ```js
     // 对于一个玩家对象pl
     pl.removeBossBar(1145141919);
     ```
@@ -1279,7 +1279,7 @@
 
 数组中的每一项为一个键 - 值对列表对象`Object`，Attributes对象默认含有`Base` `Current` `DefaultMax` `DefaultMin` `Max` `Min` `Name` 等几种内容 。其内容形如：
 
-```javascript
+```js
 {
     Base: 0, 
     Current: 0, 
@@ -1557,7 +1557,7 @@
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#navigatetoblock)  
 返回值示例：
-```javascript
+```js
 {
     isFullPath: false,
     path: [

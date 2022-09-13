@@ -9,7 +9,7 @@
 <br>
 
 C#
-```csharp
+```cs
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
 public class CommandParameterOverloadAttribute
     :Attribute

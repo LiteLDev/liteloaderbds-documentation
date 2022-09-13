@@ -321,7 +321,7 @@ INSERT INTO table VALUES ($X, ?Y, :Z);
 
 ##### 一个样例搞懂几个重载函数
 
-```javascript
+```js
 let stmt = session.prepare("INSERT INTO table VALUSE ($a, $b, $c, $d, $e, $f, $g, $h)");
 let values = {
   c: "have you",
@@ -416,7 +416,7 @@ stmt.bind(114514, 7);  // 将会绑定到h
 
 ### 样例
 
-```javascript
+```js
 let dat = {};
 let modified = {};
 let session = null;

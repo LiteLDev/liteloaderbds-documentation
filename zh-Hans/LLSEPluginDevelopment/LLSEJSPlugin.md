@@ -27,7 +27,7 @@
 现在我们已经创建了我们的.js文件，并注册了插件，我们要做的就是创建一个事件监听器。我们通过使用`mc`来实现。
 
 
-```javascript
+```js
 mc.listen("onJoin", (player) => log(`${player.name}已经加入服务器。`));
 ```
 > 参考资料: https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/EventAPI/Listen
@@ -39,7 +39,7 @@ mc.listen("onJoin", (player) => log(`${player.name}已经加入服务器。`));
 
 例如，我们可以使用玩家对象并直接对其采取行动，以发送信息/操纵玩家。
 
-```javascript
+```js
 mc.listen("onJoin", (player) => {
     log(`${player.name}已经加入服务器。`)。
     player.sendToast('欢迎！', '感谢您游玩本服！');
@@ -48,7 +48,7 @@ mc.listen("onJoin", (player) => {
 
 我们可以引用玩家对象的属性，并使用它来执行其他动作。
 
-```javascript
+```js
 mc.listen("onJoin", (player) => {
     log(`${player.name}已经加入服务器。`)。
     player.sendToast('欢迎！', '感谢您游玩本服！');

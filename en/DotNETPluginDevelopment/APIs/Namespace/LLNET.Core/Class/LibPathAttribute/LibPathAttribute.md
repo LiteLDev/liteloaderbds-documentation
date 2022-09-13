@@ -9,7 +9,7 @@
 <br>
 
 C#
-```csharp
+```cs
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
 public class LibPathAttribute
     :Attribute
@@ -32,7 +32,7 @@ public ref class LibPathAttribute
 
 
 C#
-```csharp
+```cs
 using LLNET.Core;
 
 //示例路径

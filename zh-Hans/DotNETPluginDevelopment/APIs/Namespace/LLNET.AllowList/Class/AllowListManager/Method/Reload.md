@@ -13,7 +13,7 @@
 <br>
 
 C#
-```csharp
+```cs
 public void Reload();
 ```
 C++

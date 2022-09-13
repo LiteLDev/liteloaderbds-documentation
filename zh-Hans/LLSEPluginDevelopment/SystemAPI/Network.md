@@ -334,7 +334,7 @@
 请注意，请求监听是有优先级的。  
 如果有多个路径同时满足正则表达式，则选择先定义的路径。  
 例如：  
-```javascript
+```js
 svr.onGet('/test/123', (req, res) => {
   res.write('test');
 }).onGet('/test/(.+)', (req, res) => {
@@ -521,7 +521,7 @@ svr.onGet('/test/123', (req, res) => {
 
 ## Http API 样例
 
-```javascript
+```js
 let server = new HttpServer();
 server.onGet("/hello(.+)", (req, resp) => {
 	logger.info("http_server_test: run: onGet: Received a request from ", req.remoteAddr, 

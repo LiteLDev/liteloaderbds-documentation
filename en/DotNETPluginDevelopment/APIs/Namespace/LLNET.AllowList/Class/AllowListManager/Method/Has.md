@@ -21,7 +21,7 @@
 <br>
 
 C#
-```csharp
+```cs
 public bool Has(string name)
 ```
 C++
@@ -47,7 +47,7 @@ public:
 <br>
 
 C#
-```csharp
+```cs
 public bool Has(string name, string xuid)
 ```
 C++
@@ -75,7 +75,7 @@ public:
 <br>
 
 C#
-```csharp
+```cs
 public bool Has(string name, string xuid, out int index)
 ```
 C++

@@ -4,12 +4,12 @@
 
 - [❓ 常见问题](/FAQ.md)
 
-- [⛳ 原生插件开发](https://cpp.docs.litebds.com/zh-Hans)
+- [⛳ C++插件开发](https://cpp.docs.litebds.com/zh-Hans)
 
 - 🎯 脚本插件开发
     - [⛳ 新手入门（必读）](LLSEPluginDevelopment/README.md)
     - [📋 多种开发语言支持](LLSEPluginDevelopment/LanguageSupport.md)
-    - [📜 使用JavaScript创造你的首个插件](/LLSEPluginDevelopment/LLSEJSPlugin.md)
+    - [📜 使用JavaScript创造你的首个脚本插件](/LLSEPluginDevelopment/LLSEJSPlugin.md)
     
     - [💼 通用脚本接口 - 常用](LLSEPluginDevelopment/ScriptAPI/ScriptHelp.md)
 
@@ -67,7 +67,7 @@
         - [📡 系统调用](LLSEPluginDevelopment/SystemAPI/SystemCall.md)
         - [📜 获取系统信息](LLSEPluginDevelopment/SystemAPI/SystemInfo.md)
         
-    - Native调用
+    - 本机调用
         - [📚 概述](LLSEPluginDevelopment/NativeAPI/Summary.md)
         - [📲 指针类型NativePointer](LLSEPluginDevelopment/NativeAPI/NativePointer.md)
         - [🎚️ 函数类型NativeFunction](LLSEPluginDevelopment/NativeAPI/NativeFunction.md)

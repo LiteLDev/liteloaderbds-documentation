@@ -20,7 +20,7 @@
 <br>
 
 C#
-```csharp
+```cs
 public AllowListManager Remove(string name)
 ```
 C++
@@ -46,7 +46,7 @@ public:
 <br>
 
 C#
-```csharp
+```cs
 public AllowListManager Remove(string name, string xuid)
 ```
 C++

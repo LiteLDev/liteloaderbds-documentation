@@ -30,7 +30,7 @@ Please make your choice as needed.
 
 #### Create/Open a JSON Configuration File
 
-[JS] `new JsonConfigFile(path[,default])`  
+[JavaScript] `new JsonConfigFile(path[,default])`  
 [Lua] `JsonConfigFile(path[,default])`
 
 - Parameters: 
@@ -120,7 +120,7 @@ If you don't need this configuration item, in order to avoid confusion when othe
 
 #### Create/Open an Ini Profile 
 
-[JS] `new IniConfigFile(path[,default])`  
+[JavaScript] `new IniConfigFile(path[,default])`  
 [Lua] `IniConfigFile(path[,default])`
 
 - Parameters: 

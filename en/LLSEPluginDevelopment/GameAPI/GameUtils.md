@@ -48,8 +48,8 @@ Note: The interface here will only have an effect when passed to the BDS and dis
 
 The method used by the above code is a connection string, similar to:
 
-[JS]
-```javascript
+[JavaScript]
+```js
 mc.broadcast(Format.Red + Format.Bold + "Red & Bold " + Format.DarkGreen + Format.Underline + "DarkGreen & Underline" + Format.Clear + "Clear");
 ```
 [Lua]

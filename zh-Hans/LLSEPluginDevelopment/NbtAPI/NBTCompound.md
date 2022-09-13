@@ -24,7 +24,7 @@
   - 如果创建失败，将抛出异常
 
 [JavaScript]
-```javascript
+```js
 var nbt = new NbtCompound({
         "name1": new NbtInt(3),
         "name2": new NbtString("test"),

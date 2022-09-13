@@ -9,7 +9,7 @@
 <br>
 
 C#
-```csharp
+```cs
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
 public class PluginMainAttribute
     :Attribute

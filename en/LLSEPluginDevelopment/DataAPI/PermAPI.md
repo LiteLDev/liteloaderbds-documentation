@@ -18,7 +18,7 @@ You can send command `/perm view role admin` to see information of the `admin` r
 ### Create a role
 
 By constructor:  
-[JS]  `new Role(name[,displayName])`  
+[JavaScript]  `new Role(name[,displayName])`  
 [Lua] `Role(name[,displayName])`
 By static method:  
 `Permission.createRole(name[,displayName])`
@@ -277,7 +277,7 @@ The `permissions` property is an array of objects, each object contains the foll
 - Note: The permission extra data will be ignored. It will return `true` if the `enabled` field is true.
 
 - 💡 You can use prototype mechanism of JavaScript or [ScriptX APIs in lua](https://github.com/Tencent/ScriptX/blob/main/docs/en/Lua.md)
-```javascript
+```js
 LLSE_Player.prototype.hasPermission = function(permName) {
   return Permission.checkPermission(this.xuid, permName);
 }
@@ -340,7 +340,7 @@ end
 
 ## Example
 
-```javascript
+```js
 LLSE_Player.prototype.hasPermission = function (permName) {
     return Permission.checkPermission(this.xuid, permName);
 }

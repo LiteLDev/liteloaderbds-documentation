@@ -9,7 +9,7 @@
 <br>
 
 C#
-```csharp
+```cs
 public abstract class HookAPI
 ```
 C++

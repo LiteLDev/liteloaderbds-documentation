@@ -18,7 +18,7 @@ Before using the database, you need to give a database path, the interface will 
 A leveldb database is composed of multiple files, so you need to pass in the path of a folder where the database files will be stored.  
 If this directory already contains a database, it will be opened, otherwise a new one will be created.
 
-[JS] `new KVDatabase(dir)`  
+[JavaScript] `new KVDatabase(dir)`  
 [Lua] `KVDatabase(dir)`
 
 - Parameters: 

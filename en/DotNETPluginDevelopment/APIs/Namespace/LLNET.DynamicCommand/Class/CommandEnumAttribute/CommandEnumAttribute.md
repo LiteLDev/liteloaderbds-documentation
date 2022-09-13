@@ -9,7 +9,7 @@
 <br>
 
 C#
-```csharp
+```cs
 [AttributeUsage(AttributeTargets.Enum)]
 public class CommandEnumAttribute
     :Attribute

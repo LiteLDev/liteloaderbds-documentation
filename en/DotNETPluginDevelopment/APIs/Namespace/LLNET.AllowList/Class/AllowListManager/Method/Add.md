@@ -21,7 +21,7 @@
 <br>
 
 C#
-```csharp
+```cs
 public AllowListManager Add(string name)
 ```
 C++
@@ -47,7 +47,7 @@ public:
 <br>
 
 C#
-```csharp
+```cs
 public AllowListManager Add(string name, string xuid)
 ```
 C++
@@ -75,7 +75,7 @@ public:
 <br>
 
 C#
-```csharp
+```cs
 public bool Add(string name, string xuid, bool ignore)
 ```
 C++

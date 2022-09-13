@@ -13,7 +13,7 @@
 - 返回值类型： `Boolean`
 
 [JavaScript]
-```javascript
+```js
 mc.runcmd("say Hello!");
 ```
 [Lua]
@@ -47,7 +47,7 @@ mc.runcmd("say Hello!")
 > runcmdEx 与普通 runcmd 实现区别非常大，在于 Ex 版本拥有**隐藏输出**的机制，执行结果不会输出至控制台，因此如果有需要，要手动用 log 函数将结果输出
 
 [JavaScript]
-```javascript
+```js
 var result = mc.runcmdEx("say Hello!");
 log(result.output);
 ```
@@ -305,7 +305,7 @@ log(result.output);
 ### 命令注册样例
 
 [JavaScript]
-```javascript
+```js
 mc.listen("onServerStarted", () => {
     const cmd = mc.newCommand("manager", "Command Description", PermType.GameMasters);
     cmd.setAlias("mgr");
@@ -366,7 +366,7 @@ mc.listen("onServerStarted", () => {
   如注册了自定义命令 `land set`，当执行 `/land set abc 2333` 时，args的值将为 `[ "abc","2333" ]`
 
 [JavaScript]
-```javascript
+```js
 mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
     pl.tell("Flying enabled.");
     //......
@@ -397,7 +397,7 @@ mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
   如注册了自定义命令 `land set`，当执行 `/land set abc 2333` 时，args的值将为 `['abc','2333']`
 
 [JavaScript]
-```javascript
+```js
 mc.regConsoleCmd("backup","Start the backup",function(args){
     log("ID of this backup is:",args[0]);
     //......
