@@ -197,15 +197,26 @@
 
 <br>
 
-#### 使指定实体着火
+#### Set the Specified Entity on Fire
 
-`en.setOnFire(time)`
+`en.setFire(time, isEffect)`
 
-- 参数：
+- Parameters: 
   - time : `Integer`  
-    着火时长，单位秒
-- 返回值：是否成功着火
-- 返回值类型：`Boolean`
+    Fire time, in seconds.
+  - isEffect : `Boolean`  
+    Will there be a fire effect?
+- Return value: Whether the fire was set.
+- Return value type:  `Boolean`
+
+<br>
+
+#### Put Out The Entity
+
+`en.stopFire()`
+
+- Return value: Has been extinguished.
+- Return value type: `Boolean`
 
 <br>
 
