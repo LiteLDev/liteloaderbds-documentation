@@ -13,8 +13,8 @@
     |||
     |-|-|
     |`Has(String)`|根据玩家名称查明玩家是否存在。|
-    |`Has(String, String)`|根据玩家名称、Xuid查明玩家是否存在。|
-    |`Has(String, String, Int32)`|根据玩家名称、Xuid查明玩家是否存在。|
+    |`Has(String, String)`|根据玩家名称、XUID查明玩家是否存在。|
+    |`Has(String, String, Int32)`|根据玩家名称、XUID查明玩家是否存在。|
 
 ## Has(String)
 
@@ -60,7 +60,7 @@ public:
   - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家名称
   - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
-    要查找的玩家xuid
+    要查找的玩家XUID
 
 <br>
 
@@ -88,7 +88,7 @@ public:
   - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家名称
   - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
-    要查找的玩家xuid
+    要查找的玩家XUID
   - `index` : [Int32](https://docs.microsoft.com/zh-cn/DotNET/api/system.int32?view=net-6.0)  
     如果索引存在，则将此值设置为数组索引(?)
 

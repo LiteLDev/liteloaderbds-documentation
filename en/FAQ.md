@@ -13,7 +13,7 @@ This is wine's problem, we can't provide any solution, if you are using docker c
 
 ## LiteLoaderBDS version support for Bedrock Dedicated Server
 BDS's minor version updates are perfectly compatible  
-For example: 2.1.2 is developed based on BDS 1.18.11.01, and its protocol version is 486. As long as the protocol version of subsequent versions of BDS (for example: 1.18.12.01) is still 486, LL can perfectly support it.  
+For example: 2.1.2 is developed based on BDS 1.18.11.01, and its protocol version is 486. As long as the protocol version of subsequent versions of BDS (for example: 1.18.12.01) is still 486, LiteLoaderBDS can perfectly support it.  
 We usually call a version update with no change in the protocol version as a minor version update (for example: 1.18.11.01 to 1.18.12.01), and if the protocol version is updated (such as 1.18.2 to 1.18.11.01), we call it a major version update  
 The game version and protocol version will be showed when server started, you can also type `version` command to query it
 

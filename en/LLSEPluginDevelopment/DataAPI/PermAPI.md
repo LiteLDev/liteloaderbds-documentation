@@ -18,7 +18,7 @@ You can send command `/perm view role admin` to see information of the `admin` r
 ### Create a role
 
 By constructor:  
-[JS]  `new Role(name[,displayName])`  
+[JavaScript]  `new Role(name[,displayName])`  
 [Lua] `Role(name[,displayName])`
 By static method:  
 `Permission.createRole(name[,displayName])`
@@ -77,7 +77,7 @@ By static method:
 `displayName`    | `String`        | The role display name
 `priority`       | `Number`        | The role priority
 `permissions`    | `Array<Object>` | The role permissions
-`members`        | `Array<String>` | The role members(xuid)
+`members`        | `Array<String>` | The role members(XUID)
 
 The `permissions` property is an array of objects, each object contains the following properties:
 
@@ -103,7 +103,7 @@ The `permissions` property is an array of objects, each object contains the foll
 
 - Parameters:
   - xuid: `String`  
-    The member(player) xuid
+    The member(player) XUID
 - Return Value: `Boolean` Whether the role has the member
 - Throw when:
   - Invalid arguments.
@@ -117,7 +117,7 @@ The `permissions` property is an array of objects, each object contains the foll
 
 - Parameters:
   - xuid: `String`  
-    The member(player) xuid
+    The member(player) XUID
 - Throw when:
   - Invalid arguments.
   - The role reference is expired.
@@ -131,7 +131,7 @@ The `permissions` property is an array of objects, each object contains the foll
 
 - Parameters:
   - xuid: `String`  
-    The member(player) xuid
+    The member(player) XUID
 - Throw when:
   - Invalid arguments.
   - The role reference is expired.
@@ -266,7 +266,7 @@ The `permissions` property is an array of objects, each object contains the foll
 
 - Parameters:
   - xuid: `String`  
-    The player xuid
+    The player XUID
   - permName: `String`  
     The permission name
 - Return Value: `Boolean` Whether the player has the permission
@@ -314,7 +314,7 @@ end
 
 - Parameters:
   - xuid: `String`  
-    The player xuid
+    The player XUID
 - Return Value: `Array<Role>` The player's roles
 
 <br/>
@@ -325,7 +325,7 @@ end
 
 - Parameters:
   - xuid: `String`  
-    The player xuid
+    The player XUID
 - Return Value: `Array<Object>` The player's permissions
 
 <br/>

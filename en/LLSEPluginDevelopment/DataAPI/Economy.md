@@ -6,7 +6,7 @@ In order to solve various problems of traditional use of the scoreboard economic
 In addition to the capabilities of the traditional economic system, LLMoney also has additional capabilities such as querying the history of changes in the amount and operating the economy of offline players.  
 LiteLoader is installed with the LLMoney plugin, so you can use this interface directly without additional installation. 
 
-Note: In order to operate the wallets of offline players, the economic system interface uniformly uses Xuid as the player's uniform identifier, rather than the common identifiers used elsewhere. For a player pointer `pl`, you can use `pl.xuid` to get his xuid string and pass it in as a parameter. 
+Note: In order to operate the wallets of offline players, the economic system interface uniformly uses XUID as the player's uniform identifier, rather than the common identifiers used elsewhere. For a player pointer `pl`, you can use `pl.xuid` to get his XUID string and pass it in as a parameter. 
 
 ### Set the Player’s Deposit Amount
 
@@ -14,7 +14,7 @@ Note: In order to operate the wallets of offline players, the economic system in
 
 - Parameters: 
   - xuid : `String`  
-    The Xuid identifier of the player.
+    The XUID identifier of the player.
   - money : `Integer`  
     Amount of money being set.  
 - Return value: Whether the setting is successful.
@@ -28,7 +28,7 @@ Note: In order to operate the wallets of offline players, the economic system in
 
 - Parameter: 
   - xuid : `String`  
-    The Xuid identifier of the player to read.
+    The XUID identifier of the player to read.
 - Return value: Player's bank value.
 - Return value type: `Integer`
 
@@ -40,7 +40,7 @@ Note: In order to operate the wallets of offline players, the economic system in
 
 - Parameters: 
   - xuid : `String`  
-    The Xuid identifier of the player.
+    The XUID identifier of the player.
   - money : `Integer`  
     The amount of money to add to the player's bank.  
 - Return value: Whether the setting is successful.
@@ -54,7 +54,7 @@ Note: In order to operate the wallets of offline players, the economic system in
 
 - Parameters: 
   - xuid : `String`  
-    The Xuid identifier of the player.
+    The XUID identifier of the player.
   - money : `Integer`  
     The amount of money to take from the player.  
 - Return value: Whether the setting is successful.
@@ -68,11 +68,11 @@ Note: In order to operate the wallets of offline players, the economic system in
 
 - Parameters: 
   - xuid1 : `String`  
-    The Xuid identifier of the paying player.
+    The XUID identifier of the paying player.
   - money : `Integer`  
     The amount of money being transferred.  
   - xuid2 : `String`  
-    The Xuid identifier of the player who will receive the payment.
+    The XUID identifier of the player who will receive the payment.
   - note : `String`  
     (Optional) Add some text to this transfer.
 - Return value: Whether the transfer is successful.
@@ -86,7 +86,7 @@ Note: In order to operate the wallets of offline players, the economic system in
 
 - Parameters: 
   - xuid : `String`  
-    The Xuid identifier of the player.
+    The XUID identifier of the player.
   - time : `Integer`  
     Query all records within the last `time` seconds.
 - Return value: An array of query result objects.
@@ -96,8 +96,8 @@ Where the result is an array of record objects. for each `record` object record,
 
 | Key             | Meaning of Value         | Data Type  |
 | -------------- | -------------------------- | --------- |
-| `record.from`  | Xuid of money sender   | `String`  |
-| `record.to`    | Xuid of money receiver   | `String`  |
+| `record.from`  | XUID of money sender   | `String`  |
+| `record.to`    | XUID of money receiver   | `String`  |
 | `record.money` | Amount of money             | `Integer` |
 | `record.time`  | Time when this transaction occurred | `String`  |
 | `record.note`  | Additional notes for this transaction.       | `String`  |

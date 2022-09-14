@@ -63,7 +63,7 @@ Possible return values are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NBT.Long
 Hint: If this NBT object stores the `List` or `Compoundtype`, they will expand recursively to `Array` or `Object`.
 If this NBT object stores the `ByteArray` Type, the output byte string will be base64 encoded before output.
 
-> The string output by the above function conforms to the Json standard format, but cannot be deserialized.
+> The string output by the above function conforms to the JSON standard format, but cannot be deserialized.
 > If there is a need for deserialization, please use the **SNBT** interface provided by the NBT tag class.
 
 <br>

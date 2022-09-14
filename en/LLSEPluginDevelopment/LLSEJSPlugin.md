@@ -1,6 +1,6 @@
-# LLSE - Using Javascript to Create Your First Plugin
+# LLSE - Using JavaScript to Create Your First Plugin
 
-> This guide serves to demonstrate the very simple and straight forward process to creating your first plugin - as well as some best practices when thinking about what to make and how to do it. Experience using Javascript previously is recommended, but not required. Javascript is a very beginner friendly language, so don't get overwhelmed!
+> This guide serves to demonstrate the very simple and straight forward process to creating your first plugin - as well as some best practices when thinking about what to make and how to do it. Experience using JavaScript previously is recommended, but not required. JavaScript is a very beginner friendly language, so don't get overwhelmed!
 
 ## Prerequisites
 

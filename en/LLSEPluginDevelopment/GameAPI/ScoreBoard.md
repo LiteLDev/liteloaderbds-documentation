@@ -153,12 +153,9 @@ The following APIs provide more APIs for operating the scoreboard system:
 
 Before using, you must ensure that the corresponding scoring item already exists.
 
-```Javascript
-[JS]
+```js
 //For a player object pl: 
 log("You have money:",pl.getScore("money"));
-[Lua]
-
 ```
 
 #### Modify the Score of a Player’s Scoring Item (Convenience Function)
@@ -177,14 +174,11 @@ Reduce score: `pl.reduceScore(name,value)`
 
 Before using, you must ensure that the corresponding scoring item already exists.
 
-```Javascript
-[JS]
+```js
 //For a player object pl: 
 pl.setScore("money",10000);
 pl.addScore("money",100);
 pl.reduceScore("money",50);
-[Lua]
-
 ```
 
 #### Player Stops Tracking Scoring Items (Convenience Function) 
@@ -199,12 +193,9 @@ pl.reduceScore("money",50);
 
 Before using, you must ensure that the corresponding scoring item already exists.
 
-```Javascript
-[JS]
+```js
 //For a player object pl: 
 pl.deleteScore("what");
-[Lua]
-
 ```
 
 #### Remove an Existing Scoring Item

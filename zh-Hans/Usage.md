@@ -6,9 +6,9 @@
 
 我们推荐在以下平台安装：
 
-* Windows 10 21H2或更新版本
-* Windows 11
 * Windows Server 2019或更新版本
+* Windows 11
+* Windows 10 21H2或更新版本
 
 请跟随以下步骤安装:
 
@@ -43,14 +43,14 @@ docker create --name <容器名称> -v <安装目录>:/root/bedrock-server -p <�
 你应该根据你的环境调整`<安装目录>`和`<端口>`。
 
 * `<容器名称>`是容器的名称。你可以选择任何你喜欢的符合Docker要求的名字。如果你彳亍不定，`llbds`如何？
-* `<安装目录>`是放置BDS服务器和数据的目录。把它放在一个每个人都能读和写的目录中是个好主意。
+* `<安装目录>`是放置BDS服务器和数据的目录。
 * `<port>`是玩家连接到服务器时填写的端口。
 
 第一次下载BDS和LiteLoaderBDS时，启动需要更多时间。请耐心等待。
 
 一些常见的命令显示如下：
 
-* 启动服务器：`docker start <容器名称>`。
+* 启动服务器：`docker start <容器名称>`
 * 关闭服务器：`docker stop <容器名称>`
 * 连接到控制台：`docker attach <容器名称>`
 * 脱离控制台：按`Ctrl`+`P`+`Q`。你不应该按`Ctrl`+`C`，否则服务器将立即终止。
@@ -59,11 +59,13 @@ docker create --name <容器名称> -v <安装目录>:/root/bedrock-server -p <�
 
 ## 🎯 添加插件
 
-有两种类型的插件：LL插件和LLSE插件。
+有2种类型的插件：原生插件和脚本插件<!--和.NET插件-->。
 
-LL插件是经过编译的本地插件，用C++、Go、C#或Rust编写，具有更好的性能，但在服务器启动后不能被加载、卸载或重新加载。
+原生插件是经过编译的本地插件，用C++、Go或Rust等语言编写，具有更好的性能，但目前在服务器启动后不能被加载、卸载或重新加载。
 
-LLSE插件是用JavaScript、Python或Lua编写的脚本插件，可以灵活地管理，具有更好的安全性，但性能较差。
+脚本插件由JavaScript、Python或Lua编写，可以灵活地管理，具有更好的安全性，但性能较差。
+
+<!--.NET插件是运行在.NET平台（CLR）下，由CLS兼容的语言（如C#、Visual Basic.NET和F#等）编写的插件。-->
 
 > [!WARNING]
 > 为了保证大部分插件能够正常运行，请在 `server.properties` 中将 `online-mode` 设为 `true` ，并将 `server-authoritative-movement` 设为 `server-auth` 或 `server-auth-with-rewind` 。
@@ -72,14 +74,14 @@ LLSE插件是用JavaScript、Python或Lua编写的脚本插件，可以灵活地
 
 你可以在这些网站上寻找插件：
 
-* [LiteLoader Forum](https://forum.litebds.com/)
-* [MineBBS (LL插件)](https://www.minebbs.net/resources/?prefix_id=59)
-* [MineBBS (LLSE插件)](https://www.minebbs.net/resources/?prefix_id=67)
+* [LiteLoaderBDS Forum](https://forum.litebds.com/)
+* [MineBBS (原生插件)](https://www.minebbs.net/resources/?prefix_id=59)
+* [MineBBS (脚本插件)](https://www.minebbs.net/resources/?prefix_id=67)
 
 ### 安装插件
 
 1. 如果你有一个压缩文件，请解压缩。
-2. 检查插件的内容。LiteLoaderBDS插件的文件名以`.dll`、`.js` 或 `.lua` 结尾。
+2. 检查插件的内容。LiteLoaderBDS插件的文件名通常以`.dll`、`.js`、`.lua`或`.llplugin`结尾。
 3. 将文件放在`plugins`目录中。一些插件可能与其他文件一起分发，你应该同时把它们放在`plugins`目录中。
 
 ## 🔌 管理插件
@@ -87,10 +89,10 @@ LLSE插件是用JavaScript、Python或Lua编写的脚本插件，可以灵活地
 你可以用下面列出的命令来管理这些插件：
 
 * `ll list`：列出插件
-* `ll load plugins/xxxx.js`：加载一个LLSE插件
-* `ll unload plugin/xxxx.js`：卸载一个LLSE插件
-* `ll reload plugin/xxxx.js`：重新加载一个LLSE插件
-* `ll reload`：重新加载所有LLSE插件
+* `ll load plugins/xxx.js`：加载一个脚本插件
+* `ll unload plugin/xxx.js`：卸载一个脚本插件
+* `ll reload plugin/xxx.js`：重新加载一个脚本插件
+* `ll reload`：重新加载所有脚本插件
 * `ll version`：打印LiteLoaderBDS版本
 * `ll upgrade`：检查LiteLoaderBDS的更新
 

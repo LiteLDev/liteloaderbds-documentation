@@ -88,7 +88,7 @@ namespace CustomNameSpace;
 public class CustomPlugin: IPluginInitializer
 {
     //提供插件描述
-    public string Introduction => "Example plugin for Liteloader.NET";
+    public string Introduction => "Example plugin for LiteLoader.NET";
 
     //提供插件额外信息
     public Dictionary<string, string> MetaData => new()

@@ -41,7 +41,7 @@ The above architecture is implemented into the actual project, and the project d
 │   ├───engine			# Script Engine Library Directory
 │   ├───include			# Header file include directory
 │   ├───lib				# Dependency library directory
-│   ├───LiteLoader.Js	# JS Project Directory (No Source Code)
+│   ├───LiteLoader.Js	# JavaScript Project Directory (No Source Code)
 │   ├───LiteLoader.Lua	# Lua Project Directory (No Source Code)
 │   ├───Release			# DLL Generation Directory
 │   ├───src				# [Core]Source Directory

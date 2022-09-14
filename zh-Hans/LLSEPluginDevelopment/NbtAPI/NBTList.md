@@ -13,7 +13,7 @@
 
 #### 创建新的NBT列表对象
 
-[Js]  `new NbtList([data])`  
+[JavaScript]  `new NbtList([data])`  
 [Lua] `NbtList([data])`
 
 - 参数：
@@ -155,7 +155,7 @@
 - 返回值：对应的数组 / 列表
 - 返回值类型：`Array`
 
-将List的内容转换为LLSE数组 / 列表，把数据项都转换为LLSE数据类型储存于数组 / 列表的对应下标中，方便读取和处理  
+将List的内容转换为脚本引擎数组 / 列表，把数据项都转换为脚本引擎数据类型储存于数组 / 列表的对应下标中，方便读取和处理  
 如果List某一项储存的是`List`或者`Compound`类型的 NBT，将在对应位置递归展开为`Array`或`Object`
 
 <br>

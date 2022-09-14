@@ -26,11 +26,11 @@ Please make your choice as needed.
 
 <br>
 
-### 📰 Json Format Configuration File
+### 📰 JSON Format Configuration File
 
-#### Create/Open a Json Configuration File
+#### Create/Open a JSON Configuration File
 
-[JS] `new JsonConfigFile(path[,default])`  
+[JavaScript] `new JsonConfigFile(path[,default])`  
 [Lua] `JsonConfigFile(path[,default])`
 
 - Parameters: 
@@ -49,7 +49,7 @@ We recommend that you create a directory named `BDS_Root_Directory/plugins/plugi
 
 <br>
 
-For a Json profile object `conf`, you have these read and write interfaces available.
+For a JSON profile object `conf`, you have these read and write interfaces available.
 
 #### Initialize Configuration Items (Convenience Function
 
@@ -120,7 +120,7 @@ If you don't need this configuration item, in order to avoid confusion when othe
 
 #### Create/Open an Ini Profile 
 
-[JS] `new IniConfigFile(path[,default])`  
+[JavaScript] `new IniConfigFile(path[,default])`  
 [Lua] `IniConfigFile(path[,default])`
 
 - Parameters: 

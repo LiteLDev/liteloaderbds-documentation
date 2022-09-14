@@ -65,7 +65,7 @@ In LLSE, "file objects" are used to manipulate and read and write to a particula
 
 ### Create a New File Object
 
-[JS] `new File(path,mode[,isBinary])`  
+[JavaScript] `new File(path,mode[,isBinary])`  
 [Lua] `File(path,mode[,isBinary])`
 
 - Parameter: 

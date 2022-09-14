@@ -1,6 +1,6 @@
 ## 📦 方块对象 API
 
-在LLSE中，使用「方块对象」来操作和获取某一类方块的相关信息。
+在脚本引擎中，使用「方块对象」来操作和获取某一类方块的相关信息。
 
 ### 获取一个方块对象
 
@@ -24,7 +24,7 @@
   - 如返回值为 `Null` 则表示获取方块失败
 
 > 注意：不要**长期保存**一个方块对象  
-> 当方块对象对应的方块被销毁时，对应的方块对象将变得无效。因此，如果有长期操作某个方块的需要，请通过上述途径获取实时的方块对象
+> 当方块对象对应的方块被销毁时，对应的方块对象将同时释放。因此，如果有长期操作某个方块的需要，请通过上述途径获取实时的方块对象
 
 <br>
 
@@ -81,7 +81,7 @@
 - 返回值类型：`Boolean`
 
 关于NBT对象的更多使用，请参考 [NBT接口文档](LLSEPluginDevelopment/NbtAPI/NBT.md)
-注意：慎重使用此api，请考虑使用 mc.setBlock() 代替
+注意：慎重使用此api，请考虑使用 `mc.setBlock()` 代替
 
 <br>
 
@@ -89,10 +89,10 @@
 
 `bl.getBlockState()`
 
-- 返回值：方块的BlockState
+- 返回值：方块的`BlockState`
 - 返回值类型：`Object`
 
-方便函数，协助解析方块BlockState并转换为`Object`，方便读取与解析  
+方便函数，协助解析方块`BlockState`并转换为`Object`，方便读取与解析  
 等价于脚本执行`block.getNbt().getTag("states").toObject()`
 
 <br>
@@ -158,7 +158,7 @@
 `mc.setBlock(x,y,z,dimid,block,tiledata)`
 
 - 参数：
-  - pos : `IntPos `  
+  - pos : `IntPos`  
     目标方块位置（或者使用x, y, z, dimid来确定方块位置）
   - block : `Block` 、`String` 或 `NBTCompound`
     要设置成的方块对象、方块标准类型名（如`minecraft:stone`）或方块NBT数据
@@ -167,7 +167,7 @@
 - 返回值：是否成功设置
 - 返回值类型：`Boolean`
 
-通过此函数，将一个坐标对应的方块设置成另一个，类似于命令 /setblock
+通过此函数，将一个坐标对应的方块设置成另一个，类似于命令 `/setblock`
 
 <br>
 
@@ -177,7 +177,7 @@
 `mc.spawnParticle(x,y,z,dimid,type)`
 
 - 参数：
-  - pos : `IntPos `/ `FloatPos`  
+  - pos : `IntPos` / `FloatPos`  
     目标生成位置（或者使用x, y, z, dimid来确定方块位置）
   - type : `String`  
     要生成的粒子效果名称（可查阅wiki得知）

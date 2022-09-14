@@ -52,7 +52,7 @@ Every packet object contains some member functions (member methods) that can be 
 
 ### Create a binary stream object
 
-[Js] ```new BinaryStream()```
+[JavaScript] ```new BinaryStream()```
 
 [Lua] ```BinaryStream()```
 
@@ -123,7 +123,7 @@ Every binary stream object contains some member functions (member methods) that 
 ### Dome Code
 
 Send TextPacket packets to a player
-```JavaScript
+```js
 mc.listen("onChat",function(pl,msg){
     const bs = new BinaryStream()
     var text = "LLSE Packet Test"

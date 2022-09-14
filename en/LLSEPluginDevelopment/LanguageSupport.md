@@ -9,32 +9,32 @@ Currently, LLSE supports writing plugins in the following languages：
 
 | Language backend | Remarks                                                      |
 | ---------------- | ------------------------------------------------------------ |
-| `JavaScript`     | Using QuickJs engine, with support for ES Modules            |
+| `JavaScript`     | Using QuickJS engine, with support for ES Modules            |
 | `Lua`            | Using CLua engine                                            |
-| `NodeJs`         | Modify NodeJs to work with embedding, with support for npm package management |
+| `Node.js`         | Modify Node.js to work with embedding, with support for npm package management |
 | `Python`（WIP）  | Using CPython engine, with support for pip package management |
 
 > [!INFO]
 >
-> If you need to write plugins in compiled languages such as C++, GoLang, .NET, etc., please go to [Home](../zh-Hans) for other language documentation
+> If you need to write plugins in compiled languages such as C++, Go, .NET, etc., please go to [Home](../zh-Hans) for other language documentation
 
 ## JavaScript language support description
 
-- Support for simple Javascript plugins using the QuickJs engine, a lightweight engine with a low resource footprint
-- The current version of QuickJs supports up to ES2020, and natively supports ES Modules which allows developers to easily manage projects.
-- Package management is not yet supported. If needed, you can use NodeJs for plugin development and use npm for package management
+- Support for simple JavaScript plugins using the QuickJS engine, a lightweight engine with a low resource footprint
+- The current version of QuickJS supports up to ES2020, and natively supports ES Modules which allows developers to easily manage projects.
+- Package management is not yet supported. If needed, you can use Node.js for plugin development and use npm for package management
 
 ## Lua language support description
 
 - Use the CLua engine, support require
 - Since the Rocks package management mechanism requires the introduction of a compiler, the implementation is not available at this time. If you need to depend on extensions, you can compile them manually and introduce them into your project (e.g. SQLite)
 
-## NodeJs support description
+## Node.js support description
 
-- LLSE makes it possible to work in embedded mode by implementing the NodeJs starter code itself, and isolates the execution environment for different plugins
+- LLSE makes it possible to work in embedded mode by implementing the Node.js starter code itself, and isolates the execution environment for different plugins
 - Created interface to implement programmic support for npm
 
-##### ⭐ **NodeJs Plugin Packaging & Deployment**
+##### ⭐ **Node.js Plugin Packaging & Deployment**
 
 - After the plugin is written, please package **package.json** and all the plugin source code into a zip archive and **change the file name suffix to .llplugin**
 - The **node_modules** directory should not be packed in the archive

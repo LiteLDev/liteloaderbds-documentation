@@ -8,7 +8,7 @@ Here are the economic change events related to the LLSE built-in economic system
   `function(xuid,money)`
 - Parameters: 
   - xuid : `String`  
-    The Xuid of the player whose amount of money changed.
+    The XUID of the player whose amount of money changed.
   - money : `Integer`  
     The amount of money being given.
 - Intercept events: Function returns `false`
@@ -21,7 +21,7 @@ Here are the economic change events related to the LLSE built-in economic system
   `function(xuid,money)`
 - Parameters: 
   - xuid : `String`  
-    The Xuid of the player whose amount of money changed.
+    The XUID of the player whose amount of money changed.
   - money : `Integer`  
     The amount of money being given.
 
@@ -33,7 +33,7 @@ Here are the economic change events related to the LLSE built-in economic system
   `function(xuid,money)`
 - Parameters: 
   - xuid : `String`  
-    The Xuid of the player whose amount of money changed.
+    The XUID of the player whose amount of money changed.
   - money : `Integer`  
     The amount of money being taken.
 - Intercept events: Function returns `false`
@@ -46,7 +46,7 @@ Here are the economic change events related to the LLSE built-in economic system
   `function(xuid,money)`
 - Parameters: 
   - xuid : `String`  
-    The Xuid of the player whose amount of money changed.
+    The XUID of the player whose amount of money changed.
   - money : `Integer`  
     The amount of money being taken.
 
@@ -58,9 +58,9 @@ Here are the economic change events related to the LLSE built-in economic system
   `function(from,to,money)`
 - Parameters: 
   - from : `String`  
-    The Xuid of the player initating the transfer.
+    The XUID of the player initating the transfer.
   - to : `String`  
-    The Xuid of the player accepting the transfer.
+    The XUID of the player accepting the transfer.
   - money : `Integer`  
     The amount of money being transferred.
 - Intercept events: Function returns `false`
@@ -73,9 +73,9 @@ Here are the economic change events related to the LLSE built-in economic system
   `function(from,to,money)`
 - Parameters: 
   - from : `String`  
-    The Xuid of the player initating the transfer.
+    The XUID of the player initating the transfer.
   - to : `String`  
-    The Xuid of the player accepting the transfer.
+    The XUID of the player accepting the transfer.
   - money : `Integer`  
     The amount of money being transferred.
 
@@ -87,7 +87,7 @@ Here are the economic change events related to the LLSE built-in economic system
   `function(xuid,money)`
 - Parameters: 
   - xuid : `String`  
-    The Xuid of the player whose amount of money changed.
+    The XUID of the player whose amount of money changed.
   - money : `Integer`  
     The amount of money being set.
 - Intercept events: Function returns `false`
@@ -100,7 +100,7 @@ Here are the economic change events related to the LLSE built-in economic system
   `function(xuid,money)`
 - Parameters: 
   - xuid : `String`  
-    The Xuid of the player whose amount of money changed.
+    The XUID of the player whose amount of money changed.
   - money : `Integer`  
     The amount of money being set.
 

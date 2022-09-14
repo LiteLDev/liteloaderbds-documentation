@@ -12,10 +12,12 @@
 - 返回值：是否执行成功
 - 返回值类型： `Boolean`
 
-```clike
-[Js]
+[JavaScript]
+```js
 mc.runcmd("say Hello!");
+```
 [Lua]
+```lua
 mc.runcmd("say Hello!")
 ```
 
@@ -42,13 +44,12 @@ mc.runcmd("say Hello!")
 
 > [!NOTE]
 >
-> runcmdEx 与普通 runcmd 实现区别非常大，在于 Ex 版本拥有**隐藏执行**的机制，执行结果不会输出至控制台，因此如果有需要，要手动用 log 函数将结果输出
+> runcmdEx 与普通 runcmd 实现区别非常大，在于 Ex 版本拥有**隐藏输出**的机制，执行结果不会输出至控制台，因此如果有需要，要手动用 log 函数将结果输出
 
-```clike
-[Js]
+[JavaScript]
+```js
 var result = mc.runcmdEx("say Hello!");
 log(result.output);
-[Lua] 
 ```
 
 ## 命令注册 API
@@ -169,7 +170,7 @@ log(result.output);
 | `ParamType.Vec3`      | 浮点数坐标参数                                             |
 | `ParamType.RawText`   | 原始字符串参数（可包含特殊字符，如逗号空格）               |
 | `ParamType.Message`   | 消息类型参数（同 `/say` 指令参数，会自动展开目标选择器等） |
-| `ParamType.JsonValue` | `Json`字符串参数                                           |
+| `ParamType.JsonValue` | JSON字符串参数                                           |
 | `ParamType.Item`      | 物品类型参数                                               |
 | `ParamType.Block`     | 方块类型参数                                               |
 | `ParamType.Effect`    | 效果类型参数                                               |
@@ -292,7 +293,7 @@ log(result.output);
 | `ParamType.Vec3`      | `FloatPos`      | 浮点数坐标对象                                               |
 | `ParamType.RawText`   | `String`        | 原始字符串（可包含特殊字符，如逗号空格）                     |
 | `ParamType.Message`   | `String`        | 消息类型字符串（同 `/say` 指令参数，会自动展开目标选择器等） |
-| `ParamType.JsonValue` | `String`        | `Json`字符串                                                 |
+| `ParamType.JsonValue` | `String`        | JSON字符串                                                 |
 | `ParamType.Item`      | `Item`          | 物品类型                                                     |
 | `ParamType.Block`     | `Block`         | 方块类型                                                     |
 | `ParamType.Effect`    | `String`        | 效果类型字符串                                               |
@@ -303,10 +304,10 @@ log(result.output);
 
 ### 命令注册样例
 
-```javascript
-[Js]
+[JavaScript]
+```js
 mc.listen("onServerStarted", () => {
-    let cmd = mc.newCommand("manager", "Command Description", PermType.GameMasters);
+    const cmd = mc.newCommand("manager", "Command Description", PermType.GameMasters);
     cmd.setAlias("mgr");
     cmd.setEnum("ChangeAction", ["add", "remove"]);
     cmd.setEnum("ListAction", ["list"]);
@@ -364,13 +365,12 @@ mc.listen("onServerStarted", () => {
   目标命令后面的参数。按空格为分界分割，组成字符串数组。  
   如注册了自定义命令 `land set`，当执行 `/land set abc 2333` 时，args的值将为 `[ "abc","2333" ]`
 
-```clike
-[Js]
+[JavaScript]
+```js
 mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
     pl.tell("Flying enabled.");
     //......
 });
-
 ```
 
 
@@ -396,21 +396,20 @@ mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
   目标命令后面的参数。按空格为分界分割，组成字符串数组。  
   如注册了自定义命令 `land set`，当执行 `/land set abc 2333` 时，args的值将为 `['abc','2333']`
 
-```clike
-[Js]
+[JavaScript]
+```js
 mc.regConsoleCmd("backup","Start the backup",function(args){
     log("ID of this backup is:",args[0]);
     //......
 });
-
 ```
 
 > [!TIP|label:假命令注册相关说明]
 >
 > 设置了回调函数之后，在你注册的这个假命令被执行的时候，回调函数就会被调用。  
-> 在调用之前，LLSE会自动帮你把命令参数分割成数组。  
+> 在调用之前，脚本引擎会自动帮你把命令参数分割成数组。  
 >
-> 以Js语言为例：
+> 以JavaScript语言为例：
 >
 > 执行命令  
 > `mc.regPlayerCmd("land buy", "购买领地", function(pl,args){ .... }, 0 );`   
@@ -418,7 +417,7 @@ mc.regConsoleCmd("backup","Start the backup",function(args){
 > 当你使用命令  `/land buy abcde 12345`的时候，这个回调函数就会被调用。  
 > 回调函数的参数args被传入一个数组：[ "abcde" , "12345" ]  
 > 正如所见，`args` 中包含的值是被 **按顺序分割好的** 命令参数。  
-> 如果你的命令中有引号（比如说为了处理含有空格的玩家名字），LLSE在分割时也会做处理。
+> 如果你的命令中有引号（比如说为了处理含有空格的玩家名字），脚本引擎在分割时也会做处理。
 
 <br>
 

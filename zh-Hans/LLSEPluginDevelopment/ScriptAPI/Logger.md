@@ -1,4 +1,4 @@
-# LLSE - 脚本辅助接口文档
+# 脚本引擎 - 脚本辅助接口文档
 
 > 这里提供了大量的 **辅助功能** ，包括日志功能、加载器功能接口等等。  
 
@@ -7,7 +7,7 @@
 ## 📅 通用日志 API
 
 以往，按某种格式输出日志到指定位置是一件非常麻烦的事情。  
-如今，LLSE为你提供了方便的通用日志接口。  
+如今，脚本引擎为你提供了方便的通用日志接口。  
 
 ### 概念：关于日志输出等级
 
@@ -107,7 +107,7 @@
 例如：你调用`logger.error("Fail to transport the player")`  
 日志输出的结果是 
 
-```
+```log
 [2021-05-21 19:41:03 Error] Fail to transport the player
 ```
 
@@ -132,7 +132,7 @@
 例如：设置自定义标头为`logger.setTitle("LiteLoader")`  
 则在接下来的日志输出将变为形如：  
 
-```
+```log
 20:05:26 ERROR [LiteLoader] Fail to transport the player
 ```
 

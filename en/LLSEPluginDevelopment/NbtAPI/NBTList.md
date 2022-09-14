@@ -13,7 +13,7 @@ See [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [NbtComp
 
 #### Create a New NBT List Object
 
-[JS]  `new NbtList([data])`  
+[JavaScript]  `new NbtList([data])`  
 [Lua] `NbtList([data])`
 
 - Parameter: 

@@ -2,7 +2,7 @@
 
 下面这些API提供了自定义某些服务器设置的接口
 
-### 获取BDS服务端版本号
+### 获取服务器版本号
 
 `mc.getBDSVersion()`
 
@@ -11,7 +11,7 @@
 
 <br>
 
-### 获取BDS服务端协议版本
+### 获取服务器协议版本
 
 `mc.getServerProtocolVersion()`
 
@@ -20,13 +20,13 @@
 
 <br>
 
-### 设置服务器Motd字符串  
+### 设置服务器MOTD字符串  
 
 `mc.setMotd(motd)`
 
 - 参数：
   - motd : `String`  
-    目标Motd字符串  
+    目标MOTD字符串  
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 

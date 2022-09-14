@@ -13,7 +13,7 @@
 
 #### 创建新的 NBT 标签对象
 
-[Js]  `new NbtCompound([data])`  
+[JavaScript]  `new NbtCompound([data])`  
 [Lua] `NbtCompound([data])`
 
 - 参数：
@@ -23,8 +23,8 @@
 - 返回值类型：`NbtList`
   - 如果创建失败，将抛出异常
 
-```clike
-[Js]
+[JavaScript]
+```js
 var nbt = new NbtCompound({
         "name1": new NbtInt(3),
         "name2": new NbtString("test"),
@@ -34,7 +34,9 @@ var nbt = new NbtCompound({
         ]),
         "name4": new NbtLong(66666)
     });
+```
 [Lua]
+```lua
 local nbt = NbtCompound({
         "name1" = NbtInt(3),
         "name2" = NbtString("test"),
@@ -193,7 +195,7 @@ local nbt = NbtCompound({
 - 返回值：对应的对象 / 表
 - 返回值类型：`Object`
 
-将Compound的内容转换为LLSE对象，把数据项都转换为LLSE数据类型储存于对象的对应key中，方便读取和处理  
+将Compound的内容转换为脚本引擎对象，把数据项都转换为脚本引擎数据类型储存于对象的对应key中，方便读取和处理  
 如果Compound某一项储存的是`List`或者`Compound`类型的 NBT，将在对应位置递归展开为`Array`或`Object`
 
 <br>

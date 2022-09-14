@@ -13,7 +13,7 @@
 
 - 首先，我们需要基于beta分支创建一个新的分支（feature branch）
 
-```bash
+```sh
 git checkout beta
 git pull
 git checkout -b feature/<FeatureName>
@@ -23,7 +23,7 @@ git checkout -b feature/<FeatureName>
 
 - 在完成工作的同时，建议经常性的与上游分支同步
 
-```bash
+```sh
 git fetch origin
 git rebase origin/beta
 ```
@@ -32,7 +32,7 @@ git rebase origin/beta
 
 - 将文件的改动添加进入git修改区内
 
-```bash
+```sh
 git add <files>
 ```
 
@@ -40,7 +40,7 @@ git add <files>
 
 - 检查待提交修改并创建commit
 
-```bash
+```sh
 git add --all        #将所有修改的文件添加到暂存区
 git status           #查看修改的文件列表
 git commit --verbose #查看具体修改内容
@@ -51,7 +51,7 @@ git commit --verbose #查看具体修改内容
 在进行新功能的开发过程中难免遇到问题，进行修复后会出现多个重复commit，通过使用git rebase，对commit进行合并操作（squash），有助于更好的追踪修改
 通过变基操作（rebase）我们可以轻松实现此类操作
 
-```bash
+```sh
 git rebase -i HEAD~5 #以当前HEAD往前5个commit，执行交互式rebase
 ```
 
@@ -135,4 +135,4 @@ git rebase -i HEAD~5 #以当前HEAD往前5个commit，执行交互式rebase
     |   |-- src
     |   |   |-- lib.cpp
     |-- header_only_libname
-    |   |-- header_only.hpp
+    |   |-- header_only.h

@@ -65,11 +65,11 @@
 
 ## 🔌 WebSocket 客户端对象 API
 
-在LLSE中，使用「WebSocket 对象」来操作某个 WebSocket 客户端的连接和工作
+在脚本引擎中，使用「WebSocket 对象」来操作某个 WebSocket 客户端的连接和工作
 
 ### 创建一个新的WebSocket 客户端对象
 
-[Js] `new WSClient()`  
+[JavaScript] `new WSClient()`  
 [Lua] `WSClient()`
 
 - 返回值：一个新的 websocket 客户端对象
@@ -157,7 +157,7 @@
 
   - callback : `Functon`  
     注册的监听函数（函数相关参数见下）  
-    当指定的事件发生时，LLSE会调用你给出的监听函数，并传入相应的参数
+    当指定的事件发生时，脚本引擎会调用你给出的监听函数，并传入相应的参数
 - 返回值：是否成功监听事件
 - 返回值类型：`Boolean` 
 
@@ -232,12 +232,12 @@
 
 ## 📡 Http 服务端对象 API
 
-LLSE提供了简易的Http服务端服务，可以用于Webhook等**数据传输量较小**的Web服务。  
+脚本引擎提供了简易的Http服务端服务，可以用于Webhook等**数据传输量较小**的Web服务。  
 如果您想搭建网站，更推荐使用老牌Web服务软件如Apache, Nginx等。
 
 ### 创建一个新的服务器对象
 
-[Js]  `new HttpServer()`  
+[JavaScript]  `new HttpServer()`  
 [Lua] `HttpServer()`
 
 - 返回值：新的服务器对象

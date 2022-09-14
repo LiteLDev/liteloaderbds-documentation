@@ -12,7 +12,7 @@ See the [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [Nbt
 
 #### Create a New NBT Data Object
 
-[JS]  
+[JavaScript]  
 `new NbtEnd()`  
 `new NbtByte([data])`  
 `new NbtShort([data])`  

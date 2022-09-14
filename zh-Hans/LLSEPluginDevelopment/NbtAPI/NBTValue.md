@@ -12,7 +12,7 @@
 
 #### 创建新的NBT数据对象
 
-[Js]  
+[JavaScript]  
 `new NbtEnd()`  
 `new NbtByte([data])`  
 `new NbtShort([data])`  

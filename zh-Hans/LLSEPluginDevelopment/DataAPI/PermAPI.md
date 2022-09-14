@@ -2,12 +2,12 @@
 
 > BDS/MCBE自带的权限系统非常的拉跨，为了满足插件对权限系统的需要，我们完成了权限接口.
 
-如果你使用Discord，你一定知道它的身份组系统。  
+如果你使用Discord，你大抵会了解它的身份组系统。  
 我们的权限系统与Discord的身份组系统非常相似。  
 整个系统可以被分成三部分：`Role`(身份组), `Permission`(`PermInstance`, 权限实例) 和 `PermInfo`(权限信息)。  
 `Role`定义了一组拥有指定权限的玩家，`PermInfo`则储存了所有权限的描述。  
 
-和Discord一样，我们也有默认的`admin`(管理员)和`everyone`(所有人)身份组。    
+与Discord类似，我们也有默认的`admin`(管理员)和`everyone`(所有人)身份组。    
 `admin`是一个特殊的身份组，所有的权限都会默认开启。  
 `everyone`也是一个特殊的身份组，所有的玩家都是它的成员。  
 
@@ -18,7 +18,7 @@
 ### 创建身份组
 
 通过构造函数：  
-[JS]  `new Role(name[,displayName])`  
+[JavaScript]  `new Role(name[,displayName])`  
 [Lua] `Role(name[,displayName])`
 通过静态方法：  
 `Permission.createRole(name[,displayName])`
@@ -36,7 +36,7 @@
 
 <br/>
 
-### Get a role
+### 获取已有身份组
 
 `Permission.getRole(name)`
 
@@ -50,7 +50,7 @@
 
 <br/>
 
-### Get or create a role
+### 创建或获取身份组实例
 
 `Permission.getOrCreateRole(name)`
 
@@ -77,7 +77,7 @@
 `displayName`    | `String`        | 身份组显示名称
 `priority`       | `Number`        | 身份组优先级，越大越优先
 `permissions`    | `Array<Object>` | 身份组拥有的权限
-`members`        | `Array<String>` | 身份组成员的Xuid
+`members`        | `Array<String>` | 身份组成员的XUID
 
 `permissions` 属性是一个对象的数组，每个对象都含有以下属性：
 
@@ -103,7 +103,7 @@
 
 - 参数:
   - xuid: `String`  
-    成员(玩家)的Xuid
+    成员(玩家)的XUID
 - 返回值: `Boolean` 是否有该成员
 - 抛出:
   - 无效的参数。
@@ -117,7 +117,7 @@
 
 - 参数:
   - xuid: `String`  
-    成员(玩家)的Xuid
+    成员(玩家)的XUID
 - 抛出:
   - 无效的参数。
   - 身份组实例已被销毁。
@@ -131,7 +131,7 @@
 
 - 参数:
   - xuid: `String`  
-    成员(玩家)的Xuid
+    成员(玩家)的XUID
 - 抛出:
   - 无效的参数。
   - 身份组实例已被销毁。
@@ -163,7 +163,7 @@
     权限名称，必须已经注册在`PermInfoList`中(参见 [注册权限](#注册权限))
   - enabled: `Boolean`  
     权限是否开启
-  - extraData: `Object`(optional)  
+  - extraData: `Object`  
     权限的额外数据
 - 抛出:
   - 无效的参数。
@@ -254,7 +254,8 @@
 - 参数:
   - name: `String`  
     权限名称
-- 返回值: `Boolean` 权限是否存在
+- 返回值: `Boolean`
+    权限是否存在
 - 抛出:
   - 无效的参数。
 
@@ -266,10 +267,11 @@
 
 - 参数:
   - xuid: `String`  
-    玩家Xuid
+    玩家XUID
   - permName: `String`  
     权限名称
-- 返回值: `Boolean` 玩家是否有指定权限
+- 返回值: `Boolean`
+    玩家是否有指定权限
 - 抛出:
   - 无效的参数。
   - 找不到玩家。
@@ -297,7 +299,7 @@ end
 
 - 参数:
   - xuid: `String`  
-    玩家Xuid
+    玩家XUID
   - roleName: `String`  
     身份组名称
 - 返回值: `Boolean` 玩家是否是指定身份组的成员
@@ -314,8 +316,9 @@ end
 
 - 参数:
   - xuid: `String`  
-    玩家Xuid
-- 返回值: `Array<Role>` 此玩家的身份组列表
+    玩家XUID
+- 返回值: `Array<Role>`
+    此玩家的身份组列表
 
 <br/>
 
@@ -325,8 +328,9 @@ end
 
 - 参数:
   - xuid: `String`  
-    玩家Xuid
-- 返回值: `Array<Object>` 此玩家的权限列表
+    玩家XUID
+- 返回值: `Array<Object>`
+    此玩家的权限列表
 
 <br/>
 
@@ -358,7 +362,7 @@ try {
     if (role.permissionExists("Global:join")) {
         role.setPermission("Global:join", true);
     }
-    Permission.saveData(); // 在修改完后立刻保存是一个好的习惯
+    Permission.saveData(); // 在修改完后立刻保存是个好习惯
 } catch (e) {
     logger.error("Error: " + e);
 }

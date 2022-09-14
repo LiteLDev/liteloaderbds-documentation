@@ -15,7 +15,7 @@
 
 ## 🔉 数据包对象 API
 
-在LLSE中，使用「数据包对象」来获取数据包的相关信息。
+在脚本引擎中，使用「数据包对象」来获取数据包的相关信息。
 
 ### 获取一个数据包对象
 
@@ -52,7 +52,7 @@
 
 ### 创建一个二进制流对象
 
-[Js] ```new BinaryStream()```
+[JavaScript] ```new BinaryStream()```
 
 [Lua] ```BinaryStream()```
 
@@ -123,7 +123,7 @@
 ### 演示代码
 
 向一个玩家发送TextPacket数据包
-```JavaScript
+```js
 mc.listen("onChat",function(pl,msg){
     const bs = new BinaryStream()
     var text = "LLSE Packet Test"
