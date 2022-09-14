@@ -210,7 +210,7 @@ constexpr long long LONGLONGMAX;
 
 &emsp;&emsp;文件注释、类注释和函数注释应当采用Javadoc风格的Doxygen注释，详见下文；单行注释和行尾注释应当采用 `//` 风格；函数参数注释应当采用 `/* */` 风格。
 
-&emsp;&emsp;所有注释中，若存在能在Doxygen文档中显示的内容，则必须采用i18n的书写方式，每种语言间隔两行，示例参见下文，英文必须放在最后。请注意：类似 `@file` 这些不显示且用于Doxygen索引的特殊命令，不得写多个，请统一放在最前面。
+&emsp;&emsp;所有注释均使用英文，翻译使用Crowdin。
 
 ### 文件注释
 
@@ -236,11 +236,6 @@ constexpr long long LONGLONGMAX;
 /**
  * @file ExampleDirectory/ExampleComponent.h
  *
- * \~chinese
- * @brief 本文件包含示例接口。
- * 
- *
- * \~english
  * @brief This file contains example interfaces.
  *
  */
@@ -260,20 +255,6 @@ constexpr long long LONGLONGMAX;
 
 ```cpp
 /**
- * \~chinese
- * @brief 这个类做一些工作。
- *
- * @par 示例程序：
- * @code
- * ExampleClass ex("example", 114514);
- * ex.doExampleThings();
- * for (auto& ex_unit : ex.getExampleList()) {
- *   process(ex_unit);
- * }
- * @endcode
- *
- *
- * \~english
  * @brief The ExampleClass class does example jobs.
  *
  * @par Example:
@@ -319,25 +300,6 @@ constexpr long long LONGLONGMAX;
 
 ```cpp
 /**
- * \~chinese
- * @brief 从 `example_para3` 提取信息。
- * 
- * @param example_para1 样例数字
- * @param example_para2 样例浮点数
- * @param example_para3 样例字符串
- * @return int 样例返回值
- * 
- * @par 做一些事情。
- * @par 示例程序：
- * @code
- * std::string example_str = "Example";
- * LL::doExampleThing(1, 2.1, example_str);
- * @endcode
- * @note 本函数是一个样例。
- * @warning 本函数已经被弃用。请使用 `LL::doExmapleThingEx()` 替代。
- *
- *
- * \~english
  * @brief Extracts the example thing from `example_para3`.
  * 
  * @param example_para1 The example number
@@ -399,11 +361,6 @@ int doExampleThing(int example_para1, double example_para2, std::string example_
 class ExampleClass {
  public:
   /**
-   * \~chinese
-   * @brief 样例数据成员
-   * 
-   * 
-   * \~english
    * @brief Example data member
    */
   int public_example;
@@ -489,13 +446,6 @@ TODO应该包括 `@todo`，后面是名字、e-mail地址、Issue ID或者其他
 
 ```cpp
 /**
- * \~chinese
- * @todo (kl@gmail.com) 需要做一些事情。
- * @todo (Zeke) 修改某些东西。
- * @todo (#12345) 想办法删除这段屎山代码。
- * 
- *
- * \~english
  * @todo (kl@gmail.com) Use a "*" here for concatenation operator.
  * @todo (Zeke) Change this to use relations.
  * @todo (#12345) Remove the "Last visitors" feature.
