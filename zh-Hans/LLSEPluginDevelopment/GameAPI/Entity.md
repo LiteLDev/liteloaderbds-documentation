@@ -185,6 +185,17 @@
 
 <br>
 
+#### Heal the Entity
+
+`en.heal(health)`
+
+- Parameters: 
+  - int : `Integer`  
+    Number of hearts to heal.
+- Return value: Whether heal was dealt.
+- Return value type: `Boolean`
+
+<br>
 
 #### 使指定实体着火
 

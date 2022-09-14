@@ -333,6 +333,18 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 <br>
 
+#### Heal the Player
+
+`pl.heal(health)`
+
+- Parameters: 
+  - int : `Integer`  
+    Number of hearts to heal.
+- Return value: Whether heal was dealt.
+- Return value type: `Boolean`
+
+<br>
+
 #### Set the Specified Player on Fire
 
 `pl.setOnFire(time,isEffect)`
