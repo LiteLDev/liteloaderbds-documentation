@@ -13,7 +13,7 @@
     |||
     |-|-|
     |`Remove(String)`|根据玩家名称将玩家从白名单中移除。|
-    |`Remove(String, String)`|根据玩家名称与Xuid将玩家从白名单中移除。|
+    |`Remove(String, String)`|根据玩家名称与XUID将玩家从白名单中移除。|
 
 ## Add(String)
 
@@ -59,7 +59,7 @@ public:
   - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要移除的玩家名称
   - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
-    要移除的玩家xuid
+    要移除的玩家XUID
 
 <br>
 

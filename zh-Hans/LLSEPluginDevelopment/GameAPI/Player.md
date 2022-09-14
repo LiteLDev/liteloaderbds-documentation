@@ -11,14 +11,14 @@
 
 #### 从现有玩家获取
 
-通过**玩家名**或者**xuid**手动生成玩家对象  
+通过**玩家名**或者**XUID**手动生成玩家对象  
 通过此函数来手动生成对象，注意，你要获取的玩家必须是在线状态，否则会生成失败
 
 `mc.getPlayer(info)`
 
 - 参数：
   - info : `String`  
-    玩家的名字或者Xuid
+    玩家的名字或者XUID
 - 返回值：生成的玩家对象 
 - 返回值类型：`Player`
   - 如返回值为 `Null` 则表示获取玩家失败
@@ -48,7 +48,7 @@
 | pl.blockPos              | 玩家所在的方块坐标                | `IntPos`         |
 | pl.lastDeathPos          | 玩家上次死亡的坐标                | `IntPos`         |
 | pl.realName              | 玩家的真实名字                    | `String`         |
-| pl.xuid                  | 玩家Xuid字符串                    | `String`         |
+| pl.xuid                  | 玩家XUID字符串                    | `String`         |
 | pl.uuid                  | 玩家Uuid字符串                    | `String`         |
 | pl.permLevel             | 玩家的操作权限等级（0 - 4）       | `Integer`        |
 | pl.gameMode              | 玩家的游戏模式（0 - 3）           | `Integer`        |

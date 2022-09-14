@@ -8,7 +8,7 @@
   `function(xuid,money)`
 - 参数：
   - xuid : `String`  
-    金额变动的玩家的Xuid
+    金额变动的玩家的XUID
   - money : `Integer`  
     增加的金额
 - 拦截事件：函数返回`false`
@@ -21,7 +21,7 @@
   `function(xuid,money)`
 - 参数：
   - xuid : `String`  
-    金额变动的玩家的Xuid
+    金额变动的玩家的XUID
   - money : `Integer`  
     增加的金额
 
@@ -33,7 +33,7 @@
   `function(xuid,money)`
 - 参数：
   - xuid : `String`  
-    金额变动的玩家的Xuid
+    金额变动的玩家的XUID
   - money : `Integer`  
     减少的金额
 - 拦截事件：函数返回`false`
@@ -46,7 +46,7 @@
   `function(xuid,money)`
 - 参数：
   - xuid : `String`  
-    金额变动的玩家的Xuid
+    金额变动的玩家的XUID
   - money : `Integer`  
     减少的金额
 
@@ -58,9 +58,9 @@
   `function(from,to,money)`
 - 参数：
   - from : `String`  
-    发起转账的玩家的Xuid
+    发起转账的玩家的XUID
   - to : `String`  
-    接受转账的玩家的Xuid
+    接受转账的玩家的XUID
   - money : `Integer`  
     转账的金额
 - 拦截事件：函数返回`false`
@@ -73,9 +73,9 @@
   `function(from,to,money)`
 - 参数：
   - from : `String`  
-    发起转账的玩家的Xuid
+    发起转账的玩家的XUID
   - to : `String`  
-    接受转账的玩家的Xuid
+    接受转账的玩家的XUID
   - money : `Integer`  
     转账的金额
 
@@ -87,7 +87,7 @@
   `function(xuid,money)`
 - 参数：
   - xuid : `String`  
-    金额变动的玩家的Xuid
+    金额变动的玩家的XUID
   - money : `Integer`  
     被设置的金额
 - 拦截事件：函数返回`false`
@@ -100,7 +100,7 @@
   `function(xuid,money)`
 - 参数：
   - xuid : `String`  
-    金额变动的玩家的Xuid
+    金额变动的玩家的XUID
   - money : `Integer`  
     被设置的金额
 

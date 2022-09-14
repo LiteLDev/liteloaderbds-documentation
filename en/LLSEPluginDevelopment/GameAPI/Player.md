@@ -11,14 +11,14 @@ For details, see [Event listener documentation - EventAPI](/LLSEPluginDevelopmen
 
 #### Acquired From Existing Players
 
-Manually generate player objects by **playername** or **xuid**
+Manually generate player objects by **playername** or **XUID**
 Use this function to manually generate objects. Note that the player you want to get must be online, otherwise the generation will fail.
 
 `mc.getPlayer(info)`
 
 - Parameters: 
   - info : `String`  
-    Player's name or Xuid.
+    Player's name or XUID.
 - Return value: The generated player object. 
 - Return value type: `Player`
   - If the return value is `Null`, it means that getting the player failed.
@@ -48,7 +48,7 @@ Each player object contains some fixed object properties. For a particular playe
 | pl.blockPos              | The coordinates of the block that the player is standing on. | `IntPos`         |
 | pl.lastDeathPos          | The coordinates of the block that the player last died.      | `IntPos`         |
 | pl.realName              | Player's Real Name                                           | `String`         |
-| pl.xuid                  | Player Xuid String                                           | `String`         |
+| pl.xuid                  | Player XUID String                                           | `String`         |
 | pl.uuid                  | Player Uuid string                                           | `String`         |
 | pl.permLevel             | Player's permission level (0 - 4)                            | `Integer`        |
 | pl.gameMode              | Player's game mode (0 - 3)                                   | `Integer`        |

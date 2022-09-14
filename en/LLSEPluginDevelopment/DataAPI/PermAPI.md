@@ -77,7 +77,7 @@ By static method:
 `displayName`    | `String`        | The role display name
 `priority`       | `Number`        | The role priority
 `permissions`    | `Array<Object>` | The role permissions
-`members`        | `Array<String>` | The role members(xuid)
+`members`        | `Array<String>` | The role members(XUID)
 
 The `permissions` property is an array of objects, each object contains the following properties:
 
@@ -99,11 +99,11 @@ The `permissions` property is an array of objects, each object contains the foll
 
 ### Check whether the role has the member
 
-`role.hasMember(xuid)`
+`role.hasMember(XUID)`
 
 - Parameters:
-  - xuid: `String`  
-    The member(player) xuid
+  - XUID: `String`  
+    The member(player) XUID
 - Return Value: `Boolean` Whether the role has the member
 - Throw when:
   - Invalid arguments.
@@ -113,11 +113,11 @@ The `permissions` property is an array of objects, each object contains the foll
 
 ### Add the member to the role
 
-`role.addMember(xuid)`
+`role.addMember(XUID)`
 
 - Parameters:
-  - xuid: `String`  
-    The member(player) xuid
+  - XUID: `String`  
+    The member(player) XUID
 - Throw when:
   - Invalid arguments.
   - The role reference is expired.
@@ -127,11 +127,11 @@ The `permissions` property is an array of objects, each object contains the foll
 
 ### Remove the member from the role
 
-`role.removeMember(xuid)`
+`role.removeMember(XUID)`
 
 - Parameters:
-  - xuid: `String`  
-    The member(player) xuid
+  - XUID: `String`  
+    The member(player) XUID
 - Throw when:
   - Invalid arguments.
   - The role reference is expired.
@@ -262,11 +262,11 @@ The `permissions` property is an array of objects, each object contains the foll
 
 ### Check whether the player has the permission
 
-`Permission.checkPermission(xuid, permName)`
+`Permission.checkPermission(XUID, permName)`
 
 - Parameters:
-  - xuid: `String`  
-    The player xuid
+  - XUID: `String`  
+    The player XUID
   - permName: `String`  
     The permission name
 - Return Value: `Boolean` Whether the player has the permission
@@ -279,13 +279,13 @@ The `permissions` property is an array of objects, each object contains the foll
 - 💡 You can use prototype mechanism of JavaScript or [ScriptX APIs in lua](https://github.com/Tencent/ScriptX/blob/main/docs/en/Lua.md)
 ```js
 LLSE_Player.prototype.hasPermission = function(permName) {
-  return Permission.checkPermission(this.xuid, permName);
+  return Permission.checkPermission(this.XUID, permName);
 }
 ```
 ```lua
 local meta = ScriptX.getInstanceMeta(LLSE_Player);
 function meta.instanceFunction:hasPermission(perm)
-  return Permission.checkPermission(self.xuid, perm);
+  return Permission.checkPermission(self.XUID, perm);
 end
 ```
 
@@ -293,11 +293,11 @@ end
 
 ### Check whether the player is in the role
 
-`Permission.isMemberOf(xuid, roleName)`
+`Permission.isMemberOf(XUID, roleName)`
 
 - Parameters:
-  - xuid: `String`  
-    The player xuid
+  - XUID: `String`  
+    The player XUID
   - roleName: `String`  
     The role name
 - Return Value: `Boolean` Whether the player is in the role
@@ -310,22 +310,22 @@ end
 
 ### Get the player's roles
 
-`Permission.getPlayerRoles(xuid)`
+`Permission.getPlayerRoles(XUID)`
 
 - Parameters:
-  - xuid: `String`  
-    The player xuid
+  - XUID: `String`  
+    The player XUID
 - Return Value: `Array<Role>` The player's roles
 
 <br/>
 
 ### Get the player's permissions
 
-`Permission.getPlayerPermissions(xuid)`
+`Permission.getPlayerPermissions(XUID)`
 
 - Parameters:
-  - xuid: `String`  
-    The player xuid
+  - XUID: `String`  
+    The player XUID
 - Return Value: `Array<Object>` The player's permissions
 
 <br/>
@@ -342,7 +342,7 @@ end
 
 ```js
 LLSE_Player.prototype.hasPermission = function (permName) {
-    return Permission.checkPermission(this.xuid, permName);
+    return Permission.checkPermission(this.XUID, permName);
 }
 
 try {

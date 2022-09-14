@@ -13,8 +13,8 @@
     |||
     |-|-|
     |`Add(String)`|根据玩家名称将玩家添加到白名单中|
-    |`Add(String, String)`|根据玩家名称与Xuid将玩家添加到白名单中|
-    |`Add(String, String, Boolean)`|根据玩家名称与Xuid将玩家添加到白名单中|
+    |`Add(String, String)`|根据玩家名称与XUID将玩家添加到白名单中|
+    |`Add(String, String, Boolean)`|根据玩家名称与XUID将玩家添加到白名单中|
 
 ## Add(String)
 
@@ -60,7 +60,7 @@ public:
   - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要添加的玩家名称
   - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
-    要添加的玩家xuid
+    要添加的玩家XUID
 
 <br>
 
@@ -88,7 +88,7 @@ public:
   - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
     要查找的玩家名称
   - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string?view=net-6.0)  
-    要查找的玩家xuid
+    要查找的玩家XUID
   - `ignore` : [Boolean](https://docs.microsoft.com/zh-cn/DotNET/api/system.boolean?view=net-6.0)  
     是否忽略玩家限制
 

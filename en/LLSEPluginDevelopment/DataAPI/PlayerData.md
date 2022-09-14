@@ -52,31 +52,31 @@ For a specific player object `pl`, with the following interfaces:
 
 <br>
 
-## 👨‍💻 Xuid Database
+## 👨‍💻 XUID Database
 
-The Xuid database allows you to query the correspondence between player names and Xuids even when players are offline.
-When a player enters the server for the first time, his name and Xuid are automatically recorded in the built-in Xuid database. Use the following functions to make related queries.
+The XUID database allows you to query the correspondence between player names and XUIDs even when players are offline.
+When a player enters the server for the first time, his name and XUID are automatically recorded in the built-in XUID database. Use the following functions to make related queries.
 
-#### Query Xuid by Player Name
+#### Query XUID by Player Name
 
 `data.name2xuid(name)`
 
 - Parameters: 
   - name : `String`  
     The name of the player to query.
-- Return value: Player's Xuid.
+- Return value: Player's XUID.
 - Return value type: `String`
   - If the return value is `Null`, it means the query failed.
 
 <br>
 
-#### Query Player Name Based on Xuid
+#### Query Player Name Based on XUID
 
 `data.xuid2name(xuid)`
 
 - Parameters: 
   - xuid: `String`  
-    Player's Xuid to query.
+    Player's XUID to query.
 - Return value: Player's name.
 - Return value type: `String`
   - If the return value is `Null`, it means the query failed.
@@ -91,9 +91,9 @@ When a player enters the server for the first time, his name and Xuid are automa
 - Return value type: `Array<Object>`
   - Each object contains the following properties:
     - `name`: Player's name.
-    - `xuid`: Player's Xuid.
+    - `xuid`: Player's XUID.
     - `uuid`: Player's UUID.
 
 <br>
 
-Tip: The player name stored in the Xuid database is named corresponding to the player object. `realName` field.
+Tip: The player name stored in the XUID database is named corresponding to the player object. `realName` field.

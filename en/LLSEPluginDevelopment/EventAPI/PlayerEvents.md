@@ -18,7 +18,7 @@ At the same time, the member functions of these objects can also be called.
     The player that is connecting to the server.
 - Intercept events: function returns `false`
 
-Note: Only some basic information of players can be obtained in this monitoring function, such as name, IP, xuid, etc. Because the player has not fully entered the server at this time.
+Note: Only some basic information of players can be obtained in this monitoring function, such as name, IP, XUID, etc. Because the player has not fully entered the server at this time.
 
 <br>
 

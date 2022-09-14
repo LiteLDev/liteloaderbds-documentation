@@ -59,13 +59,13 @@ docker create --name <容器名称> -v <安装目录>:/root/bedrock-server -p <�
 
 ## 🎯 添加插件
 
-有三种类型的插件：原生插件、脚本插件和.NET插件。
+有2种类型的插件：原生插件和脚本插件<!--和.NET插件-->。
 
 原生插件是经过编译的本地插件，用C++、Go或Rust等语言编写，具有更好的性能，但目前在服务器启动后不能被加载、卸载或重新加载。
 
-脚本插件是用JavaScript、Python或Lua编写的脚本插件，可以灵活地管理，具有更好的安全性，但性能较差。
+脚本插件由JavaScript、Python或Lua编写，可以灵活地管理，具有更好的安全性，但性能较差。
 
-.NET插件是运行在.NET平台（CLR）下，由CLS兼容的语言（如C#、Visual Basic.NET和F#等）编写的插件。
+<!--.NET插件是运行在.NET平台（CLR）下，由CLS兼容的语言（如C#、Visual Basic.NET和F#等）编写的插件。-->
 
 > [!WARNING]
 > 为了保证大部分插件能够正常运行，请在 `server.properties` 中将 `online-mode` 设为 `true` ，并将 `server-authoritative-movement` 设为 `server-auth` 或 `server-auth-with-rewind` 。

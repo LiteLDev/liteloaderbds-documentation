@@ -43,8 +43,8 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 | Projectile | 0x03 | 抛射物攻击 |
 | Suffocation | 0x04 | 窒息（密封空间） |
 | Fall | 0x05 | 掉落 |
-| Fire | 0x06 | 在火中烧死 |
-| FireTick | 0x07 | 被点燃烧死 |
+| Fire | 0x06 | 燃烧 |
+| FireTick | 0x07 | 点燃 |
 | Lava | 0x08 | 熔岩 |
 | Drowning | 0x09 | 溺水 |
 | BlockExplosion | 0x0A | 方块爆炸 |

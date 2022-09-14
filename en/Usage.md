@@ -59,13 +59,13 @@ Now that you have LiteLoaderBDS installed, how about adding some plugins?
 
 ## 🎯 Add Some Plugins
 
-There are 3 types of plugins: Native plugins, Script plugins and .NET plugins.
+There are 2 types of plugins: Native plugins and Script plugins<!-- and .NET plugins-->.
 
 Native plugins are written in C++, Go or Rust, which have better performance but cannot be loaded, unloaded or reloaded after the server starts.
 
 Script plugins are written in JavaScript, Python or Lua, which can be flexibly managed and have better security but perform worse.
 
-.NET plugins are runs on the .NET developer platform(CLR) and is written in a CLS-compatible language(such as C#, Visual Basic.NET, and F#, etc.).
+<!--.NET plugins are runs on the .NET developer platform(CLR) and is written in a CLS-compatible language(such as C#, Visual Basic.NET, and F#, etc.).-->
 
 > [!WARNING]
 > To ensure that most plugins work properly, in `server.properties` , set `online-mode` to `true` and `server-authoritative-movement` to `server-auth` or `server-auth-with- rewind` .
