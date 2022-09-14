@@ -1,27 +1,30 @@
-## Description
+## Descriptions
 
 <!--- Describe what you have done in this PR. -->
 
+*You must write something here and remove this line*
 
-
-## Issues fixed by this PR
+## Issues Fixed
 
 <!--- Put the links of issues that may be fixed by this PR here (if any). -->
 
+*No issues has been fixed by this PR*
 
+## Type
 
-## Type of Modification
+<!--- Remove the items not applying to your modification. -->
 
-<!--- Put "x"s in all the checkboxes before the descriptions applying to your modification. -->
+- Mistake corrections
+- Documentation for new features
+- Lexical or grammatical improvement
+- Guides or tutorials
+- Useless stuff
 
-- [ ] Mistake correction
-- [ ] Documentation for new features
-- [ ] Lexical or grammatical improvement
-- [ ] Guides or tutorials
+## Statements
 
-## Checklist:
+<!--- Change these sentences to match your modifications. -->
 
-- [ ] My modification follows the style guidelines of this project.
-- [ ] My modification is not dupliacted with other pull requests
-- [ ] I have read the [style guide](https://docs.litebds.com/en/#/Maintenance/StyleGuide).
-- [ ] My modification is not involved with any copyright issues.
+- My modification DOES NOT follow the style guidelines of this project.
+- My modification IS dupliacted with other pull requests
+- I have NOT read the [style guide](https://docs.litebds.com/en/#/Maintenance/StyleGuide).
+- My modification IS involved with any copyright issues.
