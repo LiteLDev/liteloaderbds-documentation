@@ -57,7 +57,7 @@
 | pl.canBeSeenOnMap        | 玩家是否可以在地图上看到          | `Boolean`        |
 | pl.canFreeze             | 玩家是否可以冻结                  | `Boolean`        |
 | pl.canSeeDaylight        | 玩家是否能看到日光                | `Boolean`        |
-| pl.canShowNameTag        | 播放器是否可以显示姓名标签        | `Boolean`        |
+| pl.canShowNameTag        | 玩家是否可以显示姓名标签        | `Boolean`        |
 | pl.canStartSleepInBed    | 玩家是否可以开始在床上睡觉        | `Boolean`        |
 | pl.canPickupItems        | 玩家是否可以拾取物品              | `Boolean`        |
 | pl.maxHealth             | 玩家最大生命值                    | `Integer`        |

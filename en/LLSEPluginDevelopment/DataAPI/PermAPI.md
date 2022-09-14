@@ -99,10 +99,10 @@ The `permissions` property is an array of objects, each object contains the foll
 
 ### Check whether the role has the member
 
-`role.hasMember(XUID)`
+`role.hasMember(xuid)`
 
 - Parameters:
-  - XUID: `String`  
+  - xuid: `String`  
     The member(player) XUID
 - Return Value: `Boolean` Whether the role has the member
 - Throw when:
@@ -113,10 +113,10 @@ The `permissions` property is an array of objects, each object contains the foll
 
 ### Add the member to the role
 
-`role.addMember(XUID)`
+`role.addMember(xuid)`
 
 - Parameters:
-  - XUID: `String`  
+  - xuid: `String`  
     The member(player) XUID
 - Throw when:
   - Invalid arguments.
@@ -127,10 +127,10 @@ The `permissions` property is an array of objects, each object contains the foll
 
 ### Remove the member from the role
 
-`role.removeMember(XUID)`
+`role.removeMember(xuid)`
 
 - Parameters:
-  - XUID: `String`  
+  - xuid: `String`  
     The member(player) XUID
 - Throw when:
   - Invalid arguments.
@@ -262,10 +262,10 @@ The `permissions` property is an array of objects, each object contains the foll
 
 ### Check whether the player has the permission
 
-`Permission.checkPermission(XUID, permName)`
+`Permission.checkPermission(xuid, permName)`
 
 - Parameters:
-  - XUID: `String`  
+  - xuid: `String`  
     The player XUID
   - permName: `String`  
     The permission name
@@ -279,13 +279,13 @@ The `permissions` property is an array of objects, each object contains the foll
 - 💡 You can use prototype mechanism of JavaScript or [ScriptX APIs in lua](https://github.com/Tencent/ScriptX/blob/main/docs/en/Lua.md)
 ```js
 LLSE_Player.prototype.hasPermission = function(permName) {
-  return Permission.checkPermission(this.XUID, permName);
+  return Permission.checkPermission(this.xuid, permName);
 }
 ```
 ```lua
 local meta = ScriptX.getInstanceMeta(LLSE_Player);
 function meta.instanceFunction:hasPermission(perm)
-  return Permission.checkPermission(self.XUID, perm);
+  return Permission.checkPermission(self.xuid, perm);
 end
 ```
 
@@ -293,11 +293,11 @@ end
 
 ### Check whether the player is in the role
 
-`Permission.isMemberOf(XUID, roleName)`
+`Permission.isMemberOf(xuid, roleName)`
 
 - Parameters:
-  - XUID: `String`  
-    The player XUID
+  - xuid: `String`  
+    The player xuid
   - roleName: `String`  
     The role name
 - Return Value: `Boolean` Whether the player is in the role
@@ -310,10 +310,10 @@ end
 
 ### Get the player's roles
 
-`Permission.getPlayerRoles(XUID)`
+`Permission.getPlayerRoles(xuid)`
 
 - Parameters:
-  - XUID: `String`  
+  - xuid: `String`  
     The player XUID
 - Return Value: `Array<Role>` The player's roles
 
@@ -321,10 +321,10 @@ end
 
 ### Get the player's permissions
 
-`Permission.getPlayerPermissions(XUID)`
+`Permission.getPlayerPermissions(xuid)`
 
 - Parameters:
-  - XUID: `String`  
+  - xuid: `String`  
     The player XUID
 - Return Value: `Array<Object>` The player's permissions
 
@@ -342,7 +342,7 @@ end
 
 ```js
 LLSE_Player.prototype.hasPermission = function (permName) {
-    return Permission.checkPermission(this.XUID, permName);
+    return Permission.checkPermission(this.xuid, permName);
 }
 
 try {
