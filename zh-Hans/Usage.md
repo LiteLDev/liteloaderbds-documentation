@@ -12,12 +12,12 @@
 
 请跟随以下步骤安装:
 
-1. 从[Minecraft Wiki](https://minecraft.fandom.com/wiki/Bedrock_Dedicated_Server#Download)下载最新版LiteLoaderBDS支持的适用于 Minecraft 的 Bedrock 版专属服务端软件（BDS）并解压。访问[我们的主页](https://www.litebds.com)查看支持的BDS版本。
-2. 从[GitHub releases](https://github.com/LiteLDev/LiteLoader/releases/latest)下载最新版LiteLoaderBDS。
+1. 从[Minecraft官网](https://www.minecraft.net/en-us/download/server/bedrock)下载Bedrock Server并解压。
+2. 从[GitHub releases](https://github.com/LiteLDev/LiteLoader/releases)下载对应版本的LiteLoaderBDS。
 3. 解压缩你在步骤2中下载的实现文件，把所有的文件放在BDS的目录中。如果发生冲突，请覆盖这些文件。
-4. 检查`bedrock_server.pdb`文件是否存在。如果没有，请[从这里下载](https://github.com/LiteLDev/LiteLoader/releases/latest)并把它们放到BDS的目录中。
+4. 检查`bedrock_server.pdb`文件是否存在。如果没有，重新下载Bedrock Server。
 5. 在BDS的目录中，运行`LLPeEditor.exe`，等待程序提示关闭。
-6. 在BDS的目录中，运行`bedrock_server_mod.exe`来启动服务器。请注意，你应该始终运行`bedrock_server_mod.exe`来启动服务器。否则，不仅LiteLoaderBDS提供的功能不可用，而且还会出现一些错误，导致各种意外的崩溃。
+6. 在BDS的目录中，运行`bedrock_server_mod.exe`来启动服务器。请注意，你应该始终运行`bedrock_server_mod.exe`来启动服务器。否则，不仅LiteLoaderBDS提供的功能不可用。
 
 ### 安装在Linux发行版上
 
