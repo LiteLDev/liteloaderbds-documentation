@@ -1,41 +1,44 @@
-## Hot to update LiteLoaderBDS
-Download the newer LiteLoader.zip, unzip it to BDS directory
+# Frequently Asked Questions
 
-## How to update Bedrock Dedicated Server
-Download the latest Bedrock Dedicated Server from [Minecraft.net](https://www.minecraft.net/en-us/download/server/bedrock), unzip it fully except `server.properties`,`allowlist.json`,`permission.json` to the old version of Bedrock Dedicated Server directory  
-Then run `LLPeEditor.exe` to generate new `bedrock_server_mod.exe`
+## Why Is the Server Occupying So Much RAM on My Linux Distribution?
+This is the memory leakage caused by Wine, which cannot be resolved by us. If the server is running on Docker, limit the memory of the container.
 
-## How to run LiteLoaderBDS on Linux
-Because we have not develop Linux version, so you need to use [Wine](https://www.winehq.org/) to run Windows's Bedrock Dedicated Server to load LiteLoaderBDS, you can choose [the docker image or installation script](https://github.com/LiteLDev/LiteLoaderBDS#for-linux) which provided by us
+## Does LiteLoaderBDS Support Different Versions of Minecraft?
 
-## Memory leak problem on Wine
-This is wine's problem, we can't provide any solution, if you are using docker container, you can limit the memory of container to prevent influenced by memory leak
+Yes, but only the versions sharing an identical protocol version.
 
-## LiteLoaderBDS version support for Bedrock Dedicated Server
-BDS's minor version updates are perfectly compatible  
-For example: 2.1.2 is developed based on BDS 1.18.11.01, and its protocol version is 486. As long as the protocol version of subsequent versions of BDS (for example: 1.18.12.01) is still 486, LiteLoaderBDS can perfectly support it.  
-We usually call a version update with no change in the protocol version as a minor version update (for example: 1.18.11.01 to 1.18.12.01), and if the protocol version is updated (such as 1.18.2 to 1.18.11.01), we call it a major version update  
-The game version and protocol version will be showed when server started, you can also type `version` command to query it
+When starting the server, LiteLoaderBDS will print the protocol version (i.e. 545). You can either get it by the command `/version`.
 
-## The compatibility of dll plugins
-The same with [LiteLoaderBDS version support for Bedrock Dedicated Server](#LiteLoaderBDS version support for Bedrock Dedicated Server), but some plugins which only have simple functions don't need to be updated if mojang did not change the functions/classes used by these plugins
+## Does Native Plugins Support Different Versions of Minecraft?
 
-## The compatibility of scirpt plugins
-if LLScriptEngine's API have no change, script plugins(including JavaScript, Lua) never need to be update for Bedrock Dedicated Server updates
+Yes, but some errors may occur with different protocol version, if some APIs used by the plugin have changed.
 
-## Common error codes while loading plugins
-- `126`  
-The dependent library is missing, please check whether the plugin installation is complete
+## Does Non-native Plugins (JavaScript, Lua, Python, Rust or .NET Plugins) Support Different Versions of Minecraft?
 
-- `127`  
-The plugin is not compatible with the current version of LiteLoaderBDS
+Yes, except for breaking changes of LiteLoader Script Engine.
 
-## Can't start server on Wine
-Try to remove `plugins/LiteLoader/LLAutoUpdate.dll`  
-If your server has free memory less than 1.2GB, try to release memory, because in low memory environment, LiteLoaderBDS may not start normally
+## Why Does the Server Report Error Code XXX When Loading Plugins?
 
-## What if the crash log has errors?
-Download the corresponding version of `PDB.zip` from [Release](https://github.com/LiteLDev/LiteLoaderBDS/releases), and extract it to one of the following folders:
+- `126`: Some of the dependencies are missing. Please check if the plugin is completely installed.
+
+- `127`: The plugin is not compatible with the current version of LiteLoaderBDS.
+
+## Why Can't I Start the Server on Linux Distribution?
+
+Try to remove `plugins/LiteLoader/LLAutoUpdate.dll`.
+
+If the free memory of the server is not more than 1.2GB, LiteLoaderBDS may failed to launch.
+
+## Why Are There So Many Incomprehensible Symbols In the Crash Log?
+
+Download the corresponding version of `PDB.zip` to the LiteLoaderBDS version of your server from [Release](https://github.com/LiteLDev/LiteLoaderBDS/releases), and extract it to one of the following folders:
 - `./`
 - `./plugins/`
 - `./plugins/lib`
+
+## Why Is It Reporting "There is already a command named xxx"?
+
+Some of the commands are duplicated, you can:
+
+* Delete some conflicting plugins, if different plugins register an identical command;
+* Report the issue to the plugin developer, if a command is registered more than once by a plugin.
