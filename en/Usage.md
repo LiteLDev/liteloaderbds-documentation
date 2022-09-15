@@ -1,5 +1,17 @@
 # Installation and Usage
 
+## 🍳 Can I Use LiteLoaderBDS?
+
+If you consider yourself to have basic computer skills, Internet skills and a simple level of everyday English, you are more than welcome and recommended to use LiteLoaderBDS.
+
+If you encounter any problems in using it, please read this documentation and the C++ plugin development documentation carefully. Most of the problems you encounter should be able to be found in the documentation.
+
+If any errors are reported, please read the error message carefully and try removing the plugins until all of them have been removed. If the problem persists, please raise an issue on GitHub or help us fix the problem and initiate a pull request.
+
+The LiteLoaderBDS development team is mostly students, not full-time maintainers or customer service, and have a lot of academic pressure. Hence, please do not report any issues to us in ways other than issues. What's more, DO NOT urge us to do anything.
+
+If you think you can accept the above instructions, you are welcome to join the LiteLoaderBDS circle and let's grow the LiteLoaderBDS ecology hand in hand!
+
 ## 💻 Install LiteLoaderBDS
 
 ### Install on Windows (Recommended)
