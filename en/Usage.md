@@ -15,7 +15,7 @@ Follow these steps to install:
 1. Download and unzip Bedrock Dedicated Server for Minecraft (BDS) supported by the latest version of LiteLoaderBDS from [Minecraft Wiki](https://minecraft.fandom.com/wiki/Bedrock_Dedicated_Server#Download). Visit [our home page](https://www.litebds.com) to see the supported version.
 2. Download the latest version of LiteLoaderBDS from [GitHub releases](https://github.com/LiteLDev/LiteLoader/releases/latest).
 3. Unzip the achieve file you downloaded in step 2, putting all files in the directory of BDS. If conflicts occurs, overwrite the files.
-4. Check if the `bedrock_server.pdb` file exists. If not, download [here](https://github.com/LiteLDev/LiteLoader/releases/latest) and put them in the directory of BDS.
+4. Ensure that the `bedrock_server.pdb` file exists.
 5. In the directory of BDS, run `LLPeEditor.exe` and wait until the program hints to close it.
 6. In the directory of BDS, run `bedrock_server_mod.exe` to launch the server. Note that you should always run `bedrock_server_mod.exe` to launch ther server. Otherwise, not only features provided by LiteLoaderBDS are unavailable but also some bugs will occur, causing various unexpected crashes.
 
