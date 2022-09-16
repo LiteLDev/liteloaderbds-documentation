@@ -438,6 +438,13 @@
     pl:setFire(20,true)
     ```
 
+#### Put Out The Player
+
+`pl.stopFire()`
+
+- Return value: Has been extinguished.
+- Return value type: `Boolean`
+
 #### 缩放玩家
 
 `en.setScale(scale)`
