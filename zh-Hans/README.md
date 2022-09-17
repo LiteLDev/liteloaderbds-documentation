@@ -4,48 +4,76 @@
 [![Latest Tag](https://img.shields.io/github/v/tag/LiteLDev/LiteLoader?label=LATEST%20TAG&style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/releases/latest)
 [![Downloads@Latest](https://img.shields.io/github/downloads/LiteLDev/LiteLoader/latest/total?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/releases/latest)
 
-## 🎨 项目简介
-`LiteLoaderBDS`（以下简称**LL**）是一个基岩版官方服务端`Bedrock Dedicated Server`（以下简称**BDS**）插件框架，提供强大的跨语言脚本插件支持能力和稳定的开发API支持。
+## 🎨 什么是LiteLoaderBDS？
 
-👉[点击此处](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/README_zh-cn.md)👈 查看对LL项目更详细的解释说明
-<br>
+`LiteLoaderBDS`（以下简称**LL**）是一个用于Minecraft基岩版官方服务端`Bedrock Dedicated Server`（以下简称**BDS**）的插件加载器，提供强大的跨语言脚本插件支持能力和稳定的API支持。
 
-## 🔨 加载器安装 与 使用指南
+👉[点击此处](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/README_zh-cn.md)👈 查看更详细的介绍。
 
-这里介绍了如何为BDS服务端安装`LiteLoaderBDS`加载器，如何修改配置，以及如何安装插件
+## 🔨 如何安装和使用LiteLoaderBDS？
 
-👉[点击此处](/Usage.md)👈 查看`LiteLoaderBDS`安装和使用文档
-<br>
+👉[点击此处](/Usage.md)👈 查看安装和使用指南。
 
-## ❓常见问题
+## ❓ 我遇到了问题，怎么办？
 
-安装和使用`LiteLoaderBDS` 过程中遇到问题？这里有一些常见问题的解决方法
+👉[点击此处](/FAQ.md)👈 查看常见问题与解决方法。
 
-👉[点击此处](/FAQ.md)👈 查看常见问题与解决方法
-<br>
+如果你的问题还没有被解决，请在我们的Discord群组、Telegram群组、QQ群或GitHub Issues提问。
 
-## ⛳ 原生平台 - 开发指南 与 API文档
+## 🛴 我想动手写一个插件，要怎么做呢？
 
-使用`C++`、`Go`等编译型语言开发插件，拥有海量API，自由实现你的任意想法
+首先你需要根据自己的需要，选择你想创作的插件类型。请仔细阅读以下优缺点分析。
 
-👉[点击此处](https://cpp.docs.litebds.com/zh-Hans/)👈 查看LiteLoaderSDK插件开发文档
-<br>
+一般来说，我们建议使用最符合自己的技术栈的方式编写插件。如果还是无法抉择，请先通过编写脚本插件熟悉**LL**，熟悉后转向编写原生插件。
 
-## 🎯 脚本引擎 - 开发指南 与 API文档
-使用`JavaScript`、`Lua`等脚本语言开发插件，容易上手，功能强大
+### ⛳ 我想写原生插件（C++）
 
-👉[点击此处](/LLSEPluginDevelopment/)👈 查看脚本插件开发文档
-<br>
+优点：
+* 直接与**BDS**底层交互，API最多，可以实现任何服务端功能；
+* 性能较好；
+* 代码容易管理。
 
-## 🪁 .NET平台 - 开发指南 与 API文档
-使用`C#`,`Visual Basic.NET`,`F#`等.NET平台语言开发插件，编写简单，类库丰富
+缺点：
+* 随着Minecraft更新，可能需要拉取新的SDK重新编译；
+* 对编程和调试能力要求较高；
+* 可能存在内存泄漏风险和安全隐患。
 
-👉[点击此处](/DotNETPluginDevelopment/)👈 查看 .NET插件开发文档
-<br>
+建议用于需要对游戏基础功能进行修改的插件，以及任何可能超过五千行代码的插件。
 
-## 🎬 参与 LiteLoaderBDS 项目开发
+准备好了吗？ 👉[点击此处](https://cpp.docs.litebds.com/zh-Hans/)👈 查看C++插件开发文档。
 
-我们欢迎你对`LiteLoaderBDS`做出自己的贡献！
+### 🎯 我想写脚本插件（JavsScript或Lua）
 
-👉[点击此处](/Maintenance/)👈查看 LL项目维护与支持文档
-<br>
+优点：
+* 无需关注**BDS**底层，容易上手开发；
+* 理论上不需要更新，即可支持所有Minecraft版本；
+* 非常安全，且随着**LL**更新，漏洞自动修复。
+
+缺点：
+* 代码管理难度高，随着代码量增加，维护变得困难；
+* API较少，可能无法用于实现偏门的功能；
+* 性能较差。
+
+建议用于不超过五千行代码的玩法类和辅助类插件。
+
+准备好了吗？ 👉[点击此处](/LLSEPluginDevelopment/)👈 查看脚本插件开发文档。
+
+### 🪁 我想写.NET插件（C#、F#或Visual Basic）
+
+优点：
+* 拓展性强，可以直接使用.NET丰富的类库；
+* 性能较好；
+
+缺点：
+* 由第三方开发者维护，可能得不到最新支持；
+* 处于开发阶段，部分功能不稳定。
+
+建议对.NET平台较为熟悉的开发者使用。
+
+准备好了吗？ 👉[点击此处](/DotNETPluginDevelopment/)👈 查看 .NET插件开发文档。
+
+## 🎬 如何参与LiteLoaderBDS维护和开发？
+
+我们欢迎你为**LL**做贡献！
+
+👉[点击此处](/Maintenance/)👈查看项目维护与支持文档。
