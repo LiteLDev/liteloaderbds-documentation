@@ -40,6 +40,22 @@
 | bl.id         | 方块的游戏内id       | `Integer` |
 | bl.pos        | 方块所在坐标         | `IntPos`  |
 | bl.tileData   | 方块数据值          | `Integer` |
+| bl.variant   | The block variant          | `Integer` |
+| bl.translucency   | The block translucency          | `Integer` |
+| bl.thickness   | The block thickness          | `Integer` |
+| bl.isAir   | Whether the block is air          | `Boolean` |
+| bl.isBounceBlock   | Whether the block is bounce          | `Boolean` |
+| bl.isButtonBlock   | Whether the block is button          | `Boolean` |
+| bl.isCropBlock   | Whether the block is crop          | `Boolean` |
+| bl.isDoorBlock   | Whether the block is door          | `Boolean` |
+| bl.isFenceBlock   | Whether the block is fence          | `Boolean` |
+| bl.isFenceGateBlock   | Whether the block is fence gate          | `Boolean` |
+| bl.isThinFenceBlock   | Whether the block is thin fence block          | `Boolean` |
+| bl.isHeavyBlock   | Whether the block is heavy          | `Boolean` |
+| bl.isStemBlock   | Whether the block is stem          | `Boolean` |
+| bl.isSlabBlock   | Whether the block is slab          | `Boolean` |
+| bl.isUnbreakable   | Whether the block is unbreakable          | `Boolean` |
+| bl.isWaterBlockingBlock   | Whether the block is can block water          | `Boolean` |
 
 这些对象属性都是只读的，无法被修改
 
