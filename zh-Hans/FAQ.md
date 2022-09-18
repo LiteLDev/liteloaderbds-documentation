@@ -2,7 +2,7 @@
 
 ## 本项目的1.0版本基于什么？
 
-bdsx/bdsx。
+Sysca11/BedrockX
 
 ## 为什么我用Linux发行版开服内存占用这么高？
 
@@ -12,7 +12,7 @@ bdsx/bdsx。
 
 LiteLoaderBDS支持协议号相同的所有版本。
 
-LiteLoaderBDS会在开服时输出服务器版本及支持的协议版本，你也可以通过`/version`指令查询
+LiteLoaderBDS会在开服时输出服务器版本及当前协议版本，你也可以通过`/version`指令查询
 
 ## C++（原生）插件是否支持Minecraft不同版本？
 
@@ -26,15 +26,9 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 
 - `126`：依赖库缺失，请检查插件安装是否完整
 
-- `127`：插件与当前版本的LiteLoaderBDS不适配
+- `127`：插件与当前版本的LiteLoaderBDS或依赖库不适配
 
-## 没法在Linux发行版上启动服务器怎么办呢？
-
-尝试删除`/plugins/LiteLoader/LLAutoUpdate.dll`
-
-如果你的服务器的可用内存少于1.2GB，请尝试释放内存，因为在低内存环境中LiteLoaderBDS可能无法正常启动
-
-## 如果崩溃日志出现奇怪的符号怎么办？
+## 崩溃日志中LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll条目无法正常显示怎么办？
 
 从[Release](https://github.com/LiteLDev/LiteLoaderBDS/releases)下载对应版本的`PDB.zip`，将其解压至以下任一文件夹内:
 - `/`
@@ -47,10 +41,11 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 
 * 可能是不同插件注册了同一个命令，请删除部分冲突插件；
 * 可能是一个插件内进行了多次命令注册，请找插件开发者修复问题。
+* 该插件使用了旧的假指令API并同时使用了`mc.regPlayerCmd`和`mc.regConsoleCmd`，这导致插件会向BDS注册两次相同的命令，但由于假指令API是基于监听`onPlayerCmd`和`onConsoleCmd`事件实现的，并非使用BDS提供的Overload，所以重复注册两次不会导致BDS出现异常，所以并不会影响使用
 
 ## 服务端崩溃了，怎么办？
 
 请打开`/logs/Crash/`下的崩溃日志文件，查看错误原因。
 
-* 如果你看到了类似`STL Exception`或`NTDLL`字样，那么大概率是某个插件出现错误，请将所有插件移除，然后逐个添加同时测试，以排除插件问题；
-* 如果所有插件移除后，依然有相同错误，请在GitHub Issues、Telegram群组、Discord群组或QQ群中向我们提问。
+* 如果日志的前几条都是`bedrock_server_mod.exe`的错误，十有八九就是BDS自身的问题
+* 如果遇到日志中存在LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll，请参考[这里](#崩溃日志中LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll条目无法正常显示怎么办？)

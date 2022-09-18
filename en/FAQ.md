@@ -23,12 +23,6 @@ Yes, except for breaking changes of LiteLoader Script Engine.
 
 - `127`: The plugin is not compatible with the current version of LiteLoaderBDS.
 
-## Why Can't I Start the Server on Linux Distribution?
-
-Try to remove `plugins/LiteLoader/LLAutoUpdate.dll`.
-
-If the free memory of the server is not more than 1.2GB, LiteLoaderBDS may failed to launch.
-
 ## Why Are There So Many Incomprehensible Symbols In the Crash Log?
 
 Download the corresponding version of `PDB.zip` to the LiteLoaderBDS version of your server from [Release](https://github.com/LiteLDev/LiteLoaderBDS/releases), and extract it to one of the following folders:
@@ -42,3 +36,4 @@ Some of the commands are duplicated, you can:
 
 * Delete some conflicting plugins, if different plugins register an identical command;
 * Report the issue to the plugin developer, if a command is registered more than once by a plugin.
+* The plugin uses the old fake command API and calls both `mc.regPlayerCmd` and `mc.regConsoleCmd`, which causes the plugin to register the same command twice with BDS, but since the fake command API is based on listening to `onPlayerCmd` and `onConsoleCmd` event is not implemented using the Overload provided by BDS, so repeating the registration twice will not cause an exception in BDS, so it will not affect the use of
