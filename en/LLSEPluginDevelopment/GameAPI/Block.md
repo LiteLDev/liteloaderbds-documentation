@@ -39,6 +39,22 @@ Every block object contains some fixed object properties. for a specific block o
 | bl.id         | The in-game id of the block       | `Integer` |
 | bl.pos        | The coordinates of the block         | `IntPos`  |
 | bl.tileData   | The block's data value          | `Integer` |
+| bl.variant   | The block variant          | `Integer` |
+| bl.translucency   | The block translucency          | `Integer` |
+| bl.thickness   | The block thickness          | `Integer` |
+| bl.isAir   | Whether the block is air          | `Boolean` |
+| bl.isBounceBlock   | Whether the block is bounce          | `Boolean` |
+| bl.isButtonBlock   | Whether the block is button          | `Boolean` |
+| bl.isCropBlock   | Whether the block is crop          | `Boolean` |
+| bl.isDoorBlock   | Whether the block is door          | `Boolean` |
+| bl.isFenceBlock   | Whether the block is fence          | `Boolean` |
+| bl.isFenceGateBlock   | Whether the block is fence gate          | `Boolean` |
+| bl.isThinFenceBlock   | Whether the block is thin fence block          | `Boolean` |
+| bl.isHeavyBlock   | Whether the block is heavy          | `Boolean` |
+| bl.isStemBlock   | Whether the block is stem          | `Boolean` |
+| bl.isSlabBlock   | Whether the block is slab          | `Boolean` |
+| bl.isUnbreakable   | Whether the block is unbreakable          | `Boolean` |
+| bl.isWaterBlockingBlock   | Whether the block is can block water          | `Boolean` |
 
 These object properties are read-only and cannot be modified.
 
