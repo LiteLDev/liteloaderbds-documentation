@@ -48,4 +48,4 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 请打开`/logs/Crash/`下的崩溃日志文件，查看错误原因。
 
 * 如果日志的前几条都是`bedrock_server_mod.exe`的错误，十有八九就是BDS自身的问题
-* 如果遇到日志中存在LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll，请参考[这里](#崩溃日志中LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll条目无法正常显示怎么办？)
+* 如果遇到日志中存在LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll，请参考[这里](#崩溃日志中liteloaderdll或liteloaderluajsnodejsdll条目无法正常显示怎么办？)
