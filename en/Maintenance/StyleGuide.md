@@ -18,7 +18,8 @@
 
 当一个头声明了内联函数或模板时，内联函数和模板也必须在头中有定义。
 
-### 哨兵
+### 头保护
+_防止重复包含头文件_
 
 每个头文件必须包含 `#pragma once` 行。
 
@@ -33,6 +34,7 @@
 ### 前置声明
 
 尽可能避免如下的前置声明。作为替代，请使用头文件包含。
+_尽管这可以提升编译速度，且更改头文件后不需要重新编译，但是依赖关系变得不明确。_
 
 ```cpp
 // In a C++ source file:
@@ -153,9 +155,9 @@ class ExampleClass {
 示例如下：
 
 ```cpp
-AddTableEntry()
-DeleteUrl()
-OpenFileOrDie()
+addTableEntry()
+deleteUrl()
+openFileOrDie()
 ```
 
 (同样的命名规则适用于作为API的一部分被暴露出来的类和命名空间范围的常量，这些常量旨在看起来像函数，因为它们是对象而不是函数这一事实是一个不重要的实现细节。)
@@ -164,15 +166,16 @@ OpenFileOrDie()
 
 ### 命名空间名称
 
-命名空间使用大驼峰命名法。顶层命名空间的名称是 `LL` 。避免嵌套的名字空间和顶级名字空间之间的冲突。
+命名空间使用snake_case命名法。顶层命名空间的名称是 `ll` 。避免嵌套的名字空间和顶级名字空间之间的冲突。
+_尽量使用单个单词作为命名空间的名称。_
 
 除顶层命名空间外，每个命名空间中的代码通常应在一个目录中，目录名与命名空间的名称一致。
 
-请注意，`/Utils/` 中的代码不应当放在 `LL` 命名空间内，而是有且**必须有**自己独立的命名空间。请不要污染全局命名空间。
+请注意，`/utils/` 中的代码不应当放在 `ll` 命名空间内，而是有且**必须有**自己独立的命名空间。请不要污染全局命名空间。
 
 请记住，反对缩写的规则一样适用于命名空间。命名空间内的代码很少需要提到命名空间的名字，所以通常没有特别需要缩写。
 
-避免嵌套的名称空间与知名的顶级名称空间相匹配。由于名称查询规则，名称空间名称之间的碰撞可能导致令人惊讶的构建中断。特别是，不要创建任何嵌套的std命名空间。优先选择独特的项目标识符（例如 `WebSearch::Index` , `WebSearch::IndexUtil` ），而不是像 `Web::Util` 这样容易发生碰撞的名字。也要避免命名空间嵌套过深。
+避免嵌套的名称空间与知名的顶级名称空间相匹配。由于名称查询规则，名称空间名称之间的碰撞可能导致令人惊讶的构建中断。特别是，不要创建任何嵌套的std命名空间。优先选择独特的项目标识符（例如 `web_search::Index` , `web_search::IndexUtil` ），而不是像 `web::Util` 这样容易发生碰撞的名字。也要避免命名空间嵌套过深。
 
 ### 枚举器名称
 
@@ -212,7 +215,7 @@ constexpr long long LONGLONGMAX;
 
 &emsp;&emsp;文件注释、类注释和函数注释应当采用Javadoc风格的Doxygen注释，详见下文；单行注释和行尾注释应当采用 `//` 风格；函数参数注释应当采用 `/* */` 风格。
 
-&emsp;&emsp;所有注释中，若存在能在Doxygen文档中显示的内容，则必须采用i18n的书写方式，每种语言间隔两行，示例参见下文，英文必须放在最后。请注意：类似 `@file` 这些不显示且用于Doxygen索引的特殊命令，不得写多个，请统一放在最前面。
+&emsp;&emsp;所有注释均使用英文，翻译使用Crowdin。
 
 ### 文件注释
 
@@ -238,11 +241,6 @@ constexpr long long LONGLONGMAX;
 /**
  * @file ExampleDirectory/ExampleComponent.h
  *
- * \~chinese
- * @brief 本文件包含示例接口。
- * 
- *
- * \~english
  * @brief This file contains example interfaces.
  *
  */
@@ -262,20 +260,6 @@ constexpr long long LONGLONGMAX;
 
 ```cpp
 /**
- * \~chinese
- * @brief 这个类做一些工作。
- *
- * @par 示例程序：
- * @code
- * ExampleClass ex("example", 114514);
- * ex.doExampleThings();
- * for (auto& ex_unit : ex.getExampleList()) {
- *   process(ex_unit);
- * }
- * @endcode
- *
- *
- * \~english
  * @brief The ExampleClass class does example jobs.
  *
  * @par Example:
@@ -321,25 +305,6 @@ constexpr long long LONGLONGMAX;
 
 ```cpp
 /**
- * \~chinese
- * @brief 从 `example_para3` 提取信息。
- * 
- * @param example_para1 样例数字
- * @param example_para2 样例浮点数
- * @param example_para3 样例字符串
- * @return int 样例返回值
- * 
- * @par 做一些事情。
- * @par 示例程序：
- * @code
- * std::string example_str = "Example";
- * LL::doExampleThing(1, 2.1, example_str);
- * @endcode
- * @note 本函数是一个样例。
- * @warning 本函数已经被弃用。请使用 `LL::doExmapleThingEx()` 替代。
- *
- *
- * \~english
  * @brief Extracts the example thing from `example_para3`.
  * 
  * @param example_para1 The example number
@@ -401,11 +366,6 @@ int doExampleThing(int example_para1, double example_para2, std::string example_
 class ExampleClass {
  public:
   /**
-   * \~chinese
-   * @brief 样例数据成员
-   * 
-   * 
-   * \~english
    * @brief Example data member
    */
   int public_example;
@@ -491,13 +451,6 @@ TODO应该包括 `@todo`，后面是名字、e-mail地址、Issue ID或者其他
 
 ```cpp
 /**
- * \~chinese
- * @todo (kl@gmail.com) 需要做一些事情。
- * @todo (Zeke) 修改某些东西。
- * @todo (#12345) 想办法删除这段屎山代码。
- * 
- *
- * \~english
  * @todo (kl@gmail.com) Use a "*" here for concatenation operator.
  * @todo (Zeke) Change this to use relations.
  * @todo (#12345) Remove the "Last visitors" feature.
