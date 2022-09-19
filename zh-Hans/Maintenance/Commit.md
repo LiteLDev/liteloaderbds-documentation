@@ -128,6 +128,7 @@ git rebase -i HEAD~5 #以当前HEAD往前5个commit，执行交互式rebase
 - 大型依赖请尽量保留原项目结构，小型项目请确保分类明确
 
 以下为外部依赖结构示例
+```
 |-- third_party
     |-- libname
     |   |-- include
@@ -136,3 +137,4 @@ git rebase -i HEAD~5 #以当前HEAD往前5个commit，执行交互式rebase
     |   |   |-- lib.cpp
     |-- header_only_libname
     |   |-- header_only.h
+```
