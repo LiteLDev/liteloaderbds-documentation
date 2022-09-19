@@ -44,7 +44,7 @@
 
 &emsp;&emsp;以保证头文件不被重复编译。头文件内的函数尽量全部使用 `inline` 使得编译器在头文件循环引用时可以忽略多重定义，选取其中一个。除模板外，函数的定义尽量与实现分开。
 
-## 文件结构
+## 项目结构
 LiteLoader
 ___
 ```
@@ -110,13 +110,13 @@ LiteLoader
 ```cpp
 
 // In xxx.h
-pragma once
+#pragma once
 
-pragma warning(disable : xxxx)
+#pragma warning(disable : xxxx)
 
 // Some code
 
-pragma warning(default : xxxx)
+#pragma warning(default : xxxx)
 
 ```
 
@@ -197,15 +197,15 @@ bool *Player::canEat() {
 
   ... some code ....
 
-    bool FoundFood = false;
+    bool found_food = false;
     for (unsigned I = 0, E = BarList.size(); I != E; ++I){
         if (BarList[I]->isFood()) {
-        FoundFood = true;
+        found_food = true;
         break;
         }
     }
 
-if (FoundFood) {
+if (found_food) {
   ...
 }
 
