@@ -61,7 +61,7 @@ namespace ll::mc_utils { // 尽量避免使用多个单词
   - `Boats`
 
 
-- 成员变量
+- 私有成员变量
   
   应当采用m开头的驼峰式命名
   
@@ -107,10 +107,11 @@ namespace ll::mc_utils { // 尽量避免使用多个单词
 
 ```cpp
 class VehicleMaker {
+private:
   ...
-  Factory<Tire> F;            // 避免：非描述性缩写.
-  Factory<Tire> Factory;      // 更好：采用描述性的命名.
-  Factory<Tire> TireFactory;  // 更更好：描述性的命名，如果有不同的工厂类.
+  Factory<Tire> f;            // 避免：非描述性缩写.
+  Factory<Tire> mFactory;      // 更好：采用描述性的命名.
+  Factory<Tire> mTireFactory;  // 更更好：描述性的命名，如果有不同的工厂类.
                               // 不同的工厂类型
 };
 
