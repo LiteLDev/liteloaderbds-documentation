@@ -40,8 +40,8 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 命令被重复注册了，请参考以下方式排除问题：
 
 * 可能是不同插件注册了同一个命令，请删除部分冲突插件；
-* 可能是一个插件内进行了多次命令注册，请找插件开发者修复问题。
-* 该插件使用了旧的假指令API并同时使用了`mc.regPlayerCmd`和`mc.regConsoleCmd`，这导致插件会向BDS注册两次相同的命令，但由于假指令API是基于监听`onPlayerCmd`和`onConsoleCmd`事件实现的，并非使用BDS提供的Overload，所以重复注册两次不会导致BDS出现异常，所以并不会影响使用
+* 可能是一个插件内进行了多次命令注册，请找插件开发者修复问题；
+* 可能是某个插件使用了旧的假指令API，且同时使用了`mc.regPlayerCmd`和`mc.regConsoleCmd`，这导致插件会向BDS注册两次相同的命令，但由于假指令API是基于监听`onPlayerCmd`和`onConsoleCmd`事件实现的，并非使用BDS提供的Overload，所以重复注册两次不会导致BDS出现异常，所以并不会影响使用。
 
 ## 服务端崩溃了，怎么办？
 
