@@ -77,7 +77,7 @@
 
 首先你需要参考[本教程](https://github.com/twoone-3/BDSpyrunner/wiki)安装BDSpyrunner。
 
-准备好了吗？ 👉[点击此处](https://github.com/twoone-3/BDSpyrunner/wiki/Devlopment#%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6)👈 查看Python插件开发文档。
+准备好了吗？ 👉[点击此处](https://github.com/twoone-3/BDSpyrunner/wiki/Devlopment)👈 查看Python插件开发文档。
 
 ### 🪁 我想写.NET插件（C#、F#或Visual Basic）
 

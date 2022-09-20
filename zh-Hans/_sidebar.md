@@ -73,6 +73,8 @@
             - [🎚️ 函数类型NativeFunction](LLSEPluginDevelopment/NativeAPI/NativeFunction.md)
             - [🛠️ 补丁工具NativePatch](LLSEPluginDevelopment/NativeAPI/NativePatch.md)
 
+    - [🍳 Python插件开发](https://github.com/twoone-3/BDSpyrunner/wiki/Devlopment)
+
     - 🪁 .NET插件开发
         - [⛳ 新手入门（必读）](/DotNETPluginDevelopment/README.md)
 
@@ -103,10 +105,9 @@
 - 🎬 维护者指南
     - [⛳ 欢迎！](/Maintenance/README.md)
     - [🔮 Git使用以及项目Commit规范](/Maintenance/Commit.md)
-    - [🎯 项目 C++ 代码编写标准](/Maintenance/Format.md)
     - [🚥 C++风格指南](/Maintenance/StyleGuide.md)
     - [💡 放在最后](/Maintenance/Conclusion.md)
-    - [👓 项目架构分析（待重写）](/Maintenance/Analysis.md)
-    - [🎯 维护项目和贡献代码（待补充）](/Maintenance/Coding.md)
+    - [👓 项目架构分析（待完善）](/Maintenance/Analysis.md)
+    - [🎯 维护项目和贡献代码（待完善）](/Maintenance/Coding.md)
 
 - [💦 更新日志](https://github.com/LiteLDev/LiteLoaderBDS/releases)
