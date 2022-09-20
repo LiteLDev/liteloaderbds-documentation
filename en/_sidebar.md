@@ -32,7 +32,7 @@
     - Event System
         - [🔔 Event Listeners](/LLSEPluginDevelopment/EventAPI/Listen.md)
         - [🏃‍♂️ Player Events List](/LLSEPluginDevelopment/EventAPI/PlayerEvents.md)
-        - [🎈 Entitty Events List](/LLSEPluginDevelopment/EventAPI/EntityEvents.md)
+        - [🎈 Entity Events List](/LLSEPluginDevelopment/EventAPI/EntityEvents.md)
         - [📦 Block Event List](/LLSEPluginDevelopment/EventAPI/BlockEvents.md)
         - [🔊 Other Event List](/LLSEPluginDevelopment/EventAPI/OtherEvents.md)
         - [💰 Economic System Events](/LLSEPluginDevelopment/EventAPI/EconomicEvents.md)
