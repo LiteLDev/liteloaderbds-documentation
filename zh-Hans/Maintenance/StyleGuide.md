@@ -302,7 +302,7 @@ constexpr long long LONGLONGMAX;
 
 #### 函数声明
 
-几乎每一个函数声明都应该在其前面有注释，描述该函数的作用以及如何使用它。只有在函数简单而明显的情况下才可以省略这些注释（例如，对类的明显属性的简单访问器）。在 `.cpp` 文件中声明的私有方法和函数也不例外。函数注释应该以该函数的隐含主语来写，并且应该以动词短语开始；例如，"Opens the file"，而不是 "Open the file"。一般来说，这些注释并不描述该函数如何执行其任务。相反，这应该留给函数定义中的注释。
+几乎每一个函数声明都应该在其前面有注释，描述该函数的作用以及如何使用它。只有在函数简单而明显的情况下才可以省略这些注释（例如，对类的明显属性的简单访问器）。在 `.cpp` 文件中声明的私有方法和函数也不例外。函数注释应该以该函数的隐含主语来写，并且应该以动词短语开始；例如，"Opens the file"，而不是 "Open the file"，因为完整的句子是 "This function opens the file"。一般来说，这些注释并不描述该函数如何执行其任务。相反，这应该留给函数定义中的注释。
 
 注释应当分为两个部分，第一部分是对函数行为的一句话描述，并应该写在 `@brief` 后；第二部分是对函数的详细注释，应包含一句话描述的相近内容，并写在注释的最后。
 
@@ -324,6 +324,9 @@ constexpr long long LONGLONGMAX;
 
 在注释构造函数和析构函数时，请记住，阅读你的代码的人知道构造函数和析构函数的用途，所以只说 "销毁此对象 "这样的话的注释是没有用的。记录下构造函数对它们的参数做了什么（例如，如果它们取得了指针的所有权），以及析构函数做了什么清理工作。如果这很微不足道，就跳过这个注释。析构函数没有头注释是很常见的。
 
+> [!WARNING]
+> 参数注释和返回值注释不要写类型！否则会给翻译工作者带来极大困扰。
+
 示例如下：
 
 ```cpp
@@ -333,7 +336,7 @@ constexpr long long LONGLONGMAX;
  * @param example_para1 The example number
  * @param example_para2 The example offset
  * @param example_para3 The example string to be extracted
- * @return int The example value extracted from the string
+ * @return The example value extracted from the string
  * 
  * @par Extracts substrings matching the example rule from `example_para3` according to
  * `example_para1`, then offsetting them by `example_para2` and returning the
