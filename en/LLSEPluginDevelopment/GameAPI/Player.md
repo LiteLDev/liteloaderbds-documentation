@@ -11,14 +11,14 @@ For details, see [Event listener documentation - EventAPI](/LLSEPluginDevelopmen
 
 #### Acquired From Existing Players
 
-Manually generate player objects by **playername** or **XUID**
+Manually generate player objects by **player information**
 Use this function to manually generate objects. Note that the player you want to get must be online, otherwise the generation will fail.
 
 `mc.getPlayer(info)`
 
 - Parameters: 
   - info : `String`  
-    Player's name or XUID.
+    Player's name or XUID or uniqueId.
 - Return value: The generated player object. 
 - Return value type: `Player`
   - If the return value is `Null`, it means that getting the player failed.
