@@ -197,6 +197,45 @@
     pl:tell("Welcome back ~ ", 5)
     ```
 
+#### 设置玩家显示标题  
+
+`pl.setTitle(content[,type[,fadeInTime,stayTime,fadeOutTime]])`
+
+- 参数：
+
+  - content : `String`  
+    欲设置标题内容  
+
+  - type : `Integer`  
+    （可选参数）设置的标题类型，默认为2  
+
+    | type参数 | 消息类型                               |
+    | -------- | -------------------------------------- |
+    | 0        | 清空（Clear）                          |
+    | 1        | 重设（Reset）                          |
+    | 2        | 设置主标题（SetTitle）                 |
+    | 3        | 设置副标题（SetSubTitle）              |
+    | 4        | 设置Actionbar（SetActionBar）          |
+    | 5        | 设置显示时间（SetDurations）           |
+    | 6        | Json型主标题（TitleTextObject）        |
+    | 7        | Json型副标题（SubtitleTextObject）     |
+    | 8        | Json型Actionbar（ActionbarTextObject） |
+
+  - fadeInTime : `Integer`  
+    （可选参数）淡入时间，单位为 `Tick` ，默认为10
+
+  - stayTime: `Integer`
+
+    （可选参数）停留时间，单位为 `Tick` ，默认为70
+
+  - fadeOutTime:`Integer`
+
+    （可选参数）淡出时间，单位为 `Tick`，默认为20
+
+- 返回值：是否成功发送
+
+- 返回值类型：`Boolean`
+
 #### 广播一个文本消息给所有玩家  
 
 `mc.broadcast(msg[,type])`

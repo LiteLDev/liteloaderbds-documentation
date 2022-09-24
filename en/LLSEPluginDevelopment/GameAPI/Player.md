@@ -182,6 +182,45 @@ pl:kick()
 pl.tell("Welcome back ~ ",5);
 ```
 
+#### Set Title Message to the Player 
+
+`pl.setTitle(content[,type[,fadeInTime,stayTime,fadeOutTime]])`
+
+- 参数：
+
+  - content : `String`  
+    The title content. 
+
+  - type : `Integer`  
+    (optional) The title type, default = 2.
+
+    | Types | Description         |
+    | ----- | ------------------- |
+    | 0     | Clear               |
+    | 1     | Reset               |
+    | 2     | SetTitle            |
+    | 3     | SetSubTitle         |
+    | 4     | SetActionBar        |
+    | 5     | SetDurations        |
+    | 6     | TitleTextObject     |
+    | 7     | SubtitleTextObject  |
+    | 8     | ActionbarTextObject |
+
+  - fadeInTime : `Integer`  
+    (optional) Fade in time, in `Tick` , default is 10
+
+  - stayTime: `Integer`
+
+    (optional) Stay time, in `Tick` , default is 10
+
+  - fadeOutTime:`Integer`
+
+    (optional) Fade out time, in `Tick` , default is 10
+
+- Return value：Is send successfully?
+
+- Return value type：`Boolean`
+
 #### Broadcast a Text Message to All Players  
 
 `mc.broadcast(msg[,type])`
