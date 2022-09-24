@@ -101,6 +101,9 @@
 | en.isDancing             | 实体是否在跳舞         | `Boolean`        |
 | en.isSleeping            | 实体是否在睡觉         | `Boolean`        |
 | en.isAngry               | 实体是否生气           | `Boolean`        |
+| en.isBaby                | Whether the entity is baby                             | `Boolean`        |
+| en.isMoving              | Whether the entity is moving                           | `Boolean`        |
+
 
 这些对象属性都是只读的，无法被修改
 
