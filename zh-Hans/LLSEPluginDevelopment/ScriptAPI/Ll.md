@@ -7,26 +7,16 @@
 | 属性           | 类型      | 描述                                                       |
 | ------------- | -------- | ---------------------------------------------------------- |
 | `ll.language` | `String` | LiteLoaderBDS使用的语言。(例如`zh_Hans`、`en`和`ru_RU`) |
-
-### 获取 LiteLoaderBDS 版本
-
-`ll.version()`
-
-- 返回值：加载器版本对象（`Object`）
-
-- 返回值类型： `Object<Integer,Integer,Integer,Boolean>`
-
-  - 对于返回的某个加载器版本对象 ver，有如下这些成员：
-
-  | 成员          | 含义                                  | 类型      |
-  | ------------ | ------------------------------------- | --------- |
-  | ver.major    | 主版本号（如 **2**.1.0 里的 **2**）   | `Integer` |
-  | ver.minor    | 次版本号（如 2.**1**.0 里的 **1**）   | `Integer` |
-  | ver.revision | 修订版本号（如 2.1.**0** 里的 **0**） | `Integer` |
-  | ver.isBeta   | 当前版本是否为测试版                  | `Boolean` |
-  | ver.isDev    | 当前版本是否为开发版                  | `Boolean` |
-  | ver.isRelease| 当前版本是否为发布版本                | `Boolean` |
-
+| `ll.major`    | `Integer` | Major Version Number (ex:  the **2** in **2**.7.1)   |
+| `ll.minor`    | `Integer` | Minor Version Number (ex: the **7** in 2.**7**.1)    |
+| `ll.revision` | `Integer` | Revision Number: (ex: the **1** in 2.7.**1**)  |
+| `ll.status` | `Integer` | Status (`0` is Dev, `1` is Beta, `2` is Release)  |
+| `ll.scriptEngineVersion` | `String` | LiteLoaderBDS Script Engine Version |
+| `ll.isWine`   | `Boolean` | Whether the LiteLoaderBDS started from Wine |
+| `ll.isDebugMode`   | `Boolean` | Whether the LiteLoaderBDS in debug mode  |
+| `ll.isBeta`   | `Boolean` | Whether the current version is a beta version  |
+| `ll.isDev`    | `Boolean` | Whether the current version is a dev version  |
+| `ll.isRelease`| `Boolean` | Whether the current version is a release version  |
 <br>
 
 ### 获取 LiteLoaderBDS 版本字符串
@@ -35,24 +25,6 @@
 
 - 返回值：加载器版本
 - 返回值类型： `String`
-
-<br>
-
-### 获取 LiteLoaderBDS 版本状态
-
-`ll.versionStatus()`
-
-- 返回值: 版本状态（`0` 是 Release，`1` 是 Beta，`2` 是 Dev）
-- 返回值类型:  `Integer`
-
-<br>
-
-### 检查 LiteLoaderBDS 是否处于调试模式
-
-`ll.isDebugMode()`
-
-- 返回值: LiteLoaderBDS 是否处于调试模式
-- 返回值类型:  `Boolean`
 
 <br>
 
@@ -233,15 +205,6 @@
 <br>
 
 依赖库作者可以将相关代码托管在GitHub或Gitee等稳定的大型网站上，并将外链提供给其他开发者以供远程下载使用。
-
-<br>
-
-### 获取脚本引擎版本
-
-`ll.scriptEngineVersion()`
-
-- 返回值: 后端引擎版本
-- 返回值类型:  `String`
 
 <br>
 
