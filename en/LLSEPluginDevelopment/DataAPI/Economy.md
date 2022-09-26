@@ -6,16 +6,16 @@ In order to solve various problems of traditional use of the scoreboard economic
 In addition to the capabilities of the traditional economic system, LLMoney also has additional capabilities such as querying the history of changes in the amount and operating the economy of offline players.  
 LiteLoader is installed with the LLMoney plugin, so you can use this interface directly without additional installation. 
 
-Note: In order to operate the wallets of offline players, the economic system interface uniformly uses XUID as the player's uniform identifier, rather than the common identifiers used elsewhere. For a player pointer `pl`, you can use `pl.xuid` to get his XUID string and pass it in as a parameter. 
-
 ### Set the Player’s Deposit Amount
 
-`money.set(xuid,money)`
+`Player.setMoney(value)`
+
+`money.set(xuid,value)`
 
 - Parameters: 
   - xuid : `String`  
     The XUID identifier of the player.
-  - money : `Integer`  
+  - value : `Integer`  
     Amount of money being set.  
 - Return value: Whether the setting is successful.
 - Return value type: `Boolean`
@@ -23,6 +23,8 @@ Note: In order to operate the wallets of offline players, the economic system in
 <br>
 
 ### Get the Player’s Deposit Amount
+
+`Player.getMoney()`
 
 `money.get(xuid)`
 
@@ -36,12 +38,14 @@ Note: In order to operate the wallets of offline players, the economic system in
 
 ### Increase Player’s Deposit
 
-`money.add(xuid,money)`
+`Player.addMoney(value)`
+
+`money.add(xuid,value)`
 
 - Parameters: 
   - xuid : `String`  
     The XUID identifier of the player.
-  - money : `Integer`  
+  - value : `Integer`  
     The amount of money to add to the player's bank.  
 - Return value: Whether the setting is successful.
 - Return value type: `Boolean`
@@ -49,6 +53,8 @@ Note: In order to operate the wallets of offline players, the economic system in
 <br>
 
 ### Decrease the Player’s Deposit
+
+`Player.reduceMoney(value)`
 
 `money.reduce(xuid,money)`
 
@@ -64,23 +70,34 @@ Note: In order to operate the wallets of offline players, the economic system in
 
 ### Make a Transfer
 
+`Player.transMoney(target,money[,note])`
+
 `money.trans(xuid1,xuid2,money[,note])`
 
 - Parameters: 
   - xuid1 : `String`  
     The XUID identifier of the paying player.
-  - money : `Integer`  
-    The amount of money being transferred.  
+    
   - xuid2 : `String`  
     The XUID identifier of the player who will receive the payment.
+    
+    If you are using `Player.transMoney`, target can be `Player`.
+    
+  - money : `Integer`  
+    The amount of money being transferred.  
+  
   - note : `String`  
     (Optional) Add some text to this transfer.
+  
 - Return value: Whether the transfer is successful.
+
 - Return value type: `Boolean`
 
 <br>
 
 ### Query Historical Payments
+
+`Player.getMoneyHistory(time)`
 
 `money.getHistory(xuid,time)`
 

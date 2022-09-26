@@ -11,14 +11,14 @@ For details, see [Event listener documentation - EventAPI](/LLSEPluginDevelopmen
 
 #### Acquired From Existing Players
 
-Manually generate player objects by **playername** or **XUID**
+Manually generate player objects by **player information**
 Use this function to manually generate objects. Note that the player you want to get must be online, otherwise the generation will fail.
 
 `mc.getPlayer(info)`
 
 - Parameters: 
   - info : `String`  
-    Player's name or XUID.
+    Player's name or XUID or uniqueId.
 - Return value: The generated player object. 
 - Return value type: `Player`
   - If the return value is `Null`, it means that getting the player failed.
@@ -182,6 +182,45 @@ pl:kick()
 //For a `Player` object pl
 pl.tell("Welcome back ~ ",5);
 ```
+
+#### Set Title Message to the Player 
+
+`pl.setTitle(content[,type[,fadeInTime,stayTime,fadeOutTime]])`
+
+- 参数：
+
+  - content : `String`  
+    The title content. 
+
+  - type : `Integer`  
+    (optional) The title type, default = 2.
+
+    | Types | Description         |
+    | ----- | ------------------- |
+    | 0     | Clear               |
+    | 1     | Reset               |
+    | 2     | SetTitle            |
+    | 3     | SetSubTitle         |
+    | 4     | SetActionBar        |
+    | 5     | SetDurations        |
+    | 6     | TitleTextObject     |
+    | 7     | SubtitleTextObject  |
+    | 8     | ActionbarTextObject |
+
+  - fadeInTime : `Integer`  
+    (optional) Fade in time, in `Tick` , default is 10
+
+  - stayTime: `Integer`
+
+    (optional) Stay time, in `Tick` , default is 10
+
+  - fadeOutTime:`Integer`
+
+    (optional) Fade out time, in `Tick` , default is 10
+
+- Return value：Is send successfully?
+
+- Return value type：`Boolean`
 
 #### Broadcast a Text Message to All Players  
 
