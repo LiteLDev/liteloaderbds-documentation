@@ -96,6 +96,7 @@
 | pl.isCreative            | 玩家是否是创造模式                  | `Boolean`        |
 | pl.isFlying              | 玩家是否在飞行                    | `Boolean`        |
 | pl.isSleeping            | Player is sleeping               | `Boolean`        |
+| pl.isMoving              | Player is moving                                             | `Boolean`        |
 
 这些对象属性都是只读的，无法被修改。其中：
 
