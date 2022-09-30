@@ -37,3 +37,8 @@ Some of the commands are duplicated, you can:
 * Delete some conflicting plugins, if different plugins register an identical command;
 * Report the issue to the plugin developer, if a command is registered more than once by a plugin.
 * The plugin uses the old fake command API and calls both `mc.regPlayerCmd` and `mc.regConsoleCmd`, which causes the plugin to register the same command twice with BDS, but since the fake command API is based on listening to `onPlayerCmd` and `onConsoleCmd` event is not implemented using the Overload provided by BDS, so repeating the registration twice will not cause an exception in BDS, so it will not affect the use of
+
+## Client chunk error
+
+This is caused by fake seed and client chunk pre-generation  
+If you met this error, just disable `ClientChunkPreGeneration` in `plugins/LiteLoader/LiteLoader.json`
