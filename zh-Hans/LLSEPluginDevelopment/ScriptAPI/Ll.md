@@ -4,19 +4,19 @@
 
 ### Properties
 
-| 属性           | 类型      | 描述                                                       |
-| ------------- | -------- | ---------------------------------------------------------- |
-| `ll.language` | `String` | LiteLoaderBDS使用的语言。(例如`zh_Hans`、`en`和`ru_RU`) |
-| `ll.major`    | `Integer` | 主版本号（如 **2**.1.0 里的 **2**） |
-| `ll.minor`    | `Integer` | 次版本号（如 2.**1**.0 里的 **1**） |
-| `ll.revision` | `Integer` | 修订版本号（如 2.1.**0** 里的 **0**） |
-| `ll.status` | `Integer` | 版本状态 (`0`为Dev, `1`为Beta, `2`为Release)  |
-| `ll.scriptEngineVersion` | `String` | LiteLoaderBDS Script Engine版本 |
-| `ll.isWine`   | `Boolean` | 是否处于Wine花几年下 |
-| `ll.isDebugMode`   | `Boolean` | 是否处于debug模式  |
-| `ll.isBeta`   | `Boolean` | 当前版本是否为测试版 |
-| `ll.isDev`    | `Boolean` | 当前版本是否为开发版 |
-| `ll.isRelease`| `Boolean` | 当前版本是否为发布版本 |
+| 属性                     | 类型      | 描述                                                    |
+| ------------------------ | --------- | ------------------------------------------------------- |
+| `ll.language`            | `String`  | LiteLoaderBDS使用的语言。(例如`zh_Hans`、`en`和`ru_RU`) |
+| `ll.major`               | `Integer` | 主版本号（如 **2**.1.0 里的 **2**）                     |
+| `ll.minor`               | `Integer` | 次版本号（如 2.**1**.0 里的 **1**）                     |
+| `ll.revision`            | `Integer` | 修订版本号（如 2.1.**0** 里的 **0**）                   |
+| `ll.status`              | `Integer` | 版本状态 (`0`为Dev, `1`为Beta, `2`为Release)            |
+| `ll.scriptEngineVersion` | `String`  | LiteLoaderBDS Script Engine版本                         |
+| `ll.isWine`              | `Boolean` | 是否处于Wine花几年下                                    |
+| `ll.isDebugMode`         | `Boolean` | 是否处于debug模式                                       |
+| `ll.isBeta`              | `Boolean` | 当前版本是否为测试版                                    |
+| `ll.isDev`               | `Boolean` | 当前版本是否为开发版                                    |
+| `ll.isRelease`           | `Boolean` | 当前版本是否为发布版本                                  |
 <br>
 
 ### 获取 LiteLoaderBDS 版本字符串
@@ -59,14 +59,14 @@
   
   - 对于返回的某个插件对象 plugin，有如下这些属性：  
 
-  | 属性               | 描述                  | 类型      |
-  | ----------------- | --------------------- | -------- |
-  | plugin.name       | 插件名称               | `String` |
-  | plugin.desc       | 插件描述               | `String` |
-  | plugin.version    | 插件版本（数组形式）     | `Array<Integer,Integer,Integer>` |
-  | plugin.versionStr | 插件版本               | `String` |
-  | plugin.filePath   | 插件路径               | `String` |
-  | plugin.others     | 其他信息               | `Object` |
+  | 属性              | 描述                 | 类型                             |
+  | ----------------- | -------------------- | -------------------------------- |
+  | plugin.name       | 插件名称             | `String`                         |
+  | plugin.desc       | 插件描述             | `String`                         |
+  | plugin.version    | 插件版本（数组形式） | `Array<Integer,Integer,Integer>` |
+  | plugin.versionStr | 插件版本             | `String`                         |
+  | plugin.filePath   | 插件路径             | `String`                         |
+  | plugin.others     | 其他信息             | `Object`                         |
 
 <br>
 
@@ -131,23 +131,23 @@
 
 #### 远程调用参数类型对照，其中Type可以为其他受支持的类型
 
-| C++层类型 | 脚本引擎类型 | .NET引擎类型 | 内部类型（备注） |
-| -- | -- | -- | -- |
-| `std::nullptr_t` | `Null` | `null` / `Nothing` / `nullptr`| `std::nullptr_t` |
-| `bool` | `Boolean` | `Boolean` | `bool` |
-| `__int64`, `double`... | `Number` | `Int64`, `Double`... | `RemoteCall::NumberType` |
-| `std::string` | `String` | `String` | `std::string` |
-| `std::vector<Type>` | `Array` | `List<Type>` | `std::vector<Type>` |
-| `std::unordered_map<std::string,Type>` | `Object` | `Dictionary<String,Type>` | `std::unordered_map<std::string,Type>` |
-| `Actor*` | `Entity` | `MC.Actor` | `Actor*` |
-| `Player*` | `Player` | `MC.Player` | `Player*` |
-| `ItemStack*`, `std::unique_ptr<ItemStack>` | `Item` | `RemoteCall.ItemType` | `RemoteCall::ItemType` |
-| `Block*`, `BlockInstance` | `Block` | `RemoteCall.BlockType` | `RemoteCall::BlockType` |
-| `BlockActor*` | `BlockActor` | `MC.BlockActor` | `BlockActor*` |
-| `Container*` | `Container` | `MC.Container` | `Container*` |
-| `Vec3`,`std::pair<Vec3,int>` | `FloatPos` | `MC.Vec3`,`RemoteCall.WorldPosType` | `RemoteCall::WorldPosType` |
-| `BlockPos`,`std::pair<BlockPos, int>` | `IntPos` | `MC.BlockPos`,`RemoteCall.BlockPosType` | `RemoteCall::BlockPosType` |
-| `CompoundTag*`,`std::unique_ptr<CompoundTag>` | `NBTCompound` | `RemoteCall.NbtType` | `RemoteCall::NbtType` |
+| C++层类型                                     | 脚本引擎类型  | .NET引擎类型                            | 内部类型（备注）                       |
+| --------------------------------------------- | ------------- | --------------------------------------- | -------------------------------------- |
+| `std::nullptr_t`                              | `Null`        | `null` / `Nothing` / `nullptr`          | `std::nullptr_t`                       |
+| `bool`                                        | `Boolean`     | `Boolean`                               | `bool`                                 |
+| `__int64`, `double`...                        | `Number`      | `Int64`, `Double`...                    | `RemoteCall::NumberType`               |
+| `std::string`                                 | `String`      | `String`                                | `std::string`                          |
+| `std::vector<Type>`                           | `Array`       | `List<Type>`                            | `std::vector<Type>`                    |
+| `std::unordered_map<std::string,Type>`        | `Object`      | `Dictionary<String,Type>`               | `std::unordered_map<std::string,Type>` |
+| `Actor*`                                      | `Entity`      | `MC.Actor`                              | `Actor*`                               |
+| `Player*`                                     | `Player`      | `MC.Player`                             | `Player*`                              |
+| `ItemStack*`, `std::unique_ptr<ItemStack>`    | `Item`        | `RemoteCall.ItemType`                   | `RemoteCall::ItemType`                 |
+| `Block*`, `BlockInstance`                     | `Block`       | `RemoteCall.BlockType`                  | `RemoteCall::BlockType`                |
+| `BlockActor*`                                 | `BlockActor`  | `MC.BlockActor`                         | `BlockActor*`                          |
+| `Container*`                                  | `Container`   | `MC.Container`                          | `Container*`                           |
+| `Vec3`,`std::pair<Vec3,int>`                  | `FloatPos`    | `MC.Vec3`,`RemoteCall.WorldPosType`     | `RemoteCall::WorldPosType`             |
+| `BlockPos`,`std::pair<BlockPos, int>`         | `IntPos`      | `MC.BlockPos`,`RemoteCall.BlockPosType` | `RemoteCall::BlockPosType`             |
+| `CompoundTag*`,`std::unique_ptr<CompoundTag>` | `NBTCompound` | `RemoteCall.NbtType`                    | `RemoteCall::NbtType`                  |
 
 #### 远程调用函数举例说明
 

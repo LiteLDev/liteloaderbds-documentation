@@ -4,19 +4,19 @@ Some interfaces related to loader operations are provided here.
 
 ### Properties
 
-| Property      | Type     | Description                                                |
-| ------------- | -------- | ---------------------------------------------------------- |
-| `ll.language` | `String` | The language LiteLoader used.(such as `zh`, `en`, `ru_RU`) |
-| `ll.major`    | `Integer` | Major Version Number (ex:  the **2** in **2**.7.1)   |
-| `ll.minor`    | `Integer` | Minor Version Number (ex: the **7** in 2.**7**.1)    |
-| `ll.revision` | `Integer` | Revision Number: (ex: the **1** in 2.7.**1**)  |
-| `ll.status` | `Integer` | Status (`0` is Dev, `1` is Beta, `2` is Release)  |
-| `ll.scriptEngineVersion` | `String` | LiteLoaderBDS Script Engine Version |
-| `ll.isWine`   | `Boolean` | Whether the LiteLoaderBDS started from Wine |
-| `ll.isDebugMode`   | `Boolean` | Whether the LiteLoaderBDS in debug mode  |
-| `ll.isBeta`   | `Boolean` | Whether the current version is a beta version  |
-| `ll.isDev`    | `Boolean` | Whether the current version is a dev version  |
-| `ll.isRelease`| `Boolean` | Whether the current version is a release version  |
+| Property                 | Type      | Description                                                |
+| ------------------------ | --------- | ---------------------------------------------------------- |
+| `ll.language`            | `String`  | The language LiteLoader used.(such as `zh`, `en`, `ru_RU`) |
+| `ll.major`               | `Integer` | Major Version Number (ex:  the **2** in **2**.7.1)         |
+| `ll.minor`               | `Integer` | Minor Version Number (ex: the **7** in 2.**7**.1)          |
+| `ll.revision`            | `Integer` | Revision Number: (ex: the **1** in 2.7.**1**)              |
+| `ll.status`              | `Integer` | Status (`0` is Dev, `1` is Beta, `2` is Release)           |
+| `ll.scriptEngineVersion` | `String`  | LiteLoaderBDS Script Engine Version                        |
+| `ll.isWine`              | `Boolean` | Whether the LiteLoaderBDS started from Wine                |
+| `ll.isDebugMode`         | `Boolean` | Whether the LiteLoaderBDS in debug mode                    |
+| `ll.isBeta`              | `Boolean` | Whether the current version is a beta version              |
+| `ll.isDev`               | `Boolean` | Whether the current version is a dev version               |
+| `ll.isRelease`           | `Boolean` | Whether the current version is a release version           |
 
 ### Get LiteLoader loader version string
 
@@ -57,14 +57,14 @@ You can choose to judge based on the results and report an error to remind users
 - Return value type:  `Plugin`
   - For a returned plugin object, there are the following members:  
 
-  | Property       | Description                              | Type  |
-  | ------------ | ------------------------------------- | --------- |
-  | plugin.name    | Plugin name                             | `String` |
-  | plugin.desc    | Plugin description                      | `String` |
-  | plugin.version     | Plugin version (array)                  | `Array<Integer,Integer,Integer>` |
-  | plugin.versionStr  | Plugin version (string)             | `String` |
-  | plugin.filePath | Path to plugin                         | `String` |
-  | plugin.others     | Other information                     | `Object` |
+  | Property          | Description             | Type                             |
+  | ----------------- | ----------------------- | -------------------------------- |
+  | plugin.name       | Plugin name             | `String`                         |
+  | plugin.desc       | Plugin description      | `String`                         |
+  | plugin.version    | Plugin version (array)  | `Array<Integer,Integer,Integer>` |
+  | plugin.versionStr | Plugin version (string) | `String`                         |
+  | plugin.filePath   | Path to plugin          | `String`                         |
+  | plugin.others     | Other information       | `Object`                         |
 
 
 <br>

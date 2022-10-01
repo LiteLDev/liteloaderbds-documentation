@@ -84,7 +84,7 @@
 | en.inRain                | 实体是否在雨中         | `Boolean`        |
 | en.inSnow                | 实体是否在雪中         | `Boolean`        |
 | en.inWall                | 实体是否在墙上         | `Boolean`        |
-| en.inWaterOrRain         | 实体是否在水中或雨中    | `Boolean`        |
+| en.inWaterOrRain         | 实体是否在水中或雨中   | `Boolean`        |
 | en.inWorld               | 实体是否在世界中       | `Boolean`        |
 | en.speed                 | 实体当前速度           | `Float`          |
 | en.direction             | 实体当前朝向           | `DirectionAngle` |
@@ -152,39 +152,39 @@
 注意，此处造成的伤害为真实伤害，无法被盔甲等保护装备减免
 
 
-| 伤害类型枚举              |
-| ------------------------ |
-| `ActorDamageCause.Override`|
-| `ActorDamageCause.Contact `   |
-| `ActorDamageCause.EntityAttack` |
-| `ActorDamageCause.Projectile`     |
-| `ActorDamageCause.Suffocation`    |
-| `ActorDamageCause.All`     |
-| `ActorDamageCause.Fire`  |
-| `ActorDamageCause.FireTick`    |
-| `ActorDamageCause.Lava`      |
-| `ActorDamageCause.Drowning `  |
-| `ActorDamageCause.BlockExplosion`   |
-| `ActorDamageCause.EntityExplosion`    |
-| `ActorDamageCause.Void`  |
-| `ActorDamageCause.Suicide`    |
-| `ActorDamageCause.Magic`     |
-| `ActorDamageCause.Wither`     |
-| `ActorDamageCause.Starve`   |
-| `ActorDamageCause.Anvil`    |
-| `ActorDamageCause.Thorns`  |
+| 伤害类型枚举                       |
+| ---------------------------------- |
+| `ActorDamageCause.Override`        |
+| `ActorDamageCause.Contact `        |
+| `ActorDamageCause.EntityAttack`    |
+| `ActorDamageCause.Projectile`      |
+| `ActorDamageCause.Suffocation`     |
+| `ActorDamageCause.All`             |
+| `ActorDamageCause.Fire`            |
+| `ActorDamageCause.FireTick`        |
+| `ActorDamageCause.Lava`            |
+| `ActorDamageCause.Drowning `       |
+| `ActorDamageCause.BlockExplosion`  |
+| `ActorDamageCause.EntityExplosion` |
+| `ActorDamageCause.Void`            |
+| `ActorDamageCause.Suicide`         |
+| `ActorDamageCause.Magic`           |
+| `ActorDamageCause.Wither`          |
+| `ActorDamageCause.Starve`          |
+| `ActorDamageCause.Anvil`           |
+| `ActorDamageCause.Thorns`          |
 | `ActorDamageCause.FallingBlock`    |
-| `ActorDamageCause.Piston`     |
+| `ActorDamageCause.Piston`          |
 | `ActorDamageCause.FlyIntoWall`     |
-| `ActorDamageCause.Magma`    |
-| `ActorDamageCause.Fireworks`  |
-| `ActorDamageCause.Lightning`    |
-| `ActorDamageCause.Charging`     |
+| `ActorDamageCause.Magma`           |
+| `ActorDamageCause.Fireworks`       |
+| `ActorDamageCause.Lightning`       |
+| `ActorDamageCause.Charging`        |
 | `ActorDamageCause.Temperature`     |
-| `ActorDamageCause.Freezing`  |
-| `ActorDamageCause.Stalactite`    |
-| `ActorDamageCause.Stalagmite`     |
-| `ActorDamageCause.All`     |
+| `ActorDamageCause.Freezing`        |
+| `ActorDamageCause.Stalactite`      |
+| `ActorDamageCause.Stalagmite`      |
+| `ActorDamageCause.All`             |
 
 <br>
 
