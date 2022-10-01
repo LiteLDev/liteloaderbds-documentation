@@ -42,3 +42,7 @@ Some of the commands are duplicated, you can:
 
 This is caused by fake seed and client chunk pre-generation  
 If you met this error, just disable `ClientChunkPreGeneration` in `plugins/LiteLoader/LiteLoader.json`
+
+## Imgui related errors
+
+If you server crashed and the crash log contain Imgui, try to enable `FixBDSCrash` in `plugins/LiteLoader/LiteLoader.json`

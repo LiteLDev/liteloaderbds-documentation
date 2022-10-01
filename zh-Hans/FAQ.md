@@ -54,3 +54,7 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 
 这是由于假种子与客户端区块预生成导致的  
 如果你遇到这个问题，只需要在`plugins/LiteLoader/LiteLoader.json`中将`ClientChunkPreGeneration`禁用
+
+## Imgui相关错误
+
+如果你遇到了崩溃并且崩溃日志里包含Imgui，请将`plugins/LiteLoader/LiteLoader.json`中的`FixBDSCrash`打开
