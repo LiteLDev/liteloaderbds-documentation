@@ -7,16 +7,16 @@
 | 属性           | 类型      | 描述                                                       |
 | ------------- | -------- | ---------------------------------------------------------- |
 | `ll.language` | `String` | LiteLoaderBDS使用的语言。(例如`zh_Hans`、`en`和`ru_RU`) |
-| `ll.major`    | `Integer` | Major Version Number (ex:  the **2** in **2**.7.1)   |
-| `ll.minor`    | `Integer` | Minor Version Number (ex: the **7** in 2.**7**.1)    |
-| `ll.revision` | `Integer` | Revision Number: (ex: the **1** in 2.7.**1**)  |
-| `ll.status` | `Integer` | Status (`0` is Dev, `1` is Beta, `2` is Release)  |
-| `ll.scriptEngineVersion` | `String` | LiteLoaderBDS Script Engine Version |
-| `ll.isWine`   | `Boolean` | Whether the LiteLoaderBDS started from Wine |
-| `ll.isDebugMode`   | `Boolean` | Whether the LiteLoaderBDS in debug mode  |
-| `ll.isBeta`   | `Boolean` | Whether the current version is a beta version  |
-| `ll.isDev`    | `Boolean` | Whether the current version is a dev version  |
-| `ll.isRelease`| `Boolean` | Whether the current version is a release version  |
+| `ll.major`    | `Integer` | 主版本号（如 **2**.1.0 里的 **2**） |
+| `ll.minor`    | `Integer` | 次版本号（如 2.**1**.0 里的 **1**） |
+| `ll.revision` | `Integer` | 修订版本号（如 2.1.**0** 里的 **0**） |
+| `ll.status` | `Integer` | 版本状态 (`0`为Dev, `1`为Beta, `2`为Release)  |
+| `ll.scriptEngineVersion` | `String` | LiteLoaderBDS Script Engine版本 |
+| `ll.isWine`   | `Boolean` | 是否处于Wine花几年下 |
+| `ll.isDebugMode`   | `Boolean` | 是否处于debug模式  |
+| `ll.isBeta`   | `Boolean` | 当前版本是否为测试版 |
+| `ll.isDev`    | `Boolean` | 当前版本是否为开发版 |
+| `ll.isRelease`| `Boolean` | 当前版本是否为发布版本 |
 <br>
 
 ### 获取 LiteLoaderBDS 版本字符串

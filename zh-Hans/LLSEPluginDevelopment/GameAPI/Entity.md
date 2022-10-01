@@ -101,8 +101,8 @@
 | en.isDancing             | 实体是否在跳舞         | `Boolean`        |
 | en.isSleeping            | 实体是否在睡觉         | `Boolean`        |
 | en.isAngry               | 实体是否生气           | `Boolean`        |
-| en.isBaby                | Whether the entity is baby                             | `Boolean`        |
-| en.isMoving              | Whether the entity is moving                           | `Boolean`        |
+| en.isBaby                | 实体是否为幼体         | `Boolean`        |
+| en.isMoving              | 实体是否移动           | `Boolean`        |
 
 
 这些对象属性都是只读的，无法被修改
@@ -188,38 +188,38 @@
 
 <br>
 
-#### Heal the Entity
+#### 治疗实体
 
 `en.heal(health)`
 
-- Parameters: 
+- 参数: 
   - int : `Integer`  
-    Number of hearts to heal.
-- Return value: Whether heal was dealt.
-- Return value type: `Boolean`
+    治疗的心数
+- 返回值: 是否治疗成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set the Specified Entity on Fire
+#### 设置特定实体为燃烧状态
 
 `en.setFire(time, isEffect)`
 
-- Parameters: 
+- 参数: 
   - time : `Integer`  
-    Fire time, in seconds.
+    燃烧的时间，秒为单位
   - isEffect : `Boolean`  
-    Will there be a fire effect?
-- Return value: Whether the fire was set.
-- Return value type:  `Boolean`
+    是否有火焰效果
+- 返回值: 是否设置成功
+- 返回值类型:  `Boolean`
 
 <br>
 
-#### Put Out The Entity
+#### 熄灭实体
 
 `en.stopFire()`
 
-- Return value: Has been extinguished.
-- Return value type: `Boolean`
+- 返回值: 是否熄灭成功
+- 返回值类型: `Boolean`
 
 <br>
 

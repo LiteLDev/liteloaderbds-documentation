@@ -57,7 +57,7 @@
 | pl.canBeSeenOnMap        | 玩家是否可以在地图上看到          | `Boolean`        |
 | pl.canFreeze             | 玩家是否可以冻结                  | `Boolean`        |
 | pl.canSeeDaylight        | 玩家是否能看到日光                | `Boolean`        |
-| pl.canShowNameTag        | 玩家是否可以显示姓名标签        | `Boolean`        |
+| pl.canShowNameTag        | 玩家是否可以显示姓名标签          | `Boolean`        |
 | pl.canStartSleepInBed    | 玩家是否可以开始在床上睡觉        | `Boolean`        |
 | pl.canPickupItems        | 玩家是否可以拾取物品              | `Boolean`        |
 | pl.maxHealth             | 玩家最大生命值                    | `Integer`        |
@@ -95,8 +95,8 @@
 | pl.isDancing             | 玩家在跳舞？                       | `Boolean`        |
 | pl.isCreative            | 玩家是否是创造模式                  | `Boolean`        |
 | pl.isFlying              | 玩家是否在飞行                    | `Boolean`        |
-| pl.isSleeping            | Player is sleeping               | `Boolean`        |
-| pl.isMoving              | Player is moving                                             | `Boolean`        |
+| pl.isSleeping            | 玩家是否正在睡觉               | `Boolean`        |
+| pl.isMoving              | 玩家是否正在移动                              | `Boolean`        |
 
 这些对象属性都是只读的，无法被修改。其中：
 

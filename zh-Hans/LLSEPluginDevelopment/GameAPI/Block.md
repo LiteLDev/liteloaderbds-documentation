@@ -41,21 +41,21 @@
 | bl.pos        | 方块所在坐标         | `IntPos`  |
 | bl.tileData   | 方块数据值          | `Integer` |
 | bl.variant   | The block variant          | `Integer` |
-| bl.translucency   | The block translucency          | `Integer` |
-| bl.thickness   | The block thickness          | `Integer` |
-| bl.isAir   | Whether the block is air          | `Boolean` |
-| bl.isBounceBlock   | Whether the block is bounce          | `Boolean` |
-| bl.isButtonBlock   | Whether the block is button          | `Boolean` |
-| bl.isCropBlock   | Whether the block is crop          | `Boolean` |
-| bl.isDoorBlock   | Whether the block is door          | `Boolean` |
-| bl.isFenceBlock   | Whether the block is fence          | `Boolean` |
-| bl.isFenceGateBlock   | Whether the block is fence gate          | `Boolean` |
-| bl.isThinFenceBlock   | Whether the block is thin fence block          | `Boolean` |
-| bl.isHeavyBlock   | Whether the block is heavy          | `Boolean` |
-| bl.isStemBlock   | Whether the block is stem          | `Boolean` |
-| bl.isSlabBlock   | Whether the block is slab          | `Boolean` |
-| bl.isUnbreakable   | Whether the block is unbreakable          | `Boolean` |
-| bl.isWaterBlockingBlock   | Whether the block is can block water          | `Boolean` |
+| bl.translucency   | 方块透明度          | `Integer` |
+| bl.thickness   | 方块厚度          | `Integer` |
+| bl.isAir   | 方块是否为空气          | `Boolean` |
+| bl.isBounceBlock   | 是否为可弹跳方块          | `Boolean` |
+| bl.isButtonBlock   | 是否为按钮方块          | `Boolean` |
+| bl.isCropBlock   | 是否为农作物方块          | `Boolean` |
+| bl.isDoorBlock   | 是否为门方块          | `Boolean` |
+| bl.isFenceBlock   | 是否为栅栏方块          | `Boolean` |
+| bl.isFenceGateBlock   | 是否为栅栏门方块          | `Boolean` |
+| bl.isThinFenceBlock   | 是否为细栅栏方块          | `Boolean` |
+| bl.isHeavyBlock   | 是否为重的方块          | `Boolean` |
+| bl.isStemBlock   | 是否为干方块          | `Boolean` |
+| bl.isSlabBlock   | 是否为半转方块          | `Boolean` |
+| bl.isUnbreakable   | 方块是否为不可破坏          | `Boolean` |
+| bl.isWaterBlockingBlock   | 方块是否可阻挡水          | `Boolean` |
 
 这些对象属性都是只读的，无法被修改
 
