@@ -19,7 +19,7 @@
   - name : `String`  
     物品的标准类型名，如`minecraft:bread`
   - count : `Integer`  
-    物品堆叠数量
+    物品堆叠数量，由于 `unsigned __int8`，最大值为 `64`
 - 返回值：生成的物品对象
 - 返回值类型：`Item`
   - 如返回值为 `Null` 则表示生成失败

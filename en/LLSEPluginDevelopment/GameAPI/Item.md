@@ -19,7 +19,7 @@ Through this function, a new item object is generated based on the given informa
   - name : `String`  
     The standard type name of the item, such as `minecraft:bread`
   - count : `Integer`  
-    The number of items to create.
+    The number of items to create, and the maximum value is `64` due to `unsigned __int8`.
 - Return value: Generated item object.
 - Return value type: `Item`
   - If the return value is `Null`, the item generation has failed.
