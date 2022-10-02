@@ -4,30 +4,19 @@ Some interfaces related to loader operations are provided here.
 
 ### Properties
 
-| Property      | Type     | Description                                                |
-| ------------- | -------- | ---------------------------------------------------------- |
-| `ll.language` | `String` | The language LiteLoader used.(such as `zh`, `en`, `ru_RU`) |
-
-### Get LiteLoader loader version
-
-`ll.version()`
-
-- Return value: loader version object `Object`) 
-
-- Return value type:  `Object<Integer,Integer,Integer,Boolean>`
-
-  - For a returned loader version object ver, there are the following members:
-
-  | Member       | Meaning                              | Data Type  |
-  | ------------ | ------------------------------------- | --------- |
-  | ver.major    | Major Version Number (example:  the **2** in **2**.1.0)   | `Integer` |
-  | ver.minor    | Minor Version Number (ex: the **1** in 2.**1**.0)    | `Integer` |
-  | ver.revision | Revision Number: (ex: the **0** in 2.1.**0**)  | `Integer` |
-  | ver.isBeta   | Whether the current version is a beta version  | `Boolean` |
-  | ver.isDev    | Whether the current version is a dev version  | `Boolean` |
-  | ver.isRelease| Whether the current version is a release version  | `Boolean` |
-
-<br>
+| Property                 | Type      | Description                                                |
+| ------------------------ | --------- | ---------------------------------------------------------- |
+| `ll.language`            | `String`  | The language LiteLoader used.(such as `zh`, `en`, `ru_RU`) |
+| `ll.major`               | `Integer` | Major Version Number (ex:  the **2** in **2**.7.1)         |
+| `ll.minor`               | `Integer` | Minor Version Number (ex: the **7** in 2.**7**.1)          |
+| `ll.revision`            | `Integer` | Revision Number: (ex: the **1** in 2.7.**1**)              |
+| `ll.status`              | `Integer` | Status (`0` is Dev, `1` is Beta, `2` is Release)           |
+| `ll.scriptEngineVersion` | `String`  | LiteLoaderBDS Script Engine Version                        |
+| `ll.isWine`              | `Boolean` | Whether the LiteLoaderBDS started from Wine                |
+| `ll.isDebugMode`         | `Boolean` | Whether the LiteLoaderBDS in debug mode                    |
+| `ll.isBeta`              | `Boolean` | Whether the current version is a beta version              |
+| `ll.isDev`               | `Boolean` | Whether the current version is a dev version               |
+| `ll.isRelease`           | `Boolean` | Whether the current version is a release version           |
 
 ### Get LiteLoader loader version string
 
@@ -35,24 +24,6 @@ Some interfaces related to loader operations are provided here.
 
 - Return value: loader version
 - Return value type:  `String`
-
-<br>
-
-### Get LiteLoader Version Status
-
-`ll.versionStatus()`
-
-- Return value: Version Status (`0` is Release, `1` is Beta, `2` is Dev)
-- Return value type:  `Integer`
-
-<br>
-
-### Check is LiteLoader in debug mode
-
-`ll.isDebugMode()`
-
-- Return value: Is LiteLoader in debug mode
-- Return value type:  `Boolean`
 
 <br>
 
@@ -86,14 +57,14 @@ You can choose to judge based on the results and report an error to remind users
 - Return value type:  `Plugin`
   - For a returned plugin object, there are the following members:  
 
-  | Property       | Description                              | Type  |
-  | ------------ | ------------------------------------- | --------- |
-  | plugin.name    | Plugin name                             | `String` |
-  | plugin.desc    | Plugin description                      | `String` |
-  | plugin.version     | Plugin version (array)                  | `Array<Integer,Integer,Integer>` |
-  | plugin.versionStr  | Plugin version (string)             | `String` |
-  | plugin.filePath | Path to plugin                         | `String` |
-  | plugin.others     | Other information                     | `Object` |
+  | Property          | Description             | Type                             |
+  | ----------------- | ----------------------- | -------------------------------- |
+  | plugin.name       | Plugin name             | `String`                         |
+  | plugin.desc       | Plugin description      | `String`                         |
+  | plugin.version    | Plugin version (array)  | `Array<Integer,Integer,Integer>` |
+  | plugin.versionStr | Plugin version (string) | `String`                         |
+  | plugin.filePath   | Path to plugin          | `String`                         |
+  | plugin.others     | Other information       | `Object`                         |
 
 
 <br>
@@ -216,15 +187,6 @@ For execution, use `ll.require`, then LLSE will perform the following series of 
 <br>
 
 Authors of dependent libraries can host relevant code on stable large websites such as GitHub or Gitee, and provide external links to other developers for remote download.
-
-<br>
-
-### Get Script Engine version
-
-`ll.scriptEngineVersion()`
-
-- Return value: The backend engine version
-- Return value type:  `String`
 
 <br>
 

@@ -84,7 +84,7 @@
 | en.inRain                | 实体是否在雨中         | `Boolean`        |
 | en.inSnow                | 实体是否在雪中         | `Boolean`        |
 | en.inWall                | 实体是否在墙上         | `Boolean`        |
-| en.inWaterOrRain         | 实体是否在水中或雨中    | `Boolean`        |
+| en.inWaterOrRain         | 实体是否在水中或雨中   | `Boolean`        |
 | en.inWorld               | 实体是否在世界中       | `Boolean`        |
 | en.speed                 | 实体当前速度           | `Float`          |
 | en.direction             | 实体当前朝向           | `DirectionAngle` |
@@ -101,6 +101,9 @@
 | en.isDancing             | 实体是否在跳舞         | `Boolean`        |
 | en.isSleeping            | 实体是否在睡觉         | `Boolean`        |
 | en.isAngry               | 实体是否生气           | `Boolean`        |
+| en.isBaby                | 实体是否为幼体         | `Boolean`        |
+| en.isMoving              | 实体是否移动           | `Boolean`        |
+
 
 这些对象属性都是只读的，无法被修改
 
@@ -149,74 +152,74 @@
 注意，此处造成的伤害为真实伤害，无法被盔甲等保护装备减免
 
 
-| 伤害类型枚举              |
-| ------------------------ |
-| `ActorDamageCause.Override`|
-| `ActorDamageCause.Contact `   |
-| `ActorDamageCause.EntityAttack` |
-| `ActorDamageCause.Projectile`     |
-| `ActorDamageCause.Suffocation`    |
-| `ActorDamageCause.All`     |
-| `ActorDamageCause.Fire`  |
-| `ActorDamageCause.FireTick`    |
-| `ActorDamageCause.Lava`      |
-| `ActorDamageCause.Drowning `  |
-| `ActorDamageCause.BlockExplosion`   |
-| `ActorDamageCause.EntityExplosion`    |
-| `ActorDamageCause.Void`  |
-| `ActorDamageCause.Suicide`    |
-| `ActorDamageCause.Magic`     |
-| `ActorDamageCause.Wither`     |
-| `ActorDamageCause.Starve`   |
-| `ActorDamageCause.Anvil`    |
-| `ActorDamageCause.Thorns`  |
+| 伤害类型枚举                       |
+| ---------------------------------- |
+| `ActorDamageCause.Override`        |
+| `ActorDamageCause.Contact `        |
+| `ActorDamageCause.EntityAttack`    |
+| `ActorDamageCause.Projectile`      |
+| `ActorDamageCause.Suffocation`     |
+| `ActorDamageCause.All`             |
+| `ActorDamageCause.Fire`            |
+| `ActorDamageCause.FireTick`        |
+| `ActorDamageCause.Lava`            |
+| `ActorDamageCause.Drowning `       |
+| `ActorDamageCause.BlockExplosion`  |
+| `ActorDamageCause.EntityExplosion` |
+| `ActorDamageCause.Void`            |
+| `ActorDamageCause.Suicide`         |
+| `ActorDamageCause.Magic`           |
+| `ActorDamageCause.Wither`          |
+| `ActorDamageCause.Starve`          |
+| `ActorDamageCause.Anvil`           |
+| `ActorDamageCause.Thorns`          |
 | `ActorDamageCause.FallingBlock`    |
-| `ActorDamageCause.Piston`     |
+| `ActorDamageCause.Piston`          |
 | `ActorDamageCause.FlyIntoWall`     |
-| `ActorDamageCause.Magma`    |
-| `ActorDamageCause.Fireworks`  |
-| `ActorDamageCause.Lightning`    |
-| `ActorDamageCause.Charging`     |
+| `ActorDamageCause.Magma`           |
+| `ActorDamageCause.Fireworks`       |
+| `ActorDamageCause.Lightning`       |
+| `ActorDamageCause.Charging`        |
 | `ActorDamageCause.Temperature`     |
-| `ActorDamageCause.Freezing`  |
-| `ActorDamageCause.Stalactite`    |
-| `ActorDamageCause.Stalagmite`     |
-| `ActorDamageCause.All`     |
+| `ActorDamageCause.Freezing`        |
+| `ActorDamageCause.Stalactite`      |
+| `ActorDamageCause.Stalagmite`      |
+| `ActorDamageCause.All`             |
 
 <br>
 
-#### Heal the Entity
+#### 治疗实体
 
 `en.heal(health)`
 
-- Parameters: 
+- 参数: 
   - int : `Integer`  
-    Number of hearts to heal.
-- Return value: Whether heal was dealt.
-- Return value type: `Boolean`
+    治疗的心数
+- 返回值: 是否治疗成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set the Specified Entity on Fire
+#### 设置特定实体为燃烧状态
 
 `en.setFire(time, isEffect)`
 
-- Parameters: 
+- 参数: 
   - time : `Integer`  
-    Fire time, in seconds.
+    燃烧的时间，秒为单位
   - isEffect : `Boolean`  
-    Will there be a fire effect?
-- Return value: Whether the fire was set.
-- Return value type:  `Boolean`
+    是否有火焰效果
+- 返回值: 是否设置成功
+- 返回值类型:  `Boolean`
 
 <br>
 
-#### Put Out The Entity
+#### 熄灭实体
 
 `en.stopFire()`
 
-- Return value: Has been extinguished.
-- Return value type: `Boolean`
+- 返回值: 是否熄灭成功
+- 返回值类型: `Boolean`
 
 <br>
 

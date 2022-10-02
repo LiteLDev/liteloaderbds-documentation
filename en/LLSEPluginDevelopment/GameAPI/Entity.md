@@ -100,6 +100,8 @@ Every entity object contains some fixed object properties. for a specific entity
 | en.isDancing             | Whether the entity is dancing                          | `Boolean`        |
 | en.isSleeping            | Whether the entity is sleeping                         | `Boolean`        |
 | en.isAngry               | Whether the entity is angry                            | `Boolean`        |
+| en.isBaby                | Whether the entity is baby                             | `Boolean`        |
+| en.isMoving              | Whether the entity is moving                           | `Boolean`        |
 
 These object properties are read-only and cannot be modified.
 

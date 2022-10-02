@@ -49,3 +49,12 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 
 * 如果日志的前几条都是`bedrock_server_mod.exe`的错误，十有八九就是BDS自身的问题
 * 如果遇到日志中存在LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll，请参考[这里](#崩溃日志中liteloaderdll或liteloaderluajsnodejsdll条目无法正常显示怎么办？)
+
+## 客户端区块错误
+
+这是由于假种子与客户端区块预生成导致的  
+如果你遇到这个问题，只需要在`plugins/LiteLoader/LiteLoader.json`中将`ClientChunkPreGeneration`禁用
+
+## Imgui相关错误
+
+如果你遇到了崩溃并且崩溃日志里包含Imgui，请将`plugins/LiteLoader/LiteLoader.json`中的`FixBDSCrash`打开

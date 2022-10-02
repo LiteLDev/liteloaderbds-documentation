@@ -33,13 +33,29 @@
 
 每一个方块对象都包含一些固定的对象属性。对于某个特定的方块对象`bl`，有以下这些属性
 
-| 属性           | 含义                 | 类型      |
-| ------------- | -------------------- | --------- |
-| bl.name       | 游戏内显示的方块名称  | `String`  |
-| bl.type       | 方块标准类型名       | `String`  |
-| bl.id         | 方块的游戏内id       | `Integer` |
-| bl.pos        | 方块所在坐标         | `IntPos`  |
-| bl.tileData   | 方块数据值          | `Integer` |
+| 属性                    | 含义                 | 类型      |
+| ----------------------- | -------------------- | --------- |
+| bl.name                 | 游戏内显示的方块名称 | `String`  |
+| bl.type                 | 方块标准类型名       | `String`  |
+| bl.id                   | 方块的游戏内id       | `Integer` |
+| bl.pos                  | 方块所在坐标         | `IntPos`  |
+| bl.tileData             | 方块数据值           | `Integer` |
+| bl.variant              | The block variant    | `Integer` |
+| bl.translucency         | 方块透明度           | `Integer` |
+| bl.thickness            | 方块厚度             | `Integer` |
+| bl.isAir                | 方块是否为空气       | `Boolean` |
+| bl.isBounceBlock        | 是否为可弹跳方块     | `Boolean` |
+| bl.isButtonBlock        | 是否为按钮方块       | `Boolean` |
+| bl.isCropBlock          | 是否为农作物方块     | `Boolean` |
+| bl.isDoorBlock          | 是否为门方块         | `Boolean` |
+| bl.isFenceBlock         | 是否为栅栏方块       | `Boolean` |
+| bl.isFenceGateBlock     | 是否为栅栏门方块     | `Boolean` |
+| bl.isThinFenceBlock     | 是否为细栅栏方块     | `Boolean` |
+| bl.isHeavyBlock         | 是否为重的方块       | `Boolean` |
+| bl.isStemBlock          | 是否为干方块         | `Boolean` |
+| bl.isSlabBlock          | 是否为半转方块       | `Boolean` |
+| bl.isUnbreakable        | 方块是否为不可破坏   | `Boolean` |
+| bl.isWaterBlockingBlock | 方块是否可阻挡水     | `Boolean` |
 
 这些对象属性都是只读的，无法被修改
 
