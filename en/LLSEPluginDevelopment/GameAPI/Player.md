@@ -535,15 +535,19 @@ For more usage of container objects, please refer to [Container Object API Docum
 
 #### Give the Player an Item
 
-`pl.giveItem(item)`
+`pl.giveItem(item[, amount])`
 
 - Parameters: 
-  - iten : `Item`  
+  - item : `Item`  
     The item being given.
+    
+  - amount: `Integer`
+  
+    (Optional) The number of item given. If this parameter is provided, the Count property of the item object itself will be ignored.
 - Return value: Whether the item was given.
 - Return value type: `Boolean`
 
-If the player's inventory is full, it will return failure.
+If the player's inventory is full, excess items will be drop.
 
 <br>
 

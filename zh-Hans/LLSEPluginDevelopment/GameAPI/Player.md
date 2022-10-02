@@ -704,15 +704,19 @@
 
 #### 给予玩家一个物品
 
-`pl.giveItem(item)`
+`pl.giveItem(item[, amount])`
 
 - 参数：
-  - iten : `Item`  
+  - item : `Item`  
     给予的物品对象
+    
+  - amount: `Integer`
+  
+    （可选参数）给予物品对象的数量，若提供此参数则物品对象自身的Count属性将被忽略
 - 返回值：是否成功给予
 - 返回值类型：`Boolean`
 
-如果玩家物品栏已满，将返回失败
+如果玩家物品栏已满，将抛出多余物品
 
 - 示例：  
   - JavaScript
