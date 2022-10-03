@@ -44,11 +44,15 @@
 
 #### 放入物品对象到容器中  
 
-`ct.addItem(item)`  
+`ct.addItem(item[, amount])`  
 
 - 参数：
   - item : `Item`  
     待增加的物品对象
+    
+  - amount: `Integer`
+  
+    （可选）欲添加物品数量，若提供此参数，item对象本身的count属性将被忽略。
 - 返回值：是否成功增加
 - 返回值类型：`Boolean`
 
