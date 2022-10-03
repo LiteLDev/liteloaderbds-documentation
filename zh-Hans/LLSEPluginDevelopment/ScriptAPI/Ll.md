@@ -12,7 +12,7 @@
 | `ll.revision`            | `Integer` | 修订版本号（如 2.1.**0** 里的 **0**）                   |
 | `ll.status`              | `Integer` | 版本状态 (`0`为Dev, `1`为Beta, `2`为Release)            |
 | `ll.scriptEngineVersion` | `String`  | LiteLoaderBDS Script Engine版本                         |
-| `ll.isWine`              | `Boolean` | 是否处于Wine花几年下                                    |
+| `ll.isWine`              | `Boolean` | 是否处于Wine环境下                                    |
 | `ll.isDebugMode`         | `Boolean` | 是否处于debug模式                                       |
 | `ll.isBeta`              | `Boolean` | 当前版本是否为测试版                                    |
 | `ll.isDev`               | `Boolean` | 当前版本是否为开发版                                    |
