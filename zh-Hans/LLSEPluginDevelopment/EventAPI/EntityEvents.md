@@ -94,7 +94,7 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 
 <br>
 
-#### `"onMobSpawn"` - 发生于实体生成
+#### `"onMobSpawn"` - 发生于实体自然生成
 
 - 监听函数原型
   `function(typeName,pos)`
