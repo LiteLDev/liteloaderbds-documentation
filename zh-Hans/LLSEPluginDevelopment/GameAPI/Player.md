@@ -443,15 +443,15 @@
     pl:hurt(20)
     ```
 
-#### Heal the Player
+#### 治疗玩家
 
 `pl.heal(health)`
 
-- Parameters: 
+- 参数: 
   - int : `Integer`  
-    Number of hearts to heal.
-- Return value: Whether heal was dealt.
-- Return value type: `Boolean`
+    治疗的心数
+- 返回值: 治疗是否成功
+- 返回值类型: `Boolean`
 
 
 #### 使指定玩家着火
@@ -478,12 +478,12 @@
     pl:setFire(20,true)
     ```
 
-#### Put Out The Player
+#### 熄灭玩家
 
 `pl.stopFire()`
 
-- Return value: Has been extinguished.
-- Return value type: `Boolean`
+- 返回值: 是否已被熄灭
+- 返回值类型: `Boolean`
 
 #### 缩放玩家
 
