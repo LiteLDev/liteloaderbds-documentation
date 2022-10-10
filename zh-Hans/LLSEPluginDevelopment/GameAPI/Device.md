@@ -27,7 +27,8 @@
 | dv.lastPing      | 玩家的网络延迟时间（ms）     | `Integer` |
 | dv.lastPacketLoss| 玩家的网络丢包率（%）        | `Float`   |
 | dv.os            | 玩家设备的操作系统类型       | `String`  |
-| dv.inputMode     | 玩家的操作方式(`0`=手柄，`1`=键鼠，`2`=触屏) | `Integer` |
+| dv.inputMode     | Player's input mode | `Integer` |
+| dv.playMode     | Player's play mode | `Integer` |
 | dv.serverAddress | 玩家连接的地址              | `String`  |
 | dv.clientId      | 玩家客户端的识别码ID         | `String`  |
 
@@ -52,3 +53,21 @@
 | `WindowsPhone`  | 手机微软Windows Mobile     |
 | `Unknown`       | 未知系统              |
 
+| Input mode ENUM |
+| --------------- |
+| `InputMode.Mouse`       |
+| `InputMode.Touch`       |
+| `InputMode.GamePad`       |
+| `InputMode.MotionController`       |
+
+| Play mode ENUM |
+| --------------- |
+| `ClientPlayMode.Normal`       |
+| `ClientPlayMode.Teaser`       |
+| `ClientPlayMode.Screen`       |
+| `ClientPlayMode.Viewer`       |
+| `ClientPlayMode.VR`       |
+| `ClientPlayMode.Placement`       |
+| `ClientPlayMode.LivingRoom`       |
+| `ClientPlayMode.ExitLevel`       |
+| `ClientPlayMode.ExitLevelLivingRoom `       |
