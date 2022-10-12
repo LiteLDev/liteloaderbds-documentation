@@ -615,7 +615,7 @@ pl.setPermLevel(1);
 - Parameters: 
 
   - mode : `Integer`  
-    Target game mode, `0` is survival mode, `1` is creative mode, `2` is extreme mode.
+    Target game mode, `0` is survival mode, `1` is creative mode, `2` is adventure mode.
 - Return value: Whether the modification was successful.
 - Return value type: `Boolean`
 
