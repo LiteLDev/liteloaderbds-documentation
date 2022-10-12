@@ -230,7 +230,7 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 <br>
 
-#### `"onUseBucketTake"` - Players use bucket to pack in things
+#### `"onUseBucketTake"` - Players use bucket to pack in things Event
 
 - Listener function prototype 
   `function(player,item,target,side,pos)`
@@ -354,7 +354,7 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 <br>
 
-#### `"onStartDestroyBlock"` - Player Start Breaking Block Effect
+#### `"onStartDestroyBlock"` - Player Start Breaking Block Event
 
 - Listener function prototype 
   `function(player,block)`
@@ -442,7 +442,7 @@ Due to the limitation of the monitoring function, the containers that currently 
 
 <br>
 
-#### `"onInventoryChange"` - Player Inventory Change
+#### `"onInventoryChange"` - Player Inventory Change Event
 
 - Listener function prototype 
   `function(player,slotNum,oldItem,newItem)`
