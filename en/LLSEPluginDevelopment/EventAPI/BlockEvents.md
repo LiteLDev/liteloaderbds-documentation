@@ -40,7 +40,7 @@ Intercept events have no effect on chests, shulker boxes, and workbenches.
 
 <br>
 
-#### "onBlockExplode"` - Block Explosion Event
+#### `"onBlockExplode"` - Block Explosion Event
 
 - Listener function prototype 
   `function(source,pos,radius,maxResistance,isDestroy,isFire)`
