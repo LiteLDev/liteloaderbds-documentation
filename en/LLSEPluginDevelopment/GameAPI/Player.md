@@ -302,10 +302,11 @@ var open = pl.runcmd("tp ~ ~+50 ~");
 
 #### Get Player Distance To Pos
 
-`pl.distanceToPos(pos)`
+`pl.distanceTo(pos)`
+`pl.distanceToSqr(pos)`
 
 - Parameters: 
-  - pos : `IntPos` / `FloatPos`
+  - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     The target position. 
 - Return value: Distance to coordinates (in blocks).
 - Return value type:  `Number`   
