@@ -233,10 +233,11 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 #### Get Entity Distance To Pos
 
-`en.distanceToPos(pos)`
+`en.distanceTo(pos)`
+`en.distanceToSqr(pos)`
 
 - Parameters: 
-  - pos : `IntPos` / `FloatPos`
+  - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     The target position. 
 - Return value: Distance to coordinates (in blocks).
 - Return value type:  `Number`   

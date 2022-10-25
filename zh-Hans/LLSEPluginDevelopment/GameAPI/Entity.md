@@ -237,10 +237,11 @@
 
 #### 获取实体到坐标的距离
 
-`en.distanceToPos(pos)`
+`en.distanceTo(pos)`
+`en.distanceToSqr(pos)`
 
 - 参数: 
-  - pos : `IntPos` / `FloatPos`
+  - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     目标位置
 - 返回值: 到坐标的距离(方块)
 - 返回值类型:  `Number`
