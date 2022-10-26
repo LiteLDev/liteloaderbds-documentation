@@ -66,6 +66,7 @@ Every item object contains some fixed object properties. For a specific item obj
 | it.id    | Item's in-game ID           | `Integer` |
 | it.count | Item's count   | `Integer` |
 | it.aux   | Item's data value (for example, wool color or wood type) | `Integer` |
+| it.lore   | Item Lore | `Array<String, String...>` |
 | it.damage   | Item Current Damage | `Integer` |
 | it.attackDamage   | Item Attack Damage | `Integer` |
 | it.maxDamage   | Item Max Damage | `Integer` |

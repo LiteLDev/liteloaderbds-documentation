@@ -70,6 +70,7 @@
 | it.damage   | 物品当前耐久 | `Integer` |
 | it.attackDamage   | 物品攻击伤害 | `Integer` |
 | it.maxDamage   | 物品最大耐久 | `Integer` |
+| it.lore   | Item Lore | `Array<String, String...>` |
 | it.isArmorItem   | 物品是否为箭 | `Boolean` |
 | it.isBlock   | 物品是否为方块 | `Boolean` |
 | it.isDamageableItem   | 物品是否可被破坏 | `Boolean` |
