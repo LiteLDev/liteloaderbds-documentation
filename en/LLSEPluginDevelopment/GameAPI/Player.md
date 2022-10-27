@@ -386,6 +386,42 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 <br>
 
+#### Set Health for Player
+
+`pl.setHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set health for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Max Health for Player
+
+`pl.setMaxHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set max health for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Hunger for Player
+
+`pl.setHungry(hunger)`
+
+- Parameters: 
+  - hunger : `Integer`  
+    Number of hunger.
+- Return value: Whether set hunger for player was success.
+- Return value type: `Boolean`
+
+<br>
+
 #### Set the Specified Player on Fire
 
 `pl.setFire(time,isEffect)`
