@@ -200,6 +200,30 @@
 
 <br>
 
+#### Set Health for Entity
+
+`en.setHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set health for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Max Health for Entity
+
+`en.setMaxHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set max health for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
 #### 设置特定实体为燃烧状态
 
 `en.setFire(time, isEffect)`

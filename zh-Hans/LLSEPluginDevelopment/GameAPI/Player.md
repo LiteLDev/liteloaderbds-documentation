@@ -455,6 +455,39 @@
 - 返回值类型: `Boolean`
 
 
+#### Set Health for Player
+
+`pl.setHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set health for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Max Health for Player
+
+`pl.setMaxHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set max health for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Hunger for Player
+
+`pl.setHungry(hunger)`
+
+- Parameters: 
+  - hunger : `Integer`  
+    Number of hunger.
+- Return value: Whether set hunger for player was success.
+- Return value type: `Boolean`
+
+
 #### 使指定玩家着火
 
 `pl.setFire(time,isEffect)`
