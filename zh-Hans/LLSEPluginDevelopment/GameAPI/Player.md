@@ -346,10 +346,11 @@
 
 #### 获取玩家到坐标的距离
 
-`en.distanceToPos(pos)`
+`en.distanceTo(pos)`
+`en.distanceToSqr(pos)`
 
 - 参数: 
-  - pos : `IntPos` / `FloatPos`
+  - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     目标位置
 - 返回值: 到坐标的距离(方块)
 - 返回值类型:  `Number`
@@ -443,14 +444,47 @@
     pl:hurt(20)
     ```
 
-#### Heal the Player
+#### 治疗玩家
 
 `pl.heal(health)`
 
-- Parameters: 
+- 参数: 
   - int : `Integer`  
-    Number of hearts to heal.
-- Return value: Whether heal was dealt.
+    治疗的心数
+- 返回值: 治疗是否成功
+- 返回值类型: `Boolean`
+
+
+#### Set Health for Player
+
+`pl.setHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set health for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Max Health for Player
+
+`pl.setMaxHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set max health for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Hunger for Player
+
+`pl.setHungry(hunger)`
+
+- Parameters: 
+  - hunger : `Integer`  
+    Number of hunger.
+- Return value: Whether set hunger for player was success.
 - Return value type: `Boolean`
 
 
@@ -478,12 +512,12 @@
     pl:setFire(20,true)
     ```
 
-#### Put Out The Player
+#### 熄灭玩家
 
 `pl.stopFire()`
 
-- Return value: Has been extinguished.
-- Return value type: `Boolean`
+- 返回值: 是否已被熄灭
+- 返回值类型: `Boolean`
 
 #### 缩放玩家
 
@@ -705,15 +739,19 @@
 
 #### 给予玩家一个物品
 
-`pl.giveItem(item)`
+`pl.giveItem(item[, amount])`
 
 - 参数：
-  - iten : `Item`  
+  - item : `Item`  
     给予的物品对象
+    
+  - amount: `Integer`
+  
+    （可选参数）给予物品对象的数量，若提供此参数则物品对象自身的Count属性将被忽略
 - 返回值：是否成功给予
 - 返回值类型：`Boolean`
 
-如果玩家物品栏已满，将返回失败
+如果玩家物品栏已满，将抛出多余物品
 
 - 示例：  
   - JavaScript

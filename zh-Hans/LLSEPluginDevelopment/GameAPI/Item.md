@@ -19,7 +19,7 @@
   - name : `String`  
     物品的标准类型名，如`minecraft:bread`
   - count : `Integer`  
-    物品堆叠数量
+    物品堆叠数量，由于 `unsigned __int8`，最大值为 `64`
 - 返回值：生成的物品对象
 - 返回值类型：`Item`
   - 如返回值为 `Null` 则表示生成失败
@@ -70,6 +70,7 @@
 | it.damage   | 物品当前耐久 | `Integer` |
 | it.attackDamage   | 物品攻击伤害 | `Integer` |
 | it.maxDamage   | 物品最大耐久 | `Integer` |
+| it.lore   | Item Lore | `Array<String, String...>` |
 | it.isArmorItem   | 物品是否为箭 | `Boolean` |
 | it.isBlock   | 物品是否为方块 | `Boolean` |
 | it.isDamageableItem   | 物品是否可被破坏 | `Boolean` |

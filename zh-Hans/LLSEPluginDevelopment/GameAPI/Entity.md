@@ -200,6 +200,30 @@
 
 <br>
 
+#### Set Health for Entity
+
+`en.setHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set health for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Max Health for Entity
+
+`en.setMaxHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set max health for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
 #### 设置特定实体为燃烧状态
 
 `en.setFire(time, isEffect)`
@@ -237,10 +261,11 @@
 
 #### 获取实体到坐标的距离
 
-`en.distanceToPos(pos)`
+`en.distanceTo(pos)`
+`en.distanceToSqr(pos)`
 
 - 参数: 
-  - pos : `IntPos` / `FloatPos`
+  - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     目标位置
 - 返回值: 到坐标的距离(方块)
 - 返回值类型:  `Number`

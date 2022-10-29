@@ -57,7 +57,7 @@ Note that when the player dies, in addition to triggering `onPlayerDie` event, t
 
 <br>
 
-#### `"onMobSpawn"` - Mob Spawn Event
+#### `"onMobSpawn"` - Mob Naturally Spawn Event
 
 - Listener function prototype 
   `function(typeName,pos)`

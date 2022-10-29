@@ -196,6 +196,30 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 <br>
 
+#### Set Health for Entity
+
+`en.setHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set health for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Max Health for Entity
+
+`en.setMaxHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set max health for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
 #### Set the Specified Entity on Fire
 
 `en.setFire(time, isEffect)`
@@ -233,10 +257,11 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 #### Get Entity Distance To Pos
 
-`en.distanceToPos(pos)`
+`en.distanceTo(pos)`
+`en.distanceToSqr(pos)`
 
 - Parameters: 
-  - pos : `IntPos` / `FloatPos`
+  - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     The target position. 
 - Return value: Distance to coordinates (in blocks).
 - Return value type:  `Number`   

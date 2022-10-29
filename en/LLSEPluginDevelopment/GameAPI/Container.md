@@ -44,11 +44,15 @@ Each container object contains some member functions (member methods) that can b
 
 #### Put the Item Object Into the Container  
 
-`ct.addItem(item)`  
+`ct.addItem(item[, amount])`  
 
 - Parameters: 
   - item : `Item`  
     The item to add to the container.
+    
+  - amount : `Integer`
+  
+    (optional) If provided this para, the original count property of the item will be ignored
 - Return type: Whether the item was added successfully or not.
 - Return value type: `Boolean`
 

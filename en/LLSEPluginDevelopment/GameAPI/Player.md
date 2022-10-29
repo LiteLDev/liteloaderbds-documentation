@@ -302,10 +302,11 @@ var open = pl.runcmd("tp ~ ~+50 ~");
 
 #### Get Player Distance To Pos
 
-`pl.distanceToPos(pos)`
+`pl.distanceTo(pos)`
+`pl.distanceToSqr(pos)`
 
 - Parameters: 
-  - pos : `IntPos` / `FloatPos`
+  - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     The target position. 
 - Return value: Distance to coordinates (in blocks).
 - Return value type:  `Number`   
@@ -381,6 +382,42 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
   - health : `Integer`  
     Number of hearts to heal.
 - Return value: Whether heal was dealt.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Health for Player
+
+`pl.setHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set health for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Max Health for Player
+
+`pl.setMaxHealth(health)`
+
+- Parameters: 
+  - health : `Integer`  
+    Number of hearts.
+- Return value: Whether set max health for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Hunger for Player
+
+`pl.setHungry(hunger)`
+
+- Parameters: 
+  - hunger : `Integer`  
+    Number of hunger.
+- Return value: Whether set hunger for player was success.
 - Return value type: `Boolean`
 
 <br>
@@ -536,15 +573,19 @@ For more usage of container objects, please refer to [Container Object API Docum
 
 #### Give the Player an Item
 
-`pl.giveItem(item)`
+`pl.giveItem(item[, amount])`
 
 - Parameters: 
-  - iten : `Item`  
+  - item : `Item`  
     The item being given.
+    
+  - amount: `Integer`
+  
+    (Optional) The number of item given. If this parameter is provided, the Count property of the item object itself will be ignored.
 - Return value: Whether the item was given.
 - Return value type: `Boolean`
 
-If the player's inventory is full, it will return failure.
+If the player's inventory is full, excess items will be drop.
 
 <br>
 
