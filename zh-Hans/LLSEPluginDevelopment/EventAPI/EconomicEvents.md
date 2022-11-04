@@ -79,6 +79,7 @@
   - money : `Integer`  
     转账的金额
 
+**注意: 当 `onMoneyReduce` 或 `onMoneyAdd` 被触发时，该事件也会被触发**
 <br>
 
 #### `"beforeMoneySet"` - 设置玩家金额前事件

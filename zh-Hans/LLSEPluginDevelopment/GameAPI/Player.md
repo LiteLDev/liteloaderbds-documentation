@@ -455,37 +455,37 @@
 - 返回值类型: `Boolean`
 
 
-#### Set Health for Player
+#### 设置玩家的生命值
 
 `pl.setHealth(health)`
 
-- Parameters: 
+- 参数: 
   - health : `Integer`  
-    Number of hearts.
-- Return value: Whether set health for player was success.
-- Return value type: `Boolean`
+    生命值数
+- 返回值: 是否成功
+- 返回值类型: `Boolean`
 
 
-#### Set Max Health for Player
+#### 设置玩家最大生命值
 
 `pl.setMaxHealth(health)`
 
-- Parameters: 
+- 参数: 
   - health : `Integer`  
-    Number of hearts.
-- Return value: Whether set max health for player was success.
-- Return value type: `Boolean`
+    生命值数
+- 返回值: 是否成功
+- 返回值类型: `Boolean`
 
 
-#### Set Hunger for Player
+#### 设置玩家饥饿值
 
 `pl.setHungry(hunger)`
 
-- Parameters: 
+- 参数: 
   - hunger : `Integer`  
-    Number of hunger.
-- Return value: Whether set hunger for player was success.
-- Return value type: `Boolean`
+    饥饿值数
+- 返回值: 是否成功
+- 返回值类型: `Boolean`
 
 
 #### 使指定玩家着火

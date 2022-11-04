@@ -200,27 +200,27 @@
 
 <br>
 
-#### Set Health for Entity
+#### 设置实体的生命值
 
 `en.setHealth(health)`
 
-- Parameters: 
+- 参数: 
   - health : `Integer`  
-    Number of hearts.
-- Return value: Whether set health for entity was success.
-- Return value type: `Boolean`
+    生命值数
+- 返回值: 是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set Max Health for Entity
+#### 设置实体的最大生命值
 
 `en.setMaxHealth(health)`
 
-- Parameters: 
+- 参数: 
   - health : `Integer`  
-    Number of hearts.
-- Return value: Whether set max health for entity was success.
-- Return value type: `Boolean`
+    生命值数
+- 返回值: 是否成功
+- 返回值类型: `Boolean`
 
 <br>
 

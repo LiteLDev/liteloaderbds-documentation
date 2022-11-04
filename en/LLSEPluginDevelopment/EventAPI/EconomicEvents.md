@@ -79,6 +79,7 @@ Here are the economic change events related to the LLSE built-in economic system
   - money : `Integer`  
     The amount of money being transferred.
 
+**Notice: When `onMoneyReduce` or `onMoneyAdd` was triggered, this event will be also triggered**
 <br>
 
 #### `"beforeMoneySet"` - Pre-Player Money Setting Event
