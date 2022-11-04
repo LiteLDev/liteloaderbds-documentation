@@ -1081,3 +1081,32 @@ Each item in the array is a key-value pair list object `Object`, and the Attribu
 - Return value type: `Boolean`
 
 <br>
+
+#### Get the player's Biome ID
+
+`pl.getBiomeId()`  
+
+- Return value：Biome ID
+- Return value type：`Integer`
+
+<br>
+
+#### Get the player's Biome Name
+
+`pl.getBiomeName()`  
+
+- Return value：Biome Name
+- Return value type：`String`
+
+<br>
+
+#### Set Player Ability
+
+`pl.setAbility(AbilityID,Value)`  
+- Parameters:
+  - AbilityID : `Integer`  
+    Ability的ID   
+  - Value : `Boolean`  
+    Whether to turn on
+- Return value：None
+- Return value type：`Boolean`

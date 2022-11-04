@@ -465,6 +465,24 @@
 
 <br>
 
+#### 获取生物所在群系ID
+
+`en.getBiomeId()`  
+
+- 返回值：群系ID
+- 返回值类型：`Integer`
+
+<br>
+
+#### 获取生物所在群系名称
+
+`en.getBiomeName()`  
+
+- 返回值：群系名称
+- 返回值类型：`String`
+
+<br>
+
 
 ### 其他实体函数 API
 

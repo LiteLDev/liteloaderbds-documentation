@@ -1453,6 +1453,37 @@
 
 <br>
 
+#### 获取玩家所在群系ID
+
+`pl.getBiomeId()`  
+
+- 返回值：群系ID
+- 返回值类型：`Integer`
+
+<br>
+
+#### 获取玩家所在群系名称
+
+`pl.getBiomeName()`  
+
+- 返回值：群系名称
+- 返回值类型：`String`
+
+<br>
+
+#### 设置玩家Ability属性
+
+`pl.setAbility(AbilityID,value)`  
+- 参数：
+  - AbilityID : `Integer`  
+    Ability的ID   
+  - value : `Boolean`  
+    是否开启
+- 返回值：无作用
+- 返回值类型：`Boolean`
+
+<br>
+
 #### 判断是否为模拟玩家
 
 `pl.isSimulatedPlayer()`

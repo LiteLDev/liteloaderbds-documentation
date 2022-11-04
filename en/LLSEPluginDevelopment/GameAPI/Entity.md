@@ -431,6 +431,24 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](/LL
 
 <br>
 
+#### Get the Entity's Biome ID
+
+`en.getBiomeId()`  
+
+- Return value：Biome ID
+- Return value type：`Integer`
+
+<br>
+
+#### Get the Entity's Biome Name
+
+`en.getBiomeName()`  
+
+- Return value：Biome Name
+- Return value type：`String`
+
+<br>
+
 ### Other Entity Function API
 
 The following APIs provide APIs for interacting with entities at specified locations in the game:
