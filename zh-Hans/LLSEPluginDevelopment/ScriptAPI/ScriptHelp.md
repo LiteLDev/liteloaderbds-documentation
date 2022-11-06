@@ -59,7 +59,7 @@
 
 #### 效果展示：
 
-![ColorLogExample](/assets/ColorLog.png)
+![ColorLogExample](../../../assets/ColorLog.png)
 
 <br>
 
