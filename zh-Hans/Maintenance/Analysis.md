@@ -19,7 +19,7 @@
 
 `LiteLoader ScriptEngine`的架构，可以从此图一眼看出：
 
-![脚本引擎架构图](structure.png)
+![脚本引擎架构图](../../assets/Structure.png)
 
 - `LiteLoader`加载器和`ScriptX`两部分提供重要的基础接口
 - Kernel内核抽象层负责所有对`LiteLoader`API的调用、Hook函数调用以及对其他底层库函数的调用，并将他们各自的类型抽象为标准的变量类型和STL容器，将各自的接口封装，避免对底层项目的强依赖扩散到上层。

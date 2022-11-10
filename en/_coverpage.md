@@ -6,7 +6,6 @@
 
 [GitHub](https://github.com/LiteLDev/LiteLoaderBDS)
 [Home Page](https://www.litebds.com)
-[Community](https://forum.litebds.com/)
 [Read Docs](/README.md)
 
 ![](../assets/banner.webp)
