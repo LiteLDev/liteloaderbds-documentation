@@ -102,3 +102,5 @@
 我们欢迎你为**LL**做贡献！
 
 👉[点击此处](/Maintenance/)👈查看项目维护与支持文档。
+
+我们正在构思LiteLoaderBDS 3，你可以👉[点击此处](/Maintenance/Blueprint.md)👈查看蓝图。
