@@ -109,5 +109,6 @@
     - [💡 放在最后](/Maintenance/Conclusion.md)
     - [👓 项目架构分析（待完善）](/Maintenance/Analysis.md)
     - [🎯 维护项目和贡献代码（待完善）](/Maintenance/Coding.md)
+    - [🧿 LiteLoaderBDS 3 蓝图](/Maintenance/Blueprint.md)
 
 - [💦 更新日志](https://github.com/LiteLDev/LiteLoaderBDS/releases)
