@@ -1,3 +1,6 @@
+> [!WARNING]
+> ParticleAPI is disabled by default, you need to change `ParticleAPI` to `true` in `plugins/LiteLoader/LiteLoader.json`
+
 ## ✨ ParticleSpawner Object
 
    For a `ParticleSpawner` type variable ps, there are the following members:
