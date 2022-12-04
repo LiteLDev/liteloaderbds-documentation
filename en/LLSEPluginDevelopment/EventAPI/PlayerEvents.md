@@ -284,7 +284,7 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 <br>
 
-#### `"onEat"` - Player Eat Event
+#### `"onEat"` - Player Eating Event
 
 - Listener function prototype 
   `function(player,item)`
@@ -297,6 +297,20 @@ Note: The player may trigger this event on the server multiple times in a row.
 - Intercept events: function returns `false`
 
 **Food** here is a broad concept of items, including conventional food, potions, milk, medicines and other items that can be ingested.
+
+<br>
+
+#### `"onAte"` - Player Ate Event
+
+- Listener function prototype 
+  `function(player,item)`
+- Parameters: 
+  - player : `Player`  
+    The player that has eaten.
+  - item : `Item`  
+    The item which has been eaten.
+  
+- Intercept events：cannot be intercepted.
 
 <br>
 
