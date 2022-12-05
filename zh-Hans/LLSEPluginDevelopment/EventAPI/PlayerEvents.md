@@ -336,7 +336,7 @@
 #### `"onEffectAdded"` - 玩家获得效果
 
 - 监听函数原型
-  `function(player,effectName,Amplifier,Duration)`
+  `function(player,effectName,amplifier,duration)`
 - 参数：
   - player : `Player`  
     获得效果的玩家对象
@@ -368,7 +368,7 @@
 #### `"onEffectUpdated"` - 玩家刷新效果
 
 - 监听函数原型
-  `function(player,effectName,Amplifier,Duration)`
+  `function(player,effectName,amplifier,duration)`
 - 参数：
   - player : `Player`  
     刷新效果的玩家对象
