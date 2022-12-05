@@ -1289,7 +1289,7 @@
     pl:removeBossBar(1145141919)
     ```
 
-#### 获取玩家对应的NBT对象
+#### 获取在线玩家对应的NBT对象
 
 `pl.getNbt()`
 
@@ -1298,7 +1298,7 @@
 
 <br>
 
-#### 写入玩家对应的NBT对象
+#### 写入在线玩家对应的NBT对象
 
 `pl.setNbt(nbt)`
 
@@ -1309,6 +1309,68 @@
 - 返回值类型：`Boolean`
 
 关于NBT对象的更多使用，请参考 [NBT接口文档](LLSEPluginDevelopment/NbtAPI/NBT.md)
+
+<br>
+
+#### 获取玩家对应的NBT对象
+
+`mc.getPlayerNbt(uuid)`
+
+- 参数：
+  - uuid : `String`  
+    玩家的UUID
+- 返回值：玩家的NBT对象
+- 返回值类型：`NbtCompound`
+
+此API的好处是可以获取到离线玩家NBT，无需玩家在线，无需玩家对象。
+
+<br>
+
+#### 写入玩家对应的NBT对象
+
+`mc.setPlayerNbt(uuid,nbt)`
+
+- 参数：
+  - uuid : `String`  
+    玩家的UUID
+  - nbt : `NbtCompound`  
+    NBT对象
+- 返回值：是否成功写入
+- 返回值类型：`Boolean`
+
+此API的好处是可以操作离线玩家NBT，无需玩家在线，无需玩家对象。
+
+<br>
+
+#### 覆盖玩家对应的NBT对象的特定NbtTag
+
+`mc.setPlayerNbtTags(uuid,nbt,tags)`
+
+- 参数：
+  - uuid : `String`  
+    玩家的UUID
+  - nbt : `NbtCompound`  
+    NBT对象
+  - tags : `Array` 
+    需要覆盖的NbtTag (String)
+- 返回值：是否成功覆盖对应的Tag
+- 返回值类型：`Boolean`
+
+此API的好处是可以操作离线玩家NBT，无需玩家在线，无需玩家对象。
+
+<br>
+
+#### 从存档中删除玩家对应的NBT对象的全部内容
+
+`mc.deletePlayerNbt(uuid)`
+
+- 参数：
+  - uuid : `String`  
+    玩家的UUID
+- 返回值：是否删除成功
+- 返回值类型：`Boolean`
+
+此API的好处是可以操作离线玩家NBT，无需玩家在线，无需玩家对象。
 
 <br>
 

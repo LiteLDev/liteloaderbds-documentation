@@ -291,7 +291,7 @@
 
 <br>
 
-#### `"onEat"` - 玩家食用食物
+#### `"onEat"` - 玩家正在吃食物
 
 - 监听函数原型
   `function(player,item)`
@@ -304,6 +304,20 @@
 - 拦截事件：函数返回`false`
 
 此处的 **食物** 为宽泛物品的概念，包括常规食物、药水、牛奶、药品等多种可以被摄取的物品
+
+<br>
+
+#### `"onAte"` - 玩家吃下食物
+
+- 监听函数原型
+  `function(player,item)`
+- 参数：
+  - player : `Player`  
+    正在吃的玩家对象
+  - item : `Item`  
+    被吃的物品对象
+  
+- 拦截事件：不可以拦截
 
 <br>
 
@@ -322,13 +336,16 @@
 #### `"onEffectAdded"` - 玩家获得效果
 
 - 监听函数原型
-  `function(player,effectName)`
+  `function(player,effectName,amplifier,duration)`
 - 参数：
   - player : `Player`  
     获得效果的玩家对象
-
   - effectName : `String`  
     获得的效果名称 **minecraft:effect.效果**
+  - Amplifier : `Number`  
+    获得的效果倍率 （效果等级 -1）
+  - Duration : `Number`  
+    获得的效果时长 （单位：tick）
   
 - 拦截事件：函数返回`false`
 
@@ -341,7 +358,6 @@
 - 参数：
   - player : `Player`  
     被移除效果的玩家对象
-
   - effectName : `String`   
     被移除的效果名称 **minecraft:effect.效果**
   
@@ -352,13 +368,16 @@
 #### `"onEffectUpdated"` - 玩家刷新效果
 
 - 监听函数原型
-  `function(player,effectName)`
+  `function(player,effectName,amplifier,duration)`
 - 参数：
   - player : `Player`  
     刷新效果的玩家对象
-
-  - effectName : `String`   
-    被刷新的效果名称 **minecraft:effect.效果**
+  - effectName : `String`  
+    获得的效果名称 **minecraft:effect.效果**
+  - Amplifier : `Number`  
+    获得的效果倍率 （效果等级 -1）
+  - Duration : `Number`  
+    获得的效果时长 （单位：tick）
   
 - 拦截事件：函数返回`false`
 
