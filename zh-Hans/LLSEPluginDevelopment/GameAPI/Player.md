@@ -97,6 +97,7 @@
 | pl.isFlying              | 玩家是否在飞行                    | `Boolean`        |
 | pl.isSleeping            | 玩家是否正在睡觉                  | `Boolean`        |
 | pl.isMoving              | 玩家是否正在移动                  | `Boolean`        |
+| pl.ip                    | 玩家设备IP地址                    | `String`         |
 
 这些对象属性都是只读的，无法被修改。其中：
 
