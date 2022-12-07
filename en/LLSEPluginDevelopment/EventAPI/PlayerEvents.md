@@ -284,7 +284,7 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 <br>
 
-#### `"onEat"` - Player Eat Event
+#### `"onEat"` - Player Eating Event
 
 - Listener function prototype 
   `function(player,item)`
@@ -308,7 +308,7 @@ Note: The player may trigger this event on the server multiple times in a row.
   - player : `Player`  
     The player that has eaten.
   - item : `Item`  
-    The item being eaten.
+    The item which has been eaten.
   
 - Intercept events: function returns `false`
 
