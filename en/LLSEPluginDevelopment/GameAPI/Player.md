@@ -947,7 +947,7 @@ pl.setBossBar(1145141919,"Hello ~ ",80,0);
 pl.removeBossBar(1145141919);
 ```
 
-#### Get the Player's NBT Object
+#### Get an Online Player's NBT Object
 
 `pl.getNbt()`
 
@@ -956,7 +956,7 @@ pl.removeBossBar(1145141919);
 
 <br>
 
-#### Write to the Player's NBT Object
+#### Write to an Online Player's NBT Object
 
 `pl.setNbt(nbt)`
 
@@ -967,6 +967,68 @@ pl.removeBossBar(1145141919);
 - Return value type: `Boolean`
 
 For more usage of NBT objects, please refer to [NBT Interface Documentation](/LLSEPluginDevelopment/NbtAPI/NBT.md)
+
+<br>
+
+#### Get an Player's NBT Object
+
+`mc.getPlayerNbt(uuid)`
+
+- Parameters: 
+  - uuid : `String`  
+    Player`s UUID
+- Return value: Player's NBT object.
+- Return value type: `NbtCompound`
+
+Using this API, you can operate offline player`s nbt. 
+
+<br>
+
+#### Write to an Player's NBT Object
+
+`mc.setPlayerNbt(uuid,nbt)`
+
+- Parameters: 
+  - uuid : `String`  
+    Player`s UUID
+  - nbt : `NbtCompound`  
+    NBT objects
+- Return value: Whether the write was successful or not.
+- Return value type: `Boolean`
+
+Using this API, you can operate offline player`s nbt. 
+
+<br>
+
+#### Write Data to Some Special Tags of an Player's NBT Object
+
+`mc.setPlayerNbtTags(uuid,nbt,tags)`
+
+- Parameters: 
+  - uuid : `String`  
+    Player`s UUID
+  - nbt : `NbtCompound`  
+    NBT objects
+  - tags : `Array`  
+    Tags need to write
+- Return value: Whether the write was successful or not.
+- Return value type: `Boolean`
+
+Using this API, you can operate offline player`s nbt. 
+
+<br>
+
+#### Delete an Player's NBT Object
+
+`mc.deletePlayerNbt(uuid)`
+
+- Parameters: 
+  - uuid : `String`  
+    Player`s UUID
+- Return value: Whether the delete was successful or not.
+- Return value type: `Boolean`
+
+Using this API, you can operate offline player`s nbt. 
 
 <br>
 

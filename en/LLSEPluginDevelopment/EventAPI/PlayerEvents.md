@@ -310,9 +310,7 @@ Note: The player may trigger this event on the server multiple times in a row.
   - item : `Item`  
     The item which has been eaten.
   
-- Intercept events：cannot be intercepted.
-
-<br>
+- Intercept events: function returns `false`
 
 #### `"onConsumeTotem"` - Player Consume Totem Event
 
@@ -329,12 +327,16 @@ Note: The player may trigger this event on the server multiple times in a row.
 #### `"onEffectAdded"` - Player Effect Added Event
 
 - Listener function prototype 
-  `function(player,effectName)`
+  `function(player,effectName,amplifier,duration)`
 - Parameters: 
   - player : `Player`  
     The player who gets the effect.
   - effectName : `String`  
     Obtained effect name: **minecraft:effect.EffectName**
+  - amplifier : `Number` 
+    Obtained effect amplifier (effect level -1)
+  - duration : `Number` 
+    Obtained effect duration (ticks)
   
 - Intercept events: function returns `false`
 
@@ -357,12 +359,16 @@ Note: The player may trigger this event on the server multiple times in a row.
 #### `"onEffectUpdated"` - Player Effect Updated Event
 
 - Listener function prototype 
-  `function(player,effectName)`
+  `function(player,effectName,amplifier,duration)`
 - Parameters: 
   - player : `Player`  
     The player that updated the effect.
   - effectName : `String`   
     Refreshed effect name: **minecraft:effect.EffectName**
+  - amplifier : `Number` 
+    Obtained effect amplifier (effect level -1)
+  - duration : `Number` 
+    Obtained effect duration (ticks)
   
 - Intercept events: function returns `false`
 
