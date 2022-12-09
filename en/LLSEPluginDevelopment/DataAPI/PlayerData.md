@@ -101,7 +101,7 @@ When a player enters the server for the first time, his name and XUID are automa
 `data.xuid2uuid(xuid)`
 
 - Parameters: 
-  - name : `String`  
+  - xuid : `String`  
     The name of the player to query.
 - Return value: Player's UUID.
 - Return value type: `String`
