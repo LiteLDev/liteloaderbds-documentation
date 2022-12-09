@@ -63,7 +63,7 @@ When a player enters the server for the first time, his name and XUID are automa
 
 - Parameters: 
   - name : `String`  
-    The name of the player to query.
+    The xuid of the player to query.
 - Return value: Player's XUID.
 - Return value type: `String`
   - If the return value is `Null`, it means the query failed.
