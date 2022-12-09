@@ -83,6 +83,32 @@ XUID数据库让你可以即使在玩家离线的时候，也可以查询玩家�
 
 <br>
 
+#### 根据玩家名查询UUID
+
+`data.name2uuid(name)`
+
+- 参数：
+  - name : `String`  
+    要查询的玩家名
+- 返回值：玩家的UUID
+- 返回值类型：`String`
+  - 如果返回值为`Null`，则代表查询失败
+
+<br>
+
+#### 根据XUID查询玩家UUID
+
+`data.xuid2uuid(xuid)`
+
+- 参数：
+  - xuid: `String`  
+    要查询的玩家XUID
+- 返回值：玩家的UUID
+- 返回值类型：`String`
+  - 如果返回值为`Null`，则代表查询失败
+
+<br>
+
 #### 获取所有的玩家信息
 
 `data.getAllPlayerInfo()`
