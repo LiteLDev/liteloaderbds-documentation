@@ -83,6 +83,32 @@ When a player enters the server for the first time, his name and XUID are automa
 
 <br>
 
+#### Query UUID by Player Name
+
+`data.name2uuid(name)`
+
+- Parameters: 
+  - name : `String`  
+    The name of the player to query.
+- Return value: Player's UUID.
+- Return value type: `String`
+  - If the return value is `Null`, it means the query failed.
+
+<br>
+
+#### Query UUID Based on XUID
+
+`data.xuid2uuid(xuid)`
+
+- Parameters: 
+  - xuid : `String`  
+    The xuid of the player to query.
+- Return value: Player's UUID.
+- Return value type: `String`
+  - If the return value is `Null`, it means the query failed.
+
+<br>
+
 #### Get all player information
 
 `data.getAllPlayerInfo()`
