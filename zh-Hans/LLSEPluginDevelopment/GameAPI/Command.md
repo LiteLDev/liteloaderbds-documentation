@@ -71,11 +71,11 @@ log(result.output);
   - permission : `PermType`  
     （可选参数）指令执行所需权限  
 
-    | 执行权限               | 含义                       |
-    | ---------------------- | -------------------------- |
-    | `PermType.Any`         | 任何人都可以执行这条指令   |
-    | `PermType.GameMasters` | 只有OP可以执行这条指令（默认值）|
-    | `PermType.Console`     | 只有控制台可以执行这条指令 |
+    | 执行权限               | 含义                             |
+    | ---------------------- | -------------------------------- |
+    | `PermType.Any`         | 任何人都可以执行这条指令         |
+    | `PermType.GameMasters` | 只有OP可以执行这条指令（默认值） |
+    | `PermType.Console`     | 只有控制台可以执行这条指令       |
 
   - flag : `Integer`  
     （可选参数）默认值 `0x80`   
@@ -170,9 +170,9 @@ log(result.output);
 | `ParamType.Vec3`      | 浮点数坐标参数                                             |
 | `ParamType.RawText`   | 原始字符串参数（可包含特殊字符，如逗号空格）               |
 | `ParamType.Message`   | 消息类型参数（同 `/say` 指令参数，会自动展开目标选择器等） |
-| `ParamType.JsonValue` | JSON字符串参数                                           |
+| `ParamType.JsonValue` | JSON字符串参数                                             |
 | `ParamType.Item`      | 物品类型参数                                               |
-| `ParamType.Block`     | 方块类型参数                                               |
+| `ParamType.Block`     | 方块类型参数(在1.19.50被移除)                              |
 | `ParamType.Effect`    | 效果类型参数                                               |
 | `ParamType.Enum`      | 枚举参数                                                   |
 | `ParamType.SoftEnum`  | 可变枚举参数                                               |
@@ -231,14 +231,14 @@ log(result.output);
 参数 `origin`的类型为 `CommandOrigin` 对象。此对象表示此次命令的执行者，通过这个对象，可以对执行者进行一些操作  
 对于某个特定的 `CommandOrigin` 对象`ori`，有以下这些属性
 
-| 属性         | 含义                        | 类型             |
-| ------------ | --------------------------- | ---------------- |
-| ori.type      | 指令执行主体类型              | `OriginType`     |
-| ori.name      | 指令执行主体的名称             | `String`        |
-| ori.pos       | 指令执行主体的坐标             | `FloatPos`       |
-| ori.blockPos  | 指令执行主体的方块坐标          | `IntPos`         |
-| ori.entity    | 执行指令的实体（可空）          | `Entity`         |
-| ori.player    | 执行指令的玩家（可空）          | `Player`         |
+| 属性         | 含义                   | 类型         |
+| ------------ | ---------------------- | ------------ |
+| ori.type     | 指令执行主体类型       | `OriginType` |
+| ori.name     | 指令执行主体的名称     | `String`     |
+| ori.pos      | 指令执行主体的坐标     | `FloatPos`   |
+| ori.blockPos | 指令执行主体的方块坐标 | `IntPos`     |
+| ori.entity   | 执行指令的实体（可空） | `Entity`     |
+| ori.player   | 执行指令的玩家（可空） | `Player`     |
 
 #### 参数 `output` ：向命令执行者输出命令的执行结果
 
@@ -293,7 +293,7 @@ log(result.output);
 | `ParamType.Vec3`      | `FloatPos`      | 浮点数坐标对象                                               |
 | `ParamType.RawText`   | `String`        | 原始字符串（可包含特殊字符，如逗号空格）                     |
 | `ParamType.Message`   | `String`        | 消息类型字符串（同 `/say` 指令参数，会自动展开目标选择器等） |
-| `ParamType.JsonValue` | `String`        | JSON字符串                                                 |
+| `ParamType.JsonValue` | `String`        | JSON字符串                                                   |
 | `ParamType.Item`      | `Item`          | 物品类型                                                     |
 | `ParamType.Block`     | `Block`         | 方块类型                                                     |
 | `ParamType.Effect`    | `String`        | 效果类型字符串                                               |
