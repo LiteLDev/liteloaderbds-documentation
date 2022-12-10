@@ -342,9 +342,9 @@
     获得效果的玩家对象
   - effectName : `String`  
     获得的效果名称 **minecraft:effect.效果**
-  - Amplifier : `Number`  
+  - amplifier : `Number`  
     获得的效果倍率 （效果等级 -1）
-  - Duration : `Number`  
+  - duration : `Number`  
     获得的效果时长 （单位：tick）
   
 - 拦截事件：函数返回`false`
@@ -374,9 +374,9 @@
     刷新效果的玩家对象
   - effectName : `String`  
     获得的效果名称 **minecraft:effect.效果**
-  - Amplifier : `Number`  
+  - amplifier : `Number`  
     获得的效果倍率 （效果等级 -1）
-  - Duration : `Number`  
+  - duration : `Number`  
     获得的效果时长 （单位：tick）
   
 - 拦截事件：函数返回`false`
