@@ -217,3 +217,15 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](/LL
 - Return value type:  `Boolean`
 
 <br>
+
+#### Determine if it is the same kind of item
+
+`it.match(item)`
+
+- Parameters: 
+  - item : `Item`  
+    Judged items
+- Return value: is the same kind of item
+- Return value type:  `Boolean`
+
+<br>
