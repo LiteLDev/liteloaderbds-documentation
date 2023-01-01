@@ -136,7 +136,7 @@
 
 - 参数：
   - pos1 : `IntPos`
-  - pos1 : `IntPos`
+  - pos2 : `IntPos`
   - ignoreBlocks : `Boolean`
   - ignoreEntities : `Boolean`
 
