@@ -72,6 +72,63 @@ LitePackageManager是LiteLoaderBDS的包管理器。这是LiteLoaderBDS 3的最�
 
 ## 代码管理和文件结构
 
+### 分支管理
+
+目前版本的LiteLoaderBDS存在分支管理混乱的问题。
+
+在LiteLoaderBDS 3中，将使用如下分支管理方案：
+
+```mermaid
+gitGraph
+    branch beta
+    branch develop
+    checkout develop
+    commit
+    branch feature/offline-nbt
+    commit
+    checkout feature/offline-nbt
+    commit
+    checkout develop
+    merge feature/offline-nbt
+    commit
+    checkout beta
+    merge develop
+    branch adaptation/1.19.20
+    checkout adaptation/1.19.20
+    merge beta
+    commit
+    commit
+    checkout develop
+    commit
+    checkout beta
+    merge adaptation/1.19.20
+    checkout develop
+    merge beta
+    checkout beta
+    merge develop
+    checkout main
+    merge beta
+    branch hotfix/issue-523
+    checkout hotfix
+    commit
+    checkout main
+    merge hotfix/issue-523
+```
+
+其中，`main`分支是主分支，意味着最新的稳定代码，不应有任何单独的提交，只能有来自`hotfix/*`或`beta`的PR。
+
+`hotfix/*`是热修复分支，当`main`分支中代码出现bug时，可以从`main`中建立该分支进行修复，最终合并到`main`分支。
+
+`beta`意味着最新的经过测试的代码，一般来说至少可以正常启动，用于在合并到`main`之前的测试工作，可以有单独的提交，但仅限于bug修复。
+
+`adaptation/*`意味着版本适配，当BDS发布新版本后，在该分支进行适配工作。该分支应当从`beta`分支中创建，最终合并到`beta`分支
+
+`develop`意味着开发新功能。一些较小的改动，一般不需要另外创建`feature/*`分支，则可以以单独提交的形式提交到该分支。最终合并到`beta`分支。
+
+`feature/*`意味着较大的新功能，应当从`develop`分支中创建，最终合并到`beta`分支。
+
+第三方开发者发起PR的对象应当是除了`main`以外的所有分支。
+
 ### LiteLoaderBDS及相关模块
 
 暂无
