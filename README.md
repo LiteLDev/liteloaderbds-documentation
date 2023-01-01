@@ -12,3 +12,5 @@ If you are contributing to the C++-related documentation, please go to [the repo
 
 You should modify the texts in different languages AT THE SAME TIME.
 Please firstly fork this repository and then create a pull request!
+
+If you are opening a pull request, please make sure that you are merging into branch `develop` rather than `main`!
