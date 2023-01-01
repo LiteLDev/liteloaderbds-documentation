@@ -78,7 +78,7 @@ LitePackageManager是LiteLoaderBDS的包管理器。这是LiteLoaderBDS 3的最�
 
 在LiteLoaderBDS 3中，将使用如下分支管理方案：
 
-[分支管理方案](../../../assets/BlueprintGitGraph.svg)
+![分支管理方案](../../../assets/BlueprintGitGraph.svg)
 
 其中，`main`分支是主分支，意味着最新的稳定代码，不应有任何单独的提交，只能有来自`hotfix/*`或`beta`的PR。
 
