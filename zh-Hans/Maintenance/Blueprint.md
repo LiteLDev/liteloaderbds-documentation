@@ -78,42 +78,7 @@ LitePackageManager是LiteLoaderBDS的包管理器。这是LiteLoaderBDS 3的最�
 
 在LiteLoaderBDS 3中，将使用如下分支管理方案：
 
-```mermaid
-gitGraph
-    branch beta
-    branch develop
-    checkout develop
-    commit
-    branch feature/offline-nbt
-    commit
-    checkout feature/offline-nbt
-    commit
-    checkout develop
-    merge feature/offline-nbt
-    commit
-    checkout beta
-    merge develop
-    branch adaptation/1.19.20
-    checkout adaptation/1.19.20
-    merge beta
-    commit
-    commit
-    checkout develop
-    commit
-    checkout beta
-    merge adaptation/1.19.20
-    checkout develop
-    merge beta
-    checkout beta
-    merge develop
-    checkout main
-    merge beta
-    branch hotfix/issue-523
-    checkout hotfix
-    commit
-    checkout main
-    merge hotfix/issue-523
-```
+[分支管理方案](../../../assets/BlueprintGitGraph.svg)
 
 其中，`main`分支是主分支，意味着最新的稳定代码，不应有任何单独的提交，只能有来自`hotfix/*`或`beta`的PR。
 
