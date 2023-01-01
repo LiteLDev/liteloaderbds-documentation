@@ -6,7 +6,7 @@
 
 ## 🎨 什么是LiteLoaderBDS？
 
-`LiteLoaderBDS`（以下简称**LL**）是一个用于Minecraft基岩版官方服务端`Bedrock Dedicated Server`（以下简称**BDS**）的插件加载器，提供强大的跨语言脚本插件支持能力和稳定的API支持。
+**LiteLoaderBDS**是一个用于**适用于 Minecraft 的 Bedrock 版专属服务端软件**（以下简称**BDS**）的插件加载器，提供强大的跨语言脚本插件支持能力和稳定的API支持。
 
 👉[点击此处](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/README_zh-cn.md)👈 查看更详细的介绍。
 
@@ -18,7 +18,13 @@
 
 👉[点击此处](/FAQ.md)👈 查看常见问题与解决方法。
 
-如果你的问题还没有被解决，请在我们的Discord群组、Telegram群组、QQ群或GitHub Issues提问。
+## 🎬 如何参与LiteLoaderBDS维护和开发？
+
+我们欢迎你为**LiteLoaderBDS**做贡献！
+
+👉[点击此处](/Maintenance/)👈查看项目维护与支持文档。
+
+我们正在构思LiteLoaderBDS 3，你可以👉[点击此处](/Maintenance/Blueprint.md)👈查看蓝图。
 
 ## 🛴 我想动手写一个插件，要怎么做呢？
 
@@ -50,7 +56,7 @@
 优点：
 * 无需关注**BDS**底层，容易上手开发；
 * 理论上不需要更新，即可支持所有Minecraft版本；
-* 非常安全，且随着**LL**更新，漏洞自动修复。
+* 非常安全，且随着**LiteLoaderBDS**更新，漏洞自动修复。
 
 缺点：
 * 代码管理难度高，随着代码量增加，维护变得困难；
@@ -69,7 +75,7 @@
 优点：
 * 无需关注**BDS**底层，容易上手开发；
 * 理论上不需要更新，即可支持所有Minecraft版本；
-* 非常安全，且随着**LL**更新，漏洞自动修复。
+* 非常安全，且随着**LiteLoaderBDS**更新，漏洞自动修复。
 
 缺点：
 * 由第三方开发者维护，可能得不到最新支持；
@@ -96,11 +102,3 @@
 建议对.NET平台较为熟悉的开发者使用。
 
 准备好了吗？ 👉[点击此处](/DotNETPluginDevelopment/)👈 查看 .NET插件开发文档。
-
-## 🎬 如何参与LiteLoaderBDS维护和开发？
-
-我们欢迎你为**LL**做贡献！
-
-👉[点击此处](/Maintenance/)👈查看项目维护与支持文档。
-
-我们正在构思LiteLoaderBDS 3，你可以👉[点击此处](/Maintenance/Blueprint.md)👈查看蓝图。
