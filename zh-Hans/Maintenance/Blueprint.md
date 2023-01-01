@@ -80,11 +80,12 @@ LitePackageManager是LiteLoaderBDS的包管理器。这是LiteLoaderBDS 3的最�
 
 ```mermaid
 gitGraph
-    branch beta
-    branch develop
+    commit
+    branch beta order:2
+    branch develop order:3
     checkout develop
     commit
-    branch feature/offline-nbt
+    branch feature/offline-nbt order:5
     commit
     checkout feature/offline-nbt
     commit
@@ -93,9 +94,8 @@ gitGraph
     commit
     checkout beta
     merge develop
-    branch adaptation/1.19.20
+    branch adaptation/1.19.20 order:4
     checkout adaptation/1.19.20
-    merge beta
     commit
     commit
     checkout develop
@@ -108,8 +108,8 @@ gitGraph
     merge develop
     checkout main
     merge beta
-    branch hotfix/issue-523
-    checkout hotfix
+    branch hotfix/issue-523 order:1
+    checkout hotfix/issue-523
     commit
     checkout main
     merge hotfix/issue-523
