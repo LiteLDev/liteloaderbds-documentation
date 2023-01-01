@@ -147,23 +147,23 @@ The return value is `0-3`, representing the four basic orientations of **North, 
 `mc.getStructure(pos1, pos2, ignoreBlocks = false, ignoreEntities = false)`
 
 - Parameters:
-  - pos1 : `IntPos`
-  - pos2 : `IntPos`
-  - ignoreBlocks : `Boolean`
-  - ignoreEntities : `Boolean`
 
-- Return value type: `NbtCompound`
+  - pos1 : `IntPos` diagonal coordinate 1, filled in similarly to the `from` parameter of the [fill command](https://minecraft.fandom.com/wiki/Command/fill "view in wikipedia")
+  - pos2 : `IntPos` diagonal coordinate 2, filled in similarly to the `to` parameter of the [fill command](https://minecraft.fandom.com/wiki/Command/fill "View in Wikipedia")
+  - ignoreBlocks : `Boolean` Ignore blocks
+  - ignoreEntities : `Boolean` Ignore entities
+- Return value type : `NbtCompound`
 
 ## Set Structure NBT
 
 `mc.setStructure(nbt, pos, mirror = 0, rotation = 0)`
 
 - Parameters:
-  - nbt : `NbtCompound`
-  - pos : `IntPos`
-  - mirror : `number`
-    - `0:None` `1:X` `2:Z` `3:XZ`
-  - rotation : `number`
-    - `0:None` `1:Rotate90` `2:Rotate180` `3:Rotate270`
 
-- Return value type: `Boolean`
+  - nbt : `NbtCompound`
+  - pos : `IntPos` place coordinates
+  - mirror : `number` mirror mode
+    - `0: no mirror` `1: X-axis` `2: Z-axis` `3: XZ-axis`
+  - rotation : `number` rotation angle
+    - `0: no rotation` `1: rotation 90°` `2: rotation 180°` `3: rotation 270°`
+- Return value type : `Boolean`
