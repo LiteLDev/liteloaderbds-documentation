@@ -148,7 +148,7 @@ The return value is `0-3`, representing the four basic orientations of **North, 
 
 - Parameters:
   - pos1 : `IntPos`
-  - pos1 : `IntPos`
+  - pos2 : `IntPos`
   - ignoreBlocks : `Boolean`
   - ignoreEntities : `Boolean`
 
