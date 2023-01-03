@@ -1,6 +1,6 @@
 # LiteLoaderBDS文档
 
-[![Build](https://img.shields.io/github/workflow/status/LiteLDev/LiteLoader/Build%20LiteLoader?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/LiteLDev/LiteLoaderBDS/cmake_repo.yml?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/actions)
 [![Latest Tag](https://img.shields.io/github/v/tag/LiteLDev/LiteLoader?label=LATEST%20TAG&style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/releases/latest)
 [![Downloads@Latest](https://img.shields.io/github/downloads/LiteLDev/LiteLoader/latest/total?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/releases/latest)
 
