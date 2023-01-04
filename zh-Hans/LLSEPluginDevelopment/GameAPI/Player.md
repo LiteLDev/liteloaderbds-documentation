@@ -466,6 +466,104 @@
 - 返回值: 是否成功
 - 返回值类型: `Boolean`
 
+#### Set Absorption Attribute for Player
+
+`pl.setAbsorption(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Attack Damage Attribute for Player
+
+`pl.setAttackDamage(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Maximal Attack Damage Attribute for Player
+
+`pl.setMaxAttackDamage(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Follow Range Attribute for Player
+
+`pl.setFollowRange(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Knockback Resistance Attribute for Player
+
+`pl.setKnockbackResistance(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value (0 or 1)
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Luck Attribute for Player
+
+`pl.setLuck(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Movement Speed for Player
+
+`pl.setMovementSpeed(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Underwater Movement Speed for Player
+
+`pl.setUnderwaterMovementSpeed(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+
+#### Set Lava Movement Speed for Player
+
+`pl.setLavaMovementSpeed(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
 
 #### 设置玩家最大生命值
 

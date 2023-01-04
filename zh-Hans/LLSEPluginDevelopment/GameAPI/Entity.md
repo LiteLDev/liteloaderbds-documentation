@@ -212,6 +212,114 @@
 
 <br>
 
+#### Set Absorption Attribute for Entity
+
+`en.setAbsorption(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Attack Damage Attribute for Entity
+
+`en.setAttackDamage(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Maximal Attack Damage Attribute for Entity
+
+`en.setMaxAttackDamage(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Follow Range Attribute for Entity
+
+`en.setFollowRange(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Knockback Resistance Attribute for Entity
+
+`en.setKnockbackResistance(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value (0 or 1)
+- Return value: Whether set attribute value for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Luck Attribute for Entity
+
+`en.setLuck(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Movement Speed for Entity
+
+`en.setMovementSpeed(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Underwater Movement Speed for Entity
+
+`en.setUnderwaterMovementSpeed(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Lava Movement Speed for Entity
+
+`en.setLavaMovementSpeed(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for entity was success.
+- Return value type: `Boolean`
+
+<br>
+
 #### 设置实体的最大生命值
 
 `en.setMaxHealth(health)`
