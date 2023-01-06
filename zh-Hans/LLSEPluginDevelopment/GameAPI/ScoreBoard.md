@@ -141,7 +141,7 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 
 下面这些API提供了更多操作计分板系统的API
 
-#### 获取玩家计分项的分数（方便函数）
+#### 获取在线玩家计分项的分数（方便函数）
 
 `pl.getScore(name)`
 
@@ -159,7 +159,19 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 log("You have money:",pl.getScore("money"));
 ```
 
-#### 修改玩家计分项的分数（方便函数）
+#### 获取玩家计分项的分数
+
+`mc.getPlayerScore(uuid, name)`
+
+- 参数：
+  - uuid : `String` 
+    玩家的UUID 
+  - name : `String`  
+    计分项名称  
+- 返回值：计分板上的数值
+- 返回值类型：`Integer`
+
+#### 修改在线玩家计分项的分数（方便函数）
 
 设置分数 `pl.setScore(name,value)`  
 增加分数 `pl.addScore(name,value)`  
@@ -168,7 +180,6 @@ log("You have money:",pl.getScore("money"));
 - 参数：
   - name : `String`  
     计分项名称  
-
   - value : `Integer`  
     要设置 / 增加 / 减少的数值  
 - 返回值：是否设置成功
@@ -183,6 +194,22 @@ pl.setScore("money",10000);
 pl.addScore("money",100);
 pl.reduceScore("money",50);
 ```
+
+#### 修改玩家计分项的分数
+
+设置分数 `mc.setPlayerScore(uuid, name, value)`  
+增加分数 `mc.addPlayerScore(uuid, name, value)`  
+减少分数 `mc.reducePlayerScore(uuid, name, value)`
+
+- 参数：
+  - uuid : `String`  
+    玩家的UUID  
+  - name : `String`  
+    计分项名称  
+  - value : `Integer`  
+    要设置 / 增加 / 减少的数值  
+- 返回值：是否设置成功
+- 返回值类型：`Boolean`
 
 #### 玩家停止跟踪计分项（方便函数）
 
