@@ -212,111 +212,111 @@
 
 <br>
 
-#### Set Absorption Attribute for Entity
+#### 为实体设置伤害吸收属性
 
 `en.setAbsorption(value)`
 
-- Parameters: 
+- 参数: 
   - value : `Integer`  
-    New value
-- Return value: Whether set attribute value for entity was success.
-- Return value type: `Boolean`
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set Attack Damage Attribute for Entity
+#### 为实体设置攻击伤害属性
 
 `en.setAttackDamage(value)`
 
-- Parameters: 
+- 参数: 
   - value : `Integer`  
-    New value
-- Return value: Whether set attribute value for entity was success.
-- Return value type: `Boolean`
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set Maximal Attack Damage Attribute for Entity
+#### 为实体设置最大攻击伤害属性
 
 `en.setMaxAttackDamage(value)`
 
-- Parameters: 
+- 参数: 
   - value : `Integer`  
-    New value
-- Return value: Whether set attribute value for entity was success.
-- Return value type: `Boolean`
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set Follow Range Attribute for Entity
+#### 为实体设置跟随范围
 
 `en.setFollowRange(value)`
 
-- Parameters: 
+- 参数: 
   - value : `Integer`  
-    New value
-- Return value: Whether set attribute value for entity was success.
-- Return value type: `Boolean`
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set Knockback Resistance Attribute for Entity
+#### 为实体设置击退抵抗属性
 
 `en.setKnockbackResistance(value)`
 
-- Parameters: 
+- 参数: 
   - value : `Integer`  
-    New value (0 or 1)
-- Return value: Whether set attribute value for entity was success.
-- Return value type: `Boolean`
+    新的值 (0 or 1)
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set Luck Attribute for Entity
+#### 为实体设置幸运属性
 
 `en.setLuck(value)`
 
-- Parameters: 
+- 参数: 
   - value : `Integer`  
-    New value
-- Return value: Whether set attribute value for entity was success.
-- Return value type: `Boolean`
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set Movement Speed for Entity
+#### 为实体设置移动速度属性
 
 `en.setMovementSpeed(value)`
 
-- Parameters: 
+- 参数: 
   - value : `Integer`  
-    New value
-- Return value: Whether set attribute value for entity was success.
-- Return value type: `Boolean`
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set Underwater Movement Speed for Entity
+#### 为实体设置水下移动速度属性
 
 `en.setUnderwaterMovementSpeed(value)`
 
-- Parameters: 
+- 参数: 
   - value : `Integer`  
-    New value
-- Return value: Whether set attribute value for entity was success.
-- Return value type: `Boolean`
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
-#### Set Lava Movement Speed for Entity
+#### 为实体设置岩浆上移动速度属性
 
 `en.setLavaMovementSpeed(value)`
 
-- Parameters: 
+- 参数: 
   - value : `Integer`  
-    New value
-- Return value: Whether set attribute value for entity was success.
-- Return value type: `Boolean`
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
 
 <br>
 
