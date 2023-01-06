@@ -398,6 +398,114 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 <br>
 
+#### Set Absorption Attribute for Player
+
+`pl.setAbsorption(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Attack Damage Attribute for Player
+
+`pl.setAttackDamage(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Maximal Attack Damage Attribute for Player
+
+`pl.setMaxAttackDamage(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Follow Range Attribute for Player
+
+`pl.setFollowRange(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Knockback Resistance Attribute for Player
+
+`pl.setKnockbackResistance(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value (0 or 1)
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Luck Attribute for Player
+
+`pl.setLuck(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Movement Speed for Player
+
+`pl.setMovementSpeed(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Underwater Movement Speed for Player
+
+`pl.setUnderwaterMovementSpeed(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+<br>
+
+#### Set Lava Movement Speed for Player
+
+`pl.setLavaMovementSpeed(value)`
+
+- Parameters: 
+  - value : `Integer`  
+    New value
+- Return value: Whether set attribute value for player was success.
+- Return value type: `Boolean`
+
+<br>
+
 #### Set Max Health for Player
 
 `pl.setMaxHealth(health)`

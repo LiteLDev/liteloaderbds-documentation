@@ -347,8 +347,8 @@
 
 #### 获取玩家到坐标的距离
 
-`en.distanceTo(pos)`
-`en.distanceToSqr(pos)`
+`pl.distanceTo(pos)`
+`pl.distanceToSqr(pos)`
 
 - 参数: 
   - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
@@ -466,6 +466,114 @@
 - 返回值: 是否成功
 - 返回值类型: `Boolean`
 
+#### 为玩家设置伤害吸收属性
+
+`pl.setAbsorption(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为玩家设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为玩家设置攻击伤害属性
+
+`pl.setAttackDamage(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为玩家设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为玩家设置最大攻击伤害属性
+
+`pl.setMaxAttackDamage(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为玩家设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为玩家设置跟随范围
+
+`pl.setFollowRange(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为玩家设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为玩家设置击退抵抗属性
+
+`pl.setKnockbackResistance(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值 (0 or 1)
+- 返回值: 为玩家设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为玩家设置幸运属性
+
+`pl.setLuck(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为玩家设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为玩家设置移动速度属性
+
+`pl.setMovementSpeed(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为玩家设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为玩家设置水下移动速度属性
+
+`pl.setUnderwaterMovementSpeed(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为玩家设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为玩家设置岩浆上移动速度属性
+
+`pl.setLavaMovementSpeed(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为玩家设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
 
 #### 设置玩家最大生命值
 
@@ -522,12 +630,12 @@
 
 #### 缩放玩家
 
-`en.setScale(scale)`
+`pl.setScale(scale)`
 
 - 参数: 
   - scale : `Integer`  
     新的玩家体积
-- 返回值: 实体是否成功地被缩放
+- 返回值: 玩家是否成功地被缩放
 - 返回值类型: `Boolean`
 
 #### 重命名玩家  
