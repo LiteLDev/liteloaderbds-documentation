@@ -8,33 +8,33 @@ LiteLoaderBDS将会在一年内迎来完整重构的全新版本：LiteLoaderBDS
 
 LiteLoaderBDS 3中，各重要组件将会进一步解耦合。这意味着LiteLoaderBDS将会成为一套工具链，包括多个不同的模块。一些可能的模块如下：
 
-- LiteCore
-- LitePreLoader
-- LiteScriptEngine
-- LitePyRunner
-- LitePackageManager
+- Core
+- PreLoader
+- ScriptEngine
+- PyRunner
+- PackageManager
 
-在上述模块中，LiteCore时运行时必须的，LitePreLoader是安装时必须的，而其它模块都不是必须的。也就是说，用户应当可以仅运行LiteCore，而不引入脚本插件引擎、.NET插件引擎或Python插件引擎。解耦合是为了使LiteLoaderBDS成为一个更强大、更多元的平台，以提供高于BDS插件的拓展能力。也就是说，在LiteLoaderBDS 3中，开发者不仅能够编写适用于游戏的插件，还能够编写适用于LiteLoaderBDS本身的其它模块，从而为LiteLoaderBDS添加更多新的功能，譬如管理面板、群组服等。
+在上述模块中，Core时运行时必须的，PreLoader是安装时必须的，而其它模块都不是必须的。也就是说，用户应当可以仅运行Core，而不引入脚本插件引擎、.NET插件引擎或Python插件引擎。解耦合是为了使LiteLoaderBDS成为一个更强大、更多元的平台，以提供高于BDS插件的拓展能力。也就是说，在LiteLoaderBDS 3中，开发者不仅能够编写适用于游戏的插件，还能够编写适用于LiteLoaderBDS本身的其它模块，从而为LiteLoaderBDS添加更多新的功能，譬如管理面板、群组服等。
 
-#### LiteCore
+#### Core
 
-LiteCore是LiteLoaderBDS的核心组件，负责BDS的运行，以及为其它模块和原生插件提供底层API。
+Core是LiteLoaderBDS的核心组件，负责BDS的运行，以及为其它模块和原生插件提供底层API。
 
-#### LitePreLoader
+#### PreLoader
 
-LitePreLoader负责在安装LiteLoaderBDS工具链时，从BDS中提取必要的符号信息，并进行注入，以实现LiteLoaderBDS的功能。
+PreLoader负责在安装LiteLoaderBDS工具链时，从BDS中提取必要的符号信息，并进行注入，以实现LiteLoaderBDS的功能。
 
-#### LiteScriptEngine
+#### ScriptEngine
 
-LiteScriptEngine通过ScriptX与Lua、JavaScript等脚本语言的引擎交互，从而使得开发者用Lua、JavaScript等脚本语言开发插件成为可能。
+ScriptEngine通过ScriptX与Lua、JavaScript等脚本语言的引擎交互，从而使得开发者用Lua、JavaScript等脚本语言开发插件成为可能。
 
-#### LitePyRunner
+#### PyRunner
 
-LitePyRunner用于与Python脚本引擎交互，使得开发者用Python语言开发插件成为可能。
+PyRunner用于与Python脚本引擎交互，使得开发者用Python语言开发插件成为可能。
 
-#### LitePackageManager
+#### PackageManager
 
-LitePackageManager是LiteLoaderBDS的包管理器。这是LiteLoaderBDS 3的最重要的构想。我们希望能够建立一个类似Chocolatey的工具，使得开发者可以编写配置文件，并将模块或插件打包，让用户在需要时动态下载、安装、加载、卸载、删除BDS插件、LiteLoaderBDS组件或Minecraft Addons。
+PackageManager是LiteLoaderBDS的包管理器。这是LiteLoaderBDS 3的最重要的构想。我们希望能够建立一个类似Chocolatey的工具，使得开发者可以编写配置文件，并将模块或插件打包，让用户在需要时动态下载、安装、加载、卸载、删除BDS插件、LiteLoaderBDS组件或Minecraft Addons。
 
 ### Mod
 

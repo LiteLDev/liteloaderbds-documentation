@@ -242,7 +242,7 @@ log(result.output);
 
 #### 参数 `output` ：向命令执行者输出命令的执行结果
 
-参数`outout`的类型为`CommandOutput` 对象。通过这个对象，可以向命令执行者输出命令的执行结果。  
+参数`output`的类型为`CommandOutput` 对象。通过这个对象，可以向命令执行者输出命令的执行结果。  
 对于某个特定的 `CommandOutput` 对象`outp`，有以下这些成员方法
 
 ##### 输出一条成功信息
