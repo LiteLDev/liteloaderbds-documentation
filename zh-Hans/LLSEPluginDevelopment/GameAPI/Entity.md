@@ -212,6 +212,114 @@
 
 <br>
 
+#### 为实体设置伤害吸收属性
+
+`en.setAbsorption(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为实体设置攻击伤害属性
+
+`en.setAttackDamage(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为实体设置最大攻击伤害属性
+
+`en.setMaxAttackDamage(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为实体设置跟随范围
+
+`en.setFollowRange(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为实体设置击退抵抗属性
+
+`en.setKnockbackResistance(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值 (0 or 1)
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为实体设置幸运属性
+
+`en.setLuck(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为实体设置移动速度属性
+
+`en.setMovementSpeed(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为实体设置水下移动速度属性
+
+`en.setUnderwaterMovementSpeed(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
+#### 为实体设置岩浆上移动速度属性
+
+`en.setLavaMovementSpeed(value)`
+
+- 参数: 
+  - value : `Integer`  
+    新的值
+- 返回值: 为实体设置属性值是否成功
+- 返回值类型: `Boolean`
+
+<br>
+
 #### 设置实体的最大生命值
 
 `en.setMaxHealth(health)`

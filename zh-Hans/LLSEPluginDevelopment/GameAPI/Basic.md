@@ -135,11 +135,11 @@
 `mc.getStructure(pos1, pos2, ignoreBlocks = false, ignoreEntities = false)`
 
 - 参数：
-  - pos1 : `IntPos`
-  - pos1 : `IntPos`
-  - ignoreBlocks : `Boolean`
-  - ignoreEntities : `Boolean`
 
+  - pos1 : `IntPos` 对角坐标1，填写方式与 [fill命令](https://minecraft.fandom.com/zh/wiki/%E5%91%BD%E4%BB%A4/fill?so=search#%E5%8F%82%E6%95%B0 "在维基百科中查看") 的 `from` 参数类似
+  - pos2 : `IntPos` 对角坐标2，填写方式与 [fill命令](https://minecraft.fandom.com/zh/wiki/%E5%91%BD%E4%BB%A4/fill?so=search#%E5%8F%82%E6%95%B0 "在维基百科中查看") 的 `to` 参数类似
+  - ignoreBlocks : `Boolean` 忽略方块
+  - ignoreEntities : `Boolean` 忽略实体
 - 返回值类型：`NbtCompound`
 
 ## 放置结构NBT
@@ -147,11 +147,11 @@
 `mc.setStructure(nbt, pos, mirror = 0, rotation = 0)`
 
 - 参数：
-  - nbt : `NbtCompound`
-  - pos : `IntPos`
-  - mirror : `number`
-    - `0:None` `1:X` `2:Z` `3:XZ`
-  - rotation : `number`
-    - `0:None` `1:Rotate90` `2:Rotate180` `3:Rotate270`
 
+  - nbt : `NbtCompound`
+  - pos : `IntPos` 放置坐标
+  - mirror : `number` 镜像模式
+    - `0: 不镜像` `1: X轴` `2: Z轴` `3: XZ轴`
+  - rotation : `number` 旋转角度
+    - `0: 不旋转` `1: 旋转90°` `2: 旋转180°` `3: 旋转270°`
 - 返回值类型：`Boolean`

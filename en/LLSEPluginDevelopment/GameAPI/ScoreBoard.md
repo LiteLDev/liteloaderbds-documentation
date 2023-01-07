@@ -141,7 +141,7 @@ Stop tracking will directly delete the value of the goal's scoring item. You nee
 
 The following APIs provide more APIs for operating the scoreboard system:
 
-#### Get the Score of a Player’s Scoring Item (Convenience Function)
+#### Get the Score of a online Player’s Scoring Item (Convenience Function)
 
 `pl.getScore(name)`
 
@@ -158,7 +158,19 @@ Before using, you must ensure that the corresponding scoring item already exists
 log("You have money:",pl.getScore("money"));
 ```
 
-#### Modify the Score of a Player’s Scoring Item (Convenience Function)
+#### Get the Score of a Player’s Scoring Item (Include the Offline Players)
+
+`mc.getPlayerScore(uuid, name)`
+
+- Parameters: 
+  - uuid : `String`  
+    Player`s UUID.
+  - name : `String`  
+    Scoring item name.  
+- Return type: The numerical value on the scoreboard.
+- Return value type: `Integer`
+
+#### Modify the Score of a Online Player’s Scoring Item (Convenience Function)
 
 Set score: `pl.setScore(name,value)`  
 Increase score:  `pl.addScore(name,value)`  
@@ -180,6 +192,22 @@ pl.setScore("money",10000);
 pl.addScore("money",100);
 pl.reduceScore("money",50);
 ```
+
+#### Modify the Score of a Player’s Scoring Item (Include the Offline Players)
+
+Set score: `mc.setPlayerScore(uuid, name, value)`  
+Increase score:  `mc.addPlayerScore(uuid, name, value)`  
+Reduce score: `mc.reducePlayerScore(uuid, name, value)`
+
+- Parameters: 
+  - uuid : `String`  
+    Player`s UUID.
+  - name : `String`  
+    Scoring item name  
+  - value : `Integer`  
+    The value to set/increase/decrease  
+- Return type: Whether the setting was successful.
+- Return value type: `Boolean
 
 #### Player Stops Tracking Scoring Items (Convenience Function) 
 
