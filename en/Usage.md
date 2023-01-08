@@ -38,7 +38,7 @@ Follow these steps to install:
 In the directory to put the server, run:
 
 ```sh
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/Scripts/install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh
 chmod +x install.sh
 ./install.sh
 ```

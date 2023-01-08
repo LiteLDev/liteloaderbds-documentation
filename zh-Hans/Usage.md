@@ -38,7 +38,7 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 在要放置服务器的目录中，运行：
 
 ```sh
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/Scripts/install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh
 chmod +x install.sh
 ./install.sh
 ```
