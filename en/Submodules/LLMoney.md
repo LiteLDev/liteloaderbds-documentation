@@ -12,7 +12,7 @@ https://github.com/LiteLDev/LLEssentials
 
 `plugins/LLMoney/money.json`
 Example:
-```jsonc
+```json
 {
     "language": "en-us",
     "def_money": 0, //Default money

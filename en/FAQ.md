@@ -41,7 +41,7 @@ Some of the commands are duplicated, you can:
 ## Client chunk error
 
 This is caused by fake seed and client chunk pre-generation  
-If you met this error, just disable `ClientChunkPreGeneration` in `plugins/LiteLoader/LiteLoader.json`
+If you met this error, just change `client-side-chunk-generation-enabled` to false in `server.properties` or disable `ClientChunkPreGeneration` in `plugins/LiteLoader/LiteLoader.json`(Before 1.19.50)
 
 ## Imgui related errors
 

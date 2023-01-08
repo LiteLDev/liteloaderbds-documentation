@@ -12,7 +12,7 @@ https://github.com/LiteLDev/PermissionAPI
 
 `plugins/PermissionAPI/data.json`
 数据文件示例:
-```jsonc
+```json
 {
     "permissions": {
         "PermissionAPI:cmd_control": {

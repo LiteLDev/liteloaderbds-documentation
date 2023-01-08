@@ -33,14 +33,14 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 
 ### 安装在Linux发行版上
 
+**我们不建议在Linux发行版上运行LiteLoaderBDS，因为当Bedrock Dedicated Server(1.19+)运行在Wine上时会有严重的性能问题**
+
 ### 通过脚本（在Ubuntu上可用）
 
 在要放置服务器的目录中，运行：
 
 ```sh
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh
-chmod +x install.sh
-./install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
 ```
 
 ### 通过Docker
