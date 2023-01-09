@@ -97,13 +97,14 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 #### `"onMobSpawn"` - 发生于实体自然生成
 
 - 监听函数原型
-  `function(typeName,pos)`
+  `function(typeName,pos,en)`
 - 参数：
   - typeName : `string`  
     生成实体名称
   - pos : `FloatPos`  
     生成的坐标
-  
+  - en : `Entity`
+    生成的实体对象
 - 拦截事件：函数返回`false`
 
 <br>
