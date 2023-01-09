@@ -60,12 +60,14 @@ Note that when the player dies, in addition to triggering `onPlayerDie` event, t
 #### `"onMobSpawn"` - Mob Naturally Spawn Event
 
 - Listener function prototype 
-  `function(typeName,pos)`
+  `function(typeName,pos,entity)`
 - Parameters: 
   - typeName : `string`  
     Entity Name
   - pos : `FloatPos`  
    The coordinates of the spawn.
+  - entity: `Entity`  
+    The entity that spawned.
   
 - Intercept events: function returns `false`
 
