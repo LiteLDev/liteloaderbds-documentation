@@ -240,31 +240,37 @@ For a particular `CommandOutput` object `outp`, the following member methods are
 
 ##### Output a Success Message
 
-`outp.success(msg)`
+`outp.success([msg][, parm])`
 
 - Parameters: 
   - msg : `String`  
     The message to output.
+  - parm : `Array`
+    Parameters to be replaced
 - Return value: Whether the output is successful.
 - Return value type: `Boolean`
 
 ##### Output an Error Message
 
-`outp.error(msg)`
+`outp.error(msg[, parm])`
 
 - Parameters: 
   - msg : `String`  
     The message to output.
+  - parm : `Array`
+    Parameters to be replaced
 - Return value: Whether the output is successful.
 - Return value type: `Boolean`
 
 ##### Output a General Message
 
-`outp.addMessage(msg)`
+`outp.addMessage(msg[, parm])`
 
 - Parameters: 
   - msg : `String`  
     The message to output.
+  - parm : `Array`
+    Parameters to be replaced
 - Return value: Whether the output is successful.
 - Return value type: `Boolean`
 

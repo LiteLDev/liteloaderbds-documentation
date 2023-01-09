@@ -247,31 +247,37 @@ log(result.output);
 
 ##### 输出一条成功信息
 
-`outp.success(msg)`
+`outp.success([msg][, parm])`
 
 - 参数：
   - msg : `String`  
     要输出的信息
+  - parm : `Array`
+    要替换的参数
 - 返回值：是否成功输出
 - 返回值类型：`Boolean`
 
 ##### 输出一条错误信息
 
-`outp.error(msg)`
+`outp.error(msg[, parm])`
 
 - 参数：
   - msg : `String`  
     要输出的信息
+  - parm : `Array`
+    要替换的参数
 - 返回值：是否成功输出
 - 返回值类型：`Boolean`
 
 ##### 输出一条普通信息
 
-`outp.addMessage(msg)`
+`outp.addMessage(msg[, parm])`
 
 - 参数：
   - msg : `String`  
     要输出的信息
+  - parm : `Array`
+    要替换的参数
 - 返回值：是否成功输出
 - 返回值类型：`Boolean`
 

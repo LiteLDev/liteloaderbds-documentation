@@ -3,6 +3,9 @@
 - 👍 用户指南
     - [🔨 安装与使用](/Usage.md)
     - [❓ 常见问题](/FAQ.md)
+    - 🧩 子模块
+        - [💰 LLMoney经济核心](/Submodules/LLMoney.md)
+        - [🔒 权限API](/Submodules/PermAPI.md)
 
 - 🍔 插件开发者指南
     - [⛳ 原生插件开发](https://cpp.docs.litebds.com/zh-Hans)

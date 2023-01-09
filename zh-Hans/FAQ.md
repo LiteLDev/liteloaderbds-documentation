@@ -53,7 +53,7 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 ## 客户端区块错误
 
 这是由于假种子与客户端区块预生成导致的  
-如果你遇到这个问题，只需要在`plugins/LiteLoader/LiteLoader.json`中将`ClientChunkPreGeneration`禁用
+如果你遇到这个问题，只需要在`server.properties`中将`client-side-chunk-generation-enabled`改为false或在`plugins/LiteLoader/LiteLoader.json`中将`ClientChunkPreGeneration`禁用
 
 ## Imgui相关错误
 

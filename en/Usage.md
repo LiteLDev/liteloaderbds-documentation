@@ -33,14 +33,14 @@ Follow these steps to install:
 
 ### Install on Linux Distributions
 
+**We don't recommend you to run LiteLoaderBDS on Linux Distributions anymore, bacause Bedrock Dedicated Server(1.19+) on Wine has a serious performance problem**
+
 ### Via Scripts (Available on Ubuntu)
 
 In the directory to put the server, run:
 
 ```sh
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/Scripts/install.sh
-chmod +x install.sh
-./install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
 ```
 
 ### Via Docker
