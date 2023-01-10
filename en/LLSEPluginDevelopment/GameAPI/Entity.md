@@ -135,6 +135,24 @@ Each entity object contains some member functions (member methods) that can be e
 
 <br>
 
+#### Make the Specified Entity Despawn
+
+`en.despawn()`
+
+- Return value: Whether the entity execution was successful.
+- Return value type:  `Boolean`
+
+<br>
+
+#### Remove the Specified Entity  
+
+`en.remove()`
+
+- Return value: Whether the entity execution was successful.
+- Return value type:  `Boolean`
+
+<br>
+
 #### Inflict Damage to Entities
 
 `en.hurt(damage,type)`
