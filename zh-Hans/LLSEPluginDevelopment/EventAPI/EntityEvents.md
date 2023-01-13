@@ -94,18 +94,33 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 
 <br>
 
-#### `"onMobSpawn"` - 发生于实体自然生成
+#### `"onMobSpawn"` - 发生于实体尝试自然生成
 
 - 监听函数原型
-  `function(typeName,pos,entity)`
+  `function(typeName,pos)`
 - 参数：
   - typeName : `string`  
     生成实体名称
   - pos : `FloatPos`  
     生成的坐标
+  
+- 拦截事件：函数返回`false`
+
+<br>
+
+#### `"onMobSpawn"` - 发生于实体自然生成完成
+
+- 监听函数原型
+  `function(entity,pos)`
+- 参数：
   - entity : `Entity`  
     生成的实体对象
-- 拦截事件：函数返回`false`
+  - pos : `FloatPos`  
+    生成的坐标
+    
+- 拦截事件：不可拦截
+
+此事件为实体成功生成后触发，不可直接拦截，如需拦截请使用entity.despawn()或entity.remove()
 
 <br>
 
@@ -122,25 +137,39 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 
 <br>
 
-#### `"onWitherBossDestroy"` - 凋零破坏方块
+#### `"onWitherBossDestroy"` - 凋灵破坏方块
 
 - 监听函数原型
   `function(witherBoss,AAbb,aaBB)`
 - 参数：
   - witherBoss: `Entity`  
-    凋零的实体对象
+    凋灵的实体对象
 
   - AAbb: `IntPos`
   
-    凋零将破坏的区域（长方体），对角点A坐标
+    凋灵将破坏的区域（长方体），对角点A坐标
   
   - aaBB: `IntPos`
   
-    凋零将破坏的区域（长方体），对角点B坐标
+    凋灵将破坏的区域（长方体），对角点B坐标
   
 - 拦截事件：函数返回`false`
 
-注意，此事件不包括凋零爆炸的破坏。
+注意，此事件不包括凋灵爆炸的破坏。
+
+<br>
+
+#### `"onEnderDragonDestroy"` - 末影龙破坏方块
+
+- 监听函数原型
+  `function(EnderDragon,block)`
+- 参数：
+  - EnderDragon: `Entity`  
+    末影龙的实体对象
+  - block: `Block`
+    末影龙破坏的方块对象
+  
+- 拦截事件：函数返回`false`
 
 <br>
 

@@ -57,19 +57,33 @@ Note that when the player dies, in addition to triggering `onPlayerDie` event, t
 
 <br>
 
-#### `"onMobSpawn"` - Mob Naturally Spawn Event
+#### `"onTryMobSpawn"` - Mob try Naturally Spawn Event
 
 - Listener function prototype 
-  `function(typeName,pos,entity)`
+  `function(typeName,pos)`
 - Parameters: 
   - typeName : `string`  
     Entity Name
   - pos : `FloatPos`  
    The coordinates of the spawn.
-  - entity: `Entity`  
-    The entity that spawned.
   
 - Intercept events: function returns `false`
+
+<br>
+
+#### `"onMobSpawned"` - Mob Naturally Spawn Finished Event
+
+- Listener function prototype 
+  `function(entity,pos)`
+- Parameters: 
+  - entity: `Entity`  
+    The entity that spawned.
+  - pos : `FloatPos`  
+   The coordinates of the spawn.
+  
+- Intercept events: cannot be intercepted.
+
+You can use entity.despawn() or entity.remove() to intercept this event.
 
 <br>
 
@@ -98,6 +112,21 @@ Note that when the player dies, in addition to triggering `onPlayerDie` event, t
   - aaBB: `IntPos`
     The area that the wither will destroy (box), the B coordinate of the diagonal point.
   
+- Intercept events: function returns `false`
+
+Note that this event does not include wither explosion damage.
+
+<br>
+
+#### `"onEnderDragonDestroy"` - Block Broken by ender dragon Event
+
+- Listener function prototype 
+  `function(EnderDragon,block)`
+- Parameters: 
+  - EnderDragon: `Entity`  
+    The EnderDragon entity object.
+  - block: `Block`
+    The block object that EnderDragon will destroy.
 - Intercept events: function returns `false`
 
 Note that this event does not include wither explosion damage.
