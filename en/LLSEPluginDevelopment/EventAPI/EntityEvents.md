@@ -118,7 +118,7 @@ Note that this event does not include wither explosion damage.
 
 <br>
 
-#### `"onEnderDragonDestroy"` - Block Broken by Wither Event
+#### `"onEnderDragonDestroy"` - Block Broken by ender dragon Event
 
 - Listener function prototype 
   `function(EnderDragon,block)`
