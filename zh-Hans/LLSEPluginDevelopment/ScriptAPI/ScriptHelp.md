@@ -14,10 +14,21 @@
 
   - name : `String`  
     插件名字
+    
   - introduction : `String`  
     对插件的简短介绍
-  - version : `Array<Integer,Integer,Integer>`  
+    
+  - version : `Array<Integer,Integer,Integer[, VersionStatus]>`  
     插件的版本信息
+    
+    对于 `VersionStatus`，可以使用以下枚举
+    
+    | Enum              | Description            |
+    | ----------------- | ---------------------- |
+    | `Version.Release` | 正式发布版本（默认值） |
+    | `Version.Beta`    | 测试版本               |
+    | `Version.Dev`     | 开发版本               |
+    
   - other : `Object<string,string>`  
     其他你愿意提供的的附加信息（如许可证、开源地址等）
 
