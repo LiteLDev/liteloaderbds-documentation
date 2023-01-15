@@ -112,7 +112,9 @@
     - [💡 放在最后](/Maintenance/Conclusion.md)
     - [👓 项目架构分析（待完善）](/Maintenance/Analysis.md)
     - [🎯 维护项目和贡献代码（待完善）](/Maintenance/Coding.md)
-    - [🧿 LiteLoaderBDS 3 蓝图](/Maintenance/Blueprint.md)
     - [🧩 子模块使用说明](/Maintenance/Submodules.md)
+
+- 🧿 蓝图和RFC
+    - [LiteLoaderBDS 3蓝图](/Blueprints/LiteLoaderBDS3.md)
 
 - [💦 更新日志](https://github.com/LiteLDev/LiteLoaderBDS/releases)
