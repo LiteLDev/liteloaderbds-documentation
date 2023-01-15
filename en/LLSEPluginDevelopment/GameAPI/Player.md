@@ -329,13 +329,19 @@ var open = pl.runcmd("tp ~ ~+50 ~");
 
 #### Teleport the Player to the Specified Location  
 
-`pl.teleport(pos)`  
-`pl.teleport(x,y,z,dimid)`
+`pl.teleport(pos[,rot])`  
+`pl.teleport(x,y,z,dimid[,rot])`
 
 - Parameters: 
-  - pos :`IntPos `/ `FloatPos`  
+  - pos: `IntPos `/ `FloatPos`  
     Target position coordinates (or use x, y, z, dimid to determine player position)
+    
+  - rot: `DirectionAngle`
+  
+    (Optional) The orientation of the player after teleport, or the same orientation as before teleport if default
+  
 - Return value: Whether the teleport was successful or not.
+
 - Return value type: `Boolean`
 
 [JavaScript]

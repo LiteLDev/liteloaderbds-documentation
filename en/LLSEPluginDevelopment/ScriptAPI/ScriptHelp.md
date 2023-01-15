@@ -14,10 +14,20 @@ Before you start writing code for your plugin, you first need to provide the loa
 
   - name : `String`  
     Plugin Name
+    
   - introduction : `String`  
     A short description of the plugin.
-  - version : `Array<Integer,Integer,Integer>`  
+    
+  - version : `Array<Integer,Integer,Integer[,VersionStatus]>`  
     Plugin version information.
+    
+    For `VersionStatus`, the following enumeration can be used
+    | Enum      | Description                        |
+    | --------- | ---------------------------------- |
+    | `Release` | Official release version (default) |
+    | `Beta`    | Test version                       |
+    | `Dev`     | Development Version                |
+    
   - other : `Object<string,string>`  
     Other additional information you are willing to provide (such as license, open source address, etc.)
 

@@ -50,7 +50,7 @@ Each member of the coordinate object is **readable and writable**.
    | pos.dimid | Dimension ID     | `Integer` |
 
     Among them, the value of the **dimension ID** attribute is: `0` represents the Main World, `1` represents The Nether, and `2` represents The End.
-    
+   
     **Dimension text name:** The values of the attributes are: "Main World", "Nether", "End".
 
    If in some cases the dimension is invalid, or cannot be obtained, you will find that the value of `dimid` is `-1`.
@@ -84,7 +84,7 @@ For some languages ​​that support general object orientation, LLSE also prov
 
 #### Generate an Integer Coordinate Object
 
-`mc.newIntPos(x,y,z,dimid)` [static]
+`IntPos(x,y,z,dimid)` [static]
 
 - Parameters: 
   - x : `Integer`  
@@ -100,7 +100,7 @@ For some languages ​​that support general object orientation, LLSE also prov
 
 #### Generate a Floating Point Coordinate Object
 
-`mc.newFloatPos(x,y,z,dimid)`
+`FloatPos(x,y,z,dimid)`
 
 - Parameters: 
   - x : `Float`  
@@ -133,7 +133,21 @@ Since there is no concept of rotation in the entity system of MC, there is no da
 
 <br>
 
-#### Convert Yaw Angle to Base Heading
+##### Create Direction Angle
+
+`DirectionAngle(pitch, yaw)`
+
+- Parameters: 
+  - pitch : `Float`  
+    pitch angle
+  - yaw : `Float`  
+    yaw angle
+- Return value: A floating point coordinate object.
+- Return value type: `FloatPos`
+
+<br>
+
+##### Convert Direction Angle to Base Heading
 
 `ang.toFacing()`
 
