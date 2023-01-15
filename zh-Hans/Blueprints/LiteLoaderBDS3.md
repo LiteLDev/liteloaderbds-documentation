@@ -1,5 +1,4 @@
-## LiteLoaderBDS 3 蓝图
-
+# 蓝图：LiteLoaderBDS 3
 LiteLoaderBDS将会在一年内迎来完整重构的全新版本：LiteLoaderBDS 3。在这个文件中，你可以找到LiteLoaderBDS 3的所有信息，包括预期功能、设计思想、进度计划等。
 
 ## 设计思想和预期功能

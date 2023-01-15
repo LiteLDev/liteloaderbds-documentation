@@ -115,6 +115,6 @@
     - [🧩 子模块使用说明](/Maintenance/Submodules.md)
 
 - 🧿 蓝图和RFC
-    - [LiteLoaderBDS 3蓝图](/Blueprints/LiteLoaderBDS3.md)
+    - [蓝图：LiteLoaderBDS 3](/Blueprints/LiteLoaderBDS3.md)
 
 - [💦 更新日志](https://github.com/LiteLDev/LiteLoaderBDS/releases)
