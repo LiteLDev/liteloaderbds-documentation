@@ -172,7 +172,7 @@ log(result.output);
 | `ParamType.Message`   | 消息类型参数（同 `/say` 指令参数，会自动展开目标选择器等） |
 | `ParamType.JsonValue` | JSON字符串参数                                             |
 | `ParamType.Item`      | 物品类型参数                                               |
-| `ParamType.Block`     | 方块类型参数(在1.19.50被移除)                              |
+| `ParamType.Block`     | 方块类型参数                                               |
 | `ParamType.Effect`    | 效果类型参数                                               |
 | `ParamType.Enum`      | 枚举参数                                                   |
 | `ParamType.SoftEnum`  | 可变枚举参数                                               |

@@ -165,7 +165,7 @@ Through the command object, you can register various forms and functions for thi
 | `ParamType.Message`    | Message Type Parameter (Same as `/Say` Command Parameter, Will Automatically Expand the Target Selector, Etc.) |
 | `ParamType.JsonValue`  | `JSON` string parameter                                                                                        |
 | `ParamType.Item`       | Item Type Parameter                                                                                            |
-| `ParamType.Block`      | Block Type Parameter(has been removed in 1.19.50)                                                              |
+| `ParamType.Block`      | Block Type Parameter                                                                                           |
 | `ParamType.Effect`     | Effect Type Parameter                                                                                          |
 | `ParamType.Enum`       | Enum Parameter                                                                                                 |
 | `ParamType.SoftEnum`   | Variable Enum Parameter                                                                                        |
