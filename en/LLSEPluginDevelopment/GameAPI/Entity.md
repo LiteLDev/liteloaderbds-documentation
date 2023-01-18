@@ -115,12 +115,16 @@ Each entity object contains some member functions (member methods) that can be e
 
 #### Teleport Entity to Specified Location
 
-`en.teleport(pos)`  
-`en.teleport(x,y,z,dimid)`
+`en.teleport(pos[,rot])`  
+`en.teleport(x,y,z,dimid[,rot])`
 
 - Parameters: 
   - pos :`IntPos `/ `FloatPos`  
     Target position coordinates (or use x, y, z, dimid to determine entity position)
+    
+  - rot: `DirectionAngle`
+    
+    (Optional) The orientation of the entity after teleport, or the same orientation as before teleport if default
 - Return value: Whether the teleport was successful or not.
 - Return value type:  `Boolean`
 
@@ -129,6 +133,24 @@ Each entity object contains some member functions (member methods) that can be e
 #### Kill the Specified Entity  
 
 `en.kill()`
+
+- Return value: Whether the entity execution was successful.
+- Return value type:  `Boolean`
+
+<br>
+
+#### Make the Specified Entity Despawn
+
+`en.despawn()`
+
+- Return value: Whether the entity execution was successful.
+- Return value type:  `Boolean`
+
+<br>
+
+#### Remove the Specified Entity  
+
+`en.remove()`
 
 - Return value: Whether the entity execution was successful.
 - Return value type:  `Boolean`

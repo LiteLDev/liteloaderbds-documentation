@@ -90,6 +90,7 @@ Each scoring item object contains some member functions (member methods) that ca
 - Return type: The target/player's score for this scoring item.
 - Return value type: `Integer`
 
+**Make sure the score is existing before using this API**
 <br>
 
 #### Modify the Score of a Goal
@@ -107,6 +108,9 @@ Reduce score: `ob.reduceScore(target,score)`
 - Return value type: `Integer`
   - If `Null` is returned, the operation failed.
 
+[!warning]
+If the score doesn't exist, will try creating a score, then return `0`(If *target* is `String`) or `null`(If *target* is `Player`)  
+Reason: [#971](https://github.com/LiteLDev/LiteLoaderBDS/issues/971#issuecomment-1385047649)
 <br>
 
 #### Stop Tracking a Target 
@@ -184,7 +188,7 @@ Reduce score: `pl.reduceScore(name,value)`
 - Return type: Whether the setting was successful.
 - Return value type: `Boolean`
 
-Before using, you must ensure that the corresponding scoring item already exists.
+If the score doesn't exist, will return `false` and create the score
 
 ```js
 //For a player object pl: 

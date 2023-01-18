@@ -117,12 +117,16 @@
 
 #### 传送实体至指定位置
 
-`en.teleport(pos)`  
-`en.teleport(x,y,z,dimid)`
+`en.teleport(pos[,rot])`  
+`en.teleport(x,y,z,dimid,[,rot])`
 
 - 参数：
   - pos :`IntPos `/ `FloatPos`  
     目标位置坐标（或者使用x, y, z, dimid来确定实体位置）
+    
+  - rot: `DirectionAngle`
+  
+    （可选参数）传送后实体的朝向，若缺省则与传送前朝向相同
 - 返回值：是否成功传送
 - 返回值类型：`Boolean`
 
@@ -131,6 +135,24 @@
 #### 杀死指定实体  
 
 `en.kill()`
+
+- 返回值：是否成功执行
+- 返回值类型：`Boolean`
+
+<br>
+
+#### 使指定实体刷新消失  
+
+`en.despawn()`
+
+- 返回值：是否成功执行
+- 返回值类型：`Boolean`
+
+<br>
+
+#### 移除指定实体  
+
+`en.remove()`
 
 - 返回值：是否成功执行
 - 返回值类型：`Boolean`
@@ -377,6 +399,8 @@
     目标位置
 - 返回值: 到坐标的距离(方块)
 - 返回值类型:  `Number`
+
+> **注意** 若玩家的坐标与目标的坐标不在同一维度，将返回整数最大值。
 
 <br>
 

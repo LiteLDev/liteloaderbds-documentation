@@ -39,17 +39,17 @@
 
 - `IntPos` - 整数 坐标对象（详见 基础游戏接口）
 - `FloatPos` - 浮点数 坐标对象（详见 基础游戏接口）
-- `Player` - 玩家对象（详见 玩家）
-- `Entity` - 实体对象（详见 实体）
-- `Block` - 方块对象（详见 方块）
-- `BlockEntity` - 方块实体对象（详见 方块实体）
-- `Item` - 物品栏物品对象（详见 物品）
-- `Device` - 玩家设备信息对象（详见 玩家）
-- `Container` - 容器对象（详见 容器）
-- `Objective` - 计分项对象（详见 计分板）
+- `Player` - 玩家对象（详见 玩家）- 在脚本引擎内实际注册的类名:`LLSE_Player`
+- `Entity` - 实体对象（详见 实体）- 在脚本引擎内实际注册的类名:`LLSE_Entity`
+- `Block` - 方块对象（详见 方块）- 在脚本引擎内实际注册的类名:`LLSE_Block`
+- `BlockEntity` - 方块实体对象（详见 方块实体）- 在脚本引擎内实际注册的类名:`LLSE_BlockEntity`
+- `Item` - 物品栏物品对象（详见 物品）- 在脚本引擎内实际注册的类名:`LLSE_Item`
+- `Device` - 玩家设备信息对象（详见 玩家）- 在脚本引擎内实际注册的类名:`LLSE_Device`
+- `Container` - 容器对象（详见 容器）- 在脚本引擎内实际注册的类名:`LLSE_Container`
+- `Objective` - 计分项对象（详见 计分板）- 在脚本引擎内实际注册的类名:`LLSE_Objective`
 - `NBT` - NBT Tag对象（详见 NBT）
-- `SimpleForm` - 普通表单对象（详见 表单构建器）
-- `CustomForm` - 自定义表单对象（详见 表单构建器）
+- `SimpleForm` - 普通表单对象（详见 表单构建器）- 在脚本引擎内实际注册的类名:`LLSE_SimpleForm`
+- `CustomForm` - 自定义表单对象（详见 表单构建器）- 在脚本引擎内实际注册的类名:`LLSE_CustomForm`
 - `Conf` - 配置文件对象（详见 配置文件）
 - `DB` - 数据库对象（详见 数据库）
 - `File` - 文件对象（详见 文件读写）

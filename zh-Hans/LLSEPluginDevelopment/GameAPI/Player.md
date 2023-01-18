@@ -356,6 +356,8 @@
 - 返回值: 到坐标的距离(方块)
 - 返回值类型:  `Number`
 
+> **注意** 若玩家的坐标与目标的坐标不在同一维度，将返回整数最大值。
+
 #### 以某个玩家身份向某玩家说话
 
 `pl.talkAs(target,text)`
@@ -382,13 +384,19 @@
 
 #### 传送玩家至指定位置  
 
-`pl.teleport(pos)`  
-`pl.teleport(x,y,z,dimid)`
+`pl.teleport(pos[,rot])` 
+`pl.teleport(x,y,z,dimid[,rot])`
 
 - 参数：
-  - pos :`IntPos `/ `FloatPos`  
+  - pos: `IntPos `/ `FloatPos` 
     目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）
+    
+  - rot: `DirectionAngle`
+  
+    （可选参数）传送后玩家的朝向，若缺省则与传送前朝向相同
+  
 - 返回值：是否成功传送
+
 - 返回值类型：`Boolean`
 
 - 示例：  
@@ -977,7 +985,7 @@
 - 参数：
 
   - mode : `Integer`  
-    目标游戏模式，0为生存模式，1为创造模式，2为极限模式
+    目标游戏模式，0为生存模式，1为创造模式，2为冒险模式
 
 - 返回值：是否成功修改
 
