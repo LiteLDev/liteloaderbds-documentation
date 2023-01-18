@@ -76,7 +76,7 @@
 
 #### 生成一个整数坐标对象
 
-`IntPos(x,y,z,dimid)`
+`new IntPos(x,y,z,dimid)`
 
 - 参数：
   - x : `Integer`  
@@ -92,7 +92,7 @@
 
 #### 生成一个浮点数坐标对象
 
-`FloatPos(x,y,z,dimid)`
+`new FloatPos(x,y,z,dimid)`
 
 - 参数：
   - x : `Float`  
@@ -123,7 +123,7 @@
 
 #### 创建偏航角
 
-`DirectionAngle(pitch, yaw)`
+`new DirectionAngle(pitch, yaw)`
 
 - 参数：
   - pitch : `Float`  
