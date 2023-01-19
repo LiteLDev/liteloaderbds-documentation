@@ -127,7 +127,9 @@ new FloatPos(x,y,z,dimid)
 
 #### 创建偏航角
 
-`new DirectionAngle(pitch, yaw)`
+```js
+new DirectionAngle(pitch, yaw)
+```
 
 - 参数：
   - pitch : `Float`  
