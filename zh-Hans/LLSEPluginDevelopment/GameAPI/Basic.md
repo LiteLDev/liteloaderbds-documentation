@@ -76,7 +76,9 @@
 
 #### 生成一个整数坐标对象
 
-`new IntPos(x,y,z,dimid)`
+```js
+new IntPos(x,y,z,dimid)
+```
 
 - 参数：
   - x : `Integer`  
@@ -92,7 +94,9 @@
 
 #### 生成一个浮点数坐标对象
 
-`new FloatPos(x,y,z,dimid)`
+```js
+new FloatPos(x,y,z,dimid)
+```
 
 - 参数：
   - x : `Float`  
