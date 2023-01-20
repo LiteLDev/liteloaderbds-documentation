@@ -84,7 +84,8 @@ For some languages ​​that support general object orientation, LLSE also prov
 
 #### Generate an Integer Coordinate Object
 
-`IntPos(x,y,z,dimid)` [static]
+[JavaScript] `new FloatPos(x,y,z,dimid)`  
+[Lua] `FloatPos(x,y,z,dimid)`
 
 - Parameters: 
   - x : `Integer`  
@@ -100,7 +101,8 @@ For some languages ​​that support general object orientation, LLSE also prov
 
 #### Generate a Floating Point Coordinate Object
 
-`FloatPos(x,y,z,dimid)`
+[JavaScript] `new FloatPos(x,y,z,dimid)`  
+[Lua] `FloatPos(x,y,z,dimid)`
 
 - Parameters: 
   - x : `Float`  
@@ -135,7 +137,8 @@ Since there is no concept of rotation in the entity system of MC, there is no da
 
 ##### Create Direction Angle
 
-`DirectionAngle(pitch, yaw)`
+[JavaScript] `new DirectionAngle(pitch, yaw)`  
+[Lua] `DirectionAngle(pitch, yaw)`
 
 - Parameters: 
   - pitch : `Float`  
