@@ -1,4 +1,4 @@
-# RFC#1 事件系统
+# RFC 事件系统
 
 由于目前的事件系统存在局限性，LL3将重写事件系统。
 
@@ -26,18 +26,5 @@
   - `Listener subscribe(const std::function<void(const EventType&)> callback)` 订阅事件
   - `void onCancelled(const std::function<void()> callback)` 取消回调
   - `void onExecuted(const std::function<void(const EventType&)> callback)` 执行回调
-  
-### template struct `EventCallback<EventType>`
-
-- private fields:
-  - `void* mEventCallback` 事件回调(用`void*`可以兼容`void(*)(EventType&)`和`void(*)(const EventType&)`)  
-  - `void* mCancelledCallback`
-  - `void* `
-- friend class `Event<EventType>`
-
-### struct `ListenerData<EventType>`
-
-- fields:
-  - `mCallbacks`: Event callbacks
 
 -->
