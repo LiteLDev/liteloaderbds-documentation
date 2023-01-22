@@ -1,7 +1,7 @@
 # Frequently Asked Questions
 
 ## Why Is the Server Occupying So Much RAM on My Linux Distribution?
-This is the memory leakage caused by Wine, which cannot be resolved by us. If the server is running on Docker, limit the memory of the container.
+This is the memory leakage caused by Wine, which cannot be resolved by us. You can use containers like **Docker** to limit the memory of the container.
 
 ## Does LiteLoaderBDS Support Different Versions of Minecraft?
 

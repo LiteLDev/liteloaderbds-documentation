@@ -43,30 +43,6 @@ In the directory to put the server, run:
 wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
 ```
 
-### Via Docker
-
-You should have the latest version of Docker installed. Then run:
-
-```sh
-docker pull shrbox/liteloaderbds
-docker create --name <container name> -v <installation directory>:/root/bedrock-server -p <port>:19132/udp -it shrbox/liteloaderbds
-```
-
-You ought to adapt the `<installation directory>` and the `<port>` to your environment.
-
-* `<container name>` is the name of the container. You can choose any name you like meeting the requirements of Docker. If you have no idea, how about `llbds`?
-* `<installation directory>` is directory to put the BDS server and the data. It's a good idea to put it in a directory that everyone can read and write.
-* `<port>` is the port that players fill in when connecting to the server.
-
-It takes more time to start up for the first time downloading BDS and LiteLoaderBDS. Please wait patiently.
-
-Some common commands are shown below:
-
-* Start the server: `docker start <container name>`
-* Stop the server: `docker stop <container name>`
-* Attach to the console: `docker attach <container name>`
-* Detach from the console: Press `Ctrl` + `P` + `Q`. You should not press `Ctrl` + `C` or the server will terminate immediately.
-
 Now that you have LiteLoaderBDS installed, how about adding some plugins?
 
 ## 🎯 Add Some Plugins
