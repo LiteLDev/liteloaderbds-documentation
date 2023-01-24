@@ -94,7 +94,7 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 
 <br>
 
-#### `"onMobSpawn"` - 发生于实体尝试自然生成
+#### `"onMobTrySpawn"` - 发生于实体尝试自然生成
 
 - 监听函数原型
   `function(typeName,pos)`
@@ -108,7 +108,7 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 
 <br>
 
-#### `"onMobSpawn"` - 发生于实体自然生成完成
+#### `"onMobSpawned"` - 发生于实体自然生成完成
 
 - 监听函数原型
   `function(entity,pos)`

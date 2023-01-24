@@ -76,7 +76,8 @@
 
 #### 生成一个整数坐标对象
 
-`IntPos(x,y,z,dimid)`
+[JavaScript] `new IntPos(x,y,z,dimid)`  
+[Lua] `IntPos(x,y,z,dimid)`
 
 - 参数：
   - x : `Integer`  
@@ -92,7 +93,8 @@
 
 #### 生成一个浮点数坐标对象
 
-`FloatPos(x,y,z,dimid)`
+[JavaScript] `new FloatPos(x,y,z,dimid)`  
+[Lua] `FloatPos(x,y,z,dimid)`
 
 - 参数：
   - x : `Float`  
@@ -123,7 +125,8 @@
 
 #### 创建偏航角
 
-`DirectionAngle(pitch, yaw)`
+[JavaScript] `new DirectionAngle(pitch, yaw)`  
+[Lua] `DirectionAngle(pitch, yaw)`
 
 - 参数：
   - pitch : `Float`  
