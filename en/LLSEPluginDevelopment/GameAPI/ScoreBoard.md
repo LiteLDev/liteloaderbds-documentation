@@ -201,7 +201,8 @@ pl.reduceScore("money",50);
 
 Set score: `mc.setPlayerScore(uuid, name, value)`  
 Increase score:  `mc.addPlayerScore(uuid, name, value)`  
-Reduce score: `mc.reducePlayerScore(uuid, name, value)`
+Reduce score: `mc.reducePlayerScore(uuid, name, value)`  
+Delete score: `mc.deletePlayerScore(uuid, name)`
 
 - Parameters: 
   - uuid : `String`  

@@ -203,7 +203,8 @@ pl.reduceScore("money",50);
 
 设置分数 `mc.setPlayerScore(uuid, name, value)`  
 增加分数 `mc.addPlayerScore(uuid, name, value)`  
-减少分数 `mc.reducePlayerScore(uuid, name, value)`
+减少分数 `mc.reducePlayerScore(uuid, name, value)`  
+移除分数 `mc.deletePlayerScore(uuid, name)`
 
 - 参数：
   - uuid : `String`  
