@@ -100,17 +100,6 @@ Copy the addon whose file name ends with `.mcpack`, `.mcaddon` or `.zip` to `plu
 
 You can manage them with command `addons` in the console.
 
-## 📡 Debug Plugins
-
-You can type these commands to enter the corresponding debug mode:
-
-* `jsdebug`: JavaScript debug mode
-* `luadebug`: Lua debug mode
-
-In debug mode, all texts you type will be parsed as scripts and be executed in real time, as the console of developer tools of browsers do. If any error occurs, you will see an error report.
-
-You can type `jsdebug` / `luadebug` and enter to exit the debug mode.
-
 ## 🚅 Update LiteLoaderBDS
 
 When a new LiteLoaderBDS or Minecraft Bedrock Edition is released, you need to update to make the server side adapt to the latest client.

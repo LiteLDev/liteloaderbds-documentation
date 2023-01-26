@@ -96,3 +96,14 @@ Here, there are some suggestions when developing plugins, I hope they can help y
   When designing the interface and configuration, it is best to take the user's feelings into account. The content of external interaction such as UI and commands should be as clear and clear as possible, in line with normal usage habits. 
 - From multiple perspectives, **innovation** occurs  
   Everyone is encouraged to learn from the excellent plugins already available in JE, and everyone is welcome to make their own innovations.
+
+## 📡 Debug Plugins
+
+You can type these commands to enter the corresponding debug mode:
+
+* `jsdebug`: JavaScript debug mode
+* `luadebug`: Lua debug mode
+
+In debug mode, all texts you type will be parsed as scripts and be executed in real time, as the console of developer tools of browsers do. If any error occurs, you will see an error report.
+
+You can type `jsdebug` / `luadebug` and enter to exit the debug mode.

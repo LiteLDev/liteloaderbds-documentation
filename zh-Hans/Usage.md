@@ -4,9 +4,7 @@
 
 如果你认为你自己具备基本的计算机使用能力、互联网使用能力和简单的日常英语水平，我们非常欢迎且推荐你使用LiteLoaderBDS。
 
-如果你在使用中遇到任何问题，请仔细阅读本文档和C++插件开发文档。你遇到的大部分问题应该都可以在文档中找到。
-
-如果出现任何报错，请仔细阅读报错信息，并尝试移除插件直到所有插件都被移除。如果问题依然存在，请在GitHub提出issue或帮我们修复问题并发起pull request。
+如果你在使用中遇到任何问题，请仔细阅读本文档和C++插件开发文档。你遇到的大部分问题应该都可以在文档中找到。如果出现任何报错，请仔细阅读报错信息，并尝试移除插件直到所有插件都被移除。如果问题依然存在，请在GitHub提出issue或帮我们修复问题并发起pull request。
 
 LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客服，有较大的学业压力，因此，请不要以除issue外的方式向我们报告任何问题。此外，请不要催促我们做任何事情。
 
@@ -16,69 +14,112 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 
 ### 在Windows上安装
 
-我们推荐在以下平台安装：
+我们推荐在以下平台安装，对于其它版本的Windows，我们不保证兼容性。
 
 * Windows Server 2019或更新版本
 * Windows 11
 * Windows 10 21H2或更新版本
 
-在安装LiteLoaderBDS之前，请先安装BDS。你可以从[Minecraft官网](https://www.minecraft.net/en-us/download/server/bedrock)下载BDS并解压。
+在安装LiteLoaderBDS之前，请先安装BDS。由于Minecraft的EULA，我们无法提供BDS的下载服务。你可以从[Minecraft官网](https://www.minecraft.net/en-us/download/server/bedrock)下载BDS并解压。请注意，Minecraft并非LiteLoaderBDS的一部分，因此我们不提供任何关于Minecraft的技术支持。
 
-#### 手动安装
+#### 通过Lip安装
 
-请跟随以下步骤安装:
+我们推荐使用[Lip](https://lip.docs.litebds.com)来安装LiteLoaderBDS。你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。若已经安装Lip，请跟随以下步骤安装LiteLoaderBDS:
 
-1. 从[GitHub releases](https://github.com/LiteLDev/LiteLoader/releases)下载对应版本的LiteLoaderBDS。
+1. 在BDS目录中运行如下命令：
 
-2. 解压缩你在步骤2中下载的实现文件，把所有的文件放在BDS的目录中。如果发生冲突，请覆盖这些文件。
+    ```shell
+    lip install github.com/tooth-hub/liteloaderbds
+    ```
 
-3. 在BDS的目录中，运行`LLPeEditor.exe`，等待程序提示关闭。
+2. 对于LiteLoaderBDS 2.9.3及更早的版本，并没有提供后安装脚本，因此你需要在BDS目录中运行`LLPeEditor.exe`，并等待程序提示关闭以完成后安装任务。
 
-4. 在BDS的目录中，运行`bedrock_server_mod.exe`来启动服务器。请注意，你应该始终运行`bedrock_server_mod.exe`来启动服务器。
-
-#### 通过Lip安装（Beta）
-
-你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。
-
-进入BDS目录，运行如下命令：
-
-```shell
-lip install github.com/liteloaderbds-hub/liteloaderbds
-```
-
-在BDS的目录中，运行`LLPeEditor.exe`，等待程序提示关闭。
-
-在BDS的目录中，运行`bedrock_server_mod.exe`来启动服务器。请注意，你应该始终运行`bedrock_server_mod.exe`来启动服务器。
+3. 在BDS目录中运行`bedrock_server_mod.exe`来启动服务器。请注意，你应该始终运行`bedrock_server_mod.exe`来启动服务器。
 
 如果你希望安装其它版本的LiteLoaderBDS，你可以运行类似如下的命令：
 
 ```shell
-lip install github.com/liteloaderbds-hub/liteloaderbds@2.9.2
+lip install github.com/tooth-hub/liteloaderbds@2.9.2
 ```
 
-### 安装在Linux发行版上
+#### 手动安装
 
-**我们不建议在Linux发行版上运行LiteLoaderBDS，因为当Bedrock Dedicated Server(1.19+)运行在Wine上时会有严重的性能问题**
+如果你不想使用Lip，或者你希望进行一些高级操作，你可以手动安装LiteLoaderBDS。请跟随以下步骤安装:
+
+1. 从<https://github.com/LiteLDev/LiteLoader/releases>下载对应版本的LiteLoaderBDS。
+
+2. 解压缩下载得到的文件到BDS目录中。
+
+3. 在BDS目录中运行`LLPeEditor.exe`。
+
+4. 在BDS目录中运行`bedrock_server_mod.exe`以启动服务器。
+
+### 在Linux发行版上安装
+
+我们不建议在Linux发行版上运行LiteLoaderBDS，因为当Bedrock Dedicated Server(1.19+)运行在Wine上时会有严重的性能问题。如果你仍然想在Linux上运行LiteLoaderBDS，你可以尝试以下方法。该方法在Ubuntu 20.04上测试通过。对于其它Linux发行版，你可能需要自行解决问题。
 
 ### 通过脚本（在Ubuntu上可用）
 
-在要放置服务器的目录中，运行：
+在要安装服务器的目录中，运行：
 
 ```sh
 wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
 ```
 
-现在你已经安装了LiteLoaderBDS，那么添加一些插件如何？
+## 🚅 更新LiteLoaderBDS
 
-## 🎯 添加和移除插件
+当新的Minecraft基岩版发布时，你需要更新以使得服务端适配最新的客户端。
 
-有2种类型的插件：原生插件和脚本插件<!--和.NET插件-->。
+> [!WARNING]
+> 请注意，部分插件、地图等对更新操作有额外要求，若按照以下步骤操作，可能导致数据损坏。请做好数据备份工作。
 
-原生插件是经过编译的本地插件，用C++、Go或Rust等语言编写，具有更好的性能，但目前在服务器启动后不能被加载、卸载或重新加载。
+### 在Windows上更新BDS
 
-脚本插件由JavaScript、Python或Lua编写，可以灵活地管理，具有更好的安全性，但性能较差。
+更新时，请按照以下步骤操作：
 
-<!--.NET插件是运行在.NET平台（CLR）下，由CLS兼容的语言（如C#、Visual Basic.NET和F#等）编写的插件。-->
+1. 将服务端所在目录内，除 `allowlist.json` 、 `permissions.json` 、 `server.properties` 、 `plugins` 、 `worlds` 外所有文件删除。
+2. 将新版LiteLoaderBDS适配的适用于 Minecraft 的 Bedrock 版专属服务端软件（BDS）压缩包中，除 `allowlist.json` 、 `permissions.json` 、 `server.properties` 外所有内容解压到服务端所在目录。此步骤不应出现覆盖提示。
+3. 安装新版LiteLoaderBDS。
+4. 将备份的文件放回到服务端所在目录，并覆盖同名文件。
+
+### 在Windows上更新LiteLoaderBDS
+
+如果BDS没有更新，但是LiteLoaderBDS有更新，你可以使用Lip进行更新。
+
+在BDS目录中运行：
+
+```shell
+lip install --upgrade github.com/tooth-hub/liteloaderbds
+```
+
+如果你希望更新到特定版本，你可以使用以下命令：
+
+```shell
+lip install --upgrade github.com/tooth-hub/liteloaderbds@2.9.2
+```
+
+如果你希望回退到特定版本，你可以使用以下命令：
+
+```shell
+lip install --force-reinstall github.com/tooth-hub/liteloaderbds@2.9.2
+```
+
+如果你不希望使用Lip，你可以手动更新LiteLoaderBDS，请按照[在Windows上更新BDS](#在Windows上更新BDS)中的步骤操作。
+
+### 在Linux上更新BDS
+
+更新时，请按照以下步骤操作：
+
+1. 备份服务端所在目录内的 `allowlist.json` 、 `permissions.json` 、 `server.properties` 、 `plugins` 、 `worlds` 。
+2. 删除服务端。
+3. 安装新版LiteLoaderBDS。
+4. 将备份的文件放回到服务端所在目录，并覆盖同名文件。
+
+如果BDS没有更新，但是LiteLoaderBDS有更新，你也必须按照以上步骤操作。
+
+## 🎯 安装插件
+
+插件分为原生插件和脚本插件两种。原生插件是经过编译的本地插件，具有更好的性能，但服务器启动后不能再启用或禁用。脚本插件由JavaScript或Lua编写，可以灵活地管理，具有更好的安全性，但性能较差。
 
 > [!WARNING]
 > 为了保证大部分插件能够正常运行，请在 `server.properties` 中将 `online-mode` 设为 `true` ，并将 `server-authoritative-movement` 设为 `server-auth` 或 `server-auth-with-rewind` 。
@@ -91,21 +132,9 @@ wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/in
 * [MineBBS (原生插件)](https://www.minebbs.net/resources/?prefix_id=59)
 * [MineBBS (脚本插件)](https://www.minebbs.net/resources/?prefix_id=67)
 
-### 手动添加和移除插件
+### 通过Lip安装
 
-如果你需要添加插件，请按照以下步骤：
-
-1. 如果你有一个压缩文件，请解压缩。
-
-2. 检查插件的内容。LiteLoaderBDS插件的文件名通常以`.dll`、`.js`、`.lua`或`.llplugin`结尾。
-
-3. 将文件放在`plugins`目录中。一些插件可能与其他文件一起分发，你应该同时把它们放在`plugins`目录中。
-
-如果你需要移除插件，直接将添加插件时放入的文件移除即可。一些插件可能会产生其它文件或数据，你也需要找出它们一并移除。
-
-### 通过Lip添加和移除（Beta）
-
-如果插件作者提供了符合Lip规范的分发仓库，或将插件以Tooth包（后缀名为`.tth`）分发，你可以通过Lip方便地添加和移除插件。
+如果插件作者提供了符合Lip规范的分发仓库，或将插件以Tooth包（后缀名为`.tth`）分发，我们推荐使用[Lip](https://lip.docs.litebds.com)来安装插件，因为Lip可以自动处理依赖关系，使得插件安装、升级和卸载更加方便。
 
 你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。
 
@@ -121,13 +150,19 @@ lip install example.com/exampleuser/exampleplugin
 lip install myplugin.tth
 ```
 
-Lip还提供了Tooth包文件URL支持，例如：
+Lip还提供了Tooth包文件URL的安装支持，例如：
 
 ```shell
 lip install https://example.com/myplugin.tth
 ```
 
-如果你需要移除插件，你需要知道插件的Tooth路径。你可以运行如下命令查询所有已经安装的Tooth包：
+你可以运行类似如下命令移除插件：
+
+```shell
+lip uninstall example.com/exampleuser/exampleplugin
+```
+
+如果你需要移除插件，但不知道插件的Tooth路径，可以运行如下命令查询所有已经安装的Tooth包：
 
 ```shell
 lip list
@@ -139,13 +174,13 @@ lip list
 lip show example.com/exampleuser/exampleplugin
 ```
 
-如果你已经知道插件的Tooth路径，你可以运行类似如下命令进行移除：
+### 手动安装
 
-```shell
-lip uninstall example.com/exampleuser/exampleplugin
-```
+如果你不想使用Lip，或者插件并未提供Lip支持的分发方式，你可以手动安装插件。但是，手动安装插件需要你自己处理依赖关系，可能会导致插件无法正常运行。
 
-如果你对Lip感兴趣，请阅览[Lip文档](https://lip.docs.litebds.com)。
+如果插件提供了安装指南，请按照指南进行操作。如果没有，请将插件所有内容放入 `plugins` 文件夹中。
+
+如果你需要移除插件，直接将添加插件时放入的文件移除即可。
 
 ## 🔌 管理插件
 
@@ -169,44 +204,8 @@ lip uninstall example.com/exampleuser/exampleplugin
 > [!WARNING]
 > 不要在生产环境下加载、卸载或重新加载任何插件。
 
-## 🎨 管理附加包
+## 🎨 安装附加包
 
 将文件名以`.mcpack`、`.mcaddon`或`.zip`结尾的附加包复制到`plugins/AddonsHelper/`并重新启动服务器。然后，这些附加包将被自动添加到世界中。
 
 你可以在控制台使用 `addons` 命令来管理它们。
-
-## 📡 调试插件
-
-你可以输入这些命令来进入相应的调试模式：
-
-* `jsdebug`: JavaScript调试模式
-* `luadebug`: Lua调试模式
-
-在调试模式下，你输入的所有文本将被解析为脚本并实时执行，就像浏览器的开发工具的控制台那样。如果发生任何错误，你会看到一个错误报告。
-
-你可以输入`jsdebug`/`luadebug`并回车以退出调试模式。
-
-## 🚅 更新LiteLoaderBDS
-
-当新的LiteLoaderBDS或Minecraft基岩版发布时，你需要更新以使得服务端适配最新的客户端。
-
-> [!WARNING]
-> 请注意，部分插件、地图等对更新操作有额外要求，若按照以下步骤操作，可能导致数据损坏。请做好数据备份工作。
-
-### 更新安装于Windows上的服务端
-
-更新时，请按照以下步骤操作：
-
-1. 将服务端所在目录内，除 `allowlist.json` 、 `permissions.json` 、 `server.properties` 、 `plugins` 、 `worlds` 外所有文件删除。
-2. 将新版LiteLoaderBDS适配的适用于 Minecraft 的 Bedrock 版专属服务端软件（BDS）压缩包中，除 `allowlist.json` 、 `permissions.json` 、 `server.properties` 外所有内容解压到服务端所在目录。此步骤不应出现覆盖提示。
-3. 将新版LiteLoaderBDS压缩包中所有内容解压到服务端所在目录并覆盖旧文件。
-4. 运行 `LLPeEditor.exe` ，按提示等待操作即可。
-
-### 更新安装与Linux发行版上的服务端
-
-更新时，请按照以下步骤操作：
-
-1. 备份服务端所在目录内的 `allowlist.json` 、 `permissions.json` 、 `server.properties` 、 `plugins` 、 `worlds` 。
-2. 删除服务端。
-3. 按照安装指南安装新版LiteLoaderBDS。
-4. 将备份的文件放回到服务端所在目录，并覆盖同名文件。
