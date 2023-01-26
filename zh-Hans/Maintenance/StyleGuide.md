@@ -1,4 +1,4 @@
-# LiteLoaderBDS C++风格指南
+# LiteLoaderBDS C++代码风格指南
 
 ## 头文件
 
@@ -18,9 +18,7 @@
 
 ### 头保护
 
-_防止重复包含头文件_
-
-每个头文件必须包含 `#pragma once` 行。
+为了防止重复包含头文件，每个头文件必须包含 `#pragma once` 行。
 
 ### 按需包含
 
@@ -37,8 +35,8 @@ _防止重复包含头文件_
 ```cpp
 // In a C++ source file:
 class ExampleClass;
-void exampleFunction();
-extern int exampleVariable;
+void ExampleFunction();
+extern int example_variable;
 ```
 
 ### 内联函数
@@ -51,11 +49,20 @@ extern int exampleVariable;
 
 ### 包含顺序
 
-按照以下顺序包括头文件：与 `.cpp` 文件同名的头文件，C系统头文件，C++标准库头文件（包括 `cmath` 等），第三方库（ `third-party` 开头 ）的头文件，Minecraft导出头文件，LiteLoaderBDS的头文件。每类头文件包含中间要有一行空行。请注意，如果有C++头文件替代，请不要使用C头文件（譬如 `math.h` ）。在每类头文件包含中，按照忽略大小写的字母顺序排列。
+按照以下顺序包括头文件：
+
+1. 与 `.cpp` 文件同名的头文件
+2. C系统头文件
+3. C++标准库头文件（包括 `cmath` 等）
+4. 第三方库（ `third-party` 开头 ）的头文件
+5. Minecraft导出头文件
+6. LiteLoaderBDS的头文件。
+
+每类头文件包含中间要有一行空行。请注意，如果有C++头文件替代，请不要使用C头文件（譬如使用 `cmath` 而不是 `math.h` ）。在每类头文件包含中，按照忽略大小写的字母顺序排列。
 
 如果一个头文件被条件包含（譬如使用 `#ifdef` ），尽量放所有包含后，除非具有依赖关系。
 
-一个项目的所有头文件包含路径都应该基于 `Header` 目录，不要使用 `.` (当前目录）或 `..`（父目录）。
+不要使用 `./` (当前目录）或 `../`（父目录）前缀。
 
 ## 命名
 
@@ -71,25 +78,25 @@ extern int exampleVariable;
 
 注意，某些众所周知的缩写是可以的，比如i代表迭代变量，T代表模板参数。
 
-在下面的命名规则中，“单词”是指任何你在英语中写的没有内部空格的东西。这包括缩略语，如首字母缩写和首字母缩写。对于用混合大小写书写的名称，其中每个词的第一个字母都是大写的（小驼峰命名法第一个词的首字母小写）。最好将缩写作为单字大写，例如，`startRpc()` 而不是 `startRPC()` 。
+在下面的命名规则中，“单词”是指任何你在英语中写的没有内部空格的东西。这包括缩略语，如首字母缩写和首字母缩写。对于用混合大小写书写的名称，其中每个词的第一个字母都是大写的（小驼峰命名法第一个词的首字母小写）。最好将缩写作为单字大写，例如，`StartRpc()` 而不是 `StartRPC()` 。
 
 模板参数应遵循其类别的命名风格：类型模板参数应遵循类型名称的规则，而非类型模板参数应遵循变量名称的规则。
 
 ### 文件名
 
-文件名应遵循大驼峰命名法。除非十分必要（譬如需要使用专有标识符），否则不要使用 `_` 和 `-`。一般来说，专有标识符中除 `-` 外的符号，均使用 `_` 替换。
+文件名和目录名应遵循snake_style命名法。符号均使用 `_` 替换。
 
 示例如下：
 
-* ExampleClass.cpp
-* ExampleClass-zh.cpp
-* ExampleClassForAndroid_8_0_0.cpp
+* example_class.cpp
+* example_class_zh.cpp
+* example_class_for_android_8_0_0.cpp
 
 C++文件应该以 `.cpp` 结尾，头文件应该以 `.h` 结尾。在特定点上被包含的非头文件应该以 `.inc` 结尾。
 
 不要使用LiteLoaderBDS中已经出现的文件名，即使在不同路径。不要使用任何常见编译器（包括Microsoft Visual C++、GNU C++ Compiler和Clang C++ Compiler）搜索路径中有可能出现的任何文件的文件名。
 
-一般来说，使你的文件名非常具体。例如，使用 `HttpServerHandler.h` 而不是 `Handler.h` 。一个非常常见的情况是有一对文件，例如 `FooBar.h` 和 `FooBar.cpp` ，定义了一个名为 `FooBar` 的类。
+一般来说，使你的文件名非常具体。例如，使用 `http_server_handler.h` 而不是 `handler.h` 。一个非常常见的情况是有一对文件，例如 `foo_bar.h` 和 `foo_bar.cpp` ，定义了一个名为 `FooBar` 的类。但请注意，如果路径中已经包含了信息，譬如 `http_server/handler.h` ，那么就不需要在文件名中再次包含这些信息。
 
 ### 类型名称
 
@@ -122,27 +129,27 @@ enum class UrlTableError { ...
 
 ### 变量名称
 
-变量（包括函数参数）和公共数据成员的名称采用小驼峰命名法。私有数据成员采用`m`开头的小驼峰命名法，例如`mMember`。
+变量（包括函数参数）和公共数据成员的名称采用snake style命名法。私有数据成员采用`_`结尾的snake style命名法，例如`good_member_`。
 
 示例如下：
 
 ```cpp
-int aLocalVariable;
+int a_local_variable;
 
 struct ExampleStruct {
-  int aStructDataMember;
+  int a_struct_data_member;
 };
 
 class ExampleClass {
  public:
-  int aPublicMember;
+  int a_public_member;
 
  private:
-  int mAPrivateMember;
+  int a_private_member_;
 };
 ```
 
-单词的顺序应当遵循英文语法，且不应使用复数形式。避免使用缩写，除非该缩写是Wikipedia上的词条。譬如应当使用`studentNumber`而不是`numStu`；应当使用`studentList`而不是`students`。
+单词的顺序应当遵循英文语法，且不应使用复数形式。避免使用缩写，除非该缩写是Wikipedia上的词条。譬如应当使用`student_number`而不是`num_stu`；应当使用`student_list`而不是`students`。
 
 ### 常量名称
 
@@ -152,16 +159,16 @@ class ExampleClass {
 
 ### 函数名称
 
-普通函数使用小驼峰命名法。
+普通函数使用大驼峰命名法。
 
 通常情况下，函数应该以小写字母开始，每个新词都有一个大写字母。如果没有特殊原因，第一个词应当是动词原形。
 
 示例如下：
 
 ```cpp
-addTableEntry()
-deleteUrl()
-openFileOrDie()
+AddTableEntry()
+DeleteUrl()
+OpenFileOrDie()
 ```
 
 ### 命名空间名称
@@ -171,37 +178,30 @@ _尽量使用单个单词作为命名空间的名称。_
 
 除顶层命名空间外，每个命名空间中的代码通常应在一个目录中，目录名与命名空间的名称一致。
 
-请注意，`/utils/` 中的代码不应当放在 `ll` 命名空间内，而是有且**必须有**自己独立的命名空间。请不要污染全局命名空间。
-
 请记住，反对缩写的规则一样适用于命名空间。命名空间内的代码很少需要提到命名空间的名字，所以通常没有特别需要缩写。
 
-避免嵌套的名称空间与知名的顶级名称空间相匹配。由于名称查询规则，名称空间名称之间的碰撞可能导致令人惊讶的构建中断。特别是，不要创建任何嵌套的std命名空间。优先选择独特的项目标识符（例如 `web_search::Index` , `web_search::IndexUtil` ），而不是像 `web::Util` 这样容易发生碰撞的名字。也要避免命名空间嵌套过深。
+避免嵌套的名称空间与知名的顶级名称空间相匹配。由于名称查询规则，名称空间名称之间的碰撞可能导致令人惊讶的构建中断。特别是，不要创建任何嵌套的std命名空间。优先选择独特的项目标识符（例如 `web_search::index` , `web_search::index_util` ），而不是像 `web::util` 这样容易发生碰撞的名字。也要避免命名空间嵌套过深。
 
 ### 枚举相关名称
 
-枚举和枚举类采用大驼峰命名法，例如`ValueKind`，有特殊规则如下：
+枚举和枚举类采用大驼峰命名法，例如`ValueType`，有特殊规则如下：
 
-* 作为联合体的鉴别器或子类的指示符时，应该有一个 Kind 后缀，例如`ValueKind`。
+* 作为联合体的鉴别器或子类的指示符时，应该有一个 Type 后缀，例如`ValueType`。
 
-枚举器和枚举类成员采用大驼峰命名法，例如`MaxSize`，有特殊规则如下：
+* 尽可能使用枚举类而不是枚举。
 
-* 除非枚举器生效于局部作用域，否则枚举器应该有一个对应于枚举声明命名的前缀，例如：
+* 枚举器和枚举类成员采用大驼峰命名法，例如`MaxSize`
+
+* 若使用枚举而不是枚举类，除非枚举生效于局部作用域，否则枚举器应该有一个对应于枚举声明命名的前缀，例如：
   
   ```cpp
-  enum ValueKind {
-    ValueKind_ExternalClass = 0,
-    ValueKind_InternalClass = 1
+  enum ValueType {
+    ValueType_ExternalClass = 0,
+    ValueType_InternalClass = 1
   };
   ```
   
-  但匿名枚举的枚举器不需要前缀。例如：
-
-  ```cpp
-  enum {
-    MaxSize = 42,
-    Density = 12
-  };
-  ```
+* 不要使用匿名枚举，请使用constexpr替代。
 
 ### 宏名称
 
@@ -216,16 +216,16 @@ _尽量使用单个单词作为命名空间的名称。_
 
 ### 命名规则的例外情况
 
-如果你命名的东西与现有的C或C++标识符具有相似功能，那么你可以遵循现有的命名规则方案。
-
-示例如下：
+对于Accessor，方法名可以使用对应的私有成员变量名去掉下划线后的形式；对于Mutator，方法名可以使用对应的私有成员变量名去掉下划线后的形式加上set前缀。
 
 ```cpp
-double fast_pow();
-typedef unsigned int uint;
-class fast_map;
-void fast_map::clear();
-constexpr long long LONGLONGMAX;
+class Foo {
+ public:
+  int bar() const { return bar_; }
+  void set_bar(int value) { bar_ = value; }
+ private:
+  int bar_;
+};
 ```
 
 ## 注释
@@ -242,13 +242,13 @@ constexpr long long LONGLONGMAX;
 
 ### 文件注释
 
-&emsp;&emsp;每个完全由LiteLDev及其它LiteLoaderBDS贡献者编写的文件都以许可证模板开始，但 `/LiteLoader/Header/MC/` 内所有文件和所有第三方代码都不应当加上LiteLoaderBDS的许可证模板。
+&emsp;&emsp;每个完全由LiteLDev及其它LiteLoaderBDS贡献者编写的文件都以许可证模板开始，但生成的Minecraft相关文件和所有第三方代码都不应当加上LiteLoaderBDS的许可证模板。
 
 &emsp;&emsp;文件注释描述了一个文件的内容。如果一个文件只声明、实现或测试了一个抽象概念，而这个抽象概念在声明的时候就有注释记录，那么就不需要文件注释了。所有其他文件必须有文件注释。
 
 #### 法律声明和作者行
 
-&emsp;&emsp;每个完全由LiteLDev及其它LiteLoaderBDS贡献者编写的文件都应该包含许可证模板。LiteLoaderBDS采用LGPL-3.0许可证，请参考本项目的 `/LICENSE` 文件。
+&emsp;&emsp;每个完全由LiteLDev及其它LiteLoaderBDS贡献者编写的文件都应该包含许可证模板。LiteLoaderBDS采用LGPL-3.0许可证，请参考本项目的 `LICENSE` 文件。
 
 &emsp;&emsp;如果您希望集成第三方代码或其修改版本，请确保其具备许可证且其许可证分发条例不与LGPL-3.0有任何冲突，并遵守LGPL-3.0及该代码的许可证的要求进行修改和注释。
 
@@ -344,12 +344,12 @@ constexpr long long LONGLONGMAX;
  * @par Example:
  * @code
  * std::string example_str = "Example";
- * LL::doExampleThing(1, 2.1, example_str);
+ * LL::DoExampleThing(1, 2.1, example_str);
  * @endcode
  * @note This function should not be called globally.
  * @warning This function is deprecated. Please use `LL::doExampleThingEx()` instead.
  */
-int doExampleThing(int example_para1, double example_para2, std::string example_para3);
+int DoExampleThing(int example_para1, double example_para2, std::string example_para3);
 ```
 
 #### 函数定义
@@ -369,7 +369,7 @@ int doExampleThing(int example_para1, double example_para2, std::string example_
  * Note that the `example_para3` cannot be empty. Otherwise, the function may return a
  * unpredictable value.
  */
-int doExampleThing(int example_para1, double example_para2, std::string example_para3) {
+int DoExampleThing(int example_para1, double example_para2, std::string example_para3) {
   // Some code here
 }
 ```
@@ -411,7 +411,7 @@ class ExampleClass {
 
 ```cpp
 // The total number of test cases that we run through in this regression test.
-const int kNumTestCases = 6;
+const int NUM_TEST_CASES = 6;
 ```
 
 ### 代码实现注释

@@ -7,7 +7,7 @@
         - [💰 LLMoney经济核心](/Submodules/LLMoney.md)
         - [🔒 权限API](/Submodules/PermAPI.md)
 
-- 🍔 插件开发者指南
+- 🍔 创造者指南
     - [⛳ 原生插件开发](https://cpp.docs.litebds.com/zh-Hans)
 
     - 🎯 脚本插件开发
@@ -105,14 +105,14 @@
             - LLNET.Schedule
             - MC
 
-- 🎬 维护者指南
+- 🎬 开发指南
     - [⛳ 欢迎！](/Maintenance/README.md)
-    - [🔮 Git使用以及项目Commit规范](/Maintenance/Commit.md)
-    - [🚥 C++风格指南](/Maintenance/StyleGuide.md)
-    - [💡 放在最后](/Maintenance/Conclusion.md)
+    - [🔮 代码管理规范](/Maintenance/Commit.md)
+    - [🚥 C++代码风格指南](/Maintenance/StyleGuide.md)
+    - [🧩 子模块使用说明](/Maintenance/Submodules.md)
     - [👓 项目架构分析（待完善）](/Maintenance/Analysis.md)
     - [🎯 维护项目和贡献代码（待完善）](/Maintenance/Coding.md)
-    - [🧩 子模块使用说明](/Maintenance/Submodules.md)
+    - [💡 放在最后](/Maintenance/Conclusion.md)
 
 - 🧿 蓝图和RFC
     - [蓝图：LiteLoaderBDS 3](/Blueprints/LiteLoaderBDS3.md)

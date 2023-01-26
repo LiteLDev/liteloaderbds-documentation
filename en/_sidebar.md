@@ -1,13 +1,13 @@
 - [🎨 Home](/README.md)
 
-- 👍 User guide
+- 👍 User Guide
     - [🔨 Installation and Usage](/Usage.md)
     - [❓ Frequently Asked Questions ](/FAQ.md)
     - 🧩 Submodules
         - [💰 LLMoney Economy System](/Submodules/LLMoney.md)
         - [🔒 PermissionAPI](/Submodules/PermAPI.md)
 
-- 🍔 Developer guide
+- 🍔 Creator Guide
     - [⛳ C++ Plugin Development](https://cpp.docs.litebds.com/en)
     - 🎯 Script Plugin Development
         - [⛳ For Beginners (Must Read)](/LLSEPluginDevelopment/)
@@ -68,12 +68,5 @@
             - [🌏 Network](/LLSEPluginDevelopment/SystemAPI/Network.md)
             - [📡 System Calls](/LLSEPluginDevelopment/SystemAPI/SystemCall.md)
             - [📜 Get System Information](/LLSEPluginDevelopment/SystemAPI/SystemInfo.md)
-
-- 🎬 Maintenance
-    - [⛳ Welcome! ](/Maintenance/README.md)
-    - [👓 Architecture](/Maintenance/Analysis.md)
-    - [🎯 Contribution](/Maintenance/Coding.md)
-    - [🚥 C++ Style Guide](/Maintenance/StyleGuide.md)
-    - [💡 Conclusion](/Maintenance/Conclusion.md)
 
 - [💦 Changelog](https://github.com/LiteLDev/LiteLoaderBDS/releases)
