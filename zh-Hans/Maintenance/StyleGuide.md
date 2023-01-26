@@ -35,8 +35,8 @@
 ```cpp
 // In a C++ source file:
 class ExampleClass;
-void ExampleFunction();
-extern int example_variable;
+void exampleFunction();
+extern int ExampleVariable;
 ```
 
 ### 内联函数
@@ -78,18 +78,18 @@ extern int example_variable;
 
 注意，某些众所周知的缩写是可以的，比如i代表迭代变量，T代表模板参数。
 
-在下面的命名规则中，“单词”是指任何你在英语中写的没有内部空格的东西。这包括缩略语，如首字母缩写和首字母缩写。对于用混合大小写书写的名称，其中每个词的第一个字母都是大写的（小驼峰命名法第一个词的首字母小写）。最好将缩写作为单字大写，例如，`StartRpc()` 而不是 `StartRPC()` 。
+在下面的命名规则中，“单词”是指任何你在英语中写的没有内部空格的东西。这包括缩略语，如首字母缩写和首字母缩写。对于用混合大小写书写的名称，其中每个词的第一个字母都是大写的（小驼峰命名法第一个词的首字母小写）。最好将缩写作为单字大写，例如，`startRpc()` 而不是 `startRPC()` 。
 
 模板参数应遵循其类别的命名风格：类型模板参数应遵循类型名称的规则，而非类型模板参数应遵循变量名称的规则。
 
 ### 文件名
 
-文件名和目录名应遵循snake_style命名法。符号均使用 `_` 替换。
+文件名和目录名应遵循snake_style命名法。除了`-`外，符号均使用 `_` 替换。
 
 示例如下：
 
 * example_class.cpp
-* example_class_zh.cpp
+* example_class-zh.cpp
 * example_class_for_android_8_0_0.cpp
 
 C++文件应该以 `.cpp` 结尾，头文件应该以 `.h` 结尾。在特定点上被包含的非头文件应该以 `.inc` 结尾。
@@ -129,27 +129,27 @@ enum class UrlTableError { ...
 
 ### 变量名称
 
-变量（包括函数参数）和公共数据成员的名称采用snake style命名法。私有数据成员采用`_`结尾的snake style命名法，例如`good_member_`。
+变量（包括函数参数）和公共数据成员的名称采用大驼峰命名法。私有数据成员采用`m`开头的大驼峰命名法，例如`mGoodMember`。
 
 示例如下：
 
 ```cpp
-int a_local_variable;
+int ALocalVariable;
 
 struct ExampleStruct {
-  int a_struct_data_member;
+  int AStructDataMember;
 };
 
 class ExampleClass {
  public:
-  int a_public_member;
+  int mAPublicMember;
 
  private:
-  int a_private_member_;
+  int APrivateMember;
 };
 ```
 
-单词的顺序应当遵循英文语法，且不应使用复数形式。避免使用缩写，除非该缩写是Wikipedia上的词条。譬如应当使用`student_number`而不是`num_stu`；应当使用`student_list`而不是`students`。
+单词的顺序应当遵循英文语法，且不应使用复数形式。避免使用缩写，除非该缩写是Wikipedia上的词条。譬如应当使用`StudentNumber`而不是`NumStu`；应当使用`StudentList`而不是`Students`。
 
 ### 常量名称
 
@@ -159,22 +159,21 @@ class ExampleClass {
 
 ### 函数名称
 
-普通函数使用大驼峰命名法。
+普通函数使用小驼峰命名法。
 
 通常情况下，函数应该以小写字母开始，每个新词都有一个大写字母。如果没有特殊原因，第一个词应当是动词原形。
 
 示例如下：
 
 ```cpp
-AddTableEntry()
-DeleteUrl()
-OpenFileOrDie()
+addTableEntry()
+deleteUrl()
+openFileOrDie()
 ```
 
 ### 命名空间名称
 
-命名空间使用snake_case命名法。顶层命名空间的名称是 `ll` 。避免嵌套的名字空间和顶级名字空间之间的冲突。
-_尽量使用单个单词作为命名空间的名称。_
+命名空间使用snake_case命名法。顶层命名空间的名称是 `ll` 。避免嵌套的名字空间和顶级名字空间之间的冲突。_尽量使用单个单词作为命名空间的名称。_
 
 除顶层命名空间外，每个命名空间中的代码通常应在一个目录中，目录名与命名空间的名称一致。
 
@@ -184,9 +183,9 @@ _尽量使用单个单词作为命名空间的名称。_
 
 ### 枚举相关名称
 
-枚举和枚举类采用大驼峰命名法，例如`ValueType`，有特殊规则如下：
+枚举和枚举类采用大驼峰命名法，例如`ValueKind`，有特殊规则如下：
 
-* 作为联合体的鉴别器或子类的指示符时，应该有一个 Type 后缀，例如`ValueType`。
+* 作为联合体的鉴别器或子类的指示符时，应该有一个 Kind 后缀，例如`ValueKind`。
 
 * 尽可能使用枚举类而不是枚举。
 
@@ -195,9 +194,9 @@ _尽量使用单个单词作为命名空间的名称。_
 * 若使用枚举而不是枚举类，除非枚举生效于局部作用域，否则枚举器应该有一个对应于枚举声明命名的前缀，例如：
   
   ```cpp
-  enum ValueType {
-    ValueType_ExternalClass = 0,
-    ValueType_InternalClass = 1
+  enum ValueKind {
+    ValueKind_ExternalClass = 0,
+    ValueKind_InternalClass = 1
   };
   ```
   
@@ -221,10 +220,10 @@ _尽量使用单个单词作为命名空间的名称。_
 ```cpp
 class Foo {
  public:
-  int bar() const { return bar_; }
-  void set_bar(int value) { bar_ = value; }
+  int Bar() const { return Bar; }
+  void setBar(int Value) { Bar = Value; }
  private:
-  int bar_;
+  int Bar;
 };
 ```
 
@@ -349,7 +348,7 @@ class Foo {
  * @note This function should not be called globally.
  * @warning This function is deprecated. Please use `LL::doExampleThingEx()` instead.
  */
-int DoExampleThing(int example_para1, double example_para2, std::string example_para3);
+int doExampleThing(int example_para1, double example_para2, std::string example_para3);
 ```
 
 #### 函数定义
@@ -369,7 +368,7 @@ int DoExampleThing(int example_para1, double example_para2, std::string example_
  * Note that the `example_para3` cannot be empty. Otherwise, the function may return a
  * unpredictable value.
  */
-int DoExampleThing(int example_para1, double example_para2, std::string example_para3) {
+int doExampleThing(int examplePara1, double examplePara2, std::string examplePara3) {
   // Some code here
 }
 ```
@@ -394,12 +393,12 @@ class ExampleClass {
   /**
    * @brief Example data member
    */
-  int public_example;
+  int mPublicExample;
   
  private:
   // Used to bounds-check table accesses. -1 means
   // that we don't yet know how many entries the table has.
-  int num_total_entries_;
+  int NumTotalEntries;
 };
 ```
 
@@ -436,7 +435,7 @@ const int NUM_TEST_CASES = 6;
 
 ```cpp
 const int product =
-    CalculateProduct(values, options, /*completion_callback=*/nullptr)
+    calculateProduct(values, options, /*completion_callback=*/nullptr)
 ```
 
 ### 忌讳
@@ -448,7 +447,7 @@ const int product =
 ```cpp
 // Find the element in the vector.  <-- Bad: obvious!
 if (std::find(v.begin(), v.end(), element) != v.end()) {
-  Process(element);
+  process(element);
 }
 ```
 
@@ -457,7 +456,7 @@ if (std::find(v.begin(), v.end(), element) != v.end()) {
 ```cpp
 // Process "element" unless it was already processed.
 if (std::find(v.begin(), v.end(), element) != v.end()) {
-  Process(element);
+  process(element);
 }
 ```
 
