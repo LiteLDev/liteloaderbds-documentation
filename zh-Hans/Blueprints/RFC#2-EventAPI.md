@@ -5,7 +5,7 @@
 ## Overview
 
 整体上使用串行模式（类似Bukkit&PMMP），优先级越低的越先调用。若有多个相同优先级的监听器，先订阅的先调用，保证所有监听器都能收到事件。  
-优先级(uint16)预设值分为 LOWEST(10000), LOW(20000), NORMAL(30000), HIGH(40000), HIGHEST(50000), MONITOR(65535) 六个，开发者可自行设为其他值（不推荐并会输出警告）。  
+优先级(int8)预设值分为 kLowest(0), kLow(1), kNormal(2), kHigh(3), kHighest(4), kMonitor(5) 六个  
 
 ![image](https://user-images.githubusercontent.com/66063199/213874170-07fabeae-eb63-430c-91d1-0bc14bfde088.png)
 
