@@ -5,11 +5,11 @@
 ## Overview
 
 整体上使用串行模式（类似Bukkit&PMMP），优先级越低的越先调用。若有多个相同优先级的监听器，先订阅的先调用，保证所有监听器都能收到事件。  
-优先级(uint16)预设值分为 LOWEST(10000), LOW(20000), NORMAL(30000), HIGH(40000), HIGHEST(50000), MONITOR(65535) 六个，开发者可自行设为其他值（不推荐）。  
+优先级(uint16)预设值分为 LOWEST(10000), LOW(20000), NORMAL(30000), HIGH(40000), HIGHEST(50000), MONITOR(65535) 六个，开发者可自行设为其他值（不推荐并会输出警告）。  
 
 ![image](https://user-images.githubusercontent.com/66063199/213874170-07fabeae-eb63-430c-91d1-0bc14bfde088.png)
 
-MONITOR级别监听器**原则上**不应修改事件的值。
+MONITOR级别监听器不应修改事件的值（修改会输出警告）。
 
 ## 访问&修改事件内容
 
@@ -23,8 +23,6 @@ MONITOR级别监听器**原则上**不应修改事件的值。
 
 LL提供一套Event框架，开发者可自行继承&暴露`Event`/`CancellableEvent`模板类，实现自己的事件。  
 使用者只需将实现类复制到项目下即可使用。  
-
-LLSE如何实现自定义事件有待商讨
 
 ## 事件分类
 
