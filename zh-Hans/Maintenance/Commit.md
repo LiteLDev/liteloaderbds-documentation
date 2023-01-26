@@ -1,72 +1,30 @@
 # 🔮 代码管理规范
 
-## Git代码管理
+## 分支模型
 
-### Git版本管理控制使用原则
+- `main`分支是主分支，意味着最新的可用代码（包括稳定版本和beta版本），不应有任何单独的提交，只能有来自本仓库内其余分支的PR。
 
-- 如果您是一位不拥有write权限的开发者，建议将项目fork到个人账号下进行修改
-- 请从git中排除在项目生成过程中的中间文件
-- 实现大型功能的时候建立独立分支并在其中完成工作
-- 在新分支内时常rebase，追踪来自上游分支的修改，方便后期合并过程的进行
-- 合并到上游分支前，通过pull request功能发起code review要求其他参与者共同检查
-- 当一个功能分支已经合并时，请尽快清除
+- `hotfix/*`是热修复分支，当`main`分支中代码出现bug时，从`main`中建立该分支进行修复，最终合并到`main`分支。
 
-### 创建新功能
+   - 对于issue提到的内容，分支名为`hotfix/issue-xxx`。
 
-- 首先，我们需要基于beta分支创建一个新的分支（feature branch）
+   - 对于其余内容，最好建立issue，如果不便建立，分支名为`hotfix/aaa-bbb-ccc`，其中“aaa-bbb-ccc”是内容简介。
 
-```sh
-git checkout beta
-git pull
-git checkout -b feature/<FeatureName>
-```
+- `adaptation/*`意味着版本适配，当BDS发布新版本后，在该分支进行适配工作。该分支应当从`main`分支中创建，最终合并到`main`分支
 
-此时我们获得了一个基于beta创建的工作分支，接下来的工作请在此分支内完成
+   - 分支名示例：`adaptation/1.19.60`。
 
-- 在完成工作的同时，建议经常性的与上游分支同步
+- `develop`意味着开发新功能。合并到`main`分支。
 
-```sh
-git fetch origin
-git rebase origin/beta
-```
+第三方开发者发起PR的对象应当是除了`main`以外的所有分支。
 
-同步上游的过程实际上就是对冲突（conflict）的解决过程，任何冲突的解决都应在进行时尽快解决，避免大型工程中冲突过多导致合并时出现困难
+请所有LL开发者遵循以上规范，需要特别注意以下几点：
 
-- 将文件的改动添加进入git修改区内
+- Bug修复不要在develop分支进行，而是在hotfix
 
-```sh
-git add <files>
-```
+- 新版本适配不要在develop分支进行，而是在adaptation
 
-自git2.0，all是git add的默认值
-
-- 检查待提交修改并创建commit
-
-```sh
-git add --all        #将所有修改的文件添加到暂存区
-git status           #查看修改的文件列表
-git commit --verbose #查看具体修改内容
-```
-
-- 合并重复commit，修正提交信息
-
-在进行新功能的开发过程中难免遇到问题，进行修复后会出现多个重复commit，通过使用git rebase，对commit进行合并操作（squash），有助于更好的追踪修改
-通过变基操作（rebase）我们可以轻松实现此类操作
-
-```sh
-git rebase -i HEAD~5 #以当前HEAD往前5个commit，执行交互式rebase
-```
-
-> Rebase操作过后，若之前的commit已经推送到远端，可能需要`--force`参数以强制远端更新
-> 具体细节操作可以参考 [Keep your branch clean guide](https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html)
-
-### Feature分支合并至Beta分支
-
-使用pull request的方式，将feature分支的修改根据需要合并或原样提交至beta分支，待ci测试成功后合并进入main分支，同时，beta分支的任何合并操作，应该由1个或以上拥有write权限的成员进行code review
-
-### Beta分支合并至Main分支
-
-使用pull request的方式，将beta分支的修改**原样**提交至main分支，待ci测试成功后合并进入main分支
+- develop中只放新功能，不放修复bug
 
 ## Commit信息
 
@@ -117,6 +75,26 @@ docs: correct spelling of CHANGELOG
 - 使用祈使句
 - 使用主动语态
 - 若可以，使用名词单数形式
+
+## 版本管理
+
+应当严格遵循semver，版本的基本格式为`X.Y.Z[-beta.W]`
+
+例如：
+
+- 2.10.0-beta.1
+
+- 2.10.0
+
+- 2.10.2
+
+其中，如果是beta版本，必须在W处带上以1开始的beta版本号，且Z必须为0.
+
+每次从develop分支有任何合并后发布的版本，**必须**更新Y，即使对应的BDS版本没有更新。不应当认为LL与BDS具有版本号一一对应关系。
+
+同时，尽量在develop分支堆积足够的更新后，再合并到main，以防出现像Chrome那样离谱的版本号。
+
+所有新版本stable版发布前，必须发布带有beta后缀的beta版本。
 
 ## 依赖管理
 
