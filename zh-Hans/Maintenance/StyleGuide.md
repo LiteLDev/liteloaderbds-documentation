@@ -35,7 +35,7 @@
 ```cpp
 // In a C++ source file:
 class ExampleClass;
-void ExampleFunction();
+void exampleFunction();
 extern int ExampleVariable;
 ```
 
