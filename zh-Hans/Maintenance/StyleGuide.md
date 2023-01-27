@@ -35,7 +35,7 @@
 ```cpp
 // In a C++ source file:
 class ExampleClass;
-void exampleFunction();
+void ExampleFunction();
 extern int ExampleVariable;
 ```
 
@@ -63,6 +63,49 @@ extern int ExampleVariable;
 如果一个头文件被条件包含（譬如使用 `#ifdef` ），尽量放所有包含后，除非具有依赖关系。
 
 不要使用 `./` (当前目录）或 `../`（父目录）前缀。
+
+## 缩进
+
+缩进使用4个空格
+
+## 函数/方法
+
+不抛出异常的函数应在定义末尾加上noexcept  
+若方法重写了某个基类方法，则必须加上override关键字，并且重写方法的行为应与基类方法保持一致  
+
+例如
+```cpp
+class Animal {
+protected:
+    bool sleeping_ = false;
+public:
+    virtual void eat() {
+        if (sleeping_) throw sleep_error("You are sleeping now!");
+        cout << "Animal eat" << endl;
+    }
+    virtual void sleep() {
+        if (sleeping_) throw sleep_error("You are already sleeping now!");
+        sleeping_ = true;
+    }
+};
+
+class Cat : public Animal {
+    int moew_ = 0;
+public:
+    void eat() override {
+        // throw std::exception("You cannot throw std::exception because Animal::eat only throws sleep_error");
+        cout << "Cat eat" << endl;
+    }
+    void sleep() override {
+        if (sleeping_) throw sleep_error("You are already sleeping now!");
+        sleeping_ = true; // You must set sleeping_ to true because Animal::sleep does so.
+    }
+    void moew() noexcept { // This function will not throw
+        ++moew;
+    }
+};
+        
+```
 
 ## 命名
 
@@ -129,7 +172,7 @@ enum class UrlTableError { ...
 
 ### 变量名称
 
-变量（包括函数参数）小驼峰命名法。公有数据成员采用`m`开头的大驼峰命名法，例如`mGoodMember`。私有数据成员采用大驼峰命名法。
+变量（包括函数参数）小驼峰命名法。公有数据成员采用`m`开头的大驼峰命名法，例如`mGoodMember`。私有数据成员采用snake_case命名并且以下划线结尾。
 
 示例如下：
 
@@ -145,7 +188,7 @@ class ExampleClass {
   int mAPublicMember;
 
  private:
-  int APrivateMember;
+  int private_member_;
 };
 ```
 
@@ -189,7 +232,7 @@ openFileOrDie()
 
 * 尽可能使用枚举类而不是枚举。
 
-* 枚举器和枚举类成员采用大驼峰命名法，例如`MaxSize`
+* 枚举器和枚举类成员采用 k + 大驼峰命名法，例如`kMaxSize`
 
 * 若使用枚举而不是枚举类，除非枚举生效于局部作用域，否则枚举器应该有一个对应于枚举声明命名的前缀，例如：
   
@@ -416,10 +459,12 @@ const int NUM_TEST_CASES = 6;
 ### 代码实现注释
 
 在你的代码实现中，你应该在代码中棘手的、不明显的、有趣的或重要的部分有注释。
+好的代码是不需要注释就能易于阅读的，您应该让代码更具可读性。  
 
 #### 解释性注释
 
-棘手的或复杂的代码块应该在它们之前有注释。
+棘手的或复杂的代码块应该在它们之前有注释。  
+例如，某处地方使用了某种算法，您应该对算法作出解释。
 
 ### 函数参数注释
 
@@ -466,7 +511,9 @@ if (std::find(v.begin(), v.end(), element) != v.end()) {
 
 评论应该像叙述性文字一样具有可读性，大写字母和标点符号要正确。在许多情况下，完整的句子比零碎的句子更易读。较短的注释，例如在一行代码末尾的注释，有时可以不那么正式，但你应该与你的风格一致。
 
-虽然让代码审查员指出你在应该使用分号的时候却使用了逗号会让人感到沮丧，但源代码保持高度的清晰和可读性是非常重要的。正确的标点符号、拼写和语法有助于实现这一目标。
+虽然让代码审查员指出你在应该使用分号的时候却使用了逗号会让人感到沮丧，但源代码保持高度的清晰和可读性是非常重要的。正确的标点符号、拼写和语法有助于实现这一目标。  
+
+请务必在西文符号后添加一个空格。
 
 ### TODO注释
 
