@@ -172,7 +172,7 @@ enum class UrlTableError { ...
 
 ### 变量名称
 
-变量（包括函数参数）小驼峰命名法。公有数据成员采用`m`开头的大驼峰命名法，例如`mGoodMember`。私有数据成员采用snake_case命名并且以下划线结尾。
+变量（包括函数参数）小驼峰命名法。公有数据成员采用`m`开头的大驼峰命名法，例如`mGoodMember`。私有数据成员采用大驼峰命名法。
 
 示例如下：
 
@@ -188,7 +188,7 @@ class ExampleClass {
   int mAPublicMember;
 
  private:
-  int private_member_;
+  int APrivateMember;
 };
 ```
 
@@ -232,7 +232,7 @@ openFileOrDie()
 
 * 尽可能使用枚举类而不是枚举。
 
-* 枚举器和枚举类成员采用 k + 大驼峰命名法，例如`kMaxSize`
+* 枚举器和枚举类成员采用大驼峰命名法，例如`MaxSize`
 
 * 若使用枚举而不是枚举类，除非枚举生效于局部作用域，否则枚举器应该有一个对应于枚举声明命名的前缀，例如：
   
