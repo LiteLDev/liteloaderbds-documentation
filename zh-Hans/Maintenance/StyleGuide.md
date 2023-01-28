@@ -86,25 +86,28 @@ extern int exampleVariable;
 
 模板参数应遵循其类别的命名风格：类型模板参数应遵循类型名称的规则，而非类型模板参数应遵循变量名称的规则。
 
-### 文件名
+### 文件与目录名
 
-文件名和目录名应遵循 `snake_case` 命名法。除了`-`外，分隔符号均使用 `_` 。
+目录名应同命名空间一样采用 `snake_case` 命名方式。
+
+文件名应与类名一样采用大驼峰的命名方式
 
 示例如下：
 
-* example_class.cpp
-* example_class-zh.cpp
-* example_class_for_android_8_0_0.cpp
+* example/ExampleClass.h
+* example/ExampleClass.cpp
+* example/i18n/I18n.h
+* example/http_server/HttpServer.h
 
-C++文件应该以 `.cpp` 结尾，头文件应该以 `.h` 结尾。在特定点上被包含的非头文件应该以 `.inc` 结尾。
+C++文件应该以 `.cpp` 结尾，头文件应该以 `.h` 或 `.hpp` 结尾。在特定点上被包含的非头文件应该以 `.inc` 结尾。
 
-不要使用LiteLoaderBDS中已经出现的文件名，即使在不同路径。不要使用任何常见编译器（包括Microsoft Visual C++、GNU C++ Compiler和Clang C++ Compiler）搜索路径中有可能出现的任何文件的文件名。
+尽量不要使用重复的文件名。尽量不要使用任何包含路径中有可能出现的任何文件的文件名。
 
-一般来说，使你的文件名非常具体。例如，使用 `http_server_handler.h` 而不是 `handler.h` 。一个非常常见的情况是有一对文件，例如 `foo_bar.h` 和 `foo_bar.cpp` ，定义了一个名为 `FooBar` 的类。但请注意，如果路径中已经包含了信息，譬如 `http_server/handler.h` ，那么就不需要在文件名中再次包含这些信息。
+一般来说，使你的文件名非常具体。例如，使用 `HttpServerHandler.h` 而不是 `Handler.h` 。一个非常常见的情况是有一对文件，例如 `FooBar.h` 和 `FooBar.cpp` ，定义了一个名为 `FooBar` 的类。但请注意，如果路径中已经包含了信息，譬如 `http_server/Handler.h` ，那么就不需要在文件名中再次包含这些信息。
 
 ### 类型名称
 
-类型名称以大写字母开始，每个新词都有一个大写字母，没有下划线，例如 `MyExcitingClass` 和 `MyExcitingEnum` 。
+类型名称采用大驼峰命名，例如 `MyExcitingClass` 和 `MyExcitingEnum` 。
 
 所有类型的名称——类、结构、类型别名、枚举和类型模板参数——都有相同的命名规则。类型名称应该以大写字母开始，每个新词都有一个大写字母。没有下划线。
 
