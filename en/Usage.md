@@ -62,6 +62,7 @@ Script plugins are written in JavaScript, Python or Lua, which can be flexibly m
 
 You can look for plugins in these websites:
 
+* [Lip Tooth Hub](https://github.com/Tooth-Hub) (can only installed by Lip)
 * [LiteLoader Forum](https://forum.litebds.com/)
 * [MineBBS (Native plugins)](https://www.minebbs.net/resources/?prefix_id=59)
 * [MineBBS (Script plugins)](https://www.minebbs.net/resources/?prefix_id=67)

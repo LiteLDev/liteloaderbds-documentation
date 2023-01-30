@@ -128,6 +128,7 @@ lip install --force-reinstall github.com/tooth-hub/liteloaderbds@2.9.2
 
 你可以在这些网站上寻找插件：
 
+* [Lip Tooth Hub](https://github.com/Tooth-Hub) (只能用Lip安装)
 * [LiteLoaderBDS Forum](https://forum.litebds.com/)
 * [MineBBS (原生插件)](https://www.minebbs.net/resources/?prefix_id=59)
 * [MineBBS (脚本插件)](https://www.minebbs.net/resources/?prefix_id=67)
