@@ -29,7 +29,7 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 1. 在BDS目录中运行如下命令：
 
     ```shell
-    lip install github.com/tooth-hub/liteloaderbds
+    lip install ll
     ```
 
 2. 对于LiteLoaderBDS 2.9.3及更早的版本，并没有提供后安装脚本，因此你需要在BDS目录中运行`LLPeEditor.exe`，并等待程序提示关闭以完成后安装任务。
@@ -39,12 +39,12 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 如果你希望安装其它版本的LiteLoaderBDS，你可以运行类似如下的命令：
 
 ```shell
-lip install github.com/tooth-hub/liteloaderbds@2.9.2
+lip install ll@2.9.2
 ```
 
 #### 手动安装
 
-如果你不想使用Lip，或者你希望进行一些高级操作，你可以手动安装LiteLoaderBDS。请跟随以下步骤安装:
+如果你不想使用Lip，或者你希望进行一些高级操作，你可以手动安装LiteLoaderBDS。该方法可能会因为操作上的细微差别造成本文档中未提及的问题，因此需要你具备较高的排错能力。如果你遇到了任何问题而无法解决，请尝试通过Lip安装。请跟随以下步骤安装:
 
 1. 从<https://github.com/LiteLDev/LiteLoader/releases>下载对应版本的LiteLoaderBDS。
 
@@ -89,19 +89,19 @@ wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/in
 在BDS目录中运行：
 
 ```shell
-lip install --upgrade github.com/tooth-hub/liteloaderbds
+lip install --upgrade ll
 ```
 
 如果你希望更新到特定版本，你可以使用以下命令：
 
 ```shell
-lip install --upgrade github.com/tooth-hub/liteloaderbds@2.9.2
+lip install --upgrade ll@2.9.2
 ```
 
 如果你希望回退到特定版本，你可以使用以下命令：
 
 ```shell
-lip install --force-reinstall github.com/tooth-hub/liteloaderbds@2.9.2
+lip install --force-reinstall ll@2.9.2
 ```
 
 如果你不希望使用Lip，你可以手动更新LiteLoaderBDS，请按照[在Windows上更新BDS](#在Windows上更新BDS)中的步骤操作。
@@ -143,6 +143,12 @@ lip install --force-reinstall github.com/tooth-hub/liteloaderbds@2.9.2
 
 ```shell
 lip install example.com/exampleuser/exampleplugin
+```
+
+如果插件已经被提交到Lip Registry，则可以通过短名称安装插件，例如：
+
+```shell
+lip install llanticheat
 ```
 
 如果你已经获得了Tooth包文件，请使用类似如下的命令进行安装：
