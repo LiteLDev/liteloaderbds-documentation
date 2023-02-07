@@ -10,7 +10,7 @@ The LiteLoaderBDS development team is mostly students, not full-time maintainers
 
 If you think you can accept the above instructions, you are welcome to join the LiteLoaderBDS circle and let's work together to grow the LiteLoaderBDS ecology!
 
-## 💻 Installing LiteLoaderBDS
+## 💻 Install LiteLoaderBDS
 
 ### Installing on Windows
 
