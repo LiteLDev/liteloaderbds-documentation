@@ -130,6 +130,7 @@ There are two types of plugins: native plugins and scripted plugins. Native plug
 
 You can look for plugins on these sites.
 
+* [Official Lip Registry](https://registry.litebds.com)(Recommended)
 * [LiteLoaderBDS Forum](https://forum.litebds.com/)
 * [MineBBS (native plugin)](https://www.minebbs.net/resources/?prefix_id=59)
 * [MineBBS (Scripting Plugin)](https://www.minebbs.net/resources/?prefix_id=67)
