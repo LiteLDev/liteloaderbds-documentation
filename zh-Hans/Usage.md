@@ -129,7 +129,7 @@ lip install --force-reinstall ll@2.9.2
 你可以在这些网站上寻找插件：
 
 * [Official Lip Registry](https://registry.litebds.com)(仅支持通过Lip安装，推荐)
-* [LiteLoaderBDS Forum](https://forum.litebds.com/)
+* [LiteLoaderBDS官方论坛](https://www.litebds.com/)
 * [MineBBS (原生插件)](https://www.minebbs.net/resources/?prefix_id=59)
 * [MineBBS (脚本插件)](https://www.minebbs.net/resources/?prefix_id=67)
 
