@@ -46,7 +46,7 @@ lip install ll@2.9.2
 
 If you do not want to use Lip, or if you want to do some advanced operations, you can install LiteLoaderBDS manually. follow these steps to install it:
 
-1. Download the corresponding version of LiteLoaderBDS from <https://github.com/LiteLDev/LiteLoader/releases>. 2.
+1. Download the corresponding version of LiteLoaderBDS from <https://github.com/LiteLDev/LiteLoader/releases>. Most of assets are components of LiteLoaderBDS, so you need to download the `LiteLoaderBDS.zip` file.
 
 2. Unzip the downloaded file into the BDS directory.
 
