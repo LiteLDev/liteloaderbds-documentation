@@ -20,11 +20,11 @@ We recommend installing on the following platforms, for other versions of Window
 * Windows 11
 * Windows 10 21H2 or later
 
-Please install BDS before installing LiteLoaderBDS. due to Minecraft's EULA, we are unable to provide a download service for BDS. You can download the BDS from [Minecraft official website](https://www.minecraft.net/en-us/download/server/bedrock) and unzip it. Please note that Minecraft is not part of LiteLoaderBDS, so we do not provide any technical support for Minecraft.
-
 #### Installation via Lip
 
 We recommend using [Lip](https://lip.docs.litebds.com) to install LiteLoaderBDS. You need to install Lip first, please refer to the [Lip documentation](https://lip.docs.litebds.com). If Lip is already installed, please follow the steps below to install LiteLoaderBDS:
+
+For LiteLoaderBDS 2.10.0-beta.1 or earlier, BDS automatic installation is not supported, so you can download the BDS from [Minecraft official website](https://www.minecraft.net/en-us/download/server/bedrock) and unzip it.
 
 1. Run the following command in the BDS directory.
 
@@ -43,6 +43,8 @@ lip install ll@2.9.2
 ```
 
 #### Manual installation
+
+Please install BDS before installing LiteLoaderBDS. due to Minecraft's EULA, we are unable to provide a download service for BDS. You can download the BDS from [Minecraft official website](https://www.minecraft.net/en-us/download/server/bedrock) and unzip it. Please note that Minecraft is not part of LiteLoaderBDS, so we do not provide any technical support for Minecraft.
 
 If you do not want to use Lip, or if you want to do some advanced operations, you can install LiteLoaderBDS manually. follow these steps to install it:
 
