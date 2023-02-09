@@ -46,7 +46,7 @@ lip install ll@2.9.2
 
 如果你不想使用Lip，或者你希望进行一些高级操作，你可以手动安装LiteLoaderBDS。该方法可能会因为操作上的细微差别造成本文档中未提及的问题，因此需要你具备较高的排错能力。如果你遇到了任何问题而无法解决，请尝试通过Lip安装。请跟随以下步骤安装:
 
-1. 从<https://github.com/LiteLDev/LiteLoader/releases>下载对应版本的LiteLoaderBDS。Release中有多个Assets，其中大多数都是LiteLoaderBDS的各个组件，你需要下载的是`LiteLoaderBDS.zip`。
+1. 从<https://github.com/LiteLDev/LiteLoader/releases>下载对应版本的LiteLoaderBDS。Release中有多个Assets，其中大多数都是LiteLoaderBDS的各个组件，你需要下载的是`LiteLoaderBDS-full.zip`。
 
 2. 解压缩下载得到的文件到BDS目录中。
 
