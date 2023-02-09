@@ -74,35 +74,9 @@
 | en.blockPos              | 实体所在的方块坐标     | `IntPos`         |
 | en.maxHealth             | 实体最大生命值         | `Integer`        |
 | en.health                | 实体当前生命值         | `Integer`        |
-| en.canFly                | 实体是否能飞行         | `Boolean`        |
-| en.canFreeze             | 实体是否能被冻结       | `Boolean`        |
-| en.canSeeDaylight        | 实体是否能看到天空     | `Boolean`        |
-| en.canPickupItems        | 实体是否能拾取物品     | `Boolean`        |
-| en.inAir                 | 实体是否悬空           | `Boolean`        |
-| en.inWater               | 实体是否在水中         | `Boolean`        |
-| en.inLava                | 实体是否在岩浆中       | `Boolean`        |
-| en.inRain                | 实体是否在雨中         | `Boolean`        |
-| en.inSnow                | 实体是否在雪中         | `Boolean`        |
-| en.inWall                | 实体是否在墙上         | `Boolean`        |
-| en.inWaterOrRain         | 实体是否在水中或雨中   | `Boolean`        |
-| en.inWorld               | 实体是否在世界中       | `Boolean`        |
 | en.speed                 | 实体当前速度           | `Float`          |
 | en.direction             | 实体当前朝向           | `DirectionAngle` |
 | en.uniqueId              | 实体唯一标识符         | `String`         |
-| en.isInvisible           | 实体是否不可见         | `Boolean`        |
-| en.isInsidePortal        | 实体是否在门户内       | `Boolean`        |
-| en.isTrusting            | 实体是否信任           | `Boolean`        |
-| en.isTouchingDamageBlock | 实体是否接触到伤害方块 | `Boolean`        |
-| en.isOnFire              | 实体是否着火           | `Boolean`        |
-| en.isOnGround            | 实体是否在地面         | `Boolean`        |
-| en.isOnHotBlock          | 实体是否在热块上       | `Boolean`        |
-| en.isTrading             | 实体是否在交易         | `Boolean`        |
-| en.isRiding              | 实体是否正在骑行       | `Boolean`        |
-| en.isDancing             | 实体是否在跳舞         | `Boolean`        |
-| en.isSleeping            | 实体是否在睡觉         | `Boolean`        |
-| en.isAngry               | 实体是否生气           | `Boolean`        |
-| en.isBaby                | 实体是否为幼体         | `Boolean`        |
-| en.isMoving              | 实体是否移动           | `Boolean`        |
 
 
 这些对象属性都是只读的，无法被修改
@@ -114,6 +88,59 @@
 ### 实体对象 - 函数
 
 每一个实体对象都包含一些可以执行的成员函数（成员方法）。对于某个特定的实体对象`en`，可以通过以下这些函数对这个实体进行一些操作
+
+#### Check Entity conditions
+
+`en.is(condition)`  
+
+- Parameters: 
+  - condition : `String`  
+    Condition name 
+- Return value: Whether a certain condition is met or not met
+- Return value type: `Boolean`
+
+[JavaScript]
+```js
+//For a `Entity` object en
+en.is("canFreeze");
+```
+[Lua]
+```lua
+en:is("canFreeze")
+```
+
+##### Conditions Table
+
+| Conditions               | Meaning                                                      |
+| ------------------------ | ------------------------------------------------------------ |
+| canFly                | Can the entity fly                                     |
+| canFreeze             | Can entity be frozen                                   |
+| canSeeDaylight        | Can entitiy see daylight                               |
+| canPickupItems        | Can entitiy pick up items                              |
+| inAir                 | Whether the entity is in the air                       | 
+| inWater               | Whether the entity is in the water                     |
+| inLava                | Whether the entity is in the lava                      |
+| inRain                | Whether the entity is in rain                          | 
+| inSnow                | Whether the entity is in snow                          | 
+| inWall                | Whether the entity is on the wall                      | 
+| inWaterOrRain         | Whether the entity is in water or rain                 | 
+| inWorld               | Whether the entity is in the world                     |
+| invisible           | Whether the entity is invisible                        | 
+| insidePortal        | Whether the entity is inside the portal                | 
+| trusting            | Whether the entity is trusted                          | 
+| touchingDamageBlock | Whether the entity touches the damage block            | 
+| onFire              | Whether the entity is on fire                          | 
+| onGround            | Whether the entity is on the ground                    | 
+| onHotBlock          | Whether the entity is on a hot block (magma and etc.)  | 
+| trading             | Whether the entity is trading                          |
+| riding              | Whether the entity is riding                           |
+| dancing             | Whether the entity is dancing                          | 
+| sleeping            | Whether the entity is sleeping                         | 
+| angry               | Whether the entity is angry                            | 
+| baby                | Whether the entity is baby                             | 
+| moving              | Whether the entity is moving                           | 
+| player              | Whether the entity is player                           | 
+| itemEntity              | Whether the entity is item                           | 
 
 #### 传送实体至指定位置
 

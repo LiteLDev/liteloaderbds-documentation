@@ -73,35 +73,10 @@ Every entity object contains some fixed object properties. for a specific entity
 | en.blockPos              | The coordinates of the block the entity is standing on | `IntPos`         |
 | en.maxHealth             | Entity's maximum health                                | `Integer`        |
 | en.health                | Entity's current health                                | `Integer`        |
-| en.canFly                | Can the entity fly                                     | `Boolean`        |
-| en.canFreeze             | Can entity be frozen                                   | `Boolean`        |
-| en.canSeeDaylight        | Can entitiy see daylight                               | `Boolean`        |
-| en.canPickupItems        | Can entitiy pick up items                              | `Boolean`        |
-| en.inAir                 | Whether the entity is in the air                       | `Boolean`        |
-| en.inWater               | Whether the entity is in the water                     | `Boolean`        |
-| en.inLava                | Whether the entity is in the lava                      | `Boolean`        |
-| en.inRain                | Whether the entity is in rain                          | `Boolean`        |
-| en.inSnow                | Whether the entity is in snow                          | `Boolean`        |
-| en.inWall                | Whether the entity is on the wall                      | `Boolean`        |
-| en.inWaterOrRain         | Whether the entity is in water or rain                 | `Boolean`        |
-| en.inWorld               | Whether the entity is in the world                     | `Boolean`        |
 | en.speed                 | Entity's current speed                                 | `Float`          |
 | en.direction             | Entity's orientation                                   | `DirectionAngle` |
 | en.uniqueId              | Entity's unique identifier                             | `String`         |
-| en.isInvisible           | Whether the entity is invisible                        | `Boolean`        |
-| en.isInsidePortal        | Whether the entity is inside the portal                | `Boolean`        |
-| en.isTrusting            | Whether the entity is trusted                          | `Boolean`        |
-| en.isTouchingDamageBlock | Whether the entity touches the damage block            | `Boolean`        |
-| en.isOnFire              | Whether the entity is on fire                          | `Boolean`        |
-| en.isOnGround            | Whether the entity is on the ground                    | `Boolean`        |
-| en.isOnHotBlock          | Whether the entity is on a hot block (magma and etc.)  | `Boolean`        |
-| en.isTrading             | Whether the entity is trading                          | `Boolean`        |
-| en.isRiding              | Whether the entity is riding                           | `Boolean`        |
-| en.isDancing             | Whether the entity is dancing                          | `Boolean`        |
-| en.isSleeping            | Whether the entity is sleeping                         | `Boolean`        |
-| en.isAngry               | Whether the entity is angry                            | `Boolean`        |
-| en.isBaby                | Whether the entity is baby                             | `Boolean`        |
-| en.isMoving              | Whether the entity is moving                           | `Boolean`        |
+
 
 These object properties are read-only and cannot be modified.
 
@@ -112,6 +87,59 @@ For a detailed explanation of the **entity's current orientation** attribute, se
 ### Entity Object - Function
 
 Each entity object contains some member functions (member methods) that can be executed. for a specific entity object `en`, you can perform some operations on this entity through the following functions:
+
+#### Check Entity conditions
+
+`en.is(condition)`  
+
+- Parameters: 
+  - condition : `String`  
+    Condition name 
+- Return value: Whether a certain condition is met or not met
+- Return value type: `Boolean`
+
+[JavaScript]
+```js
+//For a `Entity` object en
+en.is("canFreeze");
+```
+[Lua]
+```lua
+en:is("canFreeze")
+```
+
+##### Conditions Table
+
+| Conditions               | Meaning                                                      |
+| ------------------------ | ------------------------------------------------------------ |
+| canFly                | Can the entity fly                                     |
+| canFreeze             | Can entity be frozen                                   |
+| canSeeDaylight        | Can entitiy see daylight                               |
+| canPickupItems        | Can entitiy pick up items                              |
+| inAir                 | Whether the entity is in the air                       | 
+| inWater               | Whether the entity is in the water                     |
+| inLava                | Whether the entity is in the lava                      |
+| inRain                | Whether the entity is in rain                          | 
+| inSnow                | Whether the entity is in snow                          | 
+| inWall                | Whether the entity is on the wall                      | 
+| inWaterOrRain         | Whether the entity is in water or rain                 | 
+| inWorld               | Whether the entity is in the world                     |
+| invisible           | Whether the entity is invisible                        | 
+| insidePortal        | Whether the entity is inside the portal                | 
+| trusting            | Whether the entity is trusted                          | 
+| touchingDamageBlock | Whether the entity touches the damage block            | 
+| onFire              | Whether the entity is on fire                          | 
+| onGround            | Whether the entity is on the ground                    | 
+| onHotBlock          | Whether the entity is on a hot block (magma and etc.)  | 
+| trading             | Whether the entity is trading                          |
+| riding              | Whether the entity is riding                           |
+| dancing             | Whether the entity is dancing                          | 
+| sleeping            | Whether the entity is sleeping                         | 
+| angry               | Whether the entity is angry                            | 
+| baby                | Whether the entity is baby                             | 
+| moving              | Whether the entity is moving                           | 
+| player              | Whether the entity is player                           | 
+| itemEntity              | Whether the entity is item                           | 
 
 #### Teleport Entity to Specified Location
 
@@ -398,14 +426,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 <br>
 
-#### Determine if an Entity Object Is a Player
-
-`en.isPlayer()`
-
-- Return value: Whether the current entity object is a player.
-- Return value type:  `Boolean`
-
-<br>
 
 #### Convert Entity Object to Player Object
 
@@ -416,15 +436,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
   - Returns `Null` if this entity object does not point to a player, or if the transition fails.
 
 If the current entity object points to a player, you can use this function to convert the entity object to a player object to use more player-related APIs.
-
-<br>
-
-#### Determine Whether an Entity Object Is a Dropped Item Entity
-
-`en.isItemEntity()`
-
-- Return value: Whether the current entity object is a dropped item entity.
-- Return value type:  `Boolean`
 
 <br>
 

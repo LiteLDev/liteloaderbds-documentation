@@ -52,51 +52,12 @@
 | pl.uuid                  | 玩家Uuid字符串                    | `String`         |
 | pl.permLevel             | 玩家的操作权限等级（0 - 4）       | `Integer`        |
 | pl.gameMode              | 玩家的游戏模式（0 - 3）           | `Integer`        |
-| pl.canFly                | 玩家是否可以飞行                  | `Boolean`        |
-| pl.canSleep              | 玩家是否可以睡觉                  | `Boolean`        |
-| pl.canBeSeenOnMap        | 玩家是否可以在地图上看到          | `Boolean`        |
-| pl.canFreeze             | 玩家是否可以冻结                  | `Boolean`        |
-| pl.canSeeDaylight        | 玩家是否能看到日光                | `Boolean`        |
-| pl.canShowNameTag        | 玩家是否可以显示姓名标签          | `Boolean`        |
-| pl.canStartSleepInBed    | 玩家是否可以开始在床上睡觉        | `Boolean`        |
-| pl.canPickupItems        | 玩家是否可以拾取物品              | `Boolean`        |
 | pl.maxHealth             | 玩家最大生命值                    | `Integer`        |
 | pl.health                | 玩家当前生命值                    | `Integer`        |
-| pl.inAir                 | 玩家当前是否悬空                  | `Boolean`        |
-| pl.inWater               | 玩家当前是否在水中                | `Boolean`        |
-| pl.inLava                | 玩家是否在熔岩中                  | `Boolean`        |
-| pl.inRain                | 玩家是否下雨                      | `Boolean`        |
-| pl.inSnow                | 玩家是否在雪中                    | `Boolean`        |
-| pl.inWall                | 玩家是否在墙上                    | `Boolean`        |
-| pl.inWaterOrRain         | 玩家是否在水中或雨中              | `Boolean`        |
-| pl.inWorld               | 玩家是否在世界                    | `Boolean`        |
-| pl.inClouds              | 玩家是否在云端                    | `Boolean`        |
-| pl.sneaking              | 玩家当前是否正在潜行              | `Boolean`        |
 | pl.speed                 | 玩家当前速度                      | `Float`          |
 | pl.direction             | 玩家当前朝向                      | `DirectionAngle` |
 | pl.uniqueId              | 玩家（实体的）唯一标识符          | `String`         |
 | pl.langCode              | 玩家设置的语言的标识符(形如zh_CN) | `String`         |
-| pl.isLoading             | 玩家是否已经加载                  | `Boolean`        |
-| pl.isInvisible           | 玩家是否隐身中                    | `Boolean`        |
-| pl.isInsidePortal        | 玩家在传送门中                    | `Boolean`        |
-| pl.isHurt                | 玩家是否受伤                      | `Boolean`        |
-| pl.isTrusting            | 未知                              | `Boolean`        |
-| pl.isTouchingDamageBlock | 玩家是否在能造成伤害的方块上      | `Boolean`        |
-| pl.isHungry              | 玩家是否饿了                      | `Boolean`        |
-| pl.isOnFire              | 玩家是否着火                      | `Boolean`        |
-| pl.isOnGround            | 玩家是否在地上                    | `Boolean`        |
-| pl.isOnHotBlock          | 玩家是否在高温方块上（岩浆等）    | `Boolean`        |
-| pl.isTrading             | 玩家在交易                        | `Boolean`        |
-| pl.isAdventure           | 玩家是否是冒险模式                | `Boolean`        |
-| pl.isGliding             | 玩家在滑行                        | `Boolean`        |
-| pl.isSurvival            | 玩家是否是生存模式                | `Boolean`        |
-| pl.isSpectator           | 玩家是否是观众模式                | `Boolean`        |
-| pl.isRiding              | 玩家是否在骑行                    | `Boolean`        |
-| pl.isDancing             | 玩家在跳舞？                      | `Boolean`        |
-| pl.isCreative            | 玩家是否是创造模式                | `Boolean`        |
-| pl.isFlying              | 玩家是否在飞行                    | `Boolean`        |
-| pl.isSleeping            | 玩家是否正在睡觉                  | `Boolean`        |
-| pl.isMoving              | 玩家是否正在移动                  | `Boolean`        |
 | pl.ip                    | 玩家设备IP地址                    | `String`         |
 
 这些对象属性都是只读的，无法被修改。其中：
@@ -119,24 +80,73 @@
 
 每一个玩家对象都包含一些可以执行的成员函数（成员方法）。对于某个特定的玩家对象`pl`，可以通过以下这些函数对这个玩家进行一些操作
 
-#### 判断玩家是否为OP  
+#### Check Player conditions
 
-`pl.isOP()`
+`pl.is(condition)`  
 
-- 返回值：玩家是否为OP
-- 返回值类型：`Boolean`  
+- Parameters: 
+  - condition : `String`  
+    Condition name 
+- Return value: Whether a certain condition is met or not met
+- Return value type: `Boolean`
 
-- 示例：  
-  - JavaScript
-    ```js
-    // 对于一个玩家对象pl
-    var open = pl.isOP();
-    ```
-  - Lua
-    ```lua
-    -- 对于一个玩家对象pl
-    open = pl:isOP()
-    ```
+[JavaScript]
+```js
+// 对于一个玩家对象pl
+pl.is("canFreeze");
+```
+[Lua]
+```lua
+-- 对于一个玩家对象pl
+pl:is("canFreeze")
+```
+
+##### Conditions Table
+
+| Conditions               | Meaning                                                      |
+| ------------------------ | ------------------------------------------------------------ |
+| canSleep              | Whether the player can sleep                                 |
+| canFly                | Whether the player can fly                                   |
+| canBeSeenOnMap        | Whether the player can be seen on map                        |
+| canFreeze             | Whether the player can freeze                                |
+| canSeeDaylight        | Whether the player can see daylight                          |
+| canShowNameTag        | Whether the player can show name tag                         |
+| canStartSleepInBed    | Whether the player can start sleep in bed                    | 
+| canPickupItems        | Whether the player can pickup items                          |
+| inAir                 | Whether the player is in the air                             |
+| inWater               | Whether the player is in water                               |
+| inLava                | Whether the player is in lava                                |
+| inRain                | Whether the player is in rain                                |
+| inSnow                | Whether the player is in snow                                | 
+| inWall                | Whether the player is in wall                                |
+| inWaterOrRain         | Whether the player is in water or rain                       |
+| inWorld               | Whether the player is in world                               |
+| inClouds              | Whether the player is in clouds                              | 
+| sneaking              | Whether the player is sneaking                               |
+| loading             | Player is loading                                            |
+| invisible           | Player is invisible                                          |
+| insidePortal        | Player is inside portal                                      |
+| hurt                | Player is hurt                                               |
+| trusting            | Player is trusting                                           |
+| touchingDamageBlock | Player is touching the damage block                          |
+| hungry              | Player is hungry                                             |
+| onFire              | Player is on fire                                            |
+| onGround            | Player is on ground                                          | 
+| onHotBlock          | Player is on hot block (magma and etc.)                      | 
+| trading             | Player is trading                                            | 
+| adventure           | Player is in Adventure Mode                                  | 
+| gliding             | Player is gliding                                            | 
+| survival            | Player is in Survival Mode                                   | 
+| spectator           | Player is in Spectator Mode                                  | 
+| riding              | Player is riding                                             | 
+| dancing             | Player is dancing                                            |
+| creative            | Player is in Creative Mode                                   |
+| flying              | Player is flying                                             |
+| sleeping            | Player is sleeping                                           |
+| moving              | Player is moving                                             |
+| operator              | Player is operator (have OP)                                             |
+| sprinting              | Player is sprinting                                             |
+
 
 #### 断开玩家连接  
 
@@ -1566,15 +1576,6 @@
     Name: "minecraft:luck"
 }
 ```
-
-<br>
-
-#### 获取玩家疾跑状态
-
-`pl.isSprinting()`
-
-- 返回值：玩家疾跑状态
-- 返回值类型：`Boolean`
 
 <br>
 
