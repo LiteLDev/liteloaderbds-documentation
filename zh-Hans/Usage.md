@@ -50,9 +50,15 @@ lip install ll@2.9.2
 
 2. 解压缩下载得到的文件到BDS目录中。
 
-3. 在BDS目录中运行`LLPeEditor.exe`。
+3. （可选）如果你希望使用LLMoney，请从<https://github.com/LiteLDev/LLMoney/releases/latest>下载并将`LLMoney.dll`放在`plugins/`。
 
-4. 在BDS目录中运行`bedrock_server_mod.exe`以启动服务器。
+4. （可选）如果你希望使用LLPermission，请下载`LLPermission.zip`并将所有内容放在`plugins/LiteLoader/`。
+
+5. （可选）如果你希望使用LLParticle，请下载`LLParticle.zip`并将所有内容放在`plugins/LiteLoader/`。
+
+6. 在BDS目录中运行`LLPeEditor.exe`。
+
+7. 在BDS目录中运行`bedrock_server_mod.exe`以启动服务器。
 
 ### 在Linux发行版上安装
 

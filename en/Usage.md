@@ -50,9 +50,15 @@ If you do not want to use Lip, or if you want to do some advanced operations, yo
 
 2. Unzip the downloaded file into the BDS directory.
 
-3. Run `LLPeEditor.exe` in the BDS directory. 4.
+3. (Optional) If you want to use LLMoney, which is a prerequisite of many plugins, download it from <https://github.com/LiteLDev/LLMoney/releases/latest> and put the `LLMoney.dll` file to `plugins/`.
 
-4. Run `bedrock_server_mod.exe` in the BDS directory to start the server.
+4. (Optional) If you want to use LLPermission, which is a prerequisite of some plugins, download `LLPermission.zip` and put everything in it to `plugins/LiteLoader`.
+
+5. (Optinoal) If you want to use LLParticle, which is a prerequisite of some plugins, download `LLParticle.zip` and put everything in it to `plugins/LiteLoader`.
+
+6. Run `LLPeEditor.exe` in the BDS directory. 4.
+
+7. Run `bedrock_server_mod.exe` in the BDS directory to start the server.
 
 ### Installing on a Linux distribution
 
