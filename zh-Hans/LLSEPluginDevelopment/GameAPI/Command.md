@@ -158,26 +158,26 @@ log(result.output);
 
 #### 有效的命令参数类型及解释
 
-| 命令参数类型          | 含义                                                       |
-| --------------------- | ---------------------------------------------------------- |
-| `ParamType.Bool`      | 布尔值参数                                                 |
-| `ParamType.Int`       | 整数参数                                                   |
-| `ParamType.Float`     | 浮点数参数                                                 |
-| `ParamType.String`    | 字符串参数                                                 |
-| `ParamType.Actor`     | 实体目标选择器参数                                         |
-| `ParamType.Player`    | 玩家目标选择器参数                                         |
-| `ParamType.BlockPos`  | 整数坐标参数                                               |
-| `ParamType.Vec3`      | 浮点数坐标参数                                             |
-| `ParamType.RawText`   | 原始字符串参数（可包含特殊字符，如逗号空格）               |
-| `ParamType.Message`   | 消息类型参数（同 `/say` 指令参数，会自动展开目标选择器等） |
-| `ParamType.JsonValue` | JSON字符串参数                                             |
-| `ParamType.Item`      | 物品类型参数                                               |
-| `ParamType.Block`     | 方块类型参数                                               |
-| `ParamType.Effect`    | 效果类型参数                                               |
-| `ParamType.Enum`      | 枚举参数                                                   |
-| `ParamType.SoftEnum`  | 可变枚举参数                                               |
-| `ParamType.ActorType` | 实体类型参数                                               |
-| `ParamType.Command`   | 指令名称参数（仅供测试）                                   |
+| 命令参数类型          | 含义                                                                 |
+| --------------------- | -------------------------------------------------------------------- |
+| `ParamType.Bool`      | 布尔值参数                                                           |
+| `ParamType.Int`       | 整数参数                                                             |
+| `ParamType.Float`     | 浮点数参数                                                           |
+| `ParamType.String`    | 字符串参数                                                           |
+| `ParamType.Actor`     | 实体目标选择器参数                                                   |
+| `ParamType.Player`    | 玩家目标选择器参数                                                   |
+| `ParamType.BlockPos`  | 整数坐标参数                                                         |
+| `ParamType.Vec3`      | 浮点数坐标参数                                                       |
+| `ParamType.RawText`   | 原始字符串参数(可包含特殊字符，如逗号空格，只能作为最后一个参数使用) |
+| `ParamType.Message`   | 消息类型参数(同 `/say` 指令参数，会自动展开目标选择器等)             |
+| `ParamType.JsonValue` | JSON字符串参数                                                       |
+| `ParamType.Item`      | 物品类型参数                                                         |
+| `ParamType.Block`     | 方块类型参数                                                         |
+| `ParamType.Effect`    | 效果类型参数                                                         |
+| `ParamType.Enum`      | 枚举参数                                                             |
+| `ParamType.SoftEnum`  | 可变枚举参数                                                         |
+| `ParamType.ActorType` | 实体类型参数                                                         |
+| `ParamType.Command`   | 指令名称参数（仅供测试）                                             |
 
 #### 新增一条指令重载
 
@@ -289,26 +289,26 @@ log(result.output);
 
 命令参数类型 和 数据值类型 的对应关系如下
 
-| 命令参数类型          | 数据值类型      | 含义                                                         |
-| --------------------- | --------------- | ------------------------------------------------------------ |
-| `ParamType.Bool`      | `Boolean`       | 布尔值                                                       |
-| `ParamType.Int`       | `Integer`       | 整数                                                         |
-| `ParamType.Float`     | `Float`         | 浮点数                                                       |
-| `ParamType.String`    | `String`        | 字符串                                                       |
-| `ParamType.Actor`     | `Array<Actor>`  | 实体目标选择器 选中的实体                                    |
-| `ParamType.Player`    | `Array<Player>` | 玩家目标选择器 选中的实体                                    |
-| `ParamType.BlockPos`  | `IntPos`        | 整数坐标对象                                                 |
-| `ParamType.Vec3`      | `FloatPos`      | 浮点数坐标对象                                               |
-| `ParamType.RawText`   | `String`        | 原始字符串（可包含特殊字符，如逗号空格）                     |
-| `ParamType.Message`   | `String`        | 消息类型字符串（同 `/say` 指令参数，会自动展开目标选择器等） |
-| `ParamType.JsonValue` | `String`        | JSON字符串                                                   |
-| `ParamType.Item`      | `Item`          | 物品类型                                                     |
-| `ParamType.Block`     | `Block`         | 方块类型                                                     |
-| `ParamType.Effect`    | `String`        | 效果类型字符串                                               |
-| `ParamType.Enum`      | `String`        | 枚举字符串                                                   |
-| `ParamType.SoftEnum`  | `String`        | 可变枚举字符串                                               |
-| `ParamType.ActorType` | `String`        | 实体类型字符串                                               |
-| `ParamType.Command`   | `String`        | 指令名称（仅供测试）                                         |
+| 命令参数类型          | 数据值类型      | 含义                                                             |
+| --------------------- | --------------- | ---------------------------------------------------------------- |
+| `ParamType.Bool`      | `Boolean`       | 布尔值                                                           |
+| `ParamType.Int`       | `Integer`       | 整数                                                             |
+| `ParamType.Float`     | `Float`         | 浮点数                                                           |
+| `ParamType.String`    | `String`        | 字符串                                                           |
+| `ParamType.Actor`     | `Array<Actor>`  | 实体目标选择器 选中的实体                                        |
+| `ParamType.Player`    | `Array<Player>` | 玩家目标选择器 选中的实体                                        |
+| `ParamType.BlockPos`  | `IntPos`        | 整数坐标对象                                                     |
+| `ParamType.Vec3`      | `FloatPos`      | 浮点数坐标对象                                                   |
+| `ParamType.RawText`   | `String`        | 原始字符串(可包含特殊字符，如逗号空格，只能作为最后一个参数使用) |
+| `ParamType.Message`   | `String`        | 消息类型字符串(同 `/say` 指令参数，会自动展开目标选择器等)       |
+| `ParamType.JsonValue` | `String`        | JSON字符串                                                       |
+| `ParamType.Item`      | `Item`          | 物品类型                                                         |
+| `ParamType.Block`     | `Block`         | 方块类型                                                         |
+| `ParamType.Effect`    | `String`        | 效果类型字符串                                                   |
+| `ParamType.Enum`      | `String`        | 枚举字符串                                                       |
+| `ParamType.SoftEnum`  | `String`        | 可变枚举字符串                                                   |
+| `ParamType.ActorType` | `String`        | 实体类型字符串                                                   |
+| `ParamType.Command`   | `String`        | 指令名称（仅供测试）                                             |
 
 ### 命令注册样例
 
