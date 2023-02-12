@@ -71,7 +71,7 @@ lip install ll@2.9.2
 在要安装服务器的目录中，运行：
 
 ```sh
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/scripts/install.sh && sh install.sh
 ```
 
 ## 🚅 更新LiteLoaderBDS

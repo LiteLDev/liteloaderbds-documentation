@@ -71,7 +71,7 @@ We do not recommend running LiteLoaderBDS on Linux distributions because of seri
 In the directory where you want to install the server, run.
 
 ```sh
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/scripts/install.sh && sh install.sh
 ```
 
 ## 🚅 Update LiteLoaderBDS
