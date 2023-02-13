@@ -68,27 +68,6 @@
 
 准备好了吗？ 👉[点击此处](/LLSEPluginDevelopment/)👈 查看脚本插件开发文档。
 
-### 🍳 我想写Python插件
-
-由于ScriptX暂不支持Python，所以需要使用[twoone-3/BDSpyrunner](https://github.com/twoone-3/BDSpyrunner)作为Python支持中间件。
-
-优点：
-* 无需关注**BDS**底层，容易上手开发；
-* 理论上不需要更新，即可支持所有Minecraft版本；
-* 非常安全，且随着**LiteLoaderBDS**更新，漏洞自动修复。
-
-缺点：
-* 由第三方开发者维护，可能得不到最新支持；
-* 代码管理难度高，随着代码量增加，维护变得困难；
-* API较少，可能无法用于实现偏门的功能；
-* 性能较差。
-
-建议用于不超过五千行代码的玩法类和辅助类插件。
-
-首先你需要参考[本教程](https://github.com/twoone-3/BDSpyrunner/wiki)安装BDSpyrunner。
-
-准备好了吗？ 👉[点击此处](https://github.com/twoone-3/BDSpyrunner/wiki/Devlopment)👈 查看Python插件开发文档。
-
 ### 🪁 我想写.NET插件（C#、F#或Visual Basic）
 
 优点：

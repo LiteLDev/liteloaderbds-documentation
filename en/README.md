@@ -68,27 +68,6 @@ Recommended for play classes and helper plugins with no more than 5,000 lines of
 
 Ready? 👉[click here](/LLSEPluginDevelopment/)👈 Check out the script plugin development documentation.
 
-### 🍳 I want to write Python plugins
-
-Since ScriptX does not support Python at the moment, I need to use [twoone-3/BDSpyrunner](https://github.com/twoone-3/BDSpyrunner) as Python support middleware.
-
-Advantages.
-* No need to focus on the **BDS** underlying layer, easy to get started with development.
-* Theoretically supports all Minecraft versions without the need for updates.
-* Very secure and vulnerabilities are automatically fixed as **LiteLoaderBDS** is updated.
-
-Disadvantages.
-* Maintained by third party developers and may not have the latest support.
-* Difficult to manage code and maintenance becomes difficult as the amount of code increases.
-* Fewer APIs, which may not be available for offbeat functionality.
-* Poor performance.
-
-Recommended for playstyle and helper plugins of no more than 5,000 lines of code.
-
-First you need to refer to [this tutorial](https://github.com/twoone-3/BDSpyrunner/wiki) to install BDSpyrunner.
-
-Are you ready? 👉[click here](https://github.com/twoone-3/BDSpyrunner/wiki/Devlopment)👈 Check out the Python plugin development documentation.
-
 ### 🪁 I want to write .NET plugins (C#, F# or Visual Basic)
 
 Pros.
