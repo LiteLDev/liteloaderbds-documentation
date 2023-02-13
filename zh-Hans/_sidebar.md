@@ -76,8 +76,6 @@
             - [🎚️ 函数类型NativeFunction](LLSEPluginDevelopment/NativeAPI/NativeFunction.md)
             - [🛠️ 补丁工具NativePatch](LLSEPluginDevelopment/NativeAPI/NativePatch.md)
 
-    - [🍳 Python插件开发](https://github.com/twoone-3/BDSpyrunner/wiki/Devlopment)
-
     - 🪁 .NET插件开发
         - [⛳ 新手入门（必读）](/DotNETPluginDevelopment/README.md)
 

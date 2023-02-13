@@ -10,10 +10,9 @@ LiteLoaderBDS 3中，各重要组件将会进一步解耦合。这意味着LiteL
 - Core
 - PreLoader
 - ScriptEngine
-- PyRunner
 - PackageManager
 
-在上述模块中，Core时运行时必须的，PreLoader是安装时必须的，而其它模块都不是必须的。也就是说，用户应当可以仅运行Core，而不引入脚本插件引擎、.NET插件引擎或Python插件引擎。解耦合是为了使LiteLoaderBDS成为一个更强大、更多元的平台，以提供高于BDS插件的拓展能力。也就是说，在LiteLoaderBDS 3中，开发者不仅能够编写适用于游戏的插件，还能够编写适用于LiteLoaderBDS本身的其它模块，从而为LiteLoaderBDS添加更多新的功能，譬如管理面板、群组服等。
+在上述模块中，Core时运行时必须的，PreLoader是安装时必须的，而其它模块都不是必须的。也就是说，用户应当可以仅运行Core，而不引入脚本插件引擎或.NET插件引擎。解耦合是为了使LiteLoaderBDS成为一个更强大、更多元的平台，以提供高于BDS插件的拓展能力。也就是说，在LiteLoaderBDS 3中，开发者不仅能够编写适用于游戏的插件，还能够编写适用于LiteLoaderBDS本身的其它模块，从而为LiteLoaderBDS添加更多新的功能，譬如管理面板、群组服等。
 
 #### Core
 
@@ -26,10 +25,6 @@ PreLoader负责在安装LiteLoaderBDS工具链时，从BDS中提取必要的符�
 #### ScriptEngine
 
 ScriptEngine通过ScriptX与Lua、JavaScript等脚本语言的引擎交互，从而使得开发者用Lua、JavaScript等脚本语言开发插件成为可能。
-
-#### PyRunner
-
-PyRunner用于与Python脚本引擎交互，使得开发者用Python语言开发插件成为可能。
 
 #### PackageManager
 
