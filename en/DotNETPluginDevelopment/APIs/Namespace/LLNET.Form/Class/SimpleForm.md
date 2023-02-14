@@ -18,7 +18,7 @@ ref class SimpleForm : public ClassTemplate<SimpleForm, ::Form::SimpleForm>, pub
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [ClassTemplate<REFCLASS,NATIVECLASS>] → [SimpleForm](zh_CN/NET/APIs/Namespace/LLNET.Form/Class/SimpleForm.md)
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [ClassTemplate<REFCLASS,NATIVECLASS>] → [SimpleForm](zh_CN/NET/APIs/Namespace/LiteLoader.Form/Class/SimpleForm.md)
 
 <br>
 

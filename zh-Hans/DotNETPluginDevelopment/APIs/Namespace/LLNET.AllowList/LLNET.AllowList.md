@@ -1,4 +1,4 @@
-# LLNET.AllowList 命名空间
+# LiteLoader.AllowList 命名空间
 
 包含用于管理白名单的类及其方法。
 

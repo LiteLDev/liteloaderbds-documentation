@@ -22,7 +22,7 @@ public ref class PluginMainAttribute
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Attribute](https://docs.microsoft.com/zh-cn/DotNET/api/system.attribute?view=net-6.0) → [PluginMainAttribute](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/PluginMainAttribute/PluginMainAttribute.md)
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Attribute](https://docs.microsoft.com/zh-cn/DotNET/api/system.attribute?view=net-6.0) → [PluginMainAttribute](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/PluginMainAttribute/PluginMainAttribute.md)
    
 <br>
 

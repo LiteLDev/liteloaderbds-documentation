@@ -1,4 +1,4 @@
-# LLNET.DynamicCommand 命名空间
+# LiteLoader.DynamicCommand 命名空间
 
 包含用于定义、注册、管理动态命令的类、特性、结构、接口。
 
