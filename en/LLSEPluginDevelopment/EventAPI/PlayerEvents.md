@@ -142,12 +142,14 @@ Reminder: This event does not fire when the player returns to the Overworld from
 #### `"onAttackEntity"` - Player Attack Other Event
 
 - Listener function prototype 
-  `function(player,entity)`
+  `function(player,entity, damage)`
 - Parameters: 
   - player : `Player` 
     The player that attacked an entity.
   - entity : `Entity` 
     The entity that is being attacked.
+  - damage : `float` 
+    The damage dealt by this attack.
 
 - Intercept events: function returns `false`
 

@@ -144,13 +144,16 @@
 #### `"onAttackEntity"` - 玩家攻击实体
 
 - 监听函数原型
-  `function(player,entity)`
+  `function(player,entity, damage)`
 - 参数：
   - player : `Player` 
     攻击实体的玩家对象
 
   - entity : `Entity` 
     被攻击的实体对象
+
+  - damage : `float` 
+    攻击所造成的伤害
 
 - 拦截事件：函数返回`false`
 
