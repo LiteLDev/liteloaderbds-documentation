@@ -1,6 +1,6 @@
 # 安装和使用
 
-## 🍳 我能使用吗？
+## 🍳 我需要掌握什么技能？
 
 如果你认为你自己具备基本的计算机使用能力、互联网使用能力和简单的日常英语水平，我们非常欢迎且推荐你使用LiteLoaderBDS。
 
@@ -21,6 +21,12 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 * Windows 10 21H2或更新版本
 
 #### 通过Lip安装
+
+你可以观看以下视频学习通过Lip安装LiteLoaderBDS:
+
+<div style="position: relative; padding-bottom: 62.5%;">
+<iframe src="//player.bilibili.com/player.html?aid=864207370&bvid=BV1254y1N7gD&cid=1001763271&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>
+</div>
 
 我们推荐使用[Lip](https://lip.docs.litebds.com)来安装LiteLoaderBDS。你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。若已经安装Lip，请跟随以下步骤安装LiteLoaderBDS:
 
