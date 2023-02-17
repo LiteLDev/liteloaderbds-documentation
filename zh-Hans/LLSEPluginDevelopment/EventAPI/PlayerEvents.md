@@ -144,7 +144,7 @@
 #### `"onAttackEntity"` - 玩家攻击实体
 
 - 监听函数原型
-  `function(player,entity, damage)`
+  `function(player,entity,damage)`
 - 参数：
   - player : `Player` 
     攻击实体的玩家对象
