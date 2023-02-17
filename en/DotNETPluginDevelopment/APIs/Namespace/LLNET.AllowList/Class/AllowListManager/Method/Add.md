@@ -37,7 +37,7 @@ public:
 <br>
 
 - 返回
-  - [AllowListManager](zh_CN/NET/APIs/Namespace/LLNET.AllowList/AllowListManager.md)  
+  - [AllowListManager](zh_CN/NET/APIs/Namespace/LiteLoader.AllowList/AllowListManager.md)  
     当前 `AllowListManager` 对象
   
 <br>
@@ -65,7 +65,7 @@ public:
 <br>
 
 - 返回
-  - [AllowListManager](zh_CN/NET/APIs/Namespace/LLNET.AllowList/AllowListManager.md)  
+  - [AllowListManager](zh_CN/NET/APIs/Namespace/LiteLoader.AllowList/AllowListManager.md)  
     当前 `AllowListManager` 对象
   
 <br>
@@ -95,7 +95,7 @@ public:
 <br>
 
 - 返回
-  - [AllowListManager](zh_CN/NET/APIs/Namespace/LLNET.AllowList/AllowListManager.md)  
+  - [AllowListManager](zh_CN/NET/APIs/Namespace/LiteLoader.AllowList/AllowListManager.md)  
     当前 `AllowListManager` 对象
   
 <br>

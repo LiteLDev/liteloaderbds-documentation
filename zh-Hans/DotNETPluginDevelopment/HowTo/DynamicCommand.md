@@ -76,7 +76,7 @@ DynamicCommandInstance cmd = DynamicCommand.CreateCommand("testcmd", "dynamic co
 C#
 ```cs
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace PluginMain
 {

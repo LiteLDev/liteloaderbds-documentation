@@ -37,7 +37,7 @@ C#
 // command.cs
 
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace Example;
 
@@ -66,7 +66,7 @@ C#
 // command.cs
 
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace Example;
 
@@ -99,7 +99,7 @@ C#
 // command.cs
 
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace Example;
 
@@ -134,7 +134,7 @@ C#
 // command.cs
 
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace Example;
 
@@ -176,7 +176,7 @@ C#
 // command.cs
 
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace Example;
 
@@ -203,7 +203,7 @@ public class ExampleCommand: ICommand
 ```cs
 // plugin.cs
 
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 using Example;
 
 namespace PluginMain
@@ -243,7 +243,7 @@ C#
 // command.cs
 
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace Example;
 
@@ -304,7 +304,7 @@ public class ExampleCommand: ICommand
 ```cs
 // plugin.cs
 
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 using Example;
 
 namespace PluginMain
@@ -338,7 +338,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 using MC;
 
 namespace Example;
@@ -383,7 +383,7 @@ public class KillAllPlayersCommand: Icommand
 C#
 ```cs
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace Example;
 
@@ -428,7 +428,7 @@ public class ExampleCommand: Icommand
 C#
 ```cs
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace Example;
 
@@ -466,14 +466,14 @@ public class ExampleCommand: Icommand, ICommandEvent
 
 <br>
 
->继承此接口可获取到内部表示的指令注册信息。获取更多信息请查阅 [LLNET.DynamicCommand.Internal] 命名空间。
+>继承此接口可获取到内部表示的指令注册信息。获取更多信息请查阅 [LiteLoader.DynamicCommand.Internal] 命名空间。
 
 <br>
 
 C#
 ```cs
 using System;
-using LLNET.DynamicCommand;
+using LiteLoader.DynamicCommand;
 
 namespace Example;
 

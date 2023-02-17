@@ -40,7 +40,7 @@ namespace PluginMain
 
 <br>
 
->可使用位于 [LLNET.LL] 命名空间中的 [LLAPI] 类的 [RegisterPlugin] 静态方法注册插件信息。
+>可使用位于 [LiteLoader.LL] 命名空间中的 [LLAPI] 类的 [RegisterPlugin] 静态方法注册插件信息。
 
 <br>
 
@@ -49,7 +49,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.LL;
+using LiteLoader;
 
 namespace PluginMain
 {
@@ -69,15 +69,15 @@ namespace PluginMain
 
 ## 定义自定义插件入口
 
->自定义插件入口不必受限制于命名空间与类名，通过继承 [LLNET.Core](zh_CN/NET/APIs/Namespace/LLNET.Core/LLNET.Core.md) 命名空间下的 [IPluginInitializer](zh_CN/NET/APIs/Namespace/LLNET.Core/Interface/IPluginInitializer/IPluginInitializer.md) 接口并实现接口属性与方法，即可完成插件入口的定义与插件信息的注册。<br><br> 
-自定义入口需要 [PluginMainAtribute](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/PluginMainAttribute/PluginMainAttribute.md) 的配合使用。
+>自定义插件入口不必受限制于命名空间与类名，通过继承 [LiteLoader.NET](zh_CN/NET/APIs/Namespace/LiteLoader.NET/LiteLoader.NET.md) 命名空间下的 [IPluginInitializer](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Interface/IPluginInitializer/IPluginInitializer.md) 接口并实现接口属性与方法，即可完成插件入口的定义与插件信息的注册。<br><br> 
+自定义入口需要 [PluginMainAtribute](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/PluginMainAttribute/PluginMainAttribute.md) 的配合使用。
 
 <br>
 
 C#
 ```cs
 using System;
-using LLNET.Core;
+using LiteLoader.NET;
 
 //自定义命名空间
 namespace CustomNameSpace;

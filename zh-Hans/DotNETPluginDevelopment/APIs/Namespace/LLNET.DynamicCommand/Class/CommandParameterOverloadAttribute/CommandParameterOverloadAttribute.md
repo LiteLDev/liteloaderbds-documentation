@@ -22,7 +22,7 @@ public ref class CommandParameterOverloadAttribute
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Attribute](https://docs.microsoft.com/zh-cn/DotNET/api/system.attribute?view=net-6.0) → [CommandParameterOverloadAttribute](zh_CN/NET/APIs/Namespace/LLNET.DynamicCommand/Class/CommandParameterOverloadAttribute/CommandParameterOverloadAttribute.md)
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Attribute](https://docs.microsoft.com/zh-cn/DotNET/api/system.attribute?view=net-6.0) → [CommandParameterOverloadAttribute](zh_CN/NET/APIs/Namespace/LiteLoader.DynamicCommand/Class/CommandParameterOverloadAttribute/CommandParameterOverloadAttribute.md)
    
 <br>
 

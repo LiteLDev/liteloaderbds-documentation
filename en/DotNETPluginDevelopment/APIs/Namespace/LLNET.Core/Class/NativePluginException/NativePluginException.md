@@ -20,8 +20,8 @@ public ref class NativePluginException
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Exception](https://docs.microsoft.com/zh-cn/DotNET/api/system.exception?view=net-6.0) → [LiteLoaderDotNETException](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/LiteLoaderDotNETException/LiteLoaderDotNETException.md) → 
-[NativePluginException](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/NativePluginException/NativePluginException.md)
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Exception](https://docs.microsoft.com/zh-cn/DotNET/api/system.exception?view=net-6.0) → [LiteLoaderDotNETException](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/LiteLoaderDotNETException/LiteLoaderDotNETException.md) → 
+[NativePluginException](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/NativePluginException/NativePluginException.md)
 
 <br>
 
@@ -33,8 +33,8 @@ public ref class NativePluginException
 C#
 ```cs
 using System;
-using LLNET.LL;
-using LLNET.Core;
+using LiteLoader;
+using LiteLoader.NET;
 
 namespace PluginMain
 {

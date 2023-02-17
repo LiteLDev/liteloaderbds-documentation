@@ -35,7 +35,7 @@
 C#
 ```cs
 using System;
-using LLNET.Form;
+using LiteLoader.Form;
 
 namespace PluginMain
 {
@@ -58,7 +58,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.Form;
+using LiteLoader.Form;
 
 namespace PluginMain
 {
@@ -94,7 +94,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.Form;
+using LiteLoader.Form;
 
 namespace PluginMain
 {
@@ -139,7 +139,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.Form;
+using LiteLoader.Form;
 
 namespace PluginMain
 {
@@ -160,7 +160,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.Form;
+using LiteLoader.Form;
 
 namespace PluginMain
 {
@@ -210,7 +210,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.Form;
+using LiteLoader.Form;
 
 namespace PluginMain
 {
