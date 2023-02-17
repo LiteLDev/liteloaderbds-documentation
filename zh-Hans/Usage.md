@@ -27,6 +27,7 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 <div style="position: relative; padding-bottom: 62.5%;">
 <iframe src="//player.bilibili.com/player.html?aid=864207370&bvid=BV1254y1N7gD&cid=1001763271&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>
 </div>
+<br>
 
 我们推荐使用[Lip](https://lip.docs.litebds.com)来安装LiteLoaderBDS。你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。若已经安装Lip，请跟随以下步骤安装LiteLoaderBDS:
 
