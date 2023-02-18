@@ -180,12 +180,14 @@ Currently, the types of blocks that can monitor redstone updates are: redstone w
 #### `"onHopperSearchItem"` - Hopper (or Funnel Minecart) Item Absorption Detection Event
 
 - Listener function prototype 
-  `function(pos,isMinecart)`
+  `function(pos,isMinecart,item)`
 - Parameters: 
   - pos : `FloatPos`  
     Where the hopper is located.
   - isMinecart : `bool`  
     Is it a hopper minecart?
+  - item : `Item`  
+    The searched item object.
 - Intercept events: function returns `false`
 
 Note: After placing the funnel, this event will be repeatedly triggered on the server side.
@@ -196,10 +198,14 @@ After you intercept the event, the hopper will not be able to absorb the item.
 #### `"onHopperPushOut"` - Hopper Item Output Event
 
 - Listener function prototype 
-  `function(pos)`
+  `function(pos,isMinecart,item)`
 - Parameters: 
   - pos : `FloatPos`  
-    Where the funnel is.
+    Where the hopper is located.
+  - isMinecart : `bool`  
+    Is it a hopper minecart?
+  - item : `Item`  
+    The item object to be output.
 - Intercept events: function returns `false`
 
 <br>
