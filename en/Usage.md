@@ -30,13 +30,11 @@ First, you need to specify the working path, which is the directory where the BD
 
 ![LipUI Main Window](../assets/img/lipui_main_window.png)
 
-Then, go to the package marketplace and select the package you need to install. In order to run LiteLoaderBDS, you need to install BDS and LiteLoaderBDS
+Then, go to the package marketplace and select the package you need to install. In order to run LiteLoaderBDS, you need to install BDS and LiteLoaderBDS. If you would like to experience the convenience of one-click installation, you can install **Starter Pack**, which contains the most commonly used plugins as well as LiteLoaderBDS and BDS.
 
 ![LipUI Registry](../assets/img/lipui_registry.png)
 
 There are also various plugins in the package marketplace that you can install according to your needs. For example, you can install AntiToolbox to prevent players from using Toolbox, LLAntiCheat to prevent players from using plugins, and LLEssentials to add online basics to the server.
-
-Translated with www.DeepL.com/Translator (free version)
 
 #### Installation via Lip
 
@@ -62,6 +60,12 @@ If you wish to install another version of LiteLoaderBDS, you can run a command s
 
 ```shell
 lip install ll@2.9.2
+```
+
+We also provide a package called `starterpack` that contains the most commonly used plugins as well as LiteLoaderBDS and BDS. You can install it by running the following command.
+
+```shell
+lip install starterpack
 ```
 
 #### Manual installation

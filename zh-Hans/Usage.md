@@ -37,7 +37,7 @@ LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安�
 
 ![LipUI Main Window](../assets/img/lipui_main_window.png)
 
-然后，前往包市场，选择你需要的包进行安装。为了运行LiteLoaderBDS，你需要安装BDS和LiteLoaderBDS
+然后，前往包市场，选择你需要的包进行安装。为了运行LiteLoaderBDS，你需要安装BDS和LiteLoaderBDS。如果你想省事，你也可以直接安装整合包Starter Pack.
 
 ![LipUI Registry](../assets/img/lipui_registry.png)
 
@@ -76,6 +76,12 @@ lip install bds@1.19.61
 
 ```shell
 lip install ll@2.9.2
+```
+
+我们还提供了整合包，你可以通过以下命令安装：
+
+```shell
+lip install starterpack
 ```
 
 #### 手动安装
