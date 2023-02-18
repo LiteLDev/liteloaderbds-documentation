@@ -20,11 +20,33 @@ We recommend installing on the following platforms, for other versions of Window
 * Windows 11
 * Windows 10 21H2 or later
 
+#### Installation via LipUI
+
+LipUI brings an unprecedented, elegant and clean installation experience to LiteLoaderBDS users. We recommend all users who lack command line knowledge to use LipUI to install LiteLoaderBDS.
+
+First you need to install Lip, please refer to the [Lip documentation](https://lip.docs.litebds.com). Then, download [LipUI](https://github.com/LiteLDev/LipUI/releases/latest) and run it.
+
+First, you need to specify the working path, which is the directory where the BDS and LiteLoaderBDS need to be placed. If you don't know what to choose, feel free to create a new folder and select it.
+
+![LipUI Main Window](../assets/img/lipui_main_window.png)
+
+Then, go to the package marketplace and select the package you need to install. In order to run LiteLoaderBDS, you need to install BDS and LiteLoaderBDS
+
+![LipUI Registry](../assets/img/lipui_registry.png)
+
+There are also various plugins in the package marketplace that you can install according to your needs. For example, you can install AntiToolbox to prevent players from using Toolbox, LLAntiCheat to prevent players from using plugins, and LLEssentials to add online basics to the server.
+
+Translated with www.DeepL.com/Translator (free version)
+
 #### Installation via Lip
 
 We recommend using [Lip](https://lip.docs.litebds.com) to install LiteLoaderBDS. You need to install Lip first, please refer to the [Lip documentation](https://lip.docs.litebds.com). If Lip is already installed, please follow the steps below to install LiteLoaderBDS:
 
-For LiteLoaderBDS 2.10.0-beta.1 or earlier, BDS automatic installation is not supported, so you can download the BDS from [Minecraft official website](https://www.minecraft.net/en-us/download/server/bedrock) and unzip it.
+For LiteLoaderBDS 2.10.0-beta.1 and earlier, there is no BDS automatic installation mechanism, you can run the following command to install BDS. Please note the version correspondence.
+
+```shell
+lip install bds@1.19.61
+```
 
 1. Run the following command in the BDS directory.
 
@@ -43,8 +65,6 @@ lip install ll@2.9.2
 ```
 
 #### Manual installation
-
-Please install BDS before installing LiteLoaderBDS. due to Minecraft's EULA, we are unable to provide a download service for BDS. You can download the BDS from [Minecraft official website](https://www.minecraft.net/en-us/download/server/bedrock) and unzip it. Please note that Minecraft is not part of LiteLoaderBDS, so we do not provide any technical support for Minecraft.
 
 If you do not want to use Lip, or if you want to do some advanced operations, you can install LiteLoaderBDS manually. follow these steps to install it:
 

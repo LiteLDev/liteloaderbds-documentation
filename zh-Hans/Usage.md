@@ -20,7 +20,25 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 * Windows 11
 * Windows 10 21H2或更新版本
 
+#### 通过LipUI安装
+
+LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安装体验。我们推荐所有缺乏命令行知识的用户使用LipUI来安装LiteLoaderBDS。
+
+首先你需要安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。然后，下载[LipUI](https://github.com/LiteLDev/LipUI/releases/latest)并运行。
+
+首先，你需要指定工作路径，这是BDS和LiteLoaderBDS需要放置的目录。如果你不知道该如何选择，请随意新建一个文件夹并选择它。
+
+![LipUI Main Window](../assets/img/lipui_main_window.png)
+
+然后，前往包市场，选择你需要的包进行安装。为了运行LiteLoaderBDS，你需要安装BDS和LiteLoaderBDS
+
+![LipUI Registry](../assets/img/lipui_registry.png)
+
+包市场中还有各种各样的插件，你可以根据自己的需要进行安装。譬如，你可以安装AntiToolbox来防止玩家使用Toolbox，安装LLAntiCheat来防止玩家使用外挂，安装LLEssentials来为服务器加入联机基础功能。
+
 #### 通过Lip安装
+
+我们推荐具有一定命令行知识的用户使用[Lip](https://lip.docs.litebds.com)来安装LiteLoaderBDS。
 
 你可以观看以下视频学习通过Lip安装LiteLoaderBDS:
 
@@ -29,9 +47,13 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 </div>
 <br>
 
-我们推荐使用[Lip](https://lip.docs.litebds.com)来安装LiteLoaderBDS。你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。若已经安装Lip，请跟随以下步骤安装LiteLoaderBDS:
+你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。若已经安装Lip，请跟随以下步骤安装LiteLoaderBDS:
 
-对于LiteLoaderBDS 2.10.0-beta.1及更早的版本，并没有提供BDS自动安装机制，你可以从[Minecraft官网](https://www.minecraft.net/en-us/download/server/bedrock)下载BDS并解压。
+对于LiteLoaderBDS 2.10.0-beta.1及更早的版本，并没有提供BDS自动安装机制，你可以运行以下命令安装BDS。请注意版本对应关系。
+
+```shell
+lip install bds@1.19.61
+```
 
 1. 在BDS目录中运行如下命令：
 
@@ -50,8 +72,6 @@ lip install ll@2.9.2
 ```
 
 #### 手动安装
-
-在安装LiteLoaderBDS之前，请先安装BDS。由于Minecraft的EULA，我们无法提供BDS的下载服务。你可以从[Minecraft官网](https://www.minecraft.net/en-us/download/server/bedrock)下载BDS并解压。请注意，Minecraft并非LiteLoaderBDS的一部分，因此我们不提供任何关于Minecraft的技术支持。
 
 如果你不想使用Lip，或者你希望进行一些高级操作，你可以手动安装LiteLoaderBDS。该方法可能会因为操作上的细微差别造成本文档中未提及的问题，因此需要你具备较高的排错能力。如果你遇到了任何问题而无法解决，请尝试通过Lip安装。请跟随以下步骤安装:
 
