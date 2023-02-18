@@ -24,6 +24,13 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 
 LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安装体验。我们推荐所有缺乏命令行知识的用户使用LipUI来安装LiteLoaderBDS。
 
+你可以观看以下视频学习通过LipUI安装LiteLoaderBDS:
+
+<div style="position: relative; padding-bottom: 62.5%;">
+<iframe src="//player.bilibili.com/player.html?aid=694592747&bvid=BV1w24y1W7pq&cid=1013982749&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>
+</div>
+<br>
+
 首先你需要安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。然后，下载[LipUI](https://github.com/LiteLDev/LipUI/releases/latest)并运行。
 
 首先，你需要指定工作路径，这是BDS和LiteLoaderBDS需要放置的目录。如果你不知道该如何选择，请随意新建一个文件夹并选择它。
