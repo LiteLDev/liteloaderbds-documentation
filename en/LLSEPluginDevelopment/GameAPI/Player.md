@@ -45,6 +45,7 @@ Each player object contains some fixed object properties. For a particular playe
 | ------------------------ | ------------------------------------------------------------ | ---------------- |
 | pl.name                  | Player's name                                                | `String`         |
 | pl.pos                   | Player's coordinates                                         | `FloatPos`       |
+| pl.feetPos               | The coordinates of the player's leg                          | `FloatPos`       |
 | pl.blockPos              | The coordinates of the block that the player is standing on. | `IntPos`         |
 | pl.lastDeathPos          | The coordinates of the block that the player last died.      | `IntPos`         |
 | pl.realName              | Player's Real Name                                           | `String`         |
@@ -99,6 +100,7 @@ Each player object contains some fixed object properties. For a particular playe
 
 These object properties are read-only and cannot be modified. in:
 
+- **coordinates** and **leg coordinates**: player is two blocks high, and `pos` are the coordinates of the player's view's height, `feetPos` are the coordinates of the block position displayed in the game
 - The value of the **Player Game Mode** attribute is: `0` for survival mode, `1` for creative mode, `2` for adventure mode, `3` for spectator mode
 - **Player's real name** attribute stored strings can be considered reliable, they will not be changed by name changes
 - **Player device IP address** attribute stores the player's device IP and port number, the format is similar to `12.34.567.89:1111`
