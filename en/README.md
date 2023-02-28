@@ -51,7 +51,7 @@ Recommended for plugins that require changes to the game's base functionality, a
 
 Ready? 👉[click here](https://cpp.docs.litebds.com/zh-Hans/)👈 Check out the C++ plugin development documentation.
 
-### 🎯 I want to write script plugins (JavsScript or Lua)
+### 🎯 I want to write script plugins (JavaScript or Lua)
 
 Pros.
 * No need to focus on **BDS** underlying layers, easy to get started with development.
