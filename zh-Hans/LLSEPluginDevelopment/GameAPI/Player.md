@@ -71,7 +71,6 @@
 | pl.inWaterOrRain         | 玩家是否在水中或雨中              | `Boolean`        |
 | pl.inWorld               | 玩家是否在世界                    | `Boolean`        |
 | pl.inClouds              | 玩家是否在云端                    | `Boolean`        |
-| pl.sneaking              | 玩家当前是否正在潜行              | `Boolean`        |
 | pl.speed                 | 玩家当前速度                      | `Float`          |
 | pl.direction             | 玩家当前朝向                      | `DirectionAngle` |
 | pl.uniqueId              | 玩家（实体的）唯一标识符          | `String`         |
@@ -97,7 +96,7 @@
 | pl.isFlying              | 玩家是否在飞行                    | `Boolean`        |
 | pl.isSleeping            | 玩家是否正在睡觉                  | `Boolean`        |
 | pl.isMoving              | 玩家是否正在移动                  | `Boolean`        |
-| pl.ip                    | 玩家设备IP地址                    | `String`         |
+| pl.isSneaking              | Player is sneaking                               | `Boolean`        |
 
 这些对象属性都是只读的，无法被修改。其中：
 
