@@ -28,6 +28,7 @@
 
 | 属性    | 含义                       | 类型      |
 | ------- | -------------------------- | --------- |
+| be.name  | The block entity name (example: `container.chest`) | `String`  |
 | be.pos  | 方块实体对应方块所在的坐标 | `IntPos`  |
 | be.type | 方块实体对象的类型ID       | `Integer` |
 

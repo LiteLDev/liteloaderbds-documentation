@@ -28,6 +28,7 @@ Each block entity object contains some fixed object properties. For a particular
 
 | Attributes | Meaning                 | Data Type |
 | ------- | -------------------------- | --------- |
+| be.name  | The block entity name (example: `container.chest`) | `String`  |
 | be.pos  | The coordinates where the block entity is located. | `IntPos`  |
 | be.type | The Type ID of the block entity object.       | `Integer` |
 

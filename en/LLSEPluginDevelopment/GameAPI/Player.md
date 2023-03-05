@@ -71,7 +71,6 @@ Each player object contains some fixed object properties. For a particular playe
 | pl.inWaterOrRain         | Whether the player is in water or rain                       | `Boolean`        |
 | pl.inWorld               | Whether the player is in world                               | `Boolean`        |
 | pl.inClouds              | Whether the player is in clouds                              | `Boolean`        |
-| pl.sneaking              | Whether the player is sneaking                               | `Boolean`        |
 | pl.speed                 | Player's current speed                                       | `Float`          |
 | pl.direction             | Player's current orientation                                 | `DirectionAngle` |
 | pl.uniqueId              | Player's (entity's) unique identifier                        | `String`         |
@@ -96,6 +95,7 @@ Each player object contains some fixed object properties. For a particular playe
 | pl.isFlying              | Player is flying                                             | `Boolean`        |
 | pl.isSleeping            | Player is sleeping                                           | `Boolean`        |
 | pl.isMoving              | Player is moving                                             | `Boolean`        |
+| pl.isSneaking            | Player is sneaking                                           | `Boolean`        |
 
 These object properties are read-only and cannot be modified. in:
 
