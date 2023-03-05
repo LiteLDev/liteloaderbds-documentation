@@ -95,7 +95,7 @@ Each player object contains some fixed object properties. For a particular playe
 | pl.isFlying              | Player is flying                                             | `Boolean`        |
 | pl.isSleeping            | Player is sleeping                                           | `Boolean`        |
 | pl.isMoving              | Player is moving                                             | `Boolean`        |
-| pl.isSneaking              | Player is sneaking                               | `Boolean`        |
+| pl.isSneaking            | Player is sneaking                                           | `Boolean`        |
 
 These object properties are read-only and cannot be modified. in:
 
