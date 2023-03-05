@@ -22,7 +22,7 @@ public ref class LibPathAttribute
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Attribute](https://docs.microsoft.com/zh-cn/DotNET/api/system.attribute?view=net-6.0) → [LibPathAttribute](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/LibPathAttribute/LibPathAttribute.md)
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Attribute](https://docs.microsoft.com/zh-cn/DotNET/api/system.attribute?view=net-6.0) → [LibPathAttribute](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/LibPathAttribute/LibPathAttribute.md)
    
 <br>
 
@@ -33,7 +33,7 @@ public ref class LibPathAttribute
 
 C#
 ```cs
-using LLNET.Core;
+using LiteLoader.NET;
 
 //示例路径
 [assembly:LibPath("plugins/Lib")]
@@ -55,6 +55,6 @@ using LLNET.Core;
 - 
     |||
     |-|-|
-    |[Path](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/LibPathAttribute/Properties/Path.md)|获取或设置当前实例路径。|
+    |[Path](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/LibPathAttribute/Properties/Path.md)|获取或设置当前实例路径。|
 
 

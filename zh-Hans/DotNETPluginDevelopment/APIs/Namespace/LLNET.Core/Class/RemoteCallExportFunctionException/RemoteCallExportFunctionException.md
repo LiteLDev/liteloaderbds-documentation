@@ -20,8 +20,8 @@ public ref class RemoteCallExportFunctionException
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Exception](https://docs.microsoft.com/zh-cn/DotNET/api/system.exception?view=net-6.0) → [LiteLoaderDotNETException](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/LiteLoaderDotNETException/LiteLoaderDotNETException.md) → 
-[RemoteCallExportFunctionException](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/RemoteCallExportFunctionException/RemoteCallExportFunctionException.md)
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Exception](https://docs.microsoft.com/zh-cn/DotNET/api/system.exception?view=net-6.0) → [LiteLoaderDotNETException](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/LiteLoaderDotNETException/LiteLoaderDotNETException.md) → 
+[RemoteCallExportFunctionException](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/RemoteCallExportFunctionException/RemoteCallExportFunctionException.md)
 
 <br>
 

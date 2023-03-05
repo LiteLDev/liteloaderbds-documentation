@@ -6,7 +6,7 @@
 
 ## Repository link
 
-https://github.com/LiteLDev/LLEssentials
+https://github.com/LiteLDev/LLMoney
 
 ## Configuration file path
 

@@ -20,14 +20,14 @@
 
 <br>
 
->订阅一个事件的方式如下（以 [PlayerUseItemOnEvent](../APIs/Namespace/LLNET.Event/Class/PlayerUseItemOnEvent.md) 为例）：
+>订阅一个事件的方式如下（以 [PlayerUseItemOnEvent](../APIs/Namespace/LiteLoader.Event/Class/PlayerUseItemOnEvent.md) 为例）：
 
 <br>
 
 C#
 ```cs
 using System;
-using LLNET.Event;
+using LiteLoader.Event;
 
 namespace PluginMain
 {
@@ -61,14 +61,14 @@ namespace PluginMain
 
 <br>
 
->以引用的方式订阅一个事件的方式如下（以 [PlayerChatEvent](../APIs/Namespace/LLNET.Event/Class/PlayerChatEvent.md) 为例）：
+>以引用的方式订阅一个事件的方式如下（以 [PlayerChatEvent](../APIs/Namespace/LiteLoader.Event/Class/PlayerChatEvent.md) 为例）：
 
 <br>
 
 C#
 ```cs
 using System;
-using LLNET.Event;
+using LiteLoader.Event;
 
 namespace PluginMain
 {
@@ -118,7 +118,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.Event;
+using LiteLoader.Event;
 
 namespace PluginMain
 {
@@ -155,7 +155,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.Event;
+using LiteLoader.Event;
 
 namespace PluginMain
 {
@@ -195,7 +195,7 @@ namespace PluginMain
 C#
 ```cs
 using System;
-using LLNET.Event;
+using LiteLoader.Event;
 
 namespace PluginMain
 {

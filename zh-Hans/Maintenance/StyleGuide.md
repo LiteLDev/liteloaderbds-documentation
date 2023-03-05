@@ -10,7 +10,7 @@
 
 ### 可独立编译
 
-头文件应该是可独立编译的，以 `.h` 结尾。非头文件如果要包含在内，应以 `.inc` 结尾，并尽量少用。
+头文件应该是可独立编译的，以 `.h` 结尾。非头文件如果要包含在内，应以 `.inl` 结尾，并尽量少用。
 
 所有的头文件都应该是可独立编译的。用户和重构工具不应该为了包含头文件而必须遵守特殊的条件。具体来说，一个头文件应该有头文件哨兵，并包括它所需要的所有其他头文件。
 
@@ -36,7 +36,7 @@
 // In a C++ source file:
 class ExampleClass;
 void exampleFunction();
-extern int exampleVariable;
+extern int ExampleVariable;
 ```
 
 ### 内联函数
@@ -64,11 +64,7 @@ extern int exampleVariable;
 
 不要使用 `./` (当前目录）或 `../`（父目录）前缀。
 
-## 缩进
-
-缩进使用4个空格
-
-## 命名与声明
+## 命名
 
 最重要的一致性规则是那些管理命名的规则。一个名字的风格立即告诉我们这个被命名的实体是什么样的东西：一个类型、一个变量、一个函数、一个常量、一个宏等等，而不需要我们去搜索这个实体的声明。
 
@@ -88,7 +84,7 @@ extern int exampleVariable;
 
 ### 文件名
 
-文件名和目录名应遵循 `snake_case` 命名法。除了`-`外，分隔符号均使用 `_` 。
+文件名和目录名应遵循snake_style命名法。除了`-`外，符号均使用 `_` 替换。
 
 示例如下：
 
@@ -96,7 +92,7 @@ extern int exampleVariable;
 * example_class-zh.cpp
 * example_class_for_android_8_0_0.cpp
 
-C++文件应该以 `.cpp` 结尾，头文件应该以 `.h` 结尾。在特定点上被包含的非头文件应该以 `.inc` 结尾。
+C++文件应该以 `.cpp` 结尾，头文件应该以 `.h` 结尾。在特定点上被包含的非头文件应该以 `.inl` 结尾。
 
 不要使用LiteLoaderBDS中已经出现的文件名，即使在不同路径。不要使用任何常见编译器（包括Microsoft Visual C++、GNU C++ Compiler和Clang C++ Compiler）搜索路径中有可能出现的任何文件的文件名。
 
@@ -133,45 +129,33 @@ enum class UrlTableError { ...
 
 ### 变量名称
 
-均采用小驼峰命名法。
-
-例外：
-
-- 类中，公有成员采用`m`开头的大驼峰命名法，例如`mGoodMember`。
-
-- 对于std容器相关以及Windows API相关的变量，可以依据其命名规则进行命名。
+变量（包括函数参数）小驼峰命名法。公有数据成员采用`m`开头的大驼峰命名法，例如`mGoodMember`。私有数据成员采用大驼峰命名法。
 
 示例如下：
 
 ```cpp
-int aLocalVariable;
+int ALocalVariable;
 
 struct ExampleStruct {
-    int structDataMember;
+  int AStructDataMember;
 };
 
 class ExampleClass {
+ public:
+  int mAPublicMember;
 
-private:
-    int privateMember;
-
-public:
-    int mPublicMember;
-
+ private:
+  int APrivateMember;
 };
 ```
 
-单词的顺序应当遵循英文语法。避免使用缩写，除非该缩写是众所周知且不会产生误解的。譬如应当使用`studentNumber`而不是`numStu`。
+单词的顺序应当遵循英文语法，且不应使用复数形式。避免使用缩写，除非该缩写是Wikipedia上的词条。譬如应当使用`StudentNumber`而不是`NumStu`；应当使用`StudentList`而不是`Students`。
 
 ### 常量名称
 
-一般采用`constexpr`或`const`修饰，其值在程序中是固定的，仅允许使用大写字母和下划线，例如`DAYS_IN_A_WEEK`和`ANDROID_8_0_0`。
+声明为`constexpr`或`const`，且作用域为整个程序或整个模块生命周期的常量，其值在程序中是固定的，仅允许使用大写字母和下划线，例如`DAYS_IN_A_WEEK`和`ANDROID_8_0_0`。
 
-### 函数声明
-
-不抛出异常的函数在定义末尾加上 `noexcept`
-
-重写了基类方法的函数加上 `override` 关键字
+其余类型的常量采用变量命名法。
 
 ### 函数名称
 
@@ -184,16 +168,12 @@ public:
 ```cpp
 addTableEntry()
 deleteUrl()
-openFile()
+openFileOrDie()
 ```
-
-例外：
-
-- 对于std容器相关以及Windows API相关的函数名，可以依据其命名规则进行命名。
 
 ### 命名空间名称
 
-命名空间使用 `snake_case` 命名法。避免嵌套的名字空间和顶级名字空间之间的冲突。_尽量使用单个单词作为命名空间的名称。_
+命名空间使用snake_case命名法。顶层命名空间的名称是 `ll` 。避免嵌套的名字空间和顶级名字空间之间的冲突。_尽量使用单个单词作为命名空间的名称。_
 
 除顶层命名空间外，每个命名空间中的代码通常应在一个目录中，目录名与命名空间的名称一致。
 
@@ -233,39 +213,55 @@ openFile()
 #define PI_ROUNDED 3.0
 ```
 
-### 其他
+### 命名规则的例外情况
 
-setter 与 getter 方法的命名规则如下：
+对于Accessor，方法名可以使用对应的私有成员变量名去掉下划线后的形式；对于Mutator，方法名可以使用对应的私有成员变量名去掉下划线后的形式加上set前缀。
 
 ```cpp
 class Foo {
-private:
-    int bar;
-public:
-    int getBar() const { return bar; }
-    void setBar(int value) { bar = value; }
+ public:
+  int Bar() const { return Bar; }
+  void setBar(int Value) { Bar = Value; }
+ private:
+  int Bar;
 };
 ```
 
 ## 注释
 
-注释对程序员来说是必需品，因为它们可以帮助我们理解代码。通常情况下，简单的具有良好命名的代码不需要注释。但是，当代码变得复杂时，就需要进行注释了。
+&emsp;&emsp;注释对于保持我们代码的可读性是绝对重要的。下面的规则描述了你应该注释什么，在哪里注释。但请记住：虽然注释非常重要，但最好的代码是自我记录的。给类型和变量起一个合理的名字比使用晦涩的名字要好得多，因为你必须通过注释来解释。
+
+&emsp;&emsp;在写注释的时候，要为你的听众写：下一个需要理解你的代码的贡献者。慷慨一点--下一个人可能就是你!
 
 ### 注释风格
 
-文件注释、类注释和函数注释应当采用 `javadoc` 风格的 `Doxygen` 注释。短注释使用 `//` 长篇注释使用 `/* */` 。
+&emsp;&emsp;文件注释、类注释和函数注释应当采用Javadoc风格的Doxygen注释，详见下文；单行注释和行尾注释应当采用 `//` 风格；函数参数注释应当采用 `/* */` 风格。
 
-所有注释均使用英文，注释中的代码块使用反引号包裹。
+&emsp;&emsp;所有注释均使用英文，翻译使用Crowdin。
 
-#### 文件
+### 文件注释
 
-可以对比较复杂的文件添加文件注释，文件注释应该包含文件的简介与用途等信息。文件注释应该放在文件的开头，如
+&emsp;&emsp;每个完全由LiteLDev及其它LiteLoaderBDS贡献者编写的文件都以许可证模板开始，但生成的Minecraft相关文件和所有第三方代码都不应当加上LiteLoaderBDS的许可证模板。
+
+&emsp;&emsp;文件注释描述了一个文件的内容。如果一个文件只声明、实现或测试了一个抽象概念，而这个抽象概念在声明的时候就有注释记录，那么就不需要文件注释了。所有其他文件必须有文件注释。
+
+#### 法律声明和作者行
+
+&emsp;&emsp;每个完全由LiteLDev及其它LiteLoaderBDS贡献者编写的文件都应该包含许可证模板。LiteLoaderBDS采用LGPL-3.0许可证，请参考本项目的 `LICENSE` 文件。
+
+&emsp;&emsp;如果您希望集成第三方代码或其修改版本，请确保其具备许可证且其许可证分发条例不与LGPL-3.0有任何冲突，并遵守LGPL-3.0及该代码的许可证的要求进行修改和注释。
+
+#### 文件内容
+
+&emsp;&emsp;如果一个 `.h` 文件声明了多个抽象，文件级的注释应该广泛地描述文件的内容，以及这些抽象是如何联系起来的。一句或两句的文件级注释可能就足够了。关于单个抽象的详细文档属于这些抽象，而不是在文件级别。
+
+&emsp;&emsp;在 `.h` 和 `.cpp` 中不要有重复的文件注释。重复的注释会导致分歧。请优先将注释写在 `.h` 中。
 
 示例如下：
 
 ```cpp
 /**
- * @file llapi/component/file.h
+ * @file ExampleDirectory/ExampleComponent.h
  *
  * @brief This file contains example interfaces.
  *
@@ -274,7 +270,7 @@ public:
 
 ### 类注释
 
-功能非显而易见的类或结构声明都应有注释，说明它的用途。
+每一个非显而易见的类或结构声明都应该有一个附带的注释，说明它的用途以及应该如何使用。
 
 类的注释应该为读者提供足够的信息，让他们知道如何和何时使用该类，以及为正确使用该类所需的任何额外考虑。
 
@@ -293,7 +289,7 @@ public:
  * ExampleClass ex("example", 114514);
  * ex.doExampleThings();
  * for (auto& ex_unit : ex.getExampleList()) {
- *     process(ex_unit);
+ *   process(ex_unit);
  * }
  * @endcode
  */
@@ -301,12 +297,11 @@ public:
 
 ### 函数注释
 
-声明注释描述了函数的用途及用法
+声明注释描述了函数的使用（当它不明显时）；函数定义处的注释描述了操作。
 
 #### 函数声明
 
-每一个 `API` 函数声明都应该在其前面有注释，描述该函数的作用以及如何使用它。在函数简单而明显的情况下才可以省略这些注释。函数注释应该以该函数的隐含主语来写，并且应该以动词短语开始；
-例如，"Opens the file"，而不是 "Open the file"，因为完整的句子是 "This function opens the file"。一般来说，这些注释并不描述该函数如何执行其任务。相反，这应该留给函数定义中的注释。
+几乎每一个函数声明都应该在其前面有注释，描述该函数的作用以及如何使用它。只有在函数简单而明显的情况下才可以省略这些注释（例如，对类的明显属性的简单访问器）。在 `.cpp` 文件中声明的私有方法和函数也不例外。函数注释应该以该函数的隐含主语来写，并且应该以动词短语开始；例如，"Opens the file"，而不是 "Open the file"，因为完整的句子是 "This function opens the file"。一般来说，这些注释并不描述该函数如何执行其任务。相反，这应该留给函数定义中的注释。
 
 注释应当分为两个部分，第一部分是对函数行为的一句话描述，并应该写在 `@brief` 后；第二部分是对函数的详细注释，应包含一句话描述的相近内容，并写在注释的最后。
 
@@ -374,7 +369,7 @@ int doExampleThing(int example_para1, double example_para2, std::string example_
  * unpredictable value.
  */
 int doExampleThing(int examplePara1, double examplePara2, std::string examplePara3) {
-    // Some code here
+  // Some code here
 }
 ```
 
@@ -394,16 +389,16 @@ int doExampleThing(int examplePara1, double examplePara2, std::string examplePar
 
 ```cpp
 class ExampleClass {
-public:
-    /**
-     * @brief Example data member
-     */
-    int mPublicExample;
+ public:
+  /**
+   * @brief Example data member
+   */
+  int mPublicExample;
   
-private:
-    // Used to bounds-check table accesses. -1 means
-    // that we don't yet know how many entries the table has.
-    int numTotalEntries;
+ private:
+  // Used to bounds-check table accesses. -1 means
+  // that we don't yet know how many entries the table has.
+  int NumTotalEntries;
 };
 ```
 
@@ -421,12 +416,10 @@ const int NUM_TEST_CASES = 6;
 ### 代码实现注释
 
 在你的代码实现中，你应该在代码中棘手的、不明显的、有趣的或重要的部分有注释。
-好的代码是不需要注释就能易于阅读的，您应该让代码更具可读性。  
 
 #### 解释性注释
 
-棘手的或复杂的代码块应该在它们之前有注释。  
-例如，某处地方使用了某种算法，您应该对算法作出解释。
+棘手的或复杂的代码块应该在它们之前有注释。
 
 ### 函数参数注释
 
@@ -454,7 +447,7 @@ const int product =
 ```cpp
 // Find the element in the vector.  <-- Bad: obvious!
 if (std::find(v.begin(), v.end(), element) != v.end()) {
-    process(element);
+  process(element);
 }
 ```
 
@@ -463,7 +456,7 @@ if (std::find(v.begin(), v.end(), element) != v.end()) {
 ```cpp
 // Process "element" unless it was already processed.
 if (std::find(v.begin(), v.end(), element) != v.end()) {
-    process(element);
+  process(element);
 }
 ```
 
@@ -473,9 +466,7 @@ if (std::find(v.begin(), v.end(), element) != v.end()) {
 
 评论应该像叙述性文字一样具有可读性，大写字母和标点符号要正确。在许多情况下，完整的句子比零碎的句子更易读。较短的注释，例如在一行代码末尾的注释，有时可以不那么正式，但你应该与你的风格一致。
 
-虽然让代码审查员指出你在应该使用分号的时候却使用了逗号会让人感到沮丧，但源代码保持高度的清晰和可读性是非常重要的。正确的标点符号、拼写和语法有助于实现这一目标。  
-
-请务必在西文符号后添加一个空格。
+虽然让代码审查员指出你在应该使用分号的时候却使用了逗号会让人感到沮丧，但源代码保持高度的清晰和可读性是非常重要的。正确的标点符号、拼写和语法有助于实现这一目标。
 
 ### TODO注释
 

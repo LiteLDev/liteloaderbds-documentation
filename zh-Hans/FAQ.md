@@ -18,7 +18,7 @@ LiteLoaderBDS会在开服时输出服务器版本及当前协议版本，你也�
 
 C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不同版本的Minecraft上不稳定地运行。
 
-## 非原生（JavaScript、Lua、Python、Rust、.NET）插件是否支持Minecraft不同版本？
+## 非原生（JavaScript、Lua、Rust、.NET）插件是否支持Minecraft不同版本？
 
 一般来说支持，除非LiteLoader Script Engine发生重大API改动。
 

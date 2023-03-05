@@ -71,6 +71,7 @@
 | en.type                  | 实体标准类型名         | `String`         |
 | en.id                    | 实体的游戏内id         | `Integer`        |
 | en.pos                   | 实体所在坐标           | `FloatPos`       |
+| en.feetPos               | 实体腿部所在坐标       | `FloatPos`       |
 | en.blockPos              | 实体所在的方块坐标     | `IntPos`         |
 | en.maxHealth             | 实体最大生命值         | `Integer`        |
 | en.health                | 实体当前生命值         | `Integer`        |
@@ -107,7 +108,8 @@
 
 这些对象属性都是只读的，无法被修改
 
-**实体当前朝向** 属性的详细解释见  [基础游戏接口文档](LLSEPluginDevelopment/GameAPI/Basic.md)
+- **实体当前朝向** 属性的详细解释见  [基础游戏接口文档](LLSEPluginDevelopment/GameAPI/Basic.md)
+- **坐标** 和 **腿部坐标**：如果这个实体为两格高，则`pos`与`feetPos`不同，`pos`为实体视角高度的坐标，`feetPos`为腿部所在格子的方块坐标
 
 <br>
 

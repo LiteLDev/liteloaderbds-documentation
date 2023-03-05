@@ -6,7 +6,7 @@
 
 ## 仓库地址
 
-https://github.com/LiteLDev/LLEssentials
+https://github.com/LiteLDev/LLMoney
 
 ## 配置文件路径
 

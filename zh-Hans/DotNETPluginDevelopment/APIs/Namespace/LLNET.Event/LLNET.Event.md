@@ -1,4 +1,4 @@
-# LLNET.Event 命名空间
+# LiteLoader.Event 命名空间
 
 包含用于提供BDS事件订阅的类与基类。
 
@@ -8,8 +8,8 @@
 
 |||
 |-|-|
-|[__EventListener\<NATIVEEVENT\>](TemplateClass/__EventListener_NATIVEEVENT/__EventListener_NATIVEEVENT.md)|作为 [LLNET.Event](../../LLNET.Event.md) 命名空间中所有**事件监听器**的基类。|
-|[EventTemplate\<REFEVENT, NATIVEEVENT\>](TemplateClass/EventTemplate_REFEVENT_NATIVEEVENT/EventTemplate_REFEVENT_NATIVEEVENT.md)|作为 [LLNET.Event](../../LLNET.Event.md) 命名空间中所有**事件**的基类。| 
+|[__EventListener\<NATIVEEVENT\>](TemplateClass/__EventListener_NATIVEEVENT/__EventListener_NATIVEEVENT.md)|作为 [LiteLoader.Event](../../LiteLoader.Event.md) 命名空间中所有**事件监听器**的基类。|
+|[EventTemplate\<REFEVENT, NATIVEEVENT\>](TemplateClass/EventTemplate_REFEVENT_NATIVEEVENT/EventTemplate_REFEVENT_NATIVEEVENT.md)|作为 [LiteLoader.Event](../../LiteLoader.Event.md) 命名空间中所有**事件**的基类。| 
 |[PlayerPreJoinEvent](Class/PlayerPreJoinEvent.md)|表示玩家即将加入服务器的事件。|
 |[PlayerJoinEvent](Class/PlayerJoinEvent.md)|表示玩家加入服务器的事件。|
 |[PlayerLeftEvent](Class/PlayerLeftEvent.md)|表示玩家离开服务器的事件。|

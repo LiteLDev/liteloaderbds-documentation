@@ -20,8 +20,8 @@ public ref class HookFailedException
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Exception](https://docs.microsoft.com/zh-cn/DotNET/api/system.exception?view=net-6.0) → [LiteLoaderDotNETException](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/LiteLoaderDotNETException/LiteLoaderDotNETException.md) → 
-[HookFailedException](zh_CN/NET/APIs/Namespace/LLNET.Core/Class/HookFailedException/HookFailedException.md)
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [Exception](https://docs.microsoft.com/zh-cn/DotNET/api/system.exception?view=net-6.0) → [LiteLoaderDotNETException](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/LiteLoaderDotNETException/LiteLoaderDotNETException.md) → 
+[HookFailedException](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/HookFailedException/HookFailedException.md)
 
 ## 构造函数
 - 

@@ -18,7 +18,7 @@ public ref class HookAPI abstract
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [HookAPI](zh_CN/NET/APIs/Namespace/LLNET.Hook/Class/HookAPI.md)
+继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object?view=net-6.0) → [HookAPI](zh_CN/NET/APIs/Namespace/LiteLoader.Hook/Class/HookAPI.md)
 
 <br>
 
