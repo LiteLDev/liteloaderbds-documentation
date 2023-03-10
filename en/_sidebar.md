@@ -6,6 +6,7 @@
     - 🧩 Submodules
         - [💰 LLMoney Economy System](/Submodules/LLMoney.md)
         - [🔒 PermissionAPI](/Submodules/PermAPI.md)
+        - [✨ ParticleAPI](/Submodules/ParticleAPI.md)
 
 - 🍔 Creator Guide
     - [⛳ C++ Plugin Development](https://cpp.docs.litebds.com/en)
