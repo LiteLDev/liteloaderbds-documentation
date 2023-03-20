@@ -23,11 +23,13 @@
 - 使用 QuickJS 引擎对简单的 JavaScript 插件提供支持，轻量级引擎资源占用较少
 - QuickJS 当前版本支持到 ES2020 语言特性，同时原生支持 ESModule 模块机制，可以方便开发者进行项目管理
 - 暂不支持包管理机制，如果需要请使用 Node.js 进行插件开发，使用 npm 包管理
+- 在BDS控制台中使用`jsdebug`命令进入和退出 QuickJs 交互式命令行环境。此功能便于编写插件时进行一些简单的测试
 
 ## Lua 语言支持说明
 
 - 使用 CLua 引擎，支持使用 require 进行简单的项目管理
 - 由于 Rocks 包管理机制需要引入编译器，因此暂不提供相关实现。如果需要依赖扩展可以手动编译后引入项目进行使用（如 SQLite 等常用库）
+- 在BDS控制台中使用`luadebug`命令进入和退出 Lua 交互式命令行环境。此功能便于编写插件时进行一些简单的测试
 
 ## Node.js 支持说明
 
@@ -44,41 +46,29 @@
 ## Python 语言支持说明
 
 - 使用 CPython 引擎，Python版本为3.10.9。支持使用 pip 包管理机制为插件安装第三方扩展依赖包，支持多文件插件开发和 import，支持现代项目管理机制
+- 在BDS控制台中使用`pydebug`命令进入和退出 Python 交互式命令行环境。此功能便于编写插件时进行一些简单的测试
 
-⭐ **Python 插件开发方法**
+**Python 单文件插件开发方法**
 
-- 首先，**插件使用`__init__.py`文件作为入口点**。加载插件时，Python解释器会读取并执行这个文件。
+- 为了方便不熟悉Python的开发者快速上手，我们提供了一种简单的 Python 插件支持：单文件插件。
+- 单文件插件类似QuickJs和Lua插件：单个.py源码文件，直接放置到 plugins目录中，在开服时将被加载运行
+- 单文件插件缺点：不支持插件元数据储存、不支持源码分文件、不支持pip第三方包。仅用于开发者熟悉LLSE的Python环境，或者开发非常简易的插件而使用。
 
-- 其次，LLSE 要求使用 PEP-621 标准规定的 `pyproject.toml` 项目文件进行元数据储存（类似Node.Js的`package.json`），关于版本号、插件名、描述等信息都储存于其中。因此，你需要使用一个支持 `pyproject.toml`的包管理器，来方便你进行项目管理。
+⭐ **Python 多文件插件开发方法**
 
-- 推荐使用 PDM 包管理器（[pdm-project/pdm: A modern Python package and dependency manager supporting the latest PEP standards (github.com)](https://github.com/pdm-project/pdm)，他的作用类似Node.Js中的npm。
-
-  使用方法：
+- 对于大型、正式的Python插件，强烈建议使用此方法进行开发。相比于单文件插件，此完整方案支持完善的元数据储存、支持源码分文件编写、以及最重要的：第三方pip包支持。
+- 首先，你需要创建一个新的目录，在其中初始化和项目相关的元数据信息。LLSE 要求 使用`pyproject.toml` 项目文件进行元数据储存，类似 Node.Js 的`package.json`。`pyproject.toml` 项目文件将通过下面的包管理器工具自动生成：
+- 推荐使用支持现代项目特性的 PDM 包管理器（[pdm-project/pdm](https://github.com/pdm-project/pdm)）进行插件项目的创建和维护。PDM起到的的作用类似于 Node.Js 中的npm。使用方法：
 
   - 首先，使用`pip install --user pdm`命令安装 pdm
   - 安装完成之后，在你想要创建 Python 项目的目录打开命令行，执行`pdm init`命令，根据其提示创建新项目，填写项目的相关信息。
-  - 如果需要安装依赖包，在项目目录执行`pdm add <依赖包名>`即可。（比如`pdm add requests`）
+  - 如果需要安装依赖包，在项目目录执行`pdm add <依赖包名>`即可
   - 所有的项目元数据和依赖数据都会被自动储存在`pyproject.toml` 中，无需手动编写。你也可以打开此文件修改版本号、描述等元数据信息
+  - 另外，你也可以直接把项目依赖手动写在`requirements.txt`当中。在安装插件时，`pyproject.toml`和`requirements.txt`中描述的依赖都将被处理并自动安装。
+- 接下来编写代码。**注意：Python插件使用`__init__.py`文件作为入口点**。加载插件时，Python解释器会读取并执行这个文件。在`__init__.py`中编写插件的启动代码。
+- 如果有需要，可以创建多个源码文件，并且通过import进行互相调用。
 
-- （不推荐）如果你确实不方便使用PDM，需要手动编写 `pyproject.toml`，下面给出一个`pyproject.toml`的文件样例，你可以按照此样例进行编写：
-
-  ```toml
-  [project]
-  name = "Your-Plugin-Name"
-  version = "0.0.1"
-  description = "Description of your plugin here."
-  authors = [
-      {name = "YourName", email = "xxxxx@xxxx.com"},
-  ]
-  dependencies = [
-      "requests>=2.28.2",
-  ]
-  license = {text = "GPLv3"}
-  ```
-
-- （不推荐）你也可以直接把依赖写在`requirements.txt`当中。在安装插件时，`pyproject.toml`和`requirements.txt`中写的依赖都将被处理并自动安装。
-
-##### ⭐ **Python 插件打包 & 部署方法**
+##### ⭐ **Python 多文件插件打包 & 部署方法**
 
 - 在插件编写完成之后，请将 `pyproject.toml`以及所有插件源码打包为一个zip压缩包，并**将文件名后缀修改为 .llplugin**
 - `__pycache__` 和`__pypackages__` 等目录请勿打包在压缩包之中
