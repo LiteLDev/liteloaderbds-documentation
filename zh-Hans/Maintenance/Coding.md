@@ -43,6 +43,37 @@
 
 按照当前的程序架构和代码排布，针对特定的一些维护需求，为大家指明方向
 
+#### 项目开发环境配置指南
+
+1. 首先，需要从github仓库clone LiteLoaderBDS项目到你的本地，并把分支切换到`develop`开发分支。
+
+2. ... **TODO**
+
+3. 为你的IDE配置编译产物自动复制：
+    为了比较方便地对LL源码进行修改后调试，在LL项目的 cmakelist 中设置有编译产物自动复制功能。按如下方法启用：
+    
+      - 如果你使用VSCode，在LL项目所在目录下的`.vscode/settings.json`文件中添加如下新配置项：
+    
+        ```json
+        {
+            //...
+            "cmake.configureArgs": [
+        		"-DBDS_LOCAL_DEV_ENVIRONMENT_DIR=<本地BDS目录>"
+        	]
+        }
+        ```
+    
+    
+      - 如果你使用Clion，在项目的cmake profile中增加条目：
+    
+        ```
+        -DBDS_LOCAL_DEV_ENVIRONMENT_DIR=<本地BDS目录>
+        ```
+    
+    
+      - 通过此方法，将`BDS_LOCAL_DEV_ENVIRONMENT_DIR`变量设置为你本地测试用的BDS目录（例如`C:/Users/yq/Desktop/BDS`）。在LL编译完成之后，最新的产物dll和pdb文件将被自动复制到BDS目录的对应位置覆盖，以方便开发者在修改代码后进行调试。
+    
+
 #### 维护
 <!--
 TODO

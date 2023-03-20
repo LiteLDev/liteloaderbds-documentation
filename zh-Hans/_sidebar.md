@@ -13,8 +13,8 @@
 
     - 🎯 脚本插件开发
         - [⛳ 新手入门（必读）](LLSEPluginDevelopment/README.md)
-        - [📋 多种开发语言支持](LLSEPluginDevelopment/LanguageSupport.md)
-        - [📜 使用JavaScript创造你的首个脚本插件](LLSEPluginDevelopment/LLSEJSPlugin.md)
+        - [📋 特定脚本语言开发须知（必读）](LLSEPluginDevelopment/LanguageSupport.md)
+        - [📜 快速入门：使用JS创造你的首个脚本插件](LLSEPluginDevelopment/LLSEJSPlugin.md)
         - [💼 通用脚本接口 - 常用](LLSEPluginDevelopment/ScriptAPI/ScriptHelp.md)
 
         - 游戏内容接口

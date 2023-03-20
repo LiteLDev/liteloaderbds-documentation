@@ -12,8 +12,8 @@
     - [⛳ C++ Plugin Development](https://cpp.docs.litebds.com/en)
     - 🎯 Script Plugin Development
         - [⛳ For Beginners (Must Read)](/LLSEPluginDevelopment/)
-        - [📋 Multi Development Language Support](/LLSEPluginDevelopment/LanguageSupport.md)
-        - [📜 Using JavaScript to Create Your First Plugin](/LLSEPluginDevelopment/LLSEJSPlugin.md)
+        - [📋 Multi Development Language Support (Must Read)](/LLSEPluginDevelopment/LanguageSupport.md)
+        - [📜 Quick Start: Create your first script plugin with JS](/LLSEPluginDevelopment/LLSEJSPlugin.md)
         - [💼 Generic Script Interface (Commonly Used)](/LLSEPluginDevelopment/ScriptAPI/ScriptHelp.md)
 
         - Game Content Interface
