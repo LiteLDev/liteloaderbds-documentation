@@ -59,9 +59,8 @@
 - 对于大型、正式的Python插件，强烈建议使用此方法进行开发。相比于单文件插件，此完整方案支持完善的元数据储存、支持源码分文件编写、以及最重要的：第三方pip包支持。
 - 首先，你需要创建一个新的目录，在其中初始化和项目相关的元数据信息。LLSE 要求 使用`pyproject.toml` 项目文件进行元数据储存，类似 Node.Js 的`package.json`。`pyproject.toml` 项目文件将通过下面的包管理器工具自动生成：
 - 推荐使用支持现代项目特性的 PDM 包管理器（[pdm-project/pdm](https://github.com/pdm-project/pdm)）进行插件项目的创建和维护。PDM起到的的作用类似于 Node.Js 中的npm。使用方法：
-
   - 首先，使用`pip install --user pdm`命令安装 pdm
-  - 安装完成之后，在你想要创建 Python 项目的目录打开命令行，执行`pdm init`命令，根据其提示创建新项目，填写项目的相关信息。
+  - 安装完成之后，在你想要创建 Python 项目的目录启动命令行执行`pdm init`命令。根据pdm工具的提示创建新项目，填写项目的相关信息。
   - 如果需要安装依赖包，在项目目录执行`pdm add <依赖包名>`即可
   - 所有的项目元数据和依赖数据都会被自动储存在`pyproject.toml` 中，无需手动编写。你也可以打开此文件修改版本号、描述等元数据信息
   - 另外，你也可以直接把项目依赖手动写在`requirements.txt`当中。在安装插件时，`pyproject.toml`和`requirements.txt`中描述的依赖都将被处理并自动安装。
