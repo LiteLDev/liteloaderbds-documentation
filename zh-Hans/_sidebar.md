@@ -6,6 +6,7 @@
     - 🧩 子模块
         - [💰 LLMoney经济核心](/Submodules/LLMoney.md)
         - [🔒 权限API](/Submodules/PermAPI.md)
+        - [✨ 粒子API](/Submodules/ParticleAPI.md)
 
 - 🍔 创造者指南
     - [⛳ 原生插件开发](https://cpp.docs.litebds.com/zh-Hans)
