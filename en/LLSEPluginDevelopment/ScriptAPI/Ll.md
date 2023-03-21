@@ -95,7 +95,7 @@ In order to allow the pre-plug-ins developed by developers to provide interfaces
 
 In order to allow the pre-plug-ins developed by developers to provide interfaces and services for other plug-ins, the remote function call function is provided here, so that an LL or LLSE plug-in can call the existing functions in another plug-in.
 
-`ll.export(func,namespace,name)`
+`ll.exports(func,namespace,name)`
 
 - Parameter: 
   - func : `Function`  
@@ -116,7 +116,7 @@ Note: If the namespace and name of the exported function are exactly the same as
 After you have learned that there is a plug-in exporting function, in order to use the function exported by him, you first need to import this function into your own scripting system.
 LLSE provides the interface import to import functions already exported by other plugins.
 
-`ll.import(namespace,name)`
+`ll.imports(namespace,name)`
 
 - Parameter: 
   - namespace : `String`  

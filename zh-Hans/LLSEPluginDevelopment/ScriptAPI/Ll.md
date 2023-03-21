@@ -94,7 +94,7 @@
 
 为了可以让开发者开发的前置插件能够为其他插件提供接口和服务，这里提供了远程函数调用功能，让一个 原生 或 脚本 插件可以调用另一个插件中已有的函数。
 
-`ll.export(func,namespace,name)`
+`ll.exports(func,namespace,name)`
 
 - 参数：
   - func : `Function`  
@@ -115,7 +115,7 @@
 当你已经得知有插件导出函数之后，为了可以使用他导出的函数，首先需要将这个函数导入到你自己的脚本系统中  
 脚本引擎提供了接口 import 来导入其他插件已经导出的函数。
 
-`ll.import(namespace,name)`
+`ll.imports(namespace,name)`
 
 - 参数：
   - namespace : `String`  
