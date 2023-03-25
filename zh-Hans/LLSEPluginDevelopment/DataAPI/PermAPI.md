@@ -1,4 +1,4 @@
-# 🔐 类似Discord的权限系统接口
+# 🔐 权限系统接口
 
 > BDS/MCBE自带的权限系统非常的拉跨，为了满足插件对权限系统的需要，我们完成了权限接口.
 
@@ -62,6 +62,7 @@
   - 无效的参数。
   - 无效的名称。
   
+
 <br/>
 
 ## 身份组类
@@ -290,6 +291,19 @@ function meta.instanceFunction:hasPermission(perm)
   return Permission.checkPermission(self.xuid, perm);
 end
 ```
+
+<br/>
+
+### 删除权限
+
+`Permission.deletePermission(permName)`
+
+- 参数:
+  - permName: `String`  
+    权限名称
+- 抛出:
+  - 无效的参数。
+  - 找不到权限。
 
 <br/>
 

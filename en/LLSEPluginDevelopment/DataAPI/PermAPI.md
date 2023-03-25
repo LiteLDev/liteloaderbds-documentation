@@ -1,4 +1,4 @@
-# 🔐 Discord-like Permission Interface
+# 🔐 Permission Interface
 
 > The builtin permission system of BDS/MCBE sucks. In order to meet the needs of plugins for the permission system, we made Permission APIs.
 
@@ -62,6 +62,7 @@ By static method:
   - Invalid arguments.
   - The name is invalid.
   
+
 <br/>
 
 ## Class Role
@@ -288,6 +289,19 @@ function meta.instanceFunction:hasPermission(perm)
   return Permission.checkPermission(self.xuid, perm);
 end
 ```
+
+<br/>
+
+### Delete a permission
+
+`Permission.deletePermission(permName)`
+
+- Parameters:
+  - permName: `String`  
+    The permission name
+- Throw when:
+  - Invalid arguments.
+  - The permission not found.
 
 <br/>
 
