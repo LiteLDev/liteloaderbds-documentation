@@ -109,8 +109,8 @@ Through the command object, you can register various forms and functions for thi
     Enumeration name, used to distinguish the enumeration when setting parameters.
   - values : `Array<String>`  
     Valid values ​​for enumeration.
-- Return value: Whether setting succeeded or not.
-- Return value type: `Boolean`
+- Return value: New enumeration option identification name.
+- Return value type: `String`
 
 #### Add a Required Parameter
 
@@ -362,7 +362,7 @@ Note: The callback function prototype of the parameter callback: `function(playe
   The player that executes the command.
 - args : `Array<String,String...>`    
   Arguments following the target command. Divide by spaces to form a string array.  
-If a custom command `land set` is registered, when `/land set abc 2333` is executed, the value of args will be `[ "abc","2333" ]`
+  If a custom command `land set` is registered, when `/land set abc 2333` is executed, the value of args will be `[ "abc","2333" ]`
 
 [JavaScript]
 ```js
@@ -392,7 +392,7 @@ mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
 Note: The callback function prototype of the parameter callback: `function(args)`
 
 - args : `Array<String,String...>`      
-Arguments following the target command. Divide by spaces to form a string array.
+  Arguments following the target command. Divide by spaces to form a string array.
    If a custom command `land set` is registered, when `/land set abc 2333` is executed, the value of args will be `['abc','2333']`
 
 [JavaScript]
