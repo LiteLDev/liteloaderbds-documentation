@@ -24,12 +24,7 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 
 LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安装体验。我们推荐所有缺乏命令行知识的用户使用LipUI来安装LiteLoaderBDS。
 
-你可以观看以下视频学习通过LipUI安装LiteLoaderBDS:
-
-<div style="position: relative; padding-bottom: 62.5%;">
-<iframe src="//player.bilibili.com/player.html?aid=694592747&bvid=BV1w24y1W7pq&cid=1013982749&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>
-</div>
-<br>
+你可以观看以下[视频](https://www.bilibili.com/video/BV1w24y1W7pq)学习通过LipUI安装LiteLoaderBDS
 
 首先你需要安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。然后，下载[LipUI](https://github.com/LiteLDev/LipUI/releases/latest)并运行。
 
@@ -47,12 +42,7 @@ LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安�
 
 我们推荐具有一定命令行知识的用户使用[Lip](https://lip.docs.litebds.com)来安装LiteLoaderBDS。
 
-你可以观看以下视频学习通过Lip安装LiteLoaderBDS:
-
-<div style="position: relative; padding-bottom: 62.5%;">
-<iframe src="//player.bilibili.com/player.html?aid=864207370&bvid=BV1254y1N7gD&cid=1001763271&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>
-</div>
-<br>
+你可以观看[视频](https://www.bilibili.com/video/BV1254y1N7gD)学习通过Lip安装LiteLoaderBDS
 
 你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。若已经安装Lip，请跟随以下步骤安装LiteLoaderBDS:
 
