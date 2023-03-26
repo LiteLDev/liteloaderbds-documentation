@@ -72,19 +72,10 @@ lip install starterpack
 
 If you do not want to use Lip, or if you want to do some advanced operations, you can install LiteLoaderBDS manually. follow these steps to install it:
 
-1. Download the corresponding version of LiteLoaderBDS from <https://github.com/LiteLDev/LiteLoader/releases>. Most of assets are components of LiteLoaderBDS, so you need to download the `LiteLoaderBDS-full.zip` file.
-
+1. Download the corresponding version of `LiteLoaderBDS.zip` from <https://github.com/LiteLDev/LiteLoader/releases>.
 2. Unzip the downloaded file into the BDS directory.
-
-3. (Optional) If you want to use LLMoney, which is a prerequisite of many plugins, download it from <https://github.com/LiteLDev/LLMoney/releases/latest> and put the `LLMoney.dll` file to `plugins/`.
-
-4. (Optional) If you want to use LLPermission, which is a prerequisite of some plugins, download `LLPermission.zip` and put everything in it to `plugins/LiteLoader`.
-
-5. (Optinoal) If you want to use LLParticle, which is a prerequisite of some plugins, download `LLParticle.zip` and put everything in it to `plugins/LiteLoader`.
-
-6. Run `LLPeEditor.exe` in the BDS directory. 4.
-
-7. Run `bedrock_server_mod.exe` in the BDS directory to start the server.
+3. Run `LLPeEditor.exe` in the BDS directory.
+4. Run `bedrock_server_mod.exe` in the BDS directory to start the server.
 
 ### Installing on a Linux distribution
 
@@ -111,7 +102,7 @@ When updating, please follow the following steps.
 
 1. Delete all files except `allowlist.json`, `permissions.json`, `server.properties`, `plugins` and `worlds` from the directory where the server is located.
 2. Extract all the contents of the Bedrock version of the new LiteLoaderBDS (BDS) package for Minecraft, except `allowlist.json`, `permissions.json` and `server.properties`, to the server directory. . This step should not result in an overwrite prompt.
-3. Install the new LiteLoaderBDS. 4.
+3. Install the new LiteLoaderBDS.
 4. Put the backup files back to the server directory and overwrite the files with the same name.
 
 ### Update LiteLoaderBDS on Windows
@@ -145,13 +136,13 @@ Translated with www.DeepL.com/Translator (free version)
 To update, please follow these steps.
 
 1. Back up `allowlist.json`, `permissions.json`, `server.properties`, `plugins`, `worlds` in the directory where the server is located.
-2. Delete the server. 3.
-3. Install the new version of LiteLoaderBDS. 4.
+2. Delete the server.
+3. Install the new version of LiteLoaderBDS.
 4. Put the backup file back to the server directory and overwrite the file with the same name.
 
 If BDS is not updated, but LiteLoaderBDS is updated, you must also follow the above steps.
 
-## 🎯 Installing plug-ins
+## 🎯 Installing plugins
 
 There are two types of plugins: native plugins and scripted plugins. Native plugins are compiled native plugins with better performance, but they cannot be re-enabled or disabled after the server is started. Scripted plugins are written in JavaScript or Lua and can be managed flexibly with better security, but have poorer performance.
 

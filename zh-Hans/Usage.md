@@ -88,19 +88,10 @@ lip install starterpack
 
 如果你不想使用Lip，或者你希望进行一些高级操作，你可以手动安装LiteLoaderBDS。该方法可能会因为操作上的细微差别造成本文档中未提及的问题，因此需要你具备较高的排错能力。如果你遇到了任何问题而无法解决，请尝试通过Lip安装。请跟随以下步骤安装:
 
-1. 从<https://github.com/LiteLDev/LiteLoader/releases>下载对应版本的LiteLoaderBDS。Release中有多个Assets，其中大多数都是LiteLoaderBDS的各个组件，你需要下载的是`LiteLoaderBDS-full.zip`。
-
+1. 从<https://github.com/LiteLDev/LiteLoader/releases>下载对应版本的`LiteLoaderBDS.zip`。
 2. 解压缩下载得到的文件到BDS目录中。
-
-3. （可选）如果你希望使用LLMoney，请从<https://github.com/LiteLDev/LLMoney/releases/latest>下载并将`LLMoney.dll`放在`plugins/`。
-
-4. （可选）如果你希望使用LLPermission，请下载`LLPermission.zip`并将所有内容放在`plugins/LiteLoader/`。
-
-5. （可选）如果你希望使用LLParticle，请下载`LLParticle.zip`并将所有内容放在`plugins/LiteLoader/`。
-
-6. 在BDS目录中运行`LLPeEditor.exe`。
-
-7. 在BDS目录中运行`bedrock_server_mod.exe`以启动服务器。
+3. 在BDS目录中运行`LLPeEditor.exe`。
+4. 在BDS目录中运行`bedrock_server_mod.exe`以启动服务器。
 
 ### 在Linux发行版上安装
 
