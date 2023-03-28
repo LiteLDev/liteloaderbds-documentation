@@ -79,7 +79,7 @@ If you do not want to use Lip, or if you want to do some advanced operations, yo
 
 ### Installing on a Linux distribution
 
-We do not recommend running LiteLoaderBDS on Linux distributions because of serious performance issues when Bedrock Dedicated Server (1.19+) is running on Wine. If you still want to run LiteLoaderBDS on Linux, you can try the following method. This method was tested and passed on Ubuntu 20.04. For other Linux distributions, you may need to fix the problem yourself.
+You can run the latest BDS + LiteLoaderBDS on a Linux server with **Wine 8.0 or higher**. You can install plugins and access the game normally. So if you are using a Linux server, you can install Wine to run BDS and get almost the same experience and performance as Windows platform.
 
 ### Via script (available on Ubuntu)
 

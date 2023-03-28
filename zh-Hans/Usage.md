@@ -85,7 +85,7 @@ lip install starterpack
 
 ### 在Linux发行版上安装
 
-我们不建议在Linux发行版上运行LiteLoaderBDS，因为当Bedrock Dedicated Server(1.19+)运行在Wine上时会有严重的性能问题。如果你仍然想在Linux上运行LiteLoaderBDS，你可以尝试以下方法。该方法在Ubuntu 20.04上测试通过。对于其它Linux发行版，你可能需要自行解决问题。
+经过测试，使用 Wine8.0 或更高版本可以正常在 Linux 服务器上运行最新的 BDS + LiteLoaderBDS，并正常安装插件和进入游戏。如果使用 Linux 服务器的用户可以安装 Wine 后使用 Wine 运行BDS，获得和 Windows平台几乎完全一样的体验和性能。
 
 ### 通过脚本（在Ubuntu上可用）
 
