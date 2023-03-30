@@ -87,12 +87,17 @@ lip install starterpack
 
 经过测试，使用 Wine8.0 或更高版本可以正常在 Linux 服务器上运行最新的 BDS + LiteLoaderBDS，并正常安装插件和进入游戏。如果使用 Linux 服务器的用户可以安装 Wine 后使用 Wine 运行BDS，获得和 Windows平台几乎完全一样的体验和性能。
 
-### 通过脚本（在Ubuntu上可用）
+#### 通过Docker/Podman
 
-在要安装服务器的目录中，运行：
+即将到来
+
+#### 通过脚本
+
+你需要事先安装好Wine环境，我们推荐使用的版本是8.0+  
+在要安装服务器的目录中，运行:
 
 ```sh
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/scripts/install.sh && sh install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
 ```
 
 ## 🚅 更新LiteLoaderBDS

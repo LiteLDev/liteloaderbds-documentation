@@ -81,12 +81,17 @@ If you do not want to use Lip, or if you want to do some advanced operations, yo
 
 You can run the latest BDS + LiteLoaderBDS on a Linux server with **Wine 8.0 or higher**. You can install plugins and access the game normally. So if you are using a Linux server, you can install Wine to run BDS and get almost the same experience and performance as Windows platform.
 
-### Via script (available on Ubuntu)
+#### Via Docker/Podman
 
-In the directory where you want to install the server, run.
+Coming soon
+
+#### Via script
+
+You should install Wine before execute this script, we recommend Wine 8.0+  
+In the directory where you want to install the server, run:
 
 ```sh
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/scripts/install.sh && sh install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
 ```
 
 ## 🚅 Update LiteLoaderBDS
