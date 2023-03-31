@@ -89,14 +89,30 @@ lip install starterpack
 
 #### 通过Docker/Podman
 
-即将到来
+首先安装**Docker**或**Podman**，然后修改以下命令并运行
+
+```shell
+docker run --name liteloader -v /path/to/store:/server -p 19132:19132 -it -d docker.io/shrbox/liteloader:main
+```
+
+如果你正在使用**Podman**，请将命令开头的`docker`替换为`podman`  
+`--name liteloader` **liteloader**为容器名，可改为其它名字  
+`/path/to/store` 替换为你想要存放BDS数据的目录，例如: **/home/ubuntu/server**(指定目录必须存在)  
+`-p 19132:19132` 第一个端口为对外端口，第二个端口为容器内端口，这两个端口最好保持一致
+
+可以通过以下命令管理服务器
+| 命令                     | 操作             | 备注                             |
+| ------------------------ | ---------------- | -------------------------------- |
+| docker attach liteloader | 进入服务器控制台 | 安全地退出控制台请按**Ctrl+P+Q** |
+| docker start liteloader  | 启动服务器       |
+| docker stop liteloader   | 强行停止服务器   | 可能会造成存档损坏，慎用         |
 
 #### 通过脚本
 
 你需要事先安装好Wine环境，我们推荐使用的版本是8.0+  
 在要安装服务器的目录中，运行:
 
-```sh
+```shell
 wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
 ```
 

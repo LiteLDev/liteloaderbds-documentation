@@ -1,6 +1,6 @@
 ![logo](../assets/Logo.png)
 
-# LiteLoaderBDS <small>2.9.x</small>
+# LiteLoaderBDS <small>2.12.x</small>
 
 > 划时代的多语言Minecraft BDS插件加载器。
 

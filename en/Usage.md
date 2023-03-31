@@ -83,7 +83,23 @@ You can run the latest BDS + LiteLoaderBDS on a Linux server with **Wine 8.0 or 
 
 #### Via Docker/Podman
 
-Coming soon
+Please install **Docker** or **Podman** first, then modify the following command
+
+```shell
+docker run --name liteloader -v /path/to/store:/server -p 19132:19132 -it -d docker.io/shrbox/liteloader:main
+```
+
+If you are using **podman**, please replace `docker` with `podman`  
+`--name liteloader` **liteloader** is container's name, you can change it freely  
+Please replace `/path/to/store` with the directory which will be used for storaging BDS, for example: **/home/ubuntu/server**(specified directory must exist)  
+`-p 19132:19132` The first port is host port, the second port is port in the container, you'd better to keep these two ports same
+
+Managing servers by these commands
+| Command                  | Operation            | Comment                                        |
+| ------------------------ | -------------------- | ---------------------------------------------- |
+| docker attach liteloader | Enter server console | For safely exit console, press **Ctrl+P+Q**    |
+| docker start liteloader  | Start the server     |
+| docker stop liteloader   | Kill the server      | May cause world broken, think twice before use |
 
 #### Via script
 
