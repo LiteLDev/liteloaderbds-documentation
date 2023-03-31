@@ -95,10 +95,11 @@ Please replace `/path/to/store` with the directory which will be used for storag
 `-p 19132:19132` The first port is host port, the second port is port in the container, you'd better to keep these two ports same
 
 Managing servers by these commands
+
 | Command                  | Operation            | Comment                                        |
 | ------------------------ | -------------------- | ---------------------------------------------- |
 | docker attach liteloader | Enter server console | For safely exit console, press **Ctrl+P+Q**    |
-| docker start liteloader  | Start the server     |
+| docker start liteloader  | Start the server     |                                                |
 | docker stop liteloader   | Kill the server      | May cause world broken, think twice before use |
 
 #### Via script

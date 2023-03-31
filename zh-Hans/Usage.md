@@ -101,10 +101,11 @@ docker run --name liteloader -v /path/to/store:/server -p 19132:19132 -it -d doc
 `-p 19132:19132` 第一个端口为对外端口，第二个端口为容器内端口，这两个端口最好保持一致
 
 可以通过以下命令管理服务器
+
 | 命令                     | 操作             | 备注                             |
 | ------------------------ | ---------------- | -------------------------------- |
 | docker attach liteloader | 进入服务器控制台 | 安全地退出控制台请按**Ctrl+P+Q** |
-| docker start liteloader  | 启动服务器       |
+| docker start liteloader  | 启动服务器       |                                  |
 | docker stop liteloader   | 强行停止服务器   | 可能会造成存档损坏，慎用         |
 
 #### 通过脚本
