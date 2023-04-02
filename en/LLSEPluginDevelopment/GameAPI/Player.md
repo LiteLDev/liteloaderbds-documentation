@@ -707,11 +707,13 @@ If the player's inventory is full, excess items will be drop.
 
 #### Clears All Items of the Specified Type From the Player’s Backpack
 
-`pl.clearItem(type)`
+`pl.clearItem(type[, count)`
 
 - Parameters: 
   - type : `String`  
     Item object type name to clear
+  - count : `Integer`  
+    (Optional)Item count to be clear
 - Return value: The number of items cleared
 - Return value type: `Integer`
 

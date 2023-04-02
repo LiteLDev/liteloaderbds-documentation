@@ -885,11 +885,13 @@
 
 #### 清除玩家背包中所有指定类型的物品
 
-`pl.clearItem(type)`
+`pl.clearItem(type[, count])`
 
 - 参数：
   - type : `String`  
     要清除的物品对象类型名
+  - count : `Integer`  
+    （可选参数）要清除的物品数量
 - 返回值：清除的物品个数
 - 返回值类型：`Integer`
 
@@ -901,11 +903,13 @@
     ```js
     // 对于一个玩家对象pl
     pl.clearItem("minecraft:dirt");
+    pl.clearItem("minecraft:dirt", 114514);
     ```
   - Lua
     ```lua
     -- 对于一个玩家对象pl
     pl:clearItem("minecraft:dirt")
+    pl:clearItem("minecraft:dirt", 1919)
     ```
 
 #### 刷新玩家物品栏、盔甲栏
