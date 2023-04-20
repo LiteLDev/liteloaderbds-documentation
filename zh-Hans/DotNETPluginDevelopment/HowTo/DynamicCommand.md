@@ -10,7 +10,6 @@
 
 ## 注册一条顶层命令
 
->通过调用DynamicCommand类的CreateCommand静态方法可以创建新的动态指令实例。
 
 `DynamicCommand.CreateCommand(name,description[,permission,flag1,flag2,handle]);`
 
@@ -47,7 +46,7 @@
 
 <br>
 
-- 返回值：指令实例
+- 返回值：指令对象
 
 - 返回值类型：`DynamicCommandInstance`
 
@@ -55,7 +54,7 @@
 >
 > 顶层命令，也就是类似 `list` `gamerule` 这种，在 / 之后第一个输入的部分  
 >
-> 注册完顶层命令后，此方法会返回一个指令实例。接下来，对于这个命令的功能扩展都需要在这个实例中进行
+> 注册完顶层命令后，此方法会返回一个指令对象。接下来，对于这个命令的功能扩展都需要在这个对象中进行
 
 <br>
 
@@ -78,40 +77,166 @@
 
 `DynamicCommandInstance.SetEnum(description,values)`  
 - 参数： 
-  - alias : `string`  
-    指令别名  
-- 返回值：是否成功设置  
-- 返回值类型：`bool`  
+  - description : `string`  
+    枚举名，用于设置参数时区分枚举
+  - values : `List<string>`  
+    枚举的有效值
+- 返回值：新增枚举选项的标识名称
+- 返回值类型：`string`  
 
 ### 新增必选参数
 
-`DynamicCommandInstance.Mandatory` 方法
+`DynamicCommandInstance.Mandatory(name,type[,description,identifier,parameterOption])`
+- 参数：
+  - name : `string`  
+    参数名，用于执行指令时识别参数
+  - type : `DynamicCommand.ParameterType`  
+    命令参数类型
+  - description : `string`  
+  
+  - identifier : `string`  
+  
+  - enumOptions : `CommandParameterOption`  
+    参数选项  
+    
+    | 参数选项                              | 含义                             |
+    | ------------------------------------ | -------------------------------- |
+    | `CommandParameterOption.None`        | （默认值）                        |
+    | `CommandParameterOption.EnumAutocompleteExpansion` |在指令提示中展开枚举选项，如 `<action : TagChangeAction>` 会变成 `<add\|remove>`            |
+    | `CommandParameterOption.HasSemanticConstraint`       |                               |
+    | `CommandParameterOption.EnumAsChainedCommand`  |                               |
+- 返回值：  
+- 返回值类型：`ParameterIndex`
 
 ### 新增可选参数
 
-`DynamicCommandInstance.Optional` 方法
+`DynamicCommandInstance.Optional(name,type[,description,identifier,parameterOption])`
+- 参数：
+  - name : `string`  
+    参数名，用于执行指令时识别参数
+  - type : `DynamicCommand.ParameterType`  
+    命令参数类型
+  - description : `string`  
+  
+  - identifier : `string`  
+  
+  - enumOptions : `CommandParameterOption`  
+    参数选项  
+- 返回值：  
+- 返回值类型：`ParameterIndex`
+
+#### 有效的命令参数类型及解释
+
+| 命令参数类型          | 含义                                                                 |
+| --------------------- | -------------------------------------------------------------------- |
+| `DynamicCommand.ParameterType.Bool`      | 布尔值参数|
+| `DynamicCommand.ParameterType.Int`       | 整数参数                                                             |
+| `DynamicCommand.ParameterType.Float`     | 浮点数参数                                                           |
+| `DynamicCommand.ParameterType.String`    | 字符串参数                                                           |
+| `DynamicCommand.ParameterType.Actor`     | 实体目标选择器参数                                                   |
+| `DynamicCommand.ParameterType.Player`    | 玩家目标选择器参数                                                   |
+| `DynamicCommand.ParameterType.BlockPos`  | 整数坐标参数                                                         |
+| `DynamicCommand.ParameterType.Vec3`      | 浮点数坐标参数                                                       |
+| `DynamicCommand.ParameterType.RawText`   | 原始字符串参数(可包含特殊字符，如逗号空格，只能作为最后一个参数使用) |
+| `DynamicCommand.ParameterType.Message`   | 消息类型参数(同 `/say` 指令参数，会自动展开目标选择器等)             |
+| `DynamicCommand.ParameterType.JsonValue` | JSON字符串参数                                                       |
+| `DynamicCommand.ParameterType.Item`      | 物品类型参数                                                         |
+| `DynamicCommand.ParameterType.Block`     | 方块类型参数                                                         |
+| `DynamicCommand.ParameterType.Effect`    | 效果类型参数                                                         |
+| `DynamicCommand.ParameterType.Enum`      | 枚举参数                                                             |
+| `DynamicCommand.ParameterType.SoftEnum`  | 可变枚举参数                                                         |
+| `DynamicCommand.ParameterType.ActorType` | 实体类型参数                                                         |
+| `DynamicCommand.ParameterType.WildcardSelector` ||
 
 ## 新增指令重载
 
-`DynamicCommandInstance.Overload` 方法
+要想让命令正常运行，必须至少添加一条重载。所谓重载，本质上相当于参数的组合，譬如重载`['a', 'b', 'c']`相当于命令可以被执行为`/cmd <a> <b> <c>`，而重载`[]`相当于可以被执行为`/cmd`。重载的参数标识符可以是参数名、枚举名、参数标识符，但不能使用无法区分具体参数的标识符，如两个参数都叫 `action` 但枚举选项不同，此时应该使用枚举名而不是参数名。
+
+`DynamicCommandInstance.AddOverload(params)
+
+- 参数：
+  - params : `List<string>`  
+    参数标识符，重载所用到的参数列表，可用 参数标识符、枚举名、参数名。  
+    注意不能使用无法区分具体参数的标识符，如两个参数都叫 `action` 但枚举选项不同，此时应该使用枚举名而不是参数名
+- 返回值：是否成功设置
+- 返回值类型：`bool`
+
+> [!TIP]
+>
+> 指令重载是 BDS 区分不同指令形式的方法，每一种不同的指令形式对应着一种指令重载。  
+> 如你所见，指令重载中提供的各项参数名组成了一种新的指令形式
 
 ## 设置指令回调
 
-`DynamicCommandInstance.SetCallback` 方法
+`` 方法
 
-<br>
+`DynamicCommandInstance.SetCallback(callback)`
+- 参数：
+  - callback : `DynamicCommand.CallBackFn`  
+    注册的这个命令被执行时，接口自动调用的回调函数。
 
-<br>
+> [!TIP]
+>
+> 指令回调函数的参数相对复杂，在下面将进行详细解释
 
 ## 安装指令
 
 >在对命令的所有配置完成之后，使用此方法将命令注册到 BDS 的命令系统当中
 
-`DynamicCommand.Setup` 方法
+`DynamicCommand.Setup(commandInstance)`
+- 参数：
+  - commandInstance : `DynamicCommandInstance`  
+    要安装的指令对象
 
 <br>
 
 <br>
+
+## 指令回调函数
+
+上文提到的 **指令回调函数** 是一个比较复杂的回调函数，下面对其中的各项参数进行一些解释  
+指令回调函数原型： `DynamicCommand.CallBackFn(cmd,origin,output,results)`
+
+#### 参数 `cmd` ： 自身的指令对象
+
+这个参数给出了你注册这个命令时使用的指令对象。
+
+#### 参数 `origin` ：命令的执行者
+
+参数 `origin`的类型为 `CommandOrigin`。此对象表示此次命令的执行者，通过这个对象，可以对执行者进行一些操作  
+对于某个特定的 `CommandOrigin` 对象`origin`，有以下这些属性
+
+| 属性         | 含义                   | 类型         |
+| ------------ | ---------------------- | ------------ |
+| origin.IsValid     | （可空）       | `bool` |
+| origin.OriginType     | 指令执行主体类型（可空）    | `CommandOriginType`     |
+| origin.SourceSubId      | （可空）  | `byte`   |
+| origin.IsSelectorExpansionAllowed | （可空）  | `bool`     |
+| origin.CanUseCommandsWithoutCheatsEnabled   | （可空）  | `bool`     |
+| origin.IsWorldBuilder   |（可空）  | `bool`     |
+| origin.HasTellPerms |（可空）  | `bool`     |
+| origin.HasChatPerms   |（可空）  | `bool`     |
+| origin.PermissionsLevel   | （可空） | `CommandPermissionLevel`     |
+| origin.UUID | （可空） | `MC.Mce.UUID`     |
+| origin.SourceId   |（可空）  | `NetworkIdentifier`     |
+| origin.Identity   | （可空） | `CommandOriginIdentity`     |
+| origin.OutputReceiver | （可空） | `CommandOrigin`     |
+| origin.CursorHitPos   | （可空） | `Vec3`     |
+| origin.CursorHitBlockPos   |（可空）  | `BlockPos`     |
+| origin.Entity   | 执行指令的实体（可空）| `Actor`     |
+| origin.Dimension | 指令执行主体的维度（可空） | `Dimension`     |
+| origin.Level   | （可空） | `Level`     |
+| origin.Rotation   | 执行指令的实体的旋转角度（可空） | `Vec2`     |
+| origin.WorldPosition | 指令执行主体的坐标（可空） | `Vec3`     |
+| origin.BlockPosition   | 指令执行主体的方块坐标（可空） | `BlockPos`     |
+| origin.Name   | 指令执行主体的名称（可空） | `string`     |
+| origin.RequestId |（可空）  | `string`     |
+| origin.Player   | 执行指令的玩家（可空） | `ServerPlayer`     |
+
+#### 参数 `output` ：向命令执行者输出命令的执行结果
+
+参数`output`的类型为`CommandOutput` 对象。通过这个对象，可以向命令执行者输出命令的执行结果。  
+对于某个特定的 `CommandOutput` 对象`outp`，有以下这些成员方法
 
 ## 示例
 
