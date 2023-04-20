@@ -152,7 +152,7 @@
 
 要想让命令正常运行，必须至少添加一条重载。所谓重载，本质上相当于参数的组合，譬如重载`['a', 'b', 'c']`相当于命令可以被执行为`/cmd <a> <b> <c>`，而重载`[]`相当于可以被执行为`/cmd`。重载的参数标识符可以是参数名、枚举名、参数标识符，但不能使用无法区分具体参数的标识符，如两个参数都叫 `action` 但枚举选项不同，此时应该使用枚举名而不是参数名。
 
-`DynamicCommandInstance.AddOverload(params)
+`DynamicCommandInstance.AddOverload(params)`
 
 - 参数：
   - params : `List<string>`  
@@ -167,8 +167,6 @@
 > 如你所见，指令重载中提供的各项参数名组成了一种新的指令形式
 
 ## 设置指令回调
-
-`` 方法
 
 `DynamicCommandInstance.SetCallback(callback)`
 - 参数：
@@ -236,7 +234,45 @@
 #### 参数 `output` ：向命令执行者输出命令的执行结果
 
 参数`output`的类型为`CommandOutput` 对象。通过这个对象，可以向命令执行者输出命令的执行结果。  
-对于某个特定的 `CommandOutput` 对象`outp`，有以下这些成员方法
+对于某个特定的 `CommandOutput` 对象`output`，有以下这些属性
+
+| 属性         | 含义                   | 类型         |
+| ------------ | ---------------------- | ------------ |
+| output.OutPutType     | （可空） | `int` |
+| output.IsEmpty     | （可空）   | `bool`     |
+| output.SuccessCount      | （可空）  | `int`   |
+| output.Messages | （可空） | `List<CommandOutputMessage>`     |
+| output.Data   | （可空） | `CommandPropertyBag`     |
+
+对于某个特定的 `CommandOutput` 对象`output`，有以下这些成员方法
+
+##### 输出一条成功信息
+
+`output.Success([str[, coplist]])`
+
+- 参数：
+  - str : `string`  
+    要输出的信息
+  - coplist : `List<CommandOutputParameter>`
+    要替换的参数
+    
+##### 输出一条错误信息
+
+`output.Error(str[, coplist])`
+
+- 参数：
+  - str : `string`  
+    要输出的信息
+  - coplist : `List<CommandOutputParameter>`
+    要替换的参数
+
+##### 输出一条普通信息
+
+`output.AddMessage(str)`
+
+- 参数：
+  - str : `string`  
+    要输出的信息
 
 ## 示例
 
@@ -257,33 +293,33 @@ namespace PluginMain
         {
 
             //创建新动态指令实例
-            var cmd = DynamicCommand.CreateCommand("testcmd", "dynamic command", CommandPermissionLevel.Any);
+            var cmd = DynamicCommand.CreateCommand("testcmd", "This is the command description", CommandPermissionLevel.Any);
 
             //设置指令别名
             cmd.SetAlias("testcmdalias");
 
             //新增指令枚举
-            var optionsAdd = cmd.SetEnum("TestOperation1", new() {"add", "remove"});
+            cmd.SetEnum("optionsadd", new() {"add", "remove"});
 
-            var optionsList = cmd.SetEnum("TestOperation2", new(){"list"});
+            cmd.SetEnum("optionslist", new(){"list"});
 
             //设置指令参数
-            cmd.Mandatory("testEnum", ParamType.Enum, optionsAdd, CommandParameterOption.EnumAutocompleteExpansion);
+            cmd.Mandatory("testenum", DynamicCommand.ParameterType.Enum, "optionsadd", "param id", CommandParameterOption.EnumAutocompleteExpansion);
             
-            cmd.Mandatory("testEnum", ParamType.Enum, optionsList, CommandParameterOption.EnumAutocompleteExpansion);
+            cmd.Mandatory("testenum", DynamicCommand.ParameterType.Enum, "optionslist", "param id", CommandParameterOption.EnumAutocompleteExpansion);
             
-            cmd.Mandatory("testString", ParamType.String);
+            cmd.Mandatory("teststring", DynamicCommand.ParameterType.String);
 
 
             //设置指令重载
-            cmd.AddOverload(new(){optionsAdd, "testString"});
+            cmd.AddOverload(new List<string> () {"optionsadd", "teststring"});
             
-            cmd.AddOverload(new(){"TestOperation2"});
+            cmd.AddOverload(new List<string> () {"optionslist"});
 
 
             //设置指令回调
-            cmd.SetCallBack((command,origin,output,results) => {
-                switch(results["testEnum"].AsString())
+            cmd.SetCallback((command,origin,output,results) => {
+                switch(results["testenum"].AsString())
                 {
                     case "add":
                     {
