@@ -12,14 +12,50 @@
 
 >通过调用DynamicCommand类的CreateCommand静态方法可以创建新的动态指令实例。
 
-C#
-```cs
-DynamicCommandInstance cmd = DynamicCommand.CreateCommand("testcmd", "dynamic command", CommandPermissionLevel.GameMasters);
-```
+`DynamicCommand.CreateCommand(name,description[,permission,flag1,flag2,handle]);`
 
->第一个参数指定了指令的名称，第二个参数指定了命令的描述，第三个参数则指定了命令的执行权限。
+- 参数：
+
+  - name : `string`  
+    待注册的命令
+
+  - description : `string`  
+    命令描述文本  
+
+  - permission : `CommandPermissionLevel`  
+    （可选参数）指令执行所需权限  
+
+    | 执行权限                              | 含义                             |
+    | ------------------------------------ | -------------------------------- |
+    | `CommandPermissionLevel.Any`         | 任何人都可以执行这条指令         |
+    | `CommandPermissionLevel.GameMasters` | 只有OP可以执行这条指令（默认值） |
+    | `CommandPermissionLevel.Admin`       |                               |
+    | `CommandPermissionLevel.HostPlayer`  |                               |
+    | `CommandPermissionLevel.Console`     | 只有控制台可以执行这条指令      |
+    | `CommandPermissionLevel.Internal`    |                               |
+
+  - flag1 : `Integer`  
+    （可选参数）默认值 `0x80`   
+    目前直接按此输入即可，后续会进行相关修改
+    
+  - flag2 : `Integer`  
+    （可选参数）默认值 `0`   
+    目前直接按此输入即可，后续会进行相关修改
+
+  - handle :  
+    （可选参数）默认值 `nullptr`
 
 <br>
+
+- 返回值：指令实例
+
+- 返回值类型：`DynamicCommandInstance`
+
+> [!TIP]
+>
+> 顶层命令，也就是类似 `list` `gamerule` 这种，在 / 之后第一个输入的部分  
+>
+> 注册完顶层命令后，此方法会返回一个指令实例。接下来，对于这个命令的功能扩展都需要在这个实例中进行
 
 <br>
 
@@ -31,11 +67,21 @@ DynamicCommandInstance cmd = DynamicCommand.CreateCommand("testcmd", "dynamic co
 
 ### 设置指令别名
 
-`DynamicCommandInstance.SetAlias` 方法
+`DynamicCommandInstance.SetAlias(alias)`
+- 参数： 
+  - alias : `string`  
+    指令别名  
+- 返回值：是否成功设置  
+- 返回值类型：`bool`  
 
 ### 新增指令枚举
 
-`DynamicCommandInstance.SetEnum` 方法
+`DynamicCommandInstance.SetEnum(description,values)`  
+- 参数： 
+  - alias : `string`  
+    指令别名  
+- 返回值：是否成功设置  
+- 返回值类型：`bool`  
 
 ### 新增必选参数
 
