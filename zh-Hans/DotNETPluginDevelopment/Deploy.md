@@ -6,7 +6,7 @@
 
 <br>
 
-**创建基于 .NET 6 的类库项目**
+**创建基于 .NET 7 的类库项目**
 
 ![步骤1](../../../assets/DotNetDeploy1.png)
 
