@@ -6,7 +6,7 @@
 
 <br>
 
-#### 获取LiteLoader.NET
+### 获取LiteLoader.NET
 
 **从 https://github.com/LiteLDev/LiteLoader.NET/releases 下载适用于你将用来测试插件的BDS的协议的LiteLoaderBDS版本的发行版并将其解压。**
 
