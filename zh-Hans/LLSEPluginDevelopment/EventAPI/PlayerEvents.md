@@ -589,3 +589,16 @@
   - pos : `IntPos`  
     床的位置
 - 拦截事件：函数返回`false`
+
+#### `"onPlayerPullFishingHook"` - 玩家使用钓鱼竿钓起实体
+
+- 监听函数原型
+  `function(player,entity,item)`
+- 参数：
+  - player : `Player`  
+    上床的玩家对象
+  - entity : `Entity`  
+    钓起的实体（鱼钩拉起任意实体都会触发该事件，不一定是物品实体）
+  - item : `Item`  
+    钓起的物品对象（如果钓到的不是物品则返回null）
+- 拦截事件：函数返回`false`
