@@ -596,7 +596,7 @@
   `function(player,entity,item)`
 - 参数：
   - player : `Player`  
-    上床的玩家对象
+    使用钓鱼竿的玩家对象
   - entity : `Entity`  
     钓起的实体（鱼钩拉起任意实体都会触发该事件，不一定是物品实体）
   - item : `Item`  
