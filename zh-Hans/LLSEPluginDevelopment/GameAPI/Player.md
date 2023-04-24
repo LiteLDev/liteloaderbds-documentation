@@ -52,7 +52,7 @@
 | pl.xuid                  | 玩家XUID字符串                    | `String`         |
 | pl.uuid                  | 玩家Uuid字符串                    | `String`         |
 | pl.permLevel             | 玩家的操作权限等级（0 - 4）       | `Integer`        |
-| pl.gameMode              | 玩家的游戏模式（0 - 2, 6）           | `Integer`        |
+| pl.gameMode              | 玩家的游戏模式（0 - 2, 6）          | `Integer`        |
 | pl.canFly                | 玩家是否可以飞行                  | `Boolean`        |
 | pl.canSleep              | 玩家是否可以睡觉                  | `Boolean`        |
 | pl.canBeSeenOnMap        | 玩家是否可以在地图上看到          | `Boolean`        |
@@ -990,7 +990,7 @@
 - 参数：
 
   - mode : `Integer`  
-    目标游戏模式，0为生存模式，1为创造模式，2为冒险模式
+    目标游戏模式，0为生存模式，1为创造模式，2为冒险模式, 3为观察者模式
 
 - 返回值：是否成功修改
 
