@@ -52,7 +52,7 @@
 | pl.xuid                  | 玩家XUID字符串                    | `String`         |
 | pl.uuid                  | 玩家Uuid字符串                    | `String`         |
 | pl.permLevel             | 玩家的操作权限等级（0 - 4）       | `Integer`        |
-| pl.gameMode              | 玩家的游戏模式（0 - 3）           | `Integer`        |
+| pl.gameMode              | 玩家的游戏模式（0 - 2, 6）           | `Integer`        |
 | pl.canFly                | 玩家是否可以飞行                  | `Boolean`        |
 | pl.canSleep              | 玩家是否可以睡觉                  | `Boolean`        |
 | pl.canBeSeenOnMap        | 玩家是否可以在地图上看到          | `Boolean`        |
