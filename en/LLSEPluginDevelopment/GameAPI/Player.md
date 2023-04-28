@@ -52,7 +52,7 @@ Each player object contains some fixed object properties. For a particular playe
 | pl.xuid                  | Player XUID String                                           | `String`         |
 | pl.uuid                  | Player Uuid string                                           | `String`         |
 | pl.permLevel             | Player's permission level (0 - 4)                            | `Integer`        |
-| pl.gameMode              | Player's game mode (0 - 3)                                   | `Integer`        |
+| pl.gameMode              | Player's game mode (0 - 2, 6)                                | `Integer`        |
 | pl.canSleep              | Whether the player can sleep                                 | `Boolean`        |
 | pl.canFly                | Whether the player can fly                                   | `Boolean`        |
 | pl.canBeSeenOnMap        | Whether the player can be seen on map                        | `Boolean`        |
@@ -774,7 +774,7 @@ pl.setPermLevel(1);
 - Parameters: 
 
   - mode : `Integer`  
-    Target game mode, `0` is survival mode, `1` is creative mode, `2` is adventure mode.
+    Target game mode, `0` is survival mode, `1` is creative mode, `2` is adventure mode. `6` is spectator mode.
 - Return value: Whether the modification was successful.
 - Return value type: `Boolean`
 

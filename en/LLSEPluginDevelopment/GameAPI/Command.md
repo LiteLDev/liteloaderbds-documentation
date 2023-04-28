@@ -53,7 +53,7 @@ log(result.output);
 
 An interface for registering custom commands is provided here. By docking with the built-in command system of BDS, the commands you register can be used by players, consoles, command blocks, NPCs and other objects that can execute commands in games. In addon, you can also use the commands registered here.
 > [!WARNING]
-> Except for variable parameters (String, RawText, Message, etc.), the commands cannot be non-English lowercase letters!
+> Except for variable parameters (String, RawText, Message, etc.), the commands cannot contain non-English lowercase letters!
 
 ### Register a Top-Level Command
 
