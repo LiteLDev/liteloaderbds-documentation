@@ -564,7 +564,7 @@ Note: This event is so powerful that it can even intercept and open backpacks.
 
 - Listener function prototype
   `function(player,entity,item)`
-- 参数：
+- Parameters:
   - player : `Player`  
     Player using fishing hook.
   - entity : `Entity`  
@@ -572,6 +572,8 @@ Note: This event is so powerful that it can even intercept and open backpacks.
   - item : `Item`  
     Item that player pull closer（If this entity is not item entity, this parameter will be null）
 - Intercept events: function returns `false`
+
+<br>
 
 #### `"onBedEnter"` - Player Enters Bed
 
