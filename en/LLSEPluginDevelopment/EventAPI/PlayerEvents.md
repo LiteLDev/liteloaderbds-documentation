@@ -560,6 +560,21 @@ Note: This event is so powerful that it can even intercept and open backpacks.
 
 <br>
 
+#### `"onPlayerPullFishingHook"` - Player Pull Closer Entity Using Fishing Hook 
+
+- Listener function prototype
+  `function(player,entity,item)`
+- Parameters:
+  - player : `Player`  
+    Player using fishing hook.
+  - entity : `Entity`  
+    Entity that player pull closer
+  - item : `Item`  
+    Item that player pull closer（If this entity is not item entity, this parameter will be null）
+- Intercept events: function returns `false`
+
+<br>
+
 #### `"onBedEnter"` - Player Enters Bed
 
 - Listener function prototype 
