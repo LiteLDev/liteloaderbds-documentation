@@ -624,6 +624,8 @@
 - 返回值：实体所有的药水效果id（见下表）
 - 返回值类型：`Array<number,number,...>`
 
+<br>
+
 #### 为实体添加一个药水效果
 
 `en.addEffect(id, tick, level, showParticles)`
@@ -638,7 +640,9 @@
     是否显示粒子
 - 返回值：操作是否成功
 - 返回值类型：`Boolean`
-  
+
+<br>
+
 #### 为实体移除一个药水效果
 
 `en.removeEffect(id)`
@@ -680,6 +684,8 @@
 | 不祥之兆     | bad_omen        | 28     |
 | 村庄英雄     | village_hero    | 29     |
 | 黑暗         | darkness        | 30     |
+
+<br>
 
 ### 其他实体函数 API
 

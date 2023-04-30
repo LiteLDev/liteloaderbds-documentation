@@ -1675,6 +1675,8 @@
 - 返回值：玩家所有的药水效果id（见下表）
 - 返回值类型：`Array<number,number,...>`
 
+<br>
+
 #### 为玩家添加一个药水效果
 
 `pl.addEffect(id, tick, level, showParticles)`
@@ -1689,7 +1691,9 @@
     是否显示粒子
 - 返回值：操作是否成功
 - 返回值类型：`Boolean`
-  
+
+<br>
+
 #### 为玩家移除一个药水效果
 
 `pl.removeEffect(id)`
@@ -1731,6 +1735,8 @@
 | 不祥之兆     | bad_omen        | 28     |
 | 村庄英雄     | village_hero    | 29     |
 | 黑暗         | darkness        | 30     |
+
+<br>
 
 #### 判断是否为模拟玩家
 
