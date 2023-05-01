@@ -80,7 +80,7 @@ lip install starterpack
 
 1. 从<https://github.com/LiteLDev/LiteLoader/releases>下载对应版本的`LiteLoaderBDS.zip`。
 2. 解压缩下载得到的文件到BDS目录中。
-3. 在BDS目录中运行`LLPeEditor.exe`。
+3. 在BDS目录中运行`PeEditor.exe`。
 4. 在BDS目录中运行`bedrock_server_mod.exe`以启动服务器。
 
 ### 在Linux发行版上安装

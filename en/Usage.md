@@ -52,7 +52,7 @@ lip install bds@1.19.61
     lip install ll
     ```
 
-2. For LiteLoaderBDS 2.9.3 and earlier, there is no post-installation script provided, so you need to run ``LLPeEditor.exe`` in the BDS directory and wait for the program to prompt to close to complete the post-installation task.
+2. For LiteLoaderBDS 2.9.3 and earlier, there is no post-installation script provided, so you need to run `LLPeEditor.exe` in the BDS directory and wait for the program to prompt to close to complete the post-installation task.
 
 3. Run `bedrock_server_mod.exe` in the BDS directory to start the server. Please note that you should always run `bedrock_server_mod.exe` to start the server.
 
@@ -74,7 +74,7 @@ If you do not want to use Lip, or if you want to do some advanced operations, yo
 
 1. Download the corresponding version of `LiteLoaderBDS.zip` from <https://github.com/LiteLDev/LiteLoader/releases>.
 2. Unzip the downloaded file into the BDS directory.
-3. Run `LLPeEditor.exe` in the BDS directory.
+3. Run `PeEditor.exe` in the BDS directory.
 4. Run `bedrock_server_mod.exe` in the BDS directory to start the server.
 
 ### Installing on a Linux distribution
