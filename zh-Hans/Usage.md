@@ -26,7 +26,7 @@ LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安�
 
 你可以观看[视频](https://www.bilibili.com/video/BV1w24y1W7pq)学习通过LipUI安装LiteLoaderBDS
 
-首先你需要安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。然后，下载[LipUI](https://github.com/LiteLDev/LipUI/releases/latest)并运行。
+首先你需要安装Lip，请参考[Lip文档](https://docs.lippkg.com)。然后，下载[LipUI](https://github.com/LiteLDev/LipUI/releases/latest)并运行。
 
 首先，你需要指定工作路径，这是BDS和LiteLoaderBDS需要放置的目录。如果你不知道该如何选择，请随意新建一个文件夹并选择它。
 
@@ -40,11 +40,11 @@ LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安�
 
 #### 通过Lip安装
 
-我们推荐具有一定命令行知识的用户使用[Lip](https://lip.docs.litebds.com)来安装LiteLoaderBDS。
+我们推荐具有一定命令行知识的用户使用[Lip](https://docs.lippkg.com)来安装LiteLoaderBDS。
 
 你可以观看[视频](https://www.bilibili.com/video/BV1254y1N7gD)学习通过Lip安装LiteLoaderBDS
 
-你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。若已经安装Lip，请跟随以下步骤安装LiteLoaderBDS:
+你需要先安装Lip，请参考[Lip文档](https://docs.lippkg.com)。若已经安装Lip，请跟随以下步骤安装LiteLoaderBDS:
 
 对于LiteLoaderBDS 2.10.0-beta.1及更早的版本，并没有提供BDS自动安装机制，你可以运行以下命令安装BDS。请注意版本对应关系。
 
@@ -186,9 +186,9 @@ lip install --force-reinstall ll@2.9.2
 
 ### 通过Lip安装
 
-如果插件作者提供了符合Lip规范的分发仓库，或将插件以Tooth包（后缀名为`.tth`）分发，我们推荐使用[Lip](https://lip.docs.litebds.com)来安装插件，因为Lip可以自动处理依赖关系，使得插件安装、升级和卸载更加方便。
+如果插件作者提供了符合Lip规范的分发仓库，或将插件以Tooth包（后缀名为`.tth`）分发，我们推荐使用[Lip](https://docs.lippkg.com)来安装插件，因为Lip可以自动处理依赖关系，使得插件安装、升级和卸载更加方便。
 
-你需要先安装Lip，请参考[Lip文档](https://lip.docs.litebds.com)。
+你需要先安装Lip，请参考[Lip文档](https://docs.lippkg.com)。
 
 如果你需要添加来自分发仓库的插件，请使用类似如下的命令进行安装：
 

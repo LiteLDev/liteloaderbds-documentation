@@ -24,7 +24,7 @@ We recommend installing on the following platforms, for other versions of Window
 
 LipUI brings an unprecedented, elegant and clean installation experience to LiteLoaderBDS users. We recommend all users who lack command line knowledge to use LipUI to install LiteLoaderBDS.
 
-First you need to install Lip, please refer to the [Lip documentation](https://lip.docs.litebds.com). Then, download [LipUI](https://github.com/LiteLDev/LipUI/releases/latest) and run it.
+First you need to install Lip, please refer to the [Lip documentation](https://docs.lippkg.com). Then, download [LipUI](https://github.com/LiteLDev/LipUI/releases/latest) and run it.
 
 First, you need to specify the working path, which is the directory where the BDS and LiteLoaderBDS need to be placed. If you don't know what to choose, feel free to create a new folder and select it.
 
@@ -38,7 +38,7 @@ There are also various plugins in the package marketplace that you can install a
 
 #### Installation via Lip
 
-We recommend using [Lip](https://lip.docs.litebds.com) to install LiteLoaderBDS. You need to install Lip first, please refer to the [Lip documentation](https://lip.docs.litebds.com). If Lip is already installed, please follow the steps below to install LiteLoaderBDS:
+We recommend using [Lip](https://docs.lippkg.com) to install LiteLoaderBDS. You need to install Lip first, please refer to the [Lip documentation](https://docs.lippkg.com). If Lip is already installed, please follow the steps below to install LiteLoaderBDS:
 
 For LiteLoaderBDS 2.10.0-beta.1 and earlier, there is no BDS automatic installation mechanism, you can run the following command to install BDS. Please note the version correspondence.
 
@@ -182,9 +182,9 @@ You can look for plugins on these sites.
 
 ### Installation via Lip
 
-If the plugin author provides a Lip compliant distribution repository or distributes the plugin as a Tooth package (with the suffix `.tth`), we recommend using [Lip](https://lip.docs.litebds.com) to install the plugin, because Lip can handle dependencies automatically, making it easier to install, upgrade and uninstall the plugin.
+If the plugin author provides a Lip compliant distribution repository or distributes the plugin as a Tooth package (with the suffix `.tth`), we recommend using [Lip](https://docs.lippkg.com) to install the plugin, because Lip can handle dependencies automatically, making it easier to install, upgrade and uninstall the plugin.
 
-You need to install Lip first, please refer to the [Lip documentation](https://lip.docs.litebds.com).
+You need to install Lip first, please refer to the [Lip documentation](https://docs.lippkg.com).
 
 If you need to add a plugin from a distribution repository, use a command similar to the following to install it.
 

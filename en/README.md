@@ -86,4 +86,4 @@ Ready to get started? 👉[click here](/DotNETPluginDevelopment/)👈 Check out 
 
 When you've written a creative plugin, you'll definitely want more people to use it. Then all you need to do is publish it to the various plugin platforms.
 
-We strongly recommend that you package your plug-in in a package supported by the [Lip Package Management Tool](https://lip.docs.litebds.com), which will make it easy for anyone to install your plug-in via the Lip tool. You can refer to: [Creating a package](https://lip.docs.litebds.com/en/#/tutorials/create_a_lip_tooth) and [Submitting packages to the Lip Registry](https://lip.docs.litebds.com/en/#/tutorials/submit_your_tooth_to_lip_registry).
+We strongly recommend that you package your plug-in in a package supported by the [Lip Package Management Tool](https://docs.lippkg.com), which will make it easy for anyone to install your plug-in via the Lip tool. You can refer to: [Creating a package](https://docs.lippkg.com/en/#/tutorials/create_a_lip_tooth) and [Submitting packages to the Lip Registry](https://docs.lippkg.com/en/#/tutorials/submit_your_tooth_to_lip_registry).
