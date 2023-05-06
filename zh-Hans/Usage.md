@@ -92,7 +92,7 @@ lip install starterpack
 首先安装**Docker**或**Podman**，然后修改以下命令并运行
 
 ```shell
-docker run --name liteloader -v /path/to/store:/server -p 19132:19132 -it -d docker.io/shrbox/liteloader:main
+docker run --name liteloader -v /path/to/store:/server -p 19132:19132/udp -it -d docker.io/shrbox/liteloader:main
 ```
 
 如果你正在使用**Podman**，请将命令开头的`docker`替换为`podman`  
