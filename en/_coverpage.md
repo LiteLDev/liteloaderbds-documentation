@@ -1,6 +1,6 @@
 ![logo](../assets/Logo.png)
 
-# LiteLoaderBDS <small>2.12.x</small>
+# LiteLoaderBDS
 
 > An epoch-making & cross-language plugin loader for Minecraft Bedrock Dedicated Server.
 
