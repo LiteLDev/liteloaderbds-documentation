@@ -42,7 +42,7 @@
 
 <br>
 
-#### "onBlockExplode"` - 发生由方块引起的爆炸
+#### `"onBlockExplode"` - 发生由方块引起的爆炸
 
 - 监听函数原型
   `function(source,pos,radius,maxResistance,isDestroy,isFire)`
