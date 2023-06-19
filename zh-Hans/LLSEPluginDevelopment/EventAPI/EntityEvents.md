@@ -166,8 +166,6 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 - 参数：
   - EnderDragon: `Entity`  
     末影龙的实体对象
-  - block: `Block`
-    末影龙破坏的方块对象
   
 - 拦截事件：函数返回`false`
 

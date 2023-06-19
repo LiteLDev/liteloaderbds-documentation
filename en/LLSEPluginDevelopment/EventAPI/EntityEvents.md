@@ -125,8 +125,6 @@ Note that this event does not include wither explosion damage.
 - Parameters: 
   - EnderDragon: `Entity`  
     The EnderDragon entity object.
-  - block: `Block`
-    The block object that EnderDragon will destroy.
 - Intercept events: function returns `false`
 
 Note that this event does not include wither explosion damage.
