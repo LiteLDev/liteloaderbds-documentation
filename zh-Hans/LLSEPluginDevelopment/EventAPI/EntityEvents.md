@@ -159,18 +159,6 @@ DamageCause 为伤害原因枚举，枚举值如下，有问号的待验证，�
 
 <br>
 
-#### `"onEnderDragonDestroy"` - 末影龙破坏方块
-
-- 监听函数原型
-  `function(EnderDragon,block)`
-- 参数：
-  - EnderDragon: `Entity`  
-    末影龙的实体对象
-  
-- 拦截事件：函数返回`false`
-
-<br>
-
 #### `"onRide"` - 生物骑乘
 
 - 监听函数原型

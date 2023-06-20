@@ -118,19 +118,6 @@ Note that this event does not include wither explosion damage.
 
 <br>
 
-#### `"onEnderDragonDestroy"` - Block Broken by ender dragon Event
-
-- Listener function prototype 
-  `function(EnderDragon,block)`
-- Parameters: 
-  - EnderDragon: `Entity`  
-    The EnderDragon entity object.
-- Intercept events: function returns `false`
-
-Note that this event does not include wither explosion damage.
-
-<br>
-
 #### `"onRide"` - Mob Ride Event
 
 - Listener function prototype 
