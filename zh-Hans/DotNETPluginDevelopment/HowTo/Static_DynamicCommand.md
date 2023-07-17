@@ -44,7 +44,7 @@ namespace Example;
 //须继承ICommand接口
 
 [Command("examplecmd")]
-public class ExampleCommand: ICommand
+public class ExampleCommand : ICommand
 {
     public void Execute(CommandOrigin origin, CommandOutput output)
     {
@@ -71,7 +71,7 @@ using LiteLoader.DynamicCommand;
 namespace Example;
 
 [Command("examplecmd", Description = ".NET example command", Permission = CommandPermissionLevel.Any)]
-public class ExampleCommand: ICommand
+public class ExampleCommand : ICommand
 {
     public void Execute(CommandOrigin origin, CommandOutput output)
     {
@@ -104,12 +104,17 @@ using LiteLoader.DynamicCommand;
 namespace Example;
 
 [Command("examplecmd", Description = ".NET example command", Permission = CommandPermissionLevel.Any)]
-public class ExampleCommand: ICommand
+public class ExampleCommand : ICommand
 {
 
     //使用CommandEnumAttribute声明指令枚举
     [CommandEnum]
-    enum ExampleEnum{ add, remove, list };
+    enum ExampleEnum
+    {
+        add,
+        remove,
+        list
+    };
 
     public void Execute(CommandOrigin origin, CommandOutput output)
     {
@@ -139,22 +144,27 @@ using LiteLoader.DynamicCommand;
 namespace Example;
 
 [Command("examplecmd", Description = ".NET example command", Permission = CommandPermissionLevel.Any)]
-public class ExampleCommand: ICommand
+public class ExampleCommand : ICommand
 {
 
     [CommandEnum]
-    enum ExampleEnum{ add, remove, list };
+    enum ExampleEnum
+    {
+        add,
+        remove,
+        list
+    };
 
     //使用CommandParameterAttribute定义指令参数
     [CommandParameter(ParamType.Enum)]
-    ExampleEnum Mode{ get; set; }
+    ExampleEnum Mode { get; set; }
 
     [CommandParameter(ParamType.Int)]
-    int Count{ get; set; }
+    int Count { get; set; }
 
     public void Execute(CommandOrigin origin, CommandOutput output)
     {
-        Console.WriteLine($"Mode: {Mode},Count: {Count}");
+        Console.WriteLine($"Mode: {Mode}, Count: {Count}");
     }
 }
 ```
@@ -181,22 +191,27 @@ using LiteLoader.DynamicCommand;
 namespace Example;
 
 [Command("examplecmd", Description = ".NET example command", Permission = CommandPermissionLevel.Any)]
-public class ExampleCommand: ICommand
+public class ExampleCommand : ICommand
 {
 
     [CommandEnum]
-    enum ExampleEnum{ add, remove, list };
+    enum ExampleEnum
+    {
+        add,
+        remove,
+        list
+    };
 
     //使用CommandParameterAttribute定义指令参数
     [CommandParameter(ParamType.Enum)]
-    ExampleEnum Mode{ get; set; }
+    ExampleEnum Mode { get; set; }
 
     [CommandParameter(ParamType.Int)]
-    int Count{ get; set; }
+    int Count { get; set; }
 
     public void Execute(CommandOrigin origin, CommandOutput output)
     {
-        Console.WriteLine($"Mode: {Mode},Count: {Count}");
+        Console.WriteLine($"Mode: {Mode}, Count: {Count}");
     }
 }
 ```
@@ -206,14 +221,13 @@ public class ExampleCommand: ICommand
 using LiteLoader.DynamicCommand;
 using Example;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    class Plugin
+    public static void OnPostInit()
     {
-        public static void OnPostInit()
-        {
-            DynamicCommand.RegisterCommand<ExampleCommand>();
-        } 
+        DynamicCommand.RegisterCommand<ExampleCommand>();
     }
 }
 ```
@@ -230,7 +244,7 @@ namespace PluginMain
 
 <br>
 
->**不同的指令参数组合可形成指令的不同重载形式**。每一个指令参数都具有一个或多个指令重载标识。若未在 `CommandParameterAttribute` 中指明 `OverloadId` 属性，则指令参数的默认重载标识为 `0` 。使用 `CommandOverloadIdAttribute` 可以为参数指明多个重载标识。标识可以为任意 `Int32` 值，LL.NET将会把具有相同重载表示的指令参数添加到同一个指令重载中。
+>**不同的指令参数组合可形成指令的不同重载形式**。每一个指令参数都具有一个或多个指令重载标识。若未在 `CommandParameterAttribute` 中指明 `OverloadId` 属性，则指令参数的默认重载标识为 `0` 。使用 `CommandOverloadIdAttribute` 可以为参数指明多个重载标识。标识可以为任意 `System.Int32` 值，LL.NET将会把具有相同重载表示的指令参数添加到同一个指令重载中。
 
 <br>
 
@@ -248,28 +262,33 @@ using LiteLoader.DynamicCommand;
 namespace Example;
 
 [Command("examplecmd", Description = ".NET example command", Permission = CommandPermissionLevel.Any)]
-public class ExampleCommand: ICommand
+public class ExampleCommand : ICommand
 {
 
     [CommandEnum]
-    enum ExampleEnum{ add, remove, list };
+    enum ExampleEnum
+    {
+        add,
+        remove,
+        list
+    };
 
 
 
     [CommandParameter(ParamType.Enum, 
-     OverloadId = 0,
-     /*使用CommandParameterOption.EnumAutocompleteExpansion将枚举参数展开*/
-     Option = CommandParameterOption.EnumAutocompleteExpansion
-     )]
+        OverloadId = 0,
+        /*使用CommandParameterOption.EnumAutocompleteExpansion将枚举参数展开*/
+        Option = CommandParameterOption.EnumAutocompleteExpansion
+    )]
     [CommandParameterOverload(1)]
 
-    ExampleEnum Mode{ get; set; }
+    ExampleEnum Mode { get; set; }
 
 
 
     [CommandParameter(ParamType.Int, OverloadId = 1)]
 
-    int Count{ get; set; }
+    int Count { get; set; }
 
 
     //   此时的指令重载列表
@@ -307,15 +326,14 @@ public class ExampleCommand: ICommand
 using LiteLoader.DynamicCommand;
 using Example;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    class Plugin
+    public static void OnPostInit()
     {
-        public static void OnPostInit()
-        {
-            DynamicCommand.RegisterCommand<ExampleCommand>();
-        } 
-    }
+        DynamicCommand.RegisterCommand<ExampleCommand>();
+    } 
 }
 ```
 
@@ -349,7 +367,7 @@ namespace Example;
 //使用CommandEmptyOverloadAttribute指明此指令具有空重载
 [CommandEmptyOverload]
 
-public class KillAllPlayersCommand: Icommand
+public class KillAllPlayersCommand : Icommand
 {
     public void Execute(CommandOrigin origin, CommandOutput output)
     {
@@ -393,7 +411,7 @@ namespace Example;
 //使用CommandEmptyOverloadAttribute指明此指令具有空重载
 [CommandEmptyOverload]
 
-public class ExampleCommand: Icommand
+public class ExampleCommand : Icommand
 {
 
     //设置为可选
@@ -401,7 +419,7 @@ public class ExampleCommand: Icommand
     //现阶段并未实现查询参数是否被设置的方法
     //使用指令重载时可能会导致同样的状况
     [CommandParameter(ParamType.Int, IsMandatory = false)]
-    int Test{ get; set; }
+    int Test { get; set; }
 
     public void Execute(CommandOrigin origin, CommandOutput output)
     {
@@ -434,7 +452,7 @@ namespace Example;
 
 
 [Command("examplecmd")]
-public class ExampleCommand: Icommand, ICommandEvent
+public class ExampleCommand : Icommand, ICommandEvent
 {
     public void Execute(CommandOrigin origin, CommandOutput output)
     {
@@ -479,7 +497,7 @@ namespace Example;
 
 
 [Command("examplecmd")]
-public class ExampleCommand: Icommand, ICommandEvent
+public class ExampleCommand : Icommand, ICommandEvent
 {
     public void Execute(CommandOrigin origin, CommandOutput output)
     {

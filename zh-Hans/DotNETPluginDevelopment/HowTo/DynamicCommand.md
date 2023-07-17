@@ -193,7 +193,7 @@
 ## 指令回调函数
 
 上文提到的 **指令回调函数** 是一个比较复杂的回调函数，下面对其中的各项参数进行一些解释  
-指令回调函数原型： `DynamicCommand.CallBackFn(cmd,origin,output,results)`
+指令回调函数原型： `DynamicCommand.CallBackFn(cmd, origin, output, results)`
 
 #### 参数 `cmd` ： 自身的指令对象
 
@@ -201,78 +201,48 @@
 
 #### 参数 `origin` ：命令的执行者
 
-参数 `origin`的类型为 `CommandOrigin`。此对象表示此次命令的执行者，通过这个对象，可以对执行者进行一些操作  
-对于某个特定的 `CommandOrigin` 对象`origin`，有以下这些属性
+参数 `origin`的类型为 `MC.CommandOrigin`。此对象表示此次命令的执行者，通过这个对象，可以对执行者进行一些操作  
+对于某个特定的 `MC.CommandOrigin` 对象`origin`，有以下这些属性
 
 | 属性         | 含义                   | 类型         |
 | ------------ | ---------------------- | ------------ |
-| origin.IsValid     | （可空）       | `bool` |
-| origin.OriginType     | 指令执行主体类型（可空）    | `CommandOriginType`     |
-| origin.SourceSubId      | （可空）  | `byte`   |
-| origin.IsSelectorExpansionAllowed | （可空）  | `bool`     |
-| origin.CanUseCommandsWithoutCheatsEnabled   | （可空）  | `bool`     |
-| origin.IsWorldBuilder   |（可空）  | `bool`     |
-| origin.HasTellPerms |（可空）  | `bool`     |
-| origin.HasChatPerms   |（可空）  | `bool`     |
-| origin.PermissionsLevel   | （可空） | `CommandPermissionLevel`     |
+| origin.IsValid     | （可空）       | `System.Boolean` |
+| origin.OriginType     | 指令执行主体类型（可空）    | `MC.CommandOriginType`     |
+| origin.SourceSubId      | （可空）  | `System.Byte`   |
+| origin.IsSelectorExpansionAllowed | （可空）  | `System.Boolean`     |
+| origin.CanUseCommandsWithoutCheatsEnabled   | （可空）  | `System.Boolean`     |
+| origin.IsWorldBuilder   |（可空）  | `System.Boolean`     |
+| origin.HasTellPerms |（可空）  | `System.Boolean`     |
+| origin.HasChatPerms   |（可空）  | `System.Boolean`     |
+| origin.PermissionsLevel   | （可空） | `MC.CommandPermissionLevel`     |
 | origin.UUID | （可空） | `MC.Mce.UUID`     |
-| origin.SourceId   |（可空）  | `NetworkIdentifier`     |
-| origin.Identity   | （可空） | `CommandOriginIdentity`     |
-| origin.OutputReceiver | （可空） | `CommandOrigin`     |
-| origin.CursorHitPos   | （可空） | `Vec3`     |
-| origin.CursorHitBlockPos   |（可空）  | `BlockPos`     |
-| origin.Entity   | 执行指令的实体（可空）| `Actor`     |
-| origin.Dimension | 指令执行主体的维度（可空） | `Dimension`     |
-| origin.Level   | （可空） | `Level`     |
-| origin.Rotation   | 执行指令的实体的旋转角度（可空） | `Vec2`     |
-| origin.WorldPosition | 指令执行主体的坐标（可空） | `Vec3`     |
-| origin.BlockPosition   | 指令执行主体的方块坐标（可空） | `BlockPos`     |
-| origin.Name   | 指令执行主体的名称（可空） | `string`     |
-| origin.RequestId |（可空）  | `string`     |
-| origin.Player   | 执行指令的玩家（可空） | `ServerPlayer`     |
+| origin.SourceId   |（可空）  | `MC.NetworkIdentifier`     |
+| origin.Identity   | （可空） | `MC.CommandOriginIdentity`     |
+| origin.OutputReceiver | （可空） | `MC.CommandOrigin`     |
+| origin.CursorHitPos   | （可空） | `MC.Vec3`     |
+| origin.CursorHitBlockPos   |（可空）  | `MC.BlockPos`     |
+| origin.Entity   | 执行指令的实体（可空）| `MC.Actor`     |
+| origin.Dimension | 指令执行主体的维度（可空） | `MC.Dimension`     |
+| origin.Level   | （可空） | `MC.Level`     |
+| origin.Rotation   | 执行指令的实体的旋转角度（可空） | `MC.Vec2`     |
+| origin.WorldPosition | 指令执行主体的坐标（可空） | `MC.Vec3`     |
+| origin.BlockPosition   | 指令执行主体的方块坐标（可空） | `MC.BlockPos`     |
+| origin.Name   | 指令执行主体的名称（可空） | `System.String`     |
+| origin.RequestId |（可空）  | `System.String`     |
+| origin.Player   | 执行指令的玩家（可空） | `MC.ServerPlayer`     |
 
 #### 参数 `output` ：向命令执行者输出命令的执行结果
 
-参数`output`的类型为`CommandOutput` 对象。通过这个对象，可以向命令执行者输出命令的执行结果。  
-对于某个特定的 `CommandOutput` 对象`output`，有以下这些属性
+参数`output`的类型为`MC.CommandOutput` 对象。通过这个对象，可以向命令执行者输出命令的执行结果。  
+对于某个特定的 `MC.CommandOutput` 对象`output`，有以下这些属性
 
 | 属性         | 含义                   | 类型         |
 | ------------ | ---------------------- | ------------ |
-| output.OutPutType     | （可空） | `int` |
-| output.IsEmpty     | （可空）   | `bool`     |
-| output.SuccessCount      | （可空）  | `int`   |
-| output.Messages | （可空） | `List<CommandOutputMessage>`     |
-| output.Data   | （可空） | `CommandPropertyBag`     |
-
-对于某个特定的 `CommandOutput` 对象`output`，有以下这些成员方法
-
-##### 输出一条成功信息
-
-`output.Success([str[, coplist]])`
-
-- 参数：
-  - str : `string`  
-    要输出的信息
-  - coplist : `List<CommandOutputParameter>`
-    要替换的参数
-    
-##### 输出一条错误信息
-
-`output.Error(str[, coplist])`
-
-- 参数：
-  - str : `string`  
-    要输出的信息
-  - coplist : `List<CommandOutputParameter>`
-    要替换的参数
-
-##### 输出一条普通信息
-
-`output.AddMessage(str)`
-
-- 参数：
-  - str : `string`  
-    要输出的信息
+| output.OutPutType     | （可空） | `System.Int32` |
+| output.IsEmpty     | （可空）   | `System.Boolean`     |
+| output.SuccessCount      | （可空）  | `System.Int32`   |
+| output.Messages | （可空） | `System.Collections.Generic.List<CommandOutputMessage>`     |
+| output.Data   | （可空） | `MC.CommandPropertyBag`     |
 
 ## 示例
 
@@ -285,65 +255,64 @@ C#
 using System;
 using LiteLoader.DynamicCommand;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    class Plugin
+    public static void OnPostInit()
     {
-        public static void OnPostInit()
-        {
 
-            //创建新动态指令实例
-            var cmd = DynamicCommand.CreateCommand("testcmd", "This is the command description", CommandPermissionLevel.Any);
+        //创建新动态指令实例
+        DynamicCommandInstance cmd = DynamicCommand.CreateCommand("testcmd", "This is the command description", CommandPermissionLevel.Any);
 
-            //设置指令别名
-            cmd.SetAlias("testcmdalias");
+        //设置指令别名
+        cmd.SetAlias("testcmdalias");
 
-            //新增指令枚举
-            cmd.SetEnum("optionsadd", new() {"add", "remove"});
+        //新增指令枚举
+        cmd.SetEnum("optionsadd", new() { "add", "remove" });
 
-            cmd.SetEnum("optionslist", new(){"list"});
+        cmd.SetEnum("optionslist", new() { "list" });
 
-            //设置指令参数
-            cmd.Mandatory("testenum", DynamicCommand.ParameterType.Enum, "optionsadd", "param id", CommandParameterOption.EnumAutocompleteExpansion);
+        //设置指令参数
+        cmd.Mandatory("testenum", DynamicCommand.ParameterType.Enum, "optionsadd", "param id", CommandParameterOption.EnumAutocompleteExpansion);
             
-            cmd.Mandatory("testenum", DynamicCommand.ParameterType.Enum, "optionslist", "param id", CommandParameterOption.EnumAutocompleteExpansion);
+        cmd.Mandatory("testenum", DynamicCommand.ParameterType.Enum, "optionslist", "param id", CommandParameterOption.EnumAutocompleteExpansion);
             
-            cmd.Mandatory("teststring", DynamicCommand.ParameterType.String);
+        cmd.Mandatory("teststring", DynamicCommand.ParameterType.String);
 
 
-            //设置指令重载
-            cmd.AddOverload(new List<string> () {"optionsadd", "teststring"});
+        //设置指令重载
+        cmd.AddOverload(new List<string>() {"optionsadd", "teststring"});
             
-            cmd.AddOverload(new List<string> () {"optionslist"});
+        cmd.AddOverload(new List<string>() {"optionslist"});
 
 
-            //设置指令回调
-            cmd.SetCallback((command,origin,output,results) => {
-                switch(results["testenum"].AsString())
+        //设置指令回调
+        cmd.SetCallback((command, origin, output, results) => {
+            switch (results["testenum"].AsString())
+            {
+                case "add":
                 {
-                    case "add":
-                    {
-                        output.Success($"Add - { results["testString"].AsString() }");
-                    }
+                    output.Success($"Add - { results["testString"].AsString() }");
                     break;
-                    case "remove":
-                    {
-                        output.Success($"Remove - { results["testString"].AsString() }");
-                    }
+                }
+                case "remove":
+                {
+                    output.Success($"Remove - { results["testString"].AsString() }");
                     break;
-                    case "list":
-                    {
-                        output.Success("List");
-                    }
+                }
+                case "list":
+                {
+                    output.Success("List");
                     break;
-                    default:
+                }
+                default:
                     break;
                 }
             });
 
             //安装指令
             DynamicCommand.Setup(cmd);
-        }
     }
 }
 ```

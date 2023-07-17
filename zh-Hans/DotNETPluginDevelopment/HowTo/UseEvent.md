@@ -20,7 +20,7 @@
 
 <br>
 
->订阅一个事件的方式如下（以 [PlayerUseItemOnEvent](../APIs/Namespace/LiteLoader.Event/Class/PlayerUseItemOnEvent.md) 为例）：
+>订阅一个事件的方式如下（以 `LiteLoader.Event.PlayerUseItemOnEvent` 为例）：
 
 <br>
 
@@ -29,29 +29,28 @@ C#
 using System;
 using LiteLoader.Event;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    class Plugin
+    public static void OnPostInit()
     {
-        public static void OnPostInit()
+        PlayerUseItemOnEvent.Subscribe(e => 
         {
-            PlayerUseItemOnEvent.Subscribe(ev => 
-            {
-                Console.WriteLine($"Player: {ev.Player.Name} use item on block:{ev.BlockInstance.Position}");
+            Console.WriteLine($"Player: {e.Player.Name} use item on block: {e.BlockInstance.Position}");
 
-                //参见Tip
-                ev.Dispose();
+            //参见Tip
+            e.Dispose();
 
-                return true;
-            });
-        }
+            return true;
+        });
     }
 }
 ```
 
 >[!TIP]
 >
->及时调用Dispose可以小幅度地提升效率，减少clr启用新线程析构对象带来的开销。
+>及时调用Dispose可以小幅度地提升效率，减少CLR启用新线程析构对象带来的开销。
 
 <br>
 
@@ -61,7 +60,7 @@ namespace PluginMain
 
 <br>
 
->以引用的方式订阅一个事件的方式如下（以 [PlayerChatEvent](../APIs/Namespace/LiteLoader.Event/Class/PlayerChatEvent.md) 为例）：
+>以引用的方式订阅一个事件的方式如下（以 `LiteLoader.Event.PlayerChatEvent` 为例）：
 
 <br>
 
@@ -70,35 +69,34 @@ C#
 using System;
 using LiteLoader.Event;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    class Plugin
+    public static void OnPostInit()
     {
-        public static void OnPostInit()
+        PlayerChatEvent.Subscribe_Ref(e => 
         {
-            PlayerChatEvent.Subscribe_Ref(ev => 
-            {
 
-                ev.Message = "你猜猜我说了什么？";
+            e.Message = "你猜猜我说了什么？";
 
-                ev.Dispose();
+            e.Dispose();
 
-                return true;
-            });
+            return true;
+        });
 
 
-            //下一个事件
-            PlayerChatEvent.Subscribe_Ref(ev => 
-            {
+        //下一个事件
+        PlayerChatEvent.Subscribe_Ref(e => 
+        {
 
-                //此时Message已经被修改了
-                Console.WriteLine(ev.Message);
+            //此时Message已经被修改了
+            Console.WriteLine(e.Message);
 
-                ev.Dispose();
+            e.Dispose();
 
-                return true;
-            });
-        }
+            return true;
+        });
     }
 }
 ```
@@ -120,22 +118,21 @@ C#
 using System;
 using LiteLoader.Event;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    class Plugin
+    public static void OnPostInit()
     {
-        public static void OnPostInit()
+        PlayerUseItemOnEvent.EventListener listener = PlayerUseItemOnEvent.Subscribe(e => 
         {
-            var listener = PlayerUseItemOnEvent.Subscribe(ev => 
-            {
-                ev.Dispose();
-                return true;
-            });
+            e.Dispose();
+            return true;
+        });
 
-            PlayerUseItemOnEvent.Unsubscribe(listener);
+        PlayerUseItemOnEvent.Unsubscribe(listener);
 
-            //或者直接使用listener.Remove(),效果相同。
-        }
+        //或者直接使用listener.Remove(),效果相同。
     }
 }
 ```
@@ -157,21 +154,20 @@ C#
 using System;
 using LiteLoader.Event;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    class Plugin
+    public static void OnPostInit()
     {
-        public static void OnPostInit()
-        {
 
-            var func = (PlayerJoinEvent ev) => { Console.WriteLine(ev.Player.Name); }
+        Action<PlayerJoinEvent> func = e => Console.WriteLine(e.Player.Name);
 
-            //订阅事件
-            PlayerJoinEvent += func;
-            //取消订阅事件
-            PlayerJoinEvent -= func;
+        //订阅事件
+        PlayerJoinEvent += func;
+        //取消订阅事件
+        PlayerJoinEvent -= func;
 
-        }
     }
 }
 ```
@@ -197,20 +193,19 @@ C#
 using System;
 using LiteLoader.Event;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    class Plugin
+    public static void OnPostInit()
     {
-        public static void OnPostInit()
+
+        PlayerEatEvent += e =>
         {
-
-            PlayerEatEvent += ev =>
-            {
-                ev.Player.SendText("不让你吃！");
-                return false;
-            }
-
+            e.Player.SendText("不让你吃！");
+            return false;
         }
+
     }
 }
 ```

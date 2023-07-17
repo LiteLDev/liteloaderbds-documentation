@@ -15,7 +15,7 @@
 
 ## 定义简单插件入口
 
->定义简单入口只需要以下几个步骤：定义PluginMain命名空间 → 定义Plugin类 → 实现OnPostInit静态方法。
+>定义简单入口只需要以下几个步骤：定义PluginMain命名空间 → 定义Plugin静态类 → 实现公共OnPostInit静态方法。
 
 <br>
 
@@ -23,15 +23,14 @@ C#
 ```cs
 using System;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    public class Plugin
+    //插件入口函数
+    public static void OnPostInit()
     {
-        //插件入口函数
-        public static void OnPostInit()
-        {
-            Console.WriteLine("Plugin ExampleSimpleEntry loaded!");
-        }
+        Console.WriteLine("Plugin ExampleSimpleEntry loaded!");
     }
 }
 ```
@@ -40,7 +39,7 @@ namespace PluginMain
 
 <br>
 
->可使用位于 [LiteLoader.LL] 命名空间中的 [LLAPI] 类的 [RegisterPlugin] 静态方法注册插件信息。
+>可使用位于 `LiteLoader.LL` 命名空间中的 `LLAPI` 类的 `RegisterPlugin` 静态方法注册插件信息。
 
 <br>
 
@@ -51,16 +50,15 @@ C#
 using System;
 using LiteLoader;
 
-namespace PluginMain
+namespace PluginMain;
+
+internal static class Plugin
 {
-    public class Plugin
+    //插件入口函数
+    public static void OnPostInit()
     {
-        //插件入口函数
-        public static void OnPostInit()
-        {
-            //提供插件名、插件描述、插件版本等信息
-            LLAPI.RegisterPlugin("ExamplePlugin","An example Plugin shows Plugin entry.",new Version(1,0,0));
-        }
+        //提供插件名、插件描述、插件版本等信息
+        LLAPI.RegisterPlugin("ExamplePlugin", "An example Plugin shows Plugin entry.", new Version(1, 0, 0));
     }
 }
 ```
@@ -69,8 +67,8 @@ namespace PluginMain
 
 ## 定义自定义插件入口
 
->自定义插件入口不必受限制于命名空间与类名，通过继承 [LiteLoader.NET](zh_CN/NET/APIs/Namespace/LiteLoader.NET/LiteLoader.NET.md) 命名空间下的 [IPluginInitializer](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Interface/IPluginInitializer/IPluginInitializer.md) 接口并实现接口属性与方法，即可完成插件入口的定义与插件信息的注册。<br><br> 
-自定义入口需要 [PluginMainAtribute](zh_CN/NET/APIs/Namespace/LiteLoader.NET/Class/PluginMainAttribute/PluginMainAttribute.md) 的配合使用。
+>自定义插件入口不必受限制于命名空间与类名，通过继承 `LiteLoader.NET` 命名空间下的 `IPluginInitializer` 接口并实现接口属性与方法，即可完成插件入口的定义与插件信息的注册。<br><br> 
+自定义入口需要 `PluginMainAtribute` 的配合使用。
 
 <br>
 
@@ -85,20 +83,17 @@ namespace CustomNameSpace;
 //使用PluginMainAttribute提供插件名称
 
 [PluginMain("CustomPlugin")]
-public class CustomPlugin: IPluginInitializer
+public class CustomPlugin : IPluginInitializer
 {
     //提供插件描述
     public string Introduction => "Example plugin for LiteLoader.NET";
 
     //提供插件额外信息
     public Dictionary<string, string> MetaData => new()
-        {
-            {"Something", "..."},
-            {"foo", "bar"}
-        };
-
-    //提供插件版本信息
-    public Version Version => new(2, 3, 3);
+    {
+        { "Something", "..." },
+        { "foo", "bar" }
+    };
 
     //插件入口类初始化完成后会调用的函数
     public void OnInitialize()
