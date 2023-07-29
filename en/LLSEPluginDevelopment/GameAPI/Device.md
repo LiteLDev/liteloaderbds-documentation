@@ -44,13 +44,14 @@ Among them, the operating system type attribute returns a string that records th
 | `Amazon`       | Amazon FireOS                                   |
 | `GearVR`       | Samsung GearVR                                  |
 | `Hololens`     | Microsoft Hololens                              |
-| `Windows10`    | Microsoft Windows (Computer)                    |
+| `WIN10`        | Microsoft Windows (Computer)                    |
 | `Win32`        | Microsoft Win32 (Education Edition?) (Computer) |
 | `TVOS`         | Apple tvOS                                      |
 | `PlayStation`  | Sony PlayStation Host                           |
 | `Nintendo`     | Nintendo Switch Host                            |
 | `Xbox`         | Microsoft Xbox Host                             |
 | `WindowsPhone` | Windows Mobile                                  |
+| `Dedicated`    | Dedicated server (Device os spoofer)            |
 | `Unknown`      | Unknown System                                  |
 
 | Input mode ENUM              |
