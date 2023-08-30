@@ -6,7 +6,7 @@ If you would like to preview the latest official version, please visit [LiteLoad
 
 ## Contribution
 
-If you would like write some pages, please create or modify them in both `/en/` and `/zh-Hans/`.
+If you would like write some pages, please create or modify them in both `/en/` and `/zh_Hans/`.
 
 If you are contributing to the C++-related documentation, please go to [the repository for C++ documentation](https://github.com/LiteLDev/docs-cpp).
 
