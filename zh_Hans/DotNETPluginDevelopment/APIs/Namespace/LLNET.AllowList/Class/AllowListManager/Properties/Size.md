@@ -24,4 +24,4 @@ public:
 
 <br>
 
-[Int32](https://docs.microsoft.com/zh-cn/DotNET/api/system.int32)
+[Int32](https://docs.microsoft.com/DotNET/api/system.int32)

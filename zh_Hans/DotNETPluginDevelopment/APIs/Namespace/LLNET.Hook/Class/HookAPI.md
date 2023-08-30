@@ -18,7 +18,7 @@ public ref class HookAPI abstract
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object) → [HookAPI](HookAPI)
+继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [HookAPI](HookAPI)
 
 <br>
 

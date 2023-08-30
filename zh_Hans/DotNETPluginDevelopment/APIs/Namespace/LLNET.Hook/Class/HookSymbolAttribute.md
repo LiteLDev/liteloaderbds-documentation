@@ -18,7 +18,7 @@ public ref class HookSymbolAttribute: public Attribute
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/zh-cn/DotNET/api/system.attribute) → [HookSymbolAttribute](HookSymbolAttribute)
+继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [HookSymbolAttribute](HookSymbolAttribute)
 
 <br>
 

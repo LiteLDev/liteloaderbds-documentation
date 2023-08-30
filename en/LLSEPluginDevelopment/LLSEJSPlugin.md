@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-Before developing your first plugin, we will need to set up your developer environment (IDE). The choice of software you use to program is yours, but trusted and reliable software is recommended. [Atom](https://atom.io/) is lightweight editor that works well for this tutorial, otherwise [VSCode](https://code.visualstudio.com/) is also a widely used editor with a lot of powerful features.
+Before developing your first plugin, we will need to set up your developer environment (IDE). The choice of software you use to program is yours, but trusted and reliable software is recommended.
 
 You will also need to set up a clean LiteLoaderBDS installation, details on how to install LiteLoaderBDS can be found [here](../Usage). This server will be used to test your plugin.
 

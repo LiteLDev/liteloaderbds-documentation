@@ -31,7 +31,7 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string)  
+  - `name` : [String](https://docs.microsoft.com/DotNET/api/system.string)  
     要添加的玩家名称。
 
 <br>
@@ -57,9 +57,9 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string)  
+  - `name` : [String](https://docs.microsoft.com/DotNET/api/system.string)  
     要添加的玩家名称
-  - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string)  
+  - `xuid` : [String](https://docs.microsoft.com/DotNET/api/system.string)  
     要添加的玩家XUID
 
 <br>
@@ -85,11 +85,11 @@ public:
 ```
 
 - 参数
-  - `name` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string)  
+  - `name` : [String](https://docs.microsoft.com/DotNET/api/system.string)  
     要查找的玩家名称
-  - `xuid` : [String](https://docs.microsoft.com/zh-cn/DotNET/api/system.string)  
+  - `xuid` : [String](https://docs.microsoft.com/DotNET/api/system.string)  
     要查找的玩家XUID
-  - `ignore` : [Boolean](https://docs.microsoft.com/zh-cn/DotNET/api/system.boolean)  
+  - `ignore` : [Boolean](https://docs.microsoft.com/DotNET/api/system.boolean)  
     是否忽略玩家限制
 
 <br>

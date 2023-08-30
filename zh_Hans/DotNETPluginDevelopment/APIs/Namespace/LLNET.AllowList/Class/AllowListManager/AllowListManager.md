@@ -18,7 +18,7 @@ public ref class AllowListManager
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object) → [AllowListManager](AllowListManager)
+继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [AllowListManager](AllowListManager)
    
 <br>
 

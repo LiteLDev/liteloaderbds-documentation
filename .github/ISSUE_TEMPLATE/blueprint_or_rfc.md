@@ -11,4 +11,4 @@ assignees: ''
 
 <!-- A link to the blueprint or RFC in the documentation -->
 
-<https://docs.litebds.com/zh-Hans/#/Blueprints/myblueprint>
+<https://docs.litebds.com/zh_Hans/Blueprints/LiteLoaderBDS3>

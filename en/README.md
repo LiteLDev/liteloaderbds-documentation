@@ -8,7 +8,7 @@
 
 **LiteLoaderBDS** is a plugin loader for the **Bedrock Edition exclusive server software** (hereafter referred to as **BDS**) for Minecraft, providing powerful cross-language scripting plugin support capabilities and stable API support.
 
-👉[click here](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/README_zh-cn)👈 for a more detailed description.
+👉[click here](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/README.md)👈 for a more detailed description.
 
 ## 🔨 How do I install and use LiteLoaderBDS?
 

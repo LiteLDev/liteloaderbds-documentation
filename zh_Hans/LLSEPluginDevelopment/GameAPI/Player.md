@@ -1779,7 +1779,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#attack)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#attack)
 
 
 #### 模拟破坏
@@ -1798,7 +1798,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#breakblock)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#breakblock)
 
 
 #### 模拟断开连接
@@ -1827,7 +1827,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#interact)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#interact)
 
 
 #### 模拟跳跃
@@ -1837,7 +1837,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#jump)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#jump)
 
 
 #### 模拟看向某方块或实体
@@ -1858,7 +1858,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#lookatblock)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#lookatblock)
 
 
 #### 模拟设置身体角度
@@ -1873,7 +1873,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#lookatblock)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#lookatblock)
 
 
 #### 相对玩家坐标系移动
@@ -1917,7 +1917,7 @@
 - 返回值：是否请求移动成功
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#movetolocation)  
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#movetolocation)  
 注：如需自动寻路，请考虑使用 `模拟导航移动` 
 
 #### 模拟导航移动
@@ -1937,7 +1937,7 @@
 - 返回值：是否能到达指定位置以及导航路径，结构：{isFullPath:`Boolean`,path:`Number[3][]`}
 - 返回值类型：`Object`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#navigatetoblock)  
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#navigatetoblock)  
 返回值示例：
 ```js
 {
@@ -2003,7 +2003,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#navigatetolocations)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#navigatetolocations)
 
 
 #### 模拟使用物品
@@ -2027,7 +2027,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#useitem)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#useitem)
 
 
 #### 模拟停止破坏方块
@@ -2037,7 +2037,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopbreakingblock)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopbreakingblock)
 
 
 #### 模拟停止交互
@@ -2047,7 +2047,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopinteracting)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopinteracting)
 
 
 #### 模拟停止移动
@@ -2057,7 +2057,7 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopmoving)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopmoving)
 
 
 #### 模拟停止使用物品
@@ -2067,5 +2067,5 @@
 - 返回值：是否成功模拟操作
 - 返回值类型：`Boolean`
 
-参考：[mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopusingitem)
+参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopusingitem)
 

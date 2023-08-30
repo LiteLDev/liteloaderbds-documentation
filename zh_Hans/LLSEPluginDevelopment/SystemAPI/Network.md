@@ -540,7 +540,7 @@ server.onGet("/hello(.+)", (req, resp) => {
 	resp.reason = "Not Found";
 	resp.write("Not Found");
 }).onGet("/test-redirect", (req, resp) => {
-	// https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Redirections
+	// https://developer.mozilla.org/docs/Web/HTTP/Redirections
 	resp.status = 301;
 	resp.reason = "Moved Permanently";
 	resp.setHeader("Location", "https://github.com");

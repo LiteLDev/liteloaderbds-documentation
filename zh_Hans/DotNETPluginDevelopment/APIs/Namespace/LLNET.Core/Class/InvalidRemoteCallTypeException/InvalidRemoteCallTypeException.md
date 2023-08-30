@@ -20,7 +20,7 @@ public ref class InvalidRemoteCallTypeException
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object) → [Exception](https://docs.microsoft.com/zh-cn/DotNET/api/system.exception) → [LiteLoaderDotNETException](../LiteLoaderDotNETException/LiteLoaderDotNETException) → 
+继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Exception](https://docs.microsoft.com/DotNET/api/system.exception) → [LiteLoaderDotNETException](../LiteLoaderDotNETException/LiteLoaderDotNETException) → 
 [InvalidRemoteCallTypeException](InvalidRemoteCallTypeException)
 
 ## 构造函数

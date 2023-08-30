@@ -4,7 +4,7 @@
 
 <br>
 
-> 检测到 [BDS](https://www.minecraft.net/en-us/download/server/bedrock) 发生的错误而引发的异常基类。
+> 检测到 [BDS](https://www.minecraft.net/download/server/bedrock) 发生的错误而引发的异常基类。
 
 <br>
 
@@ -20,7 +20,7 @@ public ref class MCException
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object) → [Exception](https://docs.microsoft.com/zh-cn/DotNET/api/system.exception) → [LiteLoaderDotNETException](../LiteLoaderDotNETException/LiteLoaderDotNETException) → 
+继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Exception](https://docs.microsoft.com/DotNET/api/system.exception) → [LiteLoaderDotNETException](../LiteLoaderDotNETException/LiteLoaderDotNETException) → 
 [MCException](MCException)
 
 ## 构造函数

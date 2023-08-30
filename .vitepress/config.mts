@@ -326,7 +326,7 @@ export default defineConfig({
         ],
 
         editLink: {
-          pattern: 'https://github.com/Hosiyume/ll-docs/edit/refactor/vitepress/docs/:path',
+          pattern: 'https://github.com/LiteLDev/Documentation/edit/refactor/vitepress/docs/:path',
           text: 'Edit this page on GitHub'
         },
 
@@ -752,7 +752,7 @@ export default defineConfig({
         ],
 
         editLink: {
-          pattern: 'https://github.com/Hosiyume/ll-docs/edit/refactor/vitepress/docs/:path',
+          pattern: 'https://github.com/LiteLDev/Documentation/edit/refactor/vitepress/docs/:path',
           text: '在GitHub上编辑此页面'
         },
 

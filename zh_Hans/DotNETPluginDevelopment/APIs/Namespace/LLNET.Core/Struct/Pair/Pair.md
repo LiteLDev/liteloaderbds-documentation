@@ -30,7 +30,7 @@ TValue
 <br>
 
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object) → [ValueType](https://docs.microsoft.com/zh-cn/DotNET/api/system.valuetype) → [Pair<TKey,TValue>](Pair)
+继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [ValueType](https://docs.microsoft.com/DotNET/api/system.valuetype) → [Pair<TKey,TValue>](Pair)
 
 <br>
 

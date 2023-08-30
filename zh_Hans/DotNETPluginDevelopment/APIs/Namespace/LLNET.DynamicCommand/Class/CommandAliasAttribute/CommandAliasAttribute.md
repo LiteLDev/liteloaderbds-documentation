@@ -22,7 +22,7 @@ public ref class PluginMainAttribute
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/zh-cn/DotNET/api/system.attribute) → [PluginMainAttribute](CommandAliasAttribute)
+继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [PluginMainAttribute](CommandAliasAttribute)
    
 <br>
 

@@ -18,7 +18,7 @@ ref class CustomForm : public ClassTemplate<CustomForm, ::Form::CustomForm>, pub
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object) → [ClassTemplate<REFCLASS,NATIVECLASS>] → [CustomForm](CustomForm)
+继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [ClassTemplate<REFCLASS,NATIVECLASS>] → [CustomForm](CustomForm)
 
 <br>
 

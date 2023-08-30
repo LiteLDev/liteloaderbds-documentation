@@ -32,7 +32,7 @@
 
 ### 基本格式
 
-按照<https://www.conventionalcommits.org/en/v1.0.0/>执行。
+按照<https://www.conventionalcommits.org/zh-hans/>执行。
 
 示例：
 

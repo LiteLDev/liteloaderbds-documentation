@@ -22,7 +22,7 @@ public ref class CommandParameterAttribute
 ```
 <br>
 
-继承 [Object](https://docs.microsoft.com/zh-cn/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/zh-cn/DotNET/api/system.attribute) → [CommandParameterAttribute](CommandParameterAttribute)
+继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [CommandParameterAttribute](CommandParameterAttribute)
    
 <br>
 
