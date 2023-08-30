@@ -107,7 +107,7 @@ Among them, **ordinary text** will be output as it is when output, while other o
 For example: you call `logger.error("Fail to transport the player")`  
 The result of the log output is: 
 
-```log
+```txt
 [2021-05-21 19:41:03 Error] Fail to transport the player
 ```
 
@@ -132,7 +132,7 @@ By default, message headers are empty by default, i.e. output without headers.
 For example: set a custom header as `logger.setTitle("LiteLoader")`  
 Then the following log output will become like: 
 
-```log
+```txt
 20:05:26 ERROR [LiteLoader] Fail to transport the player
 ```
 

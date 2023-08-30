@@ -7,10 +7,6 @@ The following objects and APIs provide the basic BDS packet interface for script
 The documentation does not list the packet ID and its structure, please check it yourself.
 
 
-## 目录
-- 🔉 [Packet Object API](#🔉-Packet-Object-api)
-- 🔌 [Binary stream object API](#🔌-Binary-stream-object-api)
-
 <br>
 
 ## 🔉 Packet Object API

@@ -28,11 +28,11 @@ First you need to install Lip, please refer to the [Lip documentation](https://d
 
 First, you need to specify the working path, which is the directory where the BDS and LiteLoaderBDS need to be placed. If you don't know what to choose, feel free to create a new folder and select it.
 
-![LipUI Main Window](../assets/img/lipui_main_window.png)
+![LipUI Main Window](/assets/img/lipui_main_window.png)
 
 Then, go to the package marketplace and select the package you need to install. In order to run LiteLoaderBDS, you need to install BDS and LiteLoaderBDS. If you would like to experience the convenience of one-click installation, you can install **Starter Pack**, which contains the most commonly used plugins as well as LiteLoaderBDS and BDS.
 
-![LipUI Registry](../assets/img/lipui_registry.png)
+![LipUI Registry](/assets/img/lipui_registry.png)
 
 There are also various plugins in the package marketplace that you can install according to your needs. For example, you can install AntiToolbox to prevent players from using Toolbox, LLAntiCheat to prevent players from using plugins, and LLEssentials to add online basics to the server.
 
@@ -115,8 +115,9 @@ wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/in
 
 When a new Minecraft bedrock version is released, you need to update to make the server side adapt to the latest client.
 
-> [!WARNING]
-> Please note that some plugins, maps, etc. have additional requirements for the update operation, which may result in data corruption if you follow the steps below. Please do your data backup work.
+::: warning
+Please note that some plugins, maps, etc. have additional requirements for the update operation, which may result in data corruption if you follow the steps below. Please do your data backup work.
+:::
 
 ### Updating BDS on Windows
 
@@ -168,8 +169,9 @@ If BDS is not updated, but LiteLoaderBDS is updated, you must also follow the ab
 
 There are two types of plugins: native plugins and scripted plugins. Native plugins are compiled native plugins with better performance, but they cannot be re-enabled or disabled after the server is started. Scripted plugins are written in JavaScript or Lua and can be managed flexibly with better security, but have poorer performance.
 
-> [!WARNING]
-> To ensure that most plugins work properly, set `online-mode` to `true` in `server.properties` and `server-authoritative-movement` to `server-auth` or `server-auth-with- rewind`.
+::: warning
+To ensure that most plugins work properly, set `online-mode` to `true` in `server.properties` and `server-authoritative-movement` to `server-auth` or `server-auth-with- rewind`.
+:::
 
 ### Find your favorite plugins
 
@@ -255,8 +257,9 @@ You can manage these plugins with the following listed commands.
 * Do not uninstall or reload plugins when the server is not yet started or when there are players in the server, or the server will be at risk of crashing.
 * When a plugin is loaded, the `onServerStarted` event and the `onPlayerJoin` event for all players will be fired in that plugin.
 
-> [!WARNING]
-> Do not load, unload, or reload any plugins in a production environment.
+::: warning
+Do not load, unload, or reload any plugins in a production environment.
+:::
 
 ## 🎨 Installing add-on packages
 

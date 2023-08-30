@@ -69,7 +69,7 @@ This is an upgraded version of the above function; it supports color output.
 
 #### Show results: 
 
-![ColorLogExample](../../../assets/ColorLog.png)
+![ColorLogExample](/assets/ColorLog.png)
 
 <br>
 

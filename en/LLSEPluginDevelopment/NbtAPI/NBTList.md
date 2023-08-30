@@ -7,7 +7,7 @@ The interface of the object can perform some operations unique to the NBT list.
 
 #### Parse From an Existing NBT Object
 
-See [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [NbtCompound - Tag Type](/LLSEPluginDevelopment/NbtAPI/NBTCompound.md) documentation.
+See [NbtList - List Type](NBTList) and [NbtCompound - Tag Type](NBTCompound) documentation.
 
 <br>
 
@@ -17,7 +17,7 @@ See [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [NbtComp
 [Lua] `NbtList([data])`
 
 - Parameter: 
-  - data: Array<NBT object> (optional parameter)   
+  - data: Array\<NBT object\> (optional parameter)   
     Pass in an array of NBT objects. Arrays are allowed to contain other array/object structures, but the contents must all be NBT objects
 - Return value: The generated NBT object.
 - Return value type: `NbtList`
