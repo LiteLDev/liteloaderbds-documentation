@@ -98,7 +98,7 @@ Intercept events have no effect on chests, shulker boxes, and workbenches.
     The coordinates of the command block where the command was executed.
   - isMinecart : `bool`  
     Whether the command is executed by a command block minecart.
-  
+
 - Intercept events: function returns `false`
 
 #### `"onContainerChange"` - Container Content Change Event
@@ -150,7 +150,7 @@ There are many different combinations of old item objects and new item objects, 
   - level : `Integer`  
     Updated redstone power levels (0-15).
   - isActive : `Boolean`  
-    Indicates whether the redstone update is active or off.  
+    Indicates whether the redstone update is active or off.
     - If `true`, the redstone became active.
     - if `false`, the redstone became inactive.
 - Intercept events: function returns `false`

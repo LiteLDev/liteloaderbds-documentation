@@ -18,11 +18,11 @@ public ref class PluginMainAttribute
 ```
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [PluginMainAttribute](CommandAliasAttribute)
-   
+ 
 
 ## 示例
 
-[如何：使用静态指令](../../../../../HowTo/Static_DynamicCommand)
+[如何：使用静态命令](../../../../../HowTo/Static_DynamicCommand)
 
 ## 构造函数
 - 

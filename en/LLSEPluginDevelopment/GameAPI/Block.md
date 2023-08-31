@@ -7,7 +7,7 @@ In LLSE, use "block objects" to manipulate and obtain information about a certai
 #### Get From Event or API 
 
 By registering the **event listener** function, or calling some **returning a block object** function, you can get the block object related to the related event given by the BDS
-For details, see [Event listener documentation - EventAPI](../EventAPI/Listen)  
+For details, see [Event listener documentation - EventAPI](../EventAPI/Listen)
 
 #### Obtained by Block Coordinates
 
@@ -168,7 +168,7 @@ Through this function, set the block corresponding to one coordinate to another,
 `mc.spawnParticle(x,y,z,dimid,type)`
 
 - Parameters: 
-  - pos : `IntPos `/ `FloatPos`  
+  - pos : `IntPos` / `FloatPos`  
     Target spawn position (or use x, y, z, dimid to determine block position)
   - type : `String`  
     The name of the particle effect to generate (check the wiki for details)

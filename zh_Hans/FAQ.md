@@ -8,7 +8,7 @@
 
 LiteLoaderBDS支持协议号相同的所有版本。
 
-LiteLoaderBDS会在开服时输出服务器版本及当前协议版本，你也可以通过`/version`指令查询
+LiteLoaderBDS会在开服时输出服务器版本及当前协议版本，你也可以通过`/version`命令查询
 
 ## C++（原生）插件是否支持Minecraft不同版本？
 
@@ -16,7 +16,7 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 
 ## 非原生（JavaScript、Lua、Rust、.NET）插件是否支持Minecraft不同版本？
 
-一般来说支持，除非LiteLoader Script Engine发生重大API改动。
+一般来说支持，除非LiteLoader ScriptEngine发生重大API改动。
 
 ## 插件加载中出现了XXX错误码，怎么办哇？
 
@@ -37,20 +37,20 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 
 * 可能是不同插件注册了同一个命令，请删除部分冲突插件；
 * 可能是一个插件内进行了多次命令注册，请找插件开发者修复问题；
-* 可能是某个插件使用了旧的假指令API，且同时使用了`mc.regPlayerCmd`和`mc.regConsoleCmd`，这导致插件会向BDS注册两次相同的命令，但由于假指令API是基于监听`onPlayerCmd`和`onConsoleCmd`事件实现的，并非使用BDS提供的Overload，所以重复注册两次不会导致BDS出现异常，所以并不会影响使用。
+* 可能是某个插件使用了旧的假命令API，且同时使用了`mc.regPlayerCmd`和`mc.regConsoleCmd`，这导致插件会向BDS注册两次相同的命令，但由于假命令API是基于监听`onPlayerCmd`和`onConsoleCmd`事件实现的，并非使用BDS提供的重载，所以重复注册两次不会导致BDS出现异常，所以并不会影响使用。
 
 ## 服务端崩溃了，怎么办？
 
 请打开`/logs/Crash/`下的崩溃日志文件，查看错误原因。
 
 * 如果日志的前几条都是`bedrock_server_mod.exe`的错误，十有八九就是BDS自身的问题
-* 如果遇到日志中存在LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll，请参考[这里](#崩溃日志中liteloader-dll或liteloader-lua-js-nodejs-dll条目无法正常显示怎么办)
+* 如果遇到日志中存在`LiteLoader.dll`或`LiteLoader.Lua/Js/NodeJs.dll`，请参考[这里](#崩溃日志中liteloader-dll或liteloader-lua-js-nodejs-dll条目无法正常显示怎么办)
 
 ## 客户端区块错误
 
 这是由于假种子与客户端区块预生成导致的  
-如果你遇到这个问题，只需要在`server.properties`中将`client-side-chunk-generation-enabled`改为false或在`plugins/LiteLoader/LiteLoader.json`中将`ClientChunkPreGeneration`禁用
+如果你遇到这个问题，只需要在`server.properties`中将`client-side-chunk-generation-enabled`改为false
 
 ## Imgui相关错误
 
-如果你遇到了崩溃并且崩溃日志里包含Imgui，请将`plugins/LiteLoader/LiteLoader.json`中的`FixBDSCrash`打开
+如果你遇到了崩溃并且崩溃日志里包含`Imgui`，请将`plugins/LiteLoader/LiteLoader.json`中的`FixBDSCrash`打开

@@ -1,6 +1,6 @@
 ## 🎯 维护项目和贡献代码
 
-由于Mojang每次更新BDS时候都会修改代码，导致部分使用Hook机制的底层API失效，因此，加载器也需要跟随版本更新不断进行维护，否则很多功能会逐渐失去效用。
+由于Mojang每次更新BDS时候都会修改代码，导致部分使用钩子机制的底层API失效，因此，加载器也需要跟随版本更新不断进行维护，否则很多功能会逐渐失去效用。
 
 由于相关维护需要较强的技术能力，这方面的社区人才一直处于较为匮乏的状态。  
 因此，如果你有兴趣参与项目的维护和贡献代码，我们绝对非常欢迎
@@ -16,7 +16,7 @@
 #### 有一定的 C++ / 脚本开发能力，使用过 / 有兴趣学习如何使用 ScriptX 跨语言脚本引擎
 
 - 你可以维护LiteLoaderBDS和LiteLoaderBDS脚本引擎的接口层API，修复某些问题，提出改进
-- 你可以帮忙为LiteLoaderBDS和LiteLoaderBDS脚本引擎实现更多的基础设施，类似于完整的网络库、完整的json解析系统等等
+- 你可以帮忙为LiteLoaderBDS和LiteLoaderBDS脚本引擎实现更多的基础设施，类似于完整的网络库、完整的JSON解析系统等等
 
 #### 有较强的 C++ 开发能力，对底层技术有一定掌握
 
@@ -30,7 +30,7 @@
 - 你可以帮忙改进相关底层机制，提高运行效率，也可以贡献代码改进关键部分的算法
 - 你可以为LiteLoaderBDS未来的发展提出你的思考和想法，为未来做个引路者
 
-欢迎各位向`LiteLoaderBDS`项目和`ScriptX`项目做出贡献。你们是LiteLoaderBDS发展的重要支持。  
+欢迎各位向LiteLoaderBDS项目和ScriptX项目做出贡献。你们是LiteLoaderBDS发展的重要支持。  
 只要你愿意，开源社区的大门将永远向你敞开！
 
 ### 具体维护方法举例
@@ -44,8 +44,8 @@
 2. ... **TODO**
 
 3. 为你的IDE配置编译产物自动复制：
-    为了比较方便地对LL源码进行修改后调试，在LL项目的 cmakelist 中设置有编译产物自动复制功能。按如下方法启用：
-    
+    为了比较方便地对LL源码进行修改后调试，在LL项目的 `cmakelist` 中设置有编译产物自动复制功能。按如下方法启用：
+
       - 如果你使用VSCode，在LL项目所在目录下的`.vscode/settings.json`文件中添加如下新配置项：
     
         ```json
@@ -57,16 +57,16 @@
         }
         ```
     
-    
+
       - 如果你使用Clion，在项目的cmake profile中增加条目：
     
         ```
         -DBDS_LOCAL_DEV_ENVIRONMENT_DIR=<本地BDS目录>
         ```
     
-    
-      - 通过此方法，将`BDS_LOCAL_DEV_ENVIRONMENT_DIR`变量设置为你本地测试用的BDS目录（例如`C:/Users/yq/Desktop/BDS`）。在LL编译完成之后，最新的产物dll和pdb文件将被自动复制到BDS目录的对应位置覆盖，以方便开发者在修改代码后进行调试。
-    
+
+      - 通过此方法，将`BDS_LOCAL_DEV_ENVIRONMENT_DIR`变量设置为你本地测试用的BDS目录（例如`C:/Users/Administrator/Desktop/BDS`）。在LL编译完成之后，最新的产物`.dll`和`.pdb`文件将被自动复制到BDS目录的对应位置覆盖，以方便开发者在修改代码后进行调试。
+
 
 #### 维护
 <!--

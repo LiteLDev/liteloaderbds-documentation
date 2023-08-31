@@ -21,7 +21,7 @@ public ref class CustomFormElement abstract
     |||
     |-|-|
     |[Type]|表示自定义表单控件类型的枚举。|
-    
+
 
 ## 属性
 

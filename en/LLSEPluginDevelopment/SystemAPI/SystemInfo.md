@@ -2,7 +2,7 @@
 
 The following APIs provide interfaces to obtain necessary system information:
 
-### Get Current Time String  
+### Get Current Time String
 
 `system.getTimeStr()`
 

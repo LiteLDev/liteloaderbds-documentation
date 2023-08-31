@@ -7,13 +7,13 @@ In LLSE, use "item objects" to manipulate and get information about an item in t
 #### Get From Event or API
 
 Obtain the item object given by BDS by registering the **event listener** function, or calling some **returning item object** functions.
-For details, see [Event listener documentation - EventAPI](../EventAPI/Listen)   
+For details, see [Event listener documentation - EventAPI](../EventAPI/Listen) 
 
 #### Generate New Item Object
 
 Through this function, a new item object is generated based on the given information.
 
-`mc.newItem(name,count)`  
+`mc.newItem(name,count)`
 
 - Parameters: 
   - name : `String`  
@@ -30,7 +30,7 @@ Through this function, clone a new item object based on an existing item object.
 The new item object is not related to the old object.
 For an existing item object item, there are functions:
 
-`item.clone()`  
+`item.clone()`
 
 - Return value: The cloned item object.
 - Return value type: `Item`
@@ -40,7 +40,7 @@ For an existing item object item, there are functions:
 
 Through this function, a new item object is generated using NBT.
 
-`mc.newItem(nbt)`  
+`mc.newItem(nbt)`
 
 - Parameters: 
   - nbt : `NbtCompound`  
@@ -143,12 +143,12 @@ For example, when there is no item in a grid, the item object you get is empty.
 Through this function, according to the item object, a drop entity with the same content is generated at the specified location.
 
 `mc.spawnItem(item,pos)`    
-`mc.spawnItem(item,x,y,z,dimid)`  
+`mc.spawnItem(item,x,y,z,dimid)`
 
 - Parameters: 
   - item : `Item`  
     The item object used to spawn the drop entity.
-  - pos : `IntPos `/ `FloatPos`  
+  - pos : `IntPos` / `FloatPos`  
     A coordinate object where the drop entity spawns (or use x, y, z, dimid to determine spawn position).
 - Return value: The generated drop entity object.
 - Return value type: `Entity`

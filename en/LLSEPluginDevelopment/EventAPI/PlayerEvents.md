@@ -57,7 +57,7 @@ Note: Only some basic information of players can be obtained in this monitoring 
     The player that died.
   - source : `Entity`  
     The entity that dealt the damage that killed the player (may be `Null`).
-  
+
 - Intercept event: cannot be intercepted.
 
 #### `"onPlayerCmd"` - Player Command Execution Event
@@ -259,7 +259,7 @@ Note: The player may trigger this event on the server multiple times in a row.
     The player that is eating.
   - item : `Item`  
     The item being eaten.
-  
+
 - Intercept events: function returns `false`
 
 **Food** here is a broad concept of items, including conventional food, potions, milk, medicines and other items that can be ingested.
@@ -273,7 +273,7 @@ Note: The player may trigger this event on the server multiple times in a row.
     The player that has eaten.
   - item : `Item`  
     The item which has been eaten.
-  
+
 - Intercept events: function returns `false`
 
 #### `"onConsumeTotem"` - Player Consume Totem Event
@@ -299,7 +299,7 @@ Note: The player may trigger this event on the server multiple times in a row.
     Obtained effect amplifier (effect level -1)
   - duration : `Number` 
     Obtained effect duration (ticks)
-  
+
 - Intercept events: function returns `false`
 
 #### `"onEffectRemoved"` - Player Effect Removed Event
@@ -311,7 +311,7 @@ Note: The player may trigger this event on the server multiple times in a row.
     Player with the removed effect.
   - effectName : `String`   
     Removed effect name: **minecraft:effect.EffectName**
-  
+
 - Intercept events: function returns `false`
 
 #### `"onEffectUpdated"` - Player Effect Updated Event
@@ -327,7 +327,7 @@ Note: The player may trigger this event on the server multiple times in a row.
     Obtained effect amplifier (effect level -1)
   - duration : `Number` 
     Obtained effect duration (ticks)
-  
+
 - Intercept events: function returns `false`
 
 #### `"onStartDestroyBlock"` - Player Start Breaking Block Event

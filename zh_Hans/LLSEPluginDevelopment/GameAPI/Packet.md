@@ -2,13 +2,13 @@
 
 下面这些对象与API为脚本提供了基本的BDS数据包接口。 
 
-温馨提示：此类API需要部分逆向基础，了解数据包结构（可通过参考Nukkit，PokcetMine，BDS逆向得知数据包结构）如出现客户端崩溃，为数据包结构错误，并非BUG。   
+温馨提示：此类API需要部分逆向基础，了解数据包结构（可通过参考Nukkit，PokcetMine，BDS逆向得知数据包结构）如出现客户端崩溃，为数据包结构错误，并非BUG。 
 
 文档不列出数据包ID与其结构，请自行查询。
 
 ## 🔉 数据包对象 API
 
-在脚本引擎中，使用「数据包对象」来获取数据包的相关信息。
+在脚本引擎中，使用“数据包对象”来获取数据包的相关信息。
 
 ### 获取一个数据包对象
 
@@ -59,7 +59,7 @@
 
 #### 写入二进制流
 
-`bs.writexxxx(value)`    
+`bs.writexxxx(value)`
 
 - 参数：
   - value : `NULL`  
@@ -92,7 +92,7 @@
 
 #### 通过二进制流构建数据包
 
-`bs.createPacket(pktid)`    
+`bs.createPacket(pktid)`
 
 - 参数：
   - pktid : `Integer`  

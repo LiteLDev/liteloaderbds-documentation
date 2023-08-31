@@ -16,7 +16,7 @@ LiteLoader is installed with the LLMoney plugin, so you can use this interface d
   - xuid : `String`  
     The XUID identifier of the player.
   - value : `Integer`  
-    Amount of money being set.  
+    Amount of money being set.
 - Return value: Whether the setting is successful.
 - Return value type: `Boolean`
 
@@ -42,7 +42,7 @@ LiteLoader is installed with the LLMoney plugin, so you can use this interface d
   - xuid : `String`  
     The XUID identifier of the player.
   - value : `Integer`  
-    The amount of money to add to the player's bank.  
+    The amount of money to add to the player's bank.
 - Return value: Whether the setting is successful.
 - Return value type: `Boolean`
 
@@ -56,7 +56,7 @@ LiteLoader is installed with the LLMoney plugin, so you can use this interface d
   - xuid : `String`  
     The XUID identifier of the player.
   - money : `Integer`  
-    The amount of money to take from the player.  
+    The amount of money to take from the player.
 - Return value: Whether the setting is successful.
 - Return value type: `Boolean`
 
@@ -69,18 +69,18 @@ LiteLoader is installed with the LLMoney plugin, so you can use this interface d
 - Parameters: 
   - xuid1 : `String`  
     The XUID identifier of the paying player.
-    
+
   - xuid2 : `String`  
     The XUID identifier of the player who will receive the payment.
     
     If you are using `Player.transMoney`, target can be `Player`.
-    
+
   - money : `Integer`  
     The amount of money being transferred.  
-  
+
   - note : `String`  
     (Optional) Add some text to this transfer.
-  
+
 - Return value: Whether the transfer is successful.
 
 - Return value type: `Boolean`

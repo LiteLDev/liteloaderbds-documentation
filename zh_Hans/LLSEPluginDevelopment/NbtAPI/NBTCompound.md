@@ -48,7 +48,7 @@ local nbt = NbtCompound({
 
 #### 从 SNBT  字符串生成 NBT 标签对象
 
-`NBT.parseSNBT(snbt)`  
+`NBT.parseSNBT(snbt)`
 
 - 参数：
   - snbt : `String`  
@@ -61,7 +61,7 @@ local nbt = NbtCompound({
 
 #### 从二进制 NBT 数据生成 NBT 标签对象
 
-`NBT.parseBinaryNBT(nbt)`  
+`NBT.parseBinaryNBT(nbt)`
 
 - 参数：
   - nbt : `ByteBuffer`  
@@ -145,7 +145,7 @@ local nbt = NbtCompound({
 `comp.setFloat(key,data)`  
 `comp.setDouble(key,data)`  
 `comp.setByteArray(key,data)`  
-`comp.setString(key,data)`    
+`comp.setString(key,data)`
 
 - 参数：
   - key: `String`   
@@ -158,7 +158,7 @@ local nbt = NbtCompound({
 
 #### 读取键对应的值的具体数据
 
-`comp.getData(key)`  
+`comp.getData(key)`
 
 - 参数：
   - key: `String`   

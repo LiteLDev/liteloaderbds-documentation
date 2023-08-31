@@ -17,7 +17,7 @@ The following APIs provide interfaces to perform some system calls:
 - Return value: Whether the command was successfully started.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback: `function(exitcode,output)`  
+Note: The prototype of the callback function of the parameter callback: `function(exitcode,output)`
 
 - exitcode : `Integer`    
   The process exit code.
@@ -42,7 +42,7 @@ This function works asynchronously. It will not wait for the system to execute t
 - Return value: Whether the process was successfully started.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback: `function(exitcode,output)`  
+Note: The prototype of the callback function of the parameter callback: `function(exitcode,output)`
 
 - exitcode : `Integer`    
   Process exit code.

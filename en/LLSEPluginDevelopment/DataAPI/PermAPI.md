@@ -5,11 +5,11 @@
 If you use Discord, you must know its Role system.  
 Our permission system is similar to Discord's Role system.  
 The whole system can be divided into three parts: `Role`, `Permission`(`PermInstance`) and `PermInfo`.  
-`Role` defines a group of players that have the specified permissions, and `PermInfo` stores the description of all the permissions.  
+`Role` defines a group of players that have the specified permissions, and `PermInfo` stores the description of all the permissions.
 
 Like discord, we also have the default `admin` and `everyone` roles.  
 `admin` is a special role. All the permissions will be enabled by default.  
-`everyone` is a special role. All the players are its members.  
+`everyone` is a special role. All the players are its members.
 
 You can send command `/perm view role admin` to see information of the `admin` role.
 
@@ -57,7 +57,7 @@ By static method:
 - Throw when:
   - Invalid arguments.
   - The name is invalid.
-  
+
 
 ## Class Role
 

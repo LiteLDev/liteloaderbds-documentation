@@ -18,7 +18,7 @@ public ref class LibPathAttribute
 ```
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [LibPathAttribute](LibPathAttribute)
-   
+ 
 
 ## 示例
 

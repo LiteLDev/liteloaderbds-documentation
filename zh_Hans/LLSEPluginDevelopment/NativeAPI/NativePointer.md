@@ -34,7 +34,7 @@
 
 - 参数：
   - int32: `offset`
-    
+
 - 返回值：偏移后指针
 - 返回值类型：`NativePointer`
 
@@ -67,7 +67,7 @@
 获取原始指针地址
 
 `NativePointer.asRawAddress`
-    
+
 - 返回值：以数字形式表示的指针所指地址
 - 返回值类型：`int64`
 
@@ -76,7 +76,7 @@
 获取原始指针地址（16进制字符串）
 
 `NativePointer.asHexAddress`
-    
+
 - 返回值：以十六进制形式表示的指针所指地址
 - 返回值类型：`String`
 

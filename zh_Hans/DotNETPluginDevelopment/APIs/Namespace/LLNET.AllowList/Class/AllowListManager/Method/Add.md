@@ -31,7 +31,7 @@ public:
 - 返回
   - [AllowListManager](../AllowListManager)  
     当前 `AllowListManager` 对象
-  
+
 
 ## Add(String, String)
 
@@ -54,7 +54,7 @@ public:
 - 返回
   - [AllowListManager](../AllowListManager)  
     当前 `AllowListManager` 对象
-  
+
 
 ## Add(String, String, Boolean)
 

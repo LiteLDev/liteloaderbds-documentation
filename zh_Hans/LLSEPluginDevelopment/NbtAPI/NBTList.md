@@ -1,7 +1,7 @@
 ## 📚 NbtList - 列表类型
 
 一个`NbtList`代表一个列表，里面储存了一列 NBT 对象，类似于列表 / 数组这样的数据结构。  
-通过`NbtList`对象的接口，才可以进行 NBT 列表所独有的一些操作。  
+通过`NbtList`对象的接口，才可以进行 NBT 列表所独有的一些操作。
 
 ### 获取一个 NBT 列表对象
 
@@ -105,7 +105,7 @@
 `list.setFloat(index,data)`  
 `list.setDouble(index,data)`  
 `list.setByteBuffer(index,data)`      
-`list.setString(index,data)`    
+`list.setString(index,data)`
 
 - 参数：
   - index : `Integer`  
@@ -118,7 +118,7 @@
 
 #### 读取某个下标位置的具体数据
 
-`list.getData(index)`  
+`list.getData(index)`
 
 - 参数：
   - index : `Integer`  

@@ -1,9 +1,9 @@
 # LiteLoaderBDS submodules相关说明
 
 ## 已用到submodule的目录
-- ParticleAPI
-- PermissionAPI
-- assets/plugins/LiteLoader/ResourcePacks/LiteLoaderBDS-CUI
+- `ParticleAPI`
+- `PermissionAPI`
+- `assets/plugins/LiteLoader/ResourcePacks/LiteLoaderBDS-CUI`
 
 ## 如何在clone时拉取所有submodules
 

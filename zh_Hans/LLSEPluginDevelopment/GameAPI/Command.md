@@ -1,14 +1,14 @@
-## 🎯 命令相关 API
+# 🎯 命令相关 API
 
 下面这些API提供了在游戏中注册、监听自定义命令的接口
 
-### 执行一条后台命令  
+### 执行一条后台命令
 
 `mc.runcmd(cmd)`
 
 - 参数：
   - cmd : `String`  
-    待执行的命令  
+    待执行的命令
 - 返回值：是否执行成功
 - 返回值类型： `Boolean`
 
@@ -21,25 +21,25 @@ mc.runcmd("say Hello!");
 mc.runcmd("say Hello!")
 ```
 
-### 执行一条后台命令（强化版）  
+### 执行一条后台命令（强化版）
 
 `mc.runcmdEx(cmd)`
 
 - 参数：
 
   - cmd : `String`  
-    待执行的命令  
+    待执行的命令
 
 - 返回值：命令执行结果`Object` 
 
 - 返回值类型： `Object<Boolean,String>`
 
-  - 对于返回的某个执行结果对象res，有如下这些成员：  
+  - 对于返回的某个执行结果对象`res`，有如下这些成员：
 
   | 成员        | 含义                    | 类型      |
   | ----------- | ----------------------- | --------- |
-  | res.success | 是否执行成功            | `Boolean` |
-  | res.output  | BDS执行命令后的输出结果 | `String`  |
+  | `res.success` | 是否执行成功            | `Boolean` |
+  | `res.output`  | BDS执行命令后的输出结果 | `String`  |
 
 ::: tip
 runcmdEx 与普通 runcmd 实现区别非常大，在于 Ex 版本拥有**隐藏输出**的机制，执行结果不会输出至控制台，因此如果有需要，要手动用 log 函数将结果输出
@@ -68,16 +68,16 @@ log(result.output);
     待注册的命令
 
   - description : `String`  
-    命令描述文本  
+    命令描述文本
 
   - permission : `PermType`  
-    （可选参数）指令执行所需权限  
+    （可选参数）命令执行所需权限
 
     | 执行权限               | 含义                             |
     | ---------------------- | -------------------------------- |
-    | `PermType.Any`         | 任何人都可以执行这条指令         |
-    | `PermType.GameMasters` | 只有OP可以执行这条指令（默认值） |
-    | `PermType.Console`     | 只有控制台可以执行这条指令       |
+    | `PermType.Any`         | 任何人都可以执行这条命令         |
+    | `PermType.GameMasters` | 只有OP可以执行这条命令（默认值） |
+    | `PermType.Console`     | 只有控制台可以执行这条命令       |
 
   - flag : `Integer`  
     （可选参数）默认值 `0x80`   
@@ -87,30 +87,30 @@ log(result.output);
     （可选参数）命令的别名  
     可以为命令设置多个别名，执行的时候相当于触发同一条命令
 
-- 返回值：指令对象
+- 返回值：命令对象
 
 - 返回值类型：`Command`
 
 ::: tip
-顶层命令，也就是类似 `list` `gamerule` 这种，在 / 之后第一个输入的部分  
+顶层命令，也就是类似 `list` `gamerule` 这种，在 / 之后第一个输入的部分
 
-注册完顶层命令后，此函数会返回一个指令对象。接下来，对于这个命令的功能扩展都需要在这个指令对象中进行
+注册完顶层命令后，此函数会返回一个命令对象。接下来，对于这个命令的功能扩展都需要在这个命令对象中进行
 :::
 
-### 指令对象 - 函数
+### 命令对象 - 函数
 
-通过指令对象，你可以为这个命令注册各式各样的形式、功能。假设有一个叫 `Command` 的指令对象，则有下面这些成员函数
+通过命令对象，你可以为这个命令注册各式各样的形式、功能。假设有一个叫 `Command` 的命令对象，则有下面这些成员函数
 
-#### 设置指令别名
+#### 设置命令别名
 
 `Command.setAlias(alias)`
 - 参数：
   - alias : `String`  
-    指令别名
+    命令别名
 - 返回值：是否成功设置
 - 返回值类型：`Boolean`
 
-#### 新增一个指令枚举选项
+#### 新增一个命令枚举选项
 
 `Command.setEnum(name,values)`
 - 参数：
@@ -126,7 +126,7 @@ log(result.output);
 `Command.mandatory(name,type[,enumName,identifier,enumOptions])`
 - 参数：
   - name : `String`  
-    参数名，用于执行指令时识别参数
+    参数名，用于执行命令时识别参数
   - type : `ParamType`  
     命令参数类型
   - enumName : `String`  
@@ -134,7 +134,7 @@ log(result.output);
   - identifier : `String`  
     参数标识，特殊情况下用于唯一识别参数，一般可用 `enumName` 或 `name` 代替
   - enumOptions : `Integer`  
-    参数选项，设置为 `1` 可在指令提示中展开枚举选项  
+    参数选项，设置为 `1` 可在命令提示中展开枚举选项  
     如 `<action : TagChangeAction>` 会变成 `<add|remove>`
 - 返回值：是否成功设置
 - 返回值类型：`Boolean`
@@ -145,7 +145,7 @@ log(result.output);
 
 - 参数：
   - name : `String`  
-    参数名，用于执行指令时识别参数
+    参数名，用于执行命令时识别参数
   - type : `ParamType`  
     命令参数类型
   - enumName : `String`  
@@ -153,7 +153,7 @@ log(result.output);
   - identifier : `String`  
     参数标识，特殊情况下用于唯一识别参数，一般可用 `enumName` 或 `name` 代替
   - enumOptions : `Integer`  
-    参数选项，设置为 `1` 可在指令提示中展开枚举选项  
+    参数选项，设置为 `1` 可在命令提示中展开枚举选项  
     如 `<action : TagChangeAction>` 会变成 `<add|remove>`
 - 返回值：是否成功设置
 - 返回值类型：`Boolean`
@@ -171,7 +171,7 @@ log(result.output);
 | `ParamType.BlockPos`  | 整数坐标参数                                                         |
 | `ParamType.Vec3`      | 浮点数坐标参数                                                       |
 | `ParamType.RawText`   | 原始字符串参数(可包含特殊字符，如逗号空格，只能作为最后一个参数使用) |
-| `ParamType.Message`   | 消息类型参数(同 `/say` 指令参数，会自动展开目标选择器等)             |
+| `ParamType.Message`   | 消息类型参数(同 `/say` 命令参数，会自动展开目标选择器等)             |
 | `ParamType.JsonValue` | JSON字符串参数                                                       |
 | `ParamType.Item`      | 物品类型参数                                                         |
 | `ParamType.Block`     | 方块类型参数                                                         |
@@ -179,9 +179,9 @@ log(result.output);
 | `ParamType.Enum`      | 枚举参数                                                             |
 | `ParamType.SoftEnum`  | 可变枚举参数                                                         |
 | `ParamType.ActorType` | 实体类型参数                                                         |
-| `ParamType.Command`   | 指令名称参数（仅供测试）                                             |
+| `ParamType.Command`   | 命令名称参数（仅供测试）                                             |
 
-#### 新增一条指令重载
+#### 新增一条命令重载
 
 要想让命令正常运行，必须至少添加一条重载。所谓重载，本质上相当于参数的组合，譬如重载`['a', 'b', 'c']`相当于命令可以被执行为`/cmd <a> <b> <c>`，而重载`[]`相当于可以被执行为`/cmd`。重载的参数标识符可以是参数名、枚举名、参数标识符，但不能使用无法区分具体参数的标识符，如两个参数都叫 `action` 但枚举选项不同，此时应该使用枚举名而不是参数名。
 
@@ -195,11 +195,11 @@ log(result.output);
 - 返回值类型：`Boolean`
 
 ::: tip
-指令重载是 BDS 区分不同指令形式的方法，每一种不同的指令形式对应着一种指令重载。  
-如你所见，指令重载中提供的各项参数名组成了一种新的指令形式
+命令重载是 BDS 区分不同命令形式的方法，每一种不同的命令形式对应着一种命令重载。  
+如你所见，命令重载中提供的各项参数名组成了一种新的命令形式
 :::
 
-#### 设置指令回调
+#### 设置命令回调
 
 `Command.setCallback(callback)`
 - 参数：
@@ -209,10 +209,10 @@ log(result.output);
 - 返回值类型：`Boolean`
 
 ::: tip
-指令回调函数的参数相对复杂，在下面将进行详细解释
+命令回调函数的参数相对复杂，在下面将进行详细解释
 :::
 
-#### 安装指令
+#### 安装命令
 
 在对命令的所有配置完成之后，使用此函数将命令注册到 BDS 的命令系统当中
 
@@ -221,14 +221,14 @@ log(result.output);
 - 返回值：是否成功安装
 - 返回值类型：`Boolean`
 
-## 指令回调函数
+## 命令回调函数
 
-上文提到的 **指令回调函数** 是一个比较复杂的回调函数，下面对其中的各项参数进行一些解释  
-指令回调函数原型： `Function(cmd,origin,output,results)`
+上文提到的 **命令回调函数** 是一个比较复杂的回调函数，下面对其中的各项参数进行一些解释  
+命令回调函数原型： `Function(cmd,origin,output,results)`
 
-#### 参数 `cmd` ： 自身的指令对象
+#### 参数 `cmd` ： 自身的命令对象
 
-这个参数给出了你注册这个命令时使用的指令对象。
+这个参数给出了你注册这个命令时使用的命令对象。
 
 #### 参数 `origin` ：命令的执行者
 
@@ -237,12 +237,12 @@ log(result.output);
 
 | 属性         | 含义                   | 类型         |
 | ------------ | ---------------------- | ------------ |
-| ori.type     | 指令执行主体类型       | `OriginType` |
-| ori.name     | 指令执行主体的名称     | `String`     |
-| ori.pos      | 指令执行主体的坐标     | `FloatPos`   |
-| ori.blockPos | 指令执行主体的方块坐标 | `IntPos`     |
-| ori.entity   | 执行指令的实体（可空） | `Entity`     |
-| ori.player   | 执行指令的玩家（可空） | `Player`     |
+| `ori.type`     | 命令执行主体类型       | `OriginType` |
+| `ori.name`     | 命令执行主体的名称     | `String`     |
+| `ori.pos`      | 命令执行主体的坐标     | `FloatPos`   |
+| `ori.blockPos` | 命令执行主体的方块坐标 | `IntPos`     |
+| `ori.entity`   | 执行命令的实体（可空） | `Entity`     |
+| `ori.player`   | 执行命令的玩家（可空） | `Player`     |
 
 #### 参数 `output` ：向命令执行者输出命令的执行结果
 
@@ -302,7 +302,7 @@ log(result.output);
 | `ParamType.BlockPos`  | `IntPos`        | 整数坐标对象                                                     |
 | `ParamType.Vec3`      | `FloatPos`      | 浮点数坐标对象                                                   |
 | `ParamType.RawText`   | `String`        | 原始字符串(可包含特殊字符，如逗号空格，只能作为最后一个参数使用) |
-| `ParamType.Message`   | `String`        | 消息类型字符串(同 `/say` 指令参数，会自动展开目标选择器等)       |
+| `ParamType.Message`   | `String`        | 消息类型字符串(同 `/say` 命令参数，会自动展开目标选择器等)       |
 | `ParamType.JsonValue` | `String`        | JSON字符串                                                       |
 | `ParamType.Item`      | `Item`          | 物品类型                                                         |
 | `ParamType.Block`     | `Block`         | 方块类型                                                         |
@@ -310,7 +310,7 @@ log(result.output);
 | `ParamType.Enum`      | `String`        | 枚举字符串                                                       |
 | `ParamType.SoftEnum`  | `String`        | 可变枚举字符串                                                   |
 | `ParamType.ActorType` | `String`        | 实体类型字符串                                                   |
-| `ParamType.Command`   | `String`        | 指令名称（仅供测试）                                             |
+| `ParamType.Command`   | `String`        | 命令名称（仅供测试）                                             |
 
 ### 命令注册样例
 
@@ -350,7 +350,7 @@ mc.listen("onServerStarted", () => {
 请尽量使用 真命令API
 :::
 
-### 注册一个新的玩家命令（假命令）  
+### 注册一个新的玩家命令（假命令）
 
 `mc.regPlayerCmd(cmd,description,callback[,level])`
 
@@ -358,16 +358,16 @@ mc.listen("onServerStarted", () => {
   - cmd : `String`  
     待注册的命令
   - description : `String`  
-    命令描述文本  
+    命令描述文本
   - callback : `Function(player,args)`  
     注册的这个命令被执行时，接口自动调用的回调函数。
   - level : `Integer`  
     （可选参数）命令的注册等级，默认为 0 ，即所有人都可以执行  
-    如果设置命令注册等级为1，则只有OP可以执行此命令  
+    如果设置命令注册等级为1，则只有OP可以执行此命令
 - 返回值：是否成功注册
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(player,args)`  
+注：参数callback的回调函数原型：`function(player,args)`
 
 - player : `Player`  
   执行命令的玩家对象
@@ -379,11 +379,11 @@ mc.listen("onServerStarted", () => {
 ```js
 mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
     pl.tell("Flying enabled.");
-    //......
+    //...
 });
 ```
 
-### 注册一个新的控制台命令（假命令）  
+### 注册一个新的控制台命令（假命令）
 
 `mc.regConsoleCmd(cmd,description,callback)`
 
@@ -392,14 +392,14 @@ mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
     待注册的命令
 
   - description : `String`  
-    命令描述文本  
+    命令描述文本
 
   - callback : `Function`  
-    注册的这个命令被执行时，接口自动调用的回调函数。  
+    注册的这个命令被执行时，接口自动调用的回调函数。
 - 返回值：是否成功注册
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(args)`  
+注：参数callback的回调函数原型：`function(args)`
 
 - args : `Array<String,String...>`      
   目标命令后面的参数。按空格为分界分割，组成字符串数组。  
@@ -409,13 +409,13 @@ mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
 ```js
 mc.regConsoleCmd("backup","Start the backup",function(args){
     log("ID of this backup is:",args[0]);
-    //......
+    //...
 });
 ```
 
 ::: tip 假命令注册相关说明
 设置了回调函数之后，在你注册的这个假命令被执行的时候，回调函数就会被调用。  
-在调用之前，脚本引擎会自动帮你把命令参数分割成数组。  
+在调用之前，脚本引擎会自动帮你把命令参数分割成数组。
 
 以JavaScript语言为例：
 

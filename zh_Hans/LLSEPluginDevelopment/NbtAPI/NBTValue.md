@@ -29,7 +29,7 @@
 `NbtFloat([data])`  
 `NbtDouble([data])`   
 `NbtByteArray([data])`  
-`NbtString([data])`  
+`NbtString([data])`
 
 - 参数：
   - data: `Number` / `Float` / `Double` / `ByteBuffer` / `String`（可选参数）  

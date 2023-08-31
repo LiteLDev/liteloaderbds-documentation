@@ -31,7 +31,7 @@ public:
 - 返回
   - [Boolean](https://docs.microsoft.com/DotNET/api/system.boolean)  
     如果 `name` 参数所指向的玩家在此白名单中出现，则为，则为 `true`；否则为 `false`。
-  
+
 
 ## Has(String, String)
 
@@ -54,7 +54,7 @@ public:
 - 返回
   - [Boolean](https://docs.microsoft.com/DotNET/api/system.boolean)  
     如果 `name` 参数与 `xuid` 参数所指向的玩家在此白名单中出现，则为 `true`；否则为 `false`。
-  
+
 
 ## Has(String, String, Int32)
 

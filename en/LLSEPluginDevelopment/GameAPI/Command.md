@@ -2,13 +2,13 @@
 
 The following APIs provide interfaces for registering and listening to custom commands in the game:
 
-### Execute a Background Command  
+### Execute a Background Command
 
 `mc.runcmd(cmd)`
 
 - Parameters: 
   - cmd : `String`  
-    The command to be executed.  
+    The command to be executed.
 - Return value: Whether the execution was successful.
 - Return value type:  `Boolean`
 
@@ -28,11 +28,11 @@ mc.runcmd("say Hello!")
 - Parameters: 
 
   - cmd : `String`  
-    The command to be executed.  
+    The command to be executed.
 - Return value: Command Execution Result `Object` 
 - Return value type:  `Object<Boolean,String>`
 
-  - For a returned execution result object res, there are the following members:  
+  - For a returned execution result object res, there are the following members:
 
   | Members     | Meaning                                           | Data Type |
   | ----------- | ------------------------------------------------- | --------- |
@@ -65,9 +65,9 @@ Except for variable parameters (String, RawText, Message, etc.), the commands ca
   - cmd : `String`  
     The command that will be registered.
   - description : `String`  
-    The description text for the command.  
+    The description text for the command.
   - permission : `PermType`  
-    (Optional parameter)   
+    (Optional parameter) 
 
     | Execution Permission   | Meaning                                             |
     | ---------------------- | --------------------------------------------------- |
@@ -341,7 +341,7 @@ Although it looks relatively simple, fake commands have some important disadvant
 Please try to use the real command API.
 :::
 
-### Register a New Player Command (Fake Command)  
+### Register a New Player Command (Fake Command)
 
 `mc.regPlayerCmd(cmd,description,callback[,level])`
 
@@ -349,7 +349,7 @@ Please try to use the real command API.
   - cmd : `String`  
     The command that will be registered.
   - description : `String`  
-    Command Description Text.  
+    Command Description Text.
   - callback : `Function(player,args)`  
     When the registered command is executed, the interface automatically calls the callback function. 
   - level : `Integer`  
@@ -370,11 +370,11 @@ Note: The callback function prototype of the parameter callback: `function(playe
 ```js
 mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
     pl.tell("Flying enabled.");
-    //......
+    //...
 });
 ```
 
-### Register a New Background Console Command (Fake Command)  
+### Register a New Background Console Command (Fake Command)
 
 `mc.regConsoleCmd(cmd,description,callback)`
 
@@ -383,10 +383,10 @@ mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
     The command that will be registered.
 
   - description : `String`  
-    Command Description Text.  
+    Command Description Text.
 
   - callback : `Function`  
-    When the registered command is executed, the interface automatically calls the callback function.   
+    When the registered command is executed, the interface automatically calls the callback function. 
 - Return value: Whether the registration was successful.
 - Return value type: `Boolean`
 
@@ -400,13 +400,13 @@ Note: The callback function prototype of the parameter callback: `function(args)
 ```js
 mc.regConsoleCmd("backup","Start the backup",function(args){
     log("ID of this backup is:",args[0]);
-    //......
+    //...
 });
 ```
 
 ::: tip Instructions on Fake Order Registration
 After setting the callback function, the callback function will be called when the fake command you registered is executed.  
-LLSE will automatically split the command arguments into arrays for you before calling them.  
+LLSE will automatically split the command arguments into arrays for you before calling them.
 
 Take the JavaScript language as an example:
 

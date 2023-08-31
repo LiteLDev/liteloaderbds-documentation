@@ -170,7 +170,7 @@ If the configuration item does not exist, the interface will be created automati
 Read string `conf.getStr(section,name[,default])`  
 Read integer `conf.getInt(section,name[,default])`  
 Read float `conf.getFloat(section,name[,default])`  
-Read boolean `conf.getBool(section,name[,default])`  
+Read boolean `conf.getBool(section,name[,default])`
 
 - Parameters: 
   - section : `String`  

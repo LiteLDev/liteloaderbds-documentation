@@ -1,16 +1,18 @@
 ##  📱 设备信息对象 API
 
-在脚本引擎中，使用「设备信息对象」来操作和获取某一个玩家使用的游戏设备的相关信息。
+在脚本引擎中，使用“设备信息对象”来操作和获取某一个玩家使用的游戏设备的相关信息。
 
 ### 获取一个设备信息对象
 
 #### 通过玩家获取
 
 通过玩家对象的`.getDevice`成员函数，来获取一个玩家对应的**设备信息对象**    
-详见 [玩家对象 API](Player)      
+详见 [玩家对象 API](Player)
 
->  注意：不要**长期保存**一个设备信息对象  
-> 当设备对应的玩家退出游戏时，对应的对象将同时释放。因此，如果有长期操作某个对象的需要，请通过上述途径获取实时的设备信息对象
+::: warning
+不要**长期保存**一个设备信息对象  
+设备对应的玩家退出游戏时，对应的对象将同时释放。因此，如果有长期操作某个对象的需要，请通过上述途径获取实时的设备信息对象
+:::
 
 ### 设备信息对象 - 属性
 
@@ -18,16 +20,16 @@
 
 | 属性              | 含义                         | 类型      |
 | ----------------- | ---------------------------- | --------- |
-| dv.ip             | 玩家设备的IP地址             | `String`  |
-| dv.avgPing        | 玩家的平均网络延迟时间（ms） | `Integer` |
-| dv.avgPacketLoss  | 玩家的平均网络丢包率（%）    | `Float`   |
-| dv.lastPing       | 玩家的网络延迟时间（ms）     | `Integer` |
-| dv.lastPacketLoss | 玩家的网络丢包率（%）        | `Float`   |
-| dv.os             | 玩家设备的操作系统类型       | `String`  |
-| dv.inputMode      | 玩家的操作模式               | `Integer` |
-| dv.playMode       | 玩家的游玩模式               | `Integer` |
-| dv.serverAddress  | 玩家连接的地址               | `String`  |
-| dv.clientId       | 玩家客户端的识别码ID         | `String`  |
+| `dv.ip`             | 玩家设备的IP地址             | `String`  |
+| `dv.avgPing`        | 玩家的平均网络延迟时间（ms） | `Integer` |
+| `dv.avgPacketLoss`  | 玩家的平均网络丢包率（%）    | `Float`   |
+| `dv.lastPing`       | 玩家的网络延迟时间（ms）     | `Integer` |
+| `dv.lastPacketLoss` | 玩家的网络丢包率（%）        | `Float`   |
+| `dv.os`             | 玩家设备的操作系统类型       | `String`  |
+| `dv.inputMode`      | 玩家的操作模式               | `Integer` |
+| `dv.playMode`       | 玩家的游玩模式               | `Integer` |
+| `dv.serverAddress`  | 玩家连接的地址               | `String`  |
+| `dv.clientId`       | 玩家客户端的识别码ID         | `String`  |
 
 这些对象属性都是只读的，无法被修改 
 

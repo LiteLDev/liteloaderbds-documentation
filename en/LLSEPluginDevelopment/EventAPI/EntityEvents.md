@@ -48,7 +48,7 @@ Note that when the player dies, in addition to triggering `onPlayerDie` event, t
     Does the explosion destroy blocks.
   - isFire : `Boolean`  
     Does the explosion produce flames.
-  
+
 - Intercept events: function returns `false`
 
 #### `"onTryMobSpawn"` - Mob try Naturally Spawn Event
@@ -60,7 +60,7 @@ Note that when the player dies, in addition to triggering `onPlayerDie` event, t
     Entity Name
   - pos : `FloatPos`  
    The coordinates of the spawn.
-  
+
 - Intercept events: function returns `false`
 
 #### `"onMobSpawned"` - Mob Naturally Spawn Finished Event
@@ -72,7 +72,7 @@ Note that when the player dies, in addition to triggering `onPlayerDie` event, t
     The entity that spawned.
   - pos : `FloatPos`  
    The coordinates of the spawn.
-  
+
 - Intercept events: cannot be intercepted.
 
 You can use entity.despawn() or entity.remove() to intercept this event.
@@ -99,7 +99,7 @@ You can use entity.despawn() or entity.remove() to intercept this event.
     The area that the wither will destroy (box), the A coordinate of the diagonal point.
   - aaBB: `IntPos`
     The area that the wither will destroy (box), the B coordinate of the diagonal point.
-  
+
 - Intercept events: function returns `false`
 
 Note that this event does not include wither explosion damage.

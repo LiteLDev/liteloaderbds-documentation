@@ -2,13 +2,13 @@
 
 The following objects and APIs provide the basic BDS packet interface for scripts. 
 
-(Please refer to Nukkit, PokcetMine, BDS Reverse to know the packet structure) If the client crashes, it is a packet structure error, not a bug.   
+(Please refer to Nukkit, PokcetMine, BDS Reverse to know the packet structure) If the client crashes, it is a packet structure error, not a bug. 
 
 The documentation does not list the packet ID and its structure, please check it yourself.
 
 ## 🔉 Packet Object API
 
-In LLSE, 「Packet Object」 is used to get information about packets.
+In LLSE, "Packet Object" is used to get information about packets.
 
 ### Get a packet object
 
@@ -59,7 +59,7 @@ Every binary stream object contains some member functions (member methods) that 
 
 #### Write to binary stream
 
-`bs.writexxxx(value)`    
+`bs.writexxxx(value)`
 
 - Parameters：
   - value : `NULL`  
@@ -92,7 +92,7 @@ Every binary stream object contains some member functions (member methods) that 
 
 #### Building packet from binary stream
 
-`bs.createPacket(pktid)`    
+`bs.createPacket(pktid)`
 
 - Parameters：
   - pktid : `Integer`  

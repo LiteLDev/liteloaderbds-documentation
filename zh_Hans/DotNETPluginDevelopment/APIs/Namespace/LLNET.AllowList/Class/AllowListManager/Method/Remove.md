@@ -30,7 +30,7 @@ public:
 - 返回
   - [AllowListManager](../AllowListManager)  
     当前 `AllowListManager` 对象
-  
+
 
 ## Remove(String, String)
 

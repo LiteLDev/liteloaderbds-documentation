@@ -72,18 +72,20 @@
 
 优点：
 * 拓展性强，可以直接使用.NET丰富的类库；
-* 性能较好；
+* API较多；
+* 代码容易管理。
 
 缺点：
-* 由第三方开发者维护，可能得不到最新支持；
-* 处于开发阶段，部分功能不稳定。
+* 由第二方开发者维护，可能得不到最新支持；
+* 性能较差；
+* 稳定性较差。
 
 建议对.NET平台较为熟悉的开发者使用。
 
-准备好了吗？ 👉[点击此处](DotNETPluginDevelopment/README)👈 查看 .NET插件开发文档。
+准备好了吗？ 👉[点击此处](DotNETPluginDevelopment/README)👈 查看 .NET插件开发文档（已过时）。
 
 ### ❤️ 我想发布我的插件
 
 当你写好了一个富有创造力的插件，你一定会希望更多的人使用它。那么你需要做的就是将它发布到各种插件平台。
 
-我们强烈建议你将插件封装为[Lip包管理工具](https://docs.lippkg.com)所支持的齿包，这样可以使得任何人都可以通过Lip工具，轻松地安装你的插件。你可以参考：[创建一个齿包](https://docs.lippkg.com/zh-Hans/#/tutorials/create_a_lip_tooth)和[将齿包提交到Lip Registry](https://docs.lippkg.com/zh-Hans/#/tutorials/submit_your_tooth_to_lip_registry)。
+我们强烈建议你将插件封装为[Lip包管理工具](https://docs.lippkg.com)所支持的Tooth包，这样可以使得任何人都可以通过Lip工具，轻松地安装你的插件。你可以参考：[创建一个Tooth包](https://docs.lippkg.com/zh-Hans/#/tutorials/create_a_lip_tooth)和[将Tooth包提交到Lip Registry](https://docs.lippkg.com/zh-Hans/#/tutorials/submit_your_tooth_to_lip_registry)。

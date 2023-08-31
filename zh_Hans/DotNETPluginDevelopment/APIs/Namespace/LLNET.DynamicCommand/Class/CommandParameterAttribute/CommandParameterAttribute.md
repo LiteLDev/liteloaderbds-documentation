@@ -18,11 +18,11 @@ public ref class CommandParameterAttribute
 ```
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [CommandParameterAttribute](CommandParameterAttribute)
-   
+ 
 
 ## 示例
 
-[如何：使用静态指令](../../../../../HowTo/Static_DynamicCommand)
+[如何：使用静态命令](../../../../../HowTo/Static_DynamicCommand)
 
 ## 构造函数
 - 
@@ -34,14 +34,14 @@ public ref class CommandParameterAttribute
 - 
     |||
     |-|-|
-    |[OverloadId]|获取或设置当前指令参数的重载标识。|
+    |[OverloadId]|获取或设置当前命令参数的重载标识。|
 
 ##  字段
 - 
     |||
     |-|-|
-    |[Type]|指令参数类型。|
-    |[IsMandatory]|指示指令参数是否为可选参数。|
-    |[Permission]|指令权限。|
-    |[Identifier]|指令参数标识。|
-    |[Option]|指令参数选项。|
+    |[Type]|命令参数类型。|
+    |[IsMandatory]|指示命令参数是否为可选参数。|
+    |[Permission]|命令权限。|
+    |[Identifier]|命令参数标识。|
+    |[Option]|命令参数选项。|

@@ -18,7 +18,7 @@
 
 描述函数类型并得到一个不可调用的函数，如需调用，则还需手动设置Address属性
 
-`static NativeFunction.fromDescription(ReturnValue: NativeTypes.Void, Params: [NativeType.Int......])`
+`static NativeFunction.fromDescription(ReturnValue: NativeTypes.Void, Params: [NativeType.Int...])`
 
 - 参数：
   - Enum-NativeTypes: `ReturnValue`
@@ -32,7 +32,7 @@
 
 描述函数类型并得到一个来自脚本的函数，其被包装为可直接在本机代码中调用的函数
 
-`static NativeFunction.fromScript(ReturnValue: NativeTypes.Void, Params: [NativeType.Int......], Callback: func(Params...){})`
+`static NativeFunction.fromScript(ReturnValue: NativeTypes.Void, Params: [NativeType.Int...], Callback: func(Params...){})`
 
 - 参数：
   - Enum-NativeTypes: `ReturnValue`

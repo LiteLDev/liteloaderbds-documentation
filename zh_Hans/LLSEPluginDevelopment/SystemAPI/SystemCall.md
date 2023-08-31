@@ -17,7 +17,7 @@
 - 返回值：是否成功启动命令
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(exitcode,output)`  
+注：参数callback的回调函数原型：`function(exitcode,output)`
 
 - exitcode : `Integer`    
   shell退出码
@@ -42,7 +42,7 @@
 - 返回值：是否成功启动进程
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(exitcode,output)`  
+注：参数callback的回调函数原型：`function(exitcode,output)`
 
 - exitcode : `Integer`    
   程序进程退出码

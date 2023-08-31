@@ -10,7 +10,7 @@
 脚本引擎使用文件类 **File** 来封装文件相关操作  
 如果需要频繁地操作文件，请使用下方的文件类，以提高性能
 
-> 注：所有文本相关的操作均使用UTF-8编码。  
+> 注：所有文本相关的操作均使用UTF-8编码。
 
 ### 读入文件的所有内容
 
@@ -55,7 +55,7 @@
 
 ## 📋 文件对象 API
 
-在脚本引擎中，使用「文件对象」来操作和读写某一个特定的文件。
+在脚本引擎中，使用“文件对象”来操作和读写某一个特定的文件。
 
 ### 创建一个新的文件对象
 
@@ -184,7 +184,7 @@
 - 返回值：是否成功发送请求
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(result)`  
+注：参数callback的回调函数原型：`function(result)`
 
 - result : `String` / `ByteBuffer`  
   读取到的文本 / 二进制数据  
@@ -202,7 +202,7 @@
 - 返回值：是否成功发送请求
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(result)`  
+注：参数callback的回调函数原型：`function(result)`
 
 - result : `String`  
   读取到的文本
@@ -219,7 +219,7 @@
 - 返回值：是否成功发送请求
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(result)`  
+注：参数callback的回调函数原型：`function(result)`
 
 - result : `String` / `ByteBuffer`  
   读取到的文本 / 二进制数据  
@@ -242,7 +242,7 @@
 
 如果文件以二进制模式打开，请传入一个`ByteBuffer`，否则需要传入`String`
 
-注：参数callback的回调函数原型：`function(result)`  
+注：参数callback的回调函数原型：`function(result)`
 
 - result : `Boolean`  
   是否写入成功
@@ -259,7 +259,7 @@
 - 返回值：是否成功发送请求
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(result)`  
+注：参数callback的回调函数原型：`function(result)`
 
 - result : `Boolean`  
   是否写入成功

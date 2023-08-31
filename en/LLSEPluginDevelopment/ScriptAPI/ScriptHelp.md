@@ -14,10 +14,10 @@ Before you start writing code for your plugin, you first need to provide the loa
 
   - name : `String`  
     Plugin Name
-    
+
   - introduction : `String`  
     A short description of the plugin.
-    
+
   - version : `Array<Integer,Integer,Integer[,VersionStatus]>`  
     Plugin version information.
     
@@ -27,7 +27,7 @@ Before you start writing code for your plugin, you first need to provide the loa
     | `Release` | Official release version (default) |
     | `Beta`    | Test version                       |
     | `Dev`     | Development Version                |
-    
+
   - other : `Object<string,string>`  
     Other additional information you are willing to provide (such as license, open source address, etc.)
 
@@ -42,7 +42,7 @@ The following APIs add necessary auxiliary interfaces to scripts.
 
 ### Output Information To The Console
 
-`log(data1,data2,...)`  
+`log(data1,data2,...)`
 
 - Parameter:.,
   - Variable or data to be output  
@@ -61,7 +61,7 @@ This is an upgraded version of the above function; it supports color output.
   - data... : 
      Variable or data to be output  
     Can be of any type, and the number of parameters can be any number.
-- Return value: none   
+- Return value: none 
 
 #### Show results: 
 

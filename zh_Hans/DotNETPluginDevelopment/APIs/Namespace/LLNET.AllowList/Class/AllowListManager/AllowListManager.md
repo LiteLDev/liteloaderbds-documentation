@@ -14,7 +14,7 @@ public ref class AllowListManager
 ```
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [AllowListManager](AllowListManager)
-   
+ 
 
 ## 示例
 

@@ -18,11 +18,11 @@ public ref class CommandAttribute
 ```
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [CommandAttribute](CommandAttribute)
-   
+ 
 
 ## 示例
 
-[如何：使用静态指令](../../../../../HowTo/Static_DynamicCommand)
+[如何：使用静态命令](../../../../../HowTo/Static_DynamicCommand)
 
 ## 构造函数
 - 
@@ -34,10 +34,10 @@ public ref class CommandAttribute
 - 
     |||
     |-|-|
-    |[Name]|指令名称。(只能小写)|
-    |[Description]|指令描述。|
-    |[Permission]|指令权限。|
-    |Alia|指令别名。|
+    |[Name]|命令名称。(只能小写)|
+    |[Description]|命令描述。|
+    |[Permission]|命令权限。|
+    |Alia|命令别名。|
     |AutoReset|指示是否自动重置。|
     |Flag1||
     |Flag2||

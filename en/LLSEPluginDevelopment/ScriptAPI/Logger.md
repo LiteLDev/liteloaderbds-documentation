@@ -44,7 +44,7 @@ If you don't change any settings, by **default** the log will only be output to 
 - Parameter:
   - isOpen : `Boolean`  
     Set whether the log is output to the console
-    The switch is on by default.  
+    The switch is on by default.
   - logLevel : `Integer`  
     (optional parameter) the log output level of the console, the default is `4` 
 - Return value: none 
@@ -74,7 +74,7 @@ If you want to output to a file, we recommend that you output the log uniformly 
     If it returns `Null`, output to the player is closed.
     The switch is off by default
   - logLevel : `Integer`  
-    (optional parameter) The player's minimum log output level, defaults to `4`    
+    (optional parameter) The player's minimum log output level, defaults to `4`
 - Return value: none 
 
 This is a function designed to facilitate in-game debugging. The log output to the player will be treated as a chat message and displayed on the target player's screen.
@@ -107,7 +107,7 @@ The result of the log output is:
 
 In addition, there are other settings to change the format of the output log 
 
-#### Set custom log message headers  
+#### Set custom log message headers
 
 `logger.setTitle(title)`
 
@@ -134,7 +134,7 @@ If you want to turn off the header after setting it, do `logger.setTitle("")`
 
 - Parameter:
   - level : `Integer`  
-    Log output level    
+    Log output level
 - Return value: none 
 
 Unified reset of log output levels for various output directions 

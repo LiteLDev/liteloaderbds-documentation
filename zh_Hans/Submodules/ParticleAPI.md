@@ -1,7 +1,9 @@
 
 # 粒子API
 
-> 注意: ParticleAPI是默认关闭的，设置文件"plugins/LiteLoader/LiteLoader.json"中的"ParticleAPI"选项为 $true$ 来启用。
+::: tip
+注意: ParticleAPI是默认关闭的，设置文件`plugins/LiteLoader/LiteLoader.json`中的`ParticleAPI`选项为 `true` 来启用。
+:::
 
 ## 模块地址
 
@@ -14,7 +16,7 @@
 ## 使用方法
 
 ParticleAPI为插件开发提供了丰富易用的粒子生成接口，符合直观的设计和高效稳定的性能支持开发者写出更优秀的插件。
- $js$ 代码编写粒子特效相关功能请参考[ParticleSpawner 对象](../LLSEPluginDevelopment/GameAPI/Particle)，下文介绍如何在 $cpp$ 中使用ParticleAPI。
+	脚本引擎 代码编写粒子特效相关功能请参考[ParticleSpawner 对象](../LLSEPluginDevelopment/GameAPI/Particle)，下文介绍如何在 C++ 中使用ParticleAPI。
 
 包含头文件`#include <llapi/ParticleAPI.h>`是使用ParticleAPI的第一步。
 其中提供了更接近底层的生成类`ParticleAPI`和经过进一步封装的CUI类`ParticleCUI`，两者事实差异很小，在这里只介绍CUI类的成员。

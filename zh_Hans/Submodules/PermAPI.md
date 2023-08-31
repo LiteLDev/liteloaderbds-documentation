@@ -35,9 +35,9 @@ https://github.com/LiteLDev/PermissionAPI
 }
 ```
 
-## 指令列表
+## 命令列表
 
-在游戏或控制台输入`/help perm`以获得指令使用方法
+在游戏或控制台输入`/help perm`以获得命令使用方法
 ```
 perm:
 Permission role system

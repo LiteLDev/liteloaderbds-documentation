@@ -7,7 +7,7 @@ In LLSE, "entity objects" are used to manipulate and obtain information about an
 #### Get From Event or API
 
 Obtain the entity object given by BDS by registering the **event listener** function, or calling some **returning entity object** functions.
-For details, see [Event listener documentation - EventAPI](../EventAPI/Listen)      
+For details, see [Event listener documentation - EventAPI](../EventAPI/Listen)
 
 #### Get All Currently Loaded Entities
 
@@ -28,7 +28,7 @@ Through this function, generate a new creature at the specified location and get
 - Parameters: 
   - name : `String`  
     The namespace name of the creature, such as `minectaft:creeper`
-  - pos : `IntPos `/ `FloatPos`  
+  - pos : `IntPos` / `FloatPos`  
     A coordinate object of where the mob is spawned (or use x, y, z, dimid to determine where to spawn).
 - Return value: The generated entity object.
 - Return value type:  `Entity`
@@ -47,7 +47,7 @@ Through this function, generate a new creature at the specified location and get
 - Parameters: 
   - entity : `Entity`  
     Need clone entity object
-  - pos : `IntPos `/ `FloatPos`  
+  - pos : `IntPos` / `FloatPos`  
     A coordinate object of where the mob is spawned (or use x, y, z, dimid to determine where to spawn).
 - Return value: The clone entity object.
 - Return value type:  `Entity`
@@ -115,16 +115,16 @@ Each entity object contains some member functions (member methods) that can be e
 `en.teleport(x,y,z,dimid[,rot])`
 
 - Parameters: 
-  - pos :`IntPos `/ `FloatPos`  
+  - pos :`IntPos` / `FloatPos`  
     Target position coordinates (or use x, y, z, dimid to determine entity position)
-    
+
   - rot: `DirectionAngle`
     
     (Optional) The orientation of the entity after teleport, or the same orientation as before teleport if default
 - Return value: Whether the teleport was successful or not.
 - Return value type:  `Boolean`
 
-#### Kill the Specified Entity  
+#### Kill the Specified Entity
 
 `en.kill()`
 
@@ -138,7 +138,7 @@ Each entity object contains some member functions (member methods) that can be e
 - Return value: Whether the entity execution was successful.
 - Return value type:  `Boolean`
 
-#### Remove the Specified Entity  
+#### Remove the Specified Entity
 
 `en.remove()`
 
@@ -350,7 +350,7 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
   - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     The target position. 
 - Return value: Distance to coordinates (in blocks).
-- Return value type:  `Number`   
+- Return value type:  `Number` 
 
 #### Determine if an Entity Object Is a Player
 
@@ -393,7 +393,7 @@ If the current entity object is a drop entity, you can use this function to get 
 - Return value: The block object the entity is standing on.
 - Return value type:  `Block`
 
-#### Gets the Container Object for the Mob’s Armor Slot  
+#### Gets the Container Object for the Mob’s Armor Slot
 
 `en.getArmor()`
 
@@ -487,14 +487,14 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](../
 
 #### Get the Entity's Biome ID
 
-`en.getBiomeId()`  
+`en.getBiomeId()`
 
 - Return value：Biome ID
 - Return value type：`Integer`
 
 #### Get the Entity's Biome Name
 
-`en.getBiomeName()`  
+`en.getBiomeName()`
 
 - Return value：Biome Name
 - Return value type：`String`
@@ -573,7 +573,7 @@ The following APIs provide APIs for interacting with entities at specified locat
 `mc.explode(x,y,z,dimid,source,power,range,isDestroy,isFire)`
 
 - Parameters: 
-  - pos : `IntPos `/ `FloatPos`  
+  - pos : `IntPos` / `FloatPos`  
     The coordinates of the location where the explosion occurred (or use x, y, z, dimid to determine entity location).
   - source : `Entity`  
     Set the entity object of the explosion source, which can be `Null`.

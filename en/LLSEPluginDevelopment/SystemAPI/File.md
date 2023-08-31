@@ -10,7 +10,7 @@ The following APIs provide a simple interface for reading and writing files, whi
 LLSE uses the file class `File` to encapsulate file-related operations.
 If you need to manipulate files frequently, use the file classes below to improve performance.
 
-> Note: All text-related operations use UTF-8 encoding.  
+> Note: All text-related operations use UTF-8 encoding.
 
 ### Read in All the Contents of the File
 
@@ -184,7 +184,7 @@ When the amount of data is large and it takes a long time, it is recommended to 
 - Return value: Whether the request was successfully sent.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback: `function(result)`  
+Note: The prototype of the callback function of the parameter callback: `function(result)`
 
 - result : `String` / `ByteBuffer`  
   read text/binary data  
@@ -202,7 +202,7 @@ Start reading from the current file pointer. Returns if the file was opened in b
 - Return value: Whether the request was successfully sent.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback:  `function(result)`  
+Note: The prototype of the callback function of the parameter callback:  `function(result)`
 
 - result : `String`  
   The text that was read from the file.
@@ -219,7 +219,7 @@ Note: The prototype of the callback function of the parameter callback:  `functi
 - Return value: Whether the request was successfully sent.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback:  `function(result)`  
+Note: The prototype of the callback function of the parameter callback:  `function(result)`
 
 - result : `String` / `ByteBuffer`  
   Text/Binary data read from the file.  
@@ -242,7 +242,7 @@ Returns if the file was opened in binary mode `ByteBuffer`, otherwise return `St
 
 If the file is opened in binary mode, pass in a `ByteBuffer`, otherwise you need to pass in `String`.
 
-Note: The prototype of the callback function of the parameter callback:  `function(result)`  
+Note: The prototype of the callback function of the parameter callback:  `function(result)`
 
 - result : `Boolean`  
   Whether the write is successful.
@@ -259,14 +259,14 @@ Note: The prototype of the callback function of the parameter callback:  `functi
 - Return value: Whether the request was successfully sent.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback:  `function(result)`  
+Note: The prototype of the callback function of the parameter callback:  `function(result)`
 
 - result : `Boolean`  
   Whether the write is successful.
 
 > When this function executes, it will automatically add a newline at the end of the string.
 
-#### Other Common Interfaces  
+#### Other Common Interfaces
 
 In addition to the above-mentioned read and write interfaces, other general interfaces for manipulating file objects are also provided here.
 

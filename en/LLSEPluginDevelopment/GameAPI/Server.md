@@ -16,27 +16,27 @@ The following APIs provide interfaces for customizing some server settings:
 - Return value: Server protocol version 
 - Return value type: `Number`
 
-### Set Server Motd String  
+### Set Server Motd String
 
 `mc.setMotd(motd)`
 
 - Parameters: 
   - motd : `String`  
-    The desired Motd string.  
+    The desired Motd string.
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-### Set the Maximum Number of Players on the Server  
+### Set the Maximum Number of Players on the Server
 
 `mc.setMaxPlayers(num)`
 
 - Parameters: 
   - num : `Number`  
-    The maximum number of players.  
+    The maximum number of players.
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-### Get Sever time  
+### Get Sever time
 
 `mc.getTime(TimeID)`
 
@@ -48,7 +48,7 @@ The following APIs provide interfaces for customizing some server settings:
 
 Among them, daytime is the number of game ticks since dawn, gametime is the age of the world in game ticks, day is the number of in-game days passed.
 
-### Set Sever time   
+### Set Sever time 
 
 `mc.setTime(tick)`
 
@@ -58,14 +58,14 @@ Among them, daytime is the number of game ticks since dawn, gametime is the age 
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-### Get Sever Weather  
+### Get Sever Weather
 
 `mc.getWeather()`
 
 - Return value: Current weather (0 represents Clear, 1 represents Rain, 2 represents Thunder)
 - Return value type: `Integer`
 
-### Set Sever Weather  
+### Set Sever Weather
 
 `mc.setWeather(WeatherID)`
 

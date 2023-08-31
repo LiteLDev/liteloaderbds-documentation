@@ -60,7 +60,7 @@ For each button on the form, set the corresponding icon as follows:
 ### Send Form
 
 Finally, when everything is in place, you can send the configured form object to the player and listen for player interaction messages.  
-Form objects can be sent repeatedly, each time a different form ID is returned, and the respective callback functions are called when there is player interaction, without fighting.  
+Form objects can be sent repeatedly, each time a different form ID is returned, and the respective callback functions are called when there is player interaction, without fighting.
 
 For a player object `pl`, using the function:
 
@@ -68,14 +68,14 @@ For a player object `pl`, using the function:
 
 - Parameters: 
   - fm : `SimpleForm`  
-    The configured form object.  
+    The configured form object.
   - callback : `Function`  
-    Callback function to be called after the player interacts with the form element.   
-- Return value: The sent form ID.  
-- Return value type: `Integer`  
+    Callback function to be called after the player interacts with the form element. 
+- Return value: The sent form ID.
+- Return value type: `Integer`
   - If the return value is `Null`, it means the sending failed.
 
-Parameter `callback` The callback function prototype: `function(player,id)`  
+Parameter `callback` The callback function prototype: `function(player,id)`
 
 - player : `Player`  
   The player object that interacts with the form 
@@ -113,7 +113,7 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
 
-#### Add a Line of Text to the Form  
+#### Add a Line of Text to the Form
 
 `fm.addLabel(text)`
 
@@ -123,7 +123,7 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
 
-#### Add a Row of Input Boxes to the Form  
+#### Add a Row of Input Boxes to the Form
 
 `fm.addInput(title[,placeholder,default])`
 
@@ -138,7 +138,7 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
 
-#### Add a Row of Switch Options to the Form  
+#### Add a Row of Switch Options to the Form
 
 `fm.addSwitch(title[,default])`
 
@@ -150,7 +150,7 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
 
-#### Add a Drop-Down Menu to the Form  
+#### Add a Drop-Down Menu to the Form
 
 `fm.addDropdown(title,items[,default])`
 
@@ -168,7 +168,7 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
 
-#### Add a Row of Cursor Sliders to the Form  
+#### Add a Row of Cursor Sliders to the Form
 
 `fm.addSlider(title,min,max[,step,default])`
 
@@ -187,7 +187,7 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
 
-#### Add a Row of Step Sliders to the Form  
+#### Add a Row of Step Sliders to the Form
 
 `fm.addStepSlider(title,items[,default])`
 
@@ -215,14 +215,14 @@ For a player object `pl`, using the function:
 
 - Parameters: 
   - fm : `CustomForm`  
-    Configured custom form object.  
+    Configured custom form object.
   - callback : `Function`  
-    Callback function to be called after the player submits the form.  
+    Callback function to be called after the player submits the form.
 - Return value: The sent form ID.
-- Return value type: `Integer`  
+- Return value type: `Integer`
   - If the return value is `Null`, it means the sending failed.
 
-Parameter `callback` The callback function prototype: `function(player,data)`  
+Parameter `callback` The callback function prototype: `function(player,data)`
 
 - player : `Player`  
   The player object that interacts with the form.

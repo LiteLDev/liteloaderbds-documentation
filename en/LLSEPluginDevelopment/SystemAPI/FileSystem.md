@@ -4,7 +4,7 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
 
 > Note: The relative paths of all incoming functions are based on the BDS root directory 
 
-### Create Folder   
+### Create Folder 
 
 `File.createDir(dir)`  
 `File.mkdir(dir)`
@@ -16,7 +16,7 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
 - Return value: Whether the folder or folders were created successfully.
 - Return value type: `Boolean`
 
-### Delete File/Folder  
+### Delete File/Folder
 
 `File.delete(path)`
 
@@ -49,7 +49,7 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
 - Return value: Whether the copy is successful.
 - Return value type: `Boolean`
 
-### Move File/Folder to Specified Location  
+### Move File/Folder to Specified Location
 
 `File.move(from,to)`
 
@@ -62,7 +62,7 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
 - Return value: Whether the copy is successful.
 - Return value type: `Boolean`
 
-### Rename specified file/folder  
+### Rename specified file/folder
 
 `File.rename(from,to)`
 

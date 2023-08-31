@@ -1,7 +1,7 @@
 
 # Particle API
 
-> WARN: ParticleAPI is close by default, set the option "ParticleAPI" in "plugins/LiteLoader/LiteLoader.json" to $true$ for enabling.
+> WARN: ParticleAPI is close by default, set the option "ParticleAPI" in "plugins/LiteLoader/LiteLoader.json" to `true` for enabling.
 
 ## Address
 
@@ -14,7 +14,7 @@
 ## Usage
 
 ParticleAPI provides a rich and easy-to-use particle generation interface for plugin development, which intuitive design and efficient and stable performance support developers to write better plugins.
- $js$ code to write particle effects related functions refers to[ParticleSpawner Object](../LLSEPluginDevelopment/GameAPI/Particle), here's how to use ParticleAPI in $cpp$.
+ `js` code to write particle effects related functions refers to[ParticleSpawner Object](../LLSEPluginDevelopment/GameAPI/Particle), here's how to use ParticleAPI in `cpp`.
 
 Including headfile `#include <llapi/ParticleAPI.h>` is the first step to use ParticleAPI。
 It provides the generation class `ParticleAPI` which is closer to the bottom layer and the further encapsulated CUI class `ParticleCUI`. The difference between the two is very small, and only the members of the CUI class are introduced here.

@@ -115,12 +115,12 @@ These object properties are read-only and cannot be modified. in:
 
 Each player object contains some member functions (member methods) that can be executed. For a specific player object `pl`, you can perform some operations on this player through the following functions.
 
-#### Determine if the Player Is OP  
+#### Determine if the Player Is OP
 
 `pl.isOP()`
 
 - Return value: Whether the player is an OP.
-- Return value type: `Boolean`  
+- Return value type: `Boolean`
 
 [JavaScript]
 ```js
@@ -128,7 +128,7 @@ Each player object contains some member functions (member methods) that can be e
 var open = pl.isOP();
 ```
 
-#### Disconnect Player  
+#### Disconnect Player
 
 `pl.kick([msg])`  
 `pl.disconnect([msg])`
@@ -136,7 +136,7 @@ var open = pl.isOP();
 - Parameters: 
   - msg : `String`  
     (Optional parameter) The reason for the disconnection displayed to the kicked player.
-    Defaults to "disconnecting from server".  
+    Defaults to "disconnecting from server".
 - Return value: Whether the connection was successfully disconnected.
 - Return value type: `Boolean`
 
@@ -150,7 +150,7 @@ pl.kick();
 pl:kick()
 ```
 
-#### Send a Text Message to the Player  
+#### Send a Text Message to the Player
 
 `pl.tell(msg[,type])`  
 `pl.sendText(msg[,type])`
@@ -158,7 +158,7 @@ pl:kick()
 - Parameters: 
 
   - msg : `String`  
-    The message to be sent.  
+    The message to be sent.
 
   - type : `Integer`  
     (Optional parameter) The type of text message to send, default is `0`.
@@ -220,14 +220,14 @@ pl.tell("Welcome back ~ ",5);
 
 - Return value type: `Boolean`
 
-#### Broadcast a Text Message to All Players  
+#### Broadcast a Text Message to All Players
 
 `mc.broadcast(msg[,type])`
 
 - Parameters: 
 
   - msg : `String`  
-    The message to be sent.  
+    The message to be sent.
 
   - type : `Integer`  
     (Optional parameter) The type of text message to send, default is `0`.
@@ -256,7 +256,7 @@ mc.broadcast("Hello everyone ~ ");
 - Parameters: 
 
   - title : `String`  
-    The title of the toast.  
+    The title of the toast.
 
   - message : `string`  
     the message that the toast may contain alongside the title.
@@ -275,9 +275,9 @@ pl.sendToast("Hello","everyone ~");
 
 - Parameters: 
   - cmd : `String`  
-    The command to be executed.  
+    The command to be executed.
 - Return value: Whether the execution was successful.
-- Return value type:  `Boolean`   
+- Return value type:  `Boolean` 
 
 [JavaScript]
 ```js
@@ -293,7 +293,7 @@ var open = pl.runcmd("tp ~ ~+50 ~");
   - text : `String`  
     The text the player will be made to say. 
 - Return value: Whether the execution was successful.
-- Return value type:  `Boolean`   
+- Return value type:  `Boolean` 
 
 #### Get Player Distance To Pos
 
@@ -304,7 +304,7 @@ var open = pl.runcmd("tp ~ ~+50 ~");
   - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     The target position. 
 - Return value: Distance to coordinates (in blocks).
-- Return value type:  `Number`   
+- Return value type:  `Number` 
 
 #### Speak to a Player as a Player
 
@@ -316,21 +316,21 @@ var open = pl.runcmd("tp ~ ~+50 ~");
   - text : `String`  
     The text the player will be made to say. 
 - Return value: Whether the execution was successful.
-- Return value type:  `Boolean`   
+- Return value type:  `Boolean` 
 
-#### Teleport the Player to the Specified Location  
+#### Teleport the Player to the Specified Location
 
 `pl.teleport(pos[,rot])`  
 `pl.teleport(x,y,z,dimid[,rot])`
 
 - Parameters: 
-  - pos: `IntPos `/ `FloatPos`  
+  - pos: `IntPos` / `FloatPos`  
     Target position coordinates (or use x, y, z, dimid to determine player position)
-    
+
   - rot: `DirectionAngle`
   
     (Optional) The orientation of the player after teleport, or the same orientation as before teleport if default
-  
+
 - Return value: Whether the teleport was successful or not.
 
 - Return value type: `Boolean`
@@ -341,7 +341,7 @@ var open = pl.runcmd("tp ~ ~+50 ~");
 pl.teleport(pos);
 ```
 
-#### Kill the Player  
+#### Kill the Player
 
 `pl.kill()`
 
@@ -528,13 +528,13 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether the player was scaled.
 - Return value type: `Boolean`
 
-#### Rename Player  
+#### Rename Player
 
 `pl.rename(newname)`
 
 - Parameters: 
   - newname : `String`  
-    Player's new name.  
+    Player's new name.
 - Return value: WHether the rename was successful.
 - Return value type: `Boolean`
 
@@ -579,7 +579,7 @@ The item object obtained here is a reference. That is to say, modifying the item
 
 The item object obtained here is a reference. That is to say, modifying the item object returned here, or using its API, is equivalent to directly operating the corresponding item in the player's off hand.
 
-#### Get the Container Object of the Player’s Inventory  
+#### Get the Container Object of the Player’s Inventory
 
 `pl.getInventory()`
 
@@ -588,7 +588,7 @@ The item object obtained here is a reference. That is to say, modifying the item
 
 For more usage of container objects, please refer to [Container Object API Documentation](Container)
 
-#### Gets the Container Object for the Player’s Armor Bar  
+#### Gets the Container Object for the Player’s Armor Bar
 
 `pl.getArmor()`
 
@@ -597,7 +597,7 @@ For more usage of container objects, please refer to [Container Object API Docum
 
 For more usage of container objects, please refer to [Container Object API Documentation](Container)
 
-#### Get the Container Object of the Player’s Ender Chest  
+#### Get the Container Object of the Player’s Ender Chest
 
 `pl.getEnderChest()`
 
@@ -606,14 +606,14 @@ For more usage of container objects, please refer to [Container Object API Docum
 
 For more usage of container objects, please refer to [Container Object API Documentation](Container)
 
-#### Get the Player’s Respawn Coordinates  
+#### Get the Player’s Respawn Coordinates
 
 `pl.getRespawnPosition()`
 
 - Return value: Respawn point coordinates
 - Return value type: `IntPos`
 
-#### Modify the Player’s Respawn Coordinates  
+#### Modify the Player’s Respawn Coordinates
 
 `mc.setRespawnPosition(pos)`  
 `mc.setRespawnPosition(x,y,z,dimid)`
@@ -631,7 +631,7 @@ For more usage of container objects, please refer to [Container Object API Docum
 - Parameters: 
   - item : `Item`  
     The item being given.
-    
+
   - amount: `Integer`
   
     (Optional) The number of item given. If this parameter is provided, the Count property of the item object itself will be ignored.
@@ -671,14 +671,14 @@ After modifying the player's items, in order for the client to take effect, it i
 - Return value: Whether the refresh was successful.
 - Return value type: `Boolean`
 
-#### Modify Player Operation Permissions  
+#### Modify Player Operation Permissions
 
 `pl.setPermLevel(level)`
 
 - Parameters: 
 
   - level : `Integer`  
-    Target operation authority level  
+    Target operation authority level
 
     | Player Permission Level | Corresponding Permission Authority |
     | ----------------------- | ---------------------------------- |
@@ -868,7 +868,7 @@ pl.getXpNeededForNextLevel();
 pl.getXpNeededForNextLevel()
 ```
 
-#### Send the Player to the Specified Server  
+#### Send the Player to the Specified Server
 
 `pl.transServer(server,port)`
 
@@ -877,7 +877,7 @@ pl.getXpNeededForNextLevel()
     Target server IP / domain name
 
   - port : `Integer`  
-    Target server port  
+    Target server port
 - Return value: Whether the transfer was successful or not.
 - Return value type: `Boolean` 
 
@@ -912,7 +912,7 @@ pl:crash()
 - Parameters: 
 
   - title : `String`  
-    Sidebar Title  
+    Sidebar Title
   - data : `Object<String-Integer>`  
     Sidebar Object Content Object  
     Each key-value pair in the object will be set as a row of the sidebar content.
@@ -942,7 +942,7 @@ pl.setSidebar("title",{"aaaa":3,"bbb":12,"cc":7});
 pl.removeSidebar();
 ```
 
-#### Sets the Custom Boss Health Bar That the Player Sees  
+#### Sets the Custom Boss Health Bar That the Player Sees
 
 `pl.setBossBar(uid,title,percent,colour)`
 
@@ -950,7 +950,7 @@ pl.removeSidebar();
   - uid : `Number`   
     Unique identifier, no conflicting duplicates! One uid for one line of bar
   - title : `String`  
-    Custom Health Bar Title  
+    Custom Health Bar Title
   - percent : `Integer`  
     The percentage of health in the boss bar, the valid range is 0~100. `0` is empty boss bar, `100` is full.
   - colour : `Integer`
@@ -964,7 +964,7 @@ pl.removeSidebar();
 pl.setBossBar(1145141919,"Hello ~ ",80,0);
 ```
 
-#### Remove the Player’s Custom Boss Health Bar  
+#### Remove the Player’s Custom Boss Health Bar
 
 `pl.removeBossBar(uid)`
 
@@ -1140,7 +1140,7 @@ Each item in the array is a key-value pair list object `Object`, and the Attribu
 
 #### Sending packets to the player
 
-`pl.sendPacket(packet)`  
+`pl.sendPacket(packet)`
 
 - Parameters:
   - packet : `Packet`  
@@ -1150,24 +1150,24 @@ Each item in the array is a key-value pair list object `Object`, and the Attribu
 
 #### Get the player's Biome ID
 
-`pl.getBiomeId()`  
+`pl.getBiomeId()`
 
 - Return value: Biome ID
 - Return value type: `Integer`
 
 #### Get the player's Biome Name
 
-`pl.getBiomeName()`  
+`pl.getBiomeName()`
 
 - Return value: Biome Name
 - Return value type: `String`
 
 #### Set Player Ability
 
-`pl.setAbility(AbilityID,Value)`  
+`pl.setAbility(AbilityID,Value)`
 - Parameters:
   - AbilityID : `Integer`  
-    Ability's ID   
+    Ability's ID 
   - Value : `Boolean`  
     Whether to turn on
 - Return value: None

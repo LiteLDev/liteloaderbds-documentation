@@ -14,9 +14,9 @@ Obtain a scoring item object through the following interface and perform related
 
 - Parameters: 
   -  name : `String`  
-     Scoring item name.  
+     Scoring item name.
   -  displayName : `String`  
-     Scoring item display name.  
+     Scoring item display name.
 - Return type: The newly created scoring item object.
 - Return value type: `Objective`
   - If it returns `Null`, it means the creation failed.
@@ -134,7 +134,7 @@ The following APIs provide more APIs for operating the scoreboard system:
 
 - Parameters: 
   - name : `String`  
-    Scoring item name.  
+    Scoring item name.
 - Return type: The numerical value on the scoreboard.
 - Return value type: `Integer`
 
@@ -153,7 +153,7 @@ log("You have money:",pl.getScore("money"));
   - uuid : `String`  
     Player`s UUID.
   - name : `String`  
-    Scoring item name.  
+    Scoring item name.
 - Return type: The numerical value on the scoreboard.
 - Return value type: `Integer`
 
@@ -165,9 +165,9 @@ Reduce score: `pl.reduceScore(name,value)`
 
 - Parameters: 
   - name : `String`  
-    Scoring item name  
+    Scoring item name
   - value : `Integer`  
-    The value to set/increase/decrease  
+    The value to set/increase/decrease
 - Return type: Whether the setting was successful.
 - Return value type: `Boolean`
 
@@ -191,9 +191,9 @@ Delete score: `mc.deletePlayerScore(uuid, name)`
   - uuid : `String`  
     Player`s UUID.
   - name : `String`  
-    Scoring item name  
+    Scoring item name
   - value : `Integer`  
-    The value to set/increase/decrease  
+    The value to set/increase/decrease
 - Return type: Whether the setting was successful.
 - Return value type: `Boolean
 
@@ -203,7 +203,7 @@ Delete score: `mc.deletePlayerScore(uuid, name)`
 
 - Parameters: 
   - name : `String`  
-    Scoring item name   
+    Scoring item name 
 - Return type: Whether the removal was successful.
 - Return value type: `Boolean`
 
@@ -220,7 +220,7 @@ pl.deleteScore("what");
 
 - Parameters: 
   -  name : `String`  
-     Scoring item name   
+     Scoring item name 
 - Return type: Whether the removal was successful.
 - Return value type: `Boolean`
 

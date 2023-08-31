@@ -3,7 +3,7 @@
 The following APIs provide the basic network interface for scripts.
 If there are more complex needs, the network library of the respective language platform can be used to complete the task.
 
-### Send an Asynchronous HTTP(s) Get Request  
+### Send an Asynchronous HTTP(s) Get Request
 
 `network.httpGet(url,callback)`
 
@@ -15,7 +15,7 @@ If there are more complex needs, the network library of the respective language 
 - Return value: Whether the request was successfully sent.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback: `function(status,result)`  
+Note: The prototype of the callback function of the parameter callback: `function(status,result)`
 
 - status : `Integer`    
   The returned HTTP(s) response code, such as 200 means the request was successful.
@@ -24,7 +24,7 @@ Note: The prototype of the callback function of the parameter callback: `functio
 
 If the request fails, the status value will be `-1`. 
 
-### Send an Asynchronous HTTP(s) Post Request  
+### Send an Asynchronous HTTP(s) Post Request
 
 `network.httpPost(url,data,type,callback)`
 
@@ -40,7 +40,7 @@ If the request fails, the status value will be `-1`.
 - Return value: Whether the request was successfully sent.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback: `function(status,result)`  
+Note: The prototype of the callback function of the parameter callback: `function(status,result)`
 
 - status : `Integer`    
   The returned HTTP(s) response code, such as 200 means the request was successful.
@@ -103,7 +103,7 @@ Every WS client object contains some member functions (member methods) that can 
 - Return value: Whether the connection attempt was started successfully or not.
 - Return value type: `Boolean` 
 
-Note: The prototype of the callback function of the parameter callback: `function(success)`  
+Note: The prototype of the callback function of the parameter callback: `function(success)`
 
 - success : `Boolean`    
   Whether the WebSocket connection is successful 

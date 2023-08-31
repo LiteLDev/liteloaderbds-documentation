@@ -25,7 +25,7 @@
 |[PlayerDropItemEvent](Class/PlayerDropItemEvent)|表示玩家丢出物品的事件。|
 |[PlayerEatEvent](Class/PlayerEatEvent)|表示玩家进食的事件。|
 |[PlayerConsumeTotemEvent](Class/PlayerConsumeTotemEvent)|表示玩家消耗图腾的事件。|
-|[PlayerCmdEvent](Class/PlayerCmdEvent)|表示玩家使用指令的事件。|
+|[PlayerCmdEvent](Class/PlayerCmdEvent)|表示玩家使用命令的事件。|
 |[PlayerEffectChangedEvent](Class/PlayerEffectChangedEvent)|表示玩家药水效果改变的事件。|
 |[PlayerStartDestroyBlockEvent](Class/PlayerStartDestroyBlockEvent)|表示玩家开始破坏方块的事件。|
 |[PlayerDestroyBlockEvent](Class/PlayerDestroyBlockEvent)|表示玩家破坏方块的事件。|

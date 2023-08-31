@@ -48,7 +48,7 @@ local nbt = NbtCompound({
 
 #### Generate NBT Tag Object From SNBT String 
 
-`NBT.parseSNBT(snbt)`  
+`NBT.parseSNBT(snbt)`
 
 - Parameter: 
   - snbt : `String`  
@@ -61,7 +61,7 @@ local nbt = NbtCompound({
 
 #### Generate NBT Tag Objects From Binary NBT Data
 
-`NBT.parseBinaryNBT(nbt)`  
+`NBT.parseBinaryNBT(nbt)`
 
 - Parameter: 
   - nbt : `ByteBuffer`  
@@ -145,7 +145,7 @@ Therefore, some convenient functions for simplifying object operations are also 
 `comp.setFloat(key,data)`  
 `comp.setDouble(key,data)`  
 `comp.setByteArray(key,data)`  
-`comp.setString(key,data)`    
+`comp.setString(key,data)`
 
 - Parameters: 
   - key: `String`   
@@ -158,7 +158,7 @@ Therefore, some convenient functions for simplifying object operations are also 
 
 #### Read the Specific Data of the Value Corresponding to the Key
 
-`comp.getData(key)`  
+`comp.getData(key)`
 
 - Parameter: 
   - key: `String`   

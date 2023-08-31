@@ -131,7 +131,7 @@ readwrite|以读写模式打开|`SQLite`|`true`/`false`|`true`
 
 ### 执行SQL并获取结果集
 
-`session.query(sql)`  
+`session.query(sql)`
 
 - 参数：
   - sql : `String`  
@@ -187,7 +187,7 @@ readwrite|以读写模式打开|`SQLite`|`true`/`false`|`true`
 
 #### 准备一个预准备语句
 
-`session.prepare(sql)`  
+`session.prepare(sql)`
 
 - 参数：
   - sql : `String`  
@@ -235,7 +235,7 @@ INSERT INTO table VALUES ($X, ?Y, :Z);
 
 - 参数：
   - val : `Any`  
-    要绑定的值  
+    要绑定的值
 - 注：本重载将会将值绑定到第一个未绑定的参数上
 
 `stmt.bind(obj)`
@@ -266,7 +266,7 @@ INSERT INTO table VALUES ($X, ?Y, :Z);
   - *name : `String`  
     要绑定到的参数的参数名
 
-  
+
 - 返回值：处理完毕的语句对象（便于连锁进行其他操作）
 - 返回值类型：`DBStmt`
 

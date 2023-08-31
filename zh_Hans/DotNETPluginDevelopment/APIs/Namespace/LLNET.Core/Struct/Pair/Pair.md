@@ -20,7 +20,7 @@ TKey
 键的类型。
 
 TValue  
-值的类型。  
+值的类型。
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [ValueType](https://docs.microsoft.com/DotNET/api/system.valuetype) → [Pair<TKey,TValue>](Pair)
 

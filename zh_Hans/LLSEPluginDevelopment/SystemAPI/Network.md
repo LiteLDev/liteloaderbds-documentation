@@ -1,9 +1,9 @@
 ## 🌏 网络接口 API
 
 下面这些API为脚本提供了基本的网络接口。  
-如果有更复杂的需求，可以使用各自语言平台的网络库来完成任务  
+如果有更复杂的需求，可以使用各自语言平台的网络库来完成任务
 
-### 发送一个异步HTTP(s) Get请求  
+### 发送一个异步HTTP(s) Get请求
 
 `network.httpGet(url[,header],callback)`
 
@@ -11,13 +11,13 @@
   - url : `String`  
     请求的目标地址（包括 Get 请求附带的参数）
   - header : `Object`  
-    请求头（包括 Get 请求Request header）  
+    请求头（包括 Get 请求Request header）
   - callback : `Function`  
     当请求返回时执行的回调函数，用于回传HTTP(s)响应结果。
 - 返回值：是否成功发送请求
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(status,result)`  
+注：参数callback的回调函数原型：`function(status,result)`
 
 - status : `Integer`    
   返回的HTTP(s)响应码，如200代表请求成功
@@ -26,7 +26,7 @@
 
 如果请求执行失败，status值将为 -1
 
-### 发送一个异步HTTP(s) Post请求  
+### 发送一个异步HTTP(s) Post请求
 
 `network.httpPost(url[,header],data,type,callback)`
 
@@ -34,7 +34,7 @@
   - url : `String`  
     请求的目标地址
   - header : `Object`  
-    请求头（包括 Post 请求Request header）  
+    请求头（包括 Post 请求Request header）
   - data : `String`  
     发送的数据
   - type : `String`  
@@ -44,7 +44,7 @@
 - 返回值：是否成功发送请求
 - 返回值类型：`Boolean`
 
-注：参数callback的回调函数原型：`function(status,result)`  
+注：参数callback的回调函数原型：`function(status,result)`
 
 - status : `Integer`    
   返回的HTTP(s)响应码，如200代表请求成功
@@ -55,7 +55,7 @@
 
 ## 🔌 WebSocket 客户端对象 API
 
-在脚本引擎中，使用「WebSocket 对象」来操作某个 WebSocket 客户端的连接和工作
+在脚本引擎中，使用“WebSocket 对象”来操作某个 WebSocket 客户端的连接和工作
 
 ### 创建一个新的WebSocket 客户端对象
 
@@ -79,7 +79,7 @@
 
 `wsc.Open` - 处于正常连接中  
 `wsc.Closing` - 正在断开连接  
-`wsc.Closed` - 未连接  
+`wsc.Closed` - 未连接
 
 ### WebSocket 客户端对象 - 函数
 
@@ -107,7 +107,7 @@
 - 返回值：是否成功开始尝试连接
 - 返回值类型：`Boolean` 
 
-注：参数callback的回调函数原型：`function(success)`  
+注：参数callback的回调函数原型：`function(success)`
 
 - success : `Boolean`    
   WebSocket 连接是否成功
@@ -385,7 +385,7 @@ svr.onGet('/test/123', (req, res) => {
 | `req.version`    | 请求版本           | `String` | `'HTTP/1.1'`                |
 | `req.matches`    | 请求路径正则匹配结果 | `Array`  | `['/test11', '11']`         |
 
-这些对象属性都是只读的，无法被修改，并且只能在请求回调函数中使用(理论上复制到外部也可以，但不推荐)。  
+这些对象属性都是只读的，无法被修改，并且只能在请求回调函数中使用(理论上复制到外部也可以，但不推荐)。
 
 ***注意：***
 1. **`req.matches[0]` 为原始文本，其后面的元素才是匹配结果**

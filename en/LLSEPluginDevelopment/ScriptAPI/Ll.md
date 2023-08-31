@@ -51,7 +51,7 @@ You can choose to judge based on the results and report an error to remind users
   Plugin name
 - Return value: Plugin Object
 - Return value type:  `Plugin`
-  - For a returned plugin object, there are the following members:  
+  - For a returned plugin object, there are the following members:
 
   | Property          | Description             | Type                             |
   | ----------------- | ----------------------- | -------------------------------- |
@@ -120,7 +120,7 @@ The return value of `ll.import` is a function. When you call this function, the 
 For example, there is a plug-in that exports a function using the namespace AAA, and the name of the exported function is Welcome
 You can execute `welcome = ll.import("AAA", "Welcome"); ` to import this function. After the import is complete, you can execute directly below:
 
-`welcome("hello",2,true);`   
+`welcome("hello",2,true);` 
 
 The parameters of the function will be automatically forwarded to the corresponding target function for execution, and the return value of the corresponding target function will be returned after execution. The whole process is automatically completed. 
 

@@ -24,9 +24,9 @@ https://github.com/LiteLDev/LLMoney
 
 `plugins/LLMoney/economy.db`
 
-## 指令列表
+## 命令列表
 
-| 指令 | 说明 | 权限等级 |
+| 命令 | 说明 | 权限等级 |
 | --- | --- | --- |
 | /money query [玩家] | 查询你自己/他人的余额 | 玩家/OP |
 | /money pay <玩家> <数量> | 转账给某人 | 玩家 |
@@ -36,4 +36,4 @@ https://github.com/LiteLDev/LLMoney
 | /money hist | 打印流水账 | 玩家 |
 | /money purge | 清除流水账 | OP |
 | /money top | 余额排行 | 玩家 |
-| /money_s | 带有选择器支持的指令 | 玩家 |
+| /money_s | 带有选择器支持的命令 | 玩家 |

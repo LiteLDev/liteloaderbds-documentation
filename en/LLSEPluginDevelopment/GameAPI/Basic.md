@@ -8,7 +8,7 @@ LLSE provides a rich and powerful interface of game elements to facilitate your 
 ## 🔮 Game Element Objects
 
 For the indexing of game elements, LLSE uses a special type of variable to keep track of each game element, and calls it "xx objects", such as "player objects" or "block objects".  
-You can think of it as a unique identifier for a game element.   
+You can think of it as a unique identifier for a game element. 
 
 Currently, LLSE has the following game element objects:
 
@@ -51,11 +51,11 @@ Each member of the coordinate object is **readable and writable**.
 
    If in some cases the dimension is invalid, or cannot be obtained, you will find that the value of `dimid` is `-1`.
 
-   
+ 
 
 2. `FloatPos`object
     Its members are all **floating point numbers**, which are mostly used to represent **entity coordinates** and other positions that cannot be represented by integers  
-    For a variable pos of type `FloatPos`, there are the following members:  
+    For a variable pos of type `FloatPos`, there are the following members:
 
    | Member    | Meaning    | Data Type       |
    | --------- | ---------- | --------- |
@@ -116,7 +116,7 @@ The engine uses a `DirectionAngle` object to denote an Euler angle, called a "di
 Its two members are **floating point numbers**, which are mostly used to represent the direction data such as the orientation of the entity.
 Each member of the direction angle object is **readable and writable**. 
 
-For a `DirectionAngle` type variable ang, there are the following members:  
+For a `DirectionAngle` type variable ang, there are the following members:
 
 | Member    | Meaning       | Data Type      |
 | --------- | ---------- | --------- |

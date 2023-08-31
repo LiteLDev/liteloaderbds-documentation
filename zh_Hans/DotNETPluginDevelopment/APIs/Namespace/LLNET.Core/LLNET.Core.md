@@ -6,7 +6,7 @@
 
 |||
 |-|-|
-|[DynamicCommandInvalidCastException](Class/DynamicCommandInvalidCastException/DynamicCommandInvalidCastException)|表示在**动态指令执行时转换类型**的过程中发生的一个或多个错误。|
+|[DynamicCommandInvalidCastException](Class/DynamicCommandInvalidCastException/DynamicCommandInvalidCastException)|表示在**动态命令执行时转换类型**的过程中发生的一个或多个错误。|
 |[HookFailedException](Class/HookFailedException/HookFailedException)|表示在**挂载BDS钩子**的过程中发生的一个或多个错误。|
 |[InvalidRemoteCallTypeException](Class/InvalidRemoteCallTypeException/InvalidRemoteCallTypeException)|**注册远程调用函数时检测到不可导出或不受支持的类型**引发的异常。
 |[LibPathAttribute](Class/LibPathAttribute/LibPathAttribute)|指示LL.NET将会搜索的插件所依赖的库目录路径。|
@@ -15,7 +15,7 @@
 |[MCException](Class/MCException/MCException)|检测到 [BDS](https://www.minecraft.net/download/server/bedrock) 发生的错误而引发的异常基类。|
 |[NativePluginException](Class/NativePluginException/NativePluginException)|尝试对非.NET插件对象调用Plugin.GetPluginAssembly时引发的异常|
 |[PluginMainAttribute](Class/PluginMainAttribute/PluginMainAttribute)|指示由自定义插件入口加载的插件的入口类。|
-|[RegisterCommandException](Class/RegisterCommandException/RegisterCommandException)|表示在**注册指令**的过程中发生的一个或多个错误。|
+|[RegisterCommandException](Class/RegisterCommandException/RegisterCommandException)|表示在**注册命令**的过程中发生的一个或多个错误。|
 |[RemoteCallExportFunctionException](Class/RemoteCallExportFunctionException/RemoteCallExportFunctionException)|表示在**执行动态远程调用的导出函数中**的过程中发生的一个或多个错误。|
 |[RemoteCallImportFunctionException](Class/RemoteCallImportFunctionException/RemoteCallImportFunctionException)|表示在**执行动态远程调用的导入函数中**的过程中发生的一个或多个错误。|
 

@@ -16,7 +16,7 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
   - xuid : `String`  
     要操作的玩家的XUID标识符
   - value : `Integer`  
-    要设置的金额  
+    要设置的金额
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
@@ -42,7 +42,7 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
   - xuid : `String`  
     要操作的玩家的XUID标识符
   - value : `Integer`  
-    要增加的金额  
+    要增加的金额
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
@@ -56,7 +56,7 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
   - xuid : `String`  
     要操作的玩家的XUID标识符
   - value : `Integer`  
-    要减小的金额  
+    要减小的金额
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
@@ -69,18 +69,18 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
 - 参数：
   - xuid1 : `String`  
     付款的玩家的XUID标识符
-    
+
   - xuid2 : `String`  
     收款的玩家的XUID标识符
   
     如果你使用 `Player.transMoney`，target可以是玩家对象
-  
+
   - money : `Integer`  
     要支付的金额  
-  
+
   - note : `String`  
     （可选参数）给这笔转账附加一些文字说明
-  
+
 - 返回值：是否转账成功
 
 - 返回值类型：`Boolean`

@@ -18,20 +18,20 @@ public ref class CommandParameterOverloadAttribute
 ```
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [CommandParameterOverloadAttribute](CommandParameterOverloadAttribute)
-   
+ 
 
 ## 示例
 
-[如何：使用静态指令](../../../../../HowTo/Static_DynamicCommand)
+[如何：使用静态命令](../../../../../HowTo/Static_DynamicCommand)
 
 ## 构造函数
 - 
     |||
     |-|-|
-    |`CommandParameterOverloadAttribute(Int32)`|使用指定的指令参数标识初始化 `CommandParameterOverloadAttribute` 类的新实例。|
+    |`CommandParameterOverloadAttribute(Int32)`|使用指定的命令参数标识初始化 `CommandParameterOverloadAttribute` 类的新实例。|
 
 ##  字段
 - 
     |||
     |-|-|
-    |[OverloadId]|指令参数重载标识。|
+    |[OverloadId]|命令参数重载标识。|

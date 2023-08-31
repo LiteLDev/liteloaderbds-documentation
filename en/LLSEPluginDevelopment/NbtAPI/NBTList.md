@@ -105,7 +105,7 @@ Therefore, some convenient functions for simplifying object operations are also 
 `list.setFloat(index,data)`  
 `list.setDouble(index,data)`  
 `list.setByteBuffer(index,data)`      
-`list.setString(index,data)`    
+`list.setString(index,data)`
 
 - Parameter: 
   - index : `Integer`  
@@ -118,7 +118,7 @@ Therefore, some convenient functions for simplifying object operations are also 
 
 #### Read the Specific Data of a Subscript Position 
 
-`list.getData(index)`  
+`list.getData(index)`
 
 - Parameter: 
   - index : `Integer`  
