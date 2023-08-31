@@ -7,13 +7,10 @@ In LLSE, the "device information object" is used to manipulate and obtain inform
 #### Acquired by the Player
 
 Get the **device information object** corresponding to a player through the `.getDevice` member function of the player object
-See [Player Object API](/LLSEPluginDevelopment/GameAPI/Player.md)      
+See [Player Object API](Player)
 
 > Note: Do not save a device information object **long-term.**
 > When the player corresponding to the device exits the game, the corresponding object will become invalid. Therefore, if there is a need to operate an object for a long time, please obtain the real-time device information object through the above methods.
-
-<br>
-
 
 ### Device Information Object - Properties
 
@@ -44,13 +41,14 @@ Among them, the operating system type attribute returns a string that records th
 | `Amazon`       | Amazon FireOS                                   |
 | `GearVR`       | Samsung GearVR                                  |
 | `Hololens`     | Microsoft Hololens                              |
-| `Windows10`    | Microsoft Windows (Computer)                    |
+| `WIN10`        | Microsoft Windows (Computer)                    |
 | `Win32`        | Microsoft Win32 (Education Edition?) (Computer) |
 | `TVOS`         | Apple tvOS                                      |
 | `PlayStation`  | Sony PlayStation Host                           |
 | `Nintendo`     | Nintendo Switch Host                            |
 | `Xbox`         | Microsoft Xbox Host                             |
 | `WindowsPhone` | Windows Mobile                                  |
+| `Dedicated`    | Dedicated server (Device os spoofer)            |
 | `Unknown`      | Unknown System                                  |
 
 | Input mode ENUM              |

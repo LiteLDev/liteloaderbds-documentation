@@ -13,7 +13,7 @@ When starting the server, LiteLoaderBDS will print the protocol version (i.e. 54
 
 Yes, but some errors may occur with different protocol version, if some APIs used by the plugin have changed.
 
-## Does Non-native Plugins (JavaScript, Lua, Python, Rust or .NET Plugins) Support Different Versions of Minecraft?
+## Does Non-native Plugins (JavaScript, Lua, Python, Python or .NET Plugins) Support Different Versions of Minecraft?
 
 Yes, except for breaking changes of LiteLoader Script Engine.
 

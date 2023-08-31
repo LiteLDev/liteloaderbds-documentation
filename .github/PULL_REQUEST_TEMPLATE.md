@@ -26,5 +26,5 @@
 
 - My modification DOES NOT follow the style guidelines of this project.
 - My modification IS dupliacted with other pull requests
-- I have NOT read the [style guide](https://docs.litebds.com/en/#/Maintenance/StyleGuide).
+- I have NOT read the [style guide](https://docs.litebds.com/zh_Hans/Maintenance/StyleGuide).
 - My modification IS involved with any copyright issues.

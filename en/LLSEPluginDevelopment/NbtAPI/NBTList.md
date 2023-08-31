@@ -7,9 +7,7 @@ The interface of the object can perform some operations unique to the NBT list.
 
 #### Parse From an Existing NBT Object
 
-See [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [NbtCompound - Tag Type](/LLSEPluginDevelopment/NbtAPI/NBTCompound.md) documentation.
-
-<br>
+See [NbtList - List Type](NBTList) and [NbtCompound - Tag Type](NBTCompound) documentation.
 
 #### Create a New NBT List Object
 
@@ -17,13 +15,11 @@ See [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [NbtComp
 [Lua] `NbtList([data])`
 
 - Parameter: 
-  - data: Array<NBT object> (optional parameter)   
+  - data: Array\<NBT object\> (optional parameter)   
     Pass in an array of NBT objects. Arrays are allowed to contain other array/object structures, but the contents must all be NBT objects
 - Return value: The generated NBT object.
 - Return value type: `NbtList`
   - If the creation fails, an exception will be thrown.
-
-<br>
 
 For a certain `NbtList` type of object `list`, there are the following interfaces.
 
@@ -33,8 +29,6 @@ For a certain `NbtList` type of object `list`, there are the following interface
 
 - Return value: The length of the list.
 - Return value type: `Integer`
-
-<br>
 
 #### Get the Data Type of an Element Stored in a List at the Index Position Given
 
@@ -51,8 +45,6 @@ Possible return values are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NBT.Long
 `NBT.Float` `NBT.Double` `NBT.ByteArray` `NBT.String`  
 `NBT.List` `NBT.Compound`
 
-<br>
-
 #### Set a NBT Object in a List at the Index Position Given
 
 `list.setTag(index,tag)`
@@ -66,8 +58,6 @@ Possible return values are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NBT.Long
 - Return value: The NBT list that has been written (for other operations in the chain).
 - Return value type: `NbtList`
 
-<br>
-
 #### Read NBT Object in a List at the Index Position Given
 
 `list.getTag(index)`
@@ -79,8 +69,6 @@ Possible return values are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NBT.Long
 - Return value type: `NBT object`
   - If the NBT being read does not exist, it will return `Null`
 
-<br>
-
 #### Append an NBT Object to the End of the List
 
 `list.addTag(tag)`
@@ -90,8 +78,6 @@ Possible return values are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NBT.Long
     The NBT object being added to the list.
 - Return value: The NBT list with the NBT object added (for chaining operations).
 - Return value type: `NbtList`
-
-<br>
 
 #### Delete an NBT Object at the Given Index Position
 
@@ -103,8 +89,6 @@ Possible return values are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NBT.Long
     The index cannot exceed the number of NBT objects in the list.
 - Return value: Processed NBT list (easy for chaining to perform other operations).
 - Return value type: `NbtList`
-
-<br>
 
 ## Some Convenience Functions to Assist in the Manipulation of NBT Objects
 
@@ -121,7 +105,7 @@ Therefore, some convenient functions for simplifying object operations are also 
 `list.setFloat(index,data)`  
 `list.setDouble(index,data)`  
 `list.setByteBuffer(index,data)`      
-`list.setString(index,data)`    
+`list.setString(index,data)`
 
 - Parameter: 
   - index : `Integer`  
@@ -132,11 +116,9 @@ Therefore, some convenient functions for simplifying object operations are also 
 - Return value: NBT list that has been written (for other operations in the chain).
 - Return value type: `NbtList`
 
-<br>
-
 #### Read the Specific Data of a Subscript Position 
 
-`list.getData(index)`  
+`list.getData(index)`
 
 - Parameter: 
   - index : `Integer`  
@@ -145,8 +127,6 @@ Therefore, some convenient functions for simplifying object operations are also 
 - Return value type: `Number` / `Float` / `Double` / `ByteBuffer` / `String`, whatever is the data type of the data stored by the object.
   - If the target location stores the `List` type NBT, it will return a `NbtList` object; if the target location stores a `Compound` type NBT, it will return a `NbtCompound` object.
   - If the NBT being read does not exist, it will return `Null`
-
-<br>
 
 #### Convert List Type to Array
 
@@ -157,5 +137,3 @@ Therefore, some convenient functions for simplifying object operations are also 
 
 Convert the contents of List to LLSE array/list, convert all data items to LLSE data type and store them in the corresponding subscript of the array/list for easy reading and processing.
 If an item in the List stores a `List` or `Compound` type which will recursively expand at the corresponding position as `Array` or `Object`.
-
-<br>

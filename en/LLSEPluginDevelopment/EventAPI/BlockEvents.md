@@ -15,8 +15,6 @@
 Only blocks that can be interacted with will trigger this event, such as barrels, beacons, cartography tables, grindstones, etc.
 Intercept events have no effect on chests, shulker boxes, and workbenches.
 
-<br>
-
 #### `"onBlockChanged"` - Block Change Event
 
 - Listener function prototype 
@@ -38,8 +36,6 @@ Intercept events have no effect on chests, shulker boxes, and workbenches.
          4. Some specific features can be tested by themselves.
     </details>
 
-<br>
-
 #### `"onBlockExplode"` - Block Explosion Event
 
 - Listener function prototype 
@@ -60,8 +56,6 @@ Intercept events have no effect on chests, shulker boxes, and workbenches.
 
 - Intercept events: function returns `false`
 
-<br>
-
 #### `"onRespawnAnchorExplode"` - Respawn Anchor Explosion Event
 
 - Listener function prototype 
@@ -72,8 +66,6 @@ Intercept events have no effect on chests, shulker boxes, and workbenches.
   - player : `Player`  
     Player attempting to use a respawn anchor.
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onBlockExploded"` - Block Destroyed by Explosion Event
 
@@ -86,8 +78,6 @@ Intercept events have no effect on chests, shulker boxes, and workbenches.
     The entity object from which the explosion originated.
 - Intercept event: cannot be intercepted.
 
-<br>
-
 #### `"onFireSpread"` - Fire Spread Event
 
 - Listener function prototype 
@@ -96,8 +86,6 @@ Intercept events have no effect on chests, shulker boxes, and workbenches.
   - pos : `IntPos`  
     The coordinates of the block the flame spread to.
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onCmdBlockExecute"` - Command Block Command Execution Event
 
@@ -110,10 +98,8 @@ Intercept events have no effect on chests, shulker boxes, and workbenches.
     The coordinates of the command block where the command was executed.
   - isMinecart : `bool`  
     Whether the command is executed by a command block minecart.
-  
-- Intercept events: function returns `false`
 
-<br>
+- Intercept events: function returns `false`
 
 #### `"onContainerChange"` - Container Content Change Event
 
@@ -143,8 +129,6 @@ There are many different combinations of old item objects and new item objects, 
 - Item Stack Reduction: Old Item Object's `type` == new item object's `type`, and the old item's `count` > new item object's `count`
 - Replacement Item: Old Item Object's typenot equal to the new item object `type`, and neither `item` object is empty.
 
-<br>
-
 #### `"onProjectileHitBlock"` - Block Hit by Projectile Event
 
 - Listener function prototype 
@@ -156,8 +140,6 @@ There are many different combinations of old item objects and new item objects, 
     The projectile entities fired (arrows).
 - Intercept event: cannot be intercepted.
 
-<br>
-
 #### `"onRedStoneUpdate"` - Redstone Update Event
 
 - Listener function prototype 
@@ -168,14 +150,12 @@ There are many different combinations of old item objects and new item objects, 
   - level : `Integer`  
     Updated redstone power levels (0-15).
   - isActive : `Boolean`  
-    Indicates whether the redstone update is active or off.  
+    Indicates whether the redstone update is active or off.
     - If `true`, the redstone became active.
     - if `false`, the redstone became inactive.
 - Intercept events: function returns `false`
 
 Currently, the types of blocks that can monitor redstone updates are: redstone wire, redstone torch, redstone repeater, redstone comparator.
-
-<br>
 
 #### `"onHopperSearchItem"` - Hopper (or Funnel Minecart) Item Absorption Detection Event
 
@@ -193,8 +173,6 @@ Currently, the types of blocks that can monitor redstone updates are: redstone w
 Note: After placing the funnel, this event will be repeatedly triggered on the server side.
 After you intercept the event, the hopper will not be able to absorb the item.
 
-<br>
-
 #### `"onHopperPushOut"` - Hopper Item Output Event
 
 - Listener function prototype 
@@ -207,8 +185,6 @@ After you intercept the event, the hopper will not be able to absorb the item.
   - item : `Item`  
     The item object to be output.
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onPistonTryPush"` - Piston Push Attempt Event
 
@@ -223,8 +199,6 @@ After you intercept the event, the hopper will not be able to absorb the item.
 
 If the piston is blocked by a block and cannot be pushed, this event will loop continuously.
 
-<br>
-
 #### `"onPistonPush"` - Piston Push Event
 
 - Listener function prototype 
@@ -238,8 +212,6 @@ If the piston is blocked by a block and cannot be pushed, this event will loop c
 
 Note: This event is different from the previous event, the last Try event is fired when the piston is trying to push, this event is fired after the push is complete.
 
-<br>
-
 #### `"onFarmLandDecay"` - Farmland Degrade Event
 
 - Listener function prototype 
@@ -250,8 +222,6 @@ Note: This event is different from the previous event, the last Try event is fir
   - entity : `Entity`  
     Entity that degraded the arable land.
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onUseFrameBlock"` - Manipulate Item Frame Event
 
@@ -266,8 +236,6 @@ Note: This event is different from the previous event, the last Try event is fir
 
 NOTE: Actions include placing items, removing items, and rotating items.
 
-<br>
-
 #### `"onLiquidFlow"` - Liquid Flow Event
 
 - Listener function prototype 
@@ -278,4 +246,3 @@ NOTE: Actions include placing items, removing items, and rotating items.
   - to : `IntPos`  
     The coordinates of the position where the liquid will flow.
 - Intercept events: function returns `false`
-

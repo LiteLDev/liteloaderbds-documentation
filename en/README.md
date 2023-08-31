@@ -8,23 +8,23 @@
 
 **LiteLoaderBDS** is a plugin loader for the **Bedrock Edition exclusive server software** (hereafter referred to as **BDS**) for Minecraft, providing powerful cross-language scripting plugin support capabilities and stable API support.
 
-👉[click here](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/README_zh-cn.md)👈 for a more detailed description.
+👉[click here](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/README.md)👈 for a more detailed description.
 
 ## 🔨 How do I install and use LiteLoaderBDS?
 
-👉[click here](/Usage.md)👈 View installation and usage instructions.
+👉[click here](Usage)👈 View installation and usage instructions.
 
 ## ❓ I have a problem, what do I do?
 
-👉[click here](/FAQ.md)👈 View frequently asked questions and solutions.
+👉[click here](FAQ)👈 View frequently asked questions and solutions.
 
 ## 🎬 How can I get involved in LiteLoaderBDS maintenance and development?
 
 We welcome your contribution to **LiteLoaderBDS**!
 
-👉[click here](/Maintenance/)👈 to view the project maintenance and support documentation.
+👉[click here]()👈 to view the project maintenance and support documentation.
 
-We are in the process of conceptualising LiteLoaderBDS 3 and you can 👉[click here](/Maintenance/Blueprint.md)👈 to view the blueprint.
+We are in the process of conceptualising LiteLoaderBDS 3 and you can 👉[click here]()👈 to view the blueprint.
 
 ## 🛴 I want to get my hands dirty and write a plugin, what do I need to do?
 
@@ -49,7 +49,7 @@ Disadvantages.
 
 Recommended for plugins that require changes to the game's base functionality, and any plugins that may exceed 5,000 lines of code.
 
-Ready? 👉[click here](https://cpp.docs.litebds.com/zh-Hans/)👈 Check out the C++ plugin development documentation.
+Ready? 👉[click here](https://cpp.docs.litebds.com/)👈 Check out the C++ plugin development documentation.
 
 ### 🎯 I want to write script plugins (JavaScript or Lua)
 
@@ -66,7 +66,7 @@ Disadvantages.
 
 Recommended for play classes and helper plugins with no more than 5,000 lines of code.
 
-Ready? 👉[click here](/LLSEPluginDevelopment/)👈 Check out the script plugin development documentation.
+Ready? 👉[click here](LLSEPluginDevelopment/README)👈 Check out the script plugin development documentation.
 
 ### 🪁 I want to write .NET plugins (C#, F# or Visual Basic)
 
@@ -80,7 +80,7 @@ Disadvantages.
 
 Recommended for developers who are more familiar with the .NET platform.
 
-Ready to get started? 👉[click here](/DotNETPluginDevelopment/)👈 Check out the .NET plugin development documentation.
+Ready to get started? 👉[click here]()👈 Check out the .NET plugin development documentation.
 
 ### ❤️ I want to publish my plugin
 

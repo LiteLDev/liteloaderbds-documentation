@@ -7,7 +7,7 @@ In LLSE, use "player objects" to manipulate and obtain information about a playe
 #### Get From Event or API
 
 By registering the **event listener** function, get the player object related to the related event given by BDS.
-For details, see [Event listener documentation - EventAPI](/LLSEPluginDevelopment/EventAPI/Listen.md)
+For details, see [Event listener documentation - EventAPI](../EventAPI/Listen)
 
 #### Acquired From Existing Players
 
@@ -34,8 +34,6 @@ This function returns an array of player objects, each of which corresponds to a
 
 > Note: Do not save a `Player` object **long-term**.
 > When the player exits the server, the corresponding player object will become invalid. Therefore, if there is a need to operate a player for a long time, please obtain the real-time player object through the above methods.
-
-<br>
 
 ### Player Object - Properties
 
@@ -104,7 +102,7 @@ These object properties are read-only and cannot be modified. in:
 - The value of the **Player Game Mode** attribute is: `0` for survival mode, `1` for creative mode, `2` for adventure mode, `3` for spectator mode
 - **Player's real name** attribute stored strings can be considered reliable, they will not be changed by name changes
 - **Player device IP address** attribute stores the player's device IP and port number, the format is similar to `12.34.567.89:1111`
-- For a detailed explanation of the **player's current orientation** attribute, see [Basic Game Interface Documentation](/LLSEPluginDevelopment/GameAPI/Basic.md)
+- For a detailed explanation of the **player's current orientation** attribute, see [Basic Game Interface Documentation](Basic)
 - The comparison table of **operation authority level** attributes is as follows:
 
 | Permission Level | Corresponding Authority  |
@@ -113,18 +111,16 @@ These object properties are read-only and cannot be modified. in:
 | 1                | OP permissions           |
 | 4                | OP + Console permissions |
 
-<br>
-
 ### Player Object - Function
 
 Each player object contains some member functions (member methods) that can be executed. For a specific player object `pl`, you can perform some operations on this player through the following functions.
 
-#### Determine if the Player Is OP  
+#### Determine if the Player Is OP
 
 `pl.isOP()`
 
 - Return value: Whether the player is an OP.
-- Return value type: `Boolean`  
+- Return value type: `Boolean`
 
 [JavaScript]
 ```js
@@ -132,7 +128,7 @@ Each player object contains some member functions (member methods) that can be e
 var open = pl.isOP();
 ```
 
-#### Disconnect Player  
+#### Disconnect Player
 
 `pl.kick([msg])`  
 `pl.disconnect([msg])`
@@ -140,7 +136,7 @@ var open = pl.isOP();
 - Parameters: 
   - msg : `String`  
     (Optional parameter) The reason for the disconnection displayed to the kicked player.
-    Defaults to "disconnecting from server".  
+    Defaults to "disconnecting from server".
 - Return value: Whether the connection was successfully disconnected.
 - Return value type: `Boolean`
 
@@ -154,7 +150,7 @@ pl.kick();
 pl:kick()
 ```
 
-#### Send a Text Message to the Player  
+#### Send a Text Message to the Player
 
 `pl.tell(msg[,type])`  
 `pl.sendText(msg[,type])`
@@ -162,7 +158,7 @@ pl:kick()
 - Parameters: 
 
   - msg : `String`  
-    The message to be sent.  
+    The message to be sent.
 
   - type : `Integer`  
     (Optional parameter) The type of text message to send, default is `0`.
@@ -224,14 +220,14 @@ pl.tell("Welcome back ~ ",5);
 
 - Return value type: `Boolean`
 
-#### Broadcast a Text Message to All Players  
+#### Broadcast a Text Message to All Players
 
 `mc.broadcast(msg[,type])`
 
 - Parameters: 
 
   - msg : `String`  
-    The message to be sent.  
+    The message to be sent.
 
   - type : `Integer`  
     (Optional parameter) The type of text message to send, default is `0`.
@@ -260,7 +256,7 @@ mc.broadcast("Hello everyone ~ ");
 - Parameters: 
 
   - title : `String`  
-    The title of the toast.  
+    The title of the toast.
 
   - message : `string`  
     the message that the toast may contain alongside the title.
@@ -273,16 +269,15 @@ mc.broadcast("Hello everyone ~ ");
 pl.sendToast("Hello","everyone ~");
 ```
 
-
 #### Execute a Command as a Player 
 
 `pl.runcmd(cmd)`
 
 - Parameters: 
   - cmd : `String`  
-    The command to be executed.  
+    The command to be executed.
 - Return value: Whether the execution was successful.
-- Return value type:  `Boolean`   
+- Return value type:  `Boolean` 
 
 [JavaScript]
 ```js
@@ -298,9 +293,7 @@ var open = pl.runcmd("tp ~ ~+50 ~");
   - text : `String`  
     The text the player will be made to say. 
 - Return value: Whether the execution was successful.
-- Return value type:  `Boolean`   
-
-<br>
+- Return value type:  `Boolean` 
 
 #### Get Player Distance To Pos
 
@@ -311,9 +304,7 @@ var open = pl.runcmd("tp ~ ~+50 ~");
   - pos : `Entity` / `Player` / `IntPos` / `FloatPos`
     The target position. 
 - Return value: Distance to coordinates (in blocks).
-- Return value type:  `Number`   
-
-<br>
+- Return value type:  `Number` 
 
 #### Speak to a Player as a Player
 
@@ -325,23 +316,21 @@ var open = pl.runcmd("tp ~ ~+50 ~");
   - text : `String`  
     The text the player will be made to say. 
 - Return value: Whether the execution was successful.
-- Return value type:  `Boolean`   
+- Return value type:  `Boolean` 
 
-<br>
-
-#### Teleport the Player to the Specified Location  
+#### Teleport the Player to the Specified Location
 
 `pl.teleport(pos[,rot])`  
 `pl.teleport(x,y,z,dimid[,rot])`
 
 - Parameters: 
-  - pos: `IntPos `/ `FloatPos`  
+  - pos: `IntPos` / `FloatPos`  
     Target position coordinates (or use x, y, z, dimid to determine player position)
-    
+
   - rot: `DirectionAngle`
   
     (Optional) The orientation of the player after teleport, or the same orientation as before teleport if default
-  
+
 - Return value: Whether the teleport was successful or not.
 
 - Return value type: `Boolean`
@@ -352,7 +341,7 @@ var open = pl.runcmd("tp ~ ~+50 ~");
 pl.teleport(pos);
 ```
 
-#### Kill the Player  
+#### Kill the Player
 
 `pl.kill()`
 
@@ -380,8 +369,6 @@ pl.kill();
 
 Note that the damage dealt here is real damage and cannot be reduced by protective equipment such as armor.
 
-<br>
-
 #### Heal the Player
 
 `pl.heal(health)`
@@ -391,8 +378,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     Number of hearts to heal.
 - Return value: Whether heal was dealt.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Health for Player
 
@@ -404,8 +389,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set health for player was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Absorption Attribute for Player
 
 `pl.setAbsorption(value)`
@@ -415,8 +398,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New value
 - Return value: Whether set attribute value for player was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Attack Damage Attribute for Player
 
@@ -428,8 +409,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set attribute value for player was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Maximal Attack Damage Attribute for Player
 
 `pl.setMaxAttackDamage(value)`
@@ -439,8 +418,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New value
 - Return value: Whether set attribute value for player was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Follow Range Attribute for Player
 
@@ -452,8 +429,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set attribute value for player was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Knockback Resistance Attribute for Player
 
 `pl.setKnockbackResistance(value)`
@@ -463,8 +438,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New value (0 or 1)
 - Return value: Whether set attribute value for player was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Luck Attribute for Player
 
@@ -476,8 +449,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set attribute value for player was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Movement Speed for Player
 
 `pl.setMovementSpeed(value)`
@@ -487,8 +458,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New value
 - Return value: Whether set attribute value for player was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Underwater Movement Speed for Player
 
@@ -500,8 +469,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set attribute value for player was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Lava Movement Speed for Player
 
 `pl.setLavaMovementSpeed(value)`
@@ -511,8 +478,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New value
 - Return value: Whether set attribute value for player was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Max Health for Player
 
@@ -524,8 +489,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set max health for player was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Hunger for Player
 
 `pl.setHungry(hunger)`
@@ -535,8 +498,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     Number of hunger.
 - Return value: Whether set hunger for player was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set the Specified Player on Fire
 
@@ -550,16 +511,12 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether the player was set on fire.
 - Return value type: `Boolean`
 
-<br>
-
 #### Put Out The Player
 
 `pl.stopFire()`
 
 - Return value: Has been extinguished.
 - Return value type: `Boolean`
-
-<br>
 
 #### Scale Player
 
@@ -571,15 +528,13 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether the player was scaled.
 - Return value type: `Boolean`
 
-<br>
-
-#### Rename Player  
+#### Rename Player
 
 `pl.rename(newname)`
 
 - Parameters: 
   - newname : `String`  
-    Player's new name.  
+    Player's new name.
 - Return value: WHether the rename was successful.
 - Return value type: `Boolean`
 
@@ -596,8 +551,6 @@ pl.rename("newname");
 - Return value: The `Block` object currently standing on.
 - Return value type: `Block`
 
-<br>
-
 #### Get the Player's Device Information Object
 
 `pl.getDevice()`
@@ -606,9 +559,7 @@ pl.rename("newname");
 - Return value type: `Device`
 
 The device information object stores certain information about the player's device, such as device IP address, device type, network latency, etc.  
-For additional information about device information objects, please refer to [Device Information Objects API](/LLSEPluginDevelopment/GameAPI/Device.md)
-
-<br>
+For additional information about device information objects, please refer to [Device Information Objects API](Device)
 
 #### Get the Item Object in the Player’s Main Hand
 
@@ -619,8 +570,6 @@ For additional information about device information objects, please refer to [De
 
 The item object obtained here is a reference. That is to say, modifying the item object returned here, or using its API, is equivalent to directly operating the corresponding item in the player's main hand.
 
-<br>
-
 #### Get the Item Object of the Player’s Off-Hand
 
 `pl.getOffHand()`
@@ -630,51 +579,41 @@ The item object obtained here is a reference. That is to say, modifying the item
 
 The item object obtained here is a reference. That is to say, modifying the item object returned here, or using its API, is equivalent to directly operating the corresponding item in the player's off hand.
 
-<br>
-
-#### Get the Container Object of the Player’s Inventory  
+#### Get the Container Object of the Player’s Inventory
 
 `pl.getInventory()`
 
 - Return value: The container object corresponding to the player's inventory
 - Return value type: `Container`
 
-For more usage of container objects, please refer to [Container Object API Documentation](/LLSEPluginDevelopment/GameAPI/Container.md)
+For more usage of container objects, please refer to [Container Object API Documentation](Container)
 
-<br>
-
-#### Gets the Container Object for the Player’s Armor Bar  
+#### Gets the Container Object for the Player’s Armor Bar
 
 `pl.getArmor()`
 
 - Return value: The container object corresponding to the player's armor bar
 - Return value type: `Container`
 
-For more usage of container objects, please refer to [Container Object API Documentation](/LLSEPluginDevelopment/GameAPI/Container.md)
+For more usage of container objects, please refer to [Container Object API Documentation](Container)
 
-<br>
-
-#### Get the Container Object of the Player’s Ender Chest  
+#### Get the Container Object of the Player’s Ender Chest
 
 `pl.getEnderChest()`
 
 - Return value: The container object corresponding to the player's ender chest.
 - Return value type: `Container`
 
-For more usage of container objects, please refer to [Container Object API Documentation](/LLSEPluginDevelopment/GameAPI/Container.md)
+For more usage of container objects, please refer to [Container Object API Documentation](Container)
 
-<br>
-
-#### Get the Player’s Respawn Coordinates  
+#### Get the Player’s Respawn Coordinates
 
 `pl.getRespawnPosition()`
 
 - Return value: Respawn point coordinates
 - Return value type: `IntPos`
 
-<br>
-
-#### Modify the Player’s Respawn Coordinates  
+#### Modify the Player’s Respawn Coordinates
 
 `mc.setRespawnPosition(pos)`  
 `mc.setRespawnPosition(x,y,z,dimid)`
@@ -685,8 +624,6 @@ For more usage of container objects, please refer to [Container Object API Docum
 - Return value: Whether the modification was successful.
 - Return value type: `Boolean`
 
-<br>
-
 #### Give the Player an Item
 
 `pl.giveItem(item[, amount])`
@@ -694,7 +631,7 @@ For more usage of container objects, please refer to [Container Object API Docum
 - Parameters: 
   - item : `Item`  
     The item being given.
-    
+
   - amount: `Integer`
   
     (Optional) The number of item given. If this parameter is provided, the Count property of the item object itself will be ignored.
@@ -702,8 +639,6 @@ For more usage of container objects, please refer to [Container Object API Docum
 - Return value type: `Boolean`
 
 If the player's inventory is full, excess items will be drop.
-
-<br>
 
 #### Clears All Items of the Specified Type From the Player’s Backpack
 
@@ -720,8 +655,6 @@ If the player's inventory is full, excess items will be drop.
 Compares the type attribute of all items in the player's inventory, main hand, off-hand, and armor to this string.
 If found, clear this item.
 
-<br>
-
 #### Refresh Player Inventory, Armor Bar
 
 `pl.refreshItems()`
@@ -731,8 +664,6 @@ If found, clear this item.
 
 After modifying the player's items, in order for the client to take effect, it is necessary to refresh all the player's items.
 
-<br>
-
 #### Refresh All Chunks Loaded by the Player
 
 `pl.refreshChunks()`
@@ -740,16 +671,14 @@ After modifying the player's items, in order for the client to take effect, it i
 - Return value: Whether the refresh was successful.
 - Return value type: `Boolean`
 
-<br>
-
-#### Modify Player Operation Permissions  
+#### Modify Player Operation Permissions
 
 `pl.setPermLevel(level)`
 
 - Parameters: 
 
   - level : `Integer`  
-    Target operation authority level  
+    Target operation authority level
 
     | Player Permission Level | Corresponding Permission Authority |
     | ----------------------- | ---------------------------------- |
@@ -809,8 +738,6 @@ pl.addLevel(6);
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-<br>
-
 #### Get Player Experience Level 
 
 `pl.getLevel()`
@@ -838,8 +765,6 @@ pl.getLevel()
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-<br>
-
 #### Reset Player Experience
 
 `pl.resetLevel()`
@@ -865,8 +790,6 @@ pl:resetLevel()
 - Return value: The player's current experience points.
 - Return value type: `Integer`
 
-<br>
-
 #### Set Player Current Experience Points
 
 `pl.setCurrentExperience(count)`
@@ -877,16 +800,12 @@ pl:resetLevel()
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-<br>
-
 #### Get Player Total Experience Points
 
 `pl.getTotalExperience()`
 
 - Return value: The player's total experience points.
 - Return value type: `Integer`
-
-<br>
 
 #### Set Player Total Experience Points
 
@@ -897,8 +816,6 @@ pl:resetLevel()
     The number of experience points to set.
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
-
-<br>
 
 #### Increase Player Experience Points
 
@@ -931,8 +848,6 @@ pl:addExperience(6)
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-<br>
-
 #### Get the Experience Points Needed for Players to Level Up
 
 `pl.getXpNeededForNextLevel()`
@@ -953,7 +868,7 @@ pl.getXpNeededForNextLevel();
 pl.getXpNeededForNextLevel()
 ```
 
-#### Send the Player to the Specified Server  
+#### Send the Player to the Specified Server
 
 `pl.transServer(server,port)`
 
@@ -962,7 +877,7 @@ pl.getXpNeededForNextLevel()
     Target server IP / domain name
 
   - port : `Integer`  
-    Target server port  
+    Target server port
 - Return value: Whether the transfer was successful or not.
 - Return value type: `Boolean` 
 
@@ -997,7 +912,7 @@ pl:crash()
 - Parameters: 
 
   - title : `String`  
-    Sidebar Title  
+    Sidebar Title
   - data : `Object<String-Integer>`  
     Sidebar Object Content Object  
     Each key-value pair in the object will be set as a row of the sidebar content.
@@ -1027,7 +942,7 @@ pl.setSidebar("title",{"aaaa":3,"bbb":12,"cc":7});
 pl.removeSidebar();
 ```
 
-#### Sets the Custom Boss Health Bar That the Player Sees  
+#### Sets the Custom Boss Health Bar That the Player Sees
 
 `pl.setBossBar(uid,title,percent,colour)`
 
@@ -1035,7 +950,7 @@ pl.removeSidebar();
   - uid : `Number`   
     Unique identifier, no conflicting duplicates! One uid for one line of bar
   - title : `String`  
-    Custom Health Bar Title  
+    Custom Health Bar Title
   - percent : `Integer`  
     The percentage of health in the boss bar, the valid range is 0~100. `0` is empty boss bar, `100` is full.
   - colour : `Integer`
@@ -1049,7 +964,7 @@ pl.removeSidebar();
 pl.setBossBar(1145141919,"Hello ~ ",80,0);
 ```
 
-#### Remove the Player’s Custom Boss Health Bar  
+#### Remove the Player’s Custom Boss Health Bar
 
 `pl.removeBossBar(uid)`
 
@@ -1072,8 +987,6 @@ pl.removeBossBar(1145141919);
 - Return value: Player's NBT object.
 - Return value type: `NbtCompound`
 
-<br>
-
 #### Write to an Online Player's NBT Object
 
 `pl.setNbt(nbt)`
@@ -1084,9 +997,7 @@ pl.removeBossBar(1145141919);
 - Return value: Whether the write was successful or not.
 - Return value type: `Boolean`
 
-For more usage of NBT objects, please refer to [NBT Interface Documentation](/LLSEPluginDevelopment/NbtAPI/NBT.md)
-
-<br>
+For more usage of NBT objects, please refer to [NBT Interface Documentation](../NbtAPI/NBT)
 
 #### Get an Player's NBT Object
 
@@ -1099,8 +1010,6 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](/LL
 - Return value type: `NbtCompound`
 
 Using this API, you can operate offline player`s nbt. 
-
-<br>
 
 #### Write to an Player's NBT Object
 
@@ -1115,8 +1024,6 @@ Using this API, you can operate offline player`s nbt.
 - Return value type: `Boolean`
 
 Using this API, you can operate offline player`s nbt. 
-
-<br>
 
 #### Write Data to Some Special Tags of an Player's NBT Object
 
@@ -1134,8 +1041,6 @@ Using this API, you can operate offline player`s nbt.
 
 Using this API, you can operate offline player`s nbt. 
 
-<br>
-
 #### Delete an Player's NBT Object
 
 `mc.deletePlayerNbt(uuid)`
@@ -1148,8 +1053,6 @@ Using this API, you can operate offline player`s nbt.
 
 Using this API, you can operate offline player`s nbt. 
 
-<br>
-
 #### Add a Tag for the Player
 
 `pl.addTag(tag)`
@@ -1159,8 +1062,6 @@ Using this API, you can operate offline player`s nbt.
     The tag string to be added.
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
-
-<br>
 
 #### Remove a Tag for a player
 
@@ -1172,8 +1073,6 @@ Using this API, you can operate offline player`s nbt.
 - Return value: Whether the removal was successful.
 - Return value type: `Boolean`
 
-<br>
-
 #### Check if the Player Has a Tag 
 
 `pl.hasTag(tag)`
@@ -1184,16 +1083,12 @@ Using this API, you can operate offline player`s nbt.
 - Return value: Whether the player has the tag.
 - Return value type: `Boolean`
 
-<br>
-
 #### Get a List of All Tags Player the Player Has
 
 `pl.getAllTags()`
 
 - Return value: List of all tag strings of the player.
 - Return value type: `Array<String,String,...>`
-
-<br>
 
 #### Get a List of the Player’s Abilities (From the Player’s NBT)
 
@@ -1203,7 +1098,6 @@ Using this API, you can operate offline player`s nbt.
 - Return value type: `object<String-Any Type>`
 
 Each item in the list of key-value pairs looks like: `"mayfly": 1` etc.
-<br>
 
 #### Get a list of the player's Attributes (from the player's NBT)
 
@@ -1227,16 +1121,12 @@ Each item in the array is a key-value pair list object `Object`, and the Attribu
 
 (Here it's displayed visually using JSON format)
 
-<br>
-
 #### Get Player Sprint Status
 
 `pl.isSprinting()`
 
 - Return value: Player's sprint state
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Player Sprint State 
 
@@ -1248,11 +1138,9 @@ Each item in the array is a key-value pair list object `Object`, and the Attribu
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-<br>
-
 #### Sending packets to the player
 
-`pl.sendPacket(packet)`  
+`pl.sendPacket(packet)`
 
 - Parameters:
   - packet : `Packet`  
@@ -1260,32 +1148,26 @@ Each item in the array is a key-value pair list object `Object`, and the Attribu
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-<br>
-
 #### Get the player's Biome ID
 
-`pl.getBiomeId()`  
+`pl.getBiomeId()`
 
 - Return value: Biome ID
 - Return value type: `Integer`
 
-<br>
-
 #### Get the player's Biome Name
 
-`pl.getBiomeName()`  
+`pl.getBiomeName()`
 
 - Return value: Biome Name
 - Return value type: `String`
 
-<br>
-
 #### Set Player Ability
 
-`pl.setAbility(AbilityID,Value)`  
+`pl.setAbility(AbilityID,Value)`
 - Parameters:
   - AbilityID : `Integer`  
-    Ability's ID   
+    Ability's ID 
   - Value : `Boolean`  
     Whether to turn on
 - Return value: None
@@ -1297,8 +1179,6 @@ Each item in the array is a key-value pair list object `Object`, and the Attribu
 
 - Return value: effect ID which is player owned
 - Return type: `Array<number,number,...>`
-
-<br>
 
 #### Add an effect for player
 
@@ -1314,8 +1194,6 @@ Each item in the array is a key-value pair list object `Object`, and the Attribu
     Whether to show particles
 - Return value: Whether succeed
 - Return type: `Boolean`
-
-<br>
 
 #### Remove an effect for player
 

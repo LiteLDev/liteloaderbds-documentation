@@ -19,8 +19,6 @@ Provides some other common data processing interfaces. You can use and expand by
 - Return value type: `String`
   - If the return value is `Null`, it means that the conversion failed.
 
-<br>
-
 ### JSON String Parsed as Variable
 
 `data.parseJson(json)`
@@ -32,8 +30,6 @@ Provides some other common data processing interfaces. You can use and expand by
 - Return value type: `Any type`, depending on the data type contained in JSON.
   - If the return value is `Null`, it means that the conversion failed .
 
-<br>
-
 ### MD5 Calculation
 
 `data.toMD5(str)`
@@ -43,8 +39,6 @@ Provides some other common data processing interfaces. You can use and expand by
     String/byte array from which to calculate MD5.
 - Return value: MD5 digest string of original data.
 - Return value type: `String`
-
-<br>
 
 ### SHA1 Calculation
 
@@ -56,8 +50,6 @@ Provides some other common data processing interfaces. You can use and expand by
 - Return value: SHA1 digest string of original data.
 - Return value type: `String`
 
-<br>
-
 ### Data to Base64
 
 `data.toBase64(str)`
@@ -67,8 +59,6 @@ Provides some other common data processing interfaces. You can use and expand by
     String/byte array to convert to Base64.
 - Return value: Base64 result.
 - Return value type: `String`
-
-<br>
 
 ### Base64 decode to data
 
@@ -81,5 +71,3 @@ Provides some other common data processing interfaces. You can use and expand by
     Returns whether the data type is binary data, the default is false.
 - Return value: Decoded data.
 - Return value type: `String` or `ByteBuffer`
-
-<br>

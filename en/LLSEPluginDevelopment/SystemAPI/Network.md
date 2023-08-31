@@ -3,7 +3,7 @@
 The following APIs provide the basic network interface for scripts.
 If there are more complex needs, the network library of the respective language platform can be used to complete the task.
 
-### Send an Asynchronous HTTP(s) Get Request  
+### Send an Asynchronous HTTP(s) Get Request
 
 `network.httpGet(url,callback)`
 
@@ -15,7 +15,7 @@ If there are more complex needs, the network library of the respective language 
 - Return value: Whether the request was successfully sent.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback: `function(status,result)`  
+Note: The prototype of the callback function of the parameter callback: `function(status,result)`
 
 - status : `Integer`    
   The returned HTTP(s) response code, such as 200 means the request was successful.
@@ -24,9 +24,7 @@ Note: The prototype of the callback function of the parameter callback: `functio
 
 If the request fails, the status value will be `-1`. 
 
-<br>
-
-### Send an Asynchronous HTTP(s) Post Request  
+### Send an Asynchronous HTTP(s) Post Request
 
 `network.httpPost(url,data,type,callback)`
 
@@ -42,7 +40,7 @@ If the request fails, the status value will be `-1`.
 - Return value: Whether the request was successfully sent.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback: `function(status,result)`  
+Note: The prototype of the callback function of the parameter callback: `function(status,result)`
 
 - status : `Integer`    
   The returned HTTP(s) response code, such as 200 means the request was successful.
@@ -50,8 +48,6 @@ Note: The prototype of the callback function of the parameter callback: `functio
   The returned data.
 
 If the request fails, the status value will be `-1`.
-
-<br>
 
 ## 🔌 WebSocket Client Object API
 
@@ -64,8 +60,6 @@ In LLSE, use "WebSocket objects" to manipulate the connection and work of a WebS
 
 - Return value: A new WebSocket client object.
 - Return value type: `WSClient`
-
-<br>
 
 ### WebSocket Client Object - Properties
 
@@ -83,8 +77,6 @@ Among them, the wsc.status enumeration has the following situations:
 `wsc.Closing` - Disconnecting.  
 `wsc.Closed` - Not connected.
 
-<br>
-
 ### WebSocket Client Object - Function
 
 Every WS client object contains some member functions (member methods) that can be executed. for a specific file object `wsc`, you can perform some operations on this client through the following functions.
@@ -99,8 +91,6 @@ Every WS client object contains some member functions (member methods) that can 
 - Return value: Whether the connection is successful.
 - Return value type: `Boolean` 
 
-<br>
-
 #### Create a Connection Asynchronously
 
 `wsc.connectAsync(target,callback)`
@@ -113,12 +103,10 @@ Every WS client object contains some member functions (member methods) that can 
 - Return value: Whether the connection attempt was started successfully or not.
 - Return value type: `Boolean` 
 
-Note: The prototype of the callback function of the parameter callback: `function(success)`  
+Note: The prototype of the callback function of the parameter callback: `function(success)`
 
 - success : `Boolean`    
   Whether the WebSocket connection is successful 
-
-<br>
 
 #### Send Text/Binary Messages
 
@@ -131,8 +119,6 @@ Note: The prototype of the callback function of the parameter callback: `functio
 - Return value type: `Boolean` 
 
 If the parameter type passed in is `String`, will be sent as text, if it is `ByteBuffer` will be sent as binary data.
-
-<br>
 
 #### Listen for WebSocket Events 
 
@@ -150,8 +136,6 @@ In the process of WS working, when a message is received or an error occurs, the
     When the specified event occurs, LLSE will call the listener function you gave and pass in the corresponding parameters.
 - Return value: Whether the event was successfully monitored.
 - Return value type: `Boolean` 
-
-<br>
 
 #### List of Listening Events
 
@@ -187,8 +171,6 @@ In the process of WS working, when a message is received or an error occurs, the
   - code : `Integer`  
     Error code.
 
-<br>
-
 #### Close the Connection
 
 `wsc.close()`
@@ -198,8 +180,6 @@ In the process of WS working, when a message is received or an error occurs, the
 
 Do not continue to use this client object while it is closed!
 
-<br>
-
 #### Force Disconnect
 
 `wsc.shutdown()`
@@ -208,8 +188,6 @@ Do not continue to use this client object while it is closed!
 - Return value type: `Boolean` 
 
 Do not continue to use this client object while it is disconnected!
-
-<br>
 
 #### Get Error Code
 

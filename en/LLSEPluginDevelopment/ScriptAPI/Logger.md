@@ -29,8 +29,6 @@ With the **Log output level** setting, you can easily filter out some unnecessar
 The default value of the log output level is `4`, that is, all kinds of logs other than debug information will be output. 
 With some APIs given below, you can adjust the log output level to your own desired value. 
 
-<br>
-
 ### Set Output Configuration
 
 Before using the general log interface, you need to modify some configuration settings of the log output according to your needs.
@@ -46,12 +44,10 @@ If you don't change any settings, by **default** the log will only be output to 
 - Parameter:
   - isOpen : `Boolean`  
     Set whether the log is output to the console
-    The switch is on by default.  
+    The switch is on by default.
   - logLevel : `Integer`  
     (optional parameter) the log output level of the console, the default is `4` 
 - Return value: none 
-
-<br>
 
 #### Set whether the log is output to a file
 
@@ -68,8 +64,6 @@ If you don't change any settings, by **default** the log will only be output to 
 
 If you want to output to a file, we recommend that you output the log uniformly to `BDS_Root_Directory/logs/` folder for easy organization and inspection.
 
-<br>
-
 #### Set whether the log is output to a certain player
 
 `logger.setPlayer(player[,logLevel])`
@@ -80,12 +74,10 @@ If you want to output to a file, we recommend that you output the log uniformly 
     If it returns `Null`, output to the player is closed.
     The switch is off by default
   - logLevel : `Integer`  
-    (optional parameter) The player's minimum log output level, defaults to `4`    
+    (optional parameter) The player's minimum log output level, defaults to `4`
 - Return value: none 
 
 This is a function designed to facilitate in-game debugging. The log output to the player will be treated as a chat message and displayed on the target player's screen.
-
-<br>
 
  ### Output Log Function
 
@@ -107,17 +99,15 @@ Among them, **ordinary text** will be output as it is when output, while other o
 For example: you call `logger.error("Fail to transport the player")`  
 The result of the log output is: 
 
-```log
+```txt
 [2021-05-21 19:41:03 Error] Fail to transport the player
 ```
-
-<br>
 
 ### Other Settings
 
 In addition, there are other settings to change the format of the output log 
 
-#### Set custom log message headers  
+#### Set custom log message headers
 
 `logger.setTitle(title)`
 
@@ -132,13 +122,11 @@ By default, message headers are empty by default, i.e. output without headers.
 For example: set a custom header as `logger.setTitle("LiteLoader")`  
 Then the following log output will become like: 
 
-```log
+```txt
 20:05:26 ERROR [LiteLoader] Fail to transport the player
 ```
 
 If you want to turn off the header after setting it, do `logger.setTitle("")`
-
-<br>
 
 #### Unified modification log output level
 
@@ -146,9 +134,7 @@ If you want to turn off the header after setting it, do `logger.setTitle("")`
 
 - Parameter:
   - level : `Integer`  
-    Log output level    
+    Log output level
 - Return value: none 
 
 Unified reset of log output levels for various output directions 
-
-<br>

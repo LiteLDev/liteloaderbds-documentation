@@ -25,8 +25,6 @@ Some interfaces related to loader operations are provided here.
 - Return value: loader version
 - Return value type:  `String`
 
-<br>
-
 ### Check LiteLoader loader version
 
 `ll.requireVersion(major[,minor,revision])`
@@ -44,8 +42,6 @@ Some interfaces related to loader operations are provided here.
 If the detection finds that the currently installed version of LLSE is lower than the value passed in, it will return `false`. 
 You can choose to judge based on the results and report an error to remind users to upgrade their LiteLoaderBDS version.
 
-<br>
-
 ### Get information about Plugin
 
 `ll.getPluginInfo(name)`
@@ -55,7 +51,7 @@ You can choose to judge based on the results and report an error to remind users
   Plugin name
 - Return value: Plugin Object
 - Return value type:  `Plugin`
-  - For a returned plugin object, there are the following members:  
+  - For a returned plugin object, there are the following members:
 
   | Property          | Description             | Type                             |
   | ----------------- | ----------------------- | -------------------------------- |
@@ -66,9 +62,6 @@ You can choose to judge based on the results and report an error to remind users
   | plugin.filePath   | Path to plugin          | `String`                         |
   | plugin.others     | Other information       | `Object`                         |
 
-
-<br>
-
 ### List all loaded plugins
 
 `ll.listPlugins()`
@@ -76,16 +69,12 @@ You can choose to judge based on the results and report an error to remind users
 - Return value: A list containing the names of all loaded plugin
 - Return value type:  `Array<String,String,...>`
 
-<br>
-
 ### List all loaded plugins with information
 
 `ll.getAllPluginInfo()`
 
 - Return value: A list containing the plugin objects of all loaded plugin
 - Return value type:  `Array<Plugin,Plugin,...>`
-
-<br>
 
 ### Remote Function Call
 
@@ -109,8 +98,6 @@ In order to allow the pre-plug-ins developed by developers to provide interfaces
 
 Note: If the namespace and name of the exported function are exactly the same as another already exported function, the export will fail. Please select the namespace and export name appropriately when exporting.
 
-<br>
-
 #### Import Function
 
 After you have learned that there is a plug-in exporting function, in order to use the function exported by him, you first need to import this function into your own scripting system.
@@ -128,20 +115,16 @@ LLSE provides the interface import to import functions already exported by other
 
 The return value of `ll.import` is a function. When you call this function, the cross-plugin call process will be done automatically in the background. The parameters of the calling function will be wrapped and passed to the remote function, and the return value of this function is the return value returned by the remote function after it has been executed.
 
-<br>
-
 #### Example of Remote Calling Function 
 
 For example, there is a plug-in that exports a function using the namespace AAA, and the name of the exported function is Welcome
 You can execute `welcome = ll.import("AAA", "Welcome"); ` to import this function. After the import is complete, you can execute directly below:
 
-`welcome("hello",2,true);`   
+`welcome("hello",2,true);` 
 
 The parameters of the function will be automatically forwarded to the corresponding target function for execution, and the return value of the corresponding target function will be returned after execution. The whole process is automatically completed. 
 
 Notice! When calling a function, you need to ensure that the number and types of parameters you pass in and the parameters accepted by the target function are correct and in one-to-one correspondence. Otherwise, an error will occur. 
-
-<br>
 
 ### Determine if a remote function has been exported
 
@@ -154,8 +137,6 @@ Notice! When calling a function, you need to ensure that the number and types of
     Export name used by the function
 - Return value：Whether the function has been exported
 - Return value type： `Boolean`
-
-<br>
 
 ### Set Plugin Dependencies 
 
@@ -184,11 +165,7 @@ For execution, use `ll.require`, then LLSE will perform the following series of 
 - Use the HTTP(s) protocol remotePath to request the download address corresponding to the remotePath parameter, and download the dependent library files to the `plugins/lib` directory. If the download fails, return failure.
 - Load the successfully downloaded dependent library file and return the loading result.
 
-<br>
-
 Authors of dependent libraries can host relevant code on stable large websites such as GitHub or Gitee, and provide external links to other developers for remote download.
-
-<br>
 
 ### Execute a String as a Script
 

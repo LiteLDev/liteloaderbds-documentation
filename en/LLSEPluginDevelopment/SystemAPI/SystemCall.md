@@ -17,7 +17,7 @@ The following APIs provide interfaces to perform some system calls:
 - Return value: Whether the command was successfully started.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback: `function(exitcode,output)`  
+Note: The prototype of the callback function of the parameter callback: `function(exitcode,output)`
 
 - exitcode : `Integer`    
   The process exit code.
@@ -26,8 +26,6 @@ Note: The prototype of the callback function of the parameter callback: `functio
 
 Notice! What is executed here is not the command of the MC command system.
 This function works asynchronously. It will not wait for the system to execute the command before returning, but the engine will automatically call the given callback function to return the result. 
-
-<br>
 
 ### Run the Specified Location Program
 
@@ -44,7 +42,7 @@ This function works asynchronously. It will not wait for the system to execute t
 - Return value: Whether the process was successfully started.
 - Return value type: `Boolean`
 
-Note: The prototype of the callback function of the parameter callback: `function(exitcode,output)`  
+Note: The prototype of the callback function of the parameter callback: `function(exitcode,output)`
 
 - exitcode : `Integer`    
   Process exit code.
@@ -52,5 +50,3 @@ Note: The prototype of the callback function of the parameter callback: `functio
   The contents of the program's standard output and standard error output.
 
 This function works asynchronously. It will not wait for the system to execute the command before returning, but the engine will automatically call the given callback function to return the result.
-
-<br>

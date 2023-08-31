@@ -20,8 +20,6 @@ At the same time, the member functions of these objects can also be called.
 
 Note: Only some basic information of players can be obtained in this monitoring function, such as name, IP, XUID, etc. Because the player has not fully entered the server at this time.
 
-<br>
-
 #### `"onJoin"` - Player Join Event
 
 - Listener function prototype 
@@ -30,8 +28,6 @@ Note: Only some basic information of players can be obtained in this monitoring 
   - player : `Player`  
     The player that enters the game.
 - Intercept event: cannot be intercepted.
-
-<br>
 
 #### `"onLeft"` - Player Leave Event
 
@@ -43,8 +39,6 @@ Note: Only some basic information of players can be obtained in this monitoring 
 
 - Intercept event: cannot be intercepted.
 
-<br>
-
 #### `"onRespawn"` - Player Respawn Event
 
 - Listener function prototype 
@@ -53,8 +47,6 @@ Note: Only some basic information of players can be obtained in this monitoring 
   - player : `Player`  
     The player being respawned.
 - Intercept event: cannot be intercepted.
-
-<br>
 
 #### `"onPlayerDie"` - Player Death Event
 
@@ -65,10 +57,8 @@ Note: Only some basic information of players can be obtained in this monitoring 
     The player that died.
   - source : `Entity`  
     The entity that dealt the damage that killed the player (may be `Null`).
-  
-- Intercept event: cannot be intercepted.
 
-<br>
+- Intercept event: cannot be intercepted.
 
 #### `"onPlayerCmd"` - Player Command Execution Event
 
@@ -82,8 +72,6 @@ Note: Only some basic information of players can be obtained in this monitoring 
 
 - Intercept events: function returns `false`
 
-<br>
-
 #### `"onChat"` - Player Chat Event
 
 - Listener function prototype 
@@ -95,8 +83,6 @@ Note: Only some basic information of players can be obtained in this monitoring 
     The message that was sent.
 
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onChangeDim"` - Player Dimension Switch Event
 
@@ -111,8 +97,6 @@ Note: Only some basic information of players can be obtained in this monitoring 
 
 Reminder: This event does not fire when the player returns to the Overworld from the End via a return portal.
 
-<br>
-
 #### `"onJump"` - Player Jump Event
 
 - Listener function prototype 
@@ -122,8 +106,6 @@ Reminder: This event does not fire when the player returns to the Overworld from
     The player that jumped.
 
 - Intercept event: cannot be intercepted.
-
-<br>
 
 #### `"onSneak"` - Player Sneak Event
 
@@ -136,8 +118,6 @@ Reminder: This event does not fire when the player returns to the Overworld from
     `True` indicates that the player is sneaking,`False` indicates that the player is no longer sneaking.
 
 - Intercept event: cannot be intercepted.
-
-<br>
 
 #### `"onAttackEntity"` - Player Attack Other Event
 
@@ -152,8 +132,6 @@ Reminder: This event does not fire when the player returns to the Overworld from
     The damage dealt by this attack.
 
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onAttackBlock"` - Player Attack Block Event
 
@@ -171,8 +149,6 @@ Reminder: This event does not fire when the player returns to the Overworld from
 
 - Intercept events: function returns `false`
 
-<br>
-
 #### `"onUseItem"` - Player Item Use Event 
 
 - Listener function prototype 
@@ -183,8 +159,6 @@ Reminder: This event does not fire when the player returns to the Overworld from
   - item : `Item`  
     The item that was used.
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onUseItemOn"` - Player Use Item on Block Event (Right-Click)
 
@@ -207,8 +181,6 @@ Reminder: This event does not fire when the player returns to the Overworld from
 
 Note: Win10 client right-clicking on the player will trigger this event on the server multiple times in a row.
 
-<br>
-
 #### `"onUseBucketPlace"` - Players use bucket to pour things out on Block Event
 
 - Listener function prototype 
@@ -229,8 +201,6 @@ Note: Win10 client right-clicking on the player will trigger this event on the s
 - Intercept events: function returns `false`
 
 Note: The player may trigger this event on the server multiple times in a row.
-
-<br>
 
 #### `"onUseBucketTake"` - Players use bucket to pack in things Event
 
@@ -253,8 +223,6 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 Note: The player may trigger this event on the server multiple times in a row.
 
-<br>
-
 #### `"onTakeItem"` - Player Pickup Item Event
 
 - Listener function prototype 
@@ -270,8 +238,6 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 - Intercept events: function returns `false`
 
-<br>
-
 #### `"onDropItem"` - Player Drop Item Event
 
 - Listener function prototype 
@@ -284,8 +250,6 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 - Intercept events: function returns `false`
 
-<br>
-
 #### `"onEat"` - Player Eating Event
 
 - Listener function prototype 
@@ -295,12 +259,10 @@ Note: The player may trigger this event on the server multiple times in a row.
     The player that is eating.
   - item : `Item`  
     The item being eaten.
-  
+
 - Intercept events: function returns `false`
 
 **Food** here is a broad concept of items, including conventional food, potions, milk, medicines and other items that can be ingested.
-
-<br>
 
 #### `"onAte"` - Player Ate Event
 
@@ -311,7 +273,7 @@ Note: The player may trigger this event on the server multiple times in a row.
     The player that has eaten.
   - item : `Item`  
     The item which has been eaten.
-  
+
 - Intercept events: function returns `false`
 
 #### `"onConsumeTotem"` - Player Consume Totem Event
@@ -323,8 +285,6 @@ Note: The player may trigger this event on the server multiple times in a row.
     The player that consumes the totem.
 - Intercept events: function returns `false`
   - After intercepting here, the resurrection effect of the totem will still be triggered, but the totem will not be consumed.
-
-<br>
 
 #### `"onEffectAdded"` - Player Effect Added Event
 
@@ -339,10 +299,8 @@ Note: The player may trigger this event on the server multiple times in a row.
     Obtained effect amplifier (effect level -1)
   - duration : `Number` 
     Obtained effect duration (ticks)
-  
-- Intercept events: function returns `false`
 
-<br>
+- Intercept events: function returns `false`
 
 #### `"onEffectRemoved"` - Player Effect Removed Event
 
@@ -353,10 +311,8 @@ Note: The player may trigger this event on the server multiple times in a row.
     Player with the removed effect.
   - effectName : `String`   
     Removed effect name: **minecraft:effect.EffectName**
-  
-- Intercept events: function returns `false`
 
-<br>
+- Intercept events: function returns `false`
 
 #### `"onEffectUpdated"` - Player Effect Updated Event
 
@@ -371,10 +327,8 @@ Note: The player may trigger this event on the server multiple times in a row.
     Obtained effect amplifier (effect level -1)
   - duration : `Number` 
     Obtained effect duration (ticks)
-  
-- Intercept events: function returns `false`
 
-<br>
+- Intercept events: function returns `false`
 
 #### `"onStartDestroyBlock"` - Player Start Breaking Block Event
 
@@ -388,8 +342,6 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 - Intercept event: cannot be intercepted.
 
-<br>
-
 #### `"onDestroyBlock"` - Player Destroyed Block Event
 
 - Listener function prototype 
@@ -401,8 +353,6 @@ Note: The player may trigger this event on the server multiple times in a row.
     The broken block.
 
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onPlaceBlock"` - Player Try Places Block Event
 
@@ -418,8 +368,6 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 > **ATTENTION** This event will always fire when the player tries to place a block.
 
-<br>
-
 #### `"afterPlaceBlock"` - Player Placed Block Event
 
 - Listener function prototype 
@@ -431,8 +379,6 @@ Note: The player may trigger this event on the server multiple times in a row.
     The block that was placed.
 
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onOpenContainer"` - Player Opens Container Event
 
@@ -447,8 +393,6 @@ Note: The player may trigger this event on the server multiple times in a row.
 
 The **container** here is a broad concept of container, including boxes, buckets and other containers that can store items can trigger this event.
 
-<br>
-
 #### `"onCloseContainer"` - Player Closes Container Event
 
 - Listener function prototype 
@@ -461,8 +405,6 @@ The **container** here is a broad concept of container, including boxes, buckets
 - Intercept events: function returns `false`
 
 Due to the limitation of the monitoring function, the containers that currently support monitoring and closing are: chests (`minecraft:chest`), and wooden barrels (`minecraft:barrel`).
-
-<br>
 
 #### `"onInventoryChange"` - Player Inventory Change Event
 
@@ -488,8 +430,6 @@ There are many different combinations of old item objects and new item objects, 
 - Item Reduce Stack: Old Item Object's `type` == new item object's `type`, old item's `count` > new item's `count`.
 Replacement Item: Old Item Object's `type` does not equal the new item's `type`, and neither item stack is empty.
 
-<br>
-
 #### `"onChangeSprinting"` - Player Sprint State Change Event
 
 - Listener function prototype 
@@ -502,8 +442,6 @@ Replacement Item: Old Item Object's `type` does not equal the new item's `type`,
 - Intercept event: cannot be intercepted.
 
 Note: Player.setSprinting (false) can be executed in the next game tick to achieve the interception effect.
-
-<br>
 
 #### `"onSetArmor"` - Player Armor Change Event
 
@@ -519,8 +457,6 @@ Note: Player.setSprinting (false) can be executed in the next game tick to achie
 - Intercept event: function returns `false`
 - Warning: After interception, you will take off your original equipment when you enter the game.
 
-<br>
-
 #### `"onUseRespawnAnchor"` - Player Respawn Anchor Use Event
 
 - Listener function prototype 
@@ -531,8 +467,6 @@ Note: Player.setSprinting (false) can be executed in the next game tick to achie
   - pos : `IntPos`  
     The position of the respawn anchor that was used.
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onOpenContainerScreen"` - Player Opens Container GUI Event
 
@@ -545,8 +479,6 @@ Note: Player.setSprinting (false) can be executed in the next game tick to achie
 
 Note: This event is so powerful that it can even intercept and open backpacks.
 
-<br>
-
 #### `"onExperienceAdd"` - Player Get Experience
 
 - Listener function prototype 
@@ -557,8 +489,6 @@ Note: This event is so powerful that it can even intercept and open backpacks.
   - exp : `Integer`
     Amount of experience gained by the player.
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onPlayerPullFishingHook"` - Player Pull Closer Entity Using Fishing Hook 
 
@@ -572,8 +502,6 @@ Note: This event is so powerful that it can even intercept and open backpacks.
   - item : `Item`  
     Item that player pull closer（If this entity is not item entity, this parameter will be null）
 - Intercept events: function returns `false`
-
-<br>
 
 #### `"onBedEnter"` - Player Enters Bed
 

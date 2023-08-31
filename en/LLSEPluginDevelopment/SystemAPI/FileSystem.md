@@ -4,7 +4,7 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
 
 > Note: The relative paths of all incoming functions are based on the BDS root directory 
 
-### Create Folder   
+### Create Folder 
 
 `File.createDir(dir)`  
 `File.mkdir(dir)`
@@ -16,9 +16,7 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
 - Return value: Whether the folder or folders were created successfully.
 - Return value type: `Boolean`
 
-<br>
-
-### Delete File/Folder  
+### Delete File/Folder
 
 `File.delete(path)`
 
@@ -27,8 +25,6 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
     Path to target file/folder
 - Return value: Whether the deletion was successful.
 - Return value type: `Boolean`
-
-<br>
 
 ### Check if a File/Folder Exists
 
@@ -39,8 +35,6 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
     Path to target file/folder.
 - Return value: Whether the target exists.
 - Return value type: `Boolean`
-
-<br>
 
 ### Copy Files/Folders to Specified Location 
 
@@ -55,9 +49,7 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
 - Return value: Whether the copy is successful.
 - Return value type: `Boolean`
 
-<br>
-
-### Move File/Folder to Specified Location  
+### Move File/Folder to Specified Location
 
 `File.move(from,to)`
 
@@ -70,9 +62,7 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
 - Return value: Whether the copy is successful.
 - Return value type: `Boolean`
 
-<br>
-
-### Rename specified file/folder  
+### Rename specified file/folder
 
 `File.rename(from,to)`
 
@@ -84,8 +74,6 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
     New name of the file/folder.
 - Return value: Whether the rename is successful.
 - Return value type: `Boolean`
-
-<br>
 
 ### Get the Size of the Specified File
 
@@ -100,8 +88,6 @@ The following APIs provide interfaces for manipulating files, directories, etc. 
 
 If the path location passed in is a folder, returns `-1`.
 
-<br>
-
 ### Determine if the Specified Path Is a Folder
 
 `File.checkIsDir(path)`
@@ -114,8 +100,6 @@ If the path location passed in is a folder, returns `-1`.
 
 If the target path does not exist, it will also return `false`
 
-<br>
-
 ### List All Files/Folders Under the Specified Folder
 
 `File.getFilesList(dir)`
@@ -126,5 +110,3 @@ If the target path does not exist, it will also return `false`
 
 - Return value: Array of file names, folder names.
 - Return value type: `Array<String,String,...>`
-
-<br>

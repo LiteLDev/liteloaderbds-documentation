@@ -2,20 +2,13 @@
 
 The following objects and APIs provide the basic BDS packet interface for scripts. 
 
-(Please refer to Nukkit, PokcetMine, BDS Reverse to know the packet structure) If the client crashes, it is a packet structure error, not a bug.   
+(Please refer to Nukkit, PokcetMine, BDS Reverse to know the packet structure) If the client crashes, it is a packet structure error, not a bug. 
 
 The documentation does not list the packet ID and its structure, please check it yourself.
 
-
-## 目录
-- 🔉 [Packet Object API](#🔉-Packet-Object-api)
-- 🔌 [Binary stream object API](#🔌-Binary-stream-object-api)
-
-<br>
-
 ## 🔉 Packet Object API
 
-In LLSE, 「Packet Object」 is used to get information about packets.
+In LLSE, "Packet Object" is used to get information about packets.
 
 ### Get a packet object
 
@@ -23,8 +16,6 @@ In LLSE, 「Packet Object」 is used to get information about packets.
 
 Call some **return packet object** function to get to the packet object given by BDS    
 See [Binary Stream Objects](#🔌-binary-stream-object-api) for details 
-
-<br>
 
 ### Packet Objects - Functions
 
@@ -37,16 +28,12 @@ Every packet object contains some member functions (member methods) that can be 
 - Return value：packet name
 -  Return value type： `String`
 
-<br>
-
 #### Get packet ID
 
 `pkt.getId()`
 
 - Return value：packet id
 - Return value type： `Integer`
-
-<br>
 
 ## 🔌 Binary Stream Object API
 
@@ -70,11 +57,9 @@ Every binary stream object contains some member functions (member methods) that 
 - Return value: success or not
 - Return value type： `Boolean`
 
-<br>
-
 #### Write to binary stream
 
-`bs.writexxxx(value)`    
+`bs.writexxxx(value)`
 
 - Parameters：
   - value : `NULL`  
@@ -105,11 +90,9 @@ Every binary stream object contains some member functions (member methods) that 
 | writeVec3   |  `FloatPos`  |
 | writeCompountTag   |  `NbtCompound`  |
 
-<br>
-
 #### Building packet from binary stream
 
-`bs.createPacket(pktid)`    
+`bs.createPacket(pktid)`
 
 - Parameters：
   - pktid : `Integer`  
@@ -117,8 +100,6 @@ Every binary stream object contains some member functions (member methods) that 
 
 - Return value：Packet object
 - Return value type： `Packet`
-
-<br>
 
 ### Dome Code
 

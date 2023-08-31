@@ -2,15 +2,13 @@
 
 The following APIs provide interfaces to obtain necessary system information:
 
-### Get Current Time String  
+### Get Current Time String
 
 `system.getTimeStr()`
 
 - Return value: The current time string, using the local time zone and 24-hour clock.
   For example: `2021-04-03 19:15:01`
 - Return value type: `String`
-
-<br>
 
 ### Get the Current Time Object
 
@@ -32,13 +30,9 @@ The following APIs provide interfaces to obtain necessary system information:
   | tm.s  | Seconds value        | `Integer` |
   | tm.ms | Millisecond value    | `Integer` |
 
-<br>
-
 ### Randomly Generate a Guid String
 
 `system.randomGuid()` 
 
 - Return value: A randomly generated unique identifier GUID.
 - Return value type:  `String`
-
-<br>

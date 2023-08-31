@@ -8,7 +8,7 @@ LLSE provides a rich and powerful interface of game elements to facilitate your 
 ## 🔮 Game Element Objects
 
 For the indexing of game elements, LLSE uses a special type of variable to keep track of each game element, and calls it "xx objects", such as "player objects" or "block objects".  
-You can think of it as a unique identifier for a game element.   
+You can think of it as a unique identifier for a game element. 
 
 Currently, LLSE has the following game element objects:
 
@@ -26,10 +26,6 @@ Currently, LLSE has the following game element objects:
 | `Objective`      | Scoring Item Objective | Identifies the scoring items of a scoreboard system|
 
 You will come across them frequently in subsequent documentation.
-
-<br>
-
-<br>
 
 ## 🎯 Coordinate Object
 
@@ -55,11 +51,11 @@ Each member of the coordinate object is **readable and writable**.
 
    If in some cases the dimension is invalid, or cannot be obtained, you will find that the value of `dimid` is `-1`.
 
-   <br>
+ 
 
 2. `FloatPos`object
     Its members are all **floating point numbers**, which are mostly used to represent **entity coordinates** and other positions that cannot be represented by integers  
-    For a variable pos of type `FloatPos`, there are the following members:  
+    For a variable pos of type `FloatPos`, there are the following members:
 
    | Member    | Meaning    | Data Type       |
    | --------- | ---------- | --------- |
@@ -74,8 +70,6 @@ Each member of the coordinate object is **readable and writable**.
    **Dimension text name:** The values of the attributes are: "Main World", "Nether", "End"
 
    If in some case the dimension is invalid, or cannot be obtained, you will find that the value of `dimid` is `-1`.
-
-<br>
 
 ### Coordinate Object Auxiliary Interface
 
@@ -116,15 +110,13 @@ For some languages ​​that support general object orientation, LLSE also prov
 - Return value: A floating point coordinate object.
 - Return value type: `FloatPos`
 
-<br>
-
 ## 📐 Bearing Angle Object
 
 The engine uses a `DirectionAngle` object to denote an Euler angle, called a "direction angle object".
 Its two members are **floating point numbers**, which are mostly used to represent the direction data such as the orientation of the entity.
 Each member of the direction angle object is **readable and writable**. 
 
-For a `DirectionAngle` type variable ang, there are the following members:  
+For a `DirectionAngle` type variable ang, there are the following members:
 
 | Member    | Meaning       | Data Type      |
 | --------- | ---------- | --------- |
@@ -132,8 +124,6 @@ For a `DirectionAngle` type variable ang, there are the following members:
 | ang.yaw   | Yaw angle (rotation angle) | `Float`   |
 
 Since there is no concept of rotation in the entity system of MC, there is no data related to the rollover angle.
-
-<br>
 
 ##### Create Direction Angle
 
@@ -147,8 +137,6 @@ Since there is no concept of rotation in the entity system of MC, there is no da
     yaw angle
 - Return value: A floating point coordinate object.
 - Return value type: `FloatPos`
-
-<br>
 
 ##### Convert Direction Angle to Base Heading
 

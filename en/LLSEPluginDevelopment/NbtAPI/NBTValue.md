@@ -6,9 +6,7 @@ We refer to other NBT objects other than `NbtList` and `NbtCompound` types colle
 
 #### Parse From an Existing NBT Object
 
-See the [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [NbtCompound - Tag Type](/LLSEPluginDevelopment/NbtAPI/NBTCompound.md) documentation.
-
-<br>
+See the [NbtList - List Type](NBTList) and [NbtCompound - Tag Type](NBTCompound) documentation.
 
 #### Create a New NBT Data Object
 
@@ -31,16 +29,14 @@ See the [NbtList - List Type](/LLSEPluginDevelopment/NbtAPI/NBTList.md) and [Nbt
 `NbtFloat([data])`  
 `NbtDouble([data])`   
 `NbtByteArray([data])`  
-`NbtString([data])`  
+`NbtString([data])`
 
 - Parameters: 
   - data: `Number` / `Float` / `Double` / `ByteBuffer` / `String` (Optional parameter)  
-    Set the initial data according to the type of object you want to create. The incoming data type needs to be able to initialize the corresponding type of data.  
+    Set the initial data according to the type of object you want to create. The incoming data type needs to be able to initialize the corresponding type of data.
 - Return value: The generated NBT object.
 - Return value type: `NbtEnd` / `NbtByte` / `NbtShort` / `NbtInt` / `NbtLong` / `NbtFloat` / `NbtDouble` / `NbtByteBuffer` / `NbtString` , depending on the type of the data.
   - If the creation fails, an exception will be thrown.
-
-<br>
 
 For an NBT object that stores common data types `value`, with the following member functions.
 
@@ -55,13 +51,9 @@ For an NBT object that stores common data types `value`, with the following memb
 - Return value: Whether the write was successful or not.
 - Return value type: `Boolean`
 
-<br>
-
 #### Read Object Data.
 
 `value.get()`
 
 - Return value: The data stored in the object.
 - Return value type: ``Number` / `Float` / `Double` / `ByteBuffer` / `String`, depending on the type of the data stored.
-
-<br>
