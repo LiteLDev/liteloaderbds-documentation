@@ -1,15 +1,6 @@
-## 📜 监听事件列表
+# 🏃‍♂️ 玩家相关事件
 
-这里给出了脚本引擎支持监听的各种事件的列表。
-
-提示：你可以根据监听得到的游戏对象来获取它们的相关信息，比如说方块的坐标、实体的名字等等。  
-同时，这些对象的成员函数也都可以被调用。
-
-> 注意！传入的回调参数中，有些有时候可能为 Null，这需要在编写代码的时候做好判断检查
-
-## 🏃‍♂️ 玩家相关事件
-
-#### `"onPreJoin"` - 玩家开始连接服务器
+### `"onPreJoin"` - 玩家开始连接服务器
 
 - 监听函数原型
   `function(player)`
@@ -18,9 +9,11 @@
     正在连接服务器的玩家对象
 - 拦截事件：函数返回`false`
 
-注：在这个监听函数中只能获取一些玩家的基础信息，比如名字、IP、XUID等。因为此时玩家尚未完全进服
+::: warning
+在这个监听函数中只能获取一些玩家的基础信息，比如名字、IP、XUID等。因为此时玩家尚未完全进服
+:::
 
-#### `"onJoin"` - 玩家进入游戏（加载世界完成）
+### `"onJoin"` - 玩家进入游戏（加载世界完成）
 
 - 监听函数原型
   `function(player)`
@@ -29,17 +22,16 @@
     进入游戏的玩家对象
 - 拦截事件：不可以拦截
 
-#### `"onLeft"` - 玩家离开游戏
+### `"onLeft"` - 玩家离开游戏
 
 - 监听函数原型
   `function(player)`
 - 参数：
   - player : `Player`  
     离开游戏的玩家对象
-
 - 拦截事件：不可以拦截
 
-#### `"onRespawn"` - 玩家重生
+### `"onRespawn"` - 玩家重生
 
 - 监听函数原型
   `function(player)`
@@ -48,7 +40,7 @@
     重生的玩家对象
 - 拦截事件：不可以拦截
 
-#### `"onPlayerDie"` - 玩家死亡
+### `"onPlayerDie"` - 玩家死亡
 
 - 监听函数原型
   `function(player,source)`
@@ -57,36 +49,31 @@
     死亡的玩家对象
   - source : `Entity`  
     伤害来源的实体对象（可能为`Null`）
-
 - 拦截事件：不可以拦截
 
-#### `"onPlayerCmd"` - 玩家执行命令
+### `"onPlayerCmd"` - 玩家执行命令
 
 - 监听函数原型
   `function(player,cmd)`
 - 参数：
   - player : `Player`  
     执行命令的玩家对象
-
   - cmd : `String`  
     执行的命令
-
 - 拦截事件：函数返回`false`
 
-#### `"onChat"` - 玩家发送聊天信息
+### `"onChat"` - 玩家发送聊天信息
 
 - 监听函数原型
   `function(player,msg)`
 - 参数：
   - player : `Player`  
     发送聊天信息的玩家对象
-
   - msg : `String`  
     发送的聊天消息
-
 - 拦截事件：函数返回`false`
 
-#### `"onChangeDim"` - 玩家切换维度
+### `"onChangeDim"` - 玩家切换维度
 
 - 监听函数原型
   `function(player,dimid)`
@@ -97,19 +84,20 @@
     前往维度的维度ID，0为主世界，1为下界，2为末地
 - 拦截事件：不可以拦截
 
-提醒：当玩家从末地通过返回传送门返回主世界时，不会触发此事件。
+:::warning
+当玩家从末地通过返回传送门返回主世界时，不会触发此事件。
+:::
 
-#### `"onJump"` - 玩家跳跃
+### `"onJump"` - 玩家跳跃
 
 - 监听函数原型
   `function(player)`
 - 参数：
   - player : `Player`  
     跳跃的玩家对象
-
 - 拦截事件：不可以拦截
 
-#### `"onSneak"` - 玩家切换潜行状态
+### `"onSneak"` - 玩家切换潜行状态
 
 - 监听函数原型
   `function(player,isSneaking)`
@@ -118,45 +106,35 @@
     切换潜行状态的玩家对象
   - isSneaking : `Boolean`  
     `True`表示玩家进入潜行状态，`False`表示玩家退出潜行状态
-
 - 拦截事件：不可以拦截
 
-#### `"onAttackEntity"` - 玩家攻击实体
+### `"onAttackEntity"` - 玩家攻击实体
 
 - 监听函数原型
   `function(player,entity,damage)`
 - 参数：
-  - player : `Player` 
+  - player : `Player`  
     攻击实体的玩家对象
-
-  - entity : `Entity` 
+  - entity : `Entity`  
     被攻击的实体对象
-
-  - damage : `float` 
+  - damage : `float`  
     攻击所造成的伤害
-
 - 拦截事件：函数返回`false`
 
-#### `"onAttackBlock"` - 玩家攻击方块
+### `"onAttackBlock"` - 玩家攻击方块
 
 - 监听函数原型
   `function(player,block,item)`
-
 - 参数：
-
-  - player : `Player` 
+  - player : `Player`  
     攻击方块的玩家对象
-
-  - entity : `Block` 
+  - entity : `Block`  
     被攻击的方块对象
-
-  - item：`Item`
-
+  - item：`Item`  
     手持的物品对象
-
 - 拦截事件：函数返回`false`
 
-#### `"onUseItem"` - 玩家使用物品 
+### `"onUseItem"` - 玩家使用物品 
 
 - 监听函数原型
   `function(player,item)`
@@ -167,7 +145,7 @@
     被使用的物品对象
 - 拦截事件：函数返回`false`
 
-#### `"onUseItemOn"` - 玩家对方块使用物品（点击右键）
+### `"onUseItemOn"` - 玩家对方块使用物品（点击右键）
 
 - 监听函数原型
   `function(player,item,block,side,pos)`
@@ -183,12 +161,13 @@
     依次为：`0`-下 `1`-上 `2`-北 `3`-南 `4`-西 `5`-东
   - pos : `FloatPos`  
     被点击的浮点位置
-
 - 拦截事件：函数返回`false`
 
-注：Win10客户端玩家右键会在服务端连续多次激发这个事件
+::: warning
+键鼠玩家右键会在服务端连续多次触发这个事件
+:::
 
-#### `"onUseBucketPlace"` - 玩家使用桶倒出东西
+### `"onUseBucketPlace"` - 玩家使用桶倒出东西
 
 - 监听函数原型
   `function(player,item,block,side,pos)`
@@ -204,12 +183,13 @@
     依次为：`0`-下 `1`-上 `2`-北 `3`-南 `4`-西 `5`-东
   - pos : `FloatPos`  
     被点击的浮点位置
-
 - 拦截事件：函数返回`false`
 
-注：无论是手机还是Win10玩家，可能会连续多次激发这个事件
+::: warning
+无论是触屏还是键鼠玩家，可能会连续多次激发这个事件
+:::
 
-#### `"onUseBucketTake"` - 玩家使用桶装进东西
+### `"onUseBucketTake"` - 玩家使用桶装进东西
 
 - 监听函数原型
   `function(player,item,target,side,pos)`
@@ -225,40 +205,37 @@
     依次为：`0`-下 `1`-上 `2`-北 `3`-南 `4`-西 `5`-东
   - pos : `FloatPos`  
     被点击的浮点位置
-
 - 拦截事件：函数返回`false`
 
-注：无论是手机还是Win10玩家，可能会连续多次激发这个事件
+::: warning
+无论是触屏还是键鼠玩家，可能会连续多次激发这个事件
+:::
 
-#### `"onTakeItem"` - 玩家捡起物品
+### `"onTakeItem"` - 玩家捡起物品
 
 - 监听函数原型
   `function(player,entity,item)`
 - 参数：
-
   - player : `Player`  
     捡起物品的玩家对象
   - entity: `Entity`  
     即将被捡起的物品的掉落物实体
   - item : `Item`  
     即将被捡起的物品对象
-
 - 拦截事件：函数返回`false`
 
-#### `"onDropItem"` - 玩家丢出物品
+### `"onDropItem"` - 玩家丢出物品
 
 - 监听函数原型
   `function(player,item)`
 - 参数：
   - player : `Player`  
     丢出物品的玩家对象
-
   - item : `Item`  
     被丢出的物品对象
-
 - 拦截事件：函数返回`false`
 
-#### `"onEat"` - 玩家正在吃食物
+### `"onEat"` - 玩家正在吃食物
 
 - 监听函数原型
   `function(player,item)`
@@ -267,12 +244,13 @@
     正在吃的玩家对象
   - item : `Item`  
     被吃的物品对象
-
 - 拦截事件：函数返回`false`
 
+::: tip
 此处的 **食物** 为宽泛物品的概念，包括常规食物、药水、牛奶、药品等多种可以被摄取的物品
+:::
 
-#### `"onAte"` - 玩家吃下食物
+### `"onAte"` - 玩家吃下食物
 
 - 监听函数原型
   `function(player,item)`
@@ -281,10 +259,9 @@
     正在吃的玩家对象
   - item : `Item`  
     被吃的物品对象
-
 - 拦截事件：不可以拦截
 
-#### `"onConsumeTotem"` - 玩家消耗图腾
+### `"onConsumeTotem"` - 玩家消耗图腾
 
 - 监听函数原型
   `function(player)`
@@ -292,9 +269,12 @@
   - player : `Player`  
     消耗图腾的玩家对象
 - 拦截事件：函数返回`false`
-  - 此处拦截后,仍会触发图腾的复活效果,但不会消耗图腾
 
-#### `"onEffectAdded"` - 玩家获得效果
+  ::: warning
+  此处拦截后，仍会触发图腾的复活效果，但不会消耗图腾
+  :::
+
+### `"onEffectAdded"` - 玩家获得效果
 
 - 监听函数原型
   `function(player,effectName,amplifier,duration)`
@@ -302,15 +282,14 @@
   - player : `Player`  
     获得效果的玩家对象
   - effectName : `String`  
-    获得的效果名称 **minecraft:effect.效果**
+    获得的效果名称 `minecraft:effect.效果`
   - amplifier : `Number`  
     获得的效果倍率 （效果等级 -1）
   - duration : `Number`  
     获得的效果时长 （单位：tick）
-
 - 拦截事件：函数返回`false`
 
-#### `"onEffectRemoved"` - 玩家移除效果
+### `"onEffectRemoved"` - 玩家移除效果
 
 - 监听函数原型
   `function(player,effectName)`
@@ -318,11 +297,10 @@
   - player : `Player`  
     被移除效果的玩家对象
   - effectName : `String`   
-    被移除的效果名称 **minecraft:effect.效果**
-
+    被移除的效果名称 `minecraft:effect.效果`
 - 拦截事件：函数返回`false`
 
-#### `"onEffectUpdated"` - 玩家刷新效果
+### `"onEffectUpdated"` - 玩家刷新效果
 
 - 监听函数原型
   `function(player,effectName,amplifier,duration)`
@@ -330,100 +308,93 @@
   - player : `Player`  
     刷新效果的玩家对象
   - effectName : `String`  
-    获得的效果名称 **minecraft:effect.效果**
+    获得的效果名称 `minecraft:effect.效果`
   - amplifier : `Number`  
     获得的效果倍率 （效果等级 -1）
   - duration : `Number`  
     获得的效果时长 （单位：tick）
-
 - 拦截事件：函数返回`false`
 
-#### `"onStartDestroyBlock"` - 玩家开始破坏方块  / 点击左键
+### `"onStartDestroyBlock"` - 玩家开始破坏方块  / 点击左键
 
 - 监听函数原型
   `function(player,block)`
 - 参数：
   - player : `Player`  
     正在破坏方块的玩家对象
-
   - block : `Block`  
     正在被破坏的方块对象
-
 - 拦截事件：不可以拦截
 
-#### `"onDestroyBlock"` - 玩家破坏方块完成
+### `"onDestroyBlock"` - 玩家破坏方块完成
 
 - 监听函数原型
   `function(player,block)`
 - 参数：
   - player : `Player`  
     破坏方块的玩家对象
-
   - block : `Block`  
     被破坏的方块对象
-
 - 拦截事件：函数返回`false`
 
-#### `"onPlaceBlock"` - 玩家尝试放置方块
+### `"onPlaceBlock"` - 玩家尝试放置方块
 
 - 监听函数原型
   `function(player,block)`
 - 参数：
   - player : `Player`  
     放置方块的玩家对象
-
   - block : `Block`  
     将要放置的方块对象
-
 - 拦截事件：函数返回`false`
 
-> **存在问题** 
->
-> 1. 当玩家尝试放置方块时，该事件将持续被触发。
-> 2. 方块对象为准星对准的方块，并非将放置方块对象。
+::: warning 存在问题
+1. 当玩家尝试放置方块时，该事件将持续被触发。
+2. 方块对象为准星对准的方块，并非将放置方块对象。
+:::
 
-#### `"afterPlaceBlock"` - 玩家放置方块
+### `"afterPlaceBlock"` - 玩家放置方块
 
 - 监听函数原型
   `function(player,block)`
 - 参数：
   - player : `Player`  
     放置方块的玩家对象
-
   - block : `Block`  
     被放置的方块对象
-
 - 拦截事件：不可以拦截
 
-#### `"onOpenContainer"` - 玩家打开容器方块
+### `"onOpenContainer"` - 玩家打开容器方块
 
 - 监听函数原型
   `function(player,block)`
 - 参数：
   - player : `Player`  
     打开容器方块的玩家对象
-
   - block : `Block`  
     被打开的容器方块对象
 - 拦截事件：函数返回`false`
 
+::: tip
 此处的 **容器** 为宽泛容器的概念，包括箱子、桶等多种可以储存物品的容器都可以触发此事件
+:::
 
-#### `"onCloseContainer"` - 玩家关闭容器方块
+### `"onCloseContainer"` - 玩家关闭容器方块
 
 - 监听函数原型
   `function(player,block)`
 - 参数：
   - player : `Player`  
     关闭容器方块的玩家对象
-
   - block : `Block`  
     被关闭的容器方块对象
 - 拦截事件：函数返回`false`
 
-由于监听函数下限制，目前支持监听关闭的容器有：箱子（`minecraft:chest`）、木桶（`minecraft:barrel`）
+::: warning
+由于监听函数限制，目前支持监听关闭的容器有：箱子（`minecraft:chest`）、木桶（`minecraft:barrel`）
+:::
 
-#### `"onInventoryChange"` - 玩家物品栏变化
+### `"onInventoryChange"` - 玩家物品栏变化
 
 - 监听函数原型
   `function(player,slotNum,oldItem,newItem)`
@@ -438,16 +409,18 @@
     格子中新的物品对象
 - 拦截事件：不可以拦截
 
+::: tip
 对回调参数的解释：  
 旧物品对象与新物品对象有多种不同的组合情况，表示格子内不同的变化情况
 
 - 放入物品：旧物品对象为空，新物品对象不为空
 - 取出物品：旧物品对象不为空，新物品对象为空
-- 物品增加堆叠：旧物品对象的`type` == 新物品对象的`type`，且旧物品对象的`count` < 新物品对象的`count`
-- 物品减少堆叠：旧物品对象的`type` == 新物品对象的`type`，且旧物品对象的`count` > 新物品对象的`count`
+- 物品增加堆叠：旧物品对象的`type` 等于 新物品对象的`type`，且旧物品对象的`count` 小于 新物品对象的`count`
+- 物品减少堆叠：旧物品对象的`type` 等于 新物品对象的`type`，且旧物品对象的`count` 大于 新物品对象的`count`
 - 替换物品：旧物品对象的`type` 不等于 新物品对象的`type`，且两物品对象均不为空
+:::
 
-#### `"onChangeSprinting"` - 玩家改变疾跑状态
+### `"onChangeSprinting"` - 玩家改变疾跑状态
 
 - 监听函数原型
   `function(player,sprinting)`
@@ -458,9 +431,11 @@
     要改变成的疾跑状态
 - 拦截事件：不可以拦截
 
-注：可在下一游戏刻执行player.setSprinting(false)达到拦截效果
+::: tip
+可在下一游戏刻执行`player.setSprinting(false)`达到拦截效果
+:::
 
-#### `"onSetArmor"` - 玩家改变盔甲栏
+### `"onSetArmor"` - 玩家改变盔甲栏
 
 - 监听函数原型
   `function(player,slotNum,item)`
@@ -472,9 +447,12 @@
   - item : `Item`  
     盔甲栏中的物品对象
 - 拦截事件：函数返回`false`
-- 注:拦截后，进入游戏时会脱下原先的装备
 
-#### `"onUseRespawnAnchor"` - 玩家使用重生锚
+::: tip
+拦截后，进入游戏时会脱下原先的装备
+:::
+
+### `"onUseRespawnAnchor"` - 玩家使用重生锚
 
 - 监听函数原型
   `function(player,pos)`
@@ -485,7 +463,7 @@
     被使用的重生锚的位置
 - 拦截事件：函数返回`false`
 
-#### `"onOpenContainerScreen"` - 玩家打开容器类GUI
+### `"onOpenContainerScreen"` - 玩家打开容器类GUI
 
 - 监听函数原型
   `function(player)`
@@ -494,9 +472,11 @@
     尝试打开GUI的玩家对象
 - 拦截事件：函数返回`false`
 
-注：此事件非常强力，甚至可以拦截打开背包。
+::: tip
+此事件非常强力，甚至可以拦截打开背包。
+:::
 
-#### `"onExperienceAdd"` - 玩家获得经验
+### `"onExperienceAdd"` - 玩家获得经验
 
 - 监听函数原型
   `function(player,exp)`
@@ -507,7 +487,7 @@
     获得的经验值
 - 拦截事件：函数返回`false`
 
-#### `"onPlayerPullFishingHook"` - 玩家使用钓鱼竿钓起实体
+### `"onPlayerPullFishingHook"` - 玩家使用钓鱼竿钓起实体
 
 - 监听函数原型
   `function(player,entity,item)`
@@ -517,10 +497,10 @@
   - entity : `Entity`  
     钓起的实体（鱼钩拉起任意实体都会触发该事件，不一定是物品实体）
   - item : `Item`  
-    钓起的物品对象（如果钓到的不是物品则返回null）
+    钓起的物品对象（如果钓到的不是物品则返回`Null`）
 - 拦截事件：函数返回`false`
 
-#### `"onBedEnter"` - 玩家上床
+### `"onBedEnter"` - 玩家上床
 
 - 监听函数原型
   `function(player,pos)`

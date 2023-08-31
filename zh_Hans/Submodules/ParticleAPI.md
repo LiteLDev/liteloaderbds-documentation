@@ -24,15 +24,15 @@ ParticleAPI为插件开发提供了丰富易用的粒子生成接口，符合直
 ### CUI类
 | 类型 | 名字 | 描述 |
 | --- | --- | --- |
-| 变量 | displayRadius: uint | 玩家可视粒子的最大距离 |
-| 变量 | highDetial: bool | 绘制型粒子高清选项 |
-| 变量 | doubleSide: bool | 绘制型粒子双面选项 |
-| 函数 | spawnParticle | 生成指定粒子 |
-| 函数 | spawnPoint | 生成点状粒子 |
-| 函数 | spawnNumber | 生成数字粒子 |
-| 函数 | drawOrientedLine | 绘制定向线段 |
-| 函数 | drawCuboid | 绘制三维矩体 |
-| 函数 | drawCircle | 绘制二维圆形 |
+| 变量 | `displayRadius`: `uint` | 玩家可视粒子的最大距离 |
+| 变量 | `highDetial`: `bool` | 绘制型粒子高清选项 |
+| 变量 | `doubleSide`: `bool` | 绘制型粒子双面选项 |
+| 函数 | `spawnParticle` | 生成指定粒子 |
+| 函数 | `spawnPoint` | 生成点状粒子 |
+| 函数 | `spawnNumber` | 生成数字粒子 |
+| 函数 | `drawOrientedLine` | 绘制定向线段 |
+| 函数 | `drawCuboid` | 绘制三维矩体 |
+| 函数 | `drawCircle` | 绘制二维圆形 |
 
 ### 例子
 

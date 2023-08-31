@@ -14,7 +14,7 @@ LiteLoaderBDS会在开服时输出服务器版本及当前协议版本，你也�
 
 C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不同版本的Minecraft上不稳定地运行。
 
-## 非原生（JavaScript、Lua、Rust、.NET）插件是否支持Minecraft不同版本？
+## 非原生（JavaScript、Lua、Python、.NET）插件是否支持Minecraft不同版本？
 
 一般来说支持，除非LiteLoader ScriptEngine发生重大API改动。
 
@@ -24,7 +24,7 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 
 - `127`：插件与当前版本的LiteLoaderBDS或依赖库不适配
 
-## 崩溃日志中LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll条目无法正常显示怎么办？
+## 崩溃日志中LiteLoader.dll或LiteLoader.Lua/Js/NodeJs/Python.dll条目无法正常显示怎么办？
 
 从[Release](https://github.com/LiteLDev/LiteLoaderBDS/releases)下载对应版本的`PDB.zip`，将其解压至以下任一文件夹内:
 - `/`
@@ -44,12 +44,12 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 请打开`/logs/Crash/`下的崩溃日志文件，查看错误原因。
 
 * 如果日志的前几条都是`bedrock_server_mod.exe`的错误，十有八九就是BDS自身的问题
-* 如果遇到日志中存在`LiteLoader.dll`或`LiteLoader.Lua/Js/NodeJs.dll`，请参考[这里](#崩溃日志中liteloader-dll或liteloader-lua-js-nodejs-dll条目无法正常显示怎么办)
+* 如果遇到日志中存在`LiteLoader.dll`或`LiteLoader.Lua/Js/NodeJs/Python.dll`，请参考[这里](#崩溃日志中liteloader-dll或liteloader-lua-js-nodejs-python-dll条目无法正常显示怎么办)
 
 ## 客户端区块错误
 
 这是由于假种子与客户端区块预生成导致的  
-如果你遇到这个问题，只需要在`server.properties`中将`client-side-chunk-generation-enabled`改为false
+如果你遇到这个问题，只需要在`server.properties`中将`client-side-chunk-generation-enabled`改为`false`
 
 ## Imgui相关错误
 

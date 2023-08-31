@@ -51,7 +51,7 @@
 
 准备好了吗？ 👉[点击此处](https://cpp.docs.litebds.com/)👈 查看C++插件开发文档。
 
-### 🎯 我想写脚本插件（JavsScript或Lua）
+### 🎯 我想写脚本插件（JavsScript、Lua或Python）
 
 优点：
 * 无需关注**BDS**底层，容易上手开发；
@@ -82,7 +82,7 @@
 
 建议对.NET平台较为熟悉的开发者使用。
 
-准备好了吗？ 👉[点击此处](DotNETPluginDevelopment/README)👈 查看 .NET插件开发文档（已过时）。
+准备好了吗？ 👉[点击此处](DotNETPluginDevelopment/README)👈 查看 .NET插件开发文档（部分已过时）。
 
 ### ❤️ 我想发布我的插件
 

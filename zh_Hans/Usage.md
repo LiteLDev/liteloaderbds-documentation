@@ -14,10 +14,14 @@ LiteLoaderBDS开发团队大多为学生，不是专职维护者，也不是客�
 
 ### 在Windows上安装
 
-我们推荐在以下平台安装，对于其它版本的Windows，我们不保证兼容性。
+我们推荐在以下平台安装：
 
 * Windows Server 2022或更新版本
 * Windows 21H2或更新版本
+
+::: warning
+对于其它版本的Windows，我们不保证兼容性。
+:::
 
 #### 通过LipUI安装
 
@@ -31,11 +35,17 @@ LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安�
 
 ![LipUI Main Window](/assets/img/lipui_main_window.png)
 
-然后，前往包市场，选择你需要的包进行安装。为了运行LiteLoaderBDS，你需要安装BDS和LiteLoaderBDS。如果你想省事，你也可以直接安装整合包Starter Pack.
+然后，前往包市场，选择你需要的包进行安装。为了运行LiteLoaderBDS，你需要安装BDS和LiteLoaderBDS。
+::: info
+如果你想省事，你也可以直接安装整合包Starter Pack。
+:::
 
 ![LipUI Registry](/assets/img/lipui_registry.png)
 
-包市场中还有各种各样的插件，你可以根据自己的需要进行安装。譬如，你可以安装AntiToolbox来防止玩家使用Toolbox，安装LLAntiCheat来防止玩家使用外挂，安装LLEssentials来为服务器加入联机基础功能。
+包市场中还有各种各样的插件，你可以根据自己的需要进行安装。
+::: info
+譬如，你可以安装AntiToolbox来防止玩家使用Toolbox，安装LLAntiCheat来防止玩家使用外挂，安装LLEssentials来为服务器加入联机基础功能。
+:::
 
 #### 通过Lip安装
 
@@ -45,33 +55,40 @@ LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安�
 
 你需要先安装Lip，请参考[Lip文档](https://docs.lippkg.com)。若已经安装Lip，请跟随以下步骤安装LiteLoaderBDS:
 
-对于LiteLoaderBDS 2.10.0-beta.1及更早的版本，并没有提供BDS自动安装机制，你可以运行以下命令安装BDS。请注意版本对应关系。
-
-```shell
-lip install bds@1.19.61
-```
-
 1. 在BDS目录中运行如下命令：
 
     ```shell
     lip install ll
     ```
 
-2. 对于LiteLoaderBDS 2.9.3及更早的版本，并没有提供后安装脚本，因此你需要在BDS目录中运行`LLPeEditor.exe`，并等待程序提示关闭以完成后安装任务。
+    ::: tip
+    如果你希望安装其它版本的LiteLoaderBDS，你可以运行类似如下的命令：
 
-3. 在BDS目录中运行`bedrock_server_mod.exe`来启动服务器。请注意，你应该始终运行`bedrock_server_mod.exe`来启动服务器。
+    ```shell
+    lip install ll@2.9.2
+    ```
+    :::
 
-如果你希望安装其它版本的LiteLoaderBDS，你可以运行类似如下的命令：
+    ::: warning
+    对于LiteLoaderBDS 2.10.0-beta.1及更早的版本，并没有提供BDS自动安装机制，你可以运行以下命令安装BDS。请注意版本对应关系。
 
-```shell
-lip install ll@2.9.2
-```
+    ```shell
+    lip install bds@1.19.61
+    ```
+    :::
 
+2. 在BDS目录中运行`bedrock_server_mod.exe`来启动服务器。请注意，你应该始终运行`bedrock_server_mod.exe`来启动服务器。
+    ::: warning
+    对于LiteLoaderBDS 2.9.3及更早的版本，并没有提供后安装脚本，因此你需要在BDS目录中运行`LLPeEditor.exe`，并等待程序提示关闭以完成后安装任务。
+    :::
+
+::: info
 我们还提供了整合包，你可以通过以下命令安装：
 
 ```shell
 lip install starterpack
 ```
+:::
 
 #### 手动安装
 
@@ -94,18 +111,26 @@ lip install starterpack
 docker run --name liteloader -v /path/to/store:/server -p 19132:19132/udp -it -d docker.io/shrbox/liteloader:main
 ```
 
+::: tip
 如果你正在使用**Podman**，请将命令开头的`docker`替换为`podman`  
-`--name liteloader` **liteloader**为容器名，可改为其它名字  
-`/path/to/store` 替换为你想要存放BDS数据的目录，例如: **/home/ubuntu/server**（指定目录必须存在）  
-`-p 19132:19132` 第一个端口为对外端口，第二个端口为容器内端口，这两个端口最好保持一致
+:::
+::: tip
+`liteloader`为容器名，可改为其它名字  
+:::
+::: tip
+`/path/to/store` 替换为你想要存放BDS数据的目录，例如: `/home/ubuntu/server`（指定目录必须存在）  
+:::
+::: tip
+`19132:19132` 第一个端口为对外端口，第二个端口为容器内端口，这两个端口最好保持一致
+:::
 
 可以通过以下命令管理服务器
 
 | 命令                     | 操作             | 备注                             |
 | ------------------------ | ---------------- | -------------------------------- |
-| docker attach liteloader | 进入服务器控制台 | 安全地退出控制台请按**Ctrl+P+Q** |
-| docker start liteloader  | 启动服务器       |                                  |
-| docker stop liteloader   | 强行停止服务器   | 可能会造成存档损坏，慎用         |
+| `docker attach <容器名>` | 进入服务器控制台 | 安全地退出控制台请按**Ctrl+P+Q** |
+| `docker start <容器名>`  | 启动服务器       |                                  |
+| `docker stop <容器名>`   | 强行停止服务器   | 可能会造成存档损坏，慎用         |
 
 #### 通过脚本
 
@@ -143,19 +168,25 @@ wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/in
 lip install --upgrade ll
 ```
 
+::: tip
 如果你希望更新到特定版本，你可以使用以下命令：
 
 ```shell
 lip install --upgrade ll@2.9.2
 ```
+:::
 
+::: tip
 如果你希望回退到特定版本，你可以使用以下命令：
 
 ```shell
 lip install --force-reinstall ll@2.9.2
 ```
+:::
 
+::: tip
 如果你不希望使用Lip，你可以手动更新LiteLoaderBDS，请按照[在Windows上更新BDS](#在windows上更新bds)中的步骤操作。
+:::
 
 ### 在Linux上更新BDS
 
@@ -166,11 +197,13 @@ lip install --force-reinstall ll@2.9.2
 3. 安装新版LiteLoaderBDS。
 4. 将备份的文件放回到服务端所在目录，并覆盖同名文件。
 
+::: warning
 如果BDS没有更新，但是LiteLoaderBDS有更新，你也必须按照以上步骤操作。
+:::
 
 ## 🎯 安装插件
 
-插件分为原生插件和脚本插件两种。原生插件是经过编译的本地插件，具有更好的性能，但服务器启动后不能再启用或禁用。脚本插件由JavaScript或Lua编写，可以灵活地管理，具有更好的安全性，但性能较差。
+插件分为原生插件和脚本插件两种。原生插件是经过编译的本地插件，具有更好的性能，但服务器启动后不能再启用或禁用。脚本插件由JavaScript、Lua或Python编写，可以灵活地管理，具有更好的安全性，但性能较差。
 
 ::: warning
 为了保证大部分插件能够正常运行，请在 `server.properties` 中将 `online-mode` 设为 `true` ，并将 `server-authoritative-movement` 设为 `server-auth` 或 `server-auth-with-rewind` 。

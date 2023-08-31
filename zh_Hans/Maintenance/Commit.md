@@ -2,13 +2,13 @@
 
 ## 分支模型
 
-- `main`分支是主分支，意味着最新的可用代码（包括稳定版本和beta版本），不应有任何单独的提交，只能有来自本仓库内其余分支的PR。
+- `main`分支是主分支，意味着最新的可用代码（包括稳定版本和beta版本），不应有任何单独的提交，只能有来自本仓库内其余分支的pull request。
 
-- `hotfix/*`是热修复分支，当`main`分支中代码出现bug时，从`main`中建立该分支进行修复，最终合并到`main`分支。
+- `hotfix/*`是热修复分支，当`main`分支中代码出现漏洞时，从`main`中建立该分支进行修复，最终合并到`main`分支。
 
    - 对于issue提到的内容，分支名为`hotfix/issue-xxx`。
 
-   - 对于其余内容，最好建立issue，如果不便建立，分支名为`hotfix/aaa-bbb-ccc`，其中“aaa-bbb-ccc”是内容简介。
+   - 对于其余内容，最好建立issue，如果不便建立，分支名为`hotfix/aaa-bbb-ccc`，其中`aaa-bbb-ccc`是内容简介。
 
 - `adaptation/*`意味着版本适配，当BDS发布新版本后，在该分支进行适配工作。该分支应当从`main`分支中创建，最终合并到`main`分支
 
@@ -16,15 +16,15 @@
 
 - `develop`意味着开发新功能。合并到`main`分支。
 
-第三方开发者发起PR的对象应当是除了`main`以外的所有分支。
+第三方开发者发起pull request的对象应当是除了`main`以外的所有分支。
 
 请所有LL开发者遵循以上规范，需要特别注意以下几点：
 
-- Bug修复不要在develop分支进行，而是在hotfix
+- 漏洞修复不要在`develop`分支进行，而是在`hotfix`
 
-- 新版本适配不要在develop分支进行，而是在adaptation
+- 新版本适配不要在`develop`分支进行，而是在`adaptation`
 
-- develop中只放新功能，不放修复bug
+- `develop`中只放新功能，不放修复漏洞
 
 ## Commit信息
 
@@ -49,7 +49,7 @@ docs: correct spelling of CHANGELOG
 ### 用语约定
 
 - 提交信息应以小写字母开头
-- 作用域(scope)可以省略，若有多个作用域，应使用英文逗号分隔
+- 作用域（scope）可以省略，若有多个作用域，应使用英文逗号分隔
 - 作用域使用小写字母
 - 尽可能控制在50个字符以内
 - 从功能角度描述提交内容，而不是代码变动，例如使用`feat: add 'comments' option`而不是`feat: update main.cpp`
@@ -58,12 +58,12 @@ docs: correct spelling of CHANGELOG
 
 - **build**: 影响构建系统或外部依赖项的更改（示例范围：gulp，broccoli，npm）
 - **feat**: 新功能（示例范围：新的命令，新的API，依赖项更新）
-- **fix**: 修复bug（示例范围：修复命令，修复API）
+- **fix**: 修复漏洞（示例范围：修复命令，修复API）
 - **perf**: 改进性能的代码更改
-- **refactor**: 既不修复bug也不添加功能的代码更改
+- **refactor**: 既不修复漏洞也不添加功能的代码更改
 - **style**: 不影响代码含义的更改（空格，格式，缺少分号等）
 - **test**: 添加缺失的测试或更正现有测试
-- **chore**: 不包含在上述类型中的更改（示例范围：.gitignore、README.md等文件的修改）
+- **chore**: 不包含在上述类型中的更改（示例范围：`.gitignore`、`README.md`等文件的修改）
 
 合并分支、撤回提交等操作使用GitHub自动提供的commit信息以便于追踪。
 
@@ -88,11 +88,11 @@ docs: correct spelling of CHANGELOG
 
 - 2.10.2
 
-其中，如果是beta版本，必须在W处带上以1开始的beta版本号，且Z必须为0.
+其中，如果是beta版本，必须在`W`处带上以`1`开始的beta版本号，且`Z`必须为`0`.
 
-每次从develop分支有任何合并后发布的版本，**必须**更新Y，即使对应的BDS版本没有更新。不应当认为LL与BDS具有版本号一一对应关系。
+每次从`develop`分支有任何合并后发布的版本，**必须**更新`Y`，即使对应的BDS版本没有更新。不应当认为LL与BDS具有版本号一一对应关系。
 
-同时，尽量在develop分支堆积足够的更新后，再合并到main，以防出现像Chrome那样离谱的版本号。
+同时，尽量在`develop`分支堆积足够的更新后，再合并到`main`，以防出现像Chrome那样离谱的版本号。
 
 所有新版本stable版发布前，必须发布带有beta后缀的beta版本。
 
@@ -105,7 +105,7 @@ docs: correct spelling of CHANGELOG
 :::
 
 - 不直接引入二进制依赖
-- 引入大型依赖时，使用git submodule等形式管理依赖
+- 引入大型依赖时，使用`git submodule`等形式管理依赖
 - 对于源码量级较小的依赖，应放入对应使用项目中编译，或创建静态库
 - 大型依赖请尽量保留原项目结构，小型项目请确保分类明确
 

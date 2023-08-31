@@ -1,25 +1,28 @@
-## 📒 NbtCompound - 标签类型
+# 📒 NbtCompound - 标签类型
 
-一个`NbtCompound `代表一个完整的标签，里面储存了一系列键值对，类似于对象 / 表这样的数据结构。  
+一个`NbtCompound`代表一个完整的标签，里面储存了一系列键值对，类似于对象 / 表这样的数据结构。  
 通过`NbtCompound`对象的接口，才可以进行 NBT 标签所独有的一些操作。
 
-### 获取一个 NBT 标签对象
+## 获取一个 NBT 标签对象
 
-#### 从现有的 NBT 对象中解析获取
+### 从现有的 NBT 对象中解析获取
 
 详见 [NbtList - 列表类型](NBTList) 和 [NbtCompound - 标签类型](NBTCompound) 文档
 
-#### 创建新的 NBT 标签对象
+### 创建新的 NBT 标签对象
 
 [JavaScript]  `new NbtCompound([data])`  
 [Lua] `NbtCompound([data])`
 
 - 参数：
-  - data: Object<string, NBT对象>（可选参数）  
+  - data: `Object<string, NBT对象>`（可选参数）  
     传入一个NBT对象构成的对象。对象中允许包含其他数组 / 对象结构，但内容必须都为NBT对象
 - 返回值：生成的NBT对象
 - 返回值类型：`NbtList`
-  - 如果创建失败，将抛出异常
+
+  ::: warning
+  如果创建失败，将抛出异常
+  :::
 
 [JavaScript]
 ```js
@@ -46,7 +49,7 @@ local nbt = NbtCompound({
     });
 ```
 
-#### 从 SNBT  字符串生成 NBT 标签对象
+### 从 SNBT  字符串生成 NBT 标签对象
 
 `NBT.parseSNBT(snbt)`
 
@@ -59,7 +62,7 @@ local nbt = NbtCompound({
 
 > SNBT字符串中必须包含一个完整的Compound
 
-#### 从二进制 NBT 数据生成 NBT 标签对象
+### 从二进制 NBT 数据生成 NBT 标签对象
 
 `NBT.parseBinaryNBT(nbt)`
 
@@ -74,14 +77,14 @@ local nbt = NbtCompound({
 
 对于某个一个`NbtCompound`类型的对象`comp`，有如下这些接口
 
-#### 获取所有的键
+### 获取所有的键
 
 `comp.getKeys()`
 
 - 返回值：Compound 中所有的键
 - 返回值类型：`Array<String,String,...>`
 
-#### 获取键对应的值的数据类型
+### 获取键对应的值的数据类型
 
 `comp.getTypeOf(key)`
 
@@ -96,7 +99,7 @@ local nbt = NbtCompound({
 `NBT.Float` `NBT.Double` `NBT.ByteArray` `NBT.String`  
 `NBT.List` `NBT.Compound`
 
-#### 设置键对应的 NBT 对象
+### 设置键对应的 NBT 对象
 
 `comp.setTag(key,tag)`
 
@@ -109,7 +112,7 @@ local nbt = NbtCompound({
 - 返回值：是否成功写入
 - 返回值类型：`Boolean`
 
-#### 读取键对应的 NBT 对象
+### 读取键对应的 NBT 对象
 
 `comp.getTag(key)`
 
@@ -120,7 +123,7 @@ local nbt = NbtCompound({
 - 返回值类型： `NBT对象`
   - 如果要读取的NBT不存在，将返回`Null`
 
-#### 删除键对应的 NBT 对象
+### 删除键对应的 NBT 对象
 
 `comp.removeTag(key)`
 
@@ -130,12 +133,12 @@ local nbt = NbtCompound({
 - 返回值：处理完毕的NBT对象（便于连锁进行其他操作）
 - 返回值类型：`NbtCompound`
 
-## 一些协助 NBT 对象操作的方便函数
+# 一些协助 NBT 对象操作的方便函数
 
 很明显，在修改 NBT 的某些值的时候，纯粹使用 NBT 对象会显得麻烦而语法复杂。  
 因此，这里还提供了一些简化对象操作的方便函数，通过直接操作指定位置的数据，而避免通过 NBT 对象中转，可以一定程度上降低代码量
 
-#### 设置键对应的值的具体数据
+### 设置键对应的值的具体数据
 
 `comp.setEnd(key)`  
 `comp.setByte(key,data)`  
@@ -156,7 +159,7 @@ local nbt = NbtCompound({
 - 返回值：写入完毕的NBT对象（便于连锁进行其他操作）
 - 返回值类型：`NbtCompound`
 
-#### 读取键对应的值的具体数据
+### 读取键对应的值的具体数据
 
 `comp.getData(key)`
 
@@ -168,7 +171,7 @@ local nbt = NbtCompound({
   - 如果目标位置储存的是`List`类型 NBT，将返回一个`NbtList`对象；如果目标位置储存的是`Compound`类型 NBT，将返回一个`NbtCompound`对象
   - 如果要读取的NBT不存在，将返回`Null`
 
-#### 将 NBT 标签对象 转换为Object
+### 将 NBT 标签对象 转换为Object
 
 `comp.toObject()`
 
@@ -178,7 +181,7 @@ local nbt = NbtCompound({
 将Compound的内容转换为脚本引擎对象，把数据项都转换为脚本引擎数据类型储存于对象的对应key中，方便读取和处理  
 如果Compound某一项储存的是`List`或者`Compound`类型的 NBT，将在对应位置递归展开为`Array`或`Object`
 
-#### 将 NBT 标签对象 序列化为SNBT
+### 将 NBT 标签对象 序列化为SNBT
 `nbt.toSNBT([space])`
 
 - 参数
@@ -193,7 +196,7 @@ local nbt = NbtCompound({
 >
 > --- Minecraft Wiki
 
-#### 将 NBT 标签对象 序列化为二进制NBT
+### 将 NBT 标签对象 序列化为二进制NBT
 
 `comp.toBinaryNBT()`
 
@@ -201,7 +204,7 @@ local nbt = NbtCompound({
 - 返回值类型：`ByteBuffer`
 > 只有完整的顶层Compound标签可以被转换为二进制NBT
 
-#### 销毁此 NBT 标签对象
+### 销毁此 NBT 标签对象
 `comp.destroy()`
 
 - 返回值：是否成功清理

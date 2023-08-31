@@ -471,24 +471,31 @@ export default defineConfig({
                         link: 'Listen',
                       },
                       {
-                        text: '🏃‍♂️ 玩家事件列表',
-                        link: 'PlayerEvents',
-                      },
-                      {
-                        text: '🎈 实体事件列表',
-                        link: 'EntityEvents',
-                      },
-                      {
-                        text: '📦 方块事件列表',
-                        link: 'BlockEvents',
-                      },
-                      {
-                        text: '🔊 其他事件列表',
-                        link: 'OtherEvents',
-                      },
-                      {
-                        text: '💰 经济系统事件列表',
-                        link: 'EconomicEvents',
+                        text: '事件列表',
+                        collapsed: false,
+                        link: 'Events',
+                        items: [
+                          {
+                            text: '🏃‍♂️ 玩家事件列表',
+                            link: 'PlayerEvents',
+                          },
+                          {
+                            text: '🎈 实体事件列表',
+                            link: 'EntityEvents',
+                          },
+                          {
+                            text: '📦 方块事件列表',
+                            link: 'BlockEvents',
+                          },
+                          {
+                            text: '🔊 其他事件列表',
+                            link: 'OtherEvents',
+                          },
+                          {
+                            text: '💰 经济系统事件列表',
+                            link: 'EconomicEvents',
+                          },
+                        ],
                       },
                     ],
                   },
@@ -639,7 +646,7 @@ export default defineConfig({
                 ],
               },
               {
-                text: '🪁 .NET插件开发（已过时）',
+                text: '🪁 .NET插件开发',
                 collapsed: false,
                 base: '/zh_Hans/DotNETPluginDevelopment/',
                 link: 'README',
@@ -680,7 +687,7 @@ export default defineConfig({
                     ],
                   },
                   {
-                    text: '🔍 API参考',
+                    text: '🔍 API参考（已过时）',
                     collapsed: false,
                     base: '/zh_Hans/DotNETPluginDevelopment/APIs/Namespace/',
                     items: [

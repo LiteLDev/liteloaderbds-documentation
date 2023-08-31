@@ -15,7 +15,7 @@ Currently, LLSE supports writing plugins in the following languages：
 | `Python`  | Using CPython engine, with support for pip package management |
 
 ::: tip
-If you need to write plugins in compiled languages such as C++, Go, .NET, etc., please go to [Home](../README) for other language documentation
+If you need to write plugins in compiled languages such as C++, C#, F#, etc., please go to [Home](../README) for other language documentation
 :::
 
 ## JavaScript language support description
