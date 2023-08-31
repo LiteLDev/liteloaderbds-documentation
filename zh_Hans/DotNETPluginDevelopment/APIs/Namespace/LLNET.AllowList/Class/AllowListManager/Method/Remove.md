@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 ### 将玩家从当前白名单中移除。
-
-<br>
 
 ## 重载
 - 
@@ -16,8 +12,6 @@
     |`Remove(String, String)`|根据玩家名称与XUID将玩家从白名单中移除。|
 
 ## Add(String)
-
-<br>
 
 C#
 ```cs
@@ -33,17 +27,12 @@ public:
   - `name` : [String](https://docs.microsoft.com/DotNET/api/system.string)  
     要移除的玩家名称。
 
-<br>
-
 - 返回
   - [AllowListManager](../AllowListManager)  
     当前 `AllowListManager` 对象
   
-<br>
 
 ## Remove(String, String)
-
-<br>
 
 C#
 ```cs
@@ -61,10 +50,7 @@ public:
   - `xuid` : [String](https://docs.microsoft.com/DotNET/api/system.string)  
     要移除的玩家XUID
 
-<br>
-
 - 返回
   - [AllowListManager](../AllowListManager)  
     当前 `AllowListManager` 对象
   
-<br>

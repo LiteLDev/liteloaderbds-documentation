@@ -22,7 +22,6 @@ This might confuse some developers, as `ll` should be undefined. However, this f
 
 Now that we have created our .js file, and registered the plugin, all we have to do from here is create an event listener. We do that by utilizing `mc`.
 
-
 ```js
 mc.listen("onJoin", (player) => {
     log(`${player.name} has joined the server.`);

@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 包含用于注册自定义Thook的接口。
-
-<br>
 
 C#
 ```cs
@@ -16,9 +12,6 @@ C++
 ```cpp
 public ref class Thook abstract
 ```
-<br>
-
-<br>
 
 ## 方法
 

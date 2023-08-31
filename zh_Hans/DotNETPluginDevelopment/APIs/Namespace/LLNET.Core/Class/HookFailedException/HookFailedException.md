@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 表示在**挂载BDS钩子**的过程中发生的一个或多个错误。
-
-<br>
 
 C#
 ```cs
@@ -18,7 +14,6 @@ C++
 public ref class HookFailedException
     :public LiteLoaderDotNETException
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Exception](https://docs.microsoft.com/DotNET/api/system.exception) → [LiteLoaderDotNETException](../LiteLoaderDotNETException/LiteLoaderDotNETException) → 
 [HookFailedException](HookFailedException)
@@ -28,7 +23,3 @@ public ref class HookFailedException
     |||
     |-|-|
     |`HookFailedException()`|初始化 `HookFailedException` 类的新实例。|
-
-<br>
-
-

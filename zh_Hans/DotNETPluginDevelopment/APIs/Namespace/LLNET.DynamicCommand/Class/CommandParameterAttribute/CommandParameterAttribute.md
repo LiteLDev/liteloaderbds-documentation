@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 用于指定命令枚举的特性。
-
-<br>
 
 C#
 ```cs
@@ -20,19 +16,13 @@ C++
 public ref class CommandParameterAttribute
     :public System::Attribute
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [CommandParameterAttribute](CommandParameterAttribute)
    
-<br>
 
 ## 示例
 
-<br>
-
 [如何：使用静态指令](../../../../../HowTo/Static_DynamicCommand)
-
-<br>
 
 ## 构造函数
 - 
@@ -40,15 +30,11 @@ public ref class CommandParameterAttribute
     |-|-|
     |`CommandParameterAttribute()`|初始化 `CommandParameterAttribute` 类的新实例。|
 
-<br>
-
 ##  属性
 - 
     |||
     |-|-|
     |[OverloadId]|获取或设置当前指令参数的重载标识。|
-
-<br>
 
 ##  字段
 - 
@@ -59,7 +45,3 @@ public ref class CommandParameterAttribute
     |[Permission]|指令权限。|
     |[Identifier]|指令参数标识。|
     |[Option]|指令参数选项。|
-
-<br>
-
-

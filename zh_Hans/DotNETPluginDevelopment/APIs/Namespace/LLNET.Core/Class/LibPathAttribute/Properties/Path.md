@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 获取或设置当前实例路径。
-
-<br>
 
 C#
 ```cs
@@ -18,10 +14,6 @@ public:
     property System::String^ Path;
 ```
 
-<br>
-
 ## 属性值
-
-<br>
 
 [String](https://docs.microsoft.com/DotNET/api/system.string)

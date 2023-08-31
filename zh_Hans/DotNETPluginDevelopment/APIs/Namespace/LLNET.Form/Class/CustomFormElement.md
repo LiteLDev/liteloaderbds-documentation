@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 >表示自定义表单控件的基类。
-
-<br>
 
 C#
 ```cs
@@ -16,13 +12,8 @@ C++
 ```cpp
 public ref class CustomFormElement abstract
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [CustomFormElement](CustomFormElement)
-
-<br>
-
-<br>
 
 ## 枚举
 
@@ -31,7 +22,6 @@ public ref class CustomFormElement abstract
     |-|-|
     |[Type]|表示自定义表单控件类型的枚举。|
     
-<br>
 
 ## 属性
 
@@ -41,8 +31,6 @@ public ref class CustomFormElement abstract
     |`Name`|获取或设置控件名称。|
     |`Value`|获取或设置控件值。|
     |`ElementType`|获取或设置控件类型。|
-
-<br>
 
 ## 方法
 

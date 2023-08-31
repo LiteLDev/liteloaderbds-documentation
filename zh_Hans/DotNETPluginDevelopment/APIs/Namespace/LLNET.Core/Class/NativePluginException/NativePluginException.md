@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 检测到 [BDS](https://www.minecraft.net/download/server/bedrock) 发生的错误而引发的异常基类。
-
-<br>
 
 C#
 ```cs
@@ -18,17 +14,11 @@ C++
 public ref class NativePluginException
     :public LiteLoaderDotNETException
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Exception](https://docs.microsoft.com/DotNET/api/system.exception) → [LiteLoaderDotNETException](../LiteLoaderDotNETException/LiteLoaderDotNETException) → 
 [NativePluginException](NativePluginException)
 
-<br>
-
 ## 示例
-
-<br>
-
 
 C#
 ```cs
@@ -59,14 +49,8 @@ namespace PluginMain
 
 ```
 
-<br>
-
 ## 构造函数
 - 
     |||
     |-|-|
     |`NativePluginException()`|初始化 `NativePluginException` 类的新实例。|
-
-<br>
-
-

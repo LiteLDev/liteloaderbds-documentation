@@ -41,7 +41,6 @@ mc.runcmd("say Hello!")
   | res.success | 是否执行成功            | `Boolean` |
   | res.output  | BDS执行命令后的输出结果 | `String`  |
 
-
 ::: tip
 runcmdEx 与普通 runcmd 实现区别非常大，在于 Ex 版本拥有**隐藏输出**的机制，执行结果不会输出至控制台，因此如果有需要，要手动用 log 函数将结果输出
 :::
@@ -384,7 +383,6 @@ mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
 });
 ```
 
-
 ### 注册一个新的控制台命令（假命令）  
 
 `mc.regConsoleCmd(cmd,description,callback)`
@@ -429,8 +427,6 @@ mc.regConsoleCmd("backup","Start the backup",function(args){
 正如所见，`args` 中包含的值是被 **按顺序分割好的** 命令参数。  
 如果你的命令中有引号（比如说为了处理含有空格的玩家名字），脚本引擎在分割时也会做处理。
 :::
-
-<br>
 
 ## 其他与命令系统有关的 API
 

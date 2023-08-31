@@ -8,4 +8,3 @@
     |-|-|
     |`BeforeEntityUniqueId`|转变之前的实体唯一标识。|
     |`AfterEntity`|转变之后的实体。|
-

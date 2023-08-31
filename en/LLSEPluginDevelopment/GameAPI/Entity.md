@@ -9,7 +9,6 @@ In LLSE, "entity objects" are used to manipulate and obtain information about an
 Obtain the entity object given by BDS by registering the **event listener** function, or calling some **returning entity object** functions.
 For details, see [Event listener documentation - EventAPI](../EventAPI/Listen)      
 
-
 #### Get All Currently Loaded Entities
 
 This function returns an array of entity objects, each of which corresponds to a loaded entity.
@@ -38,8 +37,6 @@ Through this function, generate a new creature at the specified location and get
 > Note: Do not save an entity object **long-term**.
 > When the entity corresponding to the entity object is destroyed, the corresponding entity object will become invalid. Therefore, if there is a need to operate an entity for a long time, please obtain the real-time entity object through the above methods.
 
-<br>
-
 #### Clone A Creature and Get Its Entity Object
 
 Through this function, generate a new creature at the specified location and get its corresponding entity object.
@@ -58,8 +55,6 @@ Through this function, generate a new creature at the specified location and get
 
 > Note: Do not save an entity object **long-term**.
 > When the entity corresponding to the entity object is destroyed, the corresponding entity object will become invalid. Therefore, if there is a need to operate an entity for a long time, please obtain the real-time entity object through the above methods.
-
-<br>
 
 ### Entity Object - Properties
 
@@ -110,8 +105,6 @@ These object properties are read-only and cannot be modified.
 - For a detailed explanation of the **entity's current orientation** attribute, see the [Basic Game Interface Documentation](Basic)
 - **coordinates** and **leg coordinates**: if this entity is two blocks high, `pos` is different from `feetPos`, `pos` is the coordinate of the entity's view's height and `feetPos` is the coordinate of the block where the leg is located
 
-<br>
-
 ### Entity Object - Function
 
 Each entity object contains some member functions (member methods) that can be executed. for a specific entity object `en`, you can perform some operations on this entity through the following functions:
@@ -131,16 +124,12 @@ Each entity object contains some member functions (member methods) that can be e
 - Return value: Whether the teleport was successful or not.
 - Return value type:  `Boolean`
 
-<br>
-
 #### Kill the Specified Entity  
 
 `en.kill()`
 
 - Return value: Whether the entity execution was successful.
 - Return value type:  `Boolean`
-
-<br>
 
 #### Make the Specified Entity Despawn
 
@@ -149,16 +138,12 @@ Each entity object contains some member functions (member methods) that can be e
 - Return value: Whether the entity execution was successful.
 - Return value type:  `Boolean`
 
-<br>
-
 #### Remove the Specified Entity  
 
 `en.remove()`
 
 - Return value: Whether the entity execution was successful.
 - Return value type:  `Boolean`
-
-<br>
 
 #### Inflict Damage to Entities
 
@@ -207,8 +192,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 | `ActorDamageCause.Stalactite`    |
 | `ActorDamageCause.Stalagmite`     |
 
-<br>
-
 #### Heal the Entity
 
 `en.heal(health)`
@@ -218,8 +201,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     Number of hearts to heal.
 - Return value: Whether heal was dealt.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Health for Entity
 
@@ -231,8 +212,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set health for entity was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Absorption Attribute for Entity
 
 `en.setAbsorption(value)`
@@ -242,8 +221,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New value
 - Return value: Whether set attribute value for entity was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Attack Damage Attribute for Entity
 
@@ -255,8 +232,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set attribute value for entity was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Maximal Attack Damage Attribute for Entity
 
 `en.setMaxAttackDamage(value)`
@@ -266,8 +241,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New value
 - Return value: Whether set attribute value for entity was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Follow Range Attribute for Entity
 
@@ -279,8 +252,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set attribute value for entity was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Knockback Resistance Attribute for Entity
 
 `en.setKnockbackResistance(value)`
@@ -290,8 +261,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New value (0 or 1)
 - Return value: Whether set attribute value for entity was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Luck Attribute for Entity
 
@@ -303,8 +272,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set attribute value for entity was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Movement Speed for Entity
 
 `en.setMovementSpeed(value)`
@@ -314,8 +281,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New value
 - Return value: Whether set attribute value for entity was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set Underwater Movement Speed for Entity
 
@@ -327,8 +292,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set attribute value for entity was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Lava Movement Speed for Entity
 
 `en.setLavaMovementSpeed(value)`
@@ -339,8 +302,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether set attribute value for entity was success.
 - Return value type: `Boolean`
 
-<br>
-
 #### Set Max Health for Entity
 
 `en.setMaxHealth(health)`
@@ -350,8 +311,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     Number of hearts.
 - Return value: Whether set max health for entity was success.
 - Return value type: `Boolean`
-
-<br>
 
 #### Set the Specified Entity on Fire
 
@@ -365,16 +324,12 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Whether the fire was set.
 - Return value type:  `Boolean`
 
-<br>
-
 #### Put Out The Entity
 
 `en.stopFire()`
 
 - Return value: Has been extinguished.
 - Return value type: `Boolean`
-
-<br>
 
 #### Scale Entity
 
@@ -385,8 +340,6 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
     New entity size
 - Return value: Whether the entity was scaled.
 - Return value type: `Boolean`
-
-<br>
 
 #### Get Entity Distance To Pos
 
@@ -399,16 +352,12 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 - Return value: Distance to coordinates (in blocks).
 - Return value type:  `Number`   
 
-<br>
-
 #### Determine if an Entity Object Is a Player
 
 `en.isPlayer()`
 
 - Return value: Whether the current entity object is a player.
 - Return value type:  `Boolean`
-
-<br>
 
 #### Convert Entity Object to Player Object
 
@@ -420,16 +369,12 @@ Note that the damage dealt here is real damage and cannot be reduced by protecti
 
 If the current entity object points to a player, you can use this function to convert the entity object to a player object to use more player-related APIs.
 
-<br>
-
 #### Determine Whether an Entity Object Is a Dropped Item Entity
 
 `en.isItemEntity()`
 
 - Return value: Whether the current entity object is a dropped item entity.
 - Return value type:  `Boolean`
-
-<br>
 
 #### Get the Item Object in the Drop Entity
 
@@ -441,16 +386,12 @@ If the current entity object points to a player, you can use this function to co
 
 If the current entity object is a drop entity, you can use this function to get the item object in the drop entity to use more item-related APIs.
 
-<br>
-
 #### Get the Block the Entity Is Currently Standing On
 
 `en.getBlockStandingOn()`
 
 - Return value: The block object the entity is standing on.
 - Return value type:  `Block`
-
-<br>
 
 #### Gets the Container Object for the Mob’s Armor Slot  
 
@@ -461,8 +402,6 @@ If the current entity object is a drop entity, you can use this function to get 
 
 For more usage of container objects, please refer to [Container Object API Documentation](Container)
 
-<br>
-
 #### Determines if a Mob Has a Container (Except for the Armor Slot)
 
 `en.hasContainer()`
@@ -471,8 +410,6 @@ For more usage of container objects, please refer to [Container Object API Docum
 - Return value type:  `Boolean`
 
 Such as the boxes on the alpaca, they each have their own container object.
-
-<br>
 
 #### Get the Container Object Owned by the Mob (Except the Armor Slot)
 
@@ -483,8 +420,6 @@ Such as the boxes on the alpaca, they each have their own container object.
 
 For more usage of container objects, please refer to [Container Object API Documentation](Container)
 
-<br>
-
 #### Refresh Creature Inventory, Armor Slot
 
 `en.refreshItems()`
@@ -493,8 +428,6 @@ For more usage of container objects, please refer to [Container Object API Docum
 - Return value type:  `Boolean`
 
 After modifying the creature's items, in order to make the client take effect, it is necessary to refresh all the items of the creature.
-
-<br>
 
 #### Add a Tag to the Entity
 
@@ -506,8 +439,6 @@ After modifying the creature's items, in order to make the client take effect, i
 - Return value: Whether the `Tag` was added successfully.
 - Return value type:  `Boolean`
 
-<br>
-
 #### Remove a Tag From an Entity
 
 `en.removeTag(tag)`
@@ -517,8 +448,6 @@ After modifying the creature's items, in order to make the client take effect, i
     The tag string to remove.
 - Return value: Whether the tag removal was successful.
 - Return value type:  `Boolean`
-
-<br>
 
 #### Check if an Entity Has a Tag
 
@@ -530,8 +459,6 @@ After modifying the creature's items, in order to make the client take effect, i
 - Return value: Whether the entity has the tag.
 - Return value type:  `Boolean`
 
-<br>
-
 #### Returns a List of All Tags Owned by the Entity
 
 `en.getAllTags()`
@@ -539,16 +466,12 @@ After modifying the creature's items, in order to make the client take effect, i
 - Return value: A list of all tag strings of the entity
 - Return value type:  `Array<String,String,...>`
 
-<br>
-
 #### Get the Entity's NBT Object
 
 `en.getNbt()`
 
 - Return value: NBT object of the entity.
 - Return value type:  `NbtCompound`
-
-<br>
 
 #### Write to the Entity's NBT Object
 
@@ -562,16 +485,12 @@ After modifying the creature's items, in order to make the client take effect, i
 
 For more usage of NBT objects, please refer to [NBT Interface Documentation](../NbtAPI/NBT)
 
-<br>
-
 #### Get the Entity's Biome ID
 
 `en.getBiomeId()`  
 
 - Return value：Biome ID
 - Return value type：`Integer`
-
-<br>
 
 #### Get the Entity's Biome Name
 
@@ -580,16 +499,12 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](../
 - Return value：Biome Name
 - Return value type：`String`
 
-<br>
-
 #### Get entity's effects
 
 `pl.getAllEffects()`
 
 - Return value: effect ID which is entity owned
 - Return type: `Array<number,number,...>`
-
-<br>
 
 #### Add an effect for entity
 
@@ -605,8 +520,6 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](../
     Whether to show particles
 - Return value: Whether succeed
 - Return type: `Boolean`
-
-<br>
 
 #### Remove an effect for entity
 
@@ -650,8 +563,6 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](../
 | village_hero    | 29     |
 | darkness        | 30     |
 
-<br>
-
 ### Other Entity Function API
 
 The following APIs provide APIs for interacting with entities at specified locations in the game:
@@ -677,9 +588,6 @@ The following APIs provide APIs for interacting with entities at specified locat
 - Return value: Whether the explosion was successfully created.
 - Return value type:  `Boolean`
 
-<br>
-
-
 #### Quick execute Molang expression
 
 `en.quickEvalMolangScript(str)`
@@ -691,4 +599,3 @@ The following APIs provide APIs for interacting with entities at specified locat
 - Return value type:  `Float`
 
 For detailed usage of Molang, refer to [MOLANG Doc bedrock.dev](https://bedrock.dev/docs/stable/Molang)
-<br>

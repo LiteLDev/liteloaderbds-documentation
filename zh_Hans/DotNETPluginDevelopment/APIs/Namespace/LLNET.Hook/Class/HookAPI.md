@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 自定义表单类。
-
-<br>
 
 C#
 ```cs
@@ -16,13 +12,8 @@ C++
 ```cpp
 public ref class HookAPI abstract
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [HookAPI](HookAPI)
-
-<br>
-
-<br>
 
 ##  方法
 - 
@@ -98,5 +89,3 @@ public ref class HookAPI abstract
     |`Sym_Call<T0,T1,T2,T3,T4,T5,T6>(String,T0,T1,T2,T3,T4,T5,T6)`|由给定的符号对无返回值的函数进行调用。`7`参数重载形式。|
     |`Sym_Call<T0,T1,T2,T3,T4,T5,T6,T7>(String,T0,T1,T2,T3,T4,T5,T6,T7)`|由给定的符号对无返回值的函数进行调用。`8`参数重载形式。|
     
-
-

@@ -23,8 +23,6 @@ If you need to manipulate files frequently, use the file classes below to improv
 - Return value type: `String`
   - If the return value is `Null`, the read failed.
 
-<br>
-
 ### Write Content to the Specified File
 
 `File.writeTo(path,text)`
@@ -42,8 +40,6 @@ If you need to manipulate files frequently, use the file classes below to improv
 
 > Note: If the file does not exist, it will be created automatically. If it exists, it will be **emptied** before writing.
 
-<br>
-
 ### Append a Line to the Specified File
 
 `File.writeLine(path,text)`
@@ -56,8 +52,6 @@ If you need to manipulate files frequently, use the file classes below to improv
     What will be written to the file.
 - Return value: Whether the write is successful or not.
 - Return value type: `Boolean`
-
-<br>
 
 ## 📋 File Object API
 
@@ -94,9 +88,6 @@ When using `ReadMode` and `WriteMode`, you can use `seekTo` to manually move the
 
 After opening the file, you can use the interface of the file object described below to read and write the file. 
 
-<br>
-
-
 ### File Object - Properties
 
 Every file object contains some fixed object properties. for a specific file object `fi`, has the following properties
@@ -108,8 +99,6 @@ Every file object contains some fixed object properties. for a specific file obj
 | fi.size         | Current file size       | `Integer` |
 
 These object properties are read-only and cannot be modified.
-
-<br>
 
 ### File Object - Function
 
@@ -134,8 +123,6 @@ If there is a lot of content, you can use the following asynchronous read and wr
 
 Start reading from the current file pointer. Returns if the file was opened in binary mode `ByteBuffer`, otherwise return `String`.
 
-<br>
-
 ##### Read a Line of Text From a File
 
 `fi.readLineSync()`
@@ -145,8 +132,6 @@ Start reading from the current file pointer. Returns if the file was opened in b
   - If the return value is `Null`, the read failed.
 
 > Note that the newline at the end of the string should be handled by itself 
-
-<br>
 
 ##### Read Everything From File
 
@@ -158,8 +143,6 @@ Start reading from the current file pointer. Returns if the file was opened in b
 
 Reading starts at the current file pointer and continues until the end of the file. 
 Returns if the file was opened in binary mode `ByteBuffer`, otherwise return `String`.
-
-<br>
 
 ##### Write Text/Binary Data to File 
 
@@ -173,8 +156,6 @@ Returns if the file was opened in binary mode `ByteBuffer`, otherwise return `St
 
 If the file is opened in binary mode, the passed arguments will be written as binary bytes, otherwise they will be written as normal text.
 
-<br>
-
 ##### Write a Line of Text to a File
 
 `fi.writeLineSync(str)`
@@ -186,8 +167,6 @@ If the file is opened in binary mode, the passed arguments will be written as bi
 - Return value type: `Boolean`
 
 When this function executes, it will automatically add a newline at the end of the string.
-
-<br>
 
 #### Asynchronous Read and Write
 
@@ -213,8 +192,6 @@ Note: The prototype of the callback function of the parameter callback: `functio
 
 Start reading from the current file pointer. Returns if the file was opened in binary mode `ByteBuffer`, otherwise return `String`.
 
-<br>
-
 ##### Read a Line of Text From a File (Async)
 
 `fi.readLine(callback)`
@@ -231,8 +208,6 @@ Note: The prototype of the callback function of the parameter callback:  `functi
   The text that was read from the file.
 
 > Note that the newline at the end of the string should be handled by itself.
-
-<br>
 
 ##### Read Everything From File (Async)
 
@@ -253,8 +228,6 @@ Note: The prototype of the callback function of the parameter callback:  `functi
 Reading starts at the current file pointer and continues until the end of the file. 
 Returns if the file was opened in binary mode `ByteBuffer`, otherwise return `String`.
 
-<br>
-
 ##### Write Text/Binary Data to File (Async)
 
 `fi.write(str[,callback])`
@@ -273,8 +246,6 @@ Note: The prototype of the callback function of the parameter callback:  `functi
 
 - result : `Boolean`  
   Whether the write is successful.
-
-<br>
 
 ##### Write a Line of Text to a File (Async)
 
@@ -295,8 +266,6 @@ Note: The prototype of the callback function of the parameter callback:  `functi
 
 > When this function executes, it will automatically add a newline at the end of the string.
 
-<br>
-
 #### Other Common Interfaces  
 
 In addition to the above-mentioned read and write interfaces, other general interfaces for manipulating file objects are also provided here.
@@ -316,8 +285,6 @@ In addition to the above-mentioned read and write interfaces, other general inte
 If isRelative is `true`pos means moving relative to the current position, a positive number means moving backward, and a negative number means moving forward.  
 If isRelative is `false`, pos means move relative to the beginning of the file, which is `0` or a positive number. If `-1`, which means move to the end of the file.
 
-<br>
-
 ##### Set File Size
 
 `fi.setSize(size)`
@@ -331,8 +298,6 @@ If isRelative is `false`, pos means move relative to the beginning of the file, 
 The new size can be set larger than the current size of the file.
 If the new size set is smaller than the current size of the file, the original file will be truncated.
 
-<br>
-
 ##### Close File
 
 `fi.close()`
@@ -342,8 +307,6 @@ If the new size set is smaller than the current size of the file, the original f
 
 Once the file is closed, it cannot be used until it is opened again.
 
-<br>
-
 ##### Whether the File Pointer Is at the End of the File 
 
 `fi.isEOF()`
@@ -351,16 +314,12 @@ Once the file is closed, it cannot be used until it is opened again.
 - Return value: Whether the file pointer is at the end of the file.
 - Return value type: `Boolean`
 
-<br>
-
 ##### Flush File Buffer 
 
 `fi.flush()`
 
 - Return value: Whether the refresh was successful.
 - Return value type: `Boolean`
-
-<br>
 
 ##### Get Error Code 
 
@@ -371,8 +330,6 @@ Once the file is closed, it cannot be used until it is opened again.
 
 If you encounter a failure in the use of the above interface, you can get the last error code from here.
 
-<br>
-
 ##### Clear Error Status
 
 `fi.clear()`
@@ -381,5 +338,3 @@ If you encounter a failure in the use of the above interface, you can get the la
 - Return value type: `Boolean`
 
 If a failure is encountered in the use of the above interface, after obtaining the error code, use this function to clear the error state to continue to use the file object normally.
-
-<br>

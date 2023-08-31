@@ -13,8 +13,6 @@ Before using these APIs, you need to use this function to create a blank normal 
 - Return value: Newly created blank form object.
 - Return value type: `SimpleForm`
 
-<br>
-
 ### Add Form Elements
 
 Once created, you can use the following member functions (member methods) to add new form elements to the object.  
@@ -30,8 +28,6 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `SimpleForm`
 
-<br>
-
 #### Set the Content of the Form
 
 `fm.setContent(content)`
@@ -41,8 +37,6 @@ For a specific form object `fm`, the following functions are available:
     Text content of the form.
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `SimpleForm`
-
-<br>
 
 #### Add a Row of Buttons to the Form 
 
@@ -56,16 +50,12 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `SimpleForm`
 
-<br>
-
 Use the texture pack path or URL `image` to identify the icon corresponding to the button.  
 For each button on the form, set the corresponding icon as follows:
 
 1. If using a texture pack path, the image path should look like `textures/items/apple`
 2. If you use a URL path, you can put the full URL here, like `https://www.baidu.com/img/flexible/logo/pc/result.png`
 3. If you don't need to display an image for this button, just don't pass in this parameter.
-
-<br>
 
 ### Send Form
 
@@ -93,8 +83,6 @@ Parameter `callback` The callback function prototype: `function(player,id)`
   The serial number of the form button that the player clicked, starting from 0.  
   If id is `Null`, the player canceled the form.
 
-<br>
-
 ## 📰 Custom Form Builder API
 
 > These APIs can assist developers to easily construct a custom form, no longer need to worry about writing JSON
@@ -109,8 +97,6 @@ Before using these APIs, you need to use this function to create a blank custom 
 
 - Return value: Newly created blank form object.
 - Return value type: `CustomForm`
-
-<br>
 
 ### Add Form Elements
 
@@ -127,8 +113,6 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
 
-<br>
-
 #### Add a Line of Text to the Form  
 
 `fm.addLabel(text)`
@@ -138,8 +122,6 @@ For a specific form object `fm`, the following functions are available:
     Line of text.
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
-
-<br>
 
 #### Add a Row of Input Boxes to the Form  
 
@@ -156,8 +138,6 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
 
-<br>
-
 #### Add a Row of Switch Options to the Form  
 
 `fm.addSwitch(title[,default])`
@@ -169,8 +149,6 @@ For a specific form object `fm`, the following functions are available:
     (Optional parameter) Default state of the switch on/off.
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
-
-<br>
 
 #### Add a Drop-Down Menu to the Form  
 
@@ -189,8 +167,6 @@ For a specific form object `fm`, the following functions are available:
     The sequence number starts from 0. The default is 0, that is, the first item in the list is selected by default.
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
-
-<br>
 
 #### Add a Row of Cursor Sliders to the Form  
 
@@ -211,8 +187,6 @@ For a specific form object `fm`, the following functions are available:
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
 
-<br>
-
 #### Add a Row of Step Sliders to the Form  
 
 `fm.addStepSlider(title,items[,default])`
@@ -229,8 +203,6 @@ For a specific form object `fm`, the following functions are available:
     Defaults to 0, i.e. the slider is at the beginning of the slider row.
 - Return value: The processed form object (for other operations in the chain).
 - Return value type: `CustomForm`
-
-<br>
 
 ### Send Form
 
@@ -258,5 +230,3 @@ Parameter `callback` The callback function prototype: `function(player,data)`
   The returned form content array.  
   The contents of each control are stored in the array in the order of the controls on the form.  
   if data is `Null`, the player cancels the form.
-
-<br>

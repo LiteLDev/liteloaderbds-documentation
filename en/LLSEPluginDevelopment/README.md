@@ -11,8 +11,6 @@ From here, you will gradually become familiar with the basic elements and proces
 Before engaging with development, you need to have a systematic understanding of LLSE. The documentation here, first of all, will help you establish a general knowledge framework. 
 Familiarize yourself with them first, this will be a very important part of your learning development process. 
 
-<br>
-
 ## 💊 Data Types
 
 As we all know, the type system is usually a more critical part of a design framework. 
@@ -56,8 +54,6 @@ In addition to the above standard types, there are also some engine-defined obje
 - `WSClient` - WebSocket client object (see Network for details)
 - `Enum` - Enumeration type, usually stored in some type, providing some limited range of options.
 
-<br>
-
 ## 📌 API Documentation Description Conventions
 
 As we all know, a good help document is naturally inseparable from a unified and concise format and a clear appearance. 
@@ -79,12 +75,8 @@ If Array<...> appears in the parameter type, it means an array/list containing t
    When you do not pass this parameter, the engine will use the default value given in the description.
    For example: `pl.tell(msg[,type])`, where `type` is an optional parameter.
 
-<br>
-
 After you are familiar with the above infrastructure, you can start to read the documentation for each other specific content step by step. 
 If you come across something you forgot, you can look it up more. 
-
-<br>
 
 ## 📜 Plugin Development Tips
 

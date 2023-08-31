@@ -8,8 +8,6 @@ All data will be destroyed uniformly only when the server is shut down.
 
 As such, LLSE gives developers the ability to track data about a particular player throughout the plugin's lifecycle.  
 
-<br>
-
 For a specific player object `pl`, with the following interfaces:
 
 #### Store Player Binding Data 
@@ -25,8 +23,6 @@ For a specific player object `pl`, with the following interfaces:
 - Return value: Whether the save was successful or not.
 - Return value type: `Boolean` 
 
-<br>
-
 #### Get Player Binding Data
 
 `pl.getExtraData(name)`
@@ -38,8 +34,6 @@ For a specific player object `pl`, with the following interfaces:
 - Return value type: `Any type`, depending on the type of data stored.
   -  If the return value is `Null`, it means that the specified binding data is not obtained, or the data is empty.
 
-<br>
-
 #### Delete Player Binding Data
 
 `pl.delExtraData(name)`
@@ -49,8 +43,6 @@ For a specific player object `pl`, with the following interfaces:
     The name of the bound data to delete.
 - Return value: Whether the deletion is successful.
 - Return value type: `Boolean`
-
-<br>
 
 ## 👨‍💻 XUID Database
 
@@ -68,8 +60,6 @@ When a player enters the server for the first time, his name and XUID are automa
 - Return value type: `String`
   - If the return value is `Null`, it means the query failed.
 
-<br>
-
 #### Query Player Name Based on XUID
 
 `data.xuid2name(xuid)`
@@ -80,8 +70,6 @@ When a player enters the server for the first time, his name and XUID are automa
 - Return value: Player's name.
 - Return value type: `String`
   - If the return value is `Null`, it means the query failed.
-
-<br>
 
 #### Query UUID by Player Name
 
@@ -94,8 +82,6 @@ When a player enters the server for the first time, his name and XUID are automa
 - Return value type: `String`
   - If the return value is `Null`, it means the query failed.
 
-<br>
-
 #### Query UUID Based on XUID
 
 `data.xuid2uuid(xuid)`
@@ -107,8 +93,6 @@ When a player enters the server for the first time, his name and XUID are automa
 - Return value type: `String`
   - If the return value is `Null`, it means the query failed.
 
-<br>
-
 #### Get all player information
 
 `data.getAllPlayerInfo()`
@@ -119,7 +103,5 @@ When a player enters the server for the first time, his name and XUID are automa
     - `name`: Player's name.
     - `xuid`: Player's XUID.
     - `uuid`: Player's UUID.
-
-<br>
 
 Tip: The player name stored in the XUID database is named corresponding to the player object. `realName` field.

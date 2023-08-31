@@ -26,8 +26,6 @@
 
 如果请求执行失败，status值将为 -1
 
-<br>
-
 ### 发送一个异步HTTP(s) Post请求  
 
 `network.httpPost(url[,header],data,type,callback)`
@@ -55,8 +53,6 @@
 
 如果请求执行失败，status值将为 -1
 
-<br>
-
 ## 🔌 WebSocket 客户端对象 API
 
 在脚本引擎中，使用「WebSocket 对象」来操作某个 WebSocket 客户端的连接和工作
@@ -68,8 +64,6 @@
 
 - 返回值：一个新的 websocket 客户端对象
 - 返回值类型：`WSClient`
-
-<br>
 
 ### WebSocket 客户端对象 - 属性
 
@@ -87,8 +81,6 @@
 `wsc.Closing` - 正在断开连接  
 `wsc.Closed` - 未连接  
 
-<br>
-
 ### WebSocket 客户端对象 - 函数
 
 每一个WS客户端对象都包含一些可以执行的成员函数（成员方法）。对于某个特定的文件对象`wsc`，可以通过以下这些函数对这个客户端进行一些操作
@@ -102,8 +94,6 @@
     要连接的目标地址，形如`ws://hostname[:port][/path/path][?query=value]`
 - 返回值：是否成功连接
 - 返回值类型：`Boolean` 
-
-<br>
 
 #### 异步创建连接
 
@@ -122,8 +112,6 @@
 - success : `Boolean`    
   WebSocket 连接是否成功
 
-<br>
-
 #### 发送文本 / 二进制消息
 
 `wsc.send(msg)`
@@ -135,8 +123,6 @@
 - 返回值类型：`Boolean` 
 
 如果传入的参数类型是`String`，会按照文本发送，如果是`ByteBuffer`将按照二进制数据发送
-
-<br>
 
 #### 监听WebSocket事件
 
@@ -154,8 +140,6 @@
     当指定的事件发生时，脚本引擎会调用你给出的监听函数，并传入相应的参数
 - 返回值：是否成功监听事件
 - 返回值类型：`Boolean` 
-
-<br>
 
 #### 监听事件列表
 
@@ -191,8 +175,6 @@
   - code : `Integer`  
     错误码
 
-<br>
-
 #### 关闭连接
 
 `wsc.close()`
@@ -202,8 +184,6 @@
 
 在处于关闭状态时，请勿继续使用此客户端对象！
 
-<br>
-
 #### 强制断开连接
 
 `wsc.shutdown()`
@@ -212,8 +192,6 @@
 - 返回值类型：`Boolean` 
 
 在处于关闭状态时，请勿继续使用此客户端对象！
-
-<br>
 
 #### 获取错误码
 
@@ -237,8 +215,6 @@
 - 返回值：新的服务器对象
 - 返回值类型：`HttpServer`
 
-<br>
-
 ### 监听 Get 请求
 
 `svr.onGet(path, callback)`
@@ -250,8 +226,6 @@
     回调函数，在收到符合path的GET请求回调
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
-
-<br>
 
 ### 监听 Put 请求
 
@@ -265,8 +239,6 @@
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
 
-<br>
-
 ### 监听 Post 请求
 
 `svr.onPost(path, callback)`
@@ -278,8 +250,6 @@
     回调函数，在收到符合path的POST请求回调
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
-
-<br>
 
 ### 监听 Patch 请求
 
@@ -293,8 +263,6 @@
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
 
-<br>
-
 ### 监听 Delete 请求
 
 `svr.onDelete(path, callback)`
@@ -307,8 +275,6 @@
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
 
-<br>
-
 ### 监听 Options 请求
 
 `svr.onOptions(path, callback)`
@@ -320,8 +286,6 @@
     回调函数，在收到符合path的OPTIONS请求回调
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
-
-<br>
 
 ### 监听请求 - 说明
 
@@ -349,8 +313,6 @@ svr.onGet('/test/123', (req, res) => {
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
 
-<br>
-
 ### 监听 PostRouting 后路由事件
 
 `svr.onPostRouting(callback)`
@@ -360,8 +322,6 @@ svr.onGet('/test/123', (req, res) => {
     回调函数，在对应目录的回调函数(或PreRouting事件)执行完毕后调用，在回调函数中可以修改响应
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
-
-<br>
 
 ### 监听 Error 错误事件
 
@@ -373,8 +333,6 @@ svr.onGet('/test/123', (req, res) => {
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
 
-<br>
-
 ### 监听 Exception 异常事件
 
 `svr.onException(callback)`
@@ -384,8 +342,6 @@ svr.onGet('/test/123', (req, res) => {
     回调函数，在handler中有抛出异常时调用，参数3为异常信息
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
-
-<br>
 
 ### 监听端口并开启服务器
 
@@ -400,15 +356,11 @@ svr.onGet('/test/123', (req, res) => {
 - 返回值：处理完毕的服务器对象（便于连锁进行其他操作）
 - 返回值类型：`HttpServer`
 
-<br>
-
 ### 停止服务器
 
 `svr.stop()`
 
 - 返回值：无
-
-<br>
 
 ### 获取服务器是否正在运行
 
@@ -416,8 +368,6 @@ svr.onGet('/test/123', (req, res) => {
 
 - 返回值：服务器正在运行与否
 - 返回值类型：`Boolean`
-
-<br>
 
 ## Http 请求对象 API
 
@@ -445,8 +395,6 @@ svr.onGet('/test/123', (req, res) => {
 1. `?k=v1&k=v2&k1=v1` => `{k: ['v1', 'v2'], k1: 'v1'}`
 2. `/test/(.+)/(.+)` => `/test/ll/233` => `['/test/ll/233', 'll', '233']`
 
-<br>
-
 ### 获取指定请求头的值
 
 `req.getHeader(name)`
@@ -456,8 +404,6 @@ svr.onGet('/test/123', (req, res) => {
     请求头名称
 - 返回值：请求头的值数组(如果没有该请求头，则返回`[]`空数组)
 - 返回值类型：`Array<String>`
-
-<br>
 
 ## Http 响应对象 API
 
@@ -472,8 +418,6 @@ svr.onGet('/test/123', (req, res) => {
 
 这些属性可以修改且应当被修改，但只有在回调函数中修改才有效
 
-<br>
-
 ### 获取指定响应头的值
 
 `req.getHeader(name)`
@@ -483,8 +427,6 @@ svr.onGet('/test/123', (req, res) => {
     响应头名称
 - 返回值：响应头的值数组(如果没有该响应头，则返回`[]`空数组)
 - 返回值类型：`Array<String>`
-
-<br>
 
 ### 设置指定响应头的值
 
@@ -498,8 +440,6 @@ svr.onGet('/test/123', (req, res) => {
 - 返回值：处理完毕的响应对象
 - 返回值类型：`HttpResponse`
 
-<br>
-
 ### 写入响应内容
 
 `res.write(content1, content2, ...)`
@@ -511,8 +451,6 @@ svr.onGet('/test/123', (req, res) => {
 - 返回值类型：`HttpResponse`
 - 注：本函数在目前相当于`res.body += content1 + content2 + ...`
 
-<br>
-
 ## Http API 样例
 
 ```js
@@ -522,7 +460,7 @@ server.onGet("/hello(.+)", (req, resp) => {
 				':', req.remotePort, " for ", req.path);
 	resp.write("<html><body>")
 		.write("<h1>It works!</h1>")
-		.write("<br/>")
+		.write("")
 		.write("<p>Request Headers: ", JSON.stringify(req.headers, null, 4), "</p>")
 		.write("<p>Request Body: ", req.body, "</p>")
 		.write("<p>Your Address: ", req.remoteAddr, ':', req.remotePort, "</p>")

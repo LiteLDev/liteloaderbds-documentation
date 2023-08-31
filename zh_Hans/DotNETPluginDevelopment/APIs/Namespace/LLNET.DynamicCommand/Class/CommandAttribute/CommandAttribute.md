@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 用于指定命令主体的特性。
-
-<br>
 
 C#
 ```cs
@@ -20,27 +16,19 @@ C++
 public ref class CommandAttribute
     :public System::Attribute
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [CommandAttribute](CommandAttribute)
    
-<br>
 
 ## 示例
 
-<br>
-
 [如何：使用静态指令](../../../../../HowTo/Static_DynamicCommand)
-
-<br>
 
 ## 构造函数
 - 
     |||
     |-|-|
     |`CommandAttribute(String)`|用指定的命令名称初始化 `CommandAttribute` 类的新实例。|
-
-<br>
 
 ##  字段
 - 
@@ -53,7 +41,3 @@ public ref class CommandAttribute
     |AutoReset|指示是否自动重置。|
     |Flag1||
     |Flag2||
-
-<br>
-
-

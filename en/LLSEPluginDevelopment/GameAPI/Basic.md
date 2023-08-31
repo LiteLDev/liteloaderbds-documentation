@@ -27,10 +27,6 @@ Currently, LLSE has the following game element objects:
 
 You will come across them frequently in subsequent documentation.
 
-<br>
-
-<br>
-
 ## 🎯 Coordinate Object
 
 In games, numerous APIs require coordinates.
@@ -55,7 +51,7 @@ Each member of the coordinate object is **readable and writable**.
 
    If in some cases the dimension is invalid, or cannot be obtained, you will find that the value of `dimid` is `-1`.
 
-   <br>
+   
 
 2. `FloatPos`object
     Its members are all **floating point numbers**, which are mostly used to represent **entity coordinates** and other positions that cannot be represented by integers  
@@ -74,8 +70,6 @@ Each member of the coordinate object is **readable and writable**.
    **Dimension text name:** The values of the attributes are: "Main World", "Nether", "End"
 
    If in some case the dimension is invalid, or cannot be obtained, you will find that the value of `dimid` is `-1`.
-
-<br>
 
 ### Coordinate Object Auxiliary Interface
 
@@ -116,8 +110,6 @@ For some languages ​​that support general object orientation, LLSE also prov
 - Return value: A floating point coordinate object.
 - Return value type: `FloatPos`
 
-<br>
-
 ## 📐 Bearing Angle Object
 
 The engine uses a `DirectionAngle` object to denote an Euler angle, called a "direction angle object".
@@ -133,8 +125,6 @@ For a `DirectionAngle` type variable ang, there are the following members:
 
 Since there is no concept of rotation in the entity system of MC, there is no data related to the rollover angle.
 
-<br>
-
 ##### Create Direction Angle
 
 [JavaScript] `new DirectionAngle(pitch, yaw)`  
@@ -147,8 +137,6 @@ Since there is no concept of rotation in the entity system of MC, there is no da
     yaw angle
 - Return value: A floating point coordinate object.
 - Return value type: `FloatPos`
-
-<br>
 
 ##### Convert Direction Angle to Base Heading
 

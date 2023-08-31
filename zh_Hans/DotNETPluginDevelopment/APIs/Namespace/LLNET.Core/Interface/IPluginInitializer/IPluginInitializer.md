@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 作为自定义插件入口的基础接口。
-
-<br>
 
 C#
 ```cs
@@ -17,15 +13,9 @@ C++
 public interface class IPluginInitializer
 ```
 
-<br>
-
 ## 示例
 
-<br>
-
 [如何：定义插件入口](../../../../../HowTo/PluginEntry)
-
-<br>
 
 ## 方法
 
@@ -33,8 +23,6 @@ public interface class IPluginInitializer
     |||
     |-|-|
     |`OnInitialize`|作为自定义入口插件的入口。|
-
-<br>
 
 ## 属性
 

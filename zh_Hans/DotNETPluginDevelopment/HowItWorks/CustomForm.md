@@ -5,4 +5,3 @@
 一旦生成本机表单，只要不对表单进行修改操作，就不会再重复生成表单，以此提高效率。  
 调用 `CustomForm.Append` 方法或设置 `CustomForm.Elements` 属性会导致 `isFormGenerated`被重置为 `false`。在下一次调用 `SendTo` 时，若检测到 `isFormGenerated` 为 `false` 则会尝试重新生成表单。  
 所以，频繁地添加或更改表单内部的控件可能会导致性能问题。因此建议表单在构建完成以后不再作修改，方能达到较高效率。
-

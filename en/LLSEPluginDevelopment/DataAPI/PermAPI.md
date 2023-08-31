@@ -34,8 +34,6 @@ By static method:
   - Invalid name.
   - The role already exists.
 
-<br/>
-
 ### Get a role
 
 `Permission.getRole(name)`
@@ -47,8 +45,6 @@ By static method:
 - Throw when:
   - Invalid arguments.
   - The role not found.
-
-<br/>
 
 ### Get or create a role
 
@@ -62,8 +58,6 @@ By static method:
   - Invalid arguments.
   - The name is invalid.
   
-
-<br/>
 
 ## Class Role
 
@@ -88,15 +82,11 @@ The `permissions` property is an array of objects, each object contains the foll
 `enabled`        | `Boolean`       | Whether the permission is enabled
 `extra`          | `Object`        | The extra data of the permission
 
-<br/>
-
 ### Check whether the role is valid
 
 `role.isValid()`
 
 - Return Value: `Boolean` Whether the role is valid
-
-<br/>
 
 ### Check whether the role has the member
 
@@ -110,8 +100,6 @@ The `permissions` property is an array of objects, each object contains the foll
   - Invalid arguments.
   - The role reference is expired.
 
-<br/>
-
 ### Add the member to the role
 
 `role.addMember(xuid)`
@@ -123,8 +111,6 @@ The `permissions` property is an array of objects, each object contains the foll
   - Invalid arguments.
   - The role reference is expired.
   - The member already in the role.
-
-<br/>
 
 ### Remove the member from the role
 
@@ -138,8 +124,6 @@ The `permissions` property is an array of objects, each object contains the foll
   - The role reference is expired.
   - The member not found in the role.
 
-<br/>
-
 ### Check whether the role has the permission
 
 `role.hasPermission(name)`
@@ -152,8 +136,6 @@ The `permissions` property is an array of objects, each object contains the foll
   - Invalid arguments.
   - The role reference is expired.
 - Note: The permission extra data will be ignored. It will return `true` if the `enabled` field is true.
-
-<br/>
 
 ### Set the permission of the role
 
@@ -173,8 +155,6 @@ The `permissions` property is an array of objects, each object contains the foll
   - The role reference is expired.
 - Note: If the specified permission is not found in the role, it will be added and set to the specified value
 
-<br/>
-
 ### Remove the permission of the role
 
 `role.removePermission(name)`
@@ -186,8 +166,6 @@ The `permissions` property is an array of objects, each object contains the foll
   - Invalid arguments.
   - The role reference is expired.
   - The permission not found.
-
-<br/>
 
 ### Check whether the permission exists in the role
 
@@ -202,8 +180,6 @@ The `permissions` property is an array of objects, each object contains the foll
   - The role reference is expired.
 - Note: Different from `hasPermission`, this method will return `true` if the permission is in the role, but may not be enabled.
 
-<br/>
-
 ## Static methods
 
 ### Check whether the role exists
@@ -217,8 +193,6 @@ The `permissions` property is an array of objects, each object contains the foll
 - Throw when:
   - Invalid arguments.
 
-<br/>
-
 ### Delete a role
 
 `Permission.deleteRole(name)`
@@ -229,8 +203,6 @@ The `permissions` property is an array of objects, each object contains the foll
 - Throw when:
   - Invalid arguments.
   - The role not found.
-
-<br/>
 
 ### Register a permission
 
@@ -246,8 +218,6 @@ The `permissions` property is an array of objects, each object contains the foll
   - The permission name is invalid.
   - The permission already registered.
 
-<br/>
-
 ### Check whether the permission exists
 
 `Permission.permissionExists(name)`
@@ -258,8 +228,6 @@ The `permissions` property is an array of objects, each object contains the foll
 - Return Value: `Boolean` Whether the permission exists
 - Throw when:
   - Invalid arguments.
-
-<br/>
 
 ### Check whether the player has the permission
 
@@ -290,8 +258,6 @@ function meta.instanceFunction:hasPermission(perm)
 end
 ```
 
-<br/>
-
 ### Delete a permission
 
 `Permission.deletePermission(permName)`
@@ -302,8 +268,6 @@ end
 - Throw when:
   - Invalid arguments.
   - The permission not found.
-
-<br/>
 
 ### Check whether the player is in the role
 
@@ -320,8 +284,6 @@ end
   - The player not found.
 - Note: If the role not found, it will return `false`.
 
-<br/>
-
 ### Get the player's roles
 
 `Permission.getPlayerRoles(xuid)`
@@ -330,8 +292,6 @@ end
   - xuid: `String`  
     The player XUID
 - Return Value: `Array<Role>` The player's roles
-
-<br/>
 
 ### Get the player's permissions
 
@@ -342,15 +302,11 @@ end
     The player XUID
 - Return Value: `Array<Object>` The player's permissions
 
-<br/>
-
 ### Save the permission data
 
 `Permission.saveData()`
 
 - Note: The data will be auto-saved every 100 game ticks.
-
-<br/>
 
 ## Example
 

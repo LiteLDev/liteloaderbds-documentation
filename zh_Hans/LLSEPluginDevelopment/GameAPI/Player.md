@@ -35,8 +35,6 @@
 > 注意：不要**长期保存**一个玩家对象  
 > 当玩家退出服务器时，对应的玩家对象将同时释放。因此，如果有长期操作某个玩家的需要，请通过上述途径获取实时的玩家对象
 
-<br>
-
 ### 玩家对象 - 属性
 
 每一个玩家对象都包含一些固定的对象属性。对于某个特定的玩家对象`pl`，有以下这些属性
@@ -113,8 +111,6 @@
 | 0            | 普通成员权限    |
 | 1            | OP权限          |
 | 4            | OP + 控制台权限 |
-
-<br>
 
 ### 玩家对象 - 函数
 
@@ -464,7 +460,6 @@
 - 返回值: 治疗是否成功
 - 返回值类型: `Boolean`
 
-
 #### 设置玩家的生命值
 
 `pl.setHealth(health)`
@@ -485,8 +480,6 @@
 - 返回值: 为玩家设置属性值是否成功
 - 返回值类型: `Boolean`
 
-<br>
-
 #### 为玩家设置攻击伤害属性
 
 `pl.setAttackDamage(value)`
@@ -496,8 +489,6 @@
     新的值
 - 返回值: 为玩家设置属性值是否成功
 - 返回值类型: `Boolean`
-
-<br>
 
 #### 为玩家设置最大攻击伤害属性
 
@@ -509,8 +500,6 @@
 - 返回值: 为玩家设置属性值是否成功
 - 返回值类型: `Boolean`
 
-<br>
-
 #### 为玩家设置跟随范围
 
 `pl.setFollowRange(value)`
@@ -520,8 +509,6 @@
     新的值
 - 返回值: 为玩家设置属性值是否成功
 - 返回值类型: `Boolean`
-
-<br>
 
 #### 为玩家设置击退抵抗属性
 
@@ -533,8 +520,6 @@
 - 返回值: 为玩家设置属性值是否成功
 - 返回值类型: `Boolean`
 
-<br>
-
 #### 为玩家设置幸运属性
 
 `pl.setLuck(value)`
@@ -544,8 +529,6 @@
     新的值
 - 返回值: 为玩家设置属性值是否成功
 - 返回值类型: `Boolean`
-
-<br>
 
 #### 为玩家设置移动速度属性
 
@@ -557,8 +540,6 @@
 - 返回值: 为玩家设置属性值是否成功
 - 返回值类型: `Boolean`
 
-<br>
-
 #### 为玩家设置水下移动速度属性
 
 `pl.setUnderwaterMovementSpeed(value)`
@@ -568,8 +549,6 @@
     新的值
 - 返回值: 为玩家设置属性值是否成功
 - 返回值类型: `Boolean`
-
-<br>
 
 #### 为玩家设置岩浆上移动速度属性
 
@@ -581,9 +560,6 @@
 - 返回值: 为玩家设置属性值是否成功
 - 返回值类型: `Boolean`
 
-<br>
-
-
 #### 设置玩家最大生命值
 
 `pl.setMaxHealth(health)`
@@ -594,7 +570,6 @@
 - 返回值: 是否成功
 - 返回值类型: `Boolean`
 
-
 #### 设置玩家饥饿值
 
 `pl.setHungry(hunger)`
@@ -604,7 +579,6 @@
     饥饿值数
 - 返回值: 是否成功
 - 返回值类型: `Boolean`
-
 
 #### 使指定玩家着火
 
@@ -1417,8 +1391,6 @@
 - 返回值：玩家的NBT对象
 - 返回值类型：`NbtCompound`
 
-<br>
-
 #### 写入在线玩家对应的NBT对象
 
 `pl.setNbt(nbt)`
@@ -1431,8 +1403,6 @@
 
 关于NBT对象的更多使用，请参考 [NBT接口文档](../NbtAPI/NBT)
 
-<br>
-
 #### 获取玩家对应的NBT对象
 
 `mc.getPlayerNbt(uuid)`
@@ -1444,8 +1414,6 @@
 - 返回值类型：`NbtCompound`
 
 此API的好处是可以获取到离线玩家NBT，无需玩家在线，无需玩家对象。
-
-<br>
 
 #### 写入玩家对应的NBT对象
 
@@ -1460,8 +1428,6 @@
 - 返回值类型：`Boolean`
 
 此API的好处是可以操作离线玩家NBT，无需玩家在线，无需玩家对象。
-
-<br>
 
 #### 覆盖玩家对应的NBT对象的特定NbtTag
 
@@ -1479,8 +1445,6 @@
 
 此API的好处是可以操作离线玩家NBT，无需玩家在线，无需玩家对象。
 
-<br>
-
 #### 从存档中删除玩家对应的NBT对象的全部内容
 
 `mc.deletePlayerNbt(uuid)`
@@ -1493,8 +1457,6 @@
 
 此API的好处是可以操作离线玩家NBT，无需玩家在线，无需玩家对象。
 
-<br>
-
 #### 为玩家增加一个Tag
 
 `pl.addTag(tag)`
@@ -1504,8 +1466,6 @@
     要增加的tag字符串
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
-
-<br>
 
 #### 为玩家移除一个Tag
 
@@ -1517,8 +1477,6 @@
 - 返回值：是否移除成功
 - 返回值类型：`Boolean`
 
-<br>
-
 #### 检查玩家是否拥有某个Tag
 
 `pl.hasTag(tag)`
@@ -1529,16 +1487,12 @@
 - 返回值：是否拥有这个Tag
 - 返回值类型：`Boolean`
 
-<br>
-
 #### 获取玩家拥有的所有Tag列表
 
 `pl.getAllTags()`
 
 - 返回值：玩家所有的 tag 字符串列表
 - 返回值类型：`Array<String,String,...>`
-
-<br>
 
 #### 获取玩家的Abilities能力列表（来自玩家NBT）
 
@@ -1548,8 +1502,6 @@
 - 返回值类型：`object<String-任意类型>`
 
 键 - 值对列表中的每一项形如：`"mayfly": 1`  等等
-
-<br>
 
 #### 获取玩家的Attributes属性列表（来自玩家NBT）
 
@@ -1572,16 +1524,12 @@
 }
 ```
 
-<br>
-
 #### 获取玩家疾跑状态
 
 `pl.isSprinting()`
 
 - 返回值：玩家疾跑状态
 - 返回值类型：`Boolean`
-
-<br>
 
 #### 设置玩家疾跑状态 
 
@@ -1593,8 +1541,6 @@
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
-<br>
-
 #### 获取视线方向实体
 
 `pl.getEntityFromViewVector([maxDistance])`  
@@ -1604,8 +1550,6 @@
     查找最大距离  
 - 返回值：视线方向实体，如果获取失败，返回 `Null`  
 - 返回值类型：`Entity?`
-
-<br>
 
 #### 获取视线方向方块
 
@@ -1623,8 +1567,6 @@
 - 返回值：视线方向方块，如果获取失败，返回 `Null`  
 - 返回值类型：`Block?`
 
-<br>
-
 #### 向玩家发送数据包
 
 `pl.sendPacket(packet)`  
@@ -1635,8 +1577,6 @@
 - 返回值：是否成功，如果pl不存在，返回Null
 - 返回值类型：`Bool`
 
-<br>
-
 #### 获取玩家所在群系ID
 
 `pl.getBiomeId()`  
@@ -1644,16 +1584,12 @@
 - 返回值：群系ID
 - 返回值类型：`Integer`
 
-<br>
-
 #### 获取玩家所在群系名称
 
 `pl.getBiomeName()`  
 
 - 返回值：群系名称
 - 返回值类型：`String`
-
-<br>
 
 #### 设置玩家Ability属性
 
@@ -1666,16 +1602,12 @@
 - 返回值：无作用
 - 返回值类型：`Boolean`
 
-<br>
-
 #### 获取玩家全部药水效果
 
 `pl.getAllEffects()`
 
 - 返回值：玩家所有的药水效果id（见下表）
 - 返回值类型：`Array<number,number,...>`
-
-<br>
 
 #### 为玩家添加一个药水效果
 
@@ -1691,8 +1623,6 @@
     是否显示粒子
 - 返回值：操作是否成功
 - 返回值类型：`Boolean`
-
-<br>
 
 #### 为玩家移除一个药水效果
 
@@ -1736,16 +1666,12 @@
 | 村庄英雄     | village_hero    | 29     |
 | 黑暗         | darkness        | 30     |
 
-<br>
-
 #### 判断是否为模拟玩家
 
 `pl.isSimulatedPlayer()`
 
 - 返回值：是否为模拟玩家
 - 返回值类型：`Boolean`
-
-<br>
 
 ## 模拟玩家（由于与玩家API重合过多，未生成新的模拟玩家类）
 
@@ -1766,7 +1692,6 @@
 ### 模拟玩家 - 函数
 每一个模拟玩家对象都包含一些可以执行的成员函数（成员方法）。对于某个特定的模拟玩家对象`sp`，可以通过以下这些函数对这个模拟玩家进行一些操作
 
-
 #### 模拟攻击
 
 `sp.simulateAttack([target])`
@@ -1780,7 +1705,6 @@
 - 返回值类型：`Boolean`
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#attack)
-
 
 #### 模拟破坏
 
@@ -1799,7 +1723,6 @@
 - 返回值类型：`Boolean`
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#breakblock)
-
 
 #### 模拟断开连接
 
@@ -1829,7 +1752,6 @@
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#interact)
 
-
 #### 模拟跳跃
 
 `sp.simulateJump()`
@@ -1838,7 +1760,6 @@
 - 返回值类型：`Boolean`
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#jump)
-
 
 #### 模拟看向某方块或实体
 
@@ -1860,7 +1781,6 @@
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#lookatblock)
 
-
 #### 模拟设置身体角度
 
 `sp.simulateSetBodyRotation(rot)`
@@ -1875,7 +1795,6 @@
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#lookatblock)
 
-
 #### 相对玩家坐标系移动
 
 `sp.simulateLocalMove()`
@@ -1889,7 +1808,6 @@
 - 返回值：是否请求移动成功
 - 返回值类型：`Boolean`
 
-
 #### 相对世界坐标系移动
 
 `sp.simulateWorldMove()`
@@ -1902,7 +1820,6 @@
 
 - 返回值：是否请求移动成功
 - 返回值类型：`Boolean`
-
 
 #### 直线移动到坐标
 
@@ -1988,7 +1905,6 @@
 ```
 此数据的目标坐标为(0,2,0)，路径终点为(-1,0,0)，所以isFullPath为false，但由于路径不为空，所以模拟玩家将会移动至(-1,0,0)坐标
 
-
 #### 模拟导航移动（多目标）
 
 `sp.simulateNavigateTo(posArray[,speed])`
@@ -2004,7 +1920,6 @@
 - 返回值类型：`Boolean`
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#navigatetolocations)
-
 
 #### 模拟使用物品
 
@@ -2029,7 +1944,6 @@
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#useitem)
 
-
 #### 模拟停止破坏方块
 
 `sp.simulateStopDestroyingBlock()`
@@ -2038,7 +1952,6 @@
 - 返回值类型：`Boolean`
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopbreakingblock)
-
 
 #### 模拟停止交互
 
@@ -2049,7 +1962,6 @@
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopinteracting)
 
-
 #### 模拟停止移动
 
 `sp.simulateStopMoving()`
@@ -2059,7 +1971,6 @@
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopmoving)
 
-
 #### 模拟停止使用物品
 
 `sp.simulateStopUsingItem()`
@@ -2068,4 +1979,3 @@
 - 返回值类型：`Boolean`
 
 参考：[mojang-gametest docs](https://docs.microsoft.com/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer#stopusingitem)
-

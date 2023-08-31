@@ -9,4 +9,3 @@
     |`Player`|攻击方块的玩家。|
     |`ItemStack`|使用的物品。|
     |`BlockInstance`|被攻击的方块。|
-

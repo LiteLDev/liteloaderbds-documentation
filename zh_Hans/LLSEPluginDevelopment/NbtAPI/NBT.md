@@ -28,8 +28,6 @@
 
 每种数据类型可能有略微不同的使用接口。下面对他们作分别介绍
 
-<br>
-
 ## 🎈  NBT 对象通用接口
 
 每一个 NBT 对象都包含一些可以执行的成员函数（成员方法）  
@@ -45,8 +43,6 @@
 可能的返回值有：`NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NBT.Long`   
 `NBT.Float` `NBT.Double` `NBT.ByteArray` `NBT.String`  
 `NBT.List` `NBT.Compound`
-
-<br>
 
 #### 将NBT对象转换为JSON字符串
 
@@ -65,5 +61,3 @@
 
 > 上述函数输出的字符串符合JSON标准格式，但是无法进行反序列化。  
 > 如果有反序列化的需求，请使用 NBT标签类 提供的的 **SNBT** 接口
-
-<br>

@@ -20,8 +20,6 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
-<br>
-
 ### 获取玩家的存款金额
 
 `Player.getMoney()`
@@ -33,8 +31,6 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
     要读取的玩家的XUID标识符
 - 返回值：玩家的资金数值
 - 返回值类型：`Integer`
-
-<br>
 
 ### 增加玩家的存款
 
@@ -50,8 +46,6 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
-<br>
-
 ### 减少玩家的存款
 
 `Player.reduceMoney(value)`
@@ -65,8 +59,6 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
     要减小的金额  
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
-
-<br>
 
 ### 进行一笔转账
 
@@ -92,8 +84,6 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
 - 返回值：是否转账成功
 
 - 返回值类型：`Boolean`
-
-<br>
 
 ### 查询历史账单
 
@@ -121,8 +111,6 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
 
 时间字符串的格式为：YYYY-mm-dd hh:mm:ss
 
-<br>
-
 ### 删除账单历史记录
 
 `money.clearHistory(time)`
@@ -132,5 +120,3 @@ LiteLoaderBDS在安装时附带了LLMoney插件，因此无需额外安装，就
     删除从现在开始往前time秒的记录
 - 返回值：是否删除成功
 - 返回值类型：`Boolean`
-
-<br>

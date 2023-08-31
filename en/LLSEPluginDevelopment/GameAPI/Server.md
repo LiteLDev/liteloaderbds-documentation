@@ -9,16 +9,12 @@ The following APIs provide interfaces for customizing some server settings:
 - Return value: The server version number string, formatted like this: `v1.17.10`
 - Return value type: `String`
 
-<br>
-
 ### Get BDS Server Protocol Version 
 
 `mc.getServerProtocolVersion()`
 
 - Return value: Server protocol version 
 - Return value type: `Number`
-
-<br>
 
 ### Set Server Motd String  
 
@@ -30,8 +26,6 @@ The following APIs provide interfaces for customizing some server settings:
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-<br>
-
 ### Set the Maximum Number of Players on the Server  
 
 `mc.setMaxPlayers(num)`
@@ -41,8 +35,6 @@ The following APIs provide interfaces for customizing some server settings:
     The maximum number of players.  
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
-
-<br>
 
 ### Get Sever time  
 
@@ -56,8 +48,6 @@ The following APIs provide interfaces for customizing some server settings:
 
 Among them, daytime is the number of game ticks since dawn, gametime is the age of the world in game ticks, day is the number of in-game days passed.
 
-<br>
-
 ### Set Sever time   
 
 `mc.setTime(tick)`
@@ -68,16 +58,12 @@ Among them, daytime is the number of game ticks since dawn, gametime is the age 
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
 
-<br>
-
 ### Get Sever Weather  
 
 `mc.getWeather()`
 
 - Return value: Current weather (0 represents Clear, 1 represents Rain, 2 represents Thunder)
 - Return value type: `Integer`
-
-<br>
 
 ### Set Sever Weather  
 
@@ -88,5 +74,3 @@ Among them, daytime is the number of game ticks since dawn, gametime is the age 
     The weather you want to set (0 represents Clear, 1 represents Rain, 2 represents Thunder)
 - Return value: Whether the setting was successful.
 - Return value type: `Boolean`
-
-<br>

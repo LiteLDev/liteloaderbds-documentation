@@ -2,8 +2,6 @@
 
 包含用于定义常用引用类型、接口、特性和处理异常的基础类和基类。
 
-<br>
-
 ## 类
 
 |||
@@ -21,15 +19,11 @@
 |[RemoteCallExportFunctionException](Class/RemoteCallExportFunctionException/RemoteCallExportFunctionException)|表示在**执行动态远程调用的导出函数中**的过程中发生的一个或多个错误。|
 |[RemoteCallImportFunctionException](Class/RemoteCallImportFunctionException/RemoteCallImportFunctionException)|表示在**执行动态远程调用的导入函数中**的过程中发生的一个或多个错误。|
 
-<br>
-
 ## 结构
 |||
 |-|-|
 |[Pair\<Tkey,TValue\>](Struct/Pair/Pair)|[System.Collections.Generic.KeyValuePair\<Tkey,TValue\>](https://docs.microsoft.com/DotNET/api/system.collections.generic.keyvaluepair)的替代品。|
 |[SecondaryRankPtr](Struct/SecondaryRankPtr/SecondaryRankPtr)|用于表示二级指针的结构。|
-
-<br>
 
 ## 接口
 |||

@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 用于指定命令别名的特性。
-
-<br>
 
 C#
 ```cs
@@ -20,26 +16,16 @@ C++
 public ref class PluginMainAttribute
     :public System::Attribute
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [PluginMainAttribute](CommandAliasAttribute)
    
-<br>
 
 ## 示例
 
-<br>
-
 [如何：使用静态指令](../../../../../HowTo/Static_DynamicCommand)
-
-<br>
 
 ## 构造函数
 - 
     |||
     |-|-|
     |`PluginMainAttribute(String)`|用指定的入口名称初始化 `PluginMainAttribute` 类的新实例。|
-
-<br>
-
-

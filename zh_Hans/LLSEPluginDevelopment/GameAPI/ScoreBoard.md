@@ -23,8 +23,6 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 
 此接口的作用类似命令 `/scoreboard objectives add <name> <displayName> dummy`
 
-<br>
-
 #### 获取某个已存在的计分项
 
 `mc.getScoreObjective(name)`
@@ -36,8 +34,6 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 - 返回值类型：`Objective`
   - 如果返回`Null`，则代表计分项不存在
 
-<br>
-
 #### 获取所有计分项
 
 `mc.getAllScoreObjectives()`
@@ -46,8 +42,6 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 - 返回值类型：`Array<Objective,Objective,...>`
 
 此接口的作用类似命令 `/scoreboard objectives list`
-
-<br>
 
 #### 获取某个处于显示状态的计分项
 
@@ -60,9 +54,6 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 - 返回值类型：`Objective`
   - 如果返回`Null`，则代表对应槽位未显示计分项
 
-<br>
-
-
 ### 计分项对象 - 属性
 
 每一个计分项对象都包含一些固定的对象属性。对于某个特定的计分项对象`ob`，有以下这些属性
@@ -73,8 +64,6 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 | ob.displayName | 计分项的显示名称 | `String` |
 
 这些对象属性都是只读的，无法被修改
-
-<br>
 
 ### 计分项对象 - 函数
 
@@ -91,7 +80,6 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 - 返回值类型：`Integer`
 
 **使用前请保证计分项存在**
-<br>
 
 #### 修改某个目标的分数
 
@@ -111,7 +99,6 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 [!warning]
 若计分项不存在，则会尝试创建计分项，此时会返回`0`(当*target*为`String`时)或`null`(当*target*为`Player`时)  
 原因参见: [#971](https://github.com/LiteLDev/LiteLoaderBDS/issues/971#issuecomment-1385047649)
-<br>
 
 #### 停止跟踪某个目标
 
@@ -125,8 +112,6 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
 
 停止跟踪将直接删除这个目标对应的计分项数值，下次如需要访问需要再次创建
 
-<br>
-
 #### 设置计分项的显示状态
 
 `ob.setDisplay(slot[,sortOrder=0])`
@@ -138,8 +123,6 @@ MC使用 **计分项** 作为计分板系统的核心，每一个计分项拥有
     （可选参数）排序方式，可以为`0`(升序)或`1`(降序)，默认值为`0`
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
-
-<br>
 
 ### 其他计分板 API
 
@@ -247,8 +230,6 @@ pl.deleteScore("what");
 
 此接口的作用类似命令 `/scoreboard objectives remove <name>`
 
-<br>
-
 #### 使计分项停止显示
 
 `mc.clearDisplayObjective(slot)`
@@ -259,5 +240,3 @@ pl.deleteScore("what");
 
 - 返回值：是否清除成功
 - 返回值类型：`Boolean`
-
-<br>

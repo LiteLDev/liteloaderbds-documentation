@@ -8,8 +8,6 @@
 
 详见 [NbtList - 列表类型](NBTList) 和 [NbtCompound - 标签类型](NBTCompound) 文档
 
-<br>
-
 #### 创建新的NBT数据对象
 
 [JavaScript]  
@@ -41,8 +39,6 @@
 - 返回值类型：`NbtEnd` / `NbtByte` / `NbtShort` / `NbtInt` / `NbtLong` / `NbtFloat` / `NbtDouble` / `NbtByteBuffer` / `NbtString` ，取决于你选择的数据类型
   - 如果创建失败，将抛出异常
 
-<br>
-
 对于一个储存普通数据类型的NBT对象 `value`，有如下成员函数
 
 #### 设置对象的数据
@@ -56,13 +52,9 @@
 - 返回值：是否成功写入
 - 返回值类型：`Boolean`
 
-<br>
-
 #### 读取对象的数据
 
 `value.get()`
 
 - 返回值：对象中储存的数据
 - 返回值类型：``Number` / `Float` / `Double` / `ByteBuffer` / `String`，以储存的实际数据类型为准
-
-<br>

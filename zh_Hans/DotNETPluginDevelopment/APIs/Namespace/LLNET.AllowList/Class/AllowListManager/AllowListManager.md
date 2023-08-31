@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 提供管理白名单的一系列方法。
-
-<br>
 
 C#
 ```cs
@@ -16,16 +12,11 @@ C++
 ```cpp
 public ref class AllowListManager
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [AllowListManager](AllowListManager)
    
-<br>
 
 ## 示例
-
-<br>
-
 
 C#
 ```cs
@@ -58,15 +49,11 @@ namespace PluginMain
 }
 ```
 
-<br>
-
 ## 构造函数
 - 
     |||
     |-|-|
     |`AllowListManager()`|初始化 `AllowListManager` 类的新实例。|
-
-<br>
 
 ##  属性
 - 
@@ -74,8 +61,6 @@ namespace PluginMain
     |-|-|
     |[Size](Properties/Size)|获取 `AllowList` 大小。|
     |[AllowList](Properties/AllowList)|获取或设置序列化为JSON字符串的 `AllowList`。|
-
-<br>
 
 ##  方法
 - 
@@ -90,5 +75,3 @@ namespace PluginMain
     |[Remove(String)](Method/Remove)|根据玩家名称将玩家从白名单中移除。|
     |[Remove(String, String)](Method/Remove)|根据玩家名称与XUID将玩家从白名单中移除。|
     |[Reload()](Method/Reload)|重载白名单。|
-
-

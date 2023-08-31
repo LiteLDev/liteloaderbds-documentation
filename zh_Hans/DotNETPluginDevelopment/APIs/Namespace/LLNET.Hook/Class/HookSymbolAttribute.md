@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 用于指定THook派生类符号的特性。
-
-<br>
 
 C#
 ```cs
@@ -16,13 +12,8 @@ C++
 ```cpp
 public ref class HookSymbolAttribute: public Attribute
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Attribute](https://docs.microsoft.com/DotNET/api/system.attribute) → [HookSymbolAttribute](HookSymbolAttribute)
-
-<br>
-
-<br>
 
 ##  构造函数
 

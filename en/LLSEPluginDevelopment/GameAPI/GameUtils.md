@@ -31,8 +31,6 @@ Note: The interface here will only have an effect when passed to the BDS and dis
 | `Format.White`            | The following text is white     | §f|
 | `Format.MinecoinGold`     | The following text is coin gold | §g|
 
-<br>
-
 #### Format Code Table
 
 | Format Code Symbol     | Format Meaning              | In-Game String Eqivalent |
@@ -43,8 +41,6 @@ Note: The interface here will only have an effect when passed to the BDS and dis
 | `Format.StrikeThrough` | The following text is ~~Strikethrough~~         | §m  |
 | `Format.Random`        | The following text is randomly flashed garbled characters | §k  |
 | `Format.Clear`         | The following text clears all formatting| §r |
-
-<br>
 
 The method used by the above code is a connection string, similar to:
 

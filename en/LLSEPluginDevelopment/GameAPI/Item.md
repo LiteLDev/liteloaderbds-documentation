@@ -26,7 +26,6 @@ Through this function, a new item object is generated based on the given informa
 
 #### Clone From an Existing Item Object
 
-
 Through this function, clone a new item object based on an existing item object.
 The new item object is not related to the old object.
 For an existing item object item, there are functions:
@@ -52,8 +51,6 @@ Through this function, a new item object is generated using NBT.
 
 > Note: Do not save an item object long-term.
 > When the item corresponding to the item object is destroyed, the corresponding item object will become invalid. Therefore, if there is a need to operate an item for a long time, please obtain the real-time item object through the above methods.
-<br>
-
 
 ### Item Object - Properties
 
@@ -89,8 +86,6 @@ Every item object contains some fixed object properties. For a specific item obj
 
 These object properties are read-only and cannot be modified.
 
-<br>
-
 ### Item Object - Properties
 
 Each item object contains some member functions (member methods) that can be executed. For a specific item object `it`, you can perform some operations on this item through the following functions:
@@ -106,16 +101,12 @@ For example, when there is no item in a grid, the item object you get is empty.
 - Return value: Whether this item object is empty.
 - Return value type:  `Boolean`
 
-<br>
-
 #### Make This Item Object Empty (Delete Item)
 
 `it.setNull()`
 
 - Return value: Whether the deletion is successful.
 - Return value type:  `Boolean`
-
-<br>
 
 #### Set This Item Object to Another Item 
 
@@ -127,8 +118,6 @@ For example, when there is no item in a grid, the item object you get is empty.
 - Return value: Whether the assignment is successful.
 - Return value type:  `Boolean`
 
-<br>
-
 #### Damage Item
 
 `it.setDamage(damage)`
@@ -139,8 +128,6 @@ For example, when there is no item in a grid, the item object you get is empty.
 - Return value: Whether the assignment is successful.
 - Return value type:  `Boolean`
 
-<br>
-
 #### Set the Data Value of an Item 
 
 `it.setAux(aux)`
@@ -150,8 +137,6 @@ For example, when there is no item in a grid, the item object you get is empty.
     Item's auxiliary/data value (ex. Wool color, Wood plank type)
 - Return value: Whether the data value was successfully set.
 - Return value type:  `Boolean`
-
-<br>
 
 #### Generate Drop Entities From Item Objects
 
@@ -169,16 +154,12 @@ Through this function, according to the item object, a drop entity with the same
 - Return value type: `Entity`
   - If the return value is `Null`, the item generation has failed.
 
-<br>
-
 #### Get the Item's NBT Object
 
 `it.getNbt()`
 
 - Return value: The item's NBT object.
 - Return value type: `NbtCompound`
-
-<br>
 
 #### Write to the Item's NBT Object 
 
@@ -192,8 +173,6 @@ Through this function, according to the item object, a drop entity with the same
 
 For more usage of NBT objects, please refer to [NBT Interface Documentation](../NbtAPI/NBT)
 
-<br>
-
 #### Set Custom Item Lore
 
 `it.setLore(names)`
@@ -203,8 +182,6 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](../
     The array of Lore strings to set.
 - Return value: Whether setting the lore was successful.
 - Return value type:  `Boolean`
-
-<br>
 
 #### Set Custom Item Name
 
@@ -216,8 +193,6 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](../
 - Return value: Whether setting the name was successful.
 - Return value type:  `Boolean`
 
-<br>
-
 #### Determine if it is the same kind of item
 
 `it.match(item)`
@@ -227,5 +202,3 @@ For more usage of NBT objects, please refer to [NBT Interface Documentation](../
     Judged items
 - Return value: is the same kind of item
 - Return value type:  `Boolean`
-
-<br>

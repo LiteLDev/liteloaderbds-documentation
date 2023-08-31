@@ -8,4 +8,3 @@
     |-|-|
     |`Player`|改变维度的玩家。|
     |`ToDimensionId`|前往的维度id。|
-

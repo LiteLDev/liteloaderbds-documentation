@@ -39,8 +39,6 @@ A modal form contains a title, a text display, and two buttons.
     
     If the id is `Null`, the player cancels the form.
 
-<br>
-
 ### Send a Normal Form to the Player  
 
 A normal form contains a title, a text display box and several buttons, and the icon displayed on the button can be set.  
@@ -72,16 +70,12 @@ Parameter `callback` The callback function prototype: `function(player,id)`
   The serial number of the form button that the player clicked, starting from 0.  
   If the id is `Null`, the player cancels the form.
 
-<br>
-
 Use the texture pack path or URL `images` to identify the icon corresponding to the button.   
 For each button on the form, set the corresponding icon as follows:
 
 1. If using a texture pack path, the image path should look like `textures/items/apple`
 2. If you use a URL path, you can put the full URL here, like `https://www.baidu.com/img/flexible/logo/pc/result.png`
 3. If you don't need to display an image for this button, set the corresponding image path to an empty string.
-
-<br>
 
 ### Send Custom Form to Player (JSON Format)  
 
@@ -107,5 +101,3 @@ Parameter `callback` The callback function prototype: `function(player,data)`
   The returned form content array.  
   In the array, the first item must be `Null`, starting from the second item, the content of each control is stored in the order of the controls on the form.  
   If data is only `Null`, the player cancels the form.
-
-<br>

@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > **注册远程调用函数**时检测到**不可导出或不受支持的类型**引发的异常
-
-<br>
 
 C#
 ```cs
@@ -18,7 +14,6 @@ C++
 public ref class InvalidRemoteCallTypeException
     :public LiteLoaderDotNETException
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Exception](https://docs.microsoft.com/DotNET/api/system.exception) → [LiteLoaderDotNETException](../LiteLoaderDotNETException/LiteLoaderDotNETException) → 
 [InvalidRemoteCallTypeException](InvalidRemoteCallTypeException)
@@ -28,7 +23,3 @@ public ref class InvalidRemoteCallTypeException
     |||
     |-|-|
     |`InvalidRemoteCallTypeException(String)`|用指定的错误消息初始化 `InvalidRemoteCallTypeException` 类的新实例。|
-
-<br>
-
-

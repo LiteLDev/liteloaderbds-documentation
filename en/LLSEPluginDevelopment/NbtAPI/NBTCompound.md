@@ -9,8 +9,6 @@ pass `NbtCompound` Only the interface of the object can perform some operations 
 
 See [NbtList - List Type](NBTList) and [NbtCompound - Tag Type](NBTCompound) documentation.
 
-<br>
-
 #### Create a New NBT Tag Object
 
 [JavaScript]  `new NbtCompound([data])`  
@@ -48,8 +46,6 @@ local nbt = NbtCompound({
     });
 ```
 
-
-
 #### Generate NBT Tag Object From SNBT String 
 
 `NBT.parseSNBT(snbt)`  
@@ -62,8 +58,6 @@ local nbt = NbtCompound({
   - If the return value is `Null` it means the parsing failed.
 
 > The SNBT string must contain a complete Compound.
-
-<br>
 
 #### Generate NBT Tag Objects From Binary NBT Data
 
@@ -78,7 +72,7 @@ local nbt = NbtCompound({
 
 >  A complete Compound must be included in the binary NBT data 
 
-<br>For an object `comp` of type `NbtCompound`, there are the following interfaces:
+For an object `comp` of type `NbtCompound`, there are the following interfaces:
 
 #### Get All Keys
 
@@ -86,8 +80,6 @@ local nbt = NbtCompound({
 
 - Return value: All keys in Compound.
 - Return value type: `Array<String,String,...>`
-
-<br>
 
 #### Get the Data Type of the Value Corresponding to the Key
 
@@ -104,8 +96,6 @@ Possible return values ​​are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NB
 `NBT.Float` `NBT.Double` `NBT.ByteArray` `NBT.String`  
 `NBT.List` `NBT.Compound`
 
-<br>
-
 #### Set the NBT Object Corresponding to the Key
 
 `comp.setTag(key,tag)`
@@ -119,8 +109,6 @@ Possible return values ​​are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NB
 - Return value: Whether the write was successful or not.
 - Return value type: `Boolean`
 
-<br>
-
 #### Read the NBT Object Corresponding to the Key
 
 `comp.getTag(key)`
@@ -132,8 +120,6 @@ Possible return values ​​are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NB
 - Return value type:  `NBT Object`
   - If the NBT to read does not exist, it will return `Null`.
 
-<br>
-
 #### Delete the NBT Object Corresponding to the Key 
 
 `comp.removeTag(key)`
@@ -143,8 +129,6 @@ Possible return values ​​are: `NBT.End` `NBT.Byte` `NBT.Short` `NBT.Int` `NB
     The name of the key to operate on. The key must already exist.
 - Return value: The processed NBT object (for other operations in the chain).
 - Return value type: `NbtCompound`
-
-<br>
 
 ## Some Convenience Functions to Assist in the Manipulation of NBT Objects
 
@@ -172,8 +156,6 @@ Therefore, some convenient functions for simplifying object operations are also 
 - Return value: The NBT object that has been written to. (For chaining to perform other operations)
 - Return value type: `NbtCompound`
 
-<br>
-
 #### Read the Specific Data of the Value Corresponding to the Key
 
 `comp.getData(key)`  
@@ -186,8 +168,6 @@ Therefore, some convenient functions for simplifying object operations are also 
   - If the target location stores the `List` type NBT, will return a `NbtList` object; if the target location stores a `Compound` type NBT, will return a `NbtCompound` object.
   - If the NBT to read does not exist, it will return `Null`.
 
-<br>
-
 #### Convert NBT Tag Object to Object
 
 `comp.toObject()`
@@ -197,8 +177,6 @@ Therefore, some convenient functions for simplifying object operations are also 
 
 Convert the content of Compound to LLSE object, convert all data items to LLSE data type and store them in the corresponding key of the object, which is convenient for reading and processing.  
 If an item of Compound stores a `List` or `Compound` type NBT, it will recursively expand at the corresponding position as `Array` or `Object`.
-
-<br>
 
 #### Serialize NBT Tag Object to SNBT
 `nbt.toSNBT([space])`
@@ -215,8 +193,6 @@ If an item of Compound stores a `List` or `Compound` type NBT, it will recursive
 >
 > --- Minecraft Wiki
 
-<br>
-
 #### Serialize NBT Tag Object to Binary NBT
 
 `comp.toBinaryNBT()`
@@ -224,8 +200,6 @@ If an item of Compound stores a `List` or `Compound` type NBT, it will recursive
 - Return value: The corresponding binary NBT data.
 - Return value type: `ByteBuffer`
 > Only complete top-level Compound tags can be converted to binary NBT.
-
-<br>
 
 #### Destroy This NBT Tag Object
 `comp.destroy()`

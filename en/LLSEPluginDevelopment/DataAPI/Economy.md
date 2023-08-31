@@ -20,8 +20,6 @@ LiteLoader is installed with the LLMoney plugin, so you can use this interface d
 - Return value: Whether the setting is successful.
 - Return value type: `Boolean`
 
-<br>
-
 ### Get the Player’s Deposit Amount
 
 `Player.getMoney()`
@@ -33,8 +31,6 @@ LiteLoader is installed with the LLMoney plugin, so you can use this interface d
     The XUID identifier of the player to read.
 - Return value: Player's bank value.
 - Return value type: `Integer`
-
-<br>
 
 ### Increase Player’s Deposit
 
@@ -50,8 +46,6 @@ LiteLoader is installed with the LLMoney plugin, so you can use this interface d
 - Return value: Whether the setting is successful.
 - Return value type: `Boolean`
 
-<br>
-
 ### Decrease the Player’s Deposit
 
 `Player.reduceMoney(value)`
@@ -65,8 +59,6 @@ LiteLoader is installed with the LLMoney plugin, so you can use this interface d
     The amount of money to take from the player.  
 - Return value: Whether the setting is successful.
 - Return value type: `Boolean`
-
-<br>
 
 ### Make a Transfer
 
@@ -92,8 +84,6 @@ LiteLoader is installed with the LLMoney plugin, so you can use this interface d
 - Return value: Whether the transfer is successful.
 
 - Return value type: `Boolean`
-
-<br>
 
 ### Query Historical Payments
 
@@ -121,8 +111,6 @@ Where the result is an array of record objects. for each `record` object record,
 
 The format of the time string is: YYYY-mm-dd hh:mm:ss
 
-<br>
-
 ### Delete Billing History
 
 `money.clearHistory(time)`
@@ -132,5 +120,3 @@ The format of the time string is: YYYY-mm-dd hh:mm:ss
     Delete all records within the last `time` seconds.
 - Return value: Whether the deletion is successful.
 - Return value type: `Boolean`
-
-<br>

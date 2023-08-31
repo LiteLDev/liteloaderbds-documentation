@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 检测到 [BDS](https://www.minecraft.net/download/server/bedrock) 发生的错误而引发的异常基类。
-
-<br>
 
 C#
 ```cs
@@ -18,7 +14,6 @@ C++
 public ref class MCException
     :public LiteLoaderDotNETException
 ```
-<br>
 
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [Exception](https://docs.microsoft.com/DotNET/api/system.exception) → [LiteLoaderDotNETException](../LiteLoaderDotNETException/LiteLoaderDotNETException) → 
 [MCException](MCException)
@@ -29,7 +24,3 @@ public ref class MCException
     |-|-|
     |`MCException()`|初始化 `MCException` 类的新实例。|
     |`MCException(String)`|用指定的错误消息初始化 `MCException` 类的新实例。|
-
-<br>
-
-

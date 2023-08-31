@@ -23,8 +23,6 @@ Obtain a scoring item object through the following interface and perform related
 
 This interface acts like a command  `/scoreboard objectives add <name> <displayName> dummy`
 
-<br>
-
 #### Get an Existing Scoring Item
 
 `mc.getScoreObjective(name)`
@@ -36,8 +34,6 @@ This interface acts like a command  `/scoreboard objectives add <name> <displayN
 - Return value type: `Objective`
   - If `Null` is returned, it means the scoring item does not exist.
 
-<br>
-
 #### Get All Scoring Items
 
 `mc.getAllScoreObjectives()`
@@ -46,8 +42,6 @@ This interface acts like a command  `/scoreboard objectives add <name> <displayN
 - Return value type: `Array<Objective,Objective,...>`
 
 This interface acts like a command  `/scoreboard objectives list`
-
-<br>
 
 #### Get a Scoring Item That Is Displayed
 
@@ -60,9 +54,6 @@ This interface acts like a command  `/scoreboard objectives list`
 - Return value type: `Objective`
   - If it returns `Null`, it means that the corresponding slot does not display the scoring item.
 
-<br>
-
-
 ### Scoring Object - Properties
 
 Each scoring item object contains some fixed object properties. for a specific scoring item object `ob`, has the following properties:
@@ -73,8 +64,6 @@ Each scoring item object contains some fixed object properties. for a specific s
 | ob.displayName | Display name of the scoring item | `String` |
 
 These object properties are read-only and cannot be modified.
-
-<br>
 
 ### Scoring Item Object - Function
 
@@ -91,7 +80,6 @@ Each scoring item object contains some member functions (member methods) that ca
 - Return value type: `Integer`
 
 **Make sure the score is existing before using this API**
-<br>
 
 #### Modify the Score of a Goal
 
@@ -111,7 +99,6 @@ Reduce score: `ob.reduceScore(target,score)`
 [!warning]
 If the score doesn't exist, will try creating a score, then return `0`(If *target* is `String`) or `null`(If *target* is `Player`)  
 Reason: [#971](https://github.com/LiteLDev/LiteLoaderBDS/issues/971#issuecomment-1385047649)
-<br>
 
 #### Stop Tracking a Target 
 
@@ -125,8 +112,6 @@ Reason: [#971](https://github.com/LiteLDev/LiteLoaderBDS/issues/971#issuecomment
 
 Stop tracking will directly delete the value of the goal's scoring item. You need to create it again if you need to access it again.
 
-<br>
-
 #### Set the Display State of the Scoring Item
 
 `ob.setDisplay(slot[,sortOrder=0])`
@@ -138,8 +123,6 @@ Stop tracking will directly delete the value of the goal's scoring item. You nee
     (Optional parameter) the sorting method, which can be `0` (ascending) or `1`(descending order), the default is `0`
 - Return type: Whether setting the display was successful.
 - Return value type: `Boolean`
-
-<br>
 
 ### Other Scoreboard APIs
 
@@ -243,8 +226,6 @@ pl.deleteScore("what");
 
 This interface acts like a command `/scoreboard objectives remove <name>`
 
-<br>
-
 #### Stop Scoring Items From Showing
 
 `mc.clearDisplayObjective(slot)`
@@ -254,5 +235,3 @@ This interface acts like a command `/scoreboard objectives remove <name>`
     Displays the slot name string, which can be `"sidebar"`/`"belowname"`/`"list"`
 - Return type: Whether the display objective was cleared successfully.
 - Return value type: `Boolean`
-
-<br>

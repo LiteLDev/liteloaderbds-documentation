@@ -39,7 +39,6 @@ mc.runcmd("say Hello!")
   | res.success | Whether the execution was successful.             | `Boolean` |
   | res.output  | The output result after BDS executes the command. | `String`  |
 
-
 ::: tip
 The implementation of runcmdEx is very different from ordinary runcmd. The Enhanced version has a **hidden execution** mechanism, and the execution result will not be output to the console. Therefore, if necessary, you must manually use the log function to output the result.
 :::
@@ -375,7 +374,6 @@ mc.regPlayerCmd("fly on","Turn on the fly mode",function(pl,args){
 });
 ```
 
-
 ### Register a New Background Console Command (Fake Command)  
 
 `mc.regConsoleCmd(cmd,description,callback)`
@@ -420,8 +418,6 @@ The parameter args of the callback function is passed in an array: [ "abcde" , "
 As you can see, the values contained in `args` are **sequentially split** command arguments.
 If you have quotes in your command (for example to handle player names with spaces in them), LLSE will also do this when splitting.
 :::
-
-<br>
 
 ## Other APIs Related to the Command System
 

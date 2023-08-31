@@ -29,8 +29,6 @@ With the **Log output level** setting, you can easily filter out some unnecessar
 The default value of the log output level is `4`, that is, all kinds of logs other than debug information will be output. 
 With some APIs given below, you can adjust the log output level to your own desired value. 
 
-<br>
-
 ### Set Output Configuration
 
 Before using the general log interface, you need to modify some configuration settings of the log output according to your needs.
@@ -51,8 +49,6 @@ If you don't change any settings, by **default** the log will only be output to 
     (optional parameter) the log output level of the console, the default is `4` 
 - Return value: none 
 
-<br>
-
 #### Set whether the log is output to a file
 
 `logger.setFile(filepath[,logLevel])`
@@ -68,8 +64,6 @@ If you don't change any settings, by **default** the log will only be output to 
 
 If you want to output to a file, we recommend that you output the log uniformly to `BDS_Root_Directory/logs/` folder for easy organization and inspection.
 
-<br>
-
 #### Set whether the log is output to a certain player
 
 `logger.setPlayer(player[,logLevel])`
@@ -84,8 +78,6 @@ If you want to output to a file, we recommend that you output the log uniformly 
 - Return value: none 
 
 This is a function designed to facilitate in-game debugging. The log output to the player will be treated as a chat message and displayed on the target player's screen.
-
-<br>
 
  ### Output Log Function
 
@@ -110,8 +102,6 @@ The result of the log output is:
 ```txt
 [2021-05-21 19:41:03 Error] Fail to transport the player
 ```
-
-<br>
 
 ### Other Settings
 
@@ -138,8 +128,6 @@ Then the following log output will become like:
 
 If you want to turn off the header after setting it, do `logger.setTitle("")`
 
-<br>
-
 #### Unified modification log output level
 
 `logger.setLogLevel(level)`
@@ -150,5 +138,3 @@ If you want to turn off the header after setting it, do `logger.setTitle("")`
 - Return value: none 
 
 Unified reset of log output levels for various output directions 
-
-<br>

@@ -2,14 +2,9 @@
 
 >动态指令提供了注册自定义命令的接口。通过对接 BDS 内置的命令系统，注册的命令可以由玩家、控制台、命令方块、NPC 等各种游戏中可以执行命令的对象所使用，在 Addon 中，也可以使用这里所注册的命令。
 
-<br>
-
 >此功能仅为LiteLoaderBDS中DynamicCommand的.NET覆盖层，其具体行为由BDS及LiteLoaderBDS所决定。
 
-<br>
-
 ## 注册一条顶层命令
-
 
 `DynamicCommand.CreateCommand(name,description[,permission,flag1,flag2,handle]);`
 
@@ -44,8 +39,6 @@
   - handle :  
     （可选参数）默认值 `nullptr`
 
-<br>
-
 - 返回值：指令对象
 
 - 返回值类型：`DynamicCommandInstance`
@@ -56,13 +49,9 @@
 注册完顶层命令后，此方法会返回一个指令对象。接下来，对于这个命令的功能扩展都需要在这个对象中进行
 :::
 
-<br>
-
 ## 使用动态指令实例对象
 
 >创建指令后，可继续操作获取到的指令对象。对于一个动态指令对象，有以下方法可供调用：
-
-<br>
 
 ### 设置指令别名
 
@@ -186,10 +175,6 @@
   - commandInstance : `DynamicCommandInstance`  
     要安装的指令对象
 
-<br>
-
-<br>
-
 ## 指令回调函数
 
 上文提到的 **指令回调函数** 是一个比较复杂的回调函数，下面对其中的各项参数进行一些解释  
@@ -278,8 +263,6 @@
 
 以下示例演示如何使用动态指令：
 
-<br>
-
 C#
 ```cs
 using System;
@@ -310,12 +293,10 @@ namespace PluginMain
             
             cmd.Mandatory("teststring", DynamicCommand.ParameterType.String);
 
-
             //设置指令重载
             cmd.AddOverload(new List<string> () {"optionsadd", "teststring"});
             
             cmd.AddOverload(new List<string> () {"optionslist"});
-
 
             //设置指令回调
             cmd.SetCallback((command,origin,output,results) => {
@@ -347,6 +328,3 @@ namespace PluginMain
     }
 }
 ```
-
-
-

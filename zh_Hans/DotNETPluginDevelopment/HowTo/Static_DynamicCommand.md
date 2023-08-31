@@ -2,18 +2,12 @@
 
 >以下示例演示如何使用静态指令。静态指令相较于动态指令具有更好的可读性，其编写方式也相对比较简单。不像动态指令，静态指令采用了声明式的注册方法。
 
-<br>
-
 - 此示例具有 `4` 个部分
-
-<br>
 
 1. 声明指令类主体
 2. 声明指令枚举
 3. 定义指令参数
 4. 注册指令
-
-<br>
 
 **进阶：**
 
@@ -22,15 +16,9 @@
 3. 设置可选参数
 4. 获取指令注册信息
 
-<br>
-
 ## 声明指令类主体
 
-<br>
-
 >声明指令类主体的方式如下：  
-
-<br>
 
 C#
 ```cs
@@ -55,11 +43,7 @@ public class ExampleCommand: ICommand
 
 >其中CommandAttribute为指令类提供了指令名称这一信息，继承ICommand接口并实现Execute方法为指令类提供了回调函数，也就是指令的运行逻辑主体。
 
-<br>
-
 让我们来添加更多东西！
-
-<br>
 
 C#
 ```cs
@@ -82,17 +66,9 @@ public class ExampleCommand: ICommand
 
 >此时的CommandAttribute提供了指令名称、指令描述、指令权限。将指令权限设置为Any，将使得所有玩家都可以使用此指令。
 
-<br>
-
-<br>
-
 ## 声明指令枚举
 
-<br>
-
 在声明指令主体的基础上，声明指令枚举的方式如下：
-
-<br>
 
 C#
 ```cs
@@ -117,17 +93,9 @@ public class ExampleCommand: ICommand
 }
 ```
 
-<br>
-
-<br>
-
 ## 定义指令参数
 
-<br>
-
 >有了之前所作的准备工作，此时我们可以开始定义指令参数。相关示例如下：
-
-<br>
 
 C#
 ```cs
@@ -159,17 +127,9 @@ public class ExampleCommand: ICommand
 }
 ```
 
-<br>
-
-<br>
-
 ## 注册指令
 
-<br>
-
 >使用DynamicCommand.RegisterCommand\<TCommand\>方法注册指令。
-
-<br>
 
 C#
 ```cs
@@ -220,23 +180,13 @@ namespace PluginMain
 
 # 进阶
 
-<br>
-
 >以下为进阶内容。使用这些内容可以编写出功能更为强大的指令。
-
-<br>
 
 ## 设置指令重载
 
-<br>
-
 >**不同的指令参数组合可形成指令的不同重载形式**。每一个指令参数都具有一个或多个指令重载标识。若未在 `CommandParameterAttribute` 中指明 `OverloadId` 属性，则指令参数的默认重载标识为 `0` 。使用 `CommandOverloadIdAttribute` 可以为参数指明多个重载标识。标识可以为任意 `Int32` 值，LL.NET将会把具有相同重载表示的指令参数添加到同一个指令重载中。
 
-<br>
-
 >以下示例基于前面的内容演示如何使用指令重载：
-
-<br>
 
 C#
 ```cs
@@ -254,8 +204,6 @@ public class ExampleCommand: ICommand
     [CommandEnum]
     enum ExampleEnum{ add, remove, list };
 
-
-
     [CommandParameter(ParamType.Enum, 
      OverloadId = 0,
      /*使用CommandParameterOption.EnumAutocompleteExpansion将枚举参数展开*/
@@ -265,18 +213,14 @@ public class ExampleCommand: ICommand
 
     ExampleEnum Mode{ get; set; }
 
-
-
     [CommandParameter(ParamType.Int, OverloadId = 1)]
 
     int Count{ get; set; }
-
 
     //   此时的指令重载列表
     //   /examplecmd <add|remove|list>
     //   /examplecmd <add|remove|list> <int>
     //   当然，也可以将list单独作为一个枚举声明，在此只是作为演示。
-
 
     public void Execute(CommandOrigin origin, CommandOutput output)
     {
@@ -319,21 +263,11 @@ namespace PluginMain
 }
 ```
 
-<br>
-
-<br>
-
 ## 设置空指令重载
-
-<br>
 
 >有时，指令并不需要设置任何参数，如BDS中的 /list /stop 等指令。对此，可以选择对其设置空指令重载以满足需求。
 
-<br>
-
 >以下示例演示如何使用空指令重载：
-
-<br>
 
 C#
 ```cs
@@ -342,7 +276,6 @@ using LiteLoader.DynamicCommand;
 using MC;
 
 namespace Example;
-
 
 [Command("killallplayers")]
 
@@ -360,25 +293,13 @@ public class KillAllPlayersCommand: Icommand
 //省略注册过程...
 ```
 
-<br>
-
 >同时， `CommandEmptyOverloadAttribute` 与一般的指令重载兼容，在此不再赘述。
-
-<br>
-
-<br>
 
 ## 设置可选参数
 
-<br>
-
 >可让指令参数作为可选参数供使用者决定是否输入。
 
-<br>
-
 >以下示例演示如何设置可选参数：
-
-<br>
 
 C#
 ```cs
@@ -386,7 +307,6 @@ using System;
 using LiteLoader.DynamicCommand;
 
 namespace Example;
-
 
 [Command("examplecmd")]
 
@@ -409,21 +329,11 @@ public class ExampleCommand: Icommand
 }
 ```
 
-<br>
-
-<br>
-
 ## 获取指令注册信息
-
-<br>
 
 >通过继承ICommandEvent或ICommandData，可获取到指令注册前后的动态指令实例与内部表示该指令的数据。
 
-<br>
-
 ### 继承ICommandEvent
-
-<br>
 
 C#
 ```cs
@@ -431,7 +341,6 @@ using System;
 using LiteLoader.DynamicCommand;
 
 namespace Example;
-
 
 [Command("examplecmd")]
 public class ExampleCommand: Icommand, ICommandEvent
@@ -458,17 +367,9 @@ public class ExampleCommand: Icommand, ICommandEvent
 }
 ```
 
-<br>
-
-<br>
-
 ### 继承ICommandData
 
-<br>
-
 >继承此接口可获取到内部表示的指令注册信息。获取更多信息请查阅 [LiteLoader.DynamicCommand.Internal] 命名空间。
-
-<br>
 
 C#
 ```cs
@@ -476,7 +377,6 @@ using System;
 using LiteLoader.DynamicCommand;
 
 namespace Example;
-
 
 [Command("examplecmd")]
 public class ExampleCommand: Icommand, ICommandEvent
@@ -502,8 +402,3 @@ public class ExampleCommand: Icommand, ICommandEvent
     }
 }
 ```
-
-
-
-
-

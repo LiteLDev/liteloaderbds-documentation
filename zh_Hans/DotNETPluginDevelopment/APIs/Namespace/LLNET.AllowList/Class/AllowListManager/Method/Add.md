@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 将玩家添加到当前白名单中。
-
-<br>
 
 ## 重载
 - 
@@ -17,8 +13,6 @@
     |`Add(String, String, Boolean)`|根据玩家名称与XUID将玩家添加到白名单中|
 
 ## Add(String)
-
-<br>
 
 C#
 ```cs
@@ -34,17 +28,12 @@ public:
   - `name` : [String](https://docs.microsoft.com/DotNET/api/system.string)  
     要添加的玩家名称。
 
-<br>
-
 - 返回
   - [AllowListManager](../AllowListManager)  
     当前 `AllowListManager` 对象
   
-<br>
 
 ## Add(String, String)
-
-<br>
 
 C#
 ```cs
@@ -62,17 +51,12 @@ public:
   - `xuid` : [String](https://docs.microsoft.com/DotNET/api/system.string)  
     要添加的玩家XUID
 
-<br>
-
 - 返回
   - [AllowListManager](../AllowListManager)  
     当前 `AllowListManager` 对象
   
-<br>
 
 ## Add(String, String, Boolean)
-
-<br>
 
 C#
 ```cs
@@ -92,10 +76,7 @@ public:
   - `ignore` : [Boolean](https://docs.microsoft.com/DotNET/api/system.boolean)  
     是否忽略玩家限制
 
-<br>
-
 - 返回
   - [AllowListManager](../AllowListManager)  
     当前 `AllowListManager` 对象
   
-<br>

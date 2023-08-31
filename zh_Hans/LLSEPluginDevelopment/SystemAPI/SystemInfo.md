@@ -10,8 +10,6 @@
   形如`2021-04-03 19:15:01`
 - 返回值类型：`String`
 
-<br>
-
 ### 获取当前的时间对象
 
 `system.getTimeObj()`
@@ -32,13 +30,9 @@
   | tm.s  | 秒数值               | `Integer` |
   | tm.ms | 毫秒数值             | `Integer` |
 
-<br>
-
 ### 随机生成一个 GUID  字符串
 
 `system.randomGuid()` 
 
 - 返回值：一个随机生成的唯一标识符GUID
 - 返回值类型： `String`
-
-<br>

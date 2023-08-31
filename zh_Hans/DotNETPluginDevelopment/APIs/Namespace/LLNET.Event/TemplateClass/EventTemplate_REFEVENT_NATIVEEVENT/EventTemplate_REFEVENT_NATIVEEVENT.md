@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 >作为 [LiteLoader.Event](../LiteLoader.Event) 命名空间中所有**事件**的模板基类。
-
-<br>
 
 C++
 ```cpp
@@ -20,7 +16,6 @@ public ref class EventTemplate
     |||
     |-|-|
     |`EventTemplate()`|初始化对应 `REFEVENT` 事件的新实例。|
-
 
 ## 方法
 - 

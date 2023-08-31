@@ -2,22 +2,15 @@
 
 >以下示例演示如何定义插件入口。入口函数是每一个插件必不可少的要素，插件需要通过入口函数进行事件监听、初始化对象等操作。
 
-<br>
-
 - 此示例具有 `2` 个部分  
   
-<br>
 
 1. 简单入口
 2. 自定义入口
 
-<br>
-
 ## 定义简单插件入口
 
 >定义简单入口只需要以下几个步骤：定义PluginMain命名空间 → 定义Plugin类 → 实现OnPostInit静态方法。
-
-<br>
 
 C#
 ```cs
@@ -36,13 +29,7 @@ namespace PluginMain
 }
 ```
 
-<br>
-
-<br>
-
 >可使用位于 [LiteLoader.LL] 命名空间中的 [LLAPI] 类的 [RegisterPlugin] 静态方法注册插件信息。
-
-<br>
 
 示例：
 
@@ -65,14 +52,10 @@ namespace PluginMain
 }
 ```
 
-<br>
-
 ## 定义自定义插件入口
 
->自定义插件入口不必受限制于命名空间与类名，通过继承 [LiteLoader.NET](../APIs/Namespace/LLNET.Core/Interface/IPluginInitializer/IPluginInitializer) 接口并实现接口属性与方法，即可完成插件入口的定义与插件信息的注册。<br><br> 
+>自定义插件入口不必受限制于命名空间与类名，通过继承 [LiteLoader.NET](../APIs/Namespace/LLNET.Core/Interface/IPluginInitializer/IPluginInitializer) 接口并实现接口属性与方法，即可完成插件入口的定义与插件信息的注册。 
 自定义入口需要 [PluginMainAtribute](../APIs/Namespace/LLNET.Core/Class/PluginMainAttribute/PluginMainAttribute) 的配合使用。
-
-<br>
 
 C#
 ```cs

@@ -6,9 +6,6 @@ The following objects and APIs provide the basic BDS packet interface for script
 
 The documentation does not list the packet ID and its structure, please check it yourself.
 
-
-<br>
-
 ## 🔉 Packet Object API
 
 In LLSE, 「Packet Object」 is used to get information about packets.
@@ -19,8 +16,6 @@ In LLSE, 「Packet Object」 is used to get information about packets.
 
 Call some **return packet object** function to get to the packet object given by BDS    
 See [Binary Stream Objects](#🔌-binary-stream-object-api) for details 
-
-<br>
 
 ### Packet Objects - Functions
 
@@ -33,16 +28,12 @@ Every packet object contains some member functions (member methods) that can be 
 - Return value：packet name
 -  Return value type： `String`
 
-<br>
-
 #### Get packet ID
 
 `pkt.getId()`
 
 - Return value：packet id
 - Return value type： `Integer`
-
-<br>
 
 ## 🔌 Binary Stream Object API
 
@@ -65,8 +56,6 @@ Every binary stream object contains some member functions (member methods) that 
 
 - Return value: success or not
 - Return value type： `Boolean`
-
-<br>
 
 #### Write to binary stream
 
@@ -101,8 +90,6 @@ Every binary stream object contains some member functions (member methods) that 
 | writeVec3   |  `FloatPos`  |
 | writeCompountTag   |  `NbtCompound`  |
 
-<br>
-
 #### Building packet from binary stream
 
 `bs.createPacket(pktid)`    
@@ -113,8 +100,6 @@ Every binary stream object contains some member functions (member methods) that 
 
 - Return value：Packet object
 - Return value type： `Packet`
-
-<br>
 
 ### Dome Code
 

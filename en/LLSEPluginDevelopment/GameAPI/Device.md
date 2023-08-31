@@ -12,9 +12,6 @@ See [Player Object API](Player)
 > Note: Do not save a device information object **long-term.**
 > When the player corresponding to the device exits the game, the corresponding object will become invalid. Therefore, if there is a need to operate an object for a long time, please obtain the real-time device information object through the above methods.
 
-<br>
-
-
 ### Device Information Object - Properties
 
 Each device information object contains some fixed object properties. for a specific entity object `dv`, has the following properties:

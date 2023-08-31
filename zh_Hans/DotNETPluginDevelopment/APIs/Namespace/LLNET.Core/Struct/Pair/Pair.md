@@ -2,11 +2,7 @@
 
 ## 定义
 
-<br>
-
 > 定义可设置或检索的键/值对。
-
-<br>
 
 C#
 ```cs
@@ -17,7 +13,6 @@ C++
 generic<typename TKey, typename TValue> 
     public value class Pair
 ```
-<br>
 
 ## 类型参数
   
@@ -27,19 +22,10 @@ TKey
 TValue  
 值的类型。  
 
-<br>
-
-
 继承 [Object](https://docs.microsoft.com/DotNET/api/system.object) → [ValueType](https://docs.microsoft.com/DotNET/api/system.valuetype) → [Pair<TKey,TValue>](Pair)
-
-<br>
 
 ## 构造函数
 - 
     |||
     |-|-|
     |`Pair(TKey key,TValue value)`|用键、值初始化 `Pair` 结构的新实例。|
-
-<br>
-
-
