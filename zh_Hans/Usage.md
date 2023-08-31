@@ -77,7 +77,11 @@ LipUI为LiteLoaderBDS用户带来了前所未有的、优雅的、简洁的安�
     ```
     :::
 
-2. 在BDS目录中运行`bedrock_server_mod.exe`来启动服务器。请注意，你应该始终运行`bedrock_server_mod.exe`来启动服务器。
+2. 在BDS目录中运行`bedrock_server_mod.exe`来启动服务器。
+    ::: warning
+    你应该始终运行`bedrock_server_mod.exe`来启动服务器。
+    :::
+
     ::: warning
     对于LiteLoaderBDS 2.9.3及更早的版本，并没有提供后安装脚本，因此你需要在BDS目录中运行`LLPeEditor.exe`，并等待程序提示关闭以完成后安装任务。
     :::
@@ -146,7 +150,7 @@ wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/in
 当新的Minecraft基岩版发布时，你需要更新以使得服务端适配最新的客户端。
 
 ::: warning
-请注意，部分插件、地图等对更新操作有额外要求，若按照以下步骤操作，可能导致数据损坏。请做好数据备份工作。
+部分插件、地图等对更新操作有额外要求，若按照以下步骤操作，可能导致数据损坏。请做好数据备份工作。
 :::
 
 ### 在Windows上更新BDS
@@ -287,15 +291,17 @@ lip show example.com/exampleuser/exampleplugin
 * `ll version`：打印LiteLoaderBDS版本
 * `ll upgrade`：检查LiteLoaderBDS的更新
 
-### 注意事项
-
-* 卸载一个插件后，它所注册的命令不会被完全删除，这可能会导致玩家在试图使用该命令时提示该命令不存在。
-* 如果卸载的插件导出的接口被其他插件使用，其他插件将无法使用。
-* 当服务器尚未启动或有玩家在服务器中时，不要卸载或重新加载插件，否则服务器将面临崩溃的风险。
-* 在加载一个插件时，`onServerStarted`事件和所有玩家的`onPlayerJoin`事件将在该插件中被触发。
+::: tip
+在热加载一个插件时，`onServerStarted`事件和所有玩家的`onPlayerJoin`事件将在该插件中被触发。
+:::
 
 ::: warning
-不要在生产环境下加载、卸载或重新加载任何插件。
+卸载一个插件后，它所注册的命令不会被完全删除，这可能会导致玩家在试图使用该命令时提示该命令不存在。
+如果卸载的插件导出的接口被其他插件使用，其他插件将无法使用。
+:::
+
+::: warning
+不要在生产环境下热加载、卸载或重新加载任何插件。
 :::
 
 ## 🎨 安装附加包

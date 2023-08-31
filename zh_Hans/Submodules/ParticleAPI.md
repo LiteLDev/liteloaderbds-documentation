@@ -2,7 +2,7 @@
 # 粒子API
 
 ::: tip
-注意: ParticleAPI是默认关闭的，设置文件`plugins/LiteLoader/LiteLoader.json`中的`ParticleAPI`选项为 `true` 来启用。
+ParticleAPI是默认关闭的，设置文件`plugins/LiteLoader/LiteLoader.json`中的`ParticleAPI`选项为 `true` 来启用。
 :::
 
 ## 模块地址
