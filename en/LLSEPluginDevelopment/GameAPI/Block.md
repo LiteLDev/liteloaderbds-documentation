@@ -199,4 +199,4 @@ Through this function, set the block corresponding to one coordinate to another,
 - Return value: Whether it was successfully generated
 - Return value type: `Boolean`
 
-Particle effect names can be found in the [Minecraft Wiki](https://minecraft.fandom.com/wiki/Particles#Types_of_particles), don't forget the namespace prefix when passing in parameters. similar to `minecraft:heart_particle`
+Particle effect names can be found in the [Minecraft Wiki](https://minecraft.wiki/w/Particles#Types_of_particles), don't forget the namespace prefix when passing in parameters. similar to `minecraft:heart_particle`
