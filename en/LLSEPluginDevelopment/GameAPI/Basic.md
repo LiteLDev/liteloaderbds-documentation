@@ -165,8 +165,8 @@ The return value is `0-3`, representing the four basic orientations of **North, 
 
 - Parameters:
 
-  - pos1 : `IntPos` diagonal coordinate 1, filled in similarly to the `from` parameter of the [fill command](https://minecraft.fandom.com/wiki/Command/fill "view in wikipedia")
-  - pos2 : `IntPos` diagonal coordinate 2, filled in similarly to the `to` parameter of the [fill command](https://minecraft.fandom.com/wiki/Command/fill "View in Wikipedia")
+  - pos1 : `IntPos` diagonal coordinate 1, filled in similarly to the `from` parameter of the [fill command](https://minecraft.wiki/w/Commands/fill "view in wikipedia")
+  - pos2 : `IntPos` diagonal coordinate 2, filled in similarly to the `to` parameter of the [fill command](https://minecraft.wiki/w/Commands/fill "View in Wikipedia")
   - ignoreBlocks : `Boolean` Ignore blocks
   - ignoreEntities : `Boolean` Ignore entities
 - Return value type : `NbtCompound`

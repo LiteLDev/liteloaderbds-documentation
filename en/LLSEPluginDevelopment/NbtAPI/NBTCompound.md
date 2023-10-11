@@ -211,7 +211,7 @@ If an item of Compound stores a `List` or `Compound` type NBT, it will recursive
 - Return value: The converted SNBT string.
 - Return value type: `String`
 
-> In addition to the normal binary NBT, another type of NBT that players are more familiar with is plain text, usually used in [commands](https://minecraft.fandom.com/wiki/Commands). This format is often referred to as **SNBT** (**Binary Named Tag,**, **S**tringified **NBT**)
+> In addition to the normal binary NBT, another type of NBT that players are more familiar with is plain text, usually used in [commands](https://minecraft.wiki/w/Commands). This format is often referred to as **SNBT** (**Binary Named Tag,**, **S**tringified **NBT**)
 >
 > --- Minecraft Wiki
 
