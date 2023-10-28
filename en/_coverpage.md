@@ -4,7 +4,7 @@
 
 > An epoch-making & cross-language plugin loader for Minecraft Bedrock Dedicated Server.
 
-[GitHub](https://github.com/LiteLDev/LiteLoaderBDS)
+[GitHub](https://github.com/LiteLDev/LiteLoaderBDSv2)
 [Home Page](https://www.litebds.com)
 [Read Docs](/README.md)
 

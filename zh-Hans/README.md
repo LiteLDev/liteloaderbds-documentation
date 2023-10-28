@@ -1,14 +1,14 @@
 # LiteLoaderBDS文档
 
-[![Build](https://img.shields.io/github/actions/workflow/status/LiteLDev/LiteLoaderBDS/cmake_repo.yml?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/actions)
-[![Latest Tag](https://img.shields.io/github/v/tag/LiteLDev/LiteLoaderBDS?label=LATEST%20TAG&style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDS/releases/latest)
-[![Downloads@Latest](https://img.shields.io/github/downloads/LiteLDev/LiteLoaderbds/latest/total?style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDS/releases/latest)
+[![Build](https://img.shields.io/github/actions/workflow/status/LiteLDev/LiteLoaderBDSv2/build.yml?style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDSv2/actions)
+[![Latest Tag](https://img.shields.io/github/v/tag/LiteLDev/LiteLoaderBDSv2?label=LATEST%20TAG&style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDSv2/releases/latest)
+[![Downloads@Latest](https://img.shields.io/github/downloads/LiteLDev/LiteLoaderBDSv2/latest/total?style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDSv2/releases/latest)
 
 ## 🎨 什么是LiteLoaderBDS？
 
 **LiteLoaderBDS**是一个用于**适用于 Minecraft 的 Bedrock 版专属服务端软件**（以下简称**BDS**）的插件加载器，提供强大的跨语言脚本插件支持能力和稳定的API支持。
 
-👉[点击此处](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/README_zh-cn.md)👈 查看更详细的介绍。
+👉[点击此处](https://github.com/LiteLDev/LiteLoaderBDSv2/blob/main/README_zh-cn.md)👈 查看更详细的介绍。
 
 ## 🔨 如何安装和使用LiteLoaderBDS？
 

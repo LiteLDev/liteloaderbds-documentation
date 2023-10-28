@@ -26,7 +26,7 @@ C++插件版本支持情况和LiteLoaderBDS本身相同，但可能可以在不�
 
 ## 崩溃日志中LiteLoader.dll或LiteLoader.Lua/Js/NodeJs.dll条目无法正常显示怎么办？
 
-从[Release](https://github.com/LiteLDev/LiteLoaderBDS/releases)下载对应版本的`PDB.zip`，将其解压至以下任一文件夹内:
+从[Release](https://github.com/LiteLDev/LiteLoaderBDSv2/releases)下载对应版本的`PDB.zip`，将其解压至以下任一文件夹内:
 - `/`
 - `/plugins/`
 - `/plugins/lib/`

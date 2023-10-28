@@ -66,7 +66,7 @@ lip install github.com/tooth-hub/liteloaderbds@2.9.2
 
 If you do not want to use Lip, or if you want to do some advanced operations, you can install LiteLoaderBDS manually. follow these steps to install it:
 
-1. Download the corresponding version of `LiteLoaderBDS.zip` from <https://github.com/LiteLDev/LiteLoader/releases>.
+1. Download the corresponding version of `LiteLoaderBDS.zip` from <https://github.com/LiteLDev/LiteLoaderBDSv2/releases>.
 2. Unzip the downloaded file into the BDS directory.
 3. Run `PeEditor.exe` in the BDS directory.
 4. Run `bedrock_server_mod.exe` in the BDS directory to start the server.
@@ -102,7 +102,7 @@ You should install Wine before execute this script, we recommend Wine 8.0+
 In the directory where you want to install the server, run:
 
 ```sh
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDSv2/develop/scripts/install.sh && sh install.sh
 ```
 
 ## 🚅 Update LiteLoaderBDS

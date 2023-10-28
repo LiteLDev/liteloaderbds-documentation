@@ -116,4 +116,4 @@
 - 🧿 蓝图和RFC
     - [蓝图：LiteLoaderBDS 3](/Blueprints/LiteLoaderBDS3.md)
 
-- [💦 更新日志](https://github.com/LiteLDev/LiteLoaderBDS/releases)
+- [💦 更新日志](https://github.com/LiteLDev/LiteLoaderBDSv2/releases)

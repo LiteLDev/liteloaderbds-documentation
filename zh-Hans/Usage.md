@@ -72,7 +72,7 @@ lip install github.com/tooth-hub/liteloaderbds@2.9.2
 
 如果你不想使用Lip，或者你希望进行一些高级操作，你可以手动安装LiteLoaderBDS。该方法可能会因为操作上的细微差别造成本文档中未提及的问题，因此需要你具备较高的排错能力。如果你遇到了任何问题而无法解决，请尝试通过Lip安装。请跟随以下步骤安装:
 
-1. 从<https://github.com/LiteLDev/LiteLoader/releases>下载对应版本的`LiteLoaderBDS.zip`。
+1. 从<https://github.com/LiteLDev/LiteLoaderBDSv2/releases>下载对应版本的`LiteLoaderBDS.zip`。
 2. 解压缩下载得到的文件到BDS目录中。
 3. 在BDS目录中运行`PeEditor.exe`。
 4. 在BDS目录中运行`bedrock_server_mod.exe`以启动服务器。
@@ -108,7 +108,7 @@ docker run --name liteloader -v /path/to/store:/server -p 19132:19132/udp -it -d
 在要安装服务器的目录中，运行:
 
 ```shell
-wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/develop/scripts/install.sh && sh install.sh
+wget https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDSv2/develop/scripts/install.sh && sh install.sh
 ```
 
 ## 🚅 更新LiteLoaderBDS

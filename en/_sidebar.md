@@ -70,4 +70,4 @@
             - [📡 System Calls](/LLSEPluginDevelopment/SystemAPI/SystemCall.md)
             - [📜 Get System Information](/LLSEPluginDevelopment/SystemAPI/SystemInfo.md)
 
-- [💦 Changelog](https://github.com/LiteLDev/LiteLoaderBDS/releases)
+- [💦 Changelog](https://github.com/LiteLDev/LiteLoaderBDSv2/releases)

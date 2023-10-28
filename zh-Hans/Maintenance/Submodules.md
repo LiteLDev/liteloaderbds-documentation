@@ -7,7 +7,7 @@
 
 ## 如何在clone时拉取所有submodules
 
-`git clone --recursive git@github.com:LiteLDev/LiteLoaderBDS.git`
+`git clone --recursive git@github.com:LiteLDev/LiteLoaderBDSv2.git`
 
 ## 如何更新submodule里的内容
 

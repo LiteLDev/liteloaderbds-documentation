@@ -25,7 +25,7 @@ Yes, except for breaking changes of LiteLoader Script Engine.
 
 ## Why Are There So Many Incomprehensible Symbols In the Crash Log?
 
-Download the corresponding version of `PDB.zip` to the LiteLoaderBDS version of your server from [Release](https://github.com/LiteLDev/LiteLoaderBDS/releases), and extract it to one of the following folders:
+Download the corresponding version of `PDB.zip` to the LiteLoaderBDS version of your server from [Release](https://github.com/LiteLDev/LiteLoaderBDSv2/releases), and extract it to one of the following folders:
 - `./`
 - `./plugins/`
 - `./plugins/lib`

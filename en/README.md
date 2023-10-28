@@ -1,14 +1,14 @@
 # LiteLoaderBDS Documentation
 
-[![Build](https://img.shields.io/github/actions/workflow/status/LiteLDev/LiteLoaderBDS/cmake_repo.yml?style=for-the-badge)](https://github.com/LiteLDev/LiteLoader/actions)
-[![Latest Tag](https://img.shields.io/github/v/tag/LiteLDev/LiteLoaderBDS?label=LATEST%20TAG&style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDS/releases/latest)
-[![Downloads@Latest](https://img.shields.io/github/downloads/LiteLDev/LiteLoaderbds/latest/total?style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDS/releases/latest)
+[![Build](https://img.shields.io/github/actions/workflow/status/LiteLDev/LiteLoaderBDSv2/build.yml?style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDSv2/actions)
+[![Latest Tag](https://img.shields.io/github/v/tag/LiteLDev/LiteLoaderBDSv2?label=LATEST%20TAG&style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDSv2/releases/latest)
+[![Downloads@Latest](https://img.shields.io/github/downloads/LiteLDev/LiteLoaderBDSv2/latest/total?style=for-the-badge)](https://github.com/LiteLDev/LiteLoaderBDSv2/releases/latest)
 
 ## 🎨 What is LiteLoaderBDS?
 
 **LiteLoaderBDS** is a plugin loader for the **Bedrock Edition exclusive server software** (hereafter referred to as **BDS**) for Minecraft, providing powerful cross-language scripting plugin support capabilities and stable API support.
 
-👉[click here](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/README_zh-cn.md)👈 for a more detailed description.
+👉[click here](https://github.com/LiteLDev/LiteLoaderBDSv2/blob/main/README_zh-cn.md)👈 for a more detailed description.
 
 ## 🔨 How do I install and use LiteLoaderBDS?
 

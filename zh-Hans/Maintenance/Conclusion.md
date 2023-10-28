@@ -10,6 +10,6 @@
 
 ⭐
 
-[点击此处](https://github.com/LiteLDev/LiteLoaderBDS) 前往`LiteLoaderBDS`项目源码开源地址
+[点击此处](https://github.com/LiteLDev/LiteLoaderBDSv2) 前往`LiteLoaderBDS`项目源码开源地址
 
 <br>
