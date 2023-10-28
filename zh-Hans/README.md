@@ -86,4 +86,4 @@
 
 当你写好了一个富有创造力的插件，你一定会希望更多的人使用它。那么你需要做的就是将它发布到各种插件平台。
 
-我们强烈建议你将插件封装为[Lip包管理工具](https://docs.lippkg.com)所支持的齿包，这样可以使得任何人都可以通过Lip工具，轻松地安装你的插件。你可以参考：[创建一个齿包](https://docs.lippkg.com/zh-Hans/#/tutorials/create_a_lip_tooth)和[将齿包提交到Lip Registry](https://docs.lippkg.com/zh-Hans/#/tutorials/submit_your_tooth_to_lip_registry)。
+我们强烈建议你将插件封装为[Lip包管理工具](https://docs.lippkg.com)所支持的齿包，这样可以使得任何人都可以通过Lip工具，轻松地安装你的插件。你可以参考：[创建一个齿包](https://docs.lippkg.com/zh-Hans/#/tutorials/create_a_lip_tooth)。

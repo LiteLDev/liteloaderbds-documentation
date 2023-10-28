@@ -43,13 +43,13 @@ We recommend using [Lip](https://docs.lippkg.com) to install LiteLoaderBDS. You 
 For LiteLoaderBDS 2.10.0-beta.1 and earlier, there is no BDS automatic installation mechanism, you can run the following command to install BDS. Please note the version correspondence.
 
 ```shell
-lip install bds@1.19.61
+lip install github.com/tooth-hub/bds@1.19.61
 ```
 
 1. Run the following command in the BDS directory.
 
     ```shell
-    lip install ll
+    lip install github.com/tooth-hub/liteloaderbds
     ```
 
 2. For LiteLoaderBDS 2.9.3 and earlier, there is no post-installation script provided, so you need to run `LLPeEditor.exe` in the BDS directory and wait for the program to prompt to close to complete the post-installation task.
@@ -59,13 +59,7 @@ lip install bds@1.19.61
 If you wish to install another version of LiteLoaderBDS, you can run a command similar to the following.
 
 ```shell
-lip install ll@2.9.2
-```
-
-We also provide a package called `starterpack` that contains the most commonly used plugins as well as LiteLoaderBDS and BDS. You can install it by running the following command.
-
-```shell
-lip install starterpack
+lip install github.com/tooth-hub/liteloaderbds@2.9.2
 ```
 
 #### Manual installation
@@ -134,19 +128,19 @@ If BDS is not updated, but LiteLoaderBDS is, you can use Lip to do the update.
 In the BDS directory run.
 
 ```shell
-lip install --upgrade ll
+lip install --upgrade github.com/tooth-hub/liteloaderbds
 ```
 
 If you wish to update to a specific version, you can use the following command.
 
 ```shell
-lip install --upgrade ll@2.9.2
+lip install --upgrade github.com/tooth-hub/liteloaderbds@2.9.2
 ```
 
 If you wish to roll back to a specific version, you can use the following command.
 
 ```shell
-lip install --force-reinstall ll@2.9.2
+lip install --force-reinstall github.com/tooth-hub/liteloaderbds@2.9.2
 ```
 
 If you do not wish to use Lip, you can update LiteLoaderBDS manually by following the steps in [Updating BDS on Windows](#Update BDS on Windows).
@@ -175,7 +169,7 @@ There are two types of plugins: native plugins and scripted plugins. Native plug
 
 You can look for plugins on these sites.
 
-* [Official Lip Registry](https://registry.litebds.com)(Recommended)
+* [Official LipWebUI](https://www.lippkg.com/)(Recommended)
 * [LiteLoaderBDS Forum](https://www.litebds.com/)
 * [MineBBS (native plugin)](https://www.minebbs.net/resources/?prefix_id=59)
 * [MineBBS (Scripting Plugin)](https://www.minebbs.net/resources/?prefix_id=67)
@@ -208,12 +202,6 @@ You can run a command like the following to remove the plugin.
 
 ```shell
 lip uninstall example.com/exampleuser/exampleplugin
-```
-
-If the plugin has been submitted to Lip registry, you can use the following command to install it.
-
-```shell
-lip install llanticheat
 ```
 
 If you need to remove the plugin but don't know the Tooth path of the plugin, you can run the following command to query all installed Tooth packages.
